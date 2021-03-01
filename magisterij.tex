@@ -227,7 +227,22 @@ the content and not the structure of your work.
 \end{definicija}
 
 \begin{definicija}
-Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in naj bo preslikava $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. \emph{Variacija preslikave x s fiksnim robom} je 1-parametrična družina $\mathcal{C}^2$ preslikav $x^{t} \colon M \to \R^{n}$, $t \in (-\varepsilon, \varepsilon) \subset \R$, če velja $x^0 = x$ in je za vse $t$ z intervala $x^{t} = x$ na $bM$.
+%
+\begin{enumerate}
+\item
+Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in naj bo preslikava $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. \emph{Variacija preslikave x s fiksnim robom} je 1-parametrična družina $\mathcal{C}^2$ preslikav 
+\begin{gather}
+x^{t} \colon M \to \R^{n},\ t \in (-\varepsilon, \varepsilon) \subset \R,
+\end{gather}
+če je $x^0 = x$ in za vse $t$ z intervala velja $x^{t} = x$ na $bM$.
+%
+\item
+Naj bo $p \in M$. \emph{Variacijsko vektorsko polje} preslikave $x^{t}$ je vektorsko polje, definirano kot
+\begin{equation}
+E(p,t) = \frac{\partial{x^t(p)}}{\partial{t}} \in \R^{n}.
+\end{equation}
+%
+\end{enumerate}
 \end{definicija}
 
 \begin{definicija}
@@ -235,7 +250,20 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ ime
 \begin{equation}
 \frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(D)) = 0.
 \end{equation}
+Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega funkcionala $\text{Area} \colon D \to \R$.
 \end{definicija}
+
+\begin{izrek}
+Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Naj bo $E = \partial{x^{t}} / \partial{t}|_{t=0}$ variacijsko vektorsko polje preslikave $x^{t}$ pri $t=0$, $\textbf{\textup{H}}$ vektorsko polje povprečne ukrivljenosti preslikave $x$ in $dA$ ploščinski element glede na Riemannovo metriko $x^{*}ds^2$ definirano na $M$.
+Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksnim robom velja
+\begin{equation} \label{1-var-formula}
+\frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) = -2 \int_{M} {E \cdot \textbf{\textup{H}} dA}.
+\end{equation}
+\end{izrek}
+
+\begin{izrek}
+Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
+\end{izrek}
 
 \begin{definicija}
 \emph{Jordanov lok} je pot v ravnini, ki je topološko izomorfna intervalu $[0,1]$.
