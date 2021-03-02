@@ -253,10 +253,10 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ ime
 Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega funkcionala $\text{Area} \colon D \to \R$.
 \end{definicija}
 
-\begin{izrek}
+\begin{izrek} \label{izr:1-var-formula}
 Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Naj bo $E = \partial{x^{t}} / \partial{t}|_{t=0}$ variacijsko vektorsko polje preslikave $x^{t}$ pri $t=0$, $\textbf{\textup{H}}$ vektorsko polje povprečne ukrivljenosti preslikave $x$ in $dA$ ploščinski element glede na Riemannovo metriko $x^{*}ds^2$ definirano na $M$.
 Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksnim robom velja
-\begin{equation} \label{1-var-formula}
+\begin{equation} \label{eq:1-var-formula}
 \frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) = -2 \int_{M} {E \cdot \textbf{\textup{H}} dA}.
 \end{equation}
 \end{izrek}
@@ -264,6 +264,56 @@ Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksn
 \begin{izrek}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
 \end{izrek}
+
+Rezultat Izreka~\ref{izr:1-var-formula} imenujemo \emph{prva variacijska formula} za minimalne ploskve. S podobnimi tehnikami kot v dokazu le-te izpeljemo \emph{drugo variacijsko formulo}
+\begin{equation}
+\frac{d^2}{dt^2} \Big|_{t=0} \text{Area}(x^{t}(M)) = \int_{M} {(4|E|^{2} K^{E} + |\nabla{E}|^2) dA},
+\end{equation}
+kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $M$.
+
+Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$ in $x$ je konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
+
+\begin{izrek}
+Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \colon M \to \R^{n}$ konformna imerzija razreda $\mathcal{C}^2$. Naslednje trditve so ekvivalentne:
+\begin{enumerate}
+	\item $x$ je minimalna ploskev.
+	\item Vektorsko polje povprečne ukrivljenosti preslikave $x$ je ničelno, tj.~$\textbf{\textup{H}} = 0$.
+	\item $x$ je harmonična, tj.~$\Delta{x} = 0$.
+	\item 1-forma $ \partial{x} = (\partial{x_1}, \dots , \partial{x_n})$ z vrednostmi v $\C^{n}$ je holomorfna in velja
+			\begin{equation}
+			(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0.
+			\end{equation}
+	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi na \emph{ničelni kvadriki} 
+			\begin{equation}		
+			\textbf{\textup{A}} = \{ (z_1, \dots , z_n) \in \C^{n} ; z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
+			\end{equation}	
+		Nadalje je Riemannova metrika na $M$, inducirana s konformno imerzijo $x$, enaka
+			\begin{align}
+			g &= x^{*} ds^2 = |dx_1|^2 + \cdots + |dx_n|^2 = 2 (|\partial{x_1}|^2 + \cdots |\partial{x_n}|^2).
+			\end{align}			
+\end{enumerate}
+\end{izrek}
+
+\begin{definicija}
+Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je homomorfizem grup $\textup{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
+\begin{equation}
+\textup{Flux}_{x} ([C]) = \int_{C} {d^{c} x}.
+\end{equation}
+\end{definicija}
+
+V definiciji pretoka je $[C] \in H_{1} (M, \Z),$ integral pa je odvisen le od homološkega razreda poti $C$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$.
+
+\begin{definicija}
+\begin{enumerate}
+\item
+Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Holomorfno imerzijo $z = (z_{1}, \dots , z_{n}) \colon M \to \C^{n}$, za katero velja
+$(\partial{z_{1}})^2 + \cdots + (\partial{z_{n}})^2 = 0$, imenujemo \emph{holomorfna ničelna krivulja} v $\C^{n}$.
+\item
+Naj bo $z = x + \imath y \colon M \to \C^{n}$ holomorfna ničelna krivulja. Njena realni del in imaginarni del, $x, y \colon M \to \R^{n}$ imenujemo \emph{konjugirani minimalni ploskvi}.
+\item
+Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{\imath t} z)} \colon M \to \R^{n}$ imenujemo \emph{asociirane minimalne ploskve} holomorfne ničelne krivulje $z$.
+\end{enumerate}
+\end{definicija}
 
 \begin{definicija}
 \emph{Jordanov lok} je pot v ravnini, ki je topološko izomorfna intervalu $[0,1]$.
