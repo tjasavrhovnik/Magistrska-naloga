@@ -245,16 +245,21 @@ E(p,t) = \frac{\partial{x^t(p)}}{\partial{t}} \in \R^{n}.
 \end{enumerate}
 \end{definicija}
 
+Opazimo, da je za dovolj majhne vrednosti $t$ preslikava $x^{t}$ imerzija.
+Po definiciji je na $bM \times (-\varepsilon, \varepsilon)$ variacijsko vektorsko polje $E$ konstantno ničelno.
+
 \begin{definicija}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ imenujemo \emph{minimalna ploskev}, če za vsako kompaktno domeno $D \subset M$ z gladkim robom $bD$ in vsako gladko variacijo $x^{t}$ preslikave $x$ s fiksnim robom velja
-\begin{equation}
+\begin{equation} \label{eq:1-var-ploščine}
 \frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(D)) = 0.
 \end{equation}
 Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega funkcionala $\text{Area} \colon D \to \R$.
 \end{definicija}
 
+Levo stran enakosti~\ref{eq:1-var-ploščine} imenujemo \emph{prva variacija ploščine} pri $t=0$. Slednjo z geometrijskimi lastnostmi preslikave $x$, natančneje ukrivljenostjo, povezuje \emph{prva variacijska formula} v naslednjem izreku. 
+
 \begin{izrek} \label{izr:1-var-formula}
-Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Naj bo $E = \partial{x^{t}} / \partial{t}|_{t=0}$ variacijsko vektorsko polje preslikave $x^{t}$ pri $t=0$, $\textbf{\textup{H}}$ vektorsko polje povprečne ukrivljenosti preslikave $x$ in $dA$ ploščinski element glede na Riemannovo metriko $x^{*}ds^2$ definirano na $M$.
+Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Naj bo $E = \partial{x^{t}} / \partial{t}|_{t=0}$ variacijsko vektorsko polje preslikave $x^{t}$ pri $t=0$, $\textbf{\textup{H}}$ vektorsko polje povprečne ukrivljenosti preslikave $x$ in $dA$ ploščinski element glede na Riemannovo metriko $x^{*}ds^2$, definirano na $M$.
 Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-formula}
 \frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) = -2 \int_{M} {E \cdot \textbf{\textup{H}} dA}.
@@ -271,7 +276,8 @@ Rezultat Izreka~\ref{izr:1-var-formula} imenujemo \emph{prva variacijska formula
 \end{equation}
 kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $M$.
 
-Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$ in $x$ je konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
+Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
+Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve $M$.
 
 \begin{izrek}
 Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \colon M \to \R^{n}$ konformna imerzija razreda $\mathcal{C}^2$. Naslednje trditve so ekvivalentne:
@@ -334,7 +340,7 @@ podaja dobro definirano konformno minimalno imerzijo. Zanjo velja
 $ \int_{C} \Phi = 0 \ \text{za vse} \ [C] \in H_{1} (M, \Z) $,
 potem za poljuben izbor točk $p_0 \in M$ in $z_0 \in \C^{n}$ predpis $z \colon M \to \C^{n}$,
 \begin{align} \label{eq:Wstrass-hnk}
-z(p) = z_0 + \Re \int_{p_0}^{p} \Phi, \ p \in M,
+z(p) = z_0 + \int_{p_0}^{p} \Phi, \ p \in M,
 \end{align}
 podaja dobro definirano holomorfno ničelno krivuljo. Zanjo velja
 \begin{align}
@@ -346,7 +352,7 @@ podaja dobro definirano holomorfno ničelno krivuljo. Zanjo velja
 Vsaka konformna minimalna imerzija $x \colon M \to \R^{n}$ je oblike~\ref{eq:Wstrass-kmi} in vsaka holomorfna ničelna krivulja $z \colon M \to \C^{n}$ je oblike~\ref{eq:Wstrass-hnk}. Prav zato je Weierstrassova predstavitev elegantna metoda za konstrukcijo opisanih preslikav.
 \end{opomba}
 
-Če konformno minimalno imerzijo $x \colon M \to \R^{n}$ poznamo, potem pripadajočo povsod neničelno holomorfno 1-formo $\Phi = 2 \partial{x}$ z vrednostmi v $\C^{n}$ imenujemo \emph{Weiwerstrass data} preslikave $x$. 
+Če konformno minimalno imerzijo $x \colon M \to \R^{n}$ poznamo, potem pripadajočo povsod neničelno holomorfno 1-formo $\Phi = 2 \partial{x}$ z vrednostmi v $\C^{n}$ imenujemo \emph{Weierstrass data} preslikave $x$. 
 Analogno, za holomorfno ničelno krivuljo $z \colon M \to \C^{n}$ pripadajočo 1-formo $\Phi = \partial{z} = dz$ imenujemo \emph{Weierstrass data} preslikave $z$.
 
 \begin{definicija}
