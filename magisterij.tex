@@ -226,8 +226,51 @@ the content and not the structure of your work.
 \emph{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
 \end{definicija}
 
+Naj bo $M$ ploskev, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Izberimo karto $(U, \phi)$ na $M$ in koordinate $u = (u_1, u_2) \in U$, tako da je zožitev $x|_{U} \colon U \to \R^{n}$ vložitev na orientabilno ploskev $S = x(U) \subset \R^{n}$. Izberimo točko $q \in U$ in označimo $p = x(q) \in S$. Naj bo $t \mapsto (u_1(t), u_2(t))$ parametrizacija vložene krivulje razreda $\mathcal{C}^2$ v $U$ ter $q = (u_1(t_0), u_2(t_0))$ za nek $t_0$. Vsaka krivulja, vložena v $S$, ki vsebuje točko $p$, je tedaj oblike
+\begin{equation}
+\alpha (t) = x(u_1(t), u_2(t)).
+\end{equation}
+Označimo z $s = s(t)$ ločno dolžino krivulje $\alpha$. Predpostavimo, da izbrana točka $p$ ustreza $p = \alpha(s_0) \in S$, označimo pripadajoč tangentni vektor $\nu = \alpha '(s_0) \in T_{p}S$ ter enotsko normalo $N \in N_{p}S$ v točki $p$. Količino
+\begin{equation}
+\kappa ^{N}(p, \nu) = \alpha ''(s_0) \cdot N
+\end{equation}
+imenujemo \emph{normalna ukrivljenost} ploskve $S$ v točki $p$ v tangentni smeri $\nu$ in smeri enotske normale $N$.
+
+Oglejmo si preslikavo $ \kappa ^{N}(p, \cdot) \colon \{\nu \in T_{p}S ; \ |\nu|=1 \} \to \R$, $ \nu \mapsto \kappa ^{N}(p, \nu)$, kjer je $p \in S$ izbrana fiksna točka. Kot zvezna preslikava na kompaktni množici doseže minimalno in maksimalno vrednost,
+\begin{align}
+\kappa _{1}^{N}(p) = \min _{|\nu| = 1} \kappa ^{N}(p, \nu), \quad \kappa _{2}^{N}(p) = \max _{|\nu| = 1} \kappa ^{N}(p, \nu),
+\end{align}
+katerima pravimo \emph{glavni ukrivljenosti}.
+
 \begin{definicija}
-%
+\begin{enumerate}
+\item
+\emph{Povprečna ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$ je povprečje glavnih ukrivljenosti,
+\begin{equation} \label{eq:povp-ukr}
+H^{N}(p) = \frac{1}{2} \left(\kappa _{1}^{N}(p) + \kappa _{2}^{N}(p) \right).
+\end{equation}
+\item
+Njun produkt 
+\begin{equation} \label{eq:Gauss-ukr}
+K^{N}(p) = \kappa _{1}^{N}(p) \cdot \kappa _{2}^{N}(p)
+\end{equation}
+definira \emph{Gaussovo ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$.
+\item
+Projekcijo povprečne ukrivljenosti na normalno ravnino $N_{p}S$ v smeri tangentne ravnine $T_{p}S$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$ in označimo s $\textbf{\textup{H}}$. Enačba~\ref{eq:povp-ukr} se v tej notaciji glasi $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
+\end{enumerate}
+\end{definicija}
+
+\begin{lema}
+Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Tedaj velja
+\begin{equation}
+\Delta{x} = 2 \textbf{\textup{H}},
+\end{equation}
+kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ v točki $q \in M$ in $\textbf{\textup{H}}$ vektor povprečne ukrivljenosti v točki $p = x(q) \in S$.
+\end{lema}
+
+\subsection{Variacija ploščine}
+ %
+\begin{definicija}
 \begin{enumerate}
 \item
 Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in naj bo preslikava $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. \emph{Variacija preslikave x s fiksnim robom} je 1-parametrična družina $\mathcal{C}^2$ preslikav 
@@ -241,7 +284,6 @@ Naj bo $p \in M$. \emph{Variacijsko vektorsko polje} preslikave $x^{t}$ je vekto
 \begin{equation}
 E(p,t) = \frac{\partial{x^t(p)}}{\partial{t}} \in \R^{n}.
 \end{equation}
-%
 \end{enumerate}
 \end{definicija}
 
@@ -270,12 +312,14 @@ Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksn
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
 \end{izrek}
 
-Rezultat Izreka~\ref{izr:1-var-formula} imenujemo \emph{prva variacijska formula} za minimalne ploskve. S podobnimi tehnikami kot v dokazu le-te izpeljemo \emph{drugo variacijsko formulo}
+S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}
 \begin{equation}
 \frac{d^2}{dt^2} \Big|_{t=0} \text{Area}(x^{t}(M)) = \int_{M} {(4|E|^{2} K^{E} + |\nabla{E}|^2) dA},
 \end{equation}
 kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $M$.
 
+\subsection{Weierstrassova formula}
+%
 Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
 Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve $M$.
 
