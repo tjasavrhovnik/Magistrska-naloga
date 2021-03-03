@@ -315,6 +315,40 @@ Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{\imath
 \end{enumerate}
 \end{definicija}
 
+\begin{izrek}[Weierstrassova predstavitev konformnih minimalnih ploskev in holomorfnih ničelnih krivulj]
+Naj bo $n \geq 3$ in $M$ odprta Riemannova ploskev, na kateri definiramo holomorfno 1-formo $\Phi = (\phi_{1}, \dots , \phi_{n})$ z vrednsotmi v $\C^{n}$, ki je povsod neničelna, in zadošča 
+\begin{enumerate}
+\item $ \sum_{j=1}^{n} \phi_{j}^{2} = 0$,
+\item $ \Re \int_{C} \Phi = 0 $ za vse $[C] \in H_{1} (M, \Z)$.
+\end{enumerate}
+Potem za poljuben izbor točk $p_0 \in M$ in $x_0 \in \R^{n}$ predpis $x \colon M \to \R^{n}$,
+\begin{align} \label{eq:Wstrass-kmi}
+x(p) = x_0 + \Re \int_{p_0}^{p} \Phi, \ p \in M,
+\end{align}
+podaja dobro definirano konformno minimalno imerzijo. Zanjo velja
+\begin{align}
+2 \partial{x} = \Phi \quad \text{in} \quad g = x^{*} ds^2 = |dx|^2 = \frac{1}{2} |\Phi|^2.
+\end{align}
+%
+Če velja še
+$ \int_{C} \Phi = 0 \ \text{za vse} \ [C] \in H_{1} (M, \Z) $,
+potem za poljuben izbor točk $p_0 \in M$ in $z_0 \in \C^{n}$ predpis $z \colon M \to \C^{n}$,
+\begin{align} \label{eq:Wstrass-hnk}
+z(p) = z_0 + \Re \int_{p_0}^{p} \Phi, \ p \in M,
+\end{align}
+podaja dobro definirano holomorfno ničelno krivuljo. Zanjo velja
+\begin{align}
+\partial{z} = \Phi \quad \text{in} \quad z^{*} ds^2 = |dz|^2 = |\partial{z}|^2 = |\Phi|^2.
+\end{align}
+\end{izrek}
+
+\begin{opomba}
+Vsaka konformna minimalna imerzija $x \colon M \to \R^{n}$ je oblike~\ref{eq:Wstrass-kmi} in vsaka holomorfna ničelna krivulja $z \colon M \to \C^{n}$ je oblike~\ref{eq:Wstrass-hnk}. Prav zato je Weierstrassova predstavitev elegantna metoda za konstrukcijo opisanih preslikav.
+\end{opomba}
+
+Če konformno minimalno imerzijo $x \colon M \to \R^{n}$ poznamo, potem pripadajočo povsod neničelno holomorfno 1-formo $\Phi = 2 \partial{x}$ z vrednostmi v $\C^{n}$ imenujemo \emph{Weiwerstrass data} preslikave $x$. 
+Analogno, za holomorfno ničelno krivuljo $z \colon M \to \C^{n}$ pripadajočo 1-formo $\Phi = \partial{z} = dz$ imenujemo \emph{Weierstrass data} preslikave $z$.
+
 \begin{definicija}
 \emph{Jordanov lok} je pot v ravnini, ki je topološko izomorfna intervalu $[0,1]$.
 \emph{Jordanova krivulja} je ravninska krivulja, ki je topološko ekvivalentna enotski krožnici.
@@ -323,6 +357,18 @@ Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{\imath
 \begin{definicija}
 Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{Admissible set}.
 \end{definicija}
+
+\begin{definicija}
+Naj bo $M$ povezana odprta Riemannova ploskev ali kompaktna Riemannova ploskev z robom, na kateri je definirana povsod neničelna holomorfna 1-forma $\Theta$. Konformno minimalno imerzijo $x \colon M \to \R^{n}$ imenujemo:
+\begin{enumerate}
+\item \emph{flat}, če je slika $x(M)$ vsebovana v afini ravnini v $\R^{n}$; sicer pravimo, da je $x$ \emph{nonflat};
+\item \emph{full}, če je preslikava $f = 2 \partial{x} / \Theta \colon M \to \textbf{\textup{A}}_{*}^{n-1}$ full, tj.\ $\C$-linearna ogrinjača slike $f(M)$ je enaka $\C^{n}$;
+\item \emph{nedegenerirana}, če slika $x(M)$ ni vsebovana v nobeni hiperravnini v $\R^{n}$. 
+\end{enumerate}
+\end{definicija}
+
+V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. V višjih dimenzijah ($n \geq 4$) veljata implikaciji 
+\[ \text{full} \ \Rightarrow \ \text{nedegenerirana} \ \Rightarrow \ \text{nonflat}. \]
 
 \section{Izerki o aproksimaciji in interpolaciji minimalnih ploskev}
 
