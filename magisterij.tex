@@ -226,6 +226,7 @@ the content and not the structure of your work.
 \emph{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
 \end{definicija}
 
+% Ukrivljenost
 Naj bo $M$ ploskev, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Izberimo karto $(U, \phi)$ na $M$ in koordinate $u = (u_1, u_2) \in U$, tako da je zožitev $x|_{U} \colon U \to \R^{n}$ vložitev na orientabilno ploskev $S = x(U) \subset \R^{n}$. Izberimo točko $q \in U$ in označimo $p = x(q) \in S$. Naj bo $t \mapsto (u_1(t), u_2(t))$ parametrizacija vložene krivulje razreda $\mathcal{C}^2$ v $U$ ter $q = (u_1(t_0), u_2(t_0))$ za nek $t_0$. Vsaka krivulja, vložena v $S$, ki vsebuje točko $p$, je tedaj oblike
 \begin{equation}
 \alpha (t) = x(u_1(t), u_2(t)).
@@ -267,6 +268,31 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Tedaj velja
 \end{equation}
 kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ v točki $q \in M$ in $\textbf{\textup{H}}$ vektor povprečne ukrivljenosti v točki $p = x(q) \in S$.
 \end{lema}
+
+% Aproksimacijski izreki za Riemannove ploskve
+\begin{izrek} [Rungejev aproksimacijski izrek za Riemannove ploskve]
+Naj bo $M$ Riemannova ploskev in $K$ njena kompaktna podmnožica. 
+Potem lahko vsako funkcijo $f$, ki je holomorfna na okolici $K$, aproksimiramo enakomerno na $K$ z meromorfnimi funkcijami $F$ na $M$ brez polov na $K$, ter s holomorfnimi funkcijami na $M$, če $K$ nima lukenj.
+Funkcije $F$ lahko izberemo tako, da se z dano funkcijo $f$ na končni množici točk v $K$ ujemajo do izbranega končnega reda in da ima $F$ pole v podmnožici $E \subset M \backslash K$, kjer $E$ vsebuje točko v vsaki luknji množice $K$. 
+\end{izrek}
+
+\begin{definicija}
+Naj bo $K$ kompaktna podmnožica Riemannove ploskve $M$. Njena \emph{holomorfna ogrinjača} je množica 
+\begin{equation}
+\widehat{K}_{\mathcal{O}(M)} = \{p \in M ; \ |f(p)| \leq \max_{K} |f| \ \text{za vse} \ f \in \mathcal{O}(M) \}.
+\end{equation}
+Če velja $K = \widehat{K}_{\mathcal{O}(M)}$, množico $K$ imenujemo \emph{Rungejeva množica}.
+\end{definicija}
+
+\begin{izrek} [Weierstrass-Florackov interpolacijski izrek]
+Naj bo $M$ odprta Riemannova ploskev in $K$ njena Rungejeva podmnožica. Naj bo $A = \{ a_i \}_{i=1}^{\infty}$ zaprta diskretna podmnožica v $M$, $U$ odprta podmnožica $M$, tako da je $A \cup K \subset U$ in $f$ meromorfna funkcija na $U$ z ničlami in poli le v točkah množice $A$.
+Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna funkcija $F$ na $M$, za katero velja:
+\begin{enumerate}
+\item $|F(z) - f(z)| < \varepsilon$ za vse $z \in K$,
+\item v točkah $a_i$ je razlika $F-f$ ničelna do reda $k_i$,
+\item $F$ nima ničel in polov na $M \backslash A$.
+\end{enumerate} 
+\end{izrek}
 
 \subsection{Variacija ploščine}
  %
