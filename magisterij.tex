@@ -222,11 +222,44 @@ the content and not the structure of your work.
 
 \section{Osnovni pojmi}
 
+Naj bo $M$ gladka mnogoterost. Za vsako točko $p \in M$ definiramo simetrično pozitivno-definitno bilinearno preslikavo $g_{p} \colon T_{p}M \times T_{p}M \to \R$, ki je gladko odvisna od $p$. Družino preslikav $g_{p}$ imenujemo \emph{Riemannova metrika} $g$ na mnogoterosti $M$.
+Gladki mnogoterosti, opremljeni z Riemannovo metriko, pravimo \emph{Riemannova mnogoterost}.
+
+Izkaže se, da vsaka mnogoterost razreda $\mathcal{C}^{r+1}$ premore Riemannovo metriko razreda $\mathcal{C}^{r}$.
+
+Naj bo $M$ domena v $\R^{n}$ s koordinatami $x = (x_{1}, \dots, x_{n})$. Riemannova metrika na $M$ je tedaj oblike
+\begin{align}
+g_{p} = \sum_{i,j=1}^{n} g_{i,j}(p) dx_{i} dx_{j}, \quad p \in M,
+\end{align}
+kjer je $G(p) = [g_{i,j}(p)]_{i,j=1}^{n}$ simetrična pozitivno-definitna matrika za vse $p \in M$. Za tangentna vektorja $\xi = (\xi_{1}, \dots, \xi_{n}), \ \eta = (\eta_{1}, \dots, \eta_{n}) \in \R^{n}$ velja
+\begin{align}
+g_{p}(\xi, \eta) &= \sum_{i,j=1}^{n} g_{i,j}(p) \xi_{i} \eta_{j} = G(p) \xi \cdot \eta.
+\end{align}
+
+Vzemimo gladko imerzijo $x \colon M \to \widetilde{M}$ in Riemannovo metriko $\tilde{g}$ na $\widetilde{M}$. \emph{Pullback metric} $g = x^{*} \tilde{g}$ na $M$, definirano na paru tangentnih vektorjev $\xi, \eta \in T_{p}M$, podaja predpis
+\begin{equation} \label{eq:pullback}
+g_{p}(\xi, \eta) = \tilde{g}_{x(p)} (dx_{p}(\xi), dx_{p}(\eta)).
+\end{equation}
+Če je metrika $\tilde{g}$ razreda $\mathcal{C}^{r}$ in imerzija $x$ razreda $\mathcal{C}^{r+1}$, potem je tudi pullback metric $g = x^{*} \tilde{g}$ razreda $\mathcal{C}^{r}$.
+
+Na Evklidskem prostoru $\R^{n}$ s koordinatami $x = (x_{1}, \dots, x_{n})$ je definirana \emph{Evklidska metrika}
+\begin{equation}
+ds^2 = (dx_{1})^2 + \cdots + (dx_{n})^2,
+\end{equation}
+to je Riemannova metrika, ki ustreza identični matriki $I_{n}$. Naj bo $D$ domena v $\R^2$ in $x \colon D \to \R^{n}$ imerzija, podana s predpisom $x(u_1,u_2) = (x_{1}(u_1,u_2), \dots, x_{n}(u_1,u_2))$, $(u_1,u_2) \in D$. Pripadajoča metrika na $D$ je enaka
+\begin{gather}
+g = x^{*}ds^2 = g_{1,1}du_{1}^2 + g_{1,2}du_{1}du_{2} + g_{2,1}du_{2}du_{1} + g_{2,2}du_{2}^2, \\
+g_{1,1} = |x_{u_1}|^2, \ g_{1,2} = g_{1,2} = x_{u_1} \cdot x_{u_2}, \ g_{2,2} = |x_{u_2}|^2
+\end{gather}
+in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
+
 \begin{definicija}
 \emph{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
 \end{definicija}
 
 % Ukrivljenost
+\subsection{Ukrivljenost}
+%
 Naj bo $M$ ploskev, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Izberimo karto $(U, \phi)$ na $M$ in koordinate $u = (u_1, u_2) \in U$, tako da je zožitev $x|_{U} \colon U \to \R^{n}$ vložitev na orientabilno ploskev $S = x(U) \subset \R^{n}$. Izberimo točko $q \in U$ in označimo $p = x(q) \in S$. Naj bo $t \mapsto (u_1(t), u_2(t))$ parametrizacija vložene krivulje razreda $\mathcal{C}^2$ v $U$ ter $q = (u_1(t_0), u_2(t_0))$ za nek $t_0$. Vsaka krivulja, vložena v $S$, ki vsebuje točko $p$, je tedaj oblike
 \begin{equation}
 \alpha (t) = x(u_1(t), u_2(t)).
@@ -270,6 +303,8 @@ kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ 
 \end{lema}
 
 % Aproksimacijski izreki za Riemannove ploskve
+\subsection{Aproksimacijski izreki za Riemannove ploskve}
+%
 \begin{izrek} [Rungejev aproksimacijski izrek za Riemannove ploskve]
 Naj bo $M$ Riemannova ploskev in $K$ njena kompaktna podmnožica. 
 Potem lahko vsako funkcijo $f$, ki je holomorfna na okolici $K$, aproksimiramo enakomerno na $K$ z meromorfnimi funkcijami $F$ na $M$ brez polov na $K$, ter s holomorfnimi funkcijami na $M$, če $K$ nima lukenj.
