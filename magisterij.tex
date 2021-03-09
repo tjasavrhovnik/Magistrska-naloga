@@ -242,6 +242,7 @@ g_{p}(\xi, \eta) = \tilde{g}_{x(p)} (dx_{p}(\xi), dx_{p}(\eta)).
 \end{equation}
 Če je metrika $\tilde{g}$ razreda $\mathcal{C}^{r}$ in imerzija $x$ razreda $\mathcal{C}^{r+1}$, potem je tudi pullback metric $g = x^{*} \tilde{g}$ razreda $\mathcal{C}^{r}$.
 
+Oglejmo si primer Riemannove metrike, ki jo bomo v nadaljevanju večkrat uporabili.
 Na Evklidskem prostoru $\R^{n}$ s koordinatami $x = (x_{1}, \dots, x_{n})$ je definirana \emph{Evklidska metrika}
 \begin{equation}
 ds^2 = (dx_{1})^2 + \cdots + (dx_{n})^2,
@@ -249,7 +250,7 @@ ds^2 = (dx_{1})^2 + \cdots + (dx_{n})^2,
 to je Riemannova metrika, ki ustreza identični matriki $I_{n}$. Naj bo $D$ domena v $\R^2$ in $x \colon D \to \R^{n}$ imerzija, podana s predpisom $x(u_1,u_2) = (x_{1}(u_1,u_2), \dots, x_{n}(u_1,u_2))$, $(u_1,u_2) \in D$. Pripadajoča metrika na $D$ je enaka
 \begin{gather}
 g = x^{*}ds^2 = g_{1,1}du_{1}^2 + g_{1,2}du_{1}du_{2} + g_{2,1}du_{2}du_{1} + g_{2,2}du_{2}^2, \\
-g_{1,1} = |x_{u_1}|^2, \ g_{1,2} = g_{1,2} = x_{u_1} \cdot x_{u_2}, \ g_{2,2} = |x_{u_2}|^2
+g_{1,1} = |x_{u_1}|^2, \ g_{1,2} = g_{2,1} = x_{u_1} \cdot x_{u_2}, \ g_{2,2} = |x_{u_2}|^2
 \end{gather}
 in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
 
