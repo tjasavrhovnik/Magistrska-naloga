@@ -86,6 +86,7 @@
 \newtheorem{primer}[definicija]{Primer}
 \newtheorem{opomba}[definicija]{Opomba}
 \newtheorem{aksiom}{Aksiom}
+\newtheorem{dokaz}{Dokaz}
 
 \theoremstyle{plain} % tekst napisan poševno
 \newtheorem{lema}[definicija]{Lema}
@@ -400,9 +401,9 @@ Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \col
 			\begin{equation}
 			(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0.
 			\end{equation}
-	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi na \emph{ničelni kvadriki} 
-			\begin{equation}		
-			\textbf{\textup{A}} = \{ (z_1, \dots , z_n) \in \C^{n} ; z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
+	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi na \emph{ničelni kvadriki}
+			\begin{equation} \label{ničelna-kvadrika}		
+			\textbf{\textup{A}} = \{ (z_1, \dots , z_n) \in \C^{n} ; \ z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
 			\end{equation}	
 		Nadalje je Riemannova metrika na $M$, inducirana s konformno imerzijo $x$, enaka
 			\begin{align}
@@ -487,7 +488,32 @@ Naj bo $M$ povezana odprta Riemannova ploskev ali kompaktna Riemannova ploskev z
 V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. V višjih dimenzijah ($n \geq 4$) veljata implikaciji 
 \[ \text{polna} \ \Rightarrow \ \text{neizrojena} \ \Rightarrow \ \text{neravna}. \]
 
-\section{Izerki o aproksimaciji in interpolaciji minimalnih ploskev}
+%
+%Izreki o aproksimaciji in interpolaciji minimalnih ploskev
+\section{Izreki o aproksimaciji in interpolaciji minimalnih ploskev}
+
+Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih presikav $M \to X$ označimo z $\mathcal{O}(M,X)$.
+Če je $K$ kompaktna podmnožica v $M$, množico preslikav $K \to X$ razreda $\mathcal{C}^{r}$, ki so holomorfne v notranjosti $K^\circ \subset K$, označimo z $\mathcal{A}^{r}(K,X)$.
+V primeru, ko je $X = \C$, ustrezna prostora označimo z $\mathcal{O}(M)$ oziroma $\mathcal{A}^{r}(K)$.
+
+\begin{lema}
+Naj bo $M$ povezana Riemannova ploskev in $\textbf{\textup{A}}_{*}$ punktirana ničelna kvadrika.
+Holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$ je neravna natanko tedaj, ko je linearna ogrinjača tangentnih prostorov 
+$T_{f(p)} A \subset T_{f(p)} \C^{n}$ po vseh $p \in M$ enaka $\C^{n}$.
+\end{lema}
+
+\begin{dokaz}
+Oglejmo si preslikavo 
+$\Phi \colon \C^{n} \to \C$, definirano s predpisom $\Phi(z) = \sum_{j=1}^{n} z_{j}^{2}$.
+Ničelno kvadriko~\ref{ničelna-kvadrika} tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0 \} )$.
+Njen tangentni prostor v točki $z = (z_{1}, \dots , z_{n}) \in \C^{n}$ je enak jedru diferenciala, ki kvadriko določa, zato je
+\[ T_{z} \textbf{\textup{A}} = \ker (d \Phi_{z}) = \ker (z \mapsto \sum_{j=1}^{n} z_{j} dz_{j}). \]
+
+Naj bosta $z, \ w \in \C_{*}^{n}$. Potem sta njuna tangentna prostora enaka, $ T_{z} \textbf{\textup{A}} = T_{w} \textbf{\textup{A}} $, natanko tedaj, ko je $z_{j} = \lambda w_{j}$ za vse $j = 1, \dots , n$ in nek $\lambda \in \C$, kar je ekvivalentno pogoju, da sta vektorja $z$ in $w$ kolinearna.
+
+Po definiciji je preslikava $f$ neravna, če njena slika $f(M)$ ni vsebovana v nobeni afini kompleksni premici v $\C^{n}$. Skupaj z zgornjim je slednje ekvivalnetno 
+$ Lin \{T_{p} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
+\end{dokaz}
 
 
 % Literatura:
