@@ -493,8 +493,14 @@ V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. 
 \section{Izreki o aproksimaciji in interpolaciji minimalnih ploskev}
 
 Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih presikav $M \to X$ označimo z $\mathcal{O}(M,X)$.
-Če je $K$ kompaktna podmnožica v $M$, množico preslikav $K \to X$ razreda $\mathcal{C}^{r}$, ki so holomorfne v notranjosti $K^\circ \subset K$, označimo z $\mathcal{A}^{r}(K,X)$.
+Če je $K$ kompaktna podmnožica v $M$, množico preslikav $K \to X$ razreda $\mathcal{C}^{r}(M)$, ki so holomorfne v notranjosti $K^\circ \subset K$, označimo z $\mathcal{A}^{r}(K,X)$.
 V primeru, ko je $X = \C$, ustrezna prostora označimo z $\mathcal{O}(M)$ oziroma $\mathcal{A}^{r}(K)$.
+
+Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Prostor konformnih minimalnih imerzij $M \to \R^{n}$ označimo s $\textup{CMI}(M, \R^{n})$, prostor holomorfnih ničelnih imerzij $M \to \C^{n}$ pa z $\textup{NC}(M, \C^{n})$.
+Nadalje $\textup{CMI}_{full}(M, \R^{n})$ in $\textup{CMI}_{nf}(M, \R^{n})$ označujeta prostora polnih oziroma neravnih konformnih minimalnih imerzij. Velja inkluzija $\textup{CMI}_{full}(M, \R^{n}) \subset \textup{CMI}_{nf}(M, \R^{n})$.
+Podobno je $\textup{NC}_{full}(M, \C^{n}) \subset \textup{NC}_{nf}(M, \C^{n})$ v primeru polnih ter neravnih holomorfnih ničelnih krivulj.
+
+Če je $M$ kompaktna omejena Riemannova ploskev z nepraznim gladkim robom $bM$ in $r \in \N$, tedaj prostor konformnih minimalnih imerzij $M \to \R^{n}$ razreda $\mathcal{C}^{r}(M)$ označimo s $\textup{CMI}^{r}(M, \R^{n})$, prostor holomorfnih ničenih imerzij $M \to \C^{n}$ razreda $\mathcal{A}^{r}(M)$ pa z $\textup{NC}^{r}(M, \C^{n})$.
 
 \begin{lema}
 Naj bo $M$ povezana Riemannova ploskev in $\textbf{\textup{A}}_{*}$ punktirana ničelna kvadrika.
@@ -512,9 +518,53 @@ Njen tangentni prostor v točki $z = (z_{1}, \dots , z_{n}) \in \C^{n}$ je enak 
 Naj bosta $z, \ w \in \C_{*}^{n}$. Potem sta njuna tangentna prostora enaka, $ T_{z} \textbf{\textup{A}} = T_{w} \textbf{\textup{A}} $, natanko tedaj, ko je $z_{j} = \lambda w_{j}$ za vse $j = 1, \dots , n$ in nek $\lambda \in \C$, kar je ekvivalentno pogoju, da sta vektorja $z$ in $w$ kolinearna.
 
 Po definiciji je preslikava $f$ neravna, če njena slika $f(M)$ ni vsebovana v nobeni afini kompleksni premici v $\C^{n}$. Skupaj z zgornjim je slednje ekvivalnetno 
-$ Lin \{T_{p} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
+$ Lin \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
 \end{dokaz}
 
+\begin{definicija}
+Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\Theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
+Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena konformna minimalna imerzija} $S \to \R^{n}$ razreda $\mathcal{C}^{r}$ je par $(x, f \Theta)$, kjer je $x \colon S \to \R^{n}$ preslikava razreda  $\mathcal{C}^{r}$, njena zožitev na $S^\circ = K^\circ$ je konformna minimalna imerzija in preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadošča naslednjima pogojema:
+\begin{enumerate}
+\item na množici $K$ velja $f \Theta = 2 \partial x$;
+\item za vsako gladko pot $\alpha$ v $M$, ki parametrizira povezano komponento $E = \overline{S \setminus K}$ velja $ \Re(\alpha^{*}(f \Theta)) = \alpha^{*}(dx) = d(x \circ \alpha)$.
+\end{enumerate}
+%
+Posplošena konformna minimalna imerzija $(x, f \Theta)$ je \emph{neravna} oziroma \emph{polna} natanko tedaj, ko je preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ neravna oziroma polna na vsaki relativno odprti podmnožici $S$.
+\end{definicija}
+
+Prostor posplošenih konformnih minimalnih imerzij $S \to \R^{n}$ razreda $\mathcal{C}^{r}$ označimo z $\textup{GCMI}^{r}(S, \R^{n})$. Analogno kot v primeru konformnih minimalnih imerzij velja 
+\[ \textup{GCMI}_{full}^{r}(S, \R^{n}) \subset \textup{GCMI}{nf}^{r}(S, \R^{n}) \subset \textup{GCMI}^{r}(S, \R^{n}). \]
+
+\begin{opomba}
+Diferencial $d$ v kompleksnem ima obliko $d = \partial + \bar{\partial}$. \emph{Konjugirani difernecial} $d^{c}$ je enak $d^{c} = i(\bar{\partial} - \partial) = 2 \Im(\partial)$. Zato velja $d + i d^{c} = 2 \partial$ oziroma drugače, $\Re(2 \partial) = dx$.
+Prvi pogoj iz definicije posplošene konformne minimalne imerzije pravi $f \Theta = 2 \partial$, od koder sledi $\Re(f \Theta) = \Re(2 \partial) = dx$. Zato je drugi pogoj iz zgornje definicije skladen s prvim.
+\end{opomba}
+
+Tudi za posplošene konformne minimalne imerzije velja Weierstrassova formula.
+Naj bo $S$ povezana dopustna množica in $(x, f \Theta) \in \textup{GCMI}^{r}(S, \R^{n})$. Za poljubno točko $p_{0} \in S$ in poznano preslikavo $f$ lahko preslikavo $x \colon S \to \R^{n}$ konstruiramo s formulo
+\begin{align} \label{eq:Wstrass-gcmi}
+x(p) = x(p_{0}) + \Re \int_{p_0}^{p} f \Theta, \ p \in S.
+\end{align} 
+Obratno, če za preslikavo $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ velja $ \Re \int_{C} f \Theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, potem $f$ določa posplošeno konformno minimalno imerzijo, dano z Weierstrassovo formulo~\ref{eq:Wstrass-gcmi}.
+
+\begin{definicija}
+Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\Theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
+Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena ničelna krivulja} $S \to \C^{n}$ razreda $\mathcal{C}^{r}$ je par $(z, f \Theta)$, kjer preslikavi $z \in \mathcal{A}^{r}(S, \C^{n})$ in $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadoščata naslednjima pogojema:
+\begin{enumerate}
+\item na množici $K$ velja $f \Theta = dz = \partial z$;
+\item za vsako gladko pot $\alpha$ v $M$, ki parametrizira povezano komponento $E = \overline{S \setminus K}$ velja $ \alpha^{*}(f \Theta)) = \alpha^{*}(dz) = d(z \circ \alpha)$.
+\end{enumerate}
+%
+Posplošena ničelna krivulja $(z, f \Theta)$ je \emph{neravna} oziroma \emph{polna} natanko tedaj, ko je preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ neravna oziroma polna na vsaki relativno odprti podmnožici $S$.
+\end{definicija}
+
+Prostori neravnih, polnih in posplošenih ničelnih krivulj ustrezajo verigi inkluzij
+\[ \textup{GNC}_{full}^{r}(S, \C^{n}) \subset \textup{GNC}{nf}^{r}(S, \C^{n}) \subset \textup{GNC}^{r}(S, \C^{n}). \]
+Za povezano dopustno množico $S$, $(z, f \Theta) \in \textup{GNC}^{r}(S, \C^{n})$, znano preslikavo $f$ in točko $p_{0} \in S$ preslikavo $z \colon S \to \C^{n}$ konstruiramo s pomočjo Weierstrassove formule
+\begin{align} \label{eq:Wstrass-gnc}
+z(p) = z(p_{0}) + \int_{p_0}^{p} f \Theta, \ p \in S.
+\end{align} 
+Velja tudi obrat; preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$, ki zadošča $\int_{C} f \Theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, določa posplošeno ničelno krivuljo, dano z Weierstrassovo formulo~\ref{eq:Wstrass-gnc}.
 
 % Literatura:
 % Primer navajanja na http://www.fmf.uni-lj.si/storage/24240/LiteraturaM.pdf,
