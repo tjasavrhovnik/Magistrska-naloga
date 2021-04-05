@@ -390,6 +390,10 @@ Naj bo $K$ kompaktna podmnožica Riemannove ploskve $M$. Njena \emph{holomorfna 
 Če velja $K = \widehat{K}_{\mathcal{O}(M)}$, množico $K$ imenujemo \emph{Rungejeva množica}.
 \end{definicija}
 
+\begin{izrek} [Bishop-Mergelyanov aproksimacijski izrek] \label{izr:Bishop-Mergelyan}
+Naj bo $M$ odprta Riemannova ploskev in $K$ njena kompaktna podmnožica brez lukenj ($K$ je Rungejeva v $M$). Potem lahko vsako funkcijo v $\mathcal{A}(K)$ aproksimiramo enakomerno na $K$ s funkcijami v $\mathcal{O}(M)$.
+\end{izrek}
+
 \begin{izrek} [Weierstrass-Florackov interpolacijski izrek]
 Naj bo $M$ odprta Riemannova ploskev in $K$ njena Rungejeva podmnožica. Naj bo $A = \{ a_i \}_{i=1}^{\infty}$ zaprta diskretna podmnožica v $M$, $U$ odprta podmnožica $M$, tako da je $A \cup K \subset U$ in $f$ meromorfna funkcija na $U$ z ničlami in poli le v točkah množice $A$.
 Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna funkcija $F$ na $M$, za katero velja:
@@ -670,17 +674,37 @@ Preslikavo $\Theta_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej} imenujemo \emph{pe
 \end{definicija}
 
 \begin{dokaz}
-Prvi del leme bomo dokazali tako, da bomo konstruirali periodno dominantni sprej, ki zadošča periodno dominantni lastnosti. Potrebovali bomo Lemo~\ref{lema:neravna f}, Bishop-Mergelyanov izrek o aproksimaciji in pojem toka vektorskega polja.
+Prvi del leme bomo dokazali tako, da bomo konstruirali periodno dominantni sprej, ki zadošča periodno dominantni lastnosti. Potrebovali bomo Lemo~\ref{lema:neravna f}, Bishop-Mergelyanov izrek o aproksimaciji~\ref{izr:Bishop-Mergelyan} in pojem toka vektorskega polja.
 Zaradi enostavnosti postavimo $r=0$ (za $r>0$ dokaz poteka analogno).
 
-Po predpostavki je za vse $i \in \{ 1, \dots, n \}$ lok $I_{i} \subset C_{i} \in \mathcal{C}$ netrivialen, za katerega velja $I_{i} \cap \cup_{i \neq j} C_{j} = \emptyset$ in je zožitev preslikave $f|_{I_{i}}$ neravna. Po Lemi~\ref{lema:neravna f} obstajajo točke $p_{i,j} \in I_{i}$ in holomorfna vektorska polja $V_{i,j} \in \C^{n}$, $j \in \{1, \dots, n \}$, ki so tangentna na $\textbf{\textup{A}}$, tako da je $Lin \{ V_{i,j}(f(p_{i,j})) ; \ j = 1, \dots, n \} = \C^{n}$ za vse $i$.
+Po predpostavki je za vse $i \in \{ 1, \dots, n \}$ lok $I_{i} \subset C_{i} \in \mathcal{C}$ netrivialen, za katerega velja $I_{i} \cap \cup_{i \neq j} C_{j} = \emptyset$ in je zožitev preslikave $f|_{I_{i}}$ neravna. Po Lemi~\ref{lema:neravna f} obstajajo točke $p_{i,j} \in I_{i}$ in holomorfna vektorska polja $V_{i,j}$ na $\C^{n}$, $j \in \{1, \dots, n \}$, ki so tangentna na $\textbf{\textup{A}}$, tako da je $Lin \{ V_{i,j}(f(p_{i,j})) ; \ j = 1, \dots, n \} = \C^{n}$ za vse $i$.
 
-Za $i = 1, \dots l$ označimo $t_{i} = (t_{i,1}, \dots, t_{i,n}) \in \C^{n}$ in $t = (t_{1}, \dots, t_{n}) \in \C^{nl}$. Naj $\Phi_{t}^{i,j}$ označuje tok vektorskega polja $V_{i,j}$.
+Za $k = 1, \dots l$ označimo $t_{k} = (t_{k,1}, \dots, t_{k,n}) \in \C^{n}$ in $t = (t_{1}, \dots, t_{n}) \in \C^{nl}$. Naj $\Phi_{t}^{i,j}$ označuje tok vektorskega polja $V_{i,j}$.
 Izberimo tako odprto okolico $U_{0} \subset \C^{nl}$ točke $0$, da za vse $t \in U_{0}$ in $p \in S$ predpis
-\begin{align}
+\begin{align} \label{predpis-tokovi}
 (p, t) \mapsto \Phi_{t_{1,1}}^{1,1} \circ \cdots \circ \Phi_{t_{1,n}}^{1,n} \circ \Phi_{t_{2,1}}^{2,1} \circ \cdots \circ \Phi_{t_{l,n}}^{l,n} (f(p))
 \end{align}
 podaja dobro definirano preslikavo $S \times U_{0} \to \textbf{\textup{A}}_{*}$.
+Sedaj za vse pare $(i,j)$ izberimo gladke preslikave $g_{i,j} \colon C \to \C$, pri čemer je nosilec $g_{i,j}$ vsebovan v majhnem delu loka $I_{i}$ okrog točke $p_{i,j} \in I_{i}$.
+Modificirana preslikava~\ref{predpis-tokovi}, $\Phi \colon C \times U_{1} \to \textbf{\textup{A}}_{*}$,
+\begin{align} \label{predpis-Phi}
+\Phi(p,t) = \Phi_{g_{1,1}(p)t_{1,1}}^{1,1} \circ \cdots \circ \Phi_{g_{l,n}(p)t_{l,n}}^{l,n} (f(p)),
+\end{align}
+kjer je $U_{1} \subset \C^{nl}$ primerno majhna odprta okolica točke $0$, je tedaj dobro definirana, za vse $p \in C$ pa je preslikava $\Phi(p, \cdot) \colon U_{1} \to \textbf{\textup{A}}_{*}$ holomorfna. Po lastnostih toka vektorskega polja sledi še $\Phi(p,0) = f(p)$ in
+\begin{align} \label{dPhi/dt}
+\frac{\partial \Phi(p,t)}{\partial t_{m,j}} \Big|_{t=0} = g_{m,j}(p) \cdot V_{m,j}(f(p)).
+\end{align}
+
+Naj bo $\mathcal{P} = (\mathcal{P}_{1}, \dots, \mathcal{P}_{n})$ periodna preslikava, prirejena družini krivulj $\mathcal{C}$. Z uporabo enakosti~\ref{dPhi/dt} dobimo za vse indekse $i, m \in \{1, \dots, l \}$ in $j \in \{1, \dots, n \}$
+\begin{align}
+\frac{\partial \mathcal{P}_{i}(\Phi(\cdot, t))}{\partial t_{m,j}} \Big|_{t=0} = \frac{\partial}{\partial t_{m,j}} \Big|_{t=0} \int_{C_{i}} \Phi(\cdot, t) \cdot \Theta = \int_{C_{i}} g_{m,j} \cdot (V_{m,j} \circ f) \cdot \Theta \in \C^{n}.
+\end{align}
+Matrika diferencialov~\ref{PD-lastnost} iz leme je sestavljena iz blokov velikosti $n \times n$, ki pripadajo indeksom $i, m \in \{1, \dots, l \}$. Z ustrezno izbiro preslikav $g_{i,j}$ opisanih zgoraj lahko dosežemo, da je matrika bločno diagonalna z obrnljivimi bloki na diagonali. S tem postane celotna matrika obrnljiva.
+
+V naslednjem koraku bomo modificirali še preslikavo $\Phi$, kar nam bo dalo iskani periodno dominantni prej.
+Preslikave $g_{i,j}$ so definirane na množici $C$, ki je po predpostavki Rungejeva v $S$. Bishop-Mergelyanov izrek o aproksimaciji pove, da vsako funkcijo $g_{i,j}$ lahko enakomerno na $C$ aproksimiramo s holomorfnimi funkcijami $\tilde{g}_{i,j}$ v okolici $S$.
+
+Definirajmo preslikavo $\Phi_{f} \colon S \times U \to \textbf{\textup{A}}_{*}$ tako, da v predpisu~\ref{predpis-Phi} nadomestimo $g_{i,j}$ z novimi funkcijami $\tilde{g}_{i,j}$ in je $U \subset U_{1} \subset \C^{nl}$ odprta okolica izhodišča. Po konstrukciji takšna preslikava $\Phi_{f}$ zadošča sklepom leme, zato je periodno dominantni sprej, ki smo ga iskali.
 \end{dokaz}
 
 % Literatura:
