@@ -322,7 +322,7 @@ Surjektivno preslikavo $\pi \colon E \to B$ imenujemo realen \emph{vektorski sve
 Ekvivalentno, za vsak $b \in B$ je $s(b) \in \pi^{-1}(b) = E_{b}$, torej prerez vsako točko baznega prostora slika v točko v vlaknu nad $b$.
 \end{definicija}
 
-Omenimo poseben primer vektorskega svežnja, ki ga bomo v nadaljevanju pogosto potrebovali. Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ z $r \geq 1$. Njen \emph{tangentni sveženj} je disjunktna unija tangentnih prostorov v točkah $x \in X$:
+Omenimo poseben primer vektorskega svežnja, ki ga bomo v nadaljevanju pogosto potrebovali. Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ z $r \geq 1$. Njen \emph{tangentni sveženj} je disjunktna unija tangentnih prostorov na $X$ v točkah $x \in X$:
 \[ TX = \bigsqcup_{x \in X} T_{x}X. \]
 Tangentni sveženj je vektorski sveženj ranga $n = \dim X$ in razreda $\mathcal{C}^{r-1}$.
 
@@ -341,7 +341,7 @@ Naj bo $V$ vektorsko polje na mnogoterosti $X$ in $x \in X$ točka, v kateri je 
 \end{align*}
 
 \emph{Tok vektorskega polja} $V$ na odprti podmnožici $U \subset X$ je 1-parametrična družina preslikav
-$ \Phi_{t} \colon U \to \Phi_{t}(U),$ definirana s predpisom $\Phi_{t}(x) = \gamma_{x}(t)$.
+$ \Phi_{t} \colon U \to \Phi_{t}(U),$ definiranih s predpisi $\Phi_{t}(x) = \gamma_{x}(t)$.
 \end{definicija}
 
 Vektorsko polje $V$ lahko v lokalnih koordinatah $x = (x_{1}, \dots, x_{n})$ na odprti podmnožici $U \subset X$ zapišemo kot 
@@ -349,7 +349,7 @@ Vektorsko polje $V$ lahko v lokalnih koordinatah $x = (x_{1}, \dots, x_{n})$ na 
 V(x) = \sum_{i=1}^{n} V_{i}(x) \frac{\partial}{\partial x_{i}},
 \end{align}
 kjer so $V_{i}$ realne funkcije na $U$, diferenciali $\frac{\partial}{\partial x_{i}}$ pa v vsaki točki $p \in U$ sestavljajo bazo tangentnega prostora $T_{p}X$.
-Pot $\gamma (t) = (\gamma_{1}(t), \dots, \gamma_{n}(t))$ je po definiciji integralna krivulja natanko takrat, ko zadošča enakosti 
+Pot $\gamma (t) = (\gamma_{1}(t), \dots, \gamma_{n}(t))$ na $X$ je po definiciji integralna krivulja natanko takrat, ko zadošča enakosti 
 \begin{align*}
 \dot{\gamma}(t) = \sum_{i=1}^{n} V_{i}(\gamma(t)) \frac{\partial}{\partial x_{i}}.
 \end{align*}
@@ -357,7 +357,7 @@ Rešujemo sistem $n$ navadnih diferencialnih enačb ($i \in \{ 1, \dots n \}$)
 \begin{align*}
 \dot{\gamma}_{i}(t) = V_{i}(\gamma_{1}(t), \dots, \gamma_{n}(t)),
 \end{align*}
-katerega lokalna rešitev je tok vektorskega polja $V$, $\Phi_{t}(x)$. 
+katerega lokalna rešitev je tok vektorskega polja $V$ na $X$, $\Phi_{t}(x)$. 
 
 \begin{definicija}
 Naj bo $X$ gladka mnogoterost. Dualni sveženj njenega tangentnega svežnja imenujemo \emph{kotangentni sveženj}
@@ -368,7 +368,7 @@ Tu je $T_{x}^{*}X$ \emph{kotangentni prostor} mnogoterosti $X$ v točki $x \in X
 \emph{(Diferencialna) 1-forma} na mnogoterosti $X$ je prerez $\alpha \colon X \to T^{*}X$ kotangentnega svežnja.
 \end{definicija}
 
-Analogno z vektorskimi polji lahko tudi 1-forme predstavimo lokalno. Naj bo $U$ odprta podmnožica v $X$ z lokalnimi koordinatami $x = (x_{1}, \dots, x_{n})$. Če so $a_{i}$ realne funkcije na $U$ in $dx_{i}$ diferenciali koordinatnih funkcij, ki v vsaki točki $p \in U$ tvorijo bazo kotangentnega prostora $T_{p}^{*}X$, potem ima poljubna 1-forma na $U$ obliko
+Podobno kot vektorska polja lahko tudi 1-forme predstavimo lokalno. Naj bo $U$ odprta podmnožica v $X$ z lokalnimi koordinatami $x = (x_{1}, \dots, x_{n})$. Če so $a_{i}$ realne funkcije na $U$ in $dx_{i}$ diferenciali koordinatnih funkcij, ki v vsaki točki $p \in U$ tvorijo bazo kotangentnega prostora $T_{p}^{*}X$, potem ima poljubna 1-forma na $U$ obliko
 \begin{align}
 \alpha = \sum_{i=1}^{n} a_{i}(x) dx_{i}.
 \end{align}
@@ -571,7 +571,7 @@ Podobno je $\textup{NC}_{full}(M, \C^{n}) \subset \textup{NC}_{nf}(M, \C^{n})$ v
 
 Če je $M$ kompaktna omejena Riemannova ploskev z nepraznim gladkim robom $bM$ in $r \in \N$, tedaj prostor konformnih minimalnih imerzij $M \to \R^{n}$ razreda $\mathcal{C}^{r}(M)$ označimo s $\textup{CMI}^{r}(M, \R^{n})$, prostor holomorfnih ničenih imerzij $M \to \C^{n}$ razreda $\mathcal{A}^{r}(M)$ pa z $\textup{NC}^{r}(M, \C^{n})$.
 
-\begin{lema}
+\begin{lema} \label{lema:neravna f}
 Naj bo $M$ povezana Riemannova ploskev in $\textbf{\textup{A}}_{*}$ punktirana ničelna kvadrika.
 Holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$ je neravna natanko tedaj, ko je linearna ogrinjača tangentnih prostorov 
 $T_{f(p)} A \subset T_{f(p)} \C^{n}$ po vseh $p \in M$ enaka $\C^{n}$.
@@ -668,6 +668,20 @@ Za vsako preslikavo $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki 
 \begin{definicija}
 Preslikavo $\Theta_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej} imenujemo \emph{periodno dominantni sprej} preslikav $S \to \textbf{\textup{A}}_{*}$ za družino krivulj $\mathcal{C}$ z \emph{jedrom} $\Theta_{f}(\cdot, 0) = f$. Lastnosti~\ref{PD-lastnost} pravimo \emph{periodno dominantna lastnost}.
 \end{definicija}
+
+\begin{dokaz}
+Prvi del leme bomo dokazali tako, da bomo konstruirali periodno dominantni sprej, ki zadošča periodno dominantni lastnosti. Potrebovali bomo Lemo~\ref{lema:neravna f}, Bishop-Mergelyanov izrek o aproksimaciji in pojem toka vektorskega polja.
+Zaradi enostavnosti postavimo $r=0$ (za $r>0$ dokaz poteka analogno).
+
+Po predpostavki je za vse $i \in \{ 1, \dots, n \}$ lok $I_{i} \subset C_{i} \in \mathcal{C}$ netrivialen, za katerega velja $I_{i} \cap \cup_{i \neq j} C_{j} = \emptyset$ in je zožitev preslikave $f|_{I_{i}}$ neravna. Po Lemi~\ref{lema:neravna f} obstajajo točke $p_{i,j} \in I_{i}$ in holomorfna vektorska polja $V_{i,j} \in \C^{n}$, $j \in \{1, \dots, n \}$, ki so tangentna na $\textbf{\textup{A}}$, tako da je $Lin \{ V_{i,j}(f(p_{i,j})) ; \ j = 1, \dots, n \} = \C^{n}$ za vse $i$.
+
+Za $i = 1, \dots l$ označimo $t_{i} = (t_{i,1}, \dots, t_{i,n}) \in \C^{n}$ in $t = (t_{1}, \dots, t_{n}) \in \C^{nl}$. Naj $\Phi_{t}^{i,j}$ označuje tok vektorskega polja $V_{i,j}$.
+Izberimo tako odprto okolico $U_{0} \subset \C^{nl}$ točke $0$, da za vse $t \in U_{0}$ in $p \in S$ predpis
+\begin{align}
+(p, t) \mapsto \Phi_{t_{1,1}}^{1,1} \circ \cdots \circ \Phi_{t_{1,n}}^{1,n} \circ \Phi_{t_{2,1}}^{2,1} \circ \cdots \circ \Phi_{t_{l,n}}^{l,n} (f(p))
+\end{align}
+podaja dobro definirano preslikavo $S \times U_{0} \to \textbf{\textup{A}}_{*}$.
+\end{dokaz}
 
 % Literatura:
 % Primer navajanja na http://www.fmf.uni-lj.si/storage/24240/LiteraturaM.pdf,
