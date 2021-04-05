@@ -304,6 +304,75 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Tedaj velja
 kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ v točki $q \in M$ in $\textbf{\textup{H}}$ vektor povprečne ukrivljenosti v točki $p = x(q) \in S$.
 \end{lema}
 
+% Vektorska polja
+\subsection{Vektorska polja}
+%
+\begin{definicija}
+Naj bo $r \geq 1$ ter $E$ in $B$ mnogoterosti razreda $\mathcal{C}^{r}$.
+Surjektivno preslikavo $\pi \colon E \to B$ imenujemo realen \emph{vektorski sveženj} ranga $n$ in razreda $\mathcal{C}^{r}$, če
+\begin{enumerate}
+\item je vsako vlakno $\pi^{-1}(b) = E_{b}$, $b \in B$, $n$-razsežen realen vektorski prostor: $E_{b} \cong \R^{n}$,
+\item za vsak $b \in B$ obstajata okolica $b \in U \subset B$ in difeomorfizem $\tau \colon E|_{U} \to U \times \R^{n}$ razreda $\mathcal{C}^{r}$, tako da je za vsak $x \in U$ preslikava $ \tau_{x} \colon E_{x} \to \{x\} \times \R^{n} $ linearni izomorfizem. Preslikavi $\tau_{x}$ pravimo \emph{lokalna trivializacija}.
+\end{enumerate}
+Če ima vlakno strukturo kompleksnega vektorskega prostora, na ustreznih mestih v definiciji zamenjamo $\R^{n}$ s $\C^{n}$ - v tem primeru dobimo kompleksen vektorski sveženj.
+\end{definicija}
+
+\begin{definicija}
+\emph{Prerez} vektorskega svežnja $\pi \colon E \to B$ je preslikava $s \colon B \to E$, za katero velja $\pi \circ s = id_{B}$.
+Ekvivalentno, za vsak $b \in B$ je $s(b) \in \pi^{-1}(b) = E_{b}$, torej prerez vsako točko baznega prostora slika v točko v vlaknu nad $b$.
+\end{definicija}
+
+Omenimo poseben primer vektorskega svežnja, ki ga bomo v nadaljevanju pogosto potrebovali. Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ z $r \geq 1$. Njen \emph{tangentni sveženj} je disjunktna unija tangentnih prostorov v točkah $x \in X$:
+\[ TX = \bigsqcup_{x \in X} T_{x}X. \]
+Tangentni sveženj je vektorski sveženj ranga $n = \dim X$ in razreda $\mathcal{C}^{r-1}$.
+
+\begin{definicija}
+Naj bo $r \geq 1$ in $X$ mnogoterost razreda $\mathcal{C}^{r}$. Prerez njenega tangentnega svežnja, ki je funkcija 
+\begin{align*}
+V \colon X \to TX, \ V(x) = V_{x} \in T_{x}X, \ x \in X,
+\end{align*}
+je \emph{vektorsko polje} na X.
+\end{definicija}
+
+\begin{definicija}
+Naj bo $V$ vektorsko polje na mnogoterosti $X$ in $x \in X$ točka, v kateri je vektorsko polje neničelno. Pot $\gamma_{x} \colon (-\varepsilon, \varepsilon) \subset \R \to X$ razreda $\mathcal{C}^{1}$ je \emph{integralna krivulja} vektorskega polja $V$ skozi $x$, če je $\gamma_{x}(0) = x$ in
+\begin{align*}
+\dot{\gamma}_{x} (t) = V(\gamma _{x}(t)), \ t \in (-\varepsilon, \varepsilon).
+\end{align*}
+
+\emph{Tok vektorskega polja} $V$ na odprti podmnožici $U \subset X$ je 1-parametrična družina preslikav
+$ \Phi_{t} \colon U \to \Phi_{t}(U),$ definirana s predpisom $\Phi_{t}(x) = \gamma_{x}(t)$.
+\end{definicija}
+
+Vektorsko polje $V$ lahko v lokalnih koordinatah $x = (x_{1}, \dots, x_{n})$ na odprti podmnožici $U \subset X$ zapišemo kot 
+\begin{align}
+V(x) = \sum_{i=1}^{n} V_{i}(x) \frac{\partial}{\partial x_{i}},
+\end{align}
+kjer so $V_{i}$ realne funkcije na $U$, diferenciali $\frac{\partial}{\partial x_{i}}$ pa v vsaki točki $p \in U$ sestavljajo bazo tangentnega prostora $T_{p}X$.
+Pot $\gamma (t) = (\gamma_{1}(t), \dots, \gamma_{n}(t))$ je po definiciji integralna krivulja natanko takrat, ko zadošča enakosti 
+\begin{align*}
+\dot{\gamma}(t) = \sum_{i=1}^{n} V_{i}(\gamma(t)) \frac{\partial}{\partial x_{i}}.
+\end{align*}
+Rešujemo sistem $n$ navadnih diferencialnih enačb ($i \in \{ 1, \dots n \}$)
+\begin{align*}
+\dot{\gamma}_{i}(t) = V_{i}(\gamma_{1}(t), \dots, \gamma_{n}(t)),
+\end{align*}
+katerega lokalna rešitev je tok vektorskega polja $V$, $\Phi_{t}(x)$. 
+
+\begin{definicija}
+Naj bo $X$ gladka mnogoterost. Dualni sveženj njenega tangentnega svežnja imenujemo \emph{kotangentni sveženj}
+\begin{align}
+T^{*}X = (TX)^{*} = \bigsqcup_{x \in X} T_{x}^{*}X.
+\end{align}
+Tu je $T_{x}^{*}X$ \emph{kotangentni prostor} mnogoterosti $X$ v točki $x \in X$, ki je sestavljen iz linearnih funkcionalov $T_{x}^{*}X \to \R$.
+\emph{(Diferencialna) 1-forma} na mnogoterosti $X$ je prerez $\alpha \colon X \to T^{*}X$ kotangentnega svežnja.
+\end{definicija}
+
+Analogno z vektorskimi polji lahko tudi 1-forme predstavimo lokalno. Naj bo $U$ odprta podmnožica v $X$ z lokalnimi koordinatami $x = (x_{1}, \dots, x_{n})$. Če so $a_{i}$ realne funkcije na $U$ in $dx_{i}$ diferenciali koordinatnih funkcij, ki v vsaki točki $p \in U$ tvorijo bazo kotangentnega prostora $T_{p}^{*}X$, potem ima poljubna 1-forma na $U$ obliko
+\begin{align}
+\alpha = \sum_{i=1}^{n} a_{i}(x) dx_{i}.
+\end{align}
+
 % Aproksimacijski izreki za Riemannove ploskve
 \subsection{Aproksimacijski izreki za Riemannove ploskve}
 %
