@@ -100,7 +100,8 @@
 \newcommand{\R}{\mathbb R}
 \newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
-\renewcommand{\C}{\mathbb C}
+%\renewcommand{\C}{\mathbb C}
+\newcommand{\C}{\mathbb C}
 \newcommand{\Q}{\mathbb Q}
 
 % \DeclareMathOperator{\tr}{tr}  % morda potrebuješ operator za sled ali kaj drugega?
@@ -219,8 +220,10 @@ the content and not the structure of your work.
 \setcounter{page}{1}    % od sedaj naprej začni zopet z 1
 \pagenumbering{arabic}  % in z arabskimi številkami
 
+% Uvod
 \section{Uvod}
 
+% Osnovni pojmi
 \section{Osnovni pojmi}
 
 \begin{definicija}
@@ -232,6 +235,13 @@ Naj bo $n \in \N_{0}$. Topološki prostor $M$ z lastnostmi:
 \end{enumerate}
 imenujemo \emph{topološka mnogoterost} dimenzije $n$.
 \end{definicija}
+
+Na topološki mnogoterosti $M$ dimenzije $n$ definiramo \emph{atlas} $\mathcal{U} = \{ (U_{i}, \Phi_{i}) ; i \in I \}$ kot družino parov $(U_{i}, \Phi_{i})$, kjer je $\{ U_{i} \}_{i \in I}$ odprto pokritje mnogoterosti $M$, preslikave $\Phi_{i} \colon U_{i} \to \Phi_{i}(U_{i}) \subset \R^{n}$ pa so difeormorfizmi za vse $i$. Par $(U_{i}, \Phi_{i})$ imenujemo \emph{lokalna karta}.
+Vzemimo lokalni karti $(U_{i}, \Phi_{i})$ in $(U_{j}, \Phi_{j})$, $i \neq j$, za kateri velja $U_{ij}=U_{i} \cap U_{j} \neq \emptyset$. Difeomorfizmu $\Phi_{ij} = \Phi_{j} \circ \Phi_{i}^{-1} \colon \Phi_{i}(U_{ij}) \to \Phi_{j}(U_{ij})$ med odprtima podmnožicama $\R^{n}$ pravimo \emph{prehodna preslikava} med lokalnima kartama. Če so prehodne preslikave med vsemi lokalnimi kartami difeomorfizmi razreda $\mathcal{C}^{r}$, potem je atlas razreda $\mathcal{C}^{r}$. V tem primeru rečemo, da je $M$ \emph{mnogoterost razreda} $\mathcal{C}^{r}$.
+V posebnem gladek atlas določa gladko mnogoterost.
+
+Naj bosta $M$ in $N$ mnogoterosti dimenzij $\dim M = m$, $\dim N = n$ ($m, n \in \N$). Naj bo $r \geq 0$. Pravimo, da je zvezna preslikava $f \colon M \to N$ \emph{razreda $\mathcal{C}^{r}$ v točki} $p \in M$, če obstajata taki $\mathcal{C}^{r}$ karti $(U, \Phi)$ na $M$ v okolici točke $p \in M$ in $(V, \Psi)$ na $N$ v okolici točke $f(p) \in N$, da je preslikava $F = \psi \circ f \circ \Phi^{-1}$ razreda $\mathcal{C}^{r}$ v okolici točke $\Phi(p)$.
+Če to velja za poljubno točko $p \in M$, je $f$ \emph{razreda $\mathcal{C}^{r}$}; $f \in  \mathcal{C}^{r}(M,N)$.
 
 \begin{definicija}
 Naj bo $f \colon M \to N$ gladka preslikava med gladkima mnogoterostima. Preslikava $f$ se imenuje \emph{imerzija}, če je njen diferencial $df_{x}$ injektiven v vsaki točki $x \in M$.
@@ -418,6 +428,7 @@ Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna
 \end{enumerate} 
 \end{izrek}
 
+% Variacija ploščine
 \subsection{Variacija ploščine}
  %
 \begin{definicija}
@@ -445,7 +456,7 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ ime
 \begin{equation} \label{eq:1-var-ploščine}
 \frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(D)) = 0.
 \end{equation}
-Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega funkcionala $\text{Area} \colon D \to \R$.
+Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega funkcionala $\text{Area}$.
 \end{definicija}
 
 Levo stran enakosti~\ref{eq:1-var-ploščine} imenujemo \emph{prva variacija ploščine} pri $t=0$. Slednjo z geometrijskimi lastnostmi preslikave $x$, natančneje ukrivljenostjo, povezuje \emph{prva variacijska formula} v naslednjem izreku. 
@@ -488,7 +499,7 @@ Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \col
 			\begin{equation}
 			(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0.
 			\end{equation}
-	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi na \emph{ničelni kvadriki}
+	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi v \emph{ničelni kvadriki}
 			\begin{equation} \label{ničelna-kvadrika}		
 			\textbf{\textup{A}} = \{ (z_1, \dots , z_n) \in \C^{n} ; \ z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
 			\end{equation}	
