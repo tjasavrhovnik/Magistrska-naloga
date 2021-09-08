@@ -226,6 +226,9 @@ the content and not the structure of your work.
 % Osnovni pojmi
 \section{Osnovni pojmi}
 
+% Mnogoterosti
+\subsection{Mnogoterosti}
+
 \begin{definicija}
 Naj bo $n \in \N$. Topološki prostor $M$ z lastnostmi:
 \begin{enumerate}
@@ -273,8 +276,11 @@ Naj bo $f \colon M \to N$ gladka preslikava med gladkima mnogoterostima. Preslik
 Z uporabo izreka o implicitni preslikavi dokažemo naslednje: Če je $f \colon M \to N$ submerzija v okolici točke $p \in U$ ($U \subset M$ odprta), potem je praslika $f^{-1}f(p))$ podmnogoterost v $M$ razsežnosti $\dim M - \dim N$.
 \end{opomba}
 
+% Riemannova metrika & mnogoterost
+\begin{definicija}
 Naj bo $M$ gladka mnogoterost. Za vsako točko $p \in M$ definiramo simetrično pozitivno-definitno bilinearno preslikavo $g_{p} \colon T_{p}M \times T_{p}M \to \R$, ki je gladko odvisna od $p$. Družino preslikav $g_{p}$ imenujemo \emph{Riemannova metrika} $g$ na mnogoterosti $M$.
 Gladki mnogoterosti, opremljeni z Riemannovo metriko, pravimo \emph{Riemannova mnogoterost}.
+\end{definicija}
 
 Izkaže se, da vsaka mnogoterost razreda $\mathcal{C}^{r+1}$ premore Riemannovo metriko razreda $\mathcal{C}^{r}$.
 
@@ -287,23 +293,25 @@ kjer je $G(p) = [g_{i,j}(p)]_{i,j=1}^{n}$ simetrična pozitivno-definitna matrik
 g_{p}(\xi, \eta) &= \sum_{i,j=1}^{n} g_{i,j}(p) \xi_{i} \eta_{j} = G(p) \xi \cdot \eta.
 \end{align}
 
-Vzemimo gladko imerzijo $x \colon M \to \widetilde{M}$ in Riemannovo metriko $\tilde{g}$ na $\widetilde{M}$. \emph{Povlečena metrika} $g = x^{*} \tilde{g}$ na $M$, definirano na paru tangentnih vektorjev $\xi, \eta \in T_{p}M$, podaja predpis
-\begin{equation} \label{eq:pullback}
+Vzemimo gladko imerzijo $x \colon M \to \widetilde{M}$ in Riemannovo metriko $\tilde{g}$ na $\widetilde{M}$. \emph{Povlečeno metriko} $g = x^{*} \tilde{g}$ na $M$, definirano na paru tangentnih vektorjev $\xi, \eta \in T_{p}M$, podaja predpis
+\begin{equation} \label{eq:pullback-metrika}
 g_{p}(\xi, \eta) = \tilde{g}_{x(p)} (dx_{p}(\xi), dx_{p}(\eta)).
 \end{equation}
 Če je metrika $\tilde{g}$ razreda $\mathcal{C}^{r}$ in imerzija $x$ razreda $\mathcal{C}^{r+1}$, potem je tudi povlečena metrika $g = x^{*} \tilde{g}$ razreda $\mathcal{C}^{r}$.
 
-Oglejmo si primer Riemannove metrike, ki jo bomo v nadaljevanju večkrat uporabili.
-Na Evklidskem prostoru $\R^{n}$ s koordinatami $x = (x_{1}, \dots, x_{n})$ je definirana \emph{Evklidska metrika}
+\begin{primer}[Prva fundamentalna forma]
+Oglejmo si primer Riemannove metrike na realnem $n$-razsežnem Evklidskem prostoru $\mathbb{R}^{n}$.
+Če izberemo standardne koordinate $x = (x_{1}, \dots, x_{n})$, \emph{Evklidsko metriko} definira predpis
 \begin{equation}
-ds^2 = (dx_{1})^2 + \cdots + (dx_{n})^2,
+ds^2 = (dx_{1})^2 + \cdots + (dx_{n})^2;
 \end{equation}
-to je Riemannova metrika, ki ustreza identični matriki $I_{n}$. Naj bo $D$ domena v $\R^2$ in $x \colon D \to \R^{n}$ imerzija, podana s predpisom $x(u_1,u_2) = (x_{1}(u_1,u_2), \dots, x_{n}(u_1,u_2))$, $(u_1,u_2) \in D$. Pripadajoča metrika na $D$ je enaka
+to je Riemannova metrika, ki ustreza identični matriki $I_{n}$. Naj bo $D$ domena v $\R^2$ in $x \colon D \to \R^{n}$ imerzija, podana s predpisom $x(u_1,u_2) = (x_{1}(u_1,u_2), \dots, x_{n}(u_1,u_2))$ za $(u_1,u_2) \in D$. Pripadajoča metrika na $D$ je enaka
 \begin{gather}
 g = x^{*}ds^2 = g_{1,1}du_{1}^2 + g_{1,2}du_{1}du_{2} + g_{2,1}du_{2}du_{1} + g_{2,2}du_{2}^2, \\
 g_{1,1} = |x_{u_1}|^2, \ g_{1,2} = g_{2,1} = x_{u_1} \cdot x_{u_2}, \ g_{2,2} = |x_{u_2}|^2
 \end{gather}
 in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
+\end{primer}
 
 \begin{definicija}
 \emph{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
@@ -364,7 +372,7 @@ Surjektivno preslikavo $\pi \colon E \to B$ imenujemo realen \emph{vektorski sve
 \item je vsako vlakno $\pi^{-1}(b) = E_{b}$, $b \in B$, $n$-razsežen realen vektorski prostor: $E_{b} \cong \R^{n}$,
 \item za vsak $b \in B$ obstajata okolica $b \in U \subset B$ in difeomorfizem $\tau \colon E|_{U} \to U \times \R^{n}$ razreda $\mathcal{C}^{r}$, tako da je za vsak $x \in U$ preslikava $ \tau_{x} \colon E_{x} \to \{x\} \times \R^{n} $ linearni izomorfizem. Preslikavi $\tau_{x}$ pravimo \emph{lokalna trivializacija}.
 \end{enumerate}
-Če ima vlakno strukturo kompleksnega vektorskega prostora, na ustreznih mestih v definiciji zamenjamo $\R^{n}$ s $\C^{n}$ - v tem primeru dobimo kompleksen vektorski sveženj.
+Če ima vlakno strukturo kompleksnega vektorskega prostora, na ustreznih mestih v definiciji zamenjamo $\R^{n}$ s $\C^{n}$ -- v tem primeru dobimo kompleksen vektorski sveženj.
 \end{definicija}
 
 \begin{definicija}
@@ -372,42 +380,44 @@ Surjektivno preslikavo $\pi \colon E \to B$ imenujemo realen \emph{vektorski sve
 Ekvivalentno, za vsak $b \in B$ je $s(b) \in \pi^{-1}(b) = E_{b}$, torej prerez vsako točko baznega prostora slika v točko v vlaknu nad $b$.
 \end{definicija}
 
-Omenimo poseben primer vektorskega svežnja, ki ga bomo v nadaljevanju pogosto potrebovali. Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ z $r \geq 1$. Njen \emph{tangentni sveženj} je disjunktna unija tangentnih prostorov na $X$ v točkah $x \in X$:
+Omenimo poseben primer vektorskega svežnja, ki bo pomemben v nadaljevanju. Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ z $r \geq 1$. Njen \emph{tangentni sveženj} je disjunktna unija tangentnih prostorov na $X$ v točkah $x \in X$:
 \[ TX = \bigsqcup_{x \in X} T_{x}X. \]
 Tangentni sveženj je vektorski sveženj ranga $n = \dim X$ in razreda $\mathcal{C}^{r-1}$.
 
 \begin{definicija}
-Naj bo $r \geq 1$ in $X$ mnogoterost razreda $\mathcal{C}^{r}$. Prerez njenega tangentnega svežnja, ki je funkcija 
+Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$, kjer je $r \geq 1$. Prerez njenega tangentnega svežnja, to je preslikava 
 \begin{align*}
 V \colon X \to TX, \ V(x) = V_{x} \in T_{x}X, \ x \in X,
 \end{align*}
-je \emph{vektorsko polje} na X.
+se imenuje \emph{vektorsko polje} na X. Prostor vektorskih polj na $X$ označimo z $\Gamma (X)$.
 \end{definicija}
 
 \begin{definicija}
 Naj bo $V$ vektorsko polje na mnogoterosti $X$ in $x \in X$ točka, v kateri je vektorsko polje neničelno. Pot $\gamma_{x} \colon (-\varepsilon, \varepsilon) \subset \R \to X$ razreda $\mathcal{C}^{1}$ je \emph{integralna krivulja} vektorskega polja $V$ skozi $x$, če je $\gamma_{x}(0) = x$ in
 \begin{align*}
-\dot{\gamma}_{x} (t) = V(\gamma _{x}(t)), \ t \in (-\varepsilon, \varepsilon).
+\dot{\gamma}_{x} (t) = V(\gamma _{x}(t)) \in T_{\gamma _{x}(t)}X, \ t \in (-\varepsilon, \varepsilon).
 \end{align*}
 
-\emph{Tok vektorskega polja} $V$ na odprti podmnožici $U \subset X$ je 1-parametrična družina preslikav
+Naj bo $U \subset X$ odprta množica, na kateri je vektorsko polje $V$ neničelno. \emph{Tok vektorskega polja} $V$ na $U$ je 1-parametrična družina preslikav
 $ \Phi_{t} \colon U \to \Phi_{t}(U),$ definiranih s predpisi $\Phi_{t}(x) = \gamma_{x}(t)$.
 \end{definicija}
 
 Vektorsko polje $V$ lahko v lokalnih koordinatah $x = (x_{1}, \dots, x_{n})$ na odprti podmnožici $U \subset X$ zapišemo kot 
 \begin{align}
-V(x) = \sum_{i=1}^{n} V_{i}(x) \frac{\partial}{\partial x_{i}},
+V(m) = \sum_{i=1}^{n} V_{i}(m) \frac{\partial}{\partial x_{i}},
 \end{align}
-kjer so $V_{i}$ realne funkcije na $U$, diferenciali $\frac{\partial}{\partial x_{i}}$ pa v vsaki točki $p \in U$ sestavljajo bazo tangentnega prostora $T_{p}X$.
-Pot $\gamma (t) = (\gamma_{1}(t), \dots, \gamma_{n}(t))$ na $X$ je po definiciji integralna krivulja natanko takrat, ko zadošča enakosti 
+kjer so $V_{i}$ realne funkcije na $U$, diferenciali $\frac{\partial}{\partial x_{i}}$ pa v vsaki točki $m \in U$ sestavljajo bazo tangentnega prostora $T_{m}X$.
+Pot $\gamma (t) = (\gamma_{1}(t), \dots, \gamma_{n}(t))$ na $X$ je po definiciji integralna krivulja vektorskega polja $V$ natanko takrat, ko zadošča enakosti 
 \begin{align*}
 \dot{\gamma}(t) = \sum_{i=1}^{n} V_{i}(\gamma(t)) \frac{\partial}{\partial x_{i}}.
 \end{align*}
-Rešujemo sistem $n$ navadnih diferencialnih enačb ($i \in \{ 1, \dots n \}$)
+Rešujemo sistem $n$ navadnih diferencialnih enačb ($i \in \{ 1, \dots , n \}$)
 \begin{align*}
 \dot{\gamma}_{i}(t) = V_{i}(\gamma_{1}(t), \dots, \gamma_{n}(t)),
 \end{align*}
-katerega lokalna rešitev je tok vektorskega polja $V$ na $X$, $\Phi_{t}(x)$. 
+katerega lokalna rešitev je tok vektorskega polja $V$ na $X$, $\Phi_{t}(m)$. Po eksistenčnem izreku za navadne diferencialne enačbe lokalna rešitev vedno obstaja.
+
+Zanimajo nas duali tangentnih prostorov ter prerezi pripradajočih svežnjev.
 
 \begin{definicija}
 Naj bo $X$ gladka mnogoterost. Dualni sveženj njenega tangentnega svežnja imenujemo \emph{kotangentni sveženj}
@@ -415,13 +425,17 @@ Naj bo $X$ gladka mnogoterost. Dualni sveženj njenega tangentnega svežnja imen
 T^{*}X = (TX)^{*} = \bigsqcup_{x \in X} T_{x}^{*}X.
 \end{align}
 Tu je $T_{x}^{*}X$ \emph{kotangentni prostor} mnogoterosti $X$ v točki $x \in X$, ki je sestavljen iz linearnih funkcionalov $T_{x}^{*}X \to \R$.
-\emph{(Diferencialna) 1-forma} na mnogoterosti $X$ je prerez $\alpha \colon X \to T^{*}X$ kotangentnega svežnja.
+\emph{(Diferencialna) 1-forma} na mnogoterosti $X$ je prerez $\alpha \colon X \to T^{*}X$ kotangentnega svežnja. Prostor diferencialnih 1-form na $X$ označimo z $\Omega ^{1}(X)$.
 \end{definicija}
 
-Podobno kot vektorska polja lahko tudi 1-forme predstavimo lokalno. Naj bo $U$ odprta podmnožica v $X$ z lokalnimi koordinatami $x = (x_{1}, \dots, x_{n})$. Če so $a_{i}$ realne funkcije na $U$ in $dx_{i}$ diferenciali koordinatnih funkcij, ki v vsaki točki $p \in U$ tvorijo bazo kotangentnega prostora $T_{p}^{*}X$, potem ima poljubna 1-forma na $U$ obliko
+Podobno kot vektorska polja lahko tudi 1-forme predstavimo lokalno. Naj bo $U$ odprta podmnožica v $X$ z lokalnimi koordinatami $x = (x_{1}, \dots, x_{n})$. Če so $a_{i}$ realne funkcije na $U$ in $dx_{i}$ diferenciali koordinatnih funkcij, ki v vsaki točki $m \in U$ tvorijo bazo kotangentnega prostora $T_{m}^{*}X$, potem ima poljubna 1-forma na $U$ obliko
 \begin{align}
-\alpha = \sum_{i=1}^{n} a_{i}(x) dx_{i}.
+\alpha (m) = \sum_{i=1}^{n} a_{i}(m) dx_{i}.
 \end{align}
+Baza kotangentnega prostora je dualna bazi tangentnega prostora; natančneje, 
+\begin{align*}
+dx_{i}(m) \left(\frac{\partial}{\partial x_{j}} (m) \right) = \delta _{ij}.
+\end{align*}
 
 % Aproksimacijski izreki za Riemannove ploskve
 \subsection{Aproksimacijski izreki za Riemannove ploskve}
