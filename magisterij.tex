@@ -226,6 +226,7 @@ the content and not the structure of your work.
 % Osnovni pojmi
 \section{Osnovni pojmi}
 
+%%%%%%%%%%%%%%%%%%%%%
 % Mnogoterosti
 \subsection{Mnogoterosti}
 
@@ -247,6 +248,10 @@ V posebnem gladek atlas določa gladko mnogoterost.
 Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ razsežnosti $\dim X = n$ in $M \subset X$ njena podmnožica. Če za vsako točko $p \in M$ obstaja lokalna karta $(U, \Phi)$ glede na atlas $\mathcal{U}$ mnogoterosti $X$, tako da je preslikava $\Phi \colon U \to V \subset \mathbb{R}^{n}$ homeomorfizem in velja $\Phi (M \cap U) = V \cap (\mathbb{R}^{m} \times \{0\}^{n-m})$, potem $M$ imenujemo \emph{podmnogoterost} razreda $\mathcal{C}^{r}$ razsežnosti $\dim M = m$.
 \end{definicija}
 
+\begin{definicija}[Orientacija mnogoterosti]
+Naj bo $M$ gladka mnogoterost in $\mathcal{U}$ pripadajoč gladek atlas. Lokalni karti $(U, \phi)$ in $(V, \psi)$ določata isto orientacijo na $M$, če za poljubno točko $p \in U \cap V \neq \emptyset$ velja $\det (d(\psi \circ \phi ^{-1})_{\phi (p)}) > 0.$ Kadar poljubni lokalni karti glede na izbrani atlas $\mathcal{U}$ določata isto orientacijo, pravimo, da je atlas $\mathcal{U}$ \emph{orientiran}. Nadalje je mnogoterost \emph{orientabilna}, če premore orientiran atlas. \emph{Orientacija} mnogoterosti $M$ je izbor maksimalnega orientiranega atlasa na $M$.
+\end{definicija}
+
 Definirati želimo še tangentni prostor mnogoterosti. Naj bo $M$ gladka mnogoterost in izberimo atlas $\mathcal{U} = \{ (U_{i}, \Phi_{i}) ; \ i \in I \}$ na njej. Naj bo točka $p \in U_{i} \subset M$ za nek indeks $i$.  Gladki krivulji\footnote{Krivulja $\gamma_{j}$ je gladka, če je preslikava $ \Phi_{i} \circ \gamma_{j} \colon (-\varepsilon, \varepsilon) \to \mathbb{R}^{n}$, $j=1,2,$ gladka v običajnem smislu.} 
 $\gamma_{1}, \gamma_{2} \colon (-\varepsilon, \varepsilon) \to M$ sta \emph{ekvivalentni}, če izpolnjujeta pogoja
 $\gamma_{1}(0) = \gamma_{2}(0) = p$ in $ \frac{d}{dt}|_{t=0} \Phi_{i}(\gamma_{1}(t)) =  \frac{d}{dt}|_{t=0} \Phi_{i}(\gamma_{2}(t))$ za vse $t \in (-\varepsilon, \varepsilon)$. Ekvivalenco krivulj označimo z $\gamma_{1} \sim \gamma_{2}$\footnote{Relacija $\sim$ je ekvivalenčna relacija.}.
@@ -266,8 +271,9 @@ Vzemimo gladki (oz.~razreda $\mathcal{C}^{r}$, $r \geq 1$) mnogoterosti $M$ in $
 \begin{definicija}
 Naj bo $f \colon M \to N$ gladka preslikava med gladkima mnogoterostima. Preslikava $f$ se imenuje 
 \begin{enumerate}
-\item \emph{imerzija}, če je njen diferencial $df_{p}$ injektiven v vsaki točki $p \in M$;
-\item \emph{submerzija}, če je njen diferencial $df_{p}$ surjektiven v vsaki točki $p \in M$;
+\item \emph{imerzija} v točki $p \in M$, če je njen diferencial $df_{p} \colon T_{p}M \to T_{f(p)}N$ injektiven;
+\item \emph{submerzija} v točki $p \in M$, če je njen diferencial $df_{p}$ surjektiven;
+\item \emph{lokalni difeomorfizem} v točki $p \in M$, če obtstajata taki okolici $U \subset M$ za $p$ in $V \subset N$ za $f(p)$, da je zožitev $f|_{U} \colon U \to V$ difeomorfizem;
 \item \emph{vložitev}, če je $f$ injektivna preslikava in slika $f(M) \subset N$ podmnogoterost.
 \end{enumerate}
 \end{definicija}
@@ -317,53 +323,9 @@ in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
 \emph{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
 \end{definicija}
 
-% Ukrivljenost
-\subsection{Ukrivljenost}
-%
-Naj bo $M$ ploskev, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Izberimo karto $(U, \phi)$ na $M$ in koordinate $u = (u_1, u_2) \in U$, tako da je zožitev $x|_{U} \colon U \to \R^{n}$ vložitev na orientabilno ploskev $S = x(U) \subset \R^{n}$. Izberimo točko $q \in U$ in označimo $p = x(q) \in S$. Naj bo $t \mapsto (u_1(t), u_2(t))$ parametrizacija vložene krivulje razreda $\mathcal{C}^2$ v $U$ ter $q = (u_1(t_0), u_2(t_0))$ za nek $t_0$. Vsaka krivulja, vložena v $S$, ki vsebuje točko $p$, je tedaj oblike
-\begin{equation}
-\alpha (t) = x(u_1(t), u_2(t)).
-\end{equation}
-Označimo z $s = s(t)$ ločno dolžino krivulje $\alpha$. Predpostavimo, da izbrana točka $p$ ustreza $p = \alpha(s_0) \in S$, označimo pripadajoč tangentni vektor $\nu = \alpha '(s_0) \in T_{p}S$ ter enotsko normalo $N \in N_{p}S$ v točki $p$. Količino
-\begin{equation}
-\kappa ^{N}(p, \nu) = \alpha ''(s_0) \cdot N
-\end{equation}
-imenujemo \emph{normalna ukrivljenost} ploskve $S$ v točki $p$ v tangentni smeri $\nu$ in smeri enotske normale $N$.
-
-Oglejmo si preslikavo $ \kappa ^{N}(p, \cdot) \colon \{\nu \in T_{p}S ; \ |\nu|=1 \} \to \R$, $ \nu \mapsto \kappa ^{N}(p, \nu)$, kjer je $p \in S$ izbrana fiksna točka. Kot zvezna preslikava na kompaktni množici doseže minimalno in maksimalno vrednost,
-\begin{align}
-\kappa _{1}^{N}(p) = \min _{|\nu| = 1} \kappa ^{N}(p, \nu), \quad \kappa _{2}^{N}(p) = \max _{|\nu| = 1} \kappa ^{N}(p, \nu),
-\end{align}
-katerima pravimo \emph{glavni ukrivljenosti}.
-
-\begin{definicija}
-\begin{enumerate}
-\item
-\emph{Povprečna ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$ je povprečje glavnih ukrivljenosti,
-\begin{equation} \label{eq:povp-ukr}
-H^{N}(p) = \frac{1}{2} \left(\kappa _{1}^{N}(p) + \kappa _{2}^{N}(p) \right).
-\end{equation}
-\item
-Njun produkt 
-\begin{equation} \label{eq:Gauss-ukr}
-K^{N}(p) = \kappa _{1}^{N}(p) \cdot \kappa _{2}^{N}(p)
-\end{equation}
-definira \emph{Gaussovo ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$.
-\item
-Projekcijo povprečne ukrivljenosti na normalno ravnino $N_{p}S$ v smeri tangentne ravnine $T_{p}S$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$ in označimo s $\textbf{\textup{H}}$. Enačba~\ref{eq:povp-ukr} se v tej notaciji glasi $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
-\end{enumerate}
-\end{definicija}
-
-\begin{lema}
-Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Tedaj velja
-\begin{equation}
-\Delta{x} = 2 \textbf{\textup{H}},
-\end{equation}
-kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ v točki $q \in M$ in $\textbf{\textup{H}}$ vektor povprečne ukrivljenosti v točki $p = x(q) \in S$.
-\end{lema}
-
-% Vektorska polja
-\subsection{Vektorska polja}
+%%%%%%%%%%%%%%%%%%%%%
+% Vektorska polja in diferencialne 1-forme
+\subsection{Vektorska polja in diferencialne 1-forme}
 %
 \begin{definicija}
 Naj bo $r \geq 1$ ter $E$ in $B$ mnogoterosti razreda $\mathcal{C}^{r}$.
@@ -425,7 +387,10 @@ Naj bo $X$ gladka mnogoterost. Dualni sveženj njenega tangentnega svežnja imen
 T^{*}X = (TX)^{*} = \bigsqcup_{x \in X} T_{x}^{*}X.
 \end{align}
 Tu je $T_{x}^{*}X$ \emph{kotangentni prostor} mnogoterosti $X$ v točki $x \in X$, ki je sestavljen iz linearnih funkcionalov $T_{x}^{*}X \to \R$.
+
 \emph{(Diferencialna) 1-forma} na mnogoterosti $X$ je prerez $\alpha \colon X \to T^{*}X$ kotangentnega svežnja. Prostor diferencialnih 1-form na $X$ označimo z $\Omega ^{1}(X)$.
+
+Diferencialno 1-formo $\omega \in \Omega ^{1}(X)$ imenujemo \emph{eksaktna}, če velja $\omega = df$ za neko funkcijo $f \colon X \to \mathbb{R}$.
 \end{definicija}
 
 Podobno kot vektorska polja lahko tudi 1-forme predstavimo lokalno. Naj bo $U$ odprta podmnožica v $X$ z lokalnimi koordinatami $x = (x_{1}, \dots, x_{n})$. Če so $a_{i}$ realne funkcije na $U$ in $dx_{i}$ diferenciali koordinatnih funkcij, ki v vsaki točki $m \in U$ tvorijo bazo kotangentnega prostora $T_{m}^{*}X$, potem ima poljubna 1-forma na $U$ obliko
@@ -437,6 +402,61 @@ Baza kotangentnega prostora je dualna bazi tangentnega prostora; natančneje,
 dx_{i}(m) \left(\frac{\partial}{\partial x_{j}} (m) \right) = \delta _{ij}.
 \end{align*}
 
+%%%%%%%%%%%%%%%%%%%%%
+% Ukrivljenost ploskve
+\subsection{Ukrivljenost ploskve}
+%
+Naj bo $M$ ploskev, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Izberimo lokalno karto $(U, \phi)$ na $M$ in koordinate $u = (u_1, u_2) \in U$, tako da je zožitev $x|_{U} \colon U \to \R^{n}$ vložitev na orientabilno ploskev $S = x(U) \subset \R^{n}$. Izberimo točko $q \in U$ in s $p = x(q) \in S$ označimo njeno sliko na ploskvi $S$. Naj bo $t \mapsto (u_1(t), u_2(t)) \in U$ parametrizacija krivulje razreda $\mathcal{C}^2$ ter $q = (u_1(t_0), u_2(t_0))$ za nek $t_0 \in \mathbb{R}$. Vsaka krivulja, vložena v $S$, ki vsebuje točko $p$, je tedaj oblike
+\begin{equation}
+\alpha (t) = x(u_1(t), u_2(t)).
+\end{equation}
+Označimo z $s = s(t)$ ločno dolžino krivulje $\alpha$. Predpostavimo, da izbrana točka $p$ ustreza $p = \alpha(s_0) \in S$, označimo pripadajoč tangentni vektor $\nu = \alpha '(s_0) \in T_{p}S$ ter enotsko normalo $N \in N_{p}S$ v točki $p$. Količino
+\begin{equation}
+\kappa ^{N}(p, \nu) = \alpha ''(s_0) \cdot N
+\end{equation}
+imenujemo \emph{normalna ukrivljenost} ploskve $S$ v točki $p$ v tangentni smeri $\nu$ in smeri enotske normale $N$.
+
+Oglejmo si preslikavo $ \kappa ^{N}(p, \cdot) \colon \{\nu \in T_{p}S ; \ |\nu|=1 \} \to \R$, $ \nu \mapsto \kappa ^{N}(p, \nu)$, kjer je $p \in S$ izbrana fiksna točka. Kot zvezna preslikava na kompaktni množici doseže minimalno in maksimalno vrednost,
+\begin{align} 
+\kappa _{1}^{N}(p) = \min _{|\nu| = 1} \kappa ^{N}(p, \nu), \quad \kappa _{2}^{N}(p) = \max _{|\nu| = 1} \kappa ^{N}(p, \nu),
+\end{align}
+katerima pravimo \emph{glavni ukrivljenosti}.
+
+\begin{definicija}
+\begin{enumerate}
+\item
+\emph{Povprečna ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$ je povprečje glavnih ukrivljenosti,
+\begin{equation} \label{eq:povp-ukr}
+H^{N}(p) = \frac{1}{2} \left(\kappa _{1}^{N}(p) + \kappa _{2}^{N}(p) \right).
+\end{equation}
+\item
+Njun produkt 
+\begin{equation} \label{eq:Gauss-ukr}
+K^{N}(p) = \kappa _{1}^{N}(p) \cdot \kappa _{2}^{N}(p)
+\end{equation}
+definira \emph{Gaussovo ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$.
+\item
+Projekcijo povprečne ukrivljenosti na normalno ravnino $N_{p}S$ v smeri tangentne ravnine $T_{p}S$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$ in označimo s $\textbf{\textup{H}}$. Enačba~\ref{eq:povp-ukr} se v tej notaciji glasi $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
+\end{enumerate}
+\end{definicija}
+
+\begin{primer}[Vektor povprečne ukrivljenosti za $n=3$.]
+% račun
+\end{primer}
+
+\begin{lema}
+Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Tedaj velja
+\begin{equation}
+\Delta{x} = 2 \textbf{\textup{H}},
+\end{equation}
+kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ v točki $q \in M$ in $\textbf{\textup{H}}$ vektor povprečne ukrivljenosti v točki $p = x(q) \in S$.
+\end{lema}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Holomorfne in harmonične funkcije
+\subsection{Holomorfne in harmonične funkcije}
+
+%%%%%%%%%%%%%%%%%%%%%
 % Aproksimacijski izreki za Riemannove ploskve
 \subsection{Aproksimacijski izreki za Riemannove ploskve}
 %
