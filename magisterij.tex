@@ -440,8 +440,22 @@ Projekcijo povprečne ukrivljenosti na normalno ravnino $N_{p}S$ v smeri tangent
 \end{enumerate}
 \end{definicija}
 
+% primer: H za n=3
 \begin{primer}[Vektor povprečne ukrivljenosti za $n=3$.]
-% račun
+Naj bo $U \subset M$ odprta podmnožica, $x \colon U \to \mathbb{R}^{3}$ imerzija in označimo z $S = x(U)$ sliko, ki je ploskev, vložena v $\mathbb{R}^3$. V poljubni točki $p \in S$ je zato normalni prostor $N_{p}S$ enorazsežen, torej premore natanko dve enotski normalni vektorski polji, ki se razlikujeta za predznak ($\pm N$). Izbor orientacije na $U$ enotsko normalno vektorsko polje enolično določa, zato ga lahko predstavimo kot preslikavo
+\begin{gather*}
+N \colon S \to \mathbb{S}^{2},
+\end{gather*}
+imenovano \emph{Gaussova preslikava} vložene ploskve $S$. Če je $x = x(u_{1},u_{2})$, $(u_{1},u_{2}) \in U$, lokalna parametrizacija ploskve, dobimo eksplicitno formulo $N = \frac{x_{u_{1}} \times x_{u_{2}}}{|x_{u_{1}} \times x_{u_{2}}|}$.
+
+Vektor povprečne ukrivljenosti je po definiciji pravokoten na $S$, zato obstaja funkcija $\lambda$, da velja $\textbf{\textup{H}} = \lambda N$. Vemo še, da je normalni vektor enotski, kar nam da zvezo
+\begin{gather}
+H = H^{N} = \textbf{\textup{H}} \cdot N = \lambda N \cdot N = \lambda, \nonumber \\
+\textbf{\textup{H}} = H \cdot N.
+\end{gather}
+Z besedami je vektor povprečne ukrivljenosti enak produktu povprečne ukrivljenosti in Gaussove preslikave.
+
+Glavni ukrivljenosti sta odvisni od enotske normale; če namesto pozitivno predznačene izberemo negativno enotsko normalo, se glavnima ukrivljenostma in posledično povprečni ukrivljenosti spremeni predznak. Po zgornji formuli pa vidimo, da je vektor povprečne ukrivljenosti neodvisen od izbora enotskega normalnega vektorskega polja.
 \end{primer}
 
 \begin{lema}
