@@ -502,6 +502,7 @@ Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna
 \end{enumerate} 
 \end{izrek}
 
+%%%%%%%%%%%%%%%%%%%%%
 % Variacija ploščine
 \subsection{Variacija ploščine}
  %
@@ -553,6 +554,7 @@ S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emp
 \end{equation}
 kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $M$.
 
+%%%%%%%%%%%%%%%%%%%%%
 % Weierstrassova formula
 \subsection{Weierstrassova formula}
 %
@@ -563,15 +565,24 @@ Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna
 Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
 Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve $M$.
 
-Drugi razlog za študij konformnih imerzij je fizikalen. Naj bo $x \colon \bar{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, na $\bar{\mathbb{D}}$ pa uvedimo koordinate $(u_{1}, u_{2})$.
-Definirajmo \emph{Dirichletov energijski integral} 
-\begin{gather} \label{eq:Dirichlet-int}
-\mathcal{D}(x) = \int_{\mathbb{D}} |\nabla x|^2 du_{1}du_{2} = \int_{\mathbb{D}} (|x_{u_1}|^2 + |x_{u_2}|^2) du_{1}du_{2}.
-\end{gather}
-Izkaže se, da je povezan s površino ploskve, določene z imerzijo $x$. Spomnimo še, da je površina enaka
+% Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, Minimal srfaces for undergraduates 6.3]
+\subsubsection{Plateaujev problem in Dirichletov energijski integral}
+%
+Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema, katerega moramo najprej natančno formulirati.
+
+Označimo z $\bar{\mathbb{D}}$ zaprt enotski disk z lokalnimi koordinatami $(u_{1}, u_{2})$ in izberimo gladko orientirano Jordanovo krivuljo $\Gamma \subset \mathbb{R}^{n}$.
+Naj bo $x \colon \bar{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, katere zožitev na rob diska $\mathbb{T}$ je monotona\footnote{Pravimo, da je zvezna preslikava $f \colon \mathbb{T} \to \Gamma$ \emph{monotona}, če je praslika $f^{-1}(x)$ povezana za vsak $x \in \Gamma$.} parametrizacija $x|_{\mathbb{T}} \colon \mathbb{T} \to \Gamma$ Jordanove krivulje $\Gamma$.
+Spomnimo se, da je površina ploskve, določene z imerzijo $x$ enaka
 \begin{gather} \label{eq:area}
 \text{Area}(x) = \int_{\mathbb{D}} \sqrt{|x_{u_1}|^2 |x_{u_2}|^2 - |x_{u_1} \cdot x_{u_2}|^2} du_{1}du_{2}.
 \end{gather}
+Naloga je poiskati preslikavo, ki zadošča zgornjim zahtevam, površina pripadajoče ploskve pa je minimalna. Dodatno je smiselno obravnavati preslikave, ki dajo končno površino.
+
+Ključ je \emph{Dirichletov energijski integral} 
+\begin{gather} \label{eq:Dirichlet-int}
+\mathcal{D}(x) = \int_{\mathbb{D}} |\nabla x|^2 du_{1}du_{2} = \int_{\mathbb{D}} (|x_{u_1}|^2 + |x_{u_2}|^2) du_{1}du_{2},
+\end{gather}
+ki ga s površino ploskve povezuje naslednji rezultat.
 
 \begin{lema}
 Za preslikavo $x$ kot zgoraj je $\text{Area}(x) \leq \frac{1}{2} \mathcal{D}(x)$. Enačaj velja natanko tedaj, ko je $x$ konformna.
@@ -587,6 +598,17 @@ Sledi $\sqrt{|x|^2 |y|^2 - |x \cdot y|^2} \leq \frac{1}{2} (|x|^2 + |y|^2)$. Če
 
 Preslikava $x$ je konformna natanko tedaj, ko velja $|x_{u_1}| = |x_{u_2}|$ in $x_{u_1} \cdot x_{u_2} = 0$. Enakost Dirichletovega energijskega integrala in površine je torej ekvivalentna konformnosti.
 \end{dokaz}
+
+Preslikava, ki minimizira Dirichletov energijski integral, minimizira tudi površino, je konformna, in parametrizira minimalno ploskev z robom $\Gamma$.
+
+\begin{opomba}
+Analog minimalnih ploskev v enorazsežnem primeru so geodetke. Z minimizacijo enorazsežnega energijskega integrala dobimo krivulje z minimalno dolžino, ki so poleg tega parametrizirane z večkratnikom ločne dolžine. 
+\end{opomba}
+
+% Rezultati
+\subsubsection{Rezultati}
+%
+Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve $M$.
 
 \begin{izrek}
 Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \colon M \to \R^{n}$ konformna imerzija razreda $\mathcal{C}^2$. Naslednje trditve so ekvivalentne:
