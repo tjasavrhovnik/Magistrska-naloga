@@ -563,6 +563,31 @@ Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna
 Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
 Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve $M$.
 
+Drugi razlog za študij konformnih imerzij je fizikalen. Naj bo $x \colon \bar{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, na $\bar{\mathbb{D}}$ pa uvedimo koordinate $(u_{1}, u_{2})$.
+Definirajmo \emph{Dirichletov energijski integral} 
+\begin{gather} \label{eq:Dirichlet-int}
+\mathcal{D}(x) = \int_{\mathbb{D}} |\nabla x|^2 du_{1}du_{2} = \int_{\mathbb{D}} (|x_{u_1}|^2 + |x_{u_2}|^2) du_{1}du_{2}.
+\end{gather}
+Izkaže se, da je povezan s površino ploskve, določene z imerzijo $x$. Spomnimo še, da je površina enaka
+\begin{gather} \label{eq:area}
+\text{Area}(x) = \int_{\mathbb{D}} \sqrt{|x_{u_1}|^2 |x_{u_2}|^2 - |x_{u_1} \cdot x_{u_2}|^2} du_{1}du_{2}.
+\end{gather}
+
+\begin{lema}
+Za preslikavo $x$ kot zgoraj je $\text{Area}(x) \leq \frac{1}{2} \mathcal{D}(x)$. Enačaj velja natanko tedaj, ko je $x$ konformna.
+\end{lema}
+
+\begin{dokaz}
+Poljubna vektorja $x,y \in \mathbb{R}^{n}$ zadoščata
+\begin{gather*}
+|x|^2 |y|^2 - |x \cdot y|^2 \leq |x|^2 |y|^2 \leq \frac{1}{4} (|x|^2 + |y|^2)^2.
+\end{gather*}
+Res, prva neenakost je očitna, druga pa je ekvivalentna neenakosti $(|x|-|y|)^2 \geq 0$, ki drži.
+Sledi $\sqrt{|x|^2 |y|^2 - |x \cdot y|^2} \leq \frac{1}{2} (|x|^2 + |y|^2)$. Če namesto vektorjev $x,y$ izberemo vektorja $x_{u_1}, x_{u_2} \in \mathbb{R}^{n}$, dobimo neenakost iz leme.
+
+Preslikava $x$ je konformna natanko tedaj, ko velja $|x_{u_1}| = |x_{u_2}|$ in $x_{u_1} \cdot x_{u_2} = 0$. Enakost Dirichletovega energijskega integrala in površine je torej ekvivalentna konformnosti.
+\end{dokaz}
+
 \begin{izrek}
 Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \colon M \to \R^{n}$ konformna imerzija razreda $\mathcal{C}^2$. Naslednje trditve so ekvivalentne:
 \begin{enumerate}
