@@ -220,13 +220,17 @@ the content and not the structure of your work.
 \setcounter{page}{1}    % od sedaj naprej začni zopet z 1
 \pagenumbering{arabic}  % in z arabskimi številkami
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Uvod
 \section{Uvod}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Osnovni pojmi
 \section{Osnovni pojmi}
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mnogoterosti
 \subsection{Mnogoterosti}
 
@@ -324,6 +328,10 @@ in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
 \end{definicija}
 
 \begin{definicija}
+Naj bo $M$ mnogoterost brez roba in $K$ njena zaprta podmnožica. Povezano komponento v $M \setminus K$, katere zaprtje je kompaktno v $M$, imenujemo \emph{luknja} množice $K$ v $M$.
+\end{definicija}
+
+\begin{definicija}
 \emph{Jordanov lok} je pot v ravnini, ki je topološko izomorfna intervalu $[0,1]$.
 \emph{Jordanova krivulja} je ravninska krivulja, ki je topološko ekvivalentna enotski krožnici.
 \end{definicija}
@@ -338,7 +346,7 @@ $\gamma_{1} \sim \gamma_{2}$ $\iff$ obstaja zvezna preslikava $H \colon [0,1] \t
 Preslikavo $H$ imenujemo \emph{homotopija}, zanki, ki premoreta homotopijo pa \emph{homotopsko ekvivalentni}.
 Kvocient $\pi_{1}(M,x_{0}) = \Gamma(x_{0}) / _{\sim}$ imenujemo \emph{prva fundamentalna grupa} mnogoterosti $M$ glede na točko $x_{0}$, njeno abelizacijo $H_{1}(M, \mathbb{Z})$ pa \emph{prva homološka grupa} mnogoterosti $M$ s celimi koeficienti.
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Vektorska polja in diferencialne 1-forme
 \subsection{Vektorska polja in diferencialne 1-forme}
 %
@@ -417,7 +425,7 @@ Baza kotangentnega prostora je dualna bazi tangentnega prostora; natančneje,
 dx_{i}(m) \left(\frac{\partial}{\partial x_{j}} (m) \right) = \delta _{ij}.
 \end{align*}
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ukrivljenost ploskve
 \subsection{Ukrivljenost ploskve}
 %
@@ -481,7 +489,7 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Tedaj velja
 kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ v točki $q \in M$ in $\textbf{\textup{H}}$ vektor povprečne ukrivljenosti v točki $p = x(q) \in S$.
 \end{lema}
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Holomorfne in harmonične funkcije
 \subsection{Holomorfne in harmonične funkcije}
 %
@@ -522,7 +530,7 @@ Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je hom
 %
 V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je odvisen le od homološkega razreda poti $C$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Aproksimacijski izreki za Riemannove ploskve
 \subsection{Aproksimacijski izreki za Riemannove ploskve}
 %
@@ -554,7 +562,12 @@ Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna
 \end{enumerate} 
 \end{izrek}
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Minimalne ploskve
+\section{Minimalne ploskve}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Variacija ploščine
 \subsection{Variacija ploščine}
  %
@@ -606,7 +619,7 @@ S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emp
 \end{equation}
 kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $M$.
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Weierstrassova formula
 \subsection{Weierstrassova formula}
 %
@@ -749,7 +762,8 @@ Naj bo $M$ povezana odprta Riemannova ploskev ali kompaktna Riemannova ploskev z
 V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. V višjih dimenzijah ($n \geq 4$) veljata implikaciji 
 \[ \text{polna} \ \Rightarrow \ \text{neizrojena} \ \Rightarrow \ \text{neravna}. \]
 
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Izreki o aproksimaciji in interpolaciji minimalnih ploskev
 \section{Izreki o aproksimaciji in interpolaciji minimalnih ploskev}
 
