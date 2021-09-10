@@ -323,6 +323,11 @@ in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
 \emph{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
 \end{definicija}
 
+\begin{definicija}
+\emph{Jordanov lok} je pot v ravnini, ki je topološko izomorfna intervalu $[0,1]$.
+\emph{Jordanova krivulja} je ravninska krivulja, ki je topološko ekvivalentna enotski krožnici.
+\end{definicija}
+
 % 1. fundamentalna & homološka grupa
 Spomnimo se še enega topološkega pojma. Naj bo $M$ povezana mnogoterost in $x_{0} \in M$ izbrana točka. Zanimajo nas zanke v $M$, ki gredo skozi izbrano točko, natančneje, zvezne preslikave $\gamma \colon [0,1] \to M$, $\gamma(0) = \gamma(1) = x_{0}$. Označimo množico vseh takih zank z $\Gamma(x_{0})$ in na njej vpeljimo ekvivalenčno relacijo $\sim$ na naslednji način:\\[0.3cm]
 $\gamma_{1} \sim \gamma_{2}$ $\iff$ obstaja zvezna preslikava $H \colon [0,1] \times [0,1] \to M$, ki zadošča 
@@ -487,7 +492,7 @@ d = \frac{\partial}{\partial u}du + \frac{\partial}{\partial v}dv = \partial + \
 \end{gather}
 in \emph{konjugirani diferencial}
 \begin{gather}
-d^{c} = 2 \Im(\partial) = i(\partial - \bar{\partial}).
+d^{c} = 2 \Im(\partial) = i(\bar{\partial} - \partial).
 \end{gather}
 Velja
 \begin{gather*}
@@ -495,18 +500,27 @@ d + id^{c} = 2\partial , \quad  d - id^{c} = 2\bar{\partial}, \\
 dd^{c} = 2i\partial \bar{\partial} = \left( \frac{\partial^2}{\partial u^2} + \frac{\partial^2}{\partial v^2} \right) du \wedge dv = \Delta du \wedge dv,
 \end{gather*}
 kjer je $\Delta$ Laplaceov operator glede na Evklidsko metriko.\newline
-Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}$ \emph{holomorfna} ($\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$.\newline
-Funkcija $x \colon M \to \mathbb{C}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}, če velja $dd^{c}x=0$.
+Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna} ($\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$.\newline
+Funkcija $x \colon M \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}, če velja $dd^{c}x=0$.
 Harmonične funkcije karakteriziramo z naslednjimi ekvivalenčnimi pogoji:
 \begin{gather*}
 x \in \mathcal{C}^2(M) \ \text{je harmonična} \ \iff \ dd^{c}x=0 \ \iff \ \partial \bar{\partial}x=0 \ \iff \ \Delta x=0.
 \end{gather*}
-Vsaka harmonična funkcija je torej holomorfna. 
-Vzemimo realno harmonično funkcijo $x \colon M \to \mathbb{R}$ razreda $\mathcal{C}^2(M)$ in naj bo $D \subset M$ enostavno povezana\footnote{Topološki prostor $X$ je \emph{enostavno povezan} natanko tedaj, ko je s potmi povezan in ima v vsaki točki trivialno prvo fundamentalno grupo, $\pi_{1}(X)=0$.} domena. Zaradi pogoja o harmoničnosti vemo, da je 1-forma $d^{c}x$ eksaktna. Za izbrano fiksno točko $p_{0} \in D$ definirajmo funkcijo $y \colon D \to \mathbb{C}$ razreda $\mathcal{C}^2(D)$ s predpisom
+Vsaka holomorfna funkcija je torej harmonična. 
+Vzemimo realno harmonično funkcijo $x \colon M \to \mathbb{R}^{n}$ razreda $\mathcal{C}^2(M)$ in naj bo $D \subset M$ enostavno povezana\footnote{Topološki prostor $X$ je \emph{enostavno povezan} natanko tedaj, ko je s potmi povezan in ima v vsaki točki trivialno prvo fundamentalno grupo, $\pi_{1}(X)=0$.} domena. Zaradi pogoja o harmoničnosti vemo, da je 1-forma $d^{c}x$ eksaktna. Za izbrano fiksno točko $p_{0} \in D$ definirajmo funkcijo $y \colon D \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(D)$ s predpisom
 \begin{gather} \label{eq:harmonicna-konj}
 y(p) = \int_{p_0}^{p} d^{c}x + C,
 \end{gather}
-kjer je $C$ konstanta. Imenujemo jo \emph{harmonična konjugiranka} funkcije $x$. Velja enakost $dy = d^{c}x$, nova funkcija $z \colon D \to \mathbb{C}, \ z = x+iy$, pa je holomorfna. Zaključimo, da je zožitev realne harmonične funkcije na enstavno povezano domeno v $M$ enaka realnemu delu holomorfne funkcije $x+iy$, pri čemer je $y$ harmonična konjugiranka od $x$ definirana s predpisom~\ref{eq:harmonicna-konj}.
+kjer je $C$ konstanta. Imenujemo jo \emph{harmonična konjugiranka} funkcije $x$. Velja enakost $dy = d^{c}x$, nova funkcija $z \colon D \to \mathbb{C}^{n}, \ z = x+iy$, imenovana \emph{kompleksna krivulja} v $\mathbb{C}^{n}$, pa je holomorfna. Zaključimo, da je zožitev realne harmonične funkcije na enostavno povezano domeno v $M$ enaka realnemu delu holomorfne funkcije $x+iy$, pri čemer je $y$ harmonična konjugiranka od $x$, definirana s predpisom~\ref{eq:harmonicna-konj}.
+
+\begin{definicija}
+Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je homomorfizem grup $\textup{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
+\begin{equation} \label{eq:pretok}
+\textup{Flux}_{x} ([C]) = \int_{C} {d^{c} x}.
+\end{equation}
+\end{definicija}
+%
+V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je odvisen le od homološkega razreda poti $C$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
 
 %%%%%%%%%%%%%%%%%%%%%
 % Aproksimacijski izreki za Riemannove ploskve
@@ -600,8 +614,12 @@ Naj bosta $(M,g)$ in $(\widetilde{M},\tilde{g})$ Riemannovi mnogoterosti z $\dim
 Imerzija $x \colon (M,g) \to (\widetilde{M}, \tilde{g})$ se imenuje \emph{konformna}, če ohranja kote.
 Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna metriki $g$, kar pomeni, da za pozitivno funkcijo $\mu > 0$ na $M$ velja $x^{*}\tilde{g} = \mu g$.
 
+Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emph{izotermna} glede na Riemannovo metriko $g$, če za neko pozitivno funkcijo $\mu \colon \phi(U) \subset \mathbb{R}_{(x,y)}^2 \to \mathbb{R}_{+}$ velja
+\begin{gather}
+(\phi^{-1})^{*}g = \mu \cdot (dx^2+dy^2) = \mu \cdot ds_{\mathbb{R}^2}^2.
+\end{gather} 
+
 Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
-Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve $M$.
 
 % Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, Minimal srfaces for undergraduates 6.3]
 \subsubsection{Plateaujev problem in Dirichletov energijski integral}
@@ -634,7 +652,7 @@ Poljubna vektorja $x,y \in \mathbb{R}^{n}$ zadoščata
 Res, prva neenakost je očitna, druga pa je ekvivalentna neenakosti $(|x|-|y|)^2 \geq 0$, ki drži.
 Sledi $\sqrt{|x|^2 |y|^2 - |x \cdot y|^2} \leq \frac{1}{2} (|x|^2 + |y|^2)$. Če namesto vektorjev $x,y$ izberemo vektorja $x_{u_1}, x_{u_2} \in \mathbb{R}^{n}$, dobimo neenakost iz leme.
 
-Preslikava $x$ je konformna natanko tedaj, ko velja $|x_{u_1}| = |x_{u_2}|$ in $x_{u_1} \cdot x_{u_2} = 0$. Enakost Dirichletovega energijskega integrala in površine je torej ekvivalentna konformnosti.
+Preslikava $x$ je konformna natanko tedaj, ko velja $|x_{u_1}| = |x_{u_2}| > 0$ in $x_{u_1} \cdot x_{u_2} = 0$. Enakost Dirichletovega energijskega integrala in površine je torej ekvivalentna konformnosti.
 \end{dokaz}
 
 Preslikava, ki minimizira Dirichletov energijski integral, minimizira tudi površino, je konformna, in parametrizira minimalno ploskev z robom $\Gamma$.
@@ -668,15 +686,6 @@ Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \col
 			\end{align}			
 \end{enumerate}
 \end{izrek}
-
-\begin{definicija}
-Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je homomorfizem grup $\textup{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
-\begin{equation}
-\textup{Flux}_{x} ([C]) = \int_{C} {d^{c} x}.
-\end{equation}
-\end{definicija}
-
-V definiciji pretoka je $[C] \in H_{1} (M, \Z),$ integral pa je odvisen le od homološkega razreda poti $C$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$.
 
 \begin{definicija}
 \begin{enumerate}
@@ -723,11 +732,6 @@ Vsaka konformna minimalna imerzija $x \colon M \to \R^{n}$ je oblike~\ref{eq:Wst
 
 Če konformno minimalno imerzijo $x \colon M \to \R^{n}$ poznamo, potem pripadajočo povsod neničelno holomorfno 1-formo $\Phi = 2 \partial{x}$ z vrednostmi v $\C^{n}$ imenujemo \emph{Weierstrassovi podatki} preslikave $x$. 
 Analogno, za holomorfno ničelno krivuljo $z \colon M \to \C^{n}$ pripadajočo 1-formo $\Phi = \partial{z} = dz$ imenujemo \emph{Weierstrassovi podatki} preslikave $z$.
-
-\begin{definicija}
-\emph{Jordanov lok} je pot v ravnini, ki je topološko izomorfna intervalu $[0,1]$.
-\emph{Jordanova krivulja} je ravninska krivulja, ki je topološko ekvivalentna enotski krožnici.
-\end{definicija}
 
 \begin{definicija}
 Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
