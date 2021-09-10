@@ -376,7 +376,7 @@ $ \Phi_{t} \colon U \to \Phi_{t}(U),$ definiranih s predpisi $\Phi_{t}(x) = \gam
 
 Vektorsko polje $V$ lahko v lokalnih koordinatah $x = (x_{1}, \dots, x_{n})$ na odprti podmnožici $U \subset X$ zapišemo kot 
 \begin{align}
-V(m) = \sum_{i=1}^{n} V_{i}(m) \frac{\partial}{\partial x_{i}},
+V(m) = \sum_{i=1}^{n} V_{i}(m) \frac{\partial}{\partial x_{i}}|_{m},
 \end{align}
 kjer so $V_{i}$ realne funkcije na $U$, diferenciali $\frac{\partial}{\partial x_{i}}$ pa v vsaki točki $m \in U$ sestavljajo bazo tangentnega prostora $T_{m}X$.
 Pot $\gamma (t) = (\gamma_{1}(t), \dots, \gamma_{n}(t))$ na $X$ je po definiciji integralna krivulja vektorskega polja $V$ natanko takrat, ko zadošča enakosti 
@@ -405,7 +405,7 @@ Diferencialno 1-formo $\omega \in \Omega ^{1}(X)$ imenujemo \emph{eksaktna}, če
 
 Podobno kot vektorska polja lahko tudi 1-forme predstavimo lokalno. Naj bo $U$ odprta podmnožica v $X$ z lokalnimi koordinatami $x = (x_{1}, \dots, x_{n})$. Če so $a_{i}$ realne funkcije na $U$ in $dx_{i}$ diferenciali koordinatnih funkcij, ki v vsaki točki $m \in U$ tvorijo bazo kotangentnega prostora $T_{m}^{*}X$, potem ima poljubna 1-forma na $U$ obliko
 \begin{align}
-\alpha (m) = \sum_{i=1}^{n} a_{i}(m) dx_{i}.
+\alpha (m) = \sum_{i=1}^{n} a_{i}(m) dx_{i}|_{m}.
 \end{align}
 Baza kotangentnega prostora je dualna bazi tangentnega prostora; natančneje, 
 \begin{align*}
@@ -479,6 +479,34 @@ kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ 
 %%%%%%%%%%%%%%%%%%%%%
 % Holomorfne in harmonične funkcije
 \subsection{Holomorfne in harmonične funkcije}
+%
+Naj bo $M$ Riemannova ploskev in $\zeta = u+iv$ lokalna holomorfna koordinata na njej. 
+Definiramo \emph{diferencial} 
+\begin{gather}
+d = \frac{\partial}{\partial u}du + \frac{\partial}{\partial v}dv = \partial + \bar{\partial} = \frac{\partial}{\partial \zeta}d\zeta + \frac{\partial}{\partial \bar{\zeta}}d\bar{\zeta}
+\end{gather}
+in \emph{konjugirani diferencial}
+\begin{gather}
+d^{c} = 2 \Im(\partial) = i(\partial - \bar{\partial}).
+\end{gather}
+Velja
+\begin{gather*}
+d + id^{c} = 2\partial , \quad  d - id^{c} = 2\bar{\partial}, \\
+dd^{c} = 2i\partial \bar{\partial} = \left( \frac{\partial^2}{\partial u^2} + \frac{\partial^2}{\partial v^2} \right) du \wedge dv = \Delta du \wedge dv,
+\end{gather*}
+kjer je $\Delta$ Laplaceov operator glede na Evklidsko metriko.\newline
+Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}$ \emph{holomorfna} ($\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$.\newline
+Funkcija $x \colon M \to \mathbb{C}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}, če velja $dd^{c}x=0$.
+Harmonične funkcije karakteriziramo z naslednjimi ekvivalenčnimi pogoji:
+\begin{gather*}
+x \in \mathcal{C}^2(M) \ \text{je harmonična} \ \iff \ dd^{c}x=0 \ \iff \ \partial \bar{\partial}x=0 \ \iff \ \Delta x=0.
+\end{gather*}
+Vsaka harmonična funkcija je torej holomorfna. 
+Vzemimo realno harmonično funkcijo $x \colon M \to \mathbb{R}$ razreda $\mathcal{C}^2(M)$ in naj bo $D \subset M$ enostavno povezana\footnote{Topološki prostor $X$ je \emph{enostavno povezan} natanko tedaj, ko je s potmi povezan in ima v vsaki točki trivialno prvo fundamentalno grupo, $\pi_{1}(X)=0$.} domena. Zaradi pogoja o harmoničnosti vemo, da je 1-forma $d^{c}x$ eksaktna. Za izbrano fiksno točko $p_{0} \in D$ definirajmo funkcijo $y \colon D \to \mathbb{C}$ razreda $\mathcal{C}^2(D)$ s predpisom
+\begin{gather} \label{eq:harmonicna-konj}
+y(p) = \int_{p_0}^{p} d^{c}x + C,
+\end{gather}
+kjer je $C$ konstanta. Imenujemo jo \emph{harmonična konjugiranka} funkcije $x$. Velja enakost $dy = d^{c}x$, nova funkcija $z \colon D \to \mathbb{C}, \ z = x+iy$, pa je holomorfna. Zaključimo, da je zožitev realne harmonične funkcije na enstavno povezano domeno v $M$ enaka realnemu delu holomorfne funkcije $x+iy$, pri čemer je $y$ harmonična konjugiranka od $x$ definirana s predpisom~\ref{eq:harmonicna-konj}.
 
 %%%%%%%%%%%%%%%%%%%%%
 % Aproksimacijski izreki za Riemannove ploskve
