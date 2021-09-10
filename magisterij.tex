@@ -323,6 +323,16 @@ in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
 \emph{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
 \end{definicija}
 
+% 1. fundamentalna & homološka grupa
+Spomnimo se še enega topološkega pojma. Naj bo $M$ povezana mnogoterost in $x_{0} \in M$ izbrana točka. Zanimajo nas zanke v $M$, ki gredo skozi izbrano točko, natančneje, zvezne preslikave $\gamma \colon [0,1] \to M$, $\gamma(0) = \gamma(1) = x_{0}$. Označimo množico vseh takih zank z $\Gamma(x_{0})$ in na njej vpeljimo ekvivalenčno relacijo $\sim$ na naslednji način:\\[0.3cm]
+$\gamma_{1} \sim \gamma_{2}$ $\iff$ obstaja zvezna preslikava $H \colon [0,1] \times [0,1] \to M$, ki zadošča 
+\begin{itemize}
+\item $H(0,s) = H(1,s) = x_{0} \ \text{za vse} \ s \in [0,1]$, 
+\item $H(t,0) = \gamma_{1}(t) \ \text{in} \ H(t,1) = \gamma_{2}(t) \ \text{za vse} \ t \in [0,1]$.
+\end{itemize}
+Preslikavo $H$ imenujemo \emph{homotopija}, zanki, ki premoreta homotopijo pa \emph{homotopsko ekvivalentni}.
+Kvocient $\pi_{1}(M,x_{0}) = \Gamma(x_{0}) / _{\sim}$ imenujemo \emph{prva fundamentalna grupa} mnogoterosti $M$ glede na točko $x_{0}$, njeno abelizacijo $H_{1}(M, \mathbb{Z})$ pa \emph{prva homološka grupa} mnogoterosti $M$ s celimi koeficienti.
+
 %%%%%%%%%%%%%%%%%%%%%
 % Vektorska polja in diferencialne 1-forme
 \subsection{Vektorska polja in diferencialne 1-forme}
