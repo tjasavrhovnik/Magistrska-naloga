@@ -481,7 +481,7 @@ Z besedami je vektor povprečne ukrivljenosti enak produktu povprečne ukrivljen
 Glavni ukrivljenosti sta odvisni od enotske normale; če namesto pozitivno predznačene izberemo negativno enotsko normalo, se glavnima ukrivljenostma in posledično povprečni ukrivljenosti spremeni predznak. Po zgornji formuli pa vidimo, da je vektor povprečne ukrivljenosti neodvisen od izbora enotskega normalnega vektorskega polja.
 \end{primer}
 
-\begin{lema}
+\begin{lema} \label{lema:laplace=2H}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Tedaj velja
 \begin{equation}
 \Delta{x} = 2 \textbf{\textup{H}},
@@ -628,7 +628,7 @@ To pomeni, da z deformacijo poskve $x(M) \subset \mathbb{R}^{n}$ v smeri vektorj
 
 Po prvi variacijski formuli~\ref{eq:1-var-formula} v primeru $\textbf{\textup{H}} = 0$ na $M$ imerzija $x$ očitno da minimalno ploskev. V nasprotnem z ustrezno izbiro vektorskega polja $E$ na $M$ ploščina variiranih ploskev $x^{t}(M)$ za majhne $t>0$ in $x^{t} = x + tE$ strogo pada. Ta razmislek združuje naslednji rezultat.
 
-\begin{izrek}
+\begin{izrek} \label{izr:min-ekviv-H=0}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $x(M)$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
 \end{izrek}
 
@@ -640,7 +640,7 @@ S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emp
 kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $x(M)$.
 
 \begin{opomba}
-Za $M$ in $x$ kot zgoraj definirajmo funkcijo $f = |E|$ ter enotsko normalno vektorsko polje $N = \frac{E}{|E|}$ na množici $M^{*} = \{ x \in M \ ; \ f(x) \neq 0 \}$. Sledi $E = f \cdot N$, $\nabla E = (\nabla f \cdot N, f \cdot \nabla N)$ in $|\nabla E|^2 = |\nabla f|^2 + f^2 \cdot |\nabla N|^2$.
+Za $M$ in $x$ kot zgoraj definirajmo funkcijo $f = |E|$ ter enotsko normalno vektorsko polje $N = \frac{E}{|E|}$ na množici $M^{*} = \{ x \in M ; \ f(x) \neq 0 \}$. Sledi $E = f \cdot N$, $\nabla E = (\nabla f \cdot N, f \cdot \nabla N)$ in $|\nabla E|^2 = |\nabla f|^2 + f^2 \cdot |\nabla N|^2$.
 Formula~\ref{eq:2-var-formula} se zato glasi
 \begin{equation}
 \frac{d^2}{dt^2} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) = \int_{M} {\left( |\nabla f|^2 + f^2 (4K^{N} + |\nabla N|^2) \right) dA}.
@@ -655,7 +655,7 @@ Naj bosta $(M,g)$ in $(\widetilde{M},\tilde{g})$ Riemannovi mnogoterosti z $\dim
 Imerzija $x \colon (M,g) \to (\widetilde{M}, \tilde{g})$ se imenuje \emph{konformna}, če ohranja kote.
 Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna metriki $g$, kar pomeni, da za pozitivno funkcijo $\mu > 0$ na $M$ velja $x^{*}\tilde{g} = \mu g$.
 
-Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emph{izotermna} glede na Riemannovo metriko $g$, če za neko pozitivno funkcijo $\mu \colon \phi(U) \subset \mathbb{R}_{(x,y)}^2 \to \mathbb{R}_{+}$ velja
+Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emph{izotermna} glede na Riemannovo metriko $g$, če za neko pozitivno funkcijo $\mu \colon \phi(U) \to \mathbb{R}_{+}$, $\phi(U) \subset \mathbb{R}_{(x,y)}^2$, velja
 \begin{gather}
 (\phi^{-1})^{*}g = \mu \cdot (dx^2+dy^2) = \mu \cdot ds_{\mathbb{R}^2}^2.
 \end{gather} 
@@ -707,26 +707,50 @@ Analog minimalnih ploskev v enorazsežnem primeru so geodetke. Z minimizacijo en
 %
 Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve $M$.
 
+% Ekvivalenčni pogoji za minimalno ploskev
 \begin{izrek}
 Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \colon M \to \R^{n}$ konformna imerzija razreda $\mathcal{C}^2$. Naslednje trditve so ekvivalentne:
 \begin{enumerate}
 	\item $x$ je minimalna ploskev.
 	\item Vektorsko polje povprečne ukrivljenosti preslikave $x$ je ničelno, tj.~$\textbf{\textup{H}} = 0$.
-	\item $x$ je harmonična, tj.~$\Delta{x} = 0$.
+	\item $x$ je harmonična, tj.~$\Delta{x} = 0$ oziroma $dd^{c}x = 0$.
 	\item 1-forma $ \partial{x} = (\partial{x_1}, \dots , \partial{x_n})$ z vrednostmi v $\C^{n}$ je holomorfna in velja
-			\begin{equation}
+			\begin{equation} \label{eq:partialx^2 = 0}
 			(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0.
 			\end{equation}
 	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi v \emph{ničelni kvadriki}
 			\begin{equation} \label{ničelna-kvadrika}		
 			\textbf{\textup{A}} = \{ (z_1, \dots , z_n) \in \C^{n} ; \ z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
 			\end{equation}	
-		Nadalje je Riemannova metrika na $M$, inducirana s konformno imerzijo $x$, enaka
-			\begin{align}
-			g &= x^{*} ds^2 = |dx_1|^2 + \cdots + |dx_n|^2 = 2 (|\partial{x_1}|^2 + \cdots |\partial{x_n}|^2).
-			\end{align}			
 \end{enumerate}
+Nadalje je Riemannova metrika na $M$, inducirana s konformno imerzijo $x$, enaka
+	\begin{align} \label{eq:|dx|^2=2|partialx|^2}
+	g &= x^{*} ds^2 = |dx_1|^2 + \cdots + |dx_n|^2 = 2 (|\partial{x_1}|^2 + \cdots |\partial{x_n}|^2).
+	\end{align}			
 \end{izrek}
+
+\begin{dokaz}[Skica]
+Predstavimo le osnovne ideje dokaza zgornjega izreka.\newline
+%
+Ekvivalnetnost prvih dveh trditev smo zapisali v Izreku~\ref{izr:min-ekviv-H=0}.\newline 
+%
+Ekvivalentnost druge in tretje trditve povzema Lema~\ref{lema:laplace=2H}.\newline
+%
+Naj bo $\zeta = u + iv$ lokalna holomorfna koordinata na $M$. Tedaj je
+\begin{align*}
+2\partial x &= dx + id^{c}x = (x_{u}du + x_{v}dv) + i(-x_{v}du + x_{u}dv) = \\ 
+	&= (x_{u} - ix_{v})(du + idv) = (x_{u} - ix_{v})d\zeta.
+\end{align*}
+Preslikava $x$ je konformna natanko takrat, ko je $\sum_{i=1}^{n} \left((x_{i})_{u} \pm i(x_{i})_{v}\right)^2 = |x_{u}|^2 - |x_{v}|^2 \pm 2ix_{u} \cdot x_{v} = 0$, kar je ekvivaletno 
+\begin{align*}
+(\partial x_1)^2 + \cdots + (\partial x_{n})^2 = \frac{1}{4} \left(|x_{u}|^2 - |x_{v}|^2 - 2ix_{u} \cdot x_{v} \right) d\zeta ^2 = 0,
+\end{align*}
+ki je enakost~\ref{eq:partialx^2 = 0}. Ker velja $dd^{c}x = -2i \bar{\partial} (\partial x)$, je $x$ harmonična natanko tedaj, ko je $\partial x$ holomorfna, kar je ekvivalenca tretje in četrte trditve.\newline
+%
+Očitno sta četrta in peta trditev ekvivalentni.\newline
+%
+Zvezo~\ref{eq:|dx|^2=2|partialx|^2} dobimo s krajšim računom v lokalnih holomorfnih koordinatah $\zeta = u + iv$ na $M$ in upoštevanjem, da za konformno preslikavo $x$ velja $|x_{u}|=|x_{v}|>0$, $x_{u} \cdot x_{v} = 0$.
+\end{dokaz}
 
 \begin{definicija}
 \begin{enumerate}
