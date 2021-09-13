@@ -597,7 +597,7 @@ Po definiciji je na $bM \times (-\varepsilon, \varepsilon)$ variacijsko vektorsk
 \begin{definicija}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Sliko $x(M)$ imenujemo \emph{minimalna ploskev}, če za vsako kompaktno domeno $D \subset M$ z gladkim robom $bD$ in vsako gladko variacijo $x^{t}$ preslikave $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-ploščine}
-\frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(D)) = 0.
+\frac{d}{dt} \Big|_{t=0} \text{Area} \left(x^{t}(D)\right) = 0.
 \end{equation}
 Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega funkcionala $\text{Area}$.
 \end{definicija}
@@ -609,7 +609,7 @@ Levo stran enakosti~\ref{eq:1-var-ploščine} imenujemo \emph{prva variacija plo
 Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Naj bo $E = \partial{x^{t}} / \partial{t}|_{t=0}$ variacijsko vektorsko polje preslikave $x^{t}$ pri $t=0$, $\textbf{\textup{H}}$ vektorsko polje povprečne ukrivljenosti preslikave $x$ in $dA$ ploščinski element glede na Riemannovo metriko $x^{*}ds^2$, definirano na $M$.
 Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-formula}
-\frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) = -2 \int_{M} {E \cdot \textbf{\textup{H}} dA}.
+\frac{d}{dt} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) = -2 \int_{M} {E \cdot \textbf{\textup{H}} dA}.
 \end{equation}
 \end{izrek}
 
@@ -619,7 +619,7 @@ x^{t} = x + tf\textbf{\textup{H}},
 \end{gather}
 kjer za $f$ izberimo gladko nenegativno funkcijo na $M$, ki je ničelna na robu $bM$. Po definiciji je $x^{t} \in \mathcal{C}^2(M)$ variacija imerzije $x$ s fiksnim robom. Računajmo
 \begin{align*}
-\frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) &= -2 \cdot \int_{M} E \cdot \textbf{\textup{H}} dA = -2 \cdot \int_{M} f \textbf{\textup{H}} \cdot \textbf{\textup{H}} dA \\
+\frac{d}{dt} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) &= -2 \cdot \int_{M} E \cdot \textbf{\textup{H}} dA = -2 \cdot \int_{M} f \textbf{\textup{H}} \cdot \textbf{\textup{H}} dA \\
 &= -2 \cdot \int_{M} f |\textbf{\textup{H}}|^2 dA \leq 0.
 \end{align*} 
 Če je $\textbf{\textup{H}} = 0$ na $M$, je ploščina konstantna ($x^{t}=x$).
@@ -633,11 +633,19 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $x(M)$ 
 \end{izrek}
 
 % Druga variacijska formula
-S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}
-\begin{equation}
-\frac{d^2}{dt^2} \Big|_{t=0} \text{Area}(x^{t}(M)) = \int_{M} {(4|E|^{2} K^{E} + |\nabla{E}|^2) dA},
+S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}: naj bo $M$ kompaktna ploskev z robom, preslikava $x \colon M \to \mathbb{R}^{n}$ pa gladka minimalna imerzija. Potem velja
+\begin{equation} \label{eq:2-var-formula}
+\frac{d^2}{dt^2} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) = \int_{M} {\left( 4|E|^{2} K^{E} + |\nabla{E}|^2 \right) dA},
 \end{equation}
-kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $M$.
+kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $x(M)$.
+
+\begin{opomba}
+Za $M$ in $x$ kot zgoraj definirajmo funkcijo $f = |E|$ ter enotsko normalno vektorsko polje $N = \frac{E}{|E|}$ na množici $M^{*} = \{ x \in M \ ; \ f(x) \neq 0 \}$. Sledi $E = f \cdot N$, $\nabla E = (\nabla f \cdot N, f \cdot \nabla N)$ in $|\nabla E|^2 = |\nabla f|^2 + f^2 \cdot |\nabla N|^2$.
+Formula~\ref{eq:2-var-formula} se zato glasi
+\begin{equation}
+\frac{d^2}{dt^2} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) = \int_{M} {\left( |\nabla f|^2 + f^2 (4K^{N} + |\nabla N|^2) \right) dA}.
+\end{equation}
+\end{opomba}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Weierstrassova formula
