@@ -443,7 +443,7 @@ Oglejmo si preslikavo $ \kappa ^{N}(p, \cdot) \colon \{\nu \in T_{p}S ; \ |\nu|=
 \begin{align} 
 \kappa _{1}^{N}(p) = \min _{|\nu| = 1} \kappa ^{N}(p, \nu), \quad \kappa _{2}^{N}(p) = \max _{|\nu| = 1} \kappa ^{N}(p, \nu),
 \end{align}
-katerima pravimo \emph{glavni ukrivljenosti}.
+katerima pravimo \emph{glavni ukrivljenosti} ploskve $S$ (v točki $p$ in normalni smeri $N$).
 
 \begin{definicija}
 \begin{enumerate}
@@ -459,7 +459,7 @@ K^{N}(p) = \kappa _{1}^{N}(p) \cdot \kappa _{2}^{N}(p)
 \end{equation}
 definira \emph{Gaussovo ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$.
 \item
-Projekcijo povprečne ukrivljenosti na normalno ravnino $N_{p}S$ v smeri tangentne ravnine $T_{p}S$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$ in označimo s $\textbf{\textup{H}}$. Enačba~\ref{eq:povp-ukr} se v tej notaciji glasi $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
+Projekcijo povprečne ukrivljenosti na normalni prostor $N_{p}S$ v smeri tangentnega prostora $T_{p}S$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$ in označimo s $\textbf{\textup{H}}$. Enačba~\ref{eq:povp-ukr} se v tej notaciji glasi $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
 \end{enumerate}
 \end{definicija}
 
@@ -571,6 +571,8 @@ Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna
 % Variacija ploščine
 \subsection{Variacija ploščine}
  %
+V tem razdelku bomo navedli klasično defincijo minimalne ploskve ter variacijski formuli, s katerima minimalne ploskve opišemo kot ploskve z ničelnim vektorjem povprečne ukrivljenosti.
+%
 \begin{definicija}
 \begin{enumerate}
 \item
@@ -581,7 +583,7 @@ x^{t} \colon M \to \R^{n},\ t \in (-\varepsilon, \varepsilon) \subset \R,
 če je $x^0 = x$ in za vse $t$ z intervala velja $x^{t} = x$ na $bM$.
 %
 \item
-Naj bo $p \in M$. \emph{Variacijsko vektorsko polje} preslikave $x^{t}$ je vektorsko polje, definirano kot
+Naj bo $p \in M$. \emph{Variacijsko vektorsko polje} preslikave $x^{t}$ je vektorsko polje, definirano s predpisom
 \begin{equation}
 E(p,t) = \frac{\partial{x^t(p)}}{\partial{t}} \in \R^{n}.
 \end{equation}
@@ -591,8 +593,9 @@ E(p,t) = \frac{\partial{x^t(p)}}{\partial{t}} \in \R^{n}.
 Opazimo, da je za dovolj majhne vrednosti $t$ preslikava $x^{t}$ imerzija.
 Po definiciji je na $bM \times (-\varepsilon, \varepsilon)$ variacijsko vektorsko polje $E$ konstantno ničelno.
 
+% Minimalna ploskev
 \begin{definicija}
-Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ imenujemo \emph{minimalna ploskev}, če za vsako kompaktno domeno $D \subset M$ z gladkim robom $bD$ in vsako gladko variacijo $x^{t}$ preslikave $x$ s fiksnim robom velja
+Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Sliko $x(M)$ imenujemo \emph{minimalna ploskev}, če za vsako kompaktno domeno $D \subset M$ z gladkim robom $bD$ in vsako gladko variacijo $x^{t}$ preslikave $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-ploščine}
 \frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(D)) = 0.
 \end{equation}
@@ -601,7 +604,8 @@ Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega fun
 
 Levo stran enakosti~\ref{eq:1-var-ploščine} imenujemo \emph{prva variacija ploščine} pri $t=0$. Slednjo z geometrijskimi lastnostmi preslikave $x$, natančneje ukrivljenostjo, povezuje \emph{prva variacijska formula} v naslednjem izreku. 
 
-\begin{izrek} \label{izr:1-var-formula}
+% Prva variacijska formula
+\begin{izrek}[Prva variacijska formula] \label{izr:1-var-formula}
 Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Naj bo $E = \partial{x^{t}} / \partial{t}|_{t=0}$ variacijsko vektorsko polje preslikave $x^{t}$ pri $t=0$, $\textbf{\textup{H}}$ vektorsko polje povprečne ukrivljenosti preslikave $x$ in $dA$ ploščinski element glede na Riemannovo metriko $x^{*}ds^2$, definirano na $M$.
 Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-formula}
@@ -609,10 +613,26 @@ Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksn
 \end{equation}
 \end{izrek}
 
+Kaj nam prva variacijska formula pove, če se osredotočimo na poseben razred variacij imerzije? Predpostavimo, da je imerzija $x \colon M \to \R^{n}$ razreda $\mathcal{C}^4$, tj.~je preslikava $\textbf{\textup{H}}$ vsaj razreda $\mathcal{C}^2$. Variacijo definirajmo s predpisom
+\begin{gather}
+x^{t} = x + tf\textbf{\textup{H}},
+\end{gather}
+kjer za $f$ izberimo gladko nenegativno funkcijo na $M$, ki je ničelna na robu $bM$. Po definiciji je $x^{t} \in \mathcal{C}^2(M)$ variacija imerzije $x$ s fiksnim robom. Računajmo
+\begin{align*}
+\frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) &= -2 \cdot \int_{M} E \cdot \textbf{\textup{H}} dA = -2 \cdot \int_{M} f \textbf{\textup{H}} \cdot \textbf{\textup{H}} dA \\
+&= -2 \cdot \int_{M} f |\textbf{\textup{H}}|^2 dA \leq 0.
+\end{align*} 
+Če je $\textbf{\textup{H}} = 0$ na $M$, je ploščina konstantna ($x^{t}=x$).
+Sicer obstaja točka, v kateri je $\textbf{\textup{H}} \neq 0$, in dodatno zahtevajmo, da je $f>0$ v okolici neke take točke. Potem je $\frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) < 0$.
+To pomeni, da z deformacijo poskve $x(M) \subset \mathbb{R}^{n}$ v smeri vektorja povprečne ukrivljenosti $\textbf{\textup{H}}$ ploščina za majhne $t>0$ strogo pada.
+
+Po prvi variacijski formuli~\ref{eq:1-var-formula} v primeru $\textbf{\textup{H}} = 0$ na $M$ imerzija $x$ očitno da minimalno ploskev. V nasprotnem z ustrezno izbiro vektorskega polja $E$ na $M$ ploščina variiranih ploskev $x^{t}(M)$ za majhne $t>0$ in $x^{t} = x + tE$ strogo pada. Ta razmislek združuje naslednji rezultat.
+
 \begin{izrek}
-Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $M$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
+Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $x(M)$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
 \end{izrek}
 
+% Druga variacijska formula
 S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}
 \begin{equation}
 \frac{d^2}{dt^2} \Big|_{t=0} \text{Area}(x^{t}(M)) = \int_{M} {(4|E|^{2} K^{E} + |\nabla{E}|^2) dA},
