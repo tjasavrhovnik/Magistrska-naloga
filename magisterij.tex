@@ -831,26 +831,52 @@ Kot smo omenili zgoraj, včasih pišemo $\Phi = f \theta$, pri čemer je $\theta
 Če konformno minimalno imerzijo $x \colon M \to \R^{n}$ poznamo, potem pripadajočo povsod neničelno holomorfno 1-formo $\Phi = 2 \partial{x}$ z vrednostmi v $\C^{n}$ imenujemo \emph{Weierstrassovi podatki} preslikave $x$. 
 Analogno, za holomorfno ničelno krivuljo $z \colon M \to \C^{n}$ pripadajočo 1-formo $\Phi = \partial{z} = dz$ imenujemo \emph{Weierstrassovi podatki} preslikave $z$.
 
-\begin{definicija}
-Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
-\end{definicija}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Gaussova preslikava
+\subsection{Gaussova preslikava}
+%
+V razdelku o ukrivljenosti ploskve smo pri računanju vektorja povprečne ukrivljenosti v trirazsežnem prostoru omenili Gaussovo preslikavo. Sedaj bomo formalno definirali Gaussovo preslikavo minimalne ploskve ter se ponovno osredotočili na trirazsežni primer -- izpeljali bomo klasično Weierstrassovo formulo za minimalne ploskve v prostoru $\mathbb{R}^3$.
 
 \begin{definicija}
-Naj bo $M$ povezana odprta Riemannova ploskev ali kompaktna Riemannova ploskev z robom, na kateri je definirana povsod neničelna holomorfna 1-forma $\Theta$. Konformno minimalno imerzijo $x \colon M \to \R^{n}$ imenujemo:
-\begin{enumerate}
-\item \emph{ravna}, če je slika $x(M)$ vsebovana v afini ravnini v $\R^{n}$; sicer pravimo, da je $x$ \emph{neravna};
-\item \emph{polna}, če je preslikava $f = 2 \partial{x} / \Theta \colon M \to \textbf{\textup{A}}_{*}^{n-1}$ polna, tj.\ $\C$-linearna ogrinjača slike $f(M)$ je enaka $\C^{n}$;
-\item \emph{neizrojena}, če slika $x(M)$ ni vsebovana v nobeni hiperravnini v $\R^{n}$. 
-\end{enumerate}
+Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. \emph{Gaussova preslikava} konformne minimalne imerzije $x = (x_{1}, \dots , x_{n}) \colon M \to \mathbb{R}^{n}$ je holomorfna preslikava
+\begin{gather*}
+\mathcal{G} = [\partial x_{1} : \cdots : \partial x_{n}] \colon M \to \textup{\textbf{Q}}^{n-2} \subset \mathbb{CP}^{n-1}.
+\end{gather*}
+Gaussova preslikava holomorfne ničelne krivulje $z = (z_{1}, \dots , z_{n}) \colon M \to \mathbb{C}^{n}$ je holomorfna preslikava
+\begin{gather*}
+\mathcal{G} = [dz_{1} : \cdots : dz_{n}] \colon M \to \textup{\textbf{Q}}^{n-2} \subset \mathbb{CP}^{n-1}.
+\end{gather*}
+Pri tem je množica $\textup{\textbf{Q}}^{n-2} = \{ [z_{1} : \cdots : z_{n}] \in \mathbb{CP}^{n-1} ; \ \sum_{i=1}^{n}z_{i}^2 = 0 \}$ \emph{hiperkvadrika} v $\mathbb{CP}^{n-1}$, ki jo dobimo s projektivizacijo punktirane ničelne kvadrike $\textup{\textbf{A}}_{*}^{n-1} \subset \mathbb{C}^{n}$.
 \end{definicija}
 
-V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. V višjih dimenzijah ($n \geq 4$) veljata implikaciji 
-\[ \text{polna} \ \Rightarrow \ \text{neizrojena} \ \Rightarrow \ \text{neravna}. \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Primeri minimlanih ploskev
+\subsection{Primeri minimalnih ploskev}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Izreki o aproksimaciji in interpolaciji minimalnih ploskev
 \section{Izreki o aproksimaciji in interpolaciji minimalnih ploskev}
+
+\begin{definicija}
+Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
+\end{definicija}
+
+\begin{definicija}
+Naj bo $M$ povezana odprta Riemannova ploskev ali kompaktna Riemannova ploskev z robom, na kateri je definirana povsod neničelna holomorfna 1-forma $\theta$. Konformno minimalno imerzijo $x \colon M \to \R^{n}$ imenujemo:
+\begin{enumerate}
+\item \emph{ravna}, če je slika $x(M)$ vsebovana v afini ravnini v $\R^{n}$; sicer pravimo, da je $x$ \emph{neravna};
+\item \emph{polna}, če je preslikava $f = 2 \partial{x} / \theta \colon M \to \textbf{\textup{A}}_{*}^{n-1}$ polna, tj.\ $\C$-linearna ogrinjača slike $f(M)$ je enaka $\C^{n}$;
+\item \emph{neizrojena}, če slika $x(M)$ ni vsebovana v nobeni afini hiperravnini v $\R^{n}$. 
+\end{enumerate}
+\end{definicija}
+
+% [CITIRAJ - Osserman, Lemma 12.4]
+V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. V višjih dimenzijah ($n \geq 4$) veljata implikaciji
+\begin{center}
+polna $\Rightarrow$ neizrojena $\Rightarrow$ neravna.
+\end{center}
+Obratne implikacije ne vejajo.
 
 Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih presikav $M \to X$ označimo z $\mathcal{O}(M,X)$.
 Če je $K$ kompaktna podmnožica v $M$, množico preslikav $K \to X$ razreda $\mathcal{C}^{r}(M)$, ki so holomorfne v notranjosti $K^\circ \subset K$, označimo z $\mathcal{A}^{r}(K,X)$.
