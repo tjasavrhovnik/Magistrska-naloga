@@ -662,6 +662,25 @@ Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emp
 
 Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
 
+Brez dokaza navedimo še ekvivalentne pogoje, ki karakterizirajo konformne imerzije na domeni v Evklidski ravnini. Nanje se bomo v nadaljevanju večkrat sklicali.
+
+\begin{lema} \label{lema:konform-ekvivalence}
+Naj bodo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n \geq 2$ in preslikava $x = (x_{1}, \dots , x_{n}) \colon D \to \mathbb{R}^{n}$ imerzija. Naslednje trditve so ekvivalentne:
+\begin{enumerate}
+	\item Imerzija $x$ je konformna v Evklidskih metrikah na $\mathbb{R}^2$ in $\mathbb{R}^{n}$.
+	\item Za parcialna odvoda $\frac{\partial x}{\partial u} = x_{u}$ in $\frac{\partial x}{\partial v} = x_{v}$ velja
+		\begin{gather*}
+		|x_{u}| = |x_{v}| > 0, \quad x_{u} \cdot x_{v} = 0.
+		\end{gather*}
+	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo \emph{ničelni kvadriki} (so \emph{ničelni vektorji})
+		\begin{gather*}
+		\textbf{\textup{A}} = \textbf{\textup{A}}^{n-1} = \{ z=(z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}; \ z_{1}^2 + \cdots + z_{n}^2 = 0 \}.
+		\end{gather*}
+	\item Matrika, ki pripada Riemannovi metriki $g = x^{*}ds^2$ na $D$, je enaka $G = \mu I$, kjer je $\mu = |x_{u}|^2 = |x_{v}|^2$ ter $I$ identiteta.
+\end{enumerate}
+\end{lema}
+
+%%%%%%%%%%%%%%%
 % Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, Minimal srfaces for undergraduates 6.3]
 \subsubsection{Plateaujev problem in Dirichletov energijski integral}
 %
@@ -702,13 +721,14 @@ Preslikava, ki minimizira Dirichletov energijski integral, minimizira tudi povr�
 Analog minimalnih ploskev v enorazsežnem primeru so geodetke. Z minimizacijo enorazsežnega energijskega integrala dobimo krivulje z minimalno dolžino, ki so poleg tega parametrizirane z večkratnikom ločne dolžine. 
 \end{opomba}
 
+%%%%%%%%%%%%%%%
 % Rezultati
 \subsubsection{Rezultati}
 %
 Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve $M$.
 
 % Ekvivalenčni pogoji za minimalno ploskev
-\begin{izrek}
+\begin{izrek} \label{izr:ekviv-min-ploskev}
 Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \colon M \to \R^{n}$ konformna imerzija razreda $\mathcal{C}^2$. Naslednje trditve so ekvivalentne:
 \begin{enumerate}
 	\item $x$ je minimalna ploskev.
@@ -718,7 +738,7 @@ Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \col
 			\begin{equation} \label{eq:partialx^2 = 0}
 			(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0.
 			\end{equation}
-	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi v \emph{ničelni kvadriki}
+	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi v ničelni kvadriki
 			\begin{equation} \label{ničelna-kvadrika}		
 			\textbf{\textup{A}} = \{ (z_1, \dots , z_n) \in \C^{n} ; \ z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
 			\end{equation}	
@@ -730,28 +750,32 @@ Nadalje je Riemannova metrika na $M$, inducirana s konformno imerzijo $x$, enaka
 \end{izrek}
 
 \begin{dokaz}[Skica]
-Predstavimo le osnovne ideje dokaza zgornjega izreka.\newline
-%
-Ekvivalnetnost prvih dveh trditev smo zapisali v Izreku~\ref{izr:min-ekviv-H=0}.\newline 
-%
-Ekvivalentnost druge in tretje trditve povzema Lema~\ref{lema:laplace=2H}.\newline
-%
+Predstavimo le osnovne ideje dokaza zgornjega izreka.
+
+Ekvivalentnost prvih dveh trditev smo zapisali v Izreku~\ref{izr:min-ekviv-H=0}.
+
+Ekvivalentnost druge in tretje trditve sledi iz Leme~\ref{lema:laplace=2H}, saj je $\Delta x = 2 \textbf{\textup{H}}$.
+
 Naj bo $\zeta = u + iv$ lokalna holomorfna koordinata na $M$. Tedaj je
 \begin{align*}
 2\partial x &= dx + id^{c}x = (x_{u}du + x_{v}dv) + i(-x_{v}du + x_{u}dv) = \\ 
-	&= (x_{u} - ix_{v})(du + idv) = (x_{u} - ix_{v})d\zeta.
+	&= (x_{u} - ix_{v})(du + idv) = (x_{u} - ix_{v})d\zeta, \\
+\partial x  &= (\partial x_{1}, \dots , \partial x_{n}) = \frac{1}{2}  (x_{u} - ix_{v})d\zeta.
 \end{align*}
 Preslikava $x$ je konformna natanko takrat, ko je $\sum_{i=1}^{n} \left((x_{i})_{u} \pm i(x_{i})_{v}\right)^2 = |x_{u}|^2 - |x_{v}|^2 \pm 2ix_{u} \cdot x_{v} = 0$, kar je ekvivaletno 
 \begin{align*}
 (\partial x_1)^2 + \cdots + (\partial x_{n})^2 = \frac{1}{4} \left(|x_{u}|^2 - |x_{v}|^2 - 2ix_{u} \cdot x_{v} \right) d\zeta ^2 = 0,
 \end{align*}
-ki je enakost~\ref{eq:partialx^2 = 0}. Ker velja $dd^{c}x = -2i \bar{\partial} (\partial x)$, je $x$ harmonična natanko tedaj, ko je $\partial x$ holomorfna, kar je ekvivalenca tretje in četrte trditve.\newline
-%
-Očitno sta četrta in peta trditev ekvivalentni.\newline
-%
+ki je enakost~\ref{eq:partialx^2 = 0}. Ker velja $dd^{c}x = -2i \bar{\partial} (\partial x)$, je $x$ harmonična natanko tedaj, ko je $\partial x$ holomorfna; to je ekvivalenca tretje in četrte trditve.
+
+Funkcija $f = 2 \partial x / \theta$ je kvocient 1-form, ki je zaradi pogoja na $\theta$ dobro definirana. Ker je $x$ imerzija, $f$ ne zavzame vrednosti $0$. Četrta in peta trditev sta očitno ekvivalentni.
+
 Zvezo~\ref{eq:|dx|^2=2|partialx|^2} dobimo s krajšim računom v lokalnih holomorfnih koordinatah $\zeta = u + iv$ na $M$ in upoštevanjem, da za konformno preslikavo $x$ velja $|x_{u}|=|x_{v}|>0$, $x_{u} \cdot x_{v} = 0$.
 \end{dokaz}
 
+% Konjugirane & pridružene minimalne ploskve
+V razdelku o holomorfnih in harmoničnih funkcijah na Riemannovih ploskvah smo govorili o harmoničnih konjugirankah in kompleksnih krivuljah izbrane holomorfne funkcije. Sedaj opazujmo konformno minimalno imerzijo $x \colon M \to \mathbb{R}^{n}$ ter njeno harmonično konjugiranko $y$ na odprti podmnožici $D \subset M$. Tedaj o preslikavi $z = x + iy \colon M \to \mathbb{C}^{n}$, ki je imerzija in holomorfna krivulja, vemo več, saj njeni parcialni odvodi zadoščajo ničelnemu pogoju.
+%
 \begin{definicija}
 \begin{enumerate}
 \item
@@ -764,7 +788,14 @@ Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{\imath
 \end{enumerate}
 \end{definicija}
 
-\begin{izrek}[Weierstrassova predstavitev konformnih minimalnih ploskev in holomorfnih ničelnih krivulj]
+% [CITIRAJ IZREK]
+Izrek pravi, da vsaka odprta Riemannova ploskev premore povsod neničelno eksaktno 1-formo.
+Naj bosta $z \colon M \to \mathbb{C}^{n}$ holomorfna ničelna krivulja in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Diferencial $dz$ je 1-forma in obstaja holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$, ki 1-formi povezuje z enakostjo $dz = f \theta$. Tu je množica $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$ punktirana ničelna kvadrika v $\mathbb{C}^{n}$.
+
+\emph{Enneper-Weierstrassova formula} je posledica Izreka~\ref{izr:ekviv-min-ploskev}, zato jo bomo navedli brez dokaza. Rezultat je pomemben, saj predstavlja konformne minimalne ploskve in holomorne ničelne krivulje, konstruirane na univerzalen način. Metodo konstrukcije bomo v naslednjih poglavjih pogosto uporabljali.
+
+% Enneper-Weierstrassova formula
+\begin{izrek}[Enneper-Weierstrassova formula] \label{izr:Enneper-Weierstrass}
 Naj bo $n \geq 3$ in $M$ odprta Riemannova ploskev, na kateri definiramo holomorfno 1-formo $\Phi = (\phi_{1}, \dots , \phi_{n})$ z vrednostmi v $\C^{n}$, ki je povsod neničelna, in zadošča 
 \begin{enumerate}
 \item $ \sum_{j=1}^{n} \phi_{j}^{2} = 0$,
@@ -772,7 +803,7 @@ Naj bo $n \geq 3$ in $M$ odprta Riemannova ploskev, na kateri definiramo holomor
 \end{enumerate}
 Potem za poljuben izbor točk $p_0 \in M$ in $x_0 \in \R^{n}$ predpis $x \colon M \to \R^{n}$,
 \begin{align} \label{eq:Wstrass-kmi}
-x(p) = x_0 + \Re \int_{p_0}^{p} \Phi, \ p \in M,
+x(p) = x_0 + \Re \int_{p_0}^{p} \Phi, \quad p \in M,
 \end{align}
 podaja dobro definirano konformno minimalno imerzijo. Zanjo velja
 \begin{align}
@@ -783,7 +814,7 @@ podaja dobro definirano konformno minimalno imerzijo. Zanjo velja
 $ \int_{C} \Phi = 0 \ \text{za vse} \ [C] \in H_{1} (M, \Z) $,
 potem za poljuben izbor točk $p_0 \in M$ in $z_0 \in \C^{n}$ predpis $z \colon M \to \C^{n}$,
 \begin{align} \label{eq:Wstrass-hnk}
-z(p) = z_0 + \int_{p_0}^{p} \Phi, \ p \in M,
+z(p) = z_0 + \int_{p_0}^{p} \Phi, \quad p \in M,
 \end{align}
 podaja dobro definirano holomorfno ničelno krivuljo. Zanjo velja
 \begin{align}
@@ -792,7 +823,9 @@ podaja dobro definirano holomorfno ničelno krivuljo. Zanjo velja
 \end{izrek}
 
 \begin{opomba}
-Vsaka konformna minimalna imerzija $x \colon M \to \R^{n}$ je oblike~\ref{eq:Wstrass-kmi} in vsaka holomorfna ničelna krivulja $z \colon M \to \C^{n}$ je oblike~\ref{eq:Wstrass-hnk}. Prav zato je Weierstrassova predstavitev elegantna metoda za konstrukcijo opisanih preslikav.
+Dodatek k izreku pravi, da je vsaka konformna minimalna imerzija $x \colon M \to \R^{n}$ oblike~\ref{eq:Wstrass-kmi}, vsaka holomorfna ničelna krivulja $z \colon M \to \C^{n}$ pa oblike~\ref{eq:Wstrass-hnk}. Prav zato je Enneper-Weierstrassova formula elegantna metoda za konstrukcijo opisanih preslikav.
+
+Kot smo omenili zgoraj, včasih pišemo $\Phi = f \theta$, pri čemer je $\theta$ povsod neničelna holomorfna 1-forma na $M$ in $f = \Phi / \theta \colon M \to \textbf{\textup{A}}_{*}$ holomorfna preslikava.
 \end{opomba}
 
 Če konformno minimalno imerzijo $x \colon M \to \R^{n}$ poznamo, potem pripadajočo povsod neničelno holomorfno 1-formo $\Phi = 2 \partial{x}$ z vrednostmi v $\C^{n}$ imenujemo \emph{Weierstrassovi podatki} preslikave $x$. 
