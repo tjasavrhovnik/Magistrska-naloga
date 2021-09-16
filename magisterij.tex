@@ -839,15 +839,46 @@ V razdelku o ukrivljenosti ploskve smo pri računanju vektorja povprečne ukrivl
 
 \begin{definicija}
 Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. \emph{Gaussova preslikava} konformne minimalne imerzije $x = (x_{1}, \dots , x_{n}) \colon M \to \mathbb{R}^{n}$ je holomorfna preslikava
-\begin{gather*}
+\begin{gather}
 \mathcal{G} = [\partial x_{1} : \cdots : \partial x_{n}] \colon M \to \textup{\textbf{Q}}^{n-2} \subset \mathbb{CP}^{n-1}.
-\end{gather*}
+\end{gather}
 Gaussova preslikava holomorfne ničelne krivulje $z = (z_{1}, \dots , z_{n}) \colon M \to \mathbb{C}^{n}$ je holomorfna preslikava
 \begin{gather*}
 \mathcal{G} = [dz_{1} : \cdots : dz_{n}] \colon M \to \textup{\textbf{Q}}^{n-2} \subset \mathbb{CP}^{n-1}.
 \end{gather*}
 Pri tem je množica $\textup{\textbf{Q}}^{n-2} = \{ [z_{1} : \cdots : z_{n}] \in \mathbb{CP}^{n-1} ; \ \sum_{i=1}^{n}z_{i}^2 = 0 \}$ \emph{hiperkvadrika} v $\mathbb{CP}^{n-1}$, ki jo dobimo s projektivizacijo punktirane ničelne kvadrike $\textup{\textbf{A}}_{*}^{n-1} \subset \mathbb{C}^{n}$.
 \end{definicija}
+
+Oglejmo si Gaussovo preslikavo v primeru trirazsežnega prostora. Hiperkvadriko $\textup{\textbf{Q}}^{1} \subset \mathbb{CP}^{2}$, ki je racionalna krivulja, parametrizirajmo z biholomorfno preslikavo 
+\begin{align}
+\tau &\colon \mathbb{CP}^{1} \to \textup{\textbf{Q}}^{1}, \nonumber \\
+\tau (t) &= \left[ 1-t^2 : i(1+t^2) : 2t \right].
+\end{align}
+Koordinate slike označimo z $u = 1-t^2$, $v = i(1+t^2)$ in $w = 2t$, ter od tod izrazimo 
+\begin{gather*}
+t = \frac{w}{u-iv} \in \mathbb{CP}^{1}.
+\end{gather*}
+Naj bo $M$ odprta Riemannova ploskev in $x = (x_1,x_2,x_3) \colon M \to \mathbb{R}^{3}$ konformna minimalna imerzija. Ker želimo povezavo med imerzijo in hiperkvadriko, parcialne odvode označimo z $2 \partial x = 2 (\partial x_1, \partial x_2, \partial x_3) = (\phi_1, \phi_2, \phi_3) = \Phi$, nato pa definirajmo holomorfno preslikavo (ki izhaja iz izražave spremenljivke $t$ zgoraj)
+\begin{gather}
+\mathfrak{g} \colon M \to \mathbb{CP}^{1}, \quad \mathfrak{g} = \frac{\phi_3}{\phi_1 - i\phi_2} = \frac{\partial x_3}{\partial x_1 - i \partial x_2}.
+\end{gather}
+Imenujemo jo \emph{kompleksna Gaussova preslikava} konformne minimalne imerzije $x$.
+Kompozitum 
+\begin{align}
+\mathcal{G} \colon M \to \textup{\textbf{Q}}^{1} \subset \mathbb{CP}^{2}, \quad \mathcal{G} = \tau \circ \mathfrak{g}
+\end{align}
+je iskana Gaussova preslikava.
+Od tod lahko izpeljemo Enneper-Weierstrassovo formulo za minimalne ploskve v $\mathbb{R}^{3}$, o kateri smo govorili v prejšnjem razdelku.
+Računajmo Weierstrassove podatke preslikave $x$. Velja\footnote{Res, če upoštevamo zvezo $\phi_{1}^2 + \phi_{2}^2 + \phi_{3}^2 = 0$, dobimo
+\begin{align*}
+\frac{1}{2} \left(\frac{1}{\mathfrak{g}} - \mathfrak{g} \right) \phi_3 &= \frac{1}{2} \left( \frac{\phi_1 - i\phi_2}{\phi_3} - \frac{\phi_3}{\phi_1 - i\phi_2} \right) \phi_3 = \frac{\phi_{1}^2 - 2i\phi_1 \phi_2 - \phi_{2}^2 - \phi_{3}^2}{2(\phi_1 - i\phi_2)} = \frac{\phi_{1}^2 - i\phi_1\phi_2}{\phi_1 - i\phi_2} = \phi_1, \\
+%
+\frac{i}{2} \left(\frac{1}{\mathfrak{g}} + \mathfrak{g} \right) \phi_3 &= \frac{i}{2} \frac{\phi_{1}^2 - 2i\phi_1 \phi_2 - \phi_{2}^2 + \phi_{3}^2}{\phi_1 - i\phi_2} = \frac{i}{2} \frac{-2i\phi_1 \phi_2 - 2\phi_{2}^2}{\phi_1 - i\phi_2} = \frac{-i\phi_2(i\phi_1 + \phi_2)}{\phi_1 - i\phi_2} = \phi_2.
+\end{align*}
+}
+\begin{gather}
+2 \partial x = \Phi = \left( \frac{1}{2} \left(\frac{1}{\mathfrak{g}} - \mathfrak{g} \right), \frac{i}{2} \left(\frac{1}{\mathfrak{g}} + \mathfrak{g} \right), 1 \right) \phi_3.
+\end{gather}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Primeri minimlanih ploskev
