@@ -632,6 +632,18 @@ Po prvi variacijski formuli~\ref{eq:1-var-formula} v primeru $\textbf{\textup{H}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $x(M)$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
 \end{izrek}
 
+% Totalna Gaussova ukrivljenost
+Po zadnjem izreku je vsaka točka minimalne ploskve sedlo. Ker je $\textup{\textbf{H}} = 0$, je $\kappa_2 = -\kappa_1$, torej sta glavni ukrivljenosti v vsaki točki enako veliki, a nasprotnega predznaka. Geometrijsko to pomeni, da je minimalna ploskev v vsaki točki enako ukrivljena v obeh glavnih smereh, ti pa kažeta v nasprotni normalni smeri.
+
+Gaussova ukrivljenost minimalne ploskve $x(M)=S$ je povsod nepozitivna, saj je $K = -\kappa_{1}^2 \leq 0$.
+Njen integral,
+\begin{gather}
+TC(x) = \int_{M} K dA \in [-\infty, 0],
+\end{gather} 
+imenujemo \emph{totalna Gaussova ukrivljenost}.
+Vrednost je enaka $0$ natanko takrat, ko je ploskev del ravnine. Res, $TC(x) = 0$ natanko tedaj, ko je Gaussova ukrivljenost $K=0$, kar je ekvivalentno $\kappa_1=\kappa_2=0$. Vemo pa, da imajo le kosi ravnine obe glavni ukrivljenosti ničelni v vsaki točki.
+Minimalne ploskve s končno totalno Gaussovo ukrivljenostjo so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošne minimalne ploskve ne premorejo.\\[0.1cm]
+
 % Druga variacijska formula
 S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}: naj bo $M$ kompaktna ploskev z robom, preslikava $x \colon M \to \mathbb{R}^{n}$ pa gladka minimalna imerzija. Potem velja
 \begin{equation} \label{eq:2-var-formula}
