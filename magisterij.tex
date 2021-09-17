@@ -528,7 +528,7 @@ Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je hom
 \end{equation}
 \end{definicija}
 %
-V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je odvisen le od homološkega razreda poti $C$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
+V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi formuli odvisen le od homološkega razreda poti $C$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Aproksimacijski izreki za Riemannove ploskve
@@ -671,6 +671,7 @@ Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emp
 \begin{gather}
 (\phi^{-1})^{*}g = \mu \cdot (dx^2+dy^2) = \mu \cdot ds_{\mathbb{R}^2}^2.
 \end{gather} 
+Lokalne koordinate na $U$ tedaj imenujemo \emph{izotermne koordinate}.
 
 Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
 
@@ -684,7 +685,7 @@ Naj bodo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n 
 		\begin{gather*}
 		|x_{u}| = |x_{v}| > 0, \quad x_{u} \cdot x_{v} = 0.
 		\end{gather*}
-	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo \emph{ničelni kvadriki} (so \emph{ničelni vektorji})
+	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo \emph{ničelni kvadriki}\footnote{Ničelna kvadrika $\textbf{\textup{A}}$ v $(n-1)$-spremenljivkah je kompleksni stožec s singularno točko $0$.} (so \emph{ničelni vektorji})
 		\begin{gather*}
 		\textbf{\textup{A}} = \textbf{\textup{A}}^{n-1} = \{ z=(z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}; \ z_{1}^2 + \cdots + z_{n}^2 = 0 \}.
 		\end{gather*}
@@ -693,7 +694,7 @@ Naj bodo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n 
 \end{lema}
 
 %%%%%%%%%%%%%%%
-% Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, Minimal srfaces for undergraduates 6.3]
+% Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, Minimal surfaces for undergraduates 6.3]
 \subsubsection{Plateaujev problem in Dirichletov energijski integral}
 %
 Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema, katerega moramo najprej natančno formulirati.
@@ -835,6 +836,12 @@ podaja dobro definirano holomorfno ničelno krivuljo. Zanjo velja
 \end{izrek}
 
 \begin{opomba}
+Pogoj $ \Re \int_{C} \Phi = 0 $, da so vse realne periode po sklenjenih krivuljah v $M$ ničelne, zagotavlja, da je integral~\ref{eq:Wstrass-kmi} dobro definiran.
+Natančneje, neodvisen je od izbire poti med točkama $p_0 \in M$ in $p \in M$ po kateri integriramo.
+Podobno, pogoj $ \int_{C} \Phi = 0 \ \text{za vse} \ [C] \in H_{1} (M, \Z) $ zagotavlja dobro definiranost integrala~\ref{eq:Wstrass-hnk}. 
+\end{opomba}
+
+\begin{opomba}
 Dodatek k izreku pravi, da je vsaka konformna minimalna imerzija $x \colon M \to \R^{n}$ oblike~\ref{eq:Wstrass-kmi}, vsaka holomorfna ničelna krivulja $z \colon M \to \C^{n}$ pa oblike~\ref{eq:Wstrass-hnk}. Prav zato je Enneper-Weierstrassova formula elegantna metoda za konstrukcijo opisanih preslikav.
 
 Kot smo omenili zgoraj, včasih pišemo $\Phi = f \theta$, pri čemer je $\theta$ povsod neničelna holomorfna 1-forma na $M$ in $f = \Phi / \theta \colon M \to \textbf{\textup{A}}_{*}$ holomorfna preslikava.
@@ -876,6 +883,7 @@ Naj bo $M$ odprta Riemannova ploskev in $x = (x_1,x_2,x_3) \colon M \to \mathbb{
 \mathfrak{g} \colon M \to \mathbb{CP}^{1}, \quad \mathfrak{g} = \frac{\phi_3}{\phi_1 - i\phi_2} = \frac{\partial x_3}{\partial x_1 - i \partial x_2}.
 \end{gather}
 Imenujemo jo \emph{kompleksna Gaussova preslikava} konformne minimalne imerzije $x$.
+(Kompleksna Gaussova preslikava $\mathfrak{g} \colon M \to \mathbb{CP}^{1}$ je z običajno Gaussovo preslikavo $N \colon M \to \mathbb{S}^2$ minimalne ploskve $x(M)$ povezana preko stereografske projekcije glede na severni pol $(0,0,1)$, ki identificira $2$-sfero $\mathbb{S}^2$ z Riemannovo sfero $\mathbb{CP}^{1}$.)
 Kompozitum 
 \begin{align}
 \mathcal{G} \colon M \to \textup{\textbf{Q}}^{1} \subset \mathbb{CP}^{2}, \quad \mathcal{G} = \tau \circ \mathfrak{g}
