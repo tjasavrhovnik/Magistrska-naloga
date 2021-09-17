@@ -640,7 +640,7 @@ Njen integral,
 \begin{gather}
 TC(x) = \int_{M} K dA \in [-\infty, 0],
 \end{gather} 
-imenujemo \emph{totalna Gaussova ukrivljenost}.
+imenujemo \emph{totalna Gaussova ukrivljenost}. Pri tem $dA$ označuje ploščinski element glede na Riemannovo metriko $g = x^{*}ds^2$ na $M$.
 Vrednost je enaka $0$ natanko takrat, ko je ploskev del ravnine. Res, $TC(x) = 0$ natanko tedaj, ko je Gaussova ukrivljenost $K=0$, kar je ekvivalentno $\kappa_1=\kappa_2=0$. Vemo pa, da imajo le kosi ravnine obe glavni ukrivljenosti ničelni v vsaki točki.
 Minimalne ploskve s končno totalno Gaussovo ukrivljenostjo so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošne minimalne ploskve ne premorejo.\\[0.1cm]
 
@@ -912,6 +912,51 @@ kjer sta $p_0 \in M$, $x_0 \in \mathbb{R}^3$ poljubni izbrani točki ter je $p \
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Primeri minimlanih ploskev
 \subsection{Primeri minimalnih ploskev}
+%
+Oglejmo si nekaj najpreprostejših in tudi zgodovinsko zanimivih primerov minimalnih ploskev.
+Trivialni primer je ravnina oziroma del ravnine.
+
+Vzemimo holomorfno ničelno krivuljo $z = x + iy \colon \mathbb{C} \to \mathbb{C}^3$, definirano s predpisom
+\begin{gather}
+z(\zeta) = (\cos \zeta, \sin \zeta, -i\zeta), \quad \zeta = u + iv \in \mathbb{C}.
+\end{gather}
+Imenujemo jo \emph{helikatenoid}.
+Ker je $z(0) = (1,0,0)$ in $z'(\zeta) = (-\sin \zeta, \cos \zeta, -i) d\zeta$, je Enneper-Weierstrassova formula helikatenoida enaka
+\begin{align}
+z(\zeta) &= (1,0,0) + \int_{0}^{\zeta} (-\sin \xi, \cos \xi, -i) d\xi \nonumber \\
+	&= (1,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) d\xi.
+\end{align}
+Iz zadnje preberemo njegovo Gaussovo preslikavo $\mathfrak{g}(\zeta) = e^{i\zeta}$.
+
+Pridružene minimalne ploskve k helikatenoidu predstavlja družina preslikav (za $t \in \mathbb{R})$, $x^{t} = \Re (e^{it} z) \colon \mathbb{C} \to \mathbb{R}^3$, definiranih s predpisom
+%
+\begin{align}
+x^{t}(\zeta) &= \Re (e^{it} \cos \zeta, e^{it} \sin \zeta, -i e^{it} \zeta) \nonumber \\
+	&= \cos t  
+		\begin{pmatrix}
+		\cos u \cdot \cosh v \\
+		\sin u \cdot \cosh v \\
+		v
+         	\end{pmatrix}
+	+ \sin t
+		\begin{pmatrix}
+		\sin u \cdot \sinh v \\
+		-\cos u \cdot \sinh v \\
+		u
+         	\end{pmatrix}
+\end{align}
+%
+Res, poračunajmo komponente:
+\begin{align*}
+\Re (e^{it} \cos \zeta) &= \Re \left( (\cos t + i\sin t) \cdot \cos(u+iv) \right) \\
+	&= \Re \left( (\cos t + i\sin t) \cdot (\cos u \cosh v - i\sin u \sinh v) \right) \\
+	&= \cos t \cdot \cos u \cosh v + \sin t \cdot \sin u \sinh v, \\
+\Re (e^{it} \sin \zeta) &= \Re \left( (\cos t + i\sin t) \cdot \sin(u+iv) \right) \\
+	&= \Re \left( (\cos t + i\sin t) \cdot (\sin u \cosh v + i\cos u \sinh v) \right) \\
+	&= \cos t \cdot \sin u \cosh v - \sin t \cdot \cos u \sinh v, \\
+\Re (-i e^{it} \zeta) &= \Re \left( -i(\cos t + i\sin t) \cdot (u+iv) \right) \\
+	&= \cos t \cdot v + \sin t \cdot u.
+\end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
