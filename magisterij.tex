@@ -1006,6 +1006,16 @@ y(u,v) = (\sin u \cdot \sinh v, -\cos u \cdot \sinh v, u).
 \end{align}
 Helikoid je pridružena minimalna ploskev k helikatenoidu, ki ustreza parametrom $t = \frac{\pi}{2} + k \pi, \ k \in \mathbb{Z}$. (Res, $e^{it}z = iz$ natanko tedaj, ko je $t = \frac{\pi}{2} + 2k \pi, \ k \in \mathbb{Z}$. Z izbiro $t = \frac{\pi}{2} + k \pi, \ k \in \mathbb{Z}$, pa dobimo levi in desni helikoid.) Po definiciji sta katenoida in helikoid konjugirani minimalni ploskvi.
 
+Geometrijsko helikoid dobimo na naslednji način: premico rotiramo okrog izbrane osi v $\mathbb{R}^3$ (tj.~v ravnini v $\mathbb{R}^3$) in jo hkrati premikamo vzdolž te osi (v pravokotni smeri glede na ravnino, v kateri premico rotiramo).
+
+% slika helikoida
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.8]{helicoid.pdf}
+\caption{Helikoid v $\mathbb{R}^3$ z $z$-osjo kot osjo rotacije.}
+\end{center}
+\end{figure}
+
 Enneper-Weierstrassovo formulo helikoida dobimo iz izraza~\ref{eq:EP-helikatenoida}:
 \begin{align}
 y(\zeta) &= \Re (iz(\zeta)) = \Re \left( (i,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) i d\xi \right) \nonumber \\
@@ -1013,13 +1023,12 @@ y(\zeta) &= \Re (iz(\zeta)) = \Re \left( (i,0,0) + \int_{0}^{\zeta} \left( \frac
 \end{align}
 Njegova kompleksna Gaussova preslikava je $\mathfrak{g}(\zeta) = e^{i\zeta}$, kar nam pove, da ima helikoid negativno neskončno totalno Gaussovo ukrivljenost; $TC(y) = -\infty$. 
 
-% slika helikoida
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.8]{helicoid.pdf}
-\caption{Helikoid v $\mathbb{R}^3$ s parametrizacijo~\ref{eq:helikoid}.}
-\end{center}
-\end{figure}
+O helikoidu sta prva pisala L.~Euler in J.~B.~Meusnier v 80.-ih letih 18.~stoletja, brez znanja o konjugiranih minimalnih ploskvah in povezavi s kompleksno analizo. Omenimo še dve zanimivi lastnosti obravnavane minimalne ploskve:
+\begin{itemize}
+\item Za vsako točko na helikoidu obstaja premica, ki leži na njem in gre skozi to točko.
+\item Za vsako točko na helikoidu obstaja vijačnica, ki leži na njem in gre skozi to točko.
+\end{itemize}
+Prvo lastnost kot minimalni ploskvi v $\mathbb{R}^3$ premoreta le helikoid in ravnina, kar je l.~1842 dokazal E.~C.~Catalan. Druga lastnost namiguje na izvor imena -- helikoid spominja na latinsko besedo ``helix'', kar v slovenščini imenujemo vijačnica.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
