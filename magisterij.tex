@@ -922,11 +922,11 @@ z(\zeta) = (\cos \zeta, \sin \zeta, -i\zeta), \quad \zeta = u + iv \in \mathbb{C
 \end{gather} 
 Imenujemo jo \emph{helikatenoida}.
 Ker je $z(0) = (1,0,0)$ in $z'(\zeta) = (-\sin \zeta, \cos \zeta, -i) d\zeta$, je Enneper-Weierstrassova formula helikatenoide enaka
-\begin{align}
+\begin{align} \label{eq:EP-helikatenoida}
 z(\zeta) &= (1,0,0) + \int_{0}^{\zeta} (-\sin \xi, \cos \xi, -i) d\xi \nonumber \\
 	&= (1,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) d\xi.
 \end{align}
-Iz zadnje preberemo njeno Gaussovo preslikavo $\mathfrak{g}(\zeta) = e^{i\zeta}$.
+Iz zadnje preberemo njeno kompleksno Gaussovo preslikavo $\mathfrak{g}(\zeta) = e^{i\zeta}$.
 
 Pridružene minimalne ploskve k helikatenoidi predstavlja družina preslikav (za $t \in \mathbb{R})$, $x^{t} = \Re (e^{it} z) \colon \mathbb{C} \to \mathbb{R}^3$, definiranih s predpisom
 %
@@ -943,10 +943,10 @@ x^{t}(\zeta) &= \Re (e^{it} \cos \zeta, e^{it} \sin \zeta, -i e^{it} \zeta) \non
 		\sin u \cdot \sinh v \\
 		-\cos u \cdot \sinh v \\
 		u
-         	\end{pmatrix}
+         	\end{pmatrix}.
 \end{align}
 %
-Res, poračunajmo komponente:
+Res, izračunajmo komponente:
 \begin{align*}
 \Re (e^{it} \cos \zeta) &= \Re \left( (\cos t + i\sin t) \cdot \cos(u+iv) \right) \\
 	&= \Re \left( (\cos t + i\sin t) \cdot (\cos u \cosh v - i\sin u \sinh v) \right) \\
@@ -967,9 +967,9 @@ Začnimo s holomorfno ničelno krivuljo $z \colon \mathbb{C} \to \mathbb{C}^3$, 
 \begin{align} \label{eq:katenoida}
 x(u,v) = (\cos u \cdot \cosh v, \sin u \cdot \cosh v, v),
 \end{align}
-pravimo \emph{katenoida}. Po drugi strani do konformne parametrizacije katenoide pridemo preko pridruženih minimalnih ploskev k izbrani holomorfni ničelni krivulji -- katenoida ustreza parametrom $t = k \pi, \ k \in \mathbb{Z}$.
+pravimo \emph{katenoida}. Po drugi strani do njene konformne parametrizacije pridemo preko pridruženih minimalnih ploskev k izbrani holomorfni ničelni krivulji -- katenoida ustreza parametrom $t = k \pi, \ k \in \mathbb{Z}$.
 
-Geometrijsko je katenoida rotacijska ploskev, ki nastane z rotacijo grafa hiperboličnega kosinusa (t.~i.~\emph{verižnice}) okoli izbrane osi v prostoru $\mathbb{R}^3$. Katenoida z osjo rotacije $x=y=0$ na primer nastane, če graf krivulje $z \mapsto (\cosh z, 0, z), \ z \in \mathbb{R}$, zavrtimo okrog $z$-osi. Implicitna enačba nastale minimalne ploskve se glasi
+Geometrijsko je obravnavana minimalna ploskev rotacijska ploskev, ki nastane z rotacijo grafa hiperboličnega kosinusa (t.~i.~\emph{verižnice}) okoli izbrane osi v prostoru $\mathbb{R}^3$. Katenoida z osjo rotacije $x=y=0$ na primer nastane, če graf krivulje $z \mapsto (\cosh z, 0, z), \ z \in \mathbb{R}$, zavrtimo okrog $z$-osi. Implicitna enačba nastale minimalne ploskve se glasi
 \begin{gather} \label{eq:katenoida-implicitno}
 x^2 + y^2 = \cosh ^2 z.
 \end{gather}
@@ -981,6 +981,18 @@ x^2 + y^2 = \cosh ^2 z.
 \caption{Katenoida z implicitno enačbo~\ref{eq:katenoida-implicitno}.}
 \end{center}
 \end{figure}
+
+Opazimo, da je parametrizacija katenoide~\ref{eq:katenoida} $2 \pi$-periodična glede na spremenljivko $u$. V Enneper-Weierstrassovo formulo helikatenoide~\ref{eq:EP-helikatenoida} uvedimo novo spremenljivko $w = e^{i \zeta} \in \mathbb{C} \setminus \{0\}$ in vzemimo njen realni del. Računajmo
+\begin{align*}
+z(\zeta) &= (1,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) d\xi \\
+	&= (1,0,0) + \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) (-i) \frac{-i}{\eta} d\eta \\
+	&= (1,0,0) - \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) \frac{d\eta}{\eta},
+\end{align*}
+kar nam da parametrizacijo katenoide $x \colon \mathbb{C} \setminus \{0\} \to \mathbb{R}^3$ z Enneper-Weierstrassovo formulo
+\begin{align}
+x(w) = (1,0,0) - \Re \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) \frac{d\eta}{\eta}.
+\end{align}
+Sledi, da je kompleksna Gaussova preslikava katenoide enaka $\mathfrak{g}(w) = w$ za $w \in \mathbb{C} \setminus \{0\}$, ki jo holomorfno razširimo do identične presikave na $\mathbb{CP}^{1}$. Identiteta je preslikava stopnje $d=1$, zato iz teorije o Gaussovih preslikavah dobimo vrednost totalne Gaussove ukrivljenosti katenoide, ki znaša $-4 \pi$. Izkaže se, da je to edini primer iz družine pridruženih minimalnih ploskev k helikatenoidi s končno totalno Gaussovo ukrivljenostjo.
 
 Katenoido je kot rotacijsko ploskev prvi opisal Leonhard Euler l.~1744. Dobro stoletje kasneje je P.~O.~Bonnet pokazal, da je to (razen ravnine) edina rotacijska minimalna ploskev v trirazsežnem prostoru. Ker je razmeroma enostavna in ima še več posebnih topoloških lastnosti, jo običajno spoznamo kot prvi primer pri študiju minimalnih ploskev.
 
