@@ -1000,6 +1000,26 @@ Katenoido je kot rotacijsko ploskev prvi opisal Leonhard Euler l.~1744. Dobro st
 % Helikoid
 \subsubsection{Helikoid}
 %
+Negativno predznačeni imaginarni del helikatenoide imenujemo \emph{helikoid}. Natančneje, to je preslikava $y = -\Im z = \Re (iz) \colon \mathbb{R}^2 \to \mathbb{R}^3$ s konformno parametrizacijo
+\begin{align} \label{eq:helikoid}
+y(u,v) = (\sin u \cdot \sinh v, -\cos u \cdot \sinh v, u).
+\end{align}
+Helikoid je pridružena minimalna ploskev k helikatenoidu, ki ustreza parametrom $t = \frac{\pi}{2} + k \pi, \ k \in \mathbb{Z}$. (Res, $e^{it}z = iz$ natanko tedaj, ko je $t = \frac{\pi}{2} + 2k \pi, \ k \in \mathbb{Z}$. Z izbiro $t = \frac{\pi}{2} + k \pi, \ k \in \mathbb{Z}$, pa dobimo levi in desni helikoid.) Po definiciji sta katenoida in helikoid konjugirani minimalni ploskvi.
+
+Enneper-Weierstrassovo formulo helikoida dobimo iz izraza~\ref{eq:EP-helikatenoida}:
+\begin{align}
+y(\zeta) &= \Re (iz(\zeta)) = \Re \left( (i,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) i d\xi \right) \nonumber \\
+	&= \Re \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) d\xi, \quad \zeta \in \mathbb{C}.
+\end{align}
+Njegova kompleksna Gaussova preslikava je $\mathfrak{g}(\zeta) = e^{i\zeta}$, kar nam pove, da ima helikoid negativno neskončno totalno Gaussovo ukrivljenost; $TC(y) = -\infty$. 
+
+% slika helikoida
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.8]{helicoid.pdf}
+\caption{Helikoid v $\mathbb{R}^3$ s parametrizacijo~\ref{eq:helikoid}.}
+\end{center}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
