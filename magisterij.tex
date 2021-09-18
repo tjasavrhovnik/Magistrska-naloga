@@ -917,20 +917,20 @@ Oglejmo si nekaj najpreprostejših in tudi zgodovinsko zanimivih primerov minima
 Trivialni primer je ravnina oziroma del ravnine.
 
 Vzemimo holomorfno ničelno krivuljo $z = x + iy \colon \mathbb{C} \to \mathbb{C}^3$, definirano s predpisom
-\begin{gather}
+\begin{gather} \label{eq:helikatenoida}
 z(\zeta) = (\cos \zeta, \sin \zeta, -i\zeta), \quad \zeta = u + iv \in \mathbb{C}.
-\end{gather}
-Imenujemo jo \emph{helikatenoid}.
-Ker je $z(0) = (1,0,0)$ in $z'(\zeta) = (-\sin \zeta, \cos \zeta, -i) d\zeta$, je Enneper-Weierstrassova formula helikatenoida enaka
+\end{gather} 
+Imenujemo jo \emph{helikatenoida}.
+Ker je $z(0) = (1,0,0)$ in $z'(\zeta) = (-\sin \zeta, \cos \zeta, -i) d\zeta$, je Enneper-Weierstrassova formula helikatenoide enaka
 \begin{align}
 z(\zeta) &= (1,0,0) + \int_{0}^{\zeta} (-\sin \xi, \cos \xi, -i) d\xi \nonumber \\
 	&= (1,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) d\xi.
 \end{align}
-Iz zadnje preberemo njegovo Gaussovo preslikavo $\mathfrak{g}(\zeta) = e^{i\zeta}$.
+Iz zadnje preberemo njeno Gaussovo preslikavo $\mathfrak{g}(\zeta) = e^{i\zeta}$.
 
-Pridružene minimalne ploskve k helikatenoidu predstavlja družina preslikav (za $t \in \mathbb{R})$, $x^{t} = \Re (e^{it} z) \colon \mathbb{C} \to \mathbb{R}^3$, definiranih s predpisom
+Pridružene minimalne ploskve k helikatenoidi predstavlja družina preslikav (za $t \in \mathbb{R})$, $x^{t} = \Re (e^{it} z) \colon \mathbb{C} \to \mathbb{R}^3$, definiranih s predpisom
 %
-\begin{align}
+\begin{align} \label{eq:pridruzene-helikatenoida}
 x^{t}(\zeta) &= \Re (e^{it} \cos \zeta, e^{it} \sin \zeta, -i e^{it} \zeta) \nonumber \\
 	&= \cos t  
 		\begin{pmatrix}
@@ -957,6 +957,37 @@ Res, poračunajmo komponente:
 \Re (-i e^{it} \zeta) &= \Re \left( -i(\cos t + i\sin t) \cdot (u+iv) \right) \\
 	&= \cos t \cdot v + \sin t \cdot u.
 \end{align*}
+Podrobneje bomo opisali dve pridruženi minimalni ploskvi k helikatenoidi, katenoido in helikoid.
+
+%%%%%%%%%%%%%%%
+% Katenoida
+\subsubsection{Katenoida}
+%
+Začnimo s holomorfno ničelno krivuljo $z \colon \mathbb{C} \to \mathbb{C}^3$, podano s predpisom~\ref{eq:helikatenoida}. Njenemu realnemu delu, ki je preslikava $x \colon \mathbb{R}^2 \to \mathbb{R}^3$ s parametrizacijo
+\begin{align} \label{eq:katenoida}
+x(u,v) = (\cos u \cdot \cosh v, \sin u \cdot \cosh v, v),
+\end{align}
+pravimo \emph{katenoida}. Po drugi strani do konformne parametrizacije katenoide pridemo preko pridruženih minimalnih ploskev k izbrani holomorfni ničelni krivulji -- katenoida ustreza parametrom $t = k \pi, \ k \in \mathbb{Z}$.
+
+Geometrijsko je katenoida rotacijska ploskev, ki nastane z rotacijo grafa hiperboličnega kosinusa (t.~i.~\emph{verižnice}) okoli izbrane osi v prostoru $\mathbb{R}^3$. Katenoida z osjo rotacije $x=y=0$ na primer nastane, če graf krivulje $z \mapsto (\cosh z, 0, z), \ z \in \mathbb{R}$, zavrtimo okrog $z$-osi. Implicitna enačba nastale minimalne ploskve se glasi
+\begin{gather} \label{eq:katenoida-implicitno}
+x^2 + y^2 = \cosh ^2 z.
+\end{gather}
+
+% slika katenoide
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.8]{catenoid.pdf}
+\caption{Katenoida z implicitno enačbo~\ref{eq:katenoida-implicitno}.}
+\end{center}
+\end{figure}
+
+Katenoido je kot rotacijsko ploskev prvi opisal Leonhard Euler l.~1744. Dobro stoletje kasneje je P.~O.~Bonnet pokazal, da je to (razen ravnine) edina rotacijska minimalna ploskev v trirazsežnem prostoru. Ker je razmeroma enostavna in ima še več posebnih topoloških lastnosti, jo običajno spoznamo kot prvi primer pri študiju minimalnih ploskev.
+
+%%%%%%%%%%%%%%%
+% Helikoid
+\subsubsection{Helikoid}
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
