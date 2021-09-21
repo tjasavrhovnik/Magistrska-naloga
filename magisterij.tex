@@ -239,26 +239,26 @@ Naj bo $n \in \N$. Topološki prostor $M$ z lastnostmi:
 \begin{enumerate}
 \item $M$ je Hausdorffov,
 \item $M$ je 2-števen,
-\item $M$ je lokalno evklidski prostor dimenzije $n$ (za vsak $p \in M$ obstajata odprta okolica $U \subset M$ in homeomorfizem $\Phi \colon U \to V \subset \R^{n}$, kjer je $V$ odprta množica),
+\item $M$ je lokalno Evklidski prostor dimenzije $n$ (za vsak $p \in M$ obstajata odprta okolica $U \subset M$ in homeomorfizem $\phi \colon U \to V \subset \R^{n}$, kjer je $V$ odprta množica),
 \end{enumerate}
 imenujemo \emph{topološka mnogoterost} dimenzije $n$.
 \end{definicija}
 
-Na topološki mnogoterosti $M$ dimenzije $n$ definiramo \emph{atlas} $\mathcal{U} = \{ (U_{i}, \Phi_{i}) ; \ i \in I \}$ kot družino parov $(U_{i}, \Phi_{i})$, kjer je $\{ U_{i} \}_{i \in I}$ odprto pokritje mnogoterosti $M$, preslikave $\Phi_{i} \colon U_{i} \to \Phi_{i}(U_{i}) \subset \R^{n}$ pa so homeormorfizmi za vse $i$. Par $(U_{i}, \Phi_{i})$ imenujemo \emph{lokalna karta}.
-Vzemimo lokalni karti $(U_{i}, \Phi_{i})$ in $(U_{j}, \Phi_{j})$, $i \neq j$, za kateri velja $U_{ij}=U_{i} \cap U_{j} \neq \emptyset$. Difeomorfizmu $\Phi_{ij} = \Phi_{j} \circ \Phi_{i}^{-1} \colon \Phi_{i}(U_{ij}) \to \Phi_{j}(U_{ij})$ med odprtima podmnožicama $\R^{n}$ pravimo \emph{prehodna preslikava} med lokalnima kartama. Atlas je razreda $\mathcal{C}^{r}$ za $r \geq 1$, kadar so prehodne preslikave med vsemi lokalnimi kartami difeomorfizmi razreda $\mathcal{C}^{r}$. V tem primeru rečemo, da je $M$ \emph{mnogoterost razreda} $\mathcal{C}^{r}$.
+Na topološki mnogoterosti $M$ dimenzije $n$ definiramo \emph{atlas} $\mathcal{U} = \{ (U_{i}, \phi_{i}) ; \ i \in I \}$ kot družino parov $(U_{i}, \phi_{i})$, kjer je $\{ U_{i} \}_{i \in I}$ odprto pokritje mnogoterosti $M$, preslikave $\phi_{i} \colon U_{i} \to \phi_{i}(U_{i}) \subset \R^{n}$ pa so homeomorfizmi za vse $i$. Par $(U_{i}, \phi_{i})$ imenujemo \emph{lokalna karta}.
+Vzemimo lokalni karti $(U_{i}, \phi_{i})$ in $(U_{j}, \phi_{j})$, $i \neq j$, za kateri velja $U_{ij}=U_{i} \cap U_{j} \neq \emptyset$. Difeomorfizmu $\phi_{ij} = \phi_{j} \circ \phi_{i}^{-1} \colon \phi_{i}(U_{ij}) \to \phi_{j}(U_{ij})$ med odprtima podmnožicama $\R^{n}$ pravimo \emph{prehodna preslikava} med lokalnima kartama. Atlas je razreda $\mathcal{C}^{r}$ za $r \geq 1$, kadar so prehodne preslikave med vsemi lokalnimi kartami difeomorfizmi razreda $\mathcal{C}^{r}$. V tem primeru rečemo, da je $M$ \emph{mnogoterost razreda} $\mathcal{C}^{r}$.
 V posebnem gladek atlas določa gladko mnogoterost.
 
 \begin{definicija}
-Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ razsežnosti $\dim X = n$ in $M \subset X$ njena podmnožica. Če za vsako točko $p \in M$ obstaja lokalna karta $(U, \Phi)$ glede na atlas $\mathcal{U}$ mnogoterosti $X$, tako da je preslikava $\Phi \colon U \to V \subset \mathbb{R}^{n}$ homeomorfizem in velja $\Phi (M \cap U) = V \cap (\mathbb{R}^{m} \times \{0\}^{n-m})$, potem $M$ imenujemo \emph{podmnogoterost} razreda $\mathcal{C}^{r}$ razsežnosti $\dim M = m$.
+Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ razsežnosti $\dim X = n$ in $M \subset X$ njena podmnožica. Če za vsako točko $p \in M$ obstaja lokalna karta $(U, \phi)$ glede na atlas $\mathcal{U}$ mnogoterosti $X$, tako da je preslikava $\phi \colon U \to V \subset \mathbb{R}^{n}$ homeomorfizem in velja $\phi (M \cap U) = V \cap (\mathbb{R}^{m} \times \{0\}^{n-m})$, potem $M$ imenujemo \emph{podmnogoterost} razreda $\mathcal{C}^{r}$ razsežnosti $\dim M = m$.
 \end{definicija}
 
 \begin{definicija}[Orientacija mnogoterosti]
 Naj bo $M$ gladka mnogoterost in $\mathcal{U}$ pripadajoč gladek atlas. Lokalni karti $(U, \phi)$ in $(V, \psi)$ določata isto orientacijo na $M$, če za poljubno točko $p \in U \cap V \neq \emptyset$ velja $\det (d(\psi \circ \phi ^{-1})_{\phi (p)}) > 0.$ Kadar poljubni lokalni karti glede na izbrani atlas $\mathcal{U}$ določata isto orientacijo, pravimo, da je atlas $\mathcal{U}$ \emph{orientiran}. Nadalje je mnogoterost \emph{orientabilna}, če premore orientiran atlas. \emph{Orientacija} mnogoterosti $M$ je izbor maksimalnega orientiranega atlasa na $M$.
 \end{definicija}
 
-Definirati želimo še tangentni prostor mnogoterosti. Naj bo $M$ gladka mnogoterost in izberimo atlas $\mathcal{U} = \{ (U_{i}, \Phi_{i}) ; \ i \in I \}$ na njej. Naj bo točka $p \in U_{i} \subset M$ za nek indeks $i$.  Gladki krivulji\footnote{Krivulja $\gamma_{j}$ je gladka, če je preslikava $ \Phi_{i} \circ \gamma_{j} \colon (-\varepsilon, \varepsilon) \to \mathbb{R}^{n}$, $j=1,2,$ gladka v običajnem smislu.} 
+Definirati želimo še tangentni prostor mnogoterosti. Naj bo $M$ gladka mnogoterost in izberimo atlas $\mathcal{U} = \{ (U_{i}, \phi_{i}) ; \ i \in I \}$ na njej. Naj bo točka $p \in U_{i} \subset M$ za nek indeks $i$.  Gladki krivulji\footnote{Krivulja $\gamma_{j}$ je gladka, če je preslikava $ \phi_{i} \circ \gamma_{j} \colon (-\varepsilon, \varepsilon) \to \mathbb{R}^{n}$, $j=1,2,$ gladka v običajnem smislu.} 
 $\gamma_{1}, \gamma_{2} \colon (-\varepsilon, \varepsilon) \to M$ sta \emph{ekvivalentni}, če izpolnjujeta pogoja
-$\gamma_{1}(0) = \gamma_{2}(0) = p$ in $ \frac{d}{dt}|_{t=0} \Phi_{i}(\gamma_{1}(t)) =  \frac{d}{dt}|_{t=0} \Phi_{i}(\gamma_{2}(t))$ za vse $t \in (-\varepsilon, \varepsilon)$. Ekvivalenco krivulj označimo z $\gamma_{1} \sim \gamma_{2}$\footnote{Relacija $\sim$ je ekvivalenčna relacija.}.
+$\gamma_{1}(0) = \gamma_{2}(0) = p$ in $ \frac{d}{dt}|_{t=0} \phi_{i}(\gamma_{1}(t)) =  \frac{d}{dt}|_{t=0} \phi_{i}(\gamma_{2}(t))$ za vse $t \in (-\varepsilon, \varepsilon)$. Ekvivalenco krivulj označimo z $\gamma_{1} \sim \gamma_{2}$\footnote{Relacija $\sim$ je ekvivalenčna relacija.}.
 
 \begin{definicija}
 Naj bo $M$ mnogoterost in $p \in M$ točka na njej. \emph{Tangentni vektor} $v_{p}$ na $M$ v točki $p$ ustreza ekvivalenčnemu razredu $[\gamma]$ krivulje $\gamma \colon (-\varepsilon, \varepsilon) \to M$, za katero velja $\gamma (0) = p$.
@@ -266,7 +266,7 @@ Naj bo $M$ mnogoterost in $p \in M$ točka na njej. \emph{Tangentni vektor} $v_{
 Unija vseh tangentnih vektorjev na $M$ v točki $p$ določa \emph{tangentni prostor} $T_{p}M$ mnogoterosti $M$ v točki $p$.
 \end{definicija}
 
-Naj bosta $M$ in $N$ mnogoterosti dimenzij $\dim M = m$, $\dim N = n$ ($m, n \in \N$). Naj bo $r \geq 0$. Pravimo, da je zvezna preslikava $f \colon M \to N$ \emph{razreda $\mathcal{C}^{r}$ v točki} $p \in M$, če obstajata taki $\mathcal{C}^{r}$ karti $(U, \Phi)$ na $M$ v okolici točke $p \in M$ in $(V, \Psi)$ na $N$ v okolici točke $f(p) \in N$, da je preslikava $F = \psi \circ f \circ \Phi^{-1}$ razreda $\mathcal{C}^{r}$ v okolici točke $\Phi(p)$.
+Naj bosta $M$ in $N$ mnogoterosti dimenzij $\dim M = m$, $\dim N = n$ ($m, n \in \N$). Naj bo $r \geq 0$. Pravimo, da je zvezna preslikava $f \colon M \to N$ \emph{razreda $\mathcal{C}^{r}$ v točki} $p \in M$, če obstajata taki $\mathcal{C}^{r}$ karti $(U, \phi)$ na $M$ v okolici točke $p \in M$ in $(V, \psi)$ na $N$ v okolici točke $f(p) \in N$, da je preslikava $F = \psi \circ f \circ \phi^{-1}$ razreda $\mathcal{C}^{r}$ v okolici točke $\phi(p)$.
 Če to velja za poljubno točko $p \in M$, je $f$ \emph{razreda $\mathcal{C}^{r}$}; pišemo $f \in  \mathcal{C}^{r}(M,N)$.
 
 Vzemimo gladki (oz.~razreda $\mathcal{C}^{r}$, $r \geq 1$) mnogoterosti $M$ in $N$ ter točko $p \in M$. \emph{Diferencial} gladke (oz.~razreda $\mathcal{C}^{r}$) preslikave $f \colon M \to N$ je linearna preslikava $df \colon T_{p}M \to T_{f(p)}N$, definirana s predpisom
@@ -283,13 +283,13 @@ Naj bo $f \colon M \to N$ gladka preslikava med gladkima mnogoterostima. Preslik
 \end{definicija}
 
 \begin{opomba}
-Z uporabo izreka o implicitni preslikavi dokažemo naslednje: Če je $f \colon M \to N$ submerzija v okolici točke $p \in U$ ($U \subset M$ odprta), potem je praslika $f^{-1}f(p))$ podmnogoterost v $M$ razsežnosti $\dim M - \dim N$.
+Z uporabo izreka o implicitni preslikavi dokažemo naslednje: Če je $f \colon M \to N$ submerzija v okolici točke $p \in U$ ($U \subset M$ odprta), potem je praslika $f^{-1}(f(p))$ podmnogoterost v $M$ razsežnosti $\dim M - \dim N$.
 \end{opomba}
 
 % Riemannova metrika & mnogoterost
 \begin{definicija}
 Naj bo $M$ gladka mnogoterost. Za vsako točko $p \in M$ definiramo simetrično pozitivno-definitno bilinearno preslikavo $g_{p} \colon T_{p}M \times T_{p}M \to \R$, ki je gladko odvisna od $p$. Družino preslikav $g_{p}$ imenujemo \emph{Riemannova metrika} $g$ na mnogoterosti $M$.
-Gladki mnogoterosti, opremljeni z Riemannovo metriko, pravimo \emph{Riemannova mnogoterost}.
+Gladki mnogoterosti, opremljeni z Riemannovo metriko, pravimo \emph{Riemannova mnogoterost}, in jo označimo z $(M,g)$.
 \end{definicija}
 
 Izkaže se, da vsaka mnogoterost razreda $\mathcal{C}^{r+1}$ premore Riemannovo metriko razreda $\mathcal{C}^{r}$.
@@ -311,15 +311,15 @@ g_{p}(\xi, \eta) = \tilde{g}_{x(p)} (dx_{p}(\xi), dx_{p}(\eta)).
 
 \begin{primer}[Prva fundamentalna forma]
 Oglejmo si primer Riemannove metrike na realnem $n$-razsežnem Evklidskem prostoru $\mathbb{R}^{n}$.
-Če izberemo standardne koordinate $x = (x_{1}, \dots, x_{n})$, \emph{Evklidsko metriko} definira predpis
+Če izberemo standardne koordinate $x = (x_{1}, \dots, x_{n}) \in \mathbb{R}^{n}$, \emph{Evklidsko metriko} definira predpis
 \begin{equation}
 ds^2 = (dx_{1})^2 + \cdots + (dx_{n})^2;
 \end{equation}
 to je Riemannova metrika, ki ustreza identični matriki $I_{n}$. Naj bo $D$ domena v $\R^2$ in $x \colon D \to \R^{n}$ imerzija, podana s predpisom $x(u_1,u_2) = (x_{1}(u_1,u_2), \dots, x_{n}(u_1,u_2))$ za $(u_1,u_2) \in D$. Pripadajoča metrika na $D$ je enaka
-\begin{gather}
+\begin{gather*}
 g = x^{*}ds^2 = g_{1,1}du_{1}^2 + g_{1,2}du_{1}du_{2} + g_{2,1}du_{2}du_{1} + g_{2,2}du_{2}^2, \\
 g_{1,1} = |x_{u_1}|^2, \ g_{1,2} = g_{2,1} = x_{u_1} \cdot x_{u_2}, \ g_{2,2} = |x_{u_2}|^2
-\end{gather}
+\end{gather*}
 in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
 \end{primer}
 
