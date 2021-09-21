@@ -86,7 +86,8 @@
 \newtheorem{primer}[definicija]{Primer}
 \newtheorem{opomba}[definicija]{Opomba}
 \newtheorem{aksiom}{Aksiom}
-\newtheorem{dokaz}{Dokaz}
+
+\newenvironment{dokaz}[1][Dokaz]{\begin{proof}[#1]}{\end{proof}}
 
 \theoremstyle{plain} % tekst napisan poševno
 \newtheorem{lema}[definicija]{Lema}
@@ -301,9 +302,9 @@ Naj bo $M$ domena v $\R^{n}$ s koordinatami $x = (x_{1}, \dots, x_{n})$. Riemann
 g_{p} = \sum_{i,j=1}^{n} g_{i,j}(p) dx_{i} dx_{j}, \quad p \in M,
 \end{align}
 kjer je $G(p) = [g_{i,j}(p)]_{i,j=1}^{n}$ simetrična pozitivno-definitna matrika za vse $p \in M$. Za tangentna vektorja $\xi = (\xi_{1}, \dots, \xi_{n}), \ \eta = (\eta_{1}, \dots, \eta_{n}) \in \R^{n}$ velja
-\begin{align}
-g_{p}(\xi, \eta) &= \sum_{i,j=1}^{n} g_{i,j}(p) \xi_{i} \eta_{j} = G(p) \xi \cdot \eta.
-\end{align}
+\begin{equation}
+g_{p}(\xi, \eta) = \sum_{i,j=1}^{n} g_{i,j}(p) \xi_{i} \eta_{j} = G(p) \xi \cdot \eta.
+\end{equation}
 
 Vzemimo gladko imerzijo $x \colon M \to \widetilde{M}$ in Riemannovo metriko $\tilde{g}$ na $\widetilde{M}$. \emph{Povlečeno metriko} $g = x^{*} \tilde{g}$ na $M$, definirano na paru tangentnih vektorjev $\xi, \eta \in T_{p}M$, podaja predpis
 \begin{equation} \label{eq:pullback-metrika}
@@ -500,13 +501,13 @@ kjer je $\Delta$ Laplaceov operator glede na Riemannovo metriko $g = x^{*}ds^2$ 
 %
 Naj bo $M$ Riemannova ploskev in $\zeta = u+iv$ lokalna holomorfna koordinata na njej. 
 Definiramo \emph{diferencial} 
-\begin{gather}
+\begin{equation}
 d = \frac{\partial}{\partial u}du + \frac{\partial}{\partial v}dv = \partial + \bar{\partial} = \frac{\partial}{\partial \zeta}d\zeta + \frac{\partial}{\partial \bar{\zeta}}d\bar{\zeta}
-\end{gather}
+\end{equation}
 in \emph{konjugirani diferencial}
-\begin{gather}
+\begin{equation}
 d^{c} = 2 \Im(\partial) = i(\bar{\partial} - \partial).
-\end{gather}
+\end{equation}
 Velja
 \begin{gather*}
 d + id^{c} = 2\partial , \quad  d - id^{c} = 2\bar{\partial}, \\
@@ -642,9 +643,9 @@ Po zadnjem izreku je vsaka točka minimalne ploskve sedlo. Ker je $\textup{\text
 
 Gaussova ukrivljenost minimalne ploskve $x(M)=S$ je povsod nepozitivna, saj je $K = -\kappa_{1}^2 \leq 0$.
 Njen integral,
-\begin{gather}
+\begin{equation}
 TC(x) = \int_{M} K dA \in [-\infty, 0],
-\end{gather} 
+\end{equation} 
 imenujemo \emph{totalna Gaussova ukrivljenost}. Pri tem $dA$ označuje ploščinski element glede na Riemannovo metriko $g = x^{*}ds^2$ na Riemannovi mnogoterosti $(M,g)$.
 Vrednost je enaka $0$ natanko takrat, ko je ploskev del ravnine. Res, $TC(x) = 0$ natanko tedaj, ko je Gaussova ukrivljenost $K=0$, kar je ekvivalentno $\kappa_1=\kappa_2=0$. Vemo pa, da imajo le kosi ravnine obe glavni ukrivljenosti ničelni v vsaki točki.
 Minimalne ploskve s končno totalno Gaussovo ukrivljenostjo so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošnejše minimalne ploskve (z neskončno totalno Gaussovo ukrivljenostjo) ne premorejo.\\[0.1cm]
@@ -673,9 +674,9 @@ Imerzija $x \colon (M,g) \to (\widetilde{M}, \tilde{g})$ se imenuje \emph{konfor
 Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna metriki $g$, kar pomeni, da za pozitivno funkcijo $\mu > 0$ na $M$ velja $x^{*}\tilde{g} = \mu g$.
 
 Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emph{izotermna} glede na Riemannovo metriko $g$, če za neko pozitivno funkcijo $\mu \colon \phi(U) \to \mathbb{R}_{+}$, $\phi(U) \subset \mathbb{R}_{(x,y)}^2$, velja
-\begin{gather}
+\begin{equation}
 (\phi^{-1})^{*}g = \mu \cdot (dx^2+dy^2) = \mu \cdot ds_{\mathbb{R}^2}^2.
-\end{gather} 
+\end{equation} 
 Lokalne koordinate na $U$ tedaj imenujemo \emph{izotermne koordinate}.
 
 Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
@@ -713,9 +714,9 @@ Spomnimo se, da je površina ploskve, določene z imerzijo $x$ enaka
 Naloga je poiskati preslikavo, ki zadošča zgornjim zahtevam, površina pripadajoče ploskve pa je minimalna. Dodatno je smiselno obravnavati preslikave, ki dajo končno površino.
 
 Ključ je \emph{Dirichletov energijski integral} 
-\begin{gather} \label{eq:Dirichlet-int}
+\begin{equation} \label{eq:Dirichlet-int}
 \mathcal{D}(x) = \int_{\mathbb{D}} |\nabla x|^2 du_{1}du_{2} = \int_{\mathbb{D}} (|x_{u_1}|^2 + |x_{u_2}|^2) du_{1}du_{2},
-\end{gather}
+\end{equation}
 ki ga s površino ploskve povezuje naslednji rezultat.
 
 \begin{lema}
@@ -763,12 +764,12 @@ Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \col
 			\end{equation}	
 \end{enumerate}
 Nadalje je Riemannova metrika na $M$, inducirana s konformno imerzijo $x$, enaka
-	\begin{align} \label{eq:|dx|^2=2|partialx|^2}
-	g &= x^{*} ds^2 = |dx_1|^2 + \cdots + |dx_n|^2 = 2 (|\partial{x_1}|^2 + \cdots |\partial{x_n}|^2).
-	\end{align}			
+	\begin{equation} \label{eq:|dx|^2=2|partialx|^2}
+	g = x^{*} ds^2 = |dx_1|^2 + \cdots + |dx_n|^2 = 2 (|\partial{x_1}|^2 + \cdots |\partial{x_n}|^2).
+	\end{equation}			
 \end{izrek}
 
-\begin{dokaz}[Skica]
+\begin{dokaz}
 Predstavimo le osnovne ideje dokaza zgornjega izreka.
 
 Ekvivalentnost prvih dveh trditev smo zapisali v Izreku~\ref{izr:min-ekviv-H=0}.
@@ -785,11 +786,11 @@ Preslikava $x$ je konformna natanko takrat, ko je $\sum_{i=1}^{n} \left((x_{i})_
 \begin{align*}
 (\partial x_1)^2 + \cdots + (\partial x_{n})^2 = \frac{1}{4} \left(|x_{u}|^2 - |x_{v}|^2 - 2ix_{u} \cdot x_{v} \right) d\zeta ^2 = 0,
 \end{align*}
-ki je enakost~\ref{eq:partialx^2 = 0}. Ker velja $dd^{c}x = -2i \bar{\partial} (\partial x)$, je $x$ harmonična natanko tedaj, ko je $\partial x$ holomorfna; to je ekvivalenca tretje in četrte trditve.
+ki je enakost~\eqref{eq:partialx^2 = 0}. Ker velja $dd^{c}x = -2i \bar{\partial} (\partial x)$, je $x$ harmonična natanko tedaj, ko je $\partial x$ holomorfna; to je ekvivalenca tretje in četrte trditve.
 
 Funkcija $f = 2 \partial x / \theta$ je kvocient 1-form, ki je zaradi pogoja na $\theta$ dobro definirana. Ker je $x$ imerzija, $f$ ne zavzame vrednosti $0$. Četrta in peta trditev sta očitno ekvivalentni.
 
-Zvezo~\ref{eq:|dx|^2=2|partialx|^2} dobimo s krajšim računom v lokalnih holomorfnih koordinatah $\zeta = u + iv$ na $M$ in upoštevanjem, da za konformno preslikavo $x$ velja $|x_{u}|=|x_{v}|>0$, $x_{u} \cdot x_{v} = 0$.
+Zvezo~\eqref{eq:|dx|^2=2|partialx|^2} dobimo s krajšim računom v lokalnih holomorfnih koordinatah $\zeta = u + iv$ na $M$ in upoštevanjem, da za konformno preslikavo $x$ velja $|x_{u}|=|x_{v}|>0$, $x_{u} \cdot x_{v} = 0$.
 \end{dokaz}
 
 % Konjugirane & pridružene minimalne ploskve
