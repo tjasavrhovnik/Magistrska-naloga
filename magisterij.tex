@@ -270,7 +270,9 @@ Naj bosta $M$ in $N$ mnogoterosti dimenzij $\dim M = m$, $\dim N = n$ ($m, n \in
 Če to velja za poljubno točko $p \in M$, je $f$ \emph{razreda $\mathcal{C}^{r}$}; pišemo $f \in  \mathcal{C}^{r}(M,N)$.
 
 Vzemimo gladki (oz.~razreda $\mathcal{C}^{r}$, $r \geq 1$) mnogoterosti $M$ in $N$ ter točko $p \in M$. \emph{Diferencial} gladke (oz.~razreda $\mathcal{C}^{r}$) preslikave $f \colon M \to N$ je linearna preslikava $df \colon T_{p}M \to T_{f(p)}N$, definirana s predpisom
-\[ (df_{p})[\gamma] = [f \circ \gamma]. \]
+\begin{equation}
+(df_{p})[\gamma] = [f \circ \gamma].
+\end{equation}
 
 \begin{definicija}
 Naj bo $f \colon M \to N$ gladka preslikava med gladkima mnogoterostima. Preslikava $f$ se imenuje 
@@ -366,40 +368,42 @@ Ekvivalentno, za vsak $b \in B$ je $s(b) \in \pi^{-1}(b) = E_{b}$, torej prerez 
 \end{definicija}
 
 Omenimo poseben primer vektorskega svežnja, ki bo pomemben v nadaljevanju. Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ z $r \geq 1$. Njen \emph{tangentni sveženj} je disjunktna unija tangentnih prostorov na $X$ v točkah $x \in X$:
-\[ TX = \bigsqcup_{x \in X} T_{x}X. \]
+\begin{gather}
+TX = \bigsqcup_{x \in X} T_{x}X.
+\end{gather}
 Tangentni sveženj je vektorski sveženj ranga $n = \dim X$ in razreda $\mathcal{C}^{r-1}$.
 
 \begin{definicija}
 Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$, kjer je $r \geq 1$. Prerez njenega tangentnega svežnja, to je preslikava 
-\begin{align*}
-V \colon X \to TX, \ V(x) = V_{x} \in T_{x}X, \ x \in X,
-\end{align*}
+\begin{align}
+V \colon X \to TX, \quad V(x) = V_{x} \in T_{x}X, \quad x \in X,
+\end{align}
 se imenuje \emph{vektorsko polje} na X. Prostor vektorskih polj na $X$ označimo z $\Gamma (X)$.
 \end{definicija}
 
 \begin{definicija}
 Naj bo $V$ vektorsko polje na mnogoterosti $X$ in $x \in X$ točka, v kateri je vektorsko polje neničelno. Pot $\gamma_{x} \colon (-\varepsilon, \varepsilon) \subset \R \to X$ razreda $\mathcal{C}^{1}$ je \emph{integralna krivulja} vektorskega polja $V$ skozi $x$, če je $\gamma_{x}(0) = x$ in
-\begin{align*}
+\begin{align}
 \dot{\gamma}_{x} (t) = V(\gamma _{x}(t)) \in T_{\gamma _{x}(t)}X, \ t \in (-\varepsilon, \varepsilon).
-\end{align*}
+\end{align}
 
 Naj bo $U \subset X$ odprta množica, na kateri je vektorsko polje $V$ neničelno. \emph{Tok vektorskega polja} $V$ na $U$ je 1-parametrična družina preslikav
 $ \Phi_{t} \colon U \to \Phi_{t}(U),$ definiranih s predpisi $\Phi_{t}(x) = \gamma_{x}(t)$.
 \end{definicija}
 
 Vektorsko polje $V$ lahko v lokalnih koordinatah $x = (x_{1}, \dots, x_{n})$ na odprti podmnožici $U \subset X$ zapišemo kot 
-\begin{align}
-V(m) = \sum_{i=1}^{n} V_{i}(m) \frac{\partial}{\partial x_{i}}|_{m},
-\end{align}
+\begin{equation}
+V(m) = \sum_{i=1}^{n} V_{i}(m) \frac{\partial}{\partial x_{i}} \Big|_{m},
+\end{equation}
 kjer so $V_{i}$ realne funkcije na $U$, diferenciali $\frac{\partial}{\partial x_{i}}$ pa v vsaki točki $m \in U$ sestavljajo bazo tangentnega prostora $T_{m}X$.
 Pot $\gamma (t) = (\gamma_{1}(t), \dots, \gamma_{n}(t))$ na $X$ je po definiciji integralna krivulja vektorskega polja $V$ natanko takrat, ko zadošča enakosti 
-\begin{align*}
+\begin{equation*}
 \dot{\gamma}(t) = \sum_{i=1}^{n} V_{i}(\gamma(t)) \frac{\partial}{\partial x_{i}}.
-\end{align*}
+\end{equation*}
 Rešujemo sistem $n$ navadnih diferencialnih enačb ($i \in \{ 1, \dots , n \}$)
-\begin{align*}
+\begin{equation*}
 \dot{\gamma}_{i}(t) = V_{i}(\gamma_{1}(t), \dots, \gamma_{n}(t)),
-\end{align*}
+\end{equation*}
 katerega lokalna rešitev je tok vektorskega polja $V$ na $X$, $\Phi_{t}(m)$. Po eksistenčnem izreku za navadne diferencialne enačbe lokalna rešitev vedno obstaja.
 
 Zanimajo nas duali tangentnih prostorov ter prerezi pripradajočih svežnjev.
@@ -417,13 +421,14 @@ Diferencialno 1-formo $\omega \in \Omega ^{1}(X)$ imenujemo \emph{eksaktna}, če
 \end{definicija}
 
 Podobno kot vektorska polja lahko tudi 1-forme predstavimo lokalno. Naj bo $U$ odprta podmnožica v $X$ z lokalnimi koordinatami $x = (x_{1}, \dots, x_{n})$. Če so $a_{i}$ realne funkcije na $U$ in $dx_{i}$ diferenciali koordinatnih funkcij, ki v vsaki točki $m \in U$ tvorijo bazo kotangentnega prostora $T_{m}^{*}X$, potem ima poljubna 1-forma na $U$ obliko
-\begin{align}
-\alpha (m) = \sum_{i=1}^{n} a_{i}(m) dx_{i}|_{m}.
-\end{align}
+\begin{equation}
+\alpha (m) = \sum_{i=1}^{n} a_{i}(m) dx_{i} \big|_{m}.
+\end{equation}
 Baza kotangentnega prostora je dualna bazi tangentnega prostora; natančneje, 
-\begin{align*}
-dx_{i}(m) \left(\frac{\partial}{\partial x_{j}} (m) \right) = \delta _{ij}.
-\end{align*}
+\begin{equation*}
+dx_{i}(m) \left(\frac{\partial}{\partial x_{j}} (m) \right) = \delta _{ij},
+\end{equation*}
+kjer $\delta_{ij}$ označuje Kroneckerjev delta.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ukrivljenost ploskve
@@ -459,17 +464,17 @@ K^{N}(p) = \kappa _{1}^{N}(p) \cdot \kappa _{2}^{N}(p)
 \end{equation}
 definira \emph{Gaussovo ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$.
 \item
-Projekcijo povprečne ukrivljenosti na normalni prostor $N_{p}S$ v smeri tangentnega prostora $T_{p}S$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$ in označimo s $\textbf{\textup{H}}$. Enačba~\ref{eq:povp-ukr} se v tej notaciji glasi $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
+Projekcijo povprečne ukrivljenosti na normalni prostor $N_{p}S$ v smeri tangentnega prostora $T_{p}S$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$ in označimo s $\textbf{\textup{H}}$. Enačba~\eqref{eq:povp-ukr} se v tej notaciji glasi $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
 \end{enumerate}
 \end{definicija}
 
 % primer: H za n=3
-\begin{primer}[Vektor povprečne ukrivljenosti za $n=3$.]
-Naj bo $U \subset M$ odprta podmnožica, $x \colon U \to \mathbb{R}^{3}$ imerzija in označimo z $S = x(U)$ sliko, ki je ploskev, vložena v $\mathbb{R}^3$. V poljubni točki $p \in S$ je zato normalni prostor $N_{p}S$ enorazsežen, torej premore natanko dve enotski normalni vektorski polji, ki se razlikujeta za predznak ($\pm N$). Izbor orientacije na $U$ enotsko normalno vektorsko polje enolično določa, zato ga lahko predstavimo kot preslikavo
+\begin{primer}[Vektor povprečne ukrivljenosti v trirazsežnem prostoru.]
+Naj bo $U \subset M$ odprta podmnožica, $x \colon U \to \mathbb{R}^{3}$ imerzija in označimo z $S = x(U)$ sliko, ki je ploskev, vložena v $\mathbb{R}^3$. V poljubni točki $p \in S$ je zato normalni prostor $N_{p}S$ enorazsežen, torej premore natanko dve enotski normalni vektorski polji, ki se razlikujeta za predznak ($\pm N$). Izbor orientacije na $U$ enolično določa enotsko normalno vektorsko polje, zato ga lahko predstavimo kot preslikavo
 \begin{gather*}
 N \colon S \to \mathbb{S}^{2},
 \end{gather*}
-imenovano \emph{Gaussova preslikava} vložene ploskve $S$. Če je $x = x(u_{1},u_{2})$, $(u_{1},u_{2}) \in U$, lokalna parametrizacija ploskve, dobimo eksplicitno formulo $N = \frac{x_{u_{1}} \times x_{u_{2}}}{|x_{u_{1}} \times x_{u_{2}}|}$.
+imenovano \emph{Gaussova preslikava} vložene ploskve $S$. Če je $x = x(u_{1},u_{2})$ za $(u_{1},u_{2}) \in U$ lokalna parametrizacija ploskve, dobimo eksplicitno formulo $N = \frac{x_{u_{1}} \times x_{u_{2}}}{|x_{u_{1}} \times x_{u_{2}}|}$.
 
 Vektor povprečne ukrivljenosti je po definiciji pravokoten na $S$, zato obstaja funkcija $\lambda$, da velja $\textbf{\textup{H}} = \lambda N$. Vemo še, da je normalni vektor enotski, kar nam da zvezo
 \begin{gather}
@@ -510,16 +515,16 @@ dd^{c} = 2i\partial \bar{\partial} = \left( \frac{\partial^2}{\partial u^2} + \f
 kjer je $\Delta$ Laplaceov operator glede na Evklidsko metriko.\newline
 Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna} ($\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$.\newline
 Funkcija $x \colon M \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}, če velja $dd^{c}x=0$.
-Harmonične funkcije karakteriziramo z naslednjimi ekvivalenčnimi pogoji:
+Harmonične funkcije karakteriziramo z naslednjimi ekvivalentnimi pogoji:
 \begin{gather*}
 x \in \mathcal{C}^2(M) \ \text{je harmonična} \ \iff \ dd^{c}x=0 \ \iff \ \partial \bar{\partial}x=0 \ \iff \ \Delta x=0.
 \end{gather*}
 Vsaka holomorfna funkcija je torej harmonična. 
 Vzemimo realno harmonično funkcijo $x \colon M \to \mathbb{R}^{n}$ razreda $\mathcal{C}^2(M)$ in naj bo $D \subset M$ enostavno povezana\footnote{Topološki prostor $X$ je \emph{enostavno povezan} natanko tedaj, ko je s potmi povezan in ima v vsaki točki trivialno prvo fundamentalno grupo, $\pi_{1}(X)=0$.} domena. Zaradi pogoja o harmoničnosti vemo, da je 1-forma $d^{c}x$ eksaktna. Za izbrano fiksno točko $p_{0} \in D$ definirajmo funkcijo $y \colon D \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(D)$ s predpisom
-\begin{gather} \label{eq:harmonicna-konj}
+\begin{equation} \label{eq:harmonicna-konj}
 y(p) = \int_{p_0}^{p} d^{c}x + C,
-\end{gather}
-kjer je $C$ konstanta. Imenujemo jo \emph{harmonična konjugiranka} funkcije $x$. Velja enakost $dy = d^{c}x$, nova funkcija $z \colon D \to \mathbb{C}^{n}, \ z = x+iy$, imenovana \emph{kompleksna krivulja} v $\mathbb{C}^{n}$, pa je holomorfna. Zaključimo, da je zožitev realne harmonične funkcije na enostavno povezano domeno v $M$ enaka realnemu delu holomorfne funkcije $x+iy$, pri čemer je $y$ harmonična konjugiranka od $x$, definirana s predpisom~\ref{eq:harmonicna-konj}.
+\end{equation}
+kjer je $C$ konstanta. Imenujemo jo \emph{harmonična konjugiranka} funkcije $x$. Velja enakost $dy = d^{c}x$, nova funkcija $z \colon D \to \mathbb{C}^{n}, \ z = x+iy$, imenovana \emph{kompleksna krivulja} v $\mathbb{C}^{n}$, pa je holomorfna. Zaključimo, da je zožitev realne harmonične funkcije na enostavno povezano domeno v $M$ enaka realnemu delu holomorfne funkcije $x+iy$, pri čemer je $y$ harmonična konjugiranka od $x$, ki jo definira enakost~\eqref{eq:harmonicna-konj}.
 
 \begin{definicija}
 Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je homomorfizem grup $\textup{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
@@ -528,7 +533,7 @@ Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je hom
 \end{equation}
 \end{definicija}
 %
-V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi formuli odvisen le od homološkega razreda poti $C$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
+V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi formuli odvisen le od homološkega razreda poti $C \subset M$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Aproksimacijski izreki za Riemannove ploskve
@@ -571,14 +576,14 @@ Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna
 % Variacija ploščine
 \subsection{Variacija ploščine}
  %
-V tem razdelku bomo navedli klasično defincijo minimalne ploskve ter variacijski formuli, s katerima minimalne ploskve opišemo kot ploskve z ničelnim vektorjem povprečne ukrivljenosti.
+V tem razdelku bomo navedli klasično definicijo minimalne ploskve ter variacijski formuli, s katerima minimalne ploskve opišemo kot ploskve z ničelnim vektorjem povprečne ukrivljenosti.
 %
 \begin{definicija}
 \begin{enumerate}
 \item
 Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in naj bo preslikava $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. \emph{Variacija preslikave x s fiksnim robom} je 1-parametrična družina $\mathcal{C}^2$ preslikav 
 \begin{gather}
-x^{t} \colon M \to \R^{n},\ t \in (-\varepsilon, \varepsilon) \subset \R,
+x^{t} \colon M \to \R^{n}, \quad t \in (-\varepsilon, \varepsilon) \subset \R,
 \end{gather}
 če je $x^0 = x$ in za vse $t$ z intervala velja $x^{t} = x$ na $bM$.
 %
@@ -591,7 +596,7 @@ E(p,t) = \frac{\partial{x^t(p)}}{\partial{t}} \in \R^{n}.
 \end{definicija}
 
 Opazimo, da je za dovolj majhne vrednosti $t$ preslikava $x^{t}$ imerzija.
-Po definiciji je na $bM \times (-\varepsilon, \varepsilon)$ variacijsko vektorsko polje $E$ konstantno ničelno.
+Po definiciji je na množici $bM \times (-\varepsilon, \varepsilon)$ variacijsko vektorsko polje $E$ konstantno ničelno.
 
 % Minimalna ploskev
 \begin{definicija}
@@ -602,7 +607,7 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Sliko $x(M)$ im
 Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega funkcionala $\text{Area}$.
 \end{definicija}
 
-Levo stran enakosti~\ref{eq:1-var-ploščine} imenujemo \emph{prva variacija ploščine} pri $t=0$. Slednjo z geometrijskimi lastnostmi preslikave $x$, natančneje ukrivljenostjo, povezuje \emph{prva variacijska formula} v naslednjem izreku. 
+Levo stran enakosti~\eqref{eq:1-var-ploščine} imenujemo \emph{prva variacija ploščine} pri $t=0$. Slednjo z geometrijskimi lastnostmi preslikave $x$, natančneje z ukrivljenostjo, povezuje \emph{prva variacijska formula} v naslednjem izreku. 
 
 % Prva variacijska formula
 \begin{izrek}[Prva variacijska formula] \label{izr:1-var-formula}
@@ -614,9 +619,9 @@ Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksn
 \end{izrek}
 
 Kaj nam prva variacijska formula pove, če se osredotočimo na poseben razred variacij imerzije? Predpostavimo, da je imerzija $x \colon M \to \R^{n}$ razreda $\mathcal{C}^4$, tj.~je preslikava $\textbf{\textup{H}}$ vsaj razreda $\mathcal{C}^2$. Variacijo definirajmo s predpisom
-\begin{gather}
+\begin{equation}
 x^{t} = x + tf\textbf{\textup{H}},
-\end{gather}
+\end{equation}
 kjer za $f$ izberimo gladko nenegativno funkcijo na $M$, ki je ničelna na robu $bM$. Po definiciji je $x^{t} \in \mathcal{C}^2(M)$ variacija imerzije $x$ s fiksnim robom. Računajmo
 \begin{align*}
 \frac{d}{dt} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) &= -2 \cdot \int_{M} E \cdot \textbf{\textup{H}} dA = -2 \cdot \int_{M} f \textbf{\textup{H}} \cdot \textbf{\textup{H}} dA \\
@@ -624,9 +629,9 @@ kjer za $f$ izberimo gladko nenegativno funkcijo na $M$, ki je ničelna na robu 
 \end{align*} 
 Če je $\textbf{\textup{H}} = 0$ na $M$, je ploščina konstantna ($x^{t}=x$).
 Sicer obstaja točka, v kateri je $\textbf{\textup{H}} \neq 0$, in dodatno zahtevajmo, da je $f>0$ v okolici neke take točke. Potem je $\frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) < 0$.
-To pomeni, da z deformacijo poskve $x(M) \subset \mathbb{R}^{n}$ v smeri vektorja povprečne ukrivljenosti $\textbf{\textup{H}}$ ploščina za majhne $t>0$ strogo pada.
+To pomeni, da z deformacijo ploskve $x(M) \subset \mathbb{R}^{n}$ v smeri vektorja povprečne ukrivljenosti $\textbf{\textup{H}}$ ploščina za majhne $t>0$ strogo pada.
 
-Po prvi variacijski formuli~\ref{eq:1-var-formula} v primeru $\textbf{\textup{H}} = 0$ na $M$ imerzija $x$ očitno da minimalno ploskev. V nasprotnem z ustrezno izbiro vektorskega polja $E$ na $M$ ploščina variiranih ploskev $x^{t}(M)$ za majhne $t>0$ in $x^{t} = x + tE$ strogo pada. Ta razmislek združuje naslednji rezultat.
+Po prvi variacijski formuli~\eqref{eq:1-var-formula} v primeru $\textbf{\textup{H}} = 0$ na $M$ imerzija $x$ očitno da minimalno ploskev. V nasprotnem z ustrezno izbiro vektorskega polja $E$ na $M$ ploščina variiranih ploskev $x^{t}(M)$ za majhne $t>0$ in $x^{t} = x + tE$ strogo pada. Ta razmislek združuje naslednji rezultat.
 
 \begin{izrek} \label{izr:min-ekviv-H=0}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $x(M)$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
@@ -640,9 +645,9 @@ Njen integral,
 \begin{gather}
 TC(x) = \int_{M} K dA \in [-\infty, 0],
 \end{gather} 
-imenujemo \emph{totalna Gaussova ukrivljenost}. Pri tem $dA$ označuje ploščinski element glede na Riemannovo metriko $g = x^{*}ds^2$ na $M$.
+imenujemo \emph{totalna Gaussova ukrivljenost}. Pri tem $dA$ označuje ploščinski element glede na Riemannovo metriko $g = x^{*}ds^2$ na Riemannovi mnogoterosti $(M,g)$.
 Vrednost je enaka $0$ natanko takrat, ko je ploskev del ravnine. Res, $TC(x) = 0$ natanko tedaj, ko je Gaussova ukrivljenost $K=0$, kar je ekvivalentno $\kappa_1=\kappa_2=0$. Vemo pa, da imajo le kosi ravnine obe glavni ukrivljenosti ničelni v vsaki točki.
-Minimalne ploskve s končno totalno Gaussovo ukrivljenostjo so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošne minimalne ploskve ne premorejo.\\[0.1cm]
+Minimalne ploskve s končno totalno Gaussovo ukrivljenostjo so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošnejše minimalne ploskve (z neskončno totalno Gaussovo ukrivljenostjo) ne premorejo.\\[0.1cm]
 
 % Druga variacijska formula
 S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}: naj bo $M$ kompaktna ploskev z robom, preslikava $x \colon M \to \mathbb{R}^{n}$ pa gladka minimalna imerzija. Potem velja
@@ -653,7 +658,7 @@ kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $x(M)$.
 
 \begin{opomba}
 Za $M$ in $x$ kot zgoraj definirajmo funkcijo $f = |E|$ ter enotsko normalno vektorsko polje $N = \frac{E}{|E|}$ na množici $M^{*} = \{ x \in M ; \ f(x) \neq 0 \}$. Sledi $E = f \cdot N$, $\nabla E = (\nabla f \cdot N, f \cdot \nabla N)$ in $|\nabla E|^2 = |\nabla f|^2 + f^2 \cdot |\nabla N|^2$.
-Formula~\ref{eq:2-var-formula} se zato glasi
+Enakost~\eqref{eq:2-var-formula} se zato glasi
 \begin{equation}
 \frac{d^2}{dt^2} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) = \int_{M} {\left( |\nabla f|^2 + f^2 (4K^{N} + |\nabla N|^2) \right) dA}.
 \end{equation}
@@ -682,13 +687,13 @@ Naj bodo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n 
 \begin{enumerate}
 	\item Imerzija $x$ je konformna v Evklidskih metrikah na $\mathbb{R}^2$ in $\mathbb{R}^{n}$.
 	\item Za parcialna odvoda $\frac{\partial x}{\partial u} = x_{u}$ in $\frac{\partial x}{\partial v} = x_{v}$ velja
-		\begin{gather*}
+		\begin{gather}
 		|x_{u}| = |x_{v}| > 0, \quad x_{u} \cdot x_{v} = 0.
-		\end{gather*}
+		\end{gather}
 	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo \emph{ničelni kvadriki}\footnote{Ničelna kvadrika $\textbf{\textup{A}}$ v $(n-1)$-spremenljivkah je kompleksni stožec s singularno točko $0$.} (so \emph{ničelni vektorji})
-		\begin{gather*}
+		\begin{gather}
 		\textbf{\textup{A}} = \textbf{\textup{A}}^{n-1} = \{ z=(z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}; \ z_{1}^2 + \cdots + z_{n}^2 = 0 \}.
-		\end{gather*}
+		\end{gather}
 	\item Matrika, ki pripada Riemannovi metriki $g = x^{*}ds^2$ na $D$, je enaka $G = \mu I$, kjer je $\mu = |x_{u}|^2 = |x_{v}|^2$ ter $I$ identiteta.
 \end{enumerate}
 \end{lema}
@@ -702,9 +707,9 @@ Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve la
 Označimo z $\bar{\mathbb{D}}$ zaprt enotski disk z lokalnimi koordinatami $(u_{1}, u_{2})$ in izberimo gladko orientirano Jordanovo krivuljo $\Gamma \subset \mathbb{R}^{n}$.
 Naj bo $x \colon \bar{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, katere zožitev na rob diska $\mathbb{T}$ je monotona\footnote{Pravimo, da je zvezna preslikava $f \colon \mathbb{T} \to \Gamma$ \emph{monotona}, če je praslika $f^{-1}(x)$ povezana za vsak $x \in \Gamma$.} parametrizacija $x|_{\mathbb{T}} \colon \mathbb{T} \to \Gamma$ Jordanove krivulje $\Gamma$.
 Spomnimo se, da je površina ploskve, določene z imerzijo $x$ enaka
-\begin{gather} \label{eq:area}
+\begin{equation} \label{eq:area}
 \text{Area}(x) = \int_{\mathbb{D}} \sqrt{|x_{u_1}|^2 |x_{u_2}|^2 - |x_{u_1} \cdot x_{u_2}|^2} du_{1}du_{2}.
-\end{gather}
+\end{equation}
 Naloga je poiskati preslikavo, ki zadošča zgornjim zahtevam, površina pripadajoče ploskve pa je minimalna. Dodatno je smiselno obravnavati preslikave, ki dajo končno površino.
 
 Ključ je \emph{Dirichletov energijski integral} 
