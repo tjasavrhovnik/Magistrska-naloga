@@ -843,15 +843,15 @@ podaja dobro definirano holomorfno ničelno krivuljo. Zanjo velja
 \end{izrek}
 
 \begin{opomba}
-Pogoj $ \Re \int_{C} \Phi = 0 $, da so vse realne periode po sklenjenih krivuljah v $M$ ničelne, zagotavlja, da je integral~\ref{eq:Wstrass-kmi} dobro definiran.
+Pogoj $ \Re \int_{C} \Phi = 0 $, da so vse realne periode po sklenjenih krivuljah v $M$ ničelne, zagotavlja, da je integral~\eqref{eq:Wstrass-kmi} dobro definiran.
 Natančneje, neodvisen je od izbire poti med točkama $p_0 \in M$ in $p \in M$ po kateri integriramo.
-Podobno, pogoj $ \int_{C} \Phi = 0 \ \text{za vse} \ [C] \in H_{1} (M, \Z) $ zagotavlja dobro definiranost integrala~\ref{eq:Wstrass-hnk}. 
+Podobno, pogoj $ \int_{C} \Phi = 0 \ \text{za vse} \ [C] \in H_{1} (M, \Z) $ zagotavlja dobro definiranost integrala~\eqref{eq:Wstrass-hnk}. 
 
 V primeru, ko je $M$ enostavno povezana ploskev, pogoja o ničelnosti period nista potrebna, saj sledita iz definicije enostavne povezanosti. 
 \end{opomba}
 
 \begin{opomba}
-Dodatek k izreku pravi, da je vsaka konformna minimalna imerzija $x \colon M \to \R^{n}$ oblike~\ref{eq:Wstrass-kmi}, vsaka holomorfna ničelna krivulja $z \colon M \to \C^{n}$ pa oblike~\ref{eq:Wstrass-hnk}. Prav zato je Enneper-Weierstrassova formula elegantna metoda za konstrukcijo opisanih preslikav.
+Dodatek k izreku pravi, da je vsaka konformna minimalna imerzija $x \colon M \to \R^{n}$ oblike~\eqref{eq:Wstrass-kmi}, vsaka holomorfna ničelna krivulja $z \colon M \to \C^{n}$ pa oblike~\eqref{eq:Wstrass-hnk}. Prav zato je Enneper-Weierstrassova formula elegantna metoda za konstrukcijo opisanih preslikav.
 
 Kot smo omenili zgoraj, včasih pišemo $\Phi = f \theta$, pri čemer je $\theta$ povsod neničelna holomorfna 1-forma na $M$ in $f = \Phi / \theta \colon M \to \textbf{\textup{A}}_{*}$ holomorfna preslikava.
 \end{opomba}
@@ -866,7 +866,7 @@ Analogno, za holomorfno ničelno krivuljo $z \colon M \to \C^{n}$ pripadajočo 1
 V razdelku o ukrivljenosti ploskve smo pri računanju vektorja povprečne ukrivljenosti v trirazsežnem prostoru omenili Gaussovo preslikavo. Sedaj bomo formalno definirali Gaussovo preslikavo minimalne ploskve ter se ponovno osredotočili na trirazsežni primer -- izpeljali bomo klasično Weierstrassovo formulo za minimalne ploskve v prostoru $\mathbb{R}^3$.
 
 \begin{definicija}
-Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. \emph{Gaussova preslikava} konformne minimalne imerzije $x = (x_{1}, \dots , x_{n}) \colon M \to \mathbb{R}^{n}$ je holomorfna preslikava
+Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. \emph{(Posplošena) Gaussova preslikava} konformne minimalne imerzije $x = (x_{1}, \dots , x_{n}) \colon M \to \mathbb{R}^{n}$ je holomorfna preslikava
 \begin{gather}
 \mathcal{G} = [\partial x_{1} : \cdots : \partial x_{n}] \colon M \to \textup{\textbf{Q}}^{n-2} \subset \mathbb{CP}^{n-1}.
 \end{gather}
@@ -897,7 +897,7 @@ Kompozitum
 \begin{align}
 \mathcal{G} \colon M \to \textup{\textbf{Q}}^{1} \subset \mathbb{CP}^{2}, \quad \mathcal{G} = \tau \circ \mathfrak{g}
 \end{align}
-je iskana Gaussova preslikava.\newline
+je iskana (posplošena) Gaussova preslikava.\newline
 %Weierstrassova formula
 Od tod lahko izpeljemo Enneper-Weierstrassovo formulo za minimalne ploskve v $\mathbb{R}^{3}$, o kateri smo govorili v prejšnjem razdelku. 
 Recimo, da je konformna minimalna imerzija $x$ podana. Računajmo njene Weierstrassove podatke. 
@@ -908,10 +908,10 @@ Velja\footnote{Res, če upoštevamo zvezo $\phi_{1}^2 + \phi_{2}^2 + \phi_{3}^2 
 \frac{i}{2} \left(\frac{1}{\mathfrak{g}} + \mathfrak{g} \right) \phi_3 &= \frac{i}{2} \frac{\phi_{1}^2 - 2i\phi_1 \phi_2 - \phi_{2}^2 + \phi_{3}^2}{\phi_1 - i\phi_2} = \frac{i}{2} \frac{-2i\phi_1 \phi_2 - 2\phi_{2}^2}{\phi_1 - i\phi_2} = \frac{-i\phi_2(i\phi_1 + \phi_2)}{\phi_1 - i\phi_2} = \phi_2.
 \end{align*}
 }
-\begin{gather} \label{eq:Weierstrass-podatki-Gauss3}
+\begin{equation} \label{eq:Weierstrass-podatki-Gauss3}
 2 \partial x = \Phi = \left( \frac{1}{2} \left(\frac{1}{\mathfrak{g}} - \mathfrak{g} \right), \frac{i}{2} \left(\frac{1}{\mathfrak{g}} + \mathfrak{g} \right), 1 \right) \phi_3.
-\end{gather}
-Obratno, če poznamo holomorfno preslikavo $\mathfrak{g} \colon M \to \mathbb{CP}^{1}$ in holomorfno 1-formo $\phi_3$ na $M$, potem je 1-forma $\Phi$, določena z enakostjo~\ref{eq:Weierstrass-podatki-Gauss3} meromorfna na $M$ in zadošča pogoju $\phi_{1}^2 + \phi_{2}^2 + \phi_{3}^2 = 0$ po definiciji preslikave $\mathfrak{g}$.
+\end{equation}
+Obratno, če poznamo holomorfno preslikavo $\mathfrak{g} \colon M \to \mathbb{CP}^{1}$ in holomorfno 1-formo $\phi_3$ na $M$, potem je 1-forma $\Phi$, določena z enakostjo~\eqref{eq:Weierstrass-podatki-Gauss3} meromorfna na $M$ in zadošča pogoju $\phi_{1}^2 + \phi_{2}^2 + \phi_{3}^2 = 0$ po definiciji preslikave $\mathfrak{g}$.
 Kadar je dodatno $\Phi$ brez ničel in polov na $M$ in je $\Re \int_{C} \Phi = 0$ za vse sklenjene krivulje $C \subset M$, potem po Izreku~\ref{izr:Enneper-Weierstrass} konformno minimalno imerzijo $x \colon M \to \mathbb{R}^3$ definira predpis
 \begin{gather}
 x(p) = p_{0} + \Re \int_{p_0}^{p} \Phi = p_{0} + \Re \int_{p_0}^{p} \left( \frac{1}{2} \left(\frac{1}{\mathfrak{g}} - \mathfrak{g} \right), \frac{i}{2} \left(\frac{1}{\mathfrak{g}} + \mathfrak{g} \right), 1 \right) \phi_3,
@@ -972,36 +972,36 @@ Podrobneje bomo opisali dve pridruženi minimalni ploskvi k helikatenoidi, katen
 % Katenoida
 \subsubsection{Katenoida}
 %
-Začnimo s holomorfno ničelno krivuljo $z \colon \mathbb{C} \to \mathbb{C}^3$, podano s predpisom~\ref{eq:helikatenoida}. Njenemu realnemu delu, ki je preslikava $x \colon \mathbb{R}^2 \to \mathbb{R}^3$ s parametrizacijo
-\begin{align} \label{eq:katenoida}
+Začnimo s holomorfno ničelno krivuljo $z \colon \mathbb{C} \to \mathbb{C}^3$, podano s predpisom~\eqref{eq:helikatenoida}. Njenemu realnemu delu, ki je preslikava $x \colon \mathbb{R}^2 \to \mathbb{R}^3$ s parametrizacijo
+\begin{equation} \label{eq:katenoida}
 x(u,v) = (\cos u \cdot \cosh v, \sin u \cdot \cosh v, v),
-\end{align}
+\end{equation}
 pravimo \emph{katenoida}. Po drugi strani do njene konformne parametrizacije pridemo preko pridruženih minimalnih ploskev k izbrani holomorfni ničelni krivulji -- katenoida ustreza parametrom $t = k \pi, \ k \in \mathbb{Z}$.
 
 Geometrijsko je obravnavana minimalna ploskev rotacijska ploskev, ki nastane z rotacijo grafa hiperboličnega kosinusa (t.~i.~\emph{verižnice}) okoli izbrane osi v prostoru $\mathbb{R}^3$. Katenoida z osjo rotacije $x=y=0$ na primer nastane, če graf krivulje $z \mapsto (\cosh z, 0, z), \ z \in \mathbb{R}$, zavrtimo okrog $z$-osi. Implicitna enačba nastale minimalne ploskve se glasi
-\begin{gather} \label{eq:katenoida-implicitno}
+\begin{equation} \label{eq:katenoida-implicitno}
 x^2 + y^2 = \cosh ^2 z.
-\end{gather}
+\end{equation}
 
 % slika katenoide
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.8]{images/catenoid.pdf}
-\caption{Katenoida z implicitno enačbo~\ref{eq:katenoida-implicitno}.}
+\caption{Katenoida z implicitno enačbo~\eqref{eq:katenoida-implicitno}.}
 \end{center}
 \end{figure}
 
-Opazimo, da je parametrizacija katenoide~\ref{eq:katenoida} $2 \pi$-periodična glede na spremenljivko $u$. V Enneper-Weierstrassovo formulo helikatenoide~\ref{eq:EP-helikatenoida} uvedimo novo spremenljivko $w = e^{i \zeta} \in \mathbb{C} \setminus \{0\}$ in vzemimo njen realni del. Računajmo
+Opazimo, da je parametrizacija katenoide~\eqref{eq:katenoida} $2 \pi$-periodična glede na spremenljivko $u$. V Enneper-Weierstrassovo formulo helikatenoide~\eqref{eq:EP-helikatenoida} uvedimo novo spremenljivko $w = e^{i \zeta} \in \mathbb{C} \setminus \{0\}$ in vzemimo njen realni del. Računajmo
 \begin{align*}
 z(\zeta) &= (1,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) d\xi \\
 	&= (1,0,0) + \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) (-i) \frac{-i}{\eta} d\eta \\
 	&= (1,0,0) - \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) \frac{d\eta}{\eta},
 \end{align*}
 kar nam da parametrizacijo katenoide $x \colon \mathbb{C} \setminus \{0\} \to \mathbb{R}^3$ z Enneper-Weierstrassovo formulo
-\begin{align}
+\begin{equation}
 x(w) = (1,0,0) - \Re \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) \frac{d\eta}{\eta}.
-\end{align}
-Sledi, da je kompleksna Gaussova preslikava katenoide enaka $\mathfrak{g}(w) = w$ za $w \in \mathbb{C} \setminus \{0\}$, ki jo holomorfno razširimo do identične presikave na $\mathbb{CP}^{1}$. Identiteta je preslikava stopnje $d=1$, zato iz teorije o Gaussovih preslikavah dobimo vrednost totalne Gaussove ukrivljenosti katenoide, ki znaša $-4 \pi$. Izkaže se, da je to edini primer iz družine pridruženih minimalnih ploskev k helikatenoidi s končno totalno Gaussovo ukrivljenostjo.
+\end{equation}
+Sledi, da je kompleksna Gaussova preslikava katenoide enaka $\mathfrak{g}(w) = w$ za $w \in \mathbb{C} \setminus \{0\}$, ki jo holomorfno razširimo do identične preslikave na $\mathbb{CP}^{1}$. Identiteta je preslikava stopnje $d=1$, zato iz teorije o Gaussovih preslikavah dobimo vrednost totalne Gaussove ukrivljenosti katenoide, ki znaša $-4 \pi$. Izkaže se, da je to edini primer iz družine pridruženih minimalnih ploskev k helikatenoidi s končno totalno Gaussovo ukrivljenostjo.
 
 Katenoido je kot rotacijsko ploskev prvi opisal Leonhard Euler l.~1744. Dobro stoletje kasneje je P.~O.~Bonnet pokazal, da je to (razen ravnine) edina rotacijska minimalna ploskev v trirazsežnem prostoru. Ker je razmeroma enostavna in ima še več posebnih topoloških lastnosti, jo običajno spoznamo kot prvi primer pri študiju minimalnih ploskev.
 
@@ -1010,9 +1010,9 @@ Katenoido je kot rotacijsko ploskev prvi opisal Leonhard Euler l.~1744. Dobro st
 \subsubsection{Helikoid}
 %
 Negativno predznačeni imaginarni del helikatenoide imenujemo \emph{helikoid}. Natančneje, to je preslikava $y = -\Im z = \Re (iz) \colon \mathbb{R}^2 \to \mathbb{R}^3$ s konformno parametrizacijo
-\begin{align} \label{eq:helikoid}
+\begin{equation} \label{eq:helikoid}
 y(u,v) = (\sin u \cdot \sinh v, -\cos u \cdot \sinh v, u).
-\end{align}
+\end{equation}
 Helikoid je pridružena minimalna ploskev k helikatenoidu, ki ustreza parametrom $t = \frac{\pi}{2} + k \pi, \ k \in \mathbb{Z}$. (Res, $e^{it}z = iz$ natanko tedaj, ko je $t = \frac{\pi}{2} + 2k \pi, \ k \in \mathbb{Z}$. Z izbiro $t = \frac{\pi}{2} + k \pi, \ k \in \mathbb{Z}$, pa dobimo levi in desni helikoid.) Po definiciji sta katenoida in helikoid konjugirani minimalni ploskvi.
 
 Geometrijsko helikoid dobimo na naslednji način: premico rotiramo okrog izbrane osi v $\mathbb{R}^3$ (tj.~v ravnini v $\mathbb{R}^3$) in jo hkrati premikamo vzdolž te osi (v pravokotni smeri glede na ravnino, v kateri premico rotiramo).
@@ -1025,7 +1025,7 @@ Geometrijsko helikoid dobimo na naslednji način: premico rotiramo okrog izbrane
 \end{center}
 \end{figure}
 
-Enneper-Weierstrassovo formulo helikoida dobimo iz izraza~\ref{eq:EP-helikatenoida}:
+Enneper-Weierstrassovo formulo helikoida dobimo iz izraza~\eqref{eq:EP-helikatenoida}:
 \begin{align}
 y(\zeta) &= \Re (iz(\zeta)) = \Re \left( (i,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) i d\xi \right) \nonumber \\
 	&= \Re \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) d\xi, \quad \zeta \in \mathbb{C}.
@@ -1044,20 +1044,20 @@ Prvo lastnost kot minimalni ploskvi v $\mathbb{R}^3$ premoreta le helikoid in ra
 \subsubsection{Enneperjeva ploskev}
 %
 Recimo, da poznamo par $(\mathfrak{g}, \phi_3)$, kjer sta $\mathfrak{g}(z) = z$ holomorfna preslikava in $\phi_3(z) = 2z$ holomorfna 1-forma ($z \in \mathbb{C}$).
-Potem po zvezi~\ref{eq:Weierstrass-podatki-Gauss3} vemo, da je meromorfna 1-forma $\Phi$ enaka
+Potem po zvezi~\eqref{eq:Weierstrass-podatki-Gauss3} vemo, da je meromorfna 1-forma $\Phi$ enaka
 \begin{gather*}
 \Phi = \left( \frac{1}{2} \left( \frac{1}{z} - z \right), \frac{i}{2} \left( \frac{1}{z} + z \right), 1 \right) \cdot 2z = \left( 1-z^2, i(1+z^2), 2z \right).
 \end{gather*}
 Enneper-Weierstrassova formula preslikave $x \colon \mathbb{C} \to \mathbb{R}^3$ se glasi
-\begin{gather}
+\begin{equation}
 x(\zeta) = \Re \int_{0}^{\zeta} \left( 1-z^2, i(1+z^2), 2z \right) dz
-\end{gather}
+\end{equation}
 in določa minimalno ploskev, imenovano \emph{Enneperjeva ploskev}, ki jo je l.~1868 odkril A.~Enneper.
 
-Če za $ u,v \in \mathbb{R}$ pišemo $\zeta = u + iv$ in po komponentah izračunamo realne dele zgornjega integrala, dobimo konformno parametrizacijo $x \colon \mathbb{R}^2 \to \mathbb{R}^3$,
-\begin{gather}
+Če za $ u,v \in \mathbb{R}$ pišemo $\zeta = u + iv \in \mathbb{C}$ in po komponentah izračunamo realne dele zgornjega integrala, dobimo konformno parametrizacijo $x \colon \mathbb{R}^2 \to \mathbb{R}^3$,
+\begin{equation}
 x(u,v) = \left( \frac{u}{3} \left(3(1+v^2) - u^2 \right), \frac{v}{3} \left( v^2 - 3(1+u^2) \right), u^2 - v^2 \right).
-\end{gather}
+\end{equation}
 
 Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskve enaka $\mathfrak{g}(z) = z$, zato ima le-ta podobno kot katenoida totalno Gaussovo ukrivljenost enako $-4 \pi$. Izkaže se, da sta to edini polni\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{polna}.} neravni orientabilni minimalni ploskvi vloženi v $\mathbb{R}^3$, katerih totalna Gaussova ukrivljenost znaša $-4 \pi$. Poleg tega je Enneperjeva ploskev konjugirana sama sebi.
 
