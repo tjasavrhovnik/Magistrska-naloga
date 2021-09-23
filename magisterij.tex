@@ -540,7 +540,7 @@ V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi form
 % Aproksimacijski izreki za Riemannove ploskve
 \subsection{Aproksimacijski izreki za Riemannove ploskve}
 %
-\begin{izrek} [Rungejev aproksimacijski izrek za Riemannove ploskve]
+\begin{izrek} [Rungejev aproksimacijski izrek za Riemannove ploskve] \label{izr:Runge}
 Naj bo $M$ Riemannova ploskev in $K$ njena kompaktna podmnožica. 
 Potem lahko vsako funkcijo $f$, ki je holomorfna na okolici $K$, aproksimiramo enakomerno na $K$ z meromorfnimi funkcijami $F$ na $M$ brez polov na $K$, ter s holomorfnimi funkcijami na $M$, če $K$ nima lukenj.
 Funkcije $F$ lahko izberemo tako, da se z dano funkcijo $f$ na končni množici točk v $K$ ujemajo do izbranega končnega reda in da ima $F$ pole v podmnožici $E \subset M \backslash K$, kjer $E$ vsebuje točko v vsaki luknji množice $K$. 
@@ -558,7 +558,7 @@ Naj bo $K$ kompaktna podmnožica Riemannove ploskve $M$. Njena \emph{holomorfna 
 Naj bo $M$ odprta Riemannova ploskev in $K$ njena kompaktna podmnožica brez lukenj ($K$ je Rungejeva v $M$). Potem lahko vsako funkcijo v $\mathcal{A}(K)$ aproksimiramo enakomerno na $K$ s funkcijami v $\mathcal{O}(M)$.
 \end{izrek}
 
-\begin{izrek} [Weierstrass-Florackov interpolacijski izrek]
+\begin{izrek} [Weierstrass-Florackov interpolacijski izrek] \label{izr:Weierstrass-Florack}
 Naj bo $M$ odprta Riemannova ploskev in $K$ njena Rungejeva podmnožica. Naj bo $A = \{ a_i \}_{i=1}^{\infty}$ zaprta diskretna podmnožica v $M$, $U$ odprta podmnožica $M$, tako da je $A \cup K \subset U$ in $f$ meromorfna funkcija na $U$ z ničlami in poli le v točkah množice $A$.
 Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna funkcija $F$ na $M$, za katero velja:
 \begin{enumerate}
@@ -1063,38 +1063,58 @@ Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskv
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Izreki o aproksimaciji in interpolaciji minimalnih ploskev
+% Izreki o aproksimaciji in interpolaciji minimalnih ploskev
 \section{Izreki o aproksimaciji in interpolaciji minimalnih ploskev}
 
-\begin{definicija}
-Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
-\end{definicija}
+Glavni cilj magistrske naloge so izreki o aproksimaciji in interpolaciji minimalnih ploskev, ki jih bomo predstavili v tem poglavju. Osnovna ideja so klasični aproksimacijski in interpolacijski izreki za holomorfne funkcije -- Rungejev, Bishop-Mergelyanov in Weierstrass-Florackov izrek (Izreki~\ref{izr:Runge}, \ref{izr:Bishop-Mergelyan}, \ref{izr:Weierstrass-Florack}), katere je potrebno ustrezno prilagoditi.
 
-\begin{definicija}
+Osredotočili se bomo na povezane odprte Riemannove ploskve $M$ z izbrano fiksno strukturo kompleksne mnogoterosti, na katerih bomo definirali konformne minimalne imerzije $x \colon M \to \mathbb{R}^{n}$ oziroma holomorfne ničelne krivulje $z \colon M \to \mathbb{C}^{n}$ ($n \geq 3$).
+V nekaterih primerih bomo za $M$ izbrali kompaktno Riemannovo ploskev z robom, natančneje, kompaktno domeno $M$ z gladkim robom $bM$, ki je podmnožica odprte Riemannove ploskve.
+
+Najprej definirajmo različne tipe konformnih minimalnih imerzij glede na njihovo sliko ter pripadajoče prostore preslikav.
+
+% ravna, polna, neizrojena k.m.i.
+\begin{definicija} \label{def:full-flat-nd}
 Naj bo $M$ povezana odprta Riemannova ploskev ali kompaktna Riemannova ploskev z robom, na kateri je definirana povsod neničelna holomorfna 1-forma $\theta$. Konformno minimalno imerzijo $x \colon M \to \R^{n}$ imenujemo:
 \begin{enumerate}
 \item \emph{ravna}, če je slika $x(M)$ vsebovana v afini ravnini v $\R^{n}$; sicer pravimo, da je $x$ \emph{neravna};
-\item \emph{polna}, če je preslikava $f = 2 \partial{x} / \theta \colon M \to \textbf{\textup{A}}_{*}^{n-1}$ polna, tj.\ $\C$-linearna ogrinjača slike $f(M)$ je enaka $\C^{n}$;
+\item \emph{polna}, če je preslikava $f = 2 \partial{x} / \theta \colon M \to \textbf{\textup{A}}_{*}^{n-1}$ polna, tj.~$\C$-linearna ogrinjača slike $f(M)$ je enaka $\C^{n}$;
 \item \emph{neizrojena}, če slika $x(M)$ ni vsebovana v nobeni afini hiperravnini v $\R^{n}$. 
 \end{enumerate}
 \end{definicija}
 
 % [CITIRAJ - Osserman, Lemma 12.4]
 V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. V višjih dimenzijah ($n \geq 4$) veljata implikaciji
-\begin{center}
-polna $\Rightarrow$ neizrojena $\Rightarrow$ neravna.
-\end{center}
+\begin{gather} \label{implikacije:full-nd-nf}
+\text{polna} \ \Rightarrow \ \text{neizrojena} \ \Rightarrow \ \text{neravna}.
+\end{gather}
 Obratne implikacije ne vejajo.
 
-Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih presikav $M \to X$ označimo z $\mathcal{O}(M,X)$.
+Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih preslikav $M \to X$ označimo z $\mathcal{O}(M,X)$.
 Če je $K$ kompaktna podmnožica v $M$, množico preslikav $K \to X$ razreda $\mathcal{C}^{r}(M)$, ki so holomorfne v notranjosti $K^\circ \subset K$, označimo z $\mathcal{A}^{r}(K,X)$.
 V primeru, ko je $X = \C$, ustrezna prostora označimo z $\mathcal{O}(M)$ oziroma $\mathcal{A}^{r}(K)$.
 
-Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Prostor konformnih minimalnih imerzij $M \to \R^{n}$ označimo s $\textup{CMI}(M, \R^{n})$, prostor holomorfnih ničelnih imerzij $M \to \C^{n}$ pa z $\textup{NC}(M, \C^{n})$.
-Nadalje $\textup{CMI}_{full}(M, \R^{n})$ in $\textup{CMI}_{nf}(M, \R^{n})$ označujeta prostora polnih oziroma neravnih konformnih minimalnih imerzij. Velja inkluzija $\textup{CMI}_{full}(M, \R^{n}) \subset \textup{CMI}_{nf}(M, \R^{n})$.
-Podobno je $\textup{NC}_{full}(M, \C^{n}) \subset \textup{NC}_{nf}(M, \C^{n})$ v primeru polnih ter neravnih holomorfnih ničelnih krivulj.
+Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Prostor konformnih minimalnih imerzij $M \to \R^{n}$ označimo s $\textup{CMI}(M, \R^{n})$, prostor holomorfnih ničelnih krivulj $M \to \C^{n}$ pa z $\textup{NC}(M, \C^{n})$. Oba prostora sta opremljena s kompaktno-odprto topologijo\footnote{Naj bosta $X$ in $Y$ topološka prostora ter $\mathcal{C}(X,Y)$ prostor zveznih preslikav med njima. Množica $\mathcal{V} = \{ f \in \mathcal{C}(X,Y); \ f(K) \subset U, \ K \subset X \ \text{kompaktna}, \ U \subset Y \ \text{odprta} \}$ tvori podbazo \emph{kompaktno-odprte topologije} na prostoru $\mathcal{C}(X,Y)$.}.
+Nadalje $\textup{CMI}_{full}(M, \R^{n})$ in $\textup{CMI}_{nf}(M, \R^{n})$ označujeta prostora polnih oziroma neravnih konformnih minimalnih imerzij na povezanih komponentah $M$. Po zvezi~\eqref{implikacije:full-nd-nf} velja inkluzija 
+\begin{gather*}
+\textup{CMI}_{full}(M, \R^{n}) \subset \textup{CMI}_{nf}(M, \R^{n}).
+\end{gather*}
+%
+Podobno je 
+\begin{gather*}
+\textup{NC}_{full}(M, \C^{n}) \subset \textup{NC}_{nf}(M, \C^{n})
+\end{gather*} 
+v primeru polnih ter neravnih holomorfnih ničelnih krivulj, saj analogna definicija k Definiciji~\ref{def:full-flat-nd} velja za holomorfne ničelne krivulje. Vsi ti prostori so odprti podprostori v $\textup{CMI}(M, \R^{n})$ oziroma $\textup{NC}(M, \C^{n})$.
 
-Če je $M$ kompaktna omejena Riemannova ploskev z nepraznim gladkim robom $bM$ in $r \in \N$, tedaj prostor konformnih minimalnih imerzij $M \to \R^{n}$ razreda $\mathcal{C}^{r}(M)$ označimo s $\textup{CMI}^{r}(M, \R^{n})$, prostor holomorfnih ničenih imerzij $M \to \C^{n}$ razreda $\mathcal{A}^{r}(M)$ pa z $\textup{NC}^{r}(M, \C^{n})$.
+Če je $M$ kompaktna Riemannova ploskev z nepraznim gladkim robom $bM$ in $r \in \N$, tedaj prostor konformnih minimalnih imerzij $M \to \R^{n}$ razreda $\mathcal{A}^{r}(M)$ označimo s $\textup{CMI}^{r}(M, \R^{n})$, prostor holomorfnih ničenih krivulj $M \to \C^{n}$ razreda $\mathcal{A}^{r}(M)$ pa z $\textup{NC}^{r}(M, \C^{n})$.
+Odprte podprostore polnih in neravnih preslikav tokrat označimo podobno kot prej; zanje velja
+\begin{gather*}
+\textup{CMI}_{full}^{r}(M, \R^{n}) \subset \textup{CMI}_{nf}^{r}(M, \R^{n}), \quad \textup{NC}_{full}^{r}(M, \C^{n}) \subset \textup{NC}_{nf}^{r}(M, \C^{n}).
+\end{gather*}
+
+\begin{opomba}
+Imerzija $x \colon M \to \mathbb{R}^{n}$ razreda $\mathcal{A}^{r}(M)$ na kompaktni Riemannovi ploskvi z nepraznim gladkim robom $bM$ je element prostora $\textup{CMI}^{r}(M, \R^{n})$ natanko tedaj, ko je pripadajoča 1-forma $\partial x = (\partial x_{1}, \dots , \partial x_{n})$ holomorfna na $M^{\circ} = M \setminus bM$ in zadošča ničelnemu pogoju $(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0$.
+\end{opomba}
 
 \begin{lema} \label{lema:neravna f}
 Naj bo $M$ povezana Riemannova ploskev in $\textbf{\textup{A}}_{*}$ punktirana ničelna kvadrika.
@@ -1114,6 +1134,11 @@ Naj bosta $z, \ w \in \C_{*}^{n}$. Potem sta njuna tangentna prostora enaka, $ T
 Po definiciji je preslikava $f$ neravna, če njena slika $f(M)$ ni vsebovana v nobeni afini kompleksni premici v $\C^{n}$. Skupaj z zgornjim je slednje ekvivalnetno 
 $ Lin \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
 \end{dokaz}
+
+% dopustna množica
+\begin{definicija}
+Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
+\end{definicija}
 
 \begin{definicija}
 Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\Theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
