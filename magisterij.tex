@@ -1171,10 +1171,10 @@ Prvi pogoj iz definicije posplošene konformne minimalne imerzije pravi $f \thet
 
 Tudi za posplošene konformne minimalne imerzije velja Enneper-Weierstrassova formula.
 Naj bo $S$ povezana dopustna množica in $(x, f \theta) \in \textup{GCMI}^{r}(S, \R^{n})$. Za poljubno točko $p_{0} \in S$ in poznano preslikavo $f$ lahko posplošeno konformno minimalno imerzijo $x \colon S \to \R^{n}$ konstruiramo s formulo
-\begin{align} \label{eq:Wstrass-gcmi}
+\begin{align} \label{eq:EW-gcmi}
 x(p) = x(p_{0}) + \Re \int_{p_0}^{p} f \theta, \quad p \in S.
 \end{align} 
-Obratno, če za preslikavo $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ velja $ \Re \int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, potem le-ta določa posplošeno konformno minimalno imerzijo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:Wstrass-gcmi}.
+Obratno, če za preslikavo $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ velja $ \Re \int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, potem le-ta določa posplošeno konformno minimalno imerzijo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:EW-gcmi}.
 
 % posplošena ničelna krivulja
 \begin{definicija} [Posplošena ničelna krivulja]
@@ -1192,22 +1192,27 @@ Prostori neravnih, polnih in posplošenih ničelnih krivulj ustrezajo verigi ink
 \begin{gather*}
 \textup{GNC}_{full}^{r}(S, \C^{n}) \subset \textup{GNC}_{nf}^{r}(S, \C^{n}) \subset \textup{GNC}^{r}(S, \C^{n}).
 \end{gather*}
+
+\begin{opomba}
+Iz prvega pogoja v definiciji posplošene ničelne krivulje sledi, da je zožitev $z \colon K^{\circ} \to \mathbb{C}^{n}$ holomorfna ničelna krivulja.
+\end{opomba}
+
 Za povezano dopustno množico $S$, par $(z, f \theta) \in \textup{GNC}^{r}(S, \C^{n})$, znano preslikavo $f$ in poljubno točko $p_{0} \in S$ posplošeno ničelno krivuljo $z \colon S \to \C^{n}$ konstruiramo s pomočjo Enneper-Weierstrassove formule
-\begin{align} \label{eq:Wstrass-gnc}
+\begin{align} \label{eq:EW-gnc}
 z(p) = z(p_{0}) + \int_{p_0}^{p} f \theta, \quad p \in S.
 \end{align} 
-Velja tudi obrat; preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$, ki zadošča $\int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, določa posplošeno ničelno krivuljo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:Wstrass-gnc}.
+Velja tudi obrat; preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$, ki zadošča $\int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, določa posplošeno ničelno krivuljo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:EW-gnc}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Periodno dominantni spreji
 \subsection{Periodno dominantni spreji}
 %
-\begin{definicija}
-Naj bo $M$ povezana odprta Riemannova ploskev. Naj bo $\Theta$ fiksna povsod neničelna holomorfna 1-forma na $M$. Naj bo $\mathcal{C} = \{C_1, \dots , C_{l} \}$ družina gladkih orientiranih vloženih lokov in zaprtih Jordanovih krivulj v $M$ ter $C = \cup_{i=1}^{l} C_{i}$.
+\begin{definicija} [Periodna preslikava]
+Naj bo $M$ povezana odprta Riemannova ploskev. Naj bo $\theta$ fiksna povsod neničelna holomorfna 1-forma na $M$. Naj bo $\mathcal{C} = \{C_1, \dots , C_{l} \}$ družina gladkih orientiranih vloženih lokov in zaprtih Jordanovih krivulj v $M$ ter $C = \cup_{i=1}^{l} C_{i}$.
 Družini $\mathcal{C}$ in številu $n \in \N$ priredimo \emph{periodno preslikavo}
 \begin{align}
 \mathcal{P} = (\mathcal{P}_1, \dots , \mathcal{P}_{l}) \colon \mathcal{C}(C, \C^{n}) \to (\C^{n})^{l}, \nonumber \\
-\mathcal{P}_{i}(f) = \int_{C_{i}} f \Theta, \ i=1, \dots , l.
+\mathcal{P}_{i}(f) = \int_{C_{i}} f \theta, \ i=1, \dots , l.
 \end{align}
 Tu je $f \in \mathcal{C}(C, \C^{n})$ in $\mathcal{P}_{i}(f) \in \C^{n}$.
 \end{definicija}
@@ -1232,8 +1237,8 @@ Nadalje, za končno podmnožico $P \subset S$ lahko preslikavo $\Theta_{f}$ izbe
 Za vsako preslikavo $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki zadošča zgornjim predpostavkam, obstaja okolica $\Omega \subset \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ in holomorfna preslikava $f \mapsto \Theta_{f}$, $f \in \Omega$ z zgornjimi lastnostmi.
 \end{lema}
 
-\begin{definicija}
-Preslikavo $\Theta_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej} imenujemo \emph{periodno dominantni sprej} preslikav $S \to \textbf{\textup{A}}_{*}$ za družino krivulj $\mathcal{C}$ z \emph{jedrom} $\Theta_{f}(\cdot, 0) = f$. Lastnosti~\ref{PD-lastnost} pravimo \emph{periodno dominantna lastnost}.
+\begin{definicija} [Periodno dominantni sprej]
+Preslikavo $\Theta_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej} imenujemo \emph{periodno dominantni sprej} preslikav $S \to \textbf{\textup{A}}_{*}$ za družino krivulj $\mathcal{C}$ z \emph{jedrom} $\Theta_{f}(\cdot, 0) = f$. Lastnosti~\eqref{PD-lastnost} pravimo \emph{periodno dominantna lastnost}.
 \end{definicija}
 
 \begin{dokaz}
