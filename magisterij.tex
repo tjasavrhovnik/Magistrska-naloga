@@ -1071,6 +1071,10 @@ Glavni cilj magistrske naloge so izreki o aproksimaciji in interpolaciji minimal
 Osredotočili se bomo na povezane odprte Riemannove ploskve $M$ z izbrano fiksno strukturo kompleksne mnogoterosti, na katerih bomo definirali konformne minimalne imerzije $x \colon M \to \mathbb{R}^{n}$ oziroma holomorfne ničelne krivulje $z \colon M \to \mathbb{C}^{n}$ ($n \geq 3$).
 V nekaterih primerih bomo za $M$ izbrali kompaktno Riemannovo ploskev z robom, natančneje, kompaktno domeno $M$ z gladkim robom $bM$, ki je podmnožica odprte Riemannove ploskve.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Prostori preslikav in posplošene minimalne imerzije
+\subsection{Prostori preslikav in posplošene minimalne imerzije}
+%
 Najprej definirajmo različne tipe konformnih minimalnih imerzij glede na njihovo sliko ter pripadajoče prostore preslikav.
 
 % ravna, polna, neizrojena k.m.i.
@@ -1090,6 +1094,7 @@ V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. 
 \end{gather}
 Obratne implikacije ne vejajo.
 
+% prostori preslikav
 Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih preslikav $M \to X$ označimo z $\mathcal{O}(M,X)$.
 Če je $K$ kompaktna podmnožica v $M$, množico preslikav $K \to X$ razreda $\mathcal{C}^{r}(M)$, ki so holomorfne v notranjosti $K^\circ \subset K$, označimo z $\mathcal{A}^{r}(K,X)$.
 V primeru, ko je $X = \C$, ustrezna prostora označimo z $\mathcal{O}(M)$ oziroma $\mathcal{A}^{r}(K)$.
@@ -1106,7 +1111,7 @@ Podobno je
 \end{gather*} 
 v primeru polnih ter neravnih holomorfnih ničelnih krivulj, saj analogna definicija k Definiciji~\ref{def:full-flat-nd} velja za holomorfne ničelne krivulje. Vsi ti prostori so odprti podprostori v $\textup{CMI}(M, \R^{n})$ oziroma $\textup{NC}(M, \C^{n})$.
 
-Če je $M$ kompaktna Riemannova ploskev z nepraznim gladkim robom $bM$ in $r \in \N$, tedaj prostor konformnih minimalnih imerzij $M \to \R^{n}$ razreda $\mathcal{A}^{r}(M)$ označimo s $\textup{CMI}^{r}(M, \R^{n})$, prostor holomorfnih ničenih krivulj $M \to \C^{n}$ razreda $\mathcal{A}^{r}(M)$ pa z $\textup{NC}^{r}(M, \C^{n})$.
+Če je $M$ kompaktna Riemannova ploskev z nepraznim gladkim robom $bM$ in $r \in \N$, tedaj prostor konformnih minimalnih imerzij $M \to \R^{n}$ razreda $\mathcal{A}^{r}(M)$ označimo s $\textup{CMI}^{r}(M, \R^{n})$, prostor holomorfnih ničelnih krivulj $M \to \C^{n}$ razreda $\mathcal{A}^{r}(M)$ pa z $\textup{NC}^{r}(M, \C^{n})$.
 Odprte podprostore polnih in neravnih preslikav tokrat označimo podobno kot prej; zanje velja
 \begin{gather*}
 \textup{CMI}_{full}^{r}(M, \R^{n}) \subset \textup{CMI}_{nf}^{r}(M, \R^{n}), \quad \textup{NC}_{full}^{r}(M, \C^{n}) \subset \textup{NC}_{nf}^{r}(M, \C^{n}).
@@ -1116,36 +1121,38 @@ Odprte podprostore polnih in neravnih preslikav tokrat označimo podobno kot pre
 Imerzija $x \colon M \to \mathbb{R}^{n}$ razreda $\mathcal{A}^{r}(M)$ na kompaktni Riemannovi ploskvi z nepraznim gladkim robom $bM$ je element prostora $\textup{CMI}^{r}(M, \R^{n})$ natanko tedaj, ko je pripadajoča 1-forma $\partial x = (\partial x_{1}, \dots , \partial x_{n})$ holomorfna na $M^{\circ} = M \setminus bM$ in zadošča ničelnemu pogoju $(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0$.
 \end{opomba}
 
+% lema - neravna preslikava
 \begin{lema} \label{lema:neravna f}
 Naj bo $M$ povezana Riemannova ploskev in $\textbf{\textup{A}}_{*}$ punktirana ničelna kvadrika.
 Holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$ je neravna natanko tedaj, ko je linearna ogrinjača tangentnih prostorov 
-$T_{f(p)} A \subset T_{f(p)} \C^{n}$ po vseh $p \in M$ enaka $\C^{n}$.
+$T_{f(p)} \textbf{\textup{A}} \subset T_{f(p)} \C^{n} \cong \mathbb{C}^{n}$ po vseh $p \in M$ enaka $\C^{n}$.
 \end{lema}
 
 \begin{dokaz}
 Oglejmo si preslikavo 
 $\Phi \colon \C^{n} \to \C$, definirano s predpisom $\Phi(z) = \sum_{j=1}^{n} z_{j}^{2}$.
-Ničelno kvadriko~\ref{ničelna-kvadrika} tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0 \} )$.
+Ničelno kvadriko~\eqref{ničelna-kvadrika} tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0 \} )$.
 Njen tangentni prostor v točki $z = (z_{1}, \dots , z_{n}) \in \C^{n}$ je enak jedru diferenciala, ki kvadriko določa, zato je
 \[ T_{z} \textbf{\textup{A}} = \ker (d \Phi_{z}) = \ker (z \mapsto \sum_{j=1}^{n} z_{j} dz_{j}). \]
 
-Naj bosta $z, \ w \in \C_{*}^{n}$. Potem sta njuna tangentna prostora enaka, $ T_{z} \textbf{\textup{A}} = T_{w} \textbf{\textup{A}} $, natanko tedaj, ko je $z_{j} = \lambda w_{j}$ za vse $j = 1, \dots , n$ in nek $\lambda \in \C$, kar je ekvivalentno pogoju, da sta vektorja $z$ in $w$ kolinearna.
+Naj bosta vektorja $z, \ w \in \C_{*}^{n}$. Potem sta njuna tangentna prostora enaka, $ T_{z} \textbf{\textup{A}} = T_{w} \textbf{\textup{A}} $, natanko takrat, ko velja $z_{j} = \lambda w_{j}$ za vse $j = 1, \dots , n$ in nek $\lambda \in \C$, kar je ekvivalentno pogoju, da sta vektorja $z$ in $w$ kolinearna.
 
-Po definiciji je preslikava $f$ neravna, če njena slika $f(M)$ ni vsebovana v nobeni afini kompleksni premici v $\C^{n}$. Skupaj z zgornjim je slednje ekvivalnetno 
-$ Lin \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
+Po definiciji je preslikava $f$ neravna, če njena slika $f(M)$ ni vsebovana v nobeni afini kompleksni premici v $\C^{n}$. Skupaj z zgornjim je slednje ekvivalentno 
+$ \mathcal{L}in \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
 \end{dokaz}
 
+V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih konformnih minimalnih imerzij in ničelnih krivulj operirali s splošnejšimi preslikavami, imenovanimi posplošene minimalne imerzije ter ničelne krivulje; naravno pa se bodo zaradi topoloških lastnosti množic, na katerih bomo preslikave aproksimirali, pojavile tudi množice iz naslednje definicije.
 % dopustna množica
 \begin{definicija}
 Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
 \end{definicija}
 
 \begin{definicija}
-Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\Theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
-Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena konformna minimalna imerzija} $S \to \R^{n}$ razreda $\mathcal{C}^{r}$ je par $(x, f \Theta)$, kjer je $x \colon S \to \R^{n}$ preslikava razreda  $\mathcal{C}^{r}$, njena zožitev na $S^\circ = K^\circ$ je konformna minimalna imerzija in preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadošča naslednjima pogojema:
+Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
+Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena konformna minimalna imerzija} $S \to \R^{n}$ razreda $\mathcal{C}^{r}$ je par $(x, f \theta)$, kjer je $x \colon S \to \R^{n}$ preslikava razreda  $\mathcal{C}^{r}$, njena zožitev na $S^\circ = K^\circ$ je konformna minimalna imerzija in preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadošča naslednjima pogojema:
 \begin{enumerate}
-\item na množici $K$ velja $f \Theta = 2 \partial x$;
-\item za vsako gladko pot $\alpha$ v $M$, ki parametrizira povezano komponento $E = \overline{S \setminus K}$ velja $ \Re(\alpha^{*}(f \Theta)) = \alpha^{*}(dx) = d(x \circ \alpha)$.
+\item na množici $K$ velja $f \theta = 2 \partial x$;
+\item za vsako gladko pot $\alpha$ v $M$, ki parametrizira povezano komponento množice $E = \overline{S \setminus K}$, velja $ \Re(\alpha^{*}(f \theta)) = \alpha^{*}(dx) = d(x \circ \alpha)$.
 \end{enumerate}
 %
 Posplošena konformna minimalna imerzija $(x, f \Theta)$ je \emph{neravna} oziroma \emph{polna} natanko tedaj, ko je preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ neravna oziroma polna na vsaki relativno odprti podmnožici $S$.
@@ -1155,8 +1162,8 @@ Prostor posplošenih konformnih minimalnih imerzij $S \to \R^{n}$ razreda $\math
 \[ \textup{GCMI}_{full}^{r}(S, \R^{n}) \subset \textup{GCMI}_{nf}^{r}(S, \R^{n}) \subset \textup{GCMI}^{r}(S, \R^{n}). \]
 
 \begin{opomba}
-Diferencial $d$ v kompleksnem ima obliko $d = \partial + \bar{\partial}$. \emph{Konjugirani difernecial} $d^{c}$ je enak $d^{c} = i(\bar{\partial} - \partial) = 2 \Im(\partial)$. Zato velja $d + i d^{c} = 2 \partial$ oziroma drugače, $\Re(2 \partial) = dx$.
-Prvi pogoj iz definicije posplošene konformne minimalne imerzije pravi $f \Theta = 2 \partial$, od koder sledi $\Re(f \Theta) = \Re(2 \partial) = dx$. Zato je drugi pogoj iz zgornje definicije skladen s prvim.
+Diferencial $d$ v kompleksnem ima obliko $d = \partial + \bar{\partial}$. \emph{Konjugirani difernecial} $d^{c}$ je enak $d^{c} = i(\bar{\partial} - \partial) = 2 \Im(\partial)$. Zato velja $d + i d^{c} = 2 \partial$ oziroma drugače, $\Re(2 \partial x) = dx$.
+Prvi pogoj iz definicije posplošene konformne minimalne imerzije pravi $f \theta = 2 \partial x$, od koder sledi $\Re(f \theta) = \Re(2 \partial x) = dx$. Zato je drugi pogoj iz zgornje definicije skladen s prvim.
 \end{opomba}
 
 Tudi za posplošene konformne minimalne imerzije velja Weierstrassova formula.
@@ -1185,6 +1192,10 @@ z(p) = z(p_{0}) + \int_{p_0}^{p} f \Theta, \ p \in S.
 \end{align} 
 Velja tudi obrat; preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$, ki zadošča $\int_{C} f \Theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, določa posplošeno ničelno krivuljo, dano z Weierstrassovo formulo~\ref{eq:Wstrass-gnc}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Periodno dominantni spreji
+\subsection{Periodno dominantni spreji}
+%
 \begin{definicija}
 Naj bo $M$ povezana odprta Riemannova ploskev. Naj bo $\Theta$ fiksna povsod neničelna holomorfna 1-forma na $M$. Naj bo $\mathcal{C} = \{C_1, \dots , C_{l} \}$ družina gladkih orientiranih vloženih lokov in zaprtih Jordanovih krivulj v $M$ ter $C = \cup_{i=1}^{l} C_{i}$.
 Družini $\mathcal{C}$ in številu $n \in \N$ priredimo \emph{periodno preslikavo}
