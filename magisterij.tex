@@ -600,7 +600,7 @@ Opazimo, da je za dovolj majhne vrednosti $t$ preslikava $x^{t}$ imerzija.
 Po definiciji je na množici $bM \times (-\varepsilon, \varepsilon)$ variacijsko vektorsko polje $E$ konstantno ničelno.
 
 % Minimalna ploskev
-\begin{definicija}
+\begin{definicija} [Minimalna ploskev]
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Sliko $x(M)$ imenujemo \emph{minimalna ploskev}, če za vsako kompaktno domeno $D \subset M$ z gladkim robom $bD$ in vsako gladko variacijo $x^{t}$ preslikave $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-ploščine}
 \frac{d}{dt} \Big|_{t=0} \text{Area} \left(x^{t}(D)\right) = 0.
@@ -1143,11 +1143,12 @@ $ \mathcal{L}in \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo
 
 V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih konformnih minimalnih imerzij in ničelnih krivulj operirali s splošnejšimi preslikavami, imenovanimi posplošene minimalne imerzije ter ničelne krivulje; naravno pa se bodo zaradi topoloških lastnosti množic, na katerih bomo preslikave aproksimirali, pojavile tudi množice iz naslednje definicije.
 % dopustna množica
-\begin{definicija}
+\begin{definicija} [Dopustna množica]
 Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
 \end{definicija}
 
-\begin{definicija}
+% posplošena konformna minimalna imerzija
+\begin{definicija} [Posplošena konformna minimalna imerzija]
 Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
 Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena konformna minimalna imerzija} $S \to \R^{n}$ razreda $\mathcal{C}^{r}$ je par $(x, f \theta)$, kjer je $x \colon S \to \R^{n}$ preslikava razreda  $\mathcal{C}^{r}$, njena zožitev na $S^\circ = K^\circ$ je konformna minimalna imerzija in preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadošča naslednjima pogojema:
 \begin{enumerate}
@@ -1155,42 +1156,47 @@ Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena konformna minimalna imerzi
 \item za vsako gladko pot $\alpha$ v $M$, ki parametrizira povezano komponento množice $E = \overline{S \setminus K}$, velja $ \Re(\alpha^{*}(f \theta)) = \alpha^{*}(dx) = d(x \circ \alpha)$.
 \end{enumerate}
 %
-Posplošena konformna minimalna imerzija $(x, f \Theta)$ je \emph{neravna} oziroma \emph{polna} natanko tedaj, ko je preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ neravna oziroma polna na vsaki relativno odprti podmnožici $S$.
+Posplošena konformna minimalna imerzija $(x, f \theta)$ je \emph{neravna} oziroma \emph{polna} natanko tedaj, ko je preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ neravna oziroma polna na vsaki relativno odprti podmnožici $S$.
 \end{definicija}
 
 Prostor posplošenih konformnih minimalnih imerzij $S \to \R^{n}$ razreda $\mathcal{C}^{r}$ označimo z $\textup{GCMI}^{r}(S, \R^{n})$. Analogno kot v primeru konformnih minimalnih imerzij velja 
-\[ \textup{GCMI}_{full}^{r}(S, \R^{n}) \subset \textup{GCMI}_{nf}^{r}(S, \R^{n}) \subset \textup{GCMI}^{r}(S, \R^{n}). \]
+\begin{gather*}
+\textup{GCMI}_{full}^{r}(S, \R^{n}) \subset \textup{GCMI}_{nf}^{r}(S, \R^{n}) \subset \textup{GCMI}^{r}(S, \R^{n}).
+\end{gather*}
 
 \begin{opomba}
-Diferencial $d$ v kompleksnem ima obliko $d = \partial + \bar{\partial}$. \emph{Konjugirani difernecial} $d^{c}$ je enak $d^{c} = i(\bar{\partial} - \partial) = 2 \Im(\partial)$. Zato velja $d + i d^{c} = 2 \partial$ oziroma drugače, $\Re(2 \partial x) = dx$.
+Spomnimo se diferenciala in konjugiranega diferenciala v kompleksnem. Zanju velja $d + i d^{c} = 2 \partial$ oziroma drugače, $\Re(2 \partial x) = dx$.
 Prvi pogoj iz definicije posplošene konformne minimalne imerzije pravi $f \theta = 2 \partial x$, od koder sledi $\Re(f \theta) = \Re(2 \partial x) = dx$. Zato je drugi pogoj iz zgornje definicije skladen s prvim.
 \end{opomba}
 
-Tudi za posplošene konformne minimalne imerzije velja Weierstrassova formula.
-Naj bo $S$ povezana dopustna množica in $(x, f \Theta) \in \textup{GCMI}^{r}(S, \R^{n})$. Za poljubno točko $p_{0} \in S$ in poznano preslikavo $f$ lahko preslikavo $x \colon S \to \R^{n}$ konstruiramo s formulo
+Tudi za posplošene konformne minimalne imerzije velja Enneper-Weierstrassova formula.
+Naj bo $S$ povezana dopustna množica in $(x, f \theta) \in \textup{GCMI}^{r}(S, \R^{n})$. Za poljubno točko $p_{0} \in S$ in poznano preslikavo $f$ lahko posplošeno konformno minimalno imerzijo $x \colon S \to \R^{n}$ konstruiramo s formulo
 \begin{align} \label{eq:Wstrass-gcmi}
-x(p) = x(p_{0}) + \Re \int_{p_0}^{p} f \Theta, \ p \in S.
+x(p) = x(p_{0}) + \Re \int_{p_0}^{p} f \theta, \quad p \in S.
 \end{align} 
-Obratno, če za preslikavo $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ velja $ \Re \int_{C} f \Theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, potem $f$ določa posplošeno konformno minimalno imerzijo, dano z Weierstrassovo formulo~\ref{eq:Wstrass-gcmi}.
+Obratno, če za preslikavo $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ velja $ \Re \int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, potem le-ta določa posplošeno konformno minimalno imerzijo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:Wstrass-gcmi}.
 
-\begin{definicija}
-Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\Theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
-Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena ničelna krivulja} $S \to \C^{n}$ razreda $\mathcal{C}^{r}$ je par $(z, f \Theta)$, kjer preslikavi $z \in \mathcal{A}^{r}(S, \C^{n})$ in $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadoščata naslednjima pogojema:
+% posplošena ničelna krivulja
+\begin{definicija} [Posplošena ničelna krivulja]
+Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
+Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena ničelna krivulja} $S \to \C^{n}$ razreda $\mathcal{C}^{r}$ je par $(z, f \theta)$, kjer preslikavi $z \in \mathcal{A}^{r}(S, \C^{n})$ in $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadoščata naslednjima pogojema:
 \begin{enumerate}
-\item na množici $K$ velja $f \Theta = dz = \partial z$;
-\item za vsako gladko pot $\alpha$ v $M$, ki parametrizira povezano komponento $E = \overline{S \setminus K}$ velja $ \alpha^{*}(f \Theta)) = \alpha^{*}(dz) = d(z \circ \alpha)$.
+\item na množici $K$ velja $f \theta = dz = \partial z$;
+\item za vsako gladko pot $\alpha$ v $M$, ki parametrizira povezano komponento množice $E = \overline{S \setminus K}$ velja $ \alpha^{*}(f \theta) = \alpha^{*}(dz) = d(z \circ \alpha)$.
 \end{enumerate}
 %
-Posplošena ničelna krivulja $(z, f \Theta)$ je \emph{neravna} oziroma \emph{polna} natanko tedaj, ko je preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ neravna oziroma polna na vsaki relativno odprti podmnožici $S$.
+Posplošena ničelna krivulja $(z, f \theta)$ je \emph{neravna} oziroma \emph{polna} natanko tedaj, ko je preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ neravna oziroma polna na vsaki relativno odprti podmnožici $S$.
 \end{definicija}
 
 Prostori neravnih, polnih in posplošenih ničelnih krivulj ustrezajo verigi inkluzij
-\[ \textup{GNC}_{full}^{r}(S, \C^{n}) \subset \textup{GNC}_{nf}^{r}(S, \C^{n}) \subset \textup{GNC}^{r}(S, \C^{n}). \]
-Za povezano dopustno množico $S$, $(z, f \Theta) \in \textup{GNC}^{r}(S, \C^{n})$, znano preslikavo $f$ in točko $p_{0} \in S$ preslikavo $z \colon S \to \C^{n}$ konstruiramo s pomočjo Weierstrassove formule
+\begin{gather*}
+\textup{GNC}_{full}^{r}(S, \C^{n}) \subset \textup{GNC}_{nf}^{r}(S, \C^{n}) \subset \textup{GNC}^{r}(S, \C^{n}).
+\end{gather*}
+Za povezano dopustno množico $S$, par $(z, f \theta) \in \textup{GNC}^{r}(S, \C^{n})$, znano preslikavo $f$ in poljubno točko $p_{0} \in S$ posplošeno ničelno krivuljo $z \colon S \to \C^{n}$ konstruiramo s pomočjo Enneper-Weierstrassove formule
 \begin{align} \label{eq:Wstrass-gnc}
-z(p) = z(p_{0}) + \int_{p_0}^{p} f \Theta, \ p \in S.
+z(p) = z(p_{0}) + \int_{p_0}^{p} f \theta, \quad p \in S.
 \end{align} 
-Velja tudi obrat; preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$, ki zadošča $\int_{C} f \Theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, določa posplošeno ničelno krivuljo, dano z Weierstrassovo formulo~\ref{eq:Wstrass-gnc}.
+Velja tudi obrat; preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$, ki zadošča $\int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, določa posplošeno ničelno krivuljo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:Wstrass-gnc}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Periodno dominantni spreji
