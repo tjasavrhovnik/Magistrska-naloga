@@ -1240,7 +1240,7 @@ Za vsako preslikavo $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki 
 Preslikavo $\Phi_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej} imenujemo \emph{periodno dominantni sprej} preslikav $S \to \textbf{\textup{A}}_{*}$ za družino krivulj $\mathcal{C}$ z \emph{jedrom} $\Phi_{f}(\cdot, 0) = f$. Lastnosti~\eqref{PD-lastnost} pravimo \emph{periodno dominantna lastnost}.
 \end{definicija}
 
-% dokaz leme
+%%%%% dokaz leme
 \begin{dokaz}
 Prvi del leme bomo dokazali tako, da bomo konstruirali periodno dominantni sprej. Potrebovali bomo Lemo~\ref{lema:neravna f}, Bishop-Mergelyanov izrek o aproksimaciji~\ref{izr:Bishop-Mergelyan} in pojem toka vektorskega polja.
 Zaradi enostavnosti postavimo $r=0$ (za $r>0$ dokaz poteka analogno).
@@ -1267,18 +1267,26 @@ Naj bo $\mathcal{P} = (\mathcal{P}_{1}, \dots, \mathcal{P}_{l})$ periodna presli
 \begin{gather} \label{eq:dP/dt}
 \frac{\partial \mathcal{P}_{i}(\Phi(\cdot, t))}{\partial t_{m,j}} \Big|_{t=0} = \frac{\partial}{\partial t_{m,j}} \Big|_{t=0} \int_{C_{i}} \Phi(\cdot, t) \cdot \theta = \int_{C_{i}} g_{m,j} \cdot (V_{m,j} \circ f) \cdot \theta \in \C^{n}.
 \end{gather}
-Matrika diferencialov~\eqref{PD-lastnost} iz leme je sestavljena iz blokov velikosti $n \times n$, ki pripadajo indeksom $i, m \in \{1, \dots, l \}$. Z ustrezno izbiro preslikav $g_{i,j}$ opisanih zgoraj lahko dosežemo, da je matrika bločno diagonalna z obrnljivimi bloki na diagonali. (To pomeni, da so vektorji~\eqref{eq:dP/dt} blizu vektorjem $V_{i,j}(f(p_{i,j}))$ za $i = m$, medtem ko so za $i \neq m$ vektorji~\eqref{eq:dP/dt} ničelni.) S tem postane celotna matrika obrnljiva.
+Matrika diferencialov~\eqref{PD-lastnost} iz leme je sestavljena iz blokov velikosti $n \times n$, ki pripadajo indeksom $i, m \in \{1, \dots, l \}$. Z ustrezno izbiro preslikav $g_{i,j}$, opisanih zgoraj, lahko dosežemo, da je matrika bločno diagonalna z obrnljivimi bloki na diagonali. (To pomeni, da so vektorji~\eqref{eq:dP/dt} blizu vektorjem $V_{i,j}(f(p_{i,j}))$ za $i = m$, medtem ko so za $i \neq m$ vektorji~\eqref{eq:dP/dt} ničelni.) S tem postane celotna matrika obrnljiva.
 
 V naslednjem koraku bomo modificirali še preslikavo $\Phi$, kar nam bo dalo iskani periodno dominantni sprej.
 Preslikave $g_{i,j}$ so definirane na množici $C$, ki je po predpostavki Rungejeva v $S$. Bishop-Mergelyanov izrek o aproksimaciji pove, da vsako funkcijo $g_{i,j}$ lahko enakomerno na $C$ aproksimiramo s holomorfnimi funkcijami $\tilde{g}_{i,j}$ v okolici $S$.
 
-Definirajmo preslikavo $\Phi_{f} \colon S \times U \to \textbf{\textup{A}}_{*}$ tako, da v predpisu~\eqref{predpis-Phi} nadomestimo $g_{i,j}$ z novimi preslikavami $\tilde{g}_{i,j}$ in je $U \subset U_{1} \subset \C^{nl}$ ustrezno majhna okolica izhodišča. Po konstrukciji takšna preslikava $\Phi_{f}$ zadošča sklepom leme, zato je periodno dominantni sprej, ki smo ga iskali.
+Definirajmo preslikavo $\Phi_{f} \colon S \times U \to \textbf{\textup{A}}_{*}$ tako, da v predpisu~\eqref{predpis-Phi} nadomestimo $g_{i,j}$ z novimi preslikavami $\tilde{g}_{i,j}$ in je $U \subset U_{1} \subset \C^{nl}$ ustrezno majhna okolica točke $0 \in \mathbb{C}^{nl}$. Po konstrukciji takšna preslikava $\Phi_{f}$ zadošča sklepom leme, zato je periodno dominantni sprej, ki smo ga iskali.
 
-Sedaj poglejmo še interpolacijski del leme. Naj bo $P \subset S$ končna podmnožica in $q \in \mathbb{N}$ izbrano fiksno število. Vzemimo holomorfno funkcijo $h \colon S \to \mathbb{C}$, ki ima ničle natanko v točkah množice $P$, le-te pa so reda $q+1$. Kot prej obstajajo točke $p_{i,j} \in I_{i} \setminus P$, holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$ ter preslikave $g_{i,j}$ s kompaktnimi nosilci okrog točk $p_{i,j}$. V predpisu~\eqref{predpis-Phi} najprej nadomestimo $g_{i,j}$ s preslikavami $h \cdot g_{i,j}$, da dobimo preslikavo, ki zadošča analogu k~\eqref{eq:dP/dt}. Nato preslikave $g_{i,j}$ aproksimiramo z $\tilde{g}_{i,j} \in \mathcal{O}(S)$ ter v predpis~\eqref{predpis-Phi} vstavimo produkte $h \cdot \tilde{g}_{i,j}$ -- nova preslikava $\Phi_{f}$ definira periodno dominantni sprej, ki dodatno zadošča interpolacijskim zahtevam.
+% interpolacijski del leme
+Sedaj poglejmo še interpolacijski del leme. Naj bo $P \subset S$ končna podmnožica in $q \in \mathbb{N}$ izbrano fiksno število. Vzemimo holomorfno funkcijo $h \colon S \to \mathbb{C}$, ki ima ničle natanko v točkah množice $P$, le-te pa so reda $q+1$. Kot prej obstajajo točke $p_{i,j} \in I_{i} \setminus P$, holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$ ter gladke preslikave $g_{i,j}$ s kompaktnimi nosilci okrog točk $p_{i,j}$. V predpisu~\eqref{predpis-Phi} najprej nadomestimo $g_{i,j}$ s preslikavami $h \cdot g_{i,j}$, da dobimo preslikavo $\Phi$, ki zadošča analogu k~\eqref{eq:dP/dt}. Nato preslikave $g_{i,j}$ aproksimiramo z $\tilde{g}_{i,j} \in \mathcal{O}(S)$ ter v predpis~\eqref{predpis-Phi} vstavimo produkte $h \cdot \tilde{g}_{i,j}$ -- nova preslikava $\Phi_{f}$ definira periodno dominantni sprej, ki dodatno zadošča interpolacijskim zahtevam.
 Res, preslikava $(p,t) \mapsto \Phi_{h(p) \tilde{g}_{m,j}(p) t}^{m,j} (f(p))$ se z $f$ ujema v točkah množice $P$, v točkah $p \in P \cap S^{\circ}$ pa se ujemata do reda $q$. (To vidimo tako, da tok vektorskega polja zapišemo s Taylorjevim razvojem do 2.~reda in upoštevamo stopnje ničel funkcije $h$ v točkah $p \in P$.) Zato enako velja tudi za njihov kompozitum.
+% Zadnji del - CITIRAJ VIR 12, Lemma 2.2
 
-Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ dana, potem lahko za vse preslikave $f$ iz okolice $\Omega$ za $f_{0}$ pri konstrukciji periodno dominantnih sprejev uporabimo iste aproksimacijske preslikave $\tilde{g}_{i,j}$.
+Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ dana, potem lahko za vse preslikave $f$ iz okolice $\Omega \subset \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ za $f_{0}$ pri konstrukciji periodno dominantnih sprejev uporabimo iste aproksimacijske preslikave $\tilde{g}_{i,j}$.
 \end{dokaz}
+%%%%% konec dokaza
+
+% globalno def. PDS
+\begin{opomba}
+Če v zgornjem dokazu izberemo polna holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$, namesto lokalnega konstruiramo globalno definiran periodno dominantni sprej $\Phi_{f} \colon S \times \mathbb{C}^{n} \to \textbf{\textup{A}}_{*}$.
+\end{opomba}
 
 \begin{trditev}
 Naj bo $M$ odprta Riemannova ploskev, $\Theta$ povsod neničelna holomorfna 1-forma na $M$, $S$ povezana dopustna množica, ki je Rungejeva v $M$ in $A=\{a_{1}, \dots , a_{k} \} \subset S$. Naj bosta $r, s \in \N$. 
