@@ -1288,6 +1288,36 @@ Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{
 Če v zgornjem dokazu izberemo polna holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$, namesto lokalnega konstruiramo globalno definiran periodno dominantni sprej $\Phi_{f} \colon S \times \mathbb{C}^{n} \to \textbf{\textup{A}}_{*}$.
 \end{opomba}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Oka mnogoterost, aproksimacija na Oka in dopustnih množicah, Rungejeva baza homologije na dopustnih množicah = priprava na Glavni izrek in lem pred njim
+%
+% Oka mnogoterost
+\begin{definicija} [Oka mnogoterost]
+Naj bo $X$ kompleksna mnogoterost in $n \in \mathbb{N}$. Če za poljubno kompaktno konveksno množico $K \subset \mathbb{C}^{n}$ vsako holomorfno preslikavo $f \colon U \to X$, kjer je $U$ okolica $K$, lahko aproksimiramo enakomerno na $K$ s celimi preslikavami $F \colon \mathbb{C}^{n} \to X$, potem mnogoterosti $X$ pravimo \emph{Oka mnogoterost}.
+\end{definicija}
+
+% CITIRAJ [Definition 1.13.7, Minimal surfaces from a complex analytic viewpoint (fleksibilna mnt.)] & [Stein mnf's and holomorphic mappings, Forstneric: Proposition 5.6.22]
+\begin{primer} [$\textbf{\textup{A}}_{*}$ je Oka mnogoterost]
+Naj bo $z = (z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}$ in $n \geq 2$. Tedaj  homogen kvadratni polinom $p(z) = z_{1}^{2} + \cdots + z_{n}^{2}$ določa ničelno kvadriko $\textbf{\textup{A}} = \{z ; \ p(z)=0 \} \subset \mathbb{C}^{n}$.
+Za indekse $1 \leq i \neq j \leq n$ definirajmo holomorfna vektorska polja na $ \textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{ 0 \}$ s predpisi
+\begin{gather*}
+V_{ij} = z_{i} \frac{\partial}{\partial z_{j}} - z_{j} \frac{\partial}{\partial z_{i}}.
+\end{gather*}
+Očitno so $\mathbb{C}$-linearna in polna, tangentna na punktirano ničelno kvadriko $\textbf{\textup{A}}_{*}$ in $\mathcal{L}in \{ V_{ij}(x) ; \ x \in \textbf{\textup{A}}_{*} \} = T_{x}\textbf{\textup{A}}_{*}$. Po definiciji je zato kompleksna mnogoterost $\textbf{\textup{A}}_{*}$ \emph{fleksibilna mnogoterost}, kar pomeni, da je tudi Oka mnogoterost.
+\end{primer}
+
+\begin{lema} [Rungejeva baza homologije povezane dopustne množice]
+Naj bo $S$ povezana dopustna množica. Obstaja baza homologije $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$ za $S$, sestavljena iz takih zaprtih odsekoma gladkih Jordanovih krivulj v $S$, da je unija $C = \cup_{i=1}^{l} C_{i}$ povezana in Rungejeva v vsaki regularni okolici $S_{\varepsilon}$ množice $S$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{j \neq i} C_{j}) = \emptyset$.
+Prva homološka grupa povezane dopustne množice $S$ je končno generirana: $H_{1}(S, \mathbb{Z}) \cong \mathbb{Z}^{l}$.
+\end{lema}
+
+Za $\varepsilon > 0$ je \emph{regularna okolica} dopustne množice $S \subset M$ enaka
+\begin{gather}
+S_{\varepsilon} = \{ x \in M; \ d(x,S) < \varepsilon \}.
+\end{gather}
+Množica $S_{\varepsilon}$ je odprta okolica za $S$, slednja nima lukenj v $S_{\varepsilon}$, zato je $S$ Rungejeva podmnožica svoje regularne okolice.
+
+% Glavni rezultati
 \begin{trditev}
 Naj bo $M$ odprta Riemannova ploskev, $\Theta$ povsod neničelna holomorfna 1-forma na $M$, $S$ povezana dopustna množica, ki je Rungejeva v $M$ in $A=\{a_{1}, \dots , a_{k} \} \subset S$. Naj bosta $r, s \in \N$. 
 Potem lahko vsako posplošeno konformno minimalno imerzijo $(x, f\Theta) \in GCMI^{r}(S,\R^{n})$ aproksimiramo s konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$ razreda $\mathcal{C}^{r}$, za katere velja $\textup{Flux}_{X} = \textup{Flux}_{x}$. 
