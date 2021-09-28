@@ -1284,7 +1284,7 @@ Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{
 %%%%% konec dokaza
 
 % globalno def. PDS
-\begin{opomba}
+\begin{opomba} \label{op:PDS-globalno}
 Če v zgornjem dokazu izberemo polna holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$, namesto lokalnega konstruiramo globalno definiran periodno dominantni sprej $\Phi_{f} \colon S \times \mathbb{C}^{n} \to \textbf{\textup{A}}_{*}$.
 \end{opomba}
 
@@ -1297,7 +1297,7 @@ Naj bo $X$ kompleksna mnogoterost in $n \in \mathbb{N}$. Če za poljubno kompakt
 \end{definicija}
 
 % CITIRAJ [Definition 1.13.7, Minimal surfaces from a complex analytic viewpoint (fleksibilna mnt.)] & [Stein mnf's and holomorphic mappings, Forstneric: Proposition 5.6.22]
-\begin{primer} [$\textbf{\textup{A}}_{*}$ je Oka mnogoterost]
+\begin{primer} [$\textbf{\textup{A}}_{*}$ je Oka mnogoterost] \label{primer-oka}
 Naj bo $z = (z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}$ in $n \geq 2$. Tedaj  homogen kvadratni polinom $p(z) = z_{1}^{2} + \cdots + z_{n}^{2}$ določa ničelno kvadriko $\textbf{\textup{A}} = \{z ; \ p(z)=0 \} \subset \mathbb{C}^{n}$.
 Za indekse $1 \leq i \neq j \leq n$ definirajmo holomorfna vektorska polja na $ \textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{ 0 \}$ s predpisi
 \begin{gather*}
@@ -1306,7 +1306,7 @@ V_{ij} = z_{i} \frac{\partial}{\partial z_{j}} - z_{j} \frac{\partial}{\partial 
 Očitno so $\mathbb{C}$-linearna in polna, tangentna na punktirano ničelno kvadriko $\textbf{\textup{A}}_{*}$ in $\mathcal{L}in \{ V_{ij}(x) ; \ x \in \textbf{\textup{A}}_{*} \} = T_{x}\textbf{\textup{A}}_{*}$. Po definiciji je zato kompleksna mnogoterost $\textbf{\textup{A}}_{*}$ \emph{fleksibilna mnogoterost}, kar pomeni, da je tudi Oka mnogoterost.
 \end{primer}
 
-\begin{lema} [Rungejeva baza homologije povezane dopustne množice]
+\begin{lema} [Rungejeva baza homologije povezane dopustne množice] \label{lema:Runge-hom-baza}
 Naj bo $S$ povezana dopustna množica. Obstaja baza homologije $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$ za $S$, sestavljena iz takih zaprtih odsekoma gladkih Jordanovih krivulj v $S$, da je unija $C = \cup_{i=1}^{l} C_{i}$ povezana in Rungejeva v vsaki regularni okolici $S_{\varepsilon}$ množice $S$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{j \neq i} C_{j}) = \emptyset$.
 Prva homološka grupa povezane dopustne množice $S$ je končno generirana: $H_{1}(S, \mathbb{Z}) \cong \mathbb{Z}^{l}$.
 \end{lema}
@@ -1337,14 +1337,14 @@ V drugem delu bomo s pomočjo Leme~\ref{lema:P-D-sprej} konstruirali periodno do
 % 1. korak
 1. korak: Naj bo $S = K$ povezana kompaktna množica. (Za splošnejšo dopustno množico $S = K \cup E$ je korak enak, le da ga ponovimo na vsaki povezani komponenti $K$, na $E$ pa polno preslikavo dobimo z manjšo gladko deformacijo preslikave $f$.)
 Predpostavimo, da $f$ ni polna. Sicer nadaljujemo z drugim korakom.
-Označimo $\Sigma(f) = \mathcal{L}in (f(K)) \subset \mathcal{C}^{n}$, ki je po predpostavki pravi podprostor v $\mathcal{C}^{n}$.
+Označimo $\Sigma(f) = \mathcal{L}in (f(K)) \subset \mathbb{C}^{n}$, ki je po predpostavki pravi podprostor v $\mathbb{C}^{n}$.
 Izberimo točke $x_{1}, \dots , x_{j} \in K \setminus A$ tako, da je $\Sigma(f) = \mathcal{L}in \{ f(x_{1}), \dots , f(x_{j}) \}$.
-Ker je $\dim \Sigma(f) \leq n-1$, obstaja holomorfno vektorsko polje $V$ na $\mathcal{C}^{n}$ tangentno na $\textbf{\textup{A}}$, za katerega velja $V(f(x_0) \notin \Sigma(f)$ za neko točko $x_0 \in K \setminus (A \cup \{ x_{1}, \dots , x_{j} \})$.
+Ker je $\dim \Sigma(f) \leq n-1$, obstaja holomorfno vektorsko polje $V$ na $\mathbb{C}^{n}$ tangentno na $\textbf{\textup{A}}$, za katerega velja $V(f(x_0) \notin \Sigma(f)$ za neko točko $x_0 \in K \setminus (A \cup \{ x_{1}, \dots , x_{j} \})$.
 
 Naj bo $t \mapsto \Phi_{t}(z)$ tok vektorskega polja $V$ in $s \in \mathbb{N}$. 
 Izberimo holomorfno funkcijo $h \colon K \to \mathbb{C}$ z lastnostmi:
 \begin{itemize}
-\item $h(x_{1}) = \cdots = h(x_{j}) = 0$;
+\item $h(x_{1}) = \dots = h(x_{j}) = 0$;
 \item $h$ ima ničle reda $s$ v točkah množice $A$;
 \item $h(x_0) = 1$.
 \end{itemize}
@@ -1358,15 +1358,29 @@ Obstaja taka nekonstantna funkcija $\xi \in \mathcal{A}^{r}(K)$, ki je poljubno 
 \end{gather*}
 Označimo $g = \Psi(\xi)$. Velja naslednje:
 \begin{itemize}
-\item $g(x_{i}) = \Psi(\xi)(x_{i}) = \Phi_{\xi(x_{i}) h(x_{i})} f(x_{i}) = f(x_{i})$ za $i = 1, \dots , j$, saj je $h(x_{i})=0$.
+\item $g(x_{i}) = \Psi(\xi)(x_{i}) = \Phi_{\xi(x_{i}) h(x_{i})} f(x_{i}) = f(x_{i})$ za $i \in \{1, \dots , j \}$, saj je $h(x_{i})=0$. Sledi 
+	$\Sigma(f) \subset \Sigma(g)$.
 \item Produkt $\xi h$ je nekonstanten na kompaktu $K$, zato lahko dosežemo $\xi (x_0) \neq 0$ in $h(x_0) \approx 1.$ Potem je
 	$g(x_0) = \Psi(\xi)(x_0) = \Phi_{\xi(x_0) h(x_0)} f(x_0) \approx f(x_0) + \xi(x_0) h(x_0) V(f(x_0)) \notin \Sigma(f)$ po izboru $V$ in $x_0$.
 \item Ker ima $h$ ničle reda $s$ v točkah množice $A$, je $g|_{A} = f|_{A}$, v točkah $A \cap S^{\circ}$ pa se funkciji ujemata do reda $s$.
 \end{itemize}
-Induktivno nadaljujemo postopek tako, da višamo razsežnost prostora $\Sigma(f)$. Ko je $\dim \Sigma(f) = n-1$, dobimo polno preslikavo $g \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki aproksimira in interpolira $f$ ter zadošča $\mathcal{P}(g) = \mathcal{P}(f)$. \newline
+Induktivno nadaljujemo postopek tako, da višamo razsežnost prostora $\Sigma(f)$. Ko je $\dim \Sigma(f) = n-1$, dobimo polno preslikavo $g \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki aproksimira in interpolira $f$ ter zadošča pogoju $\mathcal{P}(g) = \mathcal{P}(f)$. \newline
 
 % 2. korak
-2. korak:
+2. korak: Novo preslikavo $g$ iz 1. koraka preimenujmo v $f$. Ta je polna in zato neravna.
+Lema~\ref{lema:Runge-hom-baza} pove, da povezana dopustna množica $S$ premore končno bazo homologije, sestavljeno iz posebnih Jordanovih krivulj. Skupaj z Lemo~\ref{lema:P-D-sprej} in Opombo~\ref{op:PDS-globalno} tako dobimo periodno dominantni sprej $\Phi_{f} \colon S \times \mathbb{C}^{N} \to \textbf{\textup{A}}_{*}$ z jedrom $f$.
+
+Po predpostavki je $S$ Rungejeva podmnožica $M$, iz Primera~\ref{primer-oka} pa vemo, da je kvadrika $\textbf{\textup{A}}_{*}$ Oka mnogoterost.
+Rungejev in Mergelyanov izrek o aproksimaciji in interpolaciji preslikav v Oka mnogoterosti zagotavljata obstoj holomorfne preslikave $\tilde{f} \colon M \to \textbf{\textup{A}}_{*}$, ki v $\mathcal{C}^{r}(S)$ aproksimira preslikavo $f$, $\tilde{f}$ se z $f$ ujema v točkah množice $A$, v točkah preseka $A \cap S^{\circ}$ pa se ujemata do danega končnega reda.
+
+Podobno kot v dokazu Leme~\ref{lema:P-D-sprej} lahko po Mergelyanovem izreku o aproksimaciji in interpolaciji na dopustnih množicah funkcije $g_{i,j} \in \mathcal{A}^{r}(S)$ iz predpisa~\eqref{predpis-Phi} v $\mathcal{C}^{r}(S)$ aproksimiramo s funkcijami $\tilde{g}_{i,j} \in \mathcal{O}(M)$, tako da se $g_{i,j}$ s $\tilde{g}_{i,j}$ ujemajo na $A$ in do danega končnega reda na $A \cap S^{\circ}$.
+
+Preslikava $\Phi_{\tilde{f}} \colon M \times \mathbb{C}^{N} \to \textbf{\textup{A}}_{*}$, definirana s predpisom
+\begin{gather}
+\Phi(p,t) = \Phi_{\tilde{g}_{1,1}(p)t_{1,1}}^{1,1} \circ \cdots \circ \Phi_{\tilde{g}_{l,n}(p)t_{l,n}}^{l,n} (\tilde{f}(p)),
+\end{gather}
+določa periodno dominantni sprej z jedrom $\tilde{f}$, ki aproksimira $\Phi_{f}$ na $S \times U$, kjer je $U \subset \mathbb{C}^{N}$ okolica izhodišča.
+Sprej $\Phi_{f}$ zadošča periodno dominantni lastnosti, zato izrek o implicitni preslikavi zagotavlja obstoj točke $t_0 \in \tilde{U} \subset U$, za katero preslikava $F = \Phi_{\tilde{f}}(\cdot, t_0) \in \mathcal{O}(M, \textbf{\textup{A}}_{*})$ po konstrukciji izpolnjuje pogoj $\mathcal{P}(F) = \mathcal{P}(f)$, je polna ter interpolira $f$ na množici $A$.
 \end{dokaz}
 %%%%% konec dokaza leme
 
