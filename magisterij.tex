@@ -1317,6 +1317,7 @@ S_{\varepsilon} = \{ x \in M; \ d(x,S) < \varepsilon \}.
 \end{gather}
 Množica $S_{\varepsilon}$ je odprta okolica za $S$, slednja nima lukenj v $S_{\varepsilon}$, zato je $S$ Rungejeva podmnožica svoje regularne okolice.
 
+% lema - aproksimacija in interpolacija preslikav v A*
 \begin{lema}
 Naj bo $M$ povezana odprta Riemannova ploskev in $S = K \cup E$ njena Rungejeva dopustna podmnožica.
 Izberimo tako družino gladkih orientiranih Jordanovih krivulj in lokov v $S$, $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$, da je unija $C = \cup_{i=1}^{l} C_{i}$ Rungejeva v $M$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{j \neq i} C_{j}) = \emptyset$.
@@ -1327,6 +1328,47 @@ Tedaj lahko vsako preslikavo $f \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$
 \item preslikavi $F$ in $f$ se ujemata v točkah množice $A$, v točkah množice $A \cap S^{\circ}$ pa se ujemata do danega končnega reda.
 \end{enumerate}
 \end{lema}
+
+%%%%% dokaz leme
+\begin{dokaz}
+Lemo bomo dokazali v dveh korakih. Najprej bomo $f \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ aproksimirali in interpolirali s polno preslikavo $g \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, za katero je $\mathcal{P}(f) = \mathcal{P}(g)$.
+V drugem delu bomo s pomočjo Leme~\ref{lema:P-D-sprej} konstruirali periodno dominantni sprej preslikav iz množice $\mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ z jedrom $g$. Nato bomo z Mergelyanovim in Rungejevim izrekom o aproksimaciji in interpolaciji preslikav iz odprtih Riemannovih ploskev v $\textbf{\textup{A}}_{*}$ periodno dominantni sprej aproksimirali in interpolirali s sprejem iz $\mathcal{O}(M, \textbf{\textup{A}}_{*})$, ki nam bo dal preslikavo $F   \in \mathcal{O}(M, \textbf{\textup{A}}_{*})$, ustrezno zaključkom leme. \newline
+
+% 1. korak
+1. korak: Naj bo $S = K$ povezana kompaktna množica. (Za splošnejšo dopustno množico $S = K \cup E$ je korak enak, le da ga ponovimo na vsaki povezani komponenti $K$, na $E$ pa polno preslikavo dobimo z manjšo gladko deformacijo preslikave $f$.)
+Predpostavimo, da $f$ ni polna. Sicer nadaljujemo z drugim korakom.
+Označimo $\Sigma(f) = \mathcal{L}in (f(K)) \subset \mathcal{C}^{n}$, ki je po predpostavki pravi podprostor v $\mathcal{C}^{n}$.
+Izberimo točke $x_{1}, \dots , x_{j} \in K \setminus A$ tako, da je $\Sigma(f) = \mathcal{L}in \{ f(x_{1}), \dots , f(x_{j}) \}$.
+Ker je $\dim \Sigma(f) \leq n-1$, obstaja holomorfno vektorsko polje $V$ na $\mathcal{C}^{n}$ tangentno na $\textbf{\textup{A}}$, za katerega velja $V(f(x_0) \notin \Sigma(f)$ za neko točko $x_0 \in K \setminus (A \cup \{ x_{1}, \dots , x_{j} \})$.
+
+Naj bo $t \mapsto \Phi_{t}(z)$ tok vektorskega polja $V$ in $s \in \mathbb{N}$. 
+Izberimo holomorfno funkcijo $h \colon K \to \mathbb{C}$ z lastnostmi:
+\begin{itemize}
+\item $h(x_{1}) = \cdots = h(x_{j}) = 0$;
+\item $h$ ima ničle reda $s$ v točkah množice $A$;
+\item $h(x_0) = 1$.
+\end{itemize}
+Za poljubno preslikavo $\eta \in \mathcal{A}^{r}(K)$, ki je blizu ničelne preslikave, definirajmo preslikavo $\Psi (\eta) \in \mathcal{A}^{r}(K, \textbf{\textup{A}}_{*})$ s predpisom
+\begin{gather*}
+\Psi (\eta)(x) = \Phi _{\eta(x) h(x)} f(x), \quad x \in K.
+\end{gather*}
+Obstaja taka nekonstantna funkcija $\xi \in \mathcal{A}^{r}(K)$, ki je poljubno blizu ničelne preslikave, da je
+\begin{gather*}
+\mathcal{P}(\Psi (\xi)) = \mathcal{P}(\Psi(0)) = \mathcal{P}(f).
+\end{gather*}
+Označimo $g = \Psi(\xi)$. Velja naslednje:
+\begin{itemize}
+\item $g(x_{i}) = \Psi(\xi)(x_{i}) = \Phi_{\xi(x_{i}) h(x_{i})} f(x_{i}) = f(x_{i})$ za $i = 1, \dots , j$, saj je $h(x_{i})=0$.
+\item Produkt $\xi h$ je nekonstanten na kompaktu $K$, zato lahko dosežemo $\xi (x_0) \neq 0$ in $h(x_0) \approx 1.$ Potem je
+	$g(x_0) = \Psi(\xi)(x_0) = \Phi_{\xi(x_0) h(x_0)} f(x_0) \approx f(x_0) + \xi(x_0) h(x_0) V(f(x_0)) \notin \Sigma(f)$ po izboru $V$ in $x_0$.
+\item Ker ima $h$ ničle reda $s$ v točkah množice $A$, je $g|_{A} = f|_{A}$, v točkah $A \cap S^{\circ}$ pa se funkciji ujemata do reda $s$.
+\end{itemize}
+Induktivno nadaljujemo postopek tako, da višamo razsežnost prostora $\Sigma(f)$. Ko je $\dim \Sigma(f) = n-1$, dobimo polno preslikavo $g \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki aproksimira in interpolira $f$ ter zadošča $\mathcal{P}(g) = \mathcal{P}(f)$. \newline
+
+% 2. korak
+2. korak:
+\end{dokaz}
+%%%%% konec dokaza leme
 
 % Glavni rezultati
 \begin{trditev}
