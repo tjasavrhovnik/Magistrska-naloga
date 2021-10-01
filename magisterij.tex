@@ -1480,18 +1480,39 @@ Ujemanje do danega končnega reda na množici $A \cap S^{\circ}$ pa je posledica
 % Glavni izrek
 \subsubsection{Glavni izrek}
 %
-\begin{izrek}
+Sedaj bomo navedli in dokazali glavni rezultat, to je izrek o aproksimaciji in interpolaciji konformnih minimalnih imerzij iz odprtih Riemannovih ploskev v Evklidski prostor $\mathbb{R}^{n}$ razsežnosti vsaj $3$. Izrek združuje aproksimacijo Mergelyanovega tipa z Weierstrassovo interpolacijo, kot jo v primeru holomorfnih funkcij podajata Izreka~\ref{izr:Bishop-Mergelyan} in~\ref{izr:Weierstrass-Florack}.
+Analogen rezultat velja za holomorfne ničelne krivulje.
+
+\begin{izrek} \label{izr:glavni-izrek-CMI}
 Naj bo $M$ odprta Riemannova ploskev, $\theta$ povsod neničelna holomorfna 1-forma na $M$, $n \geq 3$ in $r \geq 1$.
-Naj bo $S$ dopustna Rungejeva množicca v $M$ in $\Lambda$ zaprta diskretna podmnožica $M$. 
+Naj bo $S$ dopustna Rungejeva množica v $M$ in $\Lambda \subset M$ zaprta diskretna podmnožica. 
 Naj bo $x \colon S \to \R^{n}$ posplošena konformna minimalna imerzija razreda $\mathcal{C}^{r}(S, \R^{n})$, ki je konformna minimalna imerzija v okolici vsake točke iz $\Lambda$.
 
-Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M,\Z) \to \R^{n}$, \ $\mathfrak{p}|_{H_{1}(S,\Z)} = \textup{Flux}_{x}$, obstaja konformna minimalna imerzija $\tilde{x} \colon M \to \R^{n}$, za katero velja:
+Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M,\Z) \to \R^{n}$, \ $\mathfrak{p}|_{H_{1}(S,\Z)} = \textup{Flux}_{x}$ obstaja konformna minimalna imerzija $\tilde{x} \colon M \to \R^{n}$, za katero velja:
 \begin{enumerate}
 \item $||\tilde{x} - x||_{\mathcal{C}^{r}(S)} < \varepsilon$;
 \item razlika $\tilde{x}-x$ je ničelna do reda $k(p)$ v vsaki točki $p\in \Lambda$;
 \item $Flux_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M,\Z)$;
 \item če je $n\geq5$ in je $x \colon \Lambda \to \R^{n}$ injektivna preslikava, potem je $\tilde{x}$ injektivna imerzija;
 \item če je $n=4$ in ima $x$ enostavne dvojne točke na množici $\Lambda$, potem je $\tilde{x}$ imerzija z enostavnimi dvojnimi točkami na $\Lambda$.
+\end{enumerate}
+\end{izrek}
+
+\begin{opomba}
+Predpostavka iz 5.~točke izreka, da ima $x$ enostavne dvojne točke na množici $\Lambda$, pomeni naslednje:
+ne obstajajo tri različne točke v $\Lambda$, ki bi se s preslikavo $x$ slikale v isto točko v $\mathbb{R}^{4}$, ter, če za različni točki $p, q \in \Lambda$ velja $x(p) = x(q)$, potem je $dx_{p}(T_{p}M) \cap dx_{q}(T_{q}M) = \emptyset$ v $T_{x(p)}\mathbb{R}^{4}$.
+\end{opomba}
+
+\begin{izrek} \label{izr:glavni-izrek-NC}
+Naj bo $M$ odprta Riemannova ploskev, $\theta$ povsod neničelna holomorfna 1-forma na $M$, $n \geq 3$ in $r \geq 1$.
+Naj bo $S$ dopustna Rungejeva množica v $M$ in $\Lambda \subset M$ zaprta diskretna podmnožica. 
+Naj bo $z \colon S \to \C^{n}$ posplošena ničelna krivulja razreda $\mathcal{A}^{r}(S, \C^{n})$, ki je holomorfna ničelna krivulja v okolici vsake točke iz $\Lambda$.
+
+Za izbrana $\varepsilon > 0$ in preslikavo $k \colon \Lambda \to \N$ obstaja holomorfna ničelna krivulja $\tilde{z} \colon M \to \C^{n}$, za katero velja:
+\begin{enumerate}
+\item $||\tilde{z} - z||_{\mathcal{C}^{r}(S)} < \varepsilon$;
+\item razlika $\tilde{z}-z$ je ničelna do reda $k(p)$ v vsaki točki $p\in \Lambda$;
+\item če je $z \colon \Lambda \to \R^{n}$ injektivna preslikava, potem je $\tilde{z}$ injektivna imerzija.
 \end{enumerate}
 \end{izrek}
 
