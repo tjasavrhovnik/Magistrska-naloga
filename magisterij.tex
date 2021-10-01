@@ -1397,12 +1397,65 @@ Sprej $\Phi_{f}$ zadošča periodno dominantni lastnosti, zato izrek o implicitn
 %%%%% konec dokaza leme
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Glavni rezultati
-\begin{trditev}
-Naj bo $M$ odprta Riemannova ploskev, $\Theta$ povsod neničelna holomorfna 1-forma na $M$, $S$ povezana dopustna množica, ki je Rungejeva v $M$ in $A=\{a_{1}, \dots , a_{k} \} \subset S$. Naj bosta $r, s \in \N$. 
-Potem lahko vsako posplošeno konformno minimalno imerzijo $(x, f\Theta) \in GCMI^{r}(S,\R^{n})$ aproksimiramo s konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$ razreda $\mathcal{C}^{r}$, za katere velja $\textup{Flux}_{X} = \textup{Flux}_{x}$. 
+% Glavni izrek
+\subsection{Glavni izrek}
+
+%%%%%%%%%%%%%%%
+% Nekritični primer
+\subsubsection{Nekritični primer}
+%
+\begin{trditev} \label{trd:nekritcni-primer}
+Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$.
+Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk. Naj bosta $r, s \in \N$. Tedaj velja naslednje:
+\begin{enumerate}
+\item 
+Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in GCMI^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\textup{Flux}_{X} = \textup{Flux}_{x}$. 
+\item
+Vsako posplošeno ničelno krivuljo $(z, f\theta) \in GNC^{r}(S,\C^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s holomorfnimi ničelnimi krivuljami $Z \colon M \to \C^{n}$.
+\end{enumerate}
+Dodatno, preslikave $X$ oz.~$Z$ lahko izberemo tako, da se s preslikavama $x$ oz.~$z$ ujemajo v točkah množice $A$ ter do danega končnega reda v točkah iz množice $A \cap S^{\circ}$.
 \end{trditev}
 
+%%%%% dokaz trditve
+\begin{dokaz}
+% CITIRAJ [Lemma 1.12.10 - dokaz]
+Dokaz trditve je sestavljen iz dveh delov. Prvi del je algoritmičen; v njem bomo konstruirali družino krivulj, katere unija je povezana Rungejeva množica in vsebuje bazo homologije za $S$, na podoben način, kot poteka dokaz Leme~\ref{lema:Runge-hom-baza}.
+V drugem delu bomo s pomočjo Leme~\ref{lema:aproks&interp-A*} našli konformno minimalno imerzijo oz.~holomorfno ničelno krivuljo, ki ustrezata zaključkom trditve.
+
+% 1. del
+Pišimo $S = K \cup E$ in naj bo $K = \cup_{i=1}^{m}K_{i}$, kjer so $K_{i}$ povezane komponente $K$. Rob vsake komponente $K_{i}$ je unija končno mnogo zaprtih Jordanovih krivulj: $bK_{i} = \cup_{j=1}^{m_{i}}\Gamma_{ij}$ za $\ m_{i} \geq 1$.
+Ker je $S$ povezana, je $E = \cup_{i=1}^{n}E_{i}$, in so $E_{i}$ gladke paroma disjunktne krivulje v $S$.
+
+Naj bo $\mathcal{C}$ Rungejeva baza homologije za $S$, konstruirana po Lemi~\ref{lema:Runge-hom-baza}.
+Ker je $S$ po predpostavki Rungejeva podmnožica $M$, je družina $\mathcal{C}$ tudi baza homologije za $M$.
+
+Množici točk $A$ iz predpostavke trditve dodajmo naslednje elemente:
+\begin{itemize}
+\item krajišča povezanih komponent $E_{i} \subset E = \overline{S \setminus K}$;
+\item točke $q_{i} \in K_{i}^{\circ}$, imenovana \emph{vozlišča};
+\item točke $a_{ij} \in \Gamma_{ij}$, pri čemer točki $a_{ij}$ in $q_{i}$ povežemo s takim gladkim vloženim lokom $A_{ij} \subset K_{i}^{\circ} \cup \{a_{ij}\}$, da se nastali loki med seboj ter z elementi homološke baze $\mathcal{C}$ sekajo kvečjemu v točki $q_{i}$. (Opomnimo, da homološko bazo povezane komponente $K_{i}$ po konstrukciji sestavlja končno mnogo Jordanovih krivulj v $K_{i}^{\circ}$, ki se sekajo le v vozlišču $q_{i}$, njihova unija pa je Rungejeva v $K_{i}$.)
+\end{itemize}
+Sedaj konstruirajmo družino lokov in zaprtih krivulj $\tilde{\mathcal{C}}$ v $S$ v treh korakih.
+\begin{enumerate}
+\item
+	Če krivulja $C \in \mathcal{C}$ ne vsebuje elementov množice $A$ razen točke $q_{1}$, potem krivuljo $C$ dodamo v $\tilde{\mathcal{C}}$.
+	Sicer obstaja končno točk iz $A$, ki ležijo na krivulji $C$. Slednjo razdelimo na tako končno unijo lokov, da so točke iz preseka $A \cap C$ skupna krajišča dveh zaporednih lokov in vse tako nastale loke dodamo v $\tilde{\mathcal{C}}$.
+\item
+	Če obstaja krivulja $E_{k} \subset E$, ki ni vsebovana v nobeni izmed krivulj iz prejšnje točke, potem naredimo naslednje:
+	krajišče od $E_{k}$, ki je element $K_{i}$ za nek $i$, povežemo z vozliščem $q_{i}$ tako, da gremo najprej po $bK_{i}$ do ustrezne točke $a_{ij}$ in nato po loku $A_{ij}$ do $q_{i}$. To ponovimo za obe vozlišči od $E_{k}$ in novonastalo krivuljo (ki povezuje dve -- morda isti -- vozlišči) razdelimo na končno zaporedje lokov s krajišči v točkah iz $A$ (kot v prejšnjem primeru). Vse te loke dodamo v $\tilde{\mathcal{C}}$.
+\item
+	Označimo $A' = \{ a \in A; \ a \ \textrm{pripada vsaj eni krivulji iz} \ \tilde{\mathcal{C}}\}$.
+	Vsaka točka njenega komplementa, tj.~$a \in A \setminus A'$, pripada neki komponenti $K_{i} \subset K$. Opazujmo sedaj take točke.
+	Izberimo lok $\Lambda_{a} \subset K_{i}$, ki povezuje točko $a$ z vozliščem $q_{i}$ in se ne dotika niti nobene krivulje iz $\tilde{\textup{C}}$ niti loka $\Lambda_{a'}$ za $a \neq a' \in A \setminus A'$, razen v točki $q_{i}$. (Tak lok obstaja, saj je unija krivulj iz $\tilde{\mathcal{C}}$, konstruirane do sedaj, Rungejeva v $S$.) Vse nastale loke $\Lambda_{a}, \ a \in A \setminus A'$ dodamo v $\tilde{\mathcal{C}}$.
+\end{enumerate}
+Po konstrukciji je unija elementov družine $\tilde{\mathcal{C}}$ povezana Rungejeva množica v $S$. Hkrati vsaka krivulja iz te družine vsebuje netrivialen lok, ki ni vsebovan v nobeni drugi krivulji iz družine, ter $\tilde{\mathcal{C}}$ vsebuje bazo homologije za $S$, torej tudi za $M$.
+\end{dokaz}
+%%%%% konec dokaza
+
+%%%%%%%%%%%%%%%
+% Glavni izrek
+\subsubsection{Glavni izrek}
+%
 \begin{izrek}
 Naj bo $M$ odprta Riemannova ploskev, $\Theta$ povsod neničelna holomorfna 1-forma na $M$, $n \geq 3$ in $r \geq 1$.
 Naj bo $S$ dopustna Rungejeva množicca v $M$ in $\Lambda$ zaprta diskretna podmnožica $M$. 
