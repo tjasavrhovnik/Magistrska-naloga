@@ -1432,28 +1432,28 @@ Ker je $S$ po predpostavki Rungejeva podmnožica $M$, je družina $\mathcal{C}$ 
 Množici točk $A$ iz predpostavke trditve dodajmo naslednje elemente:
 \begin{itemize}
 \item krajišča povezanih komponent $E_{i} \subset E = \overline{S \setminus K}$;
-\item točke $q_{i} \in K_{i}^{\circ}$, imenovana \emph{vozlišča};
-\item točke $a_{ij} \in \Gamma_{ij}$, pri čemer točki $a_{ij}$ in $q_{i}$ povežemo s takim gladkim vloženim lokom $A_{ij} \subset K_{i}^{\circ} \cup \{a_{ij}\}$, da se nastali loki med seboj ter z elementi homološke baze $\mathcal{C}$ sekajo kvečjemu v točki $q_{i}$. (Opomnimo, da homološko bazo povezane komponente $K_{i}$ po konstrukciji sestavlja končno mnogo Jordanovih krivulj v $K_{i}^{\circ}$, ki se sekajo le v vozlišču $q_{i}$, njihova unija pa je Rungejeva v $K_{i}$.)
+\item v vsaki komponenti $K_{i}$ izberimo notranjo točko $q_{i} \in K_{i}^{\circ}$, imenovano \emph{vozlišče}, in jo dodajmo v $A$;
+\item točke $a_{ij} \in \Gamma_{ij}$ (za vsak par $(i,j)$ izberemo po eno tako točko), pri čemer točki $a_{ij}$ in $q_{i}$ povežemo s takim gladkim vloženim lokom $A_{ij} \subset K_{i}^{\circ} \cup \{a_{ij}\}$, da se nastali loki med seboj ter z elementi homološke baze $\mathcal{C}$ sekajo kvečjemu v vozlišču $q_{i}$. (Opomnimo, da homološko bazo povezane komponente $K_{i}$ po konstrukciji sestavlja končno mnogo Jordanovih krivulj v $K_{i}^{\circ}$, ki se dotikajo le v vozlišču $q_{i}$, njihova unija pa je Rungejeva v $K_{i}$.)
 \end{itemize}
 Sedaj konstruirajmo družino lokov in zaprtih krivulj $\tilde{\mathcal{C}}$ v $S$ v treh korakih.
 \begin{enumerate}
 \item
 	Če krivulja $C \in \mathcal{C}$ ne vsebuje elementov množice $A$ razen točke $q_{1}$, potem krivuljo $C$ dodamo v $\tilde{\mathcal{C}}$.
-	Sicer obstaja končno točk iz $A$, ki ležijo na krivulji $C$. Slednjo razdelimo na tako končno unijo lokov, da so točke iz preseka $A \cap C$ skupna krajišča dveh zaporednih lokov in vse tako nastale loke dodamo v $\tilde{\mathcal{C}}$.
+	Sicer obstaja končno točk iz $A$, ki ležijo na tej krivulji. Slednjo razdelimo na tako končno unijo lokov, da so točke iz preseka $A \cap C$ skupna krajišča dveh zaporednih lokov in vse tako nastale loke dodamo v $\tilde{\mathcal{C}}$.
 \item
 	Če obstaja krivulja $E_{k} \subset E$, ki ni vsebovana v nobeni izmed krivulj iz prejšnje točke, potem naredimo naslednje:
-	krajišče od $E_{k}$, ki je element $K_{i}$ za nek $i$, povežemo z vozliščem $q_{i}$ tako, da gremo najprej po $bK_{i}$ do ustrezne točke $a_{ij}$ in nato po loku $A_{ij}$ do $q_{i}$. To ponovimo za obe vozlišči od $E_{k}$ in novonastalo krivuljo (ki povezuje dve -- morda isti -- vozlišči) razdelimo na končno zaporedje lokov s krajišči v točkah iz $A$ (kot v prejšnjem primeru). Vse te loke dodamo v $\tilde{\mathcal{C}}$.
+	krajišče od $E_{k}$, ki je element $K_{i}$ za nek $i$, povežemo z vozliščem $q_{i}$ tako, da gremo najprej po $bK_{i}$ do ustrezne točke $a_{ij}$ in nato po loku $A_{ij}$ do $q_{i}$. To ponovimo za obe krajišči $E_{k}$ in novonastalo krivuljo (ki povezuje dve -- morda isti -- vozlišči) razdelimo na končno zaporedje lokov s krajišči v točkah iz $A$ (kot v prejšnjem primeru). Vse te loke dodamo v $\tilde{\mathcal{C}}$.
 \item
-	Označimo $A' = \{ a \in A; \ a \ \textrm{pripada vsaj eni krivulji iz} \ \tilde{\mathcal{C}}\}$.
+	Označimo množico $A' = \{ a \in A; \ a \ \textrm{pripada vsaj eni krivulji iz} \ \tilde{\mathcal{C}}\}$.
 	Vsaka točka njenega komplementa, tj.~$a \in A \setminus A'$, pripada neki komponenti $K_{i} \subset K$. Opazujmo sedaj take točke.
-	Izberimo lok $\Lambda_{a} \subset K_{i}$, ki povezuje točko $a$ z vozliščem $q_{i}$ in se ne dotika niti nobene krivulje iz $\tilde{\textup{C}}$ niti loka $\Lambda_{a'}$ za $a \neq a' \in A \setminus A'$, razen v točki $q_{i}$. (Tak lok obstaja, saj je unija krivulj iz $\tilde{\mathcal{C}}$, konstruirane do sedaj, Rungejeva v $S$.) Vse nastale loke $\Lambda_{a}, \ a \in A \setminus A'$ dodamo v $\tilde{\mathcal{C}}$.
+	Izberimo lok $\Lambda_{a} \subset K_{i}$, ki povezuje točko $a$ z vozliščem $q_{i}$ in se ne dotika niti nobene krivulje iz $\tilde{\textup{C}}$ niti loka $\Lambda_{a'}$ za $a \neq a' \in A \setminus A'$, razen v točki $q_{i}$. (Tak lok obstaja, saj je unija krivulj iz $\tilde{\mathcal{C}}$, konstruirane do sedaj, Rungejeva v $S$.) Vse nastale loke $\Lambda_{a}, \ a \in A \setminus A'$, dodamo v $\tilde{\mathcal{C}}$.
 \end{enumerate}
-Po konstrukciji je unija elementov družine $\tilde{\mathcal{C}}$ povezana Rungejeva množica v $S$. Hkrati vsaka krivulja iz te družine vsebuje netrivialen lok, ki ni vsebovan v nobeni drugi krivulji iz družine, ter $\tilde{\mathcal{C}}$ vsebuje bazo homologije za $S$, torej tudi za $M$. \newline
+Po konstrukciji je unija elementov družine $\tilde{\mathcal{C}}$ povezana Rungejeva množica v $S$, ki vsebuje bazo homologije za $S$, torej tudi za $M$. Hkrati vsaka krivulja iz te družine vsebuje netrivialen lok, ki ni vsebovan v nobeni drugi krivulji iz družine. \newline
 
 % 2. del
 Naj bo $\mathcal{P}$ periodna preslikava k družini $\tilde{\mathcal{C}}$. 
-Naj bo $(x, f\theta) \in GCMI^{r}(S, \mathbb{R}^{n})$ dana posplošena konformna minimalna imerzija. Po Lemi~\ref{lema:aproks&interp-A*} lahko preslikavo $f \in \mathcal{A}^{r-1}(S, \textup{\textbf{A}}_{*})$ v $\mathcal{C}^{r-1}(S)$ aproksimiramo s polno holomorfno preslikavo $F \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$ za katero je $\mathcal{P}(F) = \mathcal{P}(f)$, $F$ se z $f$ ujema na $A$ ter do danega končnega reda na $A \cap S^{\circ}$.
-Izberimo točko $p_0 \in A$ in defnirajmo preslikavo $X \colon M \to \mathbb{R}^{n}$ s predpisom
+Naj bo $(x, f\theta) \in GCMI^{r}(S, \mathbb{R}^{n})$ dana posplošena konformna minimalna imerzija. Po Lemi~\ref{lema:aproks&interp-A*} lahko preslikavo $f \in \mathcal{A}^{r-1}(S, \textup{\textbf{A}}_{*})$ v $\mathcal{C}^{r-1}(S)$ aproksimiramo s polno holomorfno preslikavo $F \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$, za katero je $\mathcal{P}(F) = \mathcal{P}(f)$, $F$ se z $f$ ujema na $A$ ter do danega končnega reda na $A \cap S^{\circ}$.
+Izberimo točko $p_0 \in A$ in definirajmo preslikavo $X \colon M \to \mathbb{R}^{n}$ s predpisom
 \begin{gather} \label{eq:X-nekrit-primer}
 X(p) = x(p_0) + \Re \int_{p_0}^{p} F\theta, \quad p \in M.
 \end{gather}
@@ -1481,17 +1481,17 @@ Ujemanje do danega končnega reda na množici $A \cap S^{\circ}$ pa je posledica
 \subsubsection{Glavni izrek}
 %
 \begin{izrek}
-Naj bo $M$ odprta Riemannova ploskev, $\Theta$ povsod neničelna holomorfna 1-forma na $M$, $n \geq 3$ in $r \geq 1$.
+Naj bo $M$ odprta Riemannova ploskev, $\theta$ povsod neničelna holomorfna 1-forma na $M$, $n \geq 3$ in $r \geq 1$.
 Naj bo $S$ dopustna Rungejeva množicca v $M$ in $\Lambda$ zaprta diskretna podmnožica $M$. 
 Naj bo $x \colon S \to \R^{n}$ posplošena konformna minimalna imerzija razreda $\mathcal{C}^{r}(S, \R^{n})$, ki je konformna minimalna imerzija v okolici vsake točke iz $\Lambda$.
 
-Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M,\Z) \to \R^{n}$, $\mathfrak{p}|_{H_{1}(S,\Z)} = \textup{Flux}_{x}$, obstaja konformna minimalna imerzija $\tilde{x} \colon M \to \R^{n}$, za katero velja:
+Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M,\Z) \to \R^{n}$, \ $\mathfrak{p}|_{H_{1}(S,\Z)} = \textup{Flux}_{x}$, obstaja konformna minimalna imerzija $\tilde{x} \colon M \to \R^{n}$, za katero velja:
 \begin{enumerate}
 \item $||\tilde{x} - x||_{\mathcal{C}^{r}(S)} < \varepsilon$;
-\item Razlika $\tilde{x}-x$ je ničelna do reda $k(p)$ v vsaki točki $p\in \Lambda$;
+\item razlika $\tilde{x}-x$ je ničelna do reda $k(p)$ v vsaki točki $p\in \Lambda$;
 \item $Flux_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M,\Z)$;
-\item Če je $n\geq5$ in je $x \colon \Lambda \to \R^{n}$ injektivna preslikava, potem je $\tilde{x}$ injektivna imerzija;
-\item Če je $n=4$ in ima $x$ enostavne dvojne točke na množici $\Lambda$, potem je $\tilde{x}$ imerzija z enostavnimi dvojnimi točkami na $\Lambda$.
+\item če je $n\geq5$ in je $x \colon \Lambda \to \R^{n}$ injektivna preslikava, potem je $\tilde{x}$ injektivna imerzija;
+\item če je $n=4$ in ima $x$ enostavne dvojne točke na množici $\Lambda$, potem je $\tilde{x}$ imerzija z enostavnimi dvojnimi točkami na $\Lambda$.
 \end{enumerate}
 \end{izrek}
 
