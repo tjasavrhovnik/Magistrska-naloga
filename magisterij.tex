@@ -1409,9 +1409,9 @@ Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-
 Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk. Naj bosta $r, s \in \N$. Tedaj velja naslednje:
 \begin{enumerate}
 \item 
-Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in GCMI^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\textup{Flux}_{X} = \textup{Flux}_{x}$. 
+Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in GCMI^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\textup{Flux}_{X} = \textup{Flux}_{x}$. 
 \item
-Vsako posplošeno ničelno krivuljo $(z, f\theta) \in GNC^{r}(S,\C^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s holomorfnimi ničelnimi krivuljami $Z \colon M \to \C^{n}$.
+Vsako posplošeno ničelno krivuljo $(z, f\theta) \in GNC^{r}(S,\C^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi holomorfnimi ničelnimi krivuljami $Z \colon M \to \C^{n}$.
 \end{enumerate}
 Dodatno, preslikave $X$ oz.~$Z$ lahko izberemo tako, da se s preslikavama $x$ oz.~$z$ ujemajo v točkah množice $A$ ter do danega končnega reda v točkah iz množice $A \cap S^{\circ}$.
 \end{trditev}
@@ -1448,7 +1448,31 @@ Sedaj konstruirajmo družino lokov in zaprtih krivulj $\tilde{\mathcal{C}}$ v $S
 	Vsaka točka njenega komplementa, tj.~$a \in A \setminus A'$, pripada neki komponenti $K_{i} \subset K$. Opazujmo sedaj take točke.
 	Izberimo lok $\Lambda_{a} \subset K_{i}$, ki povezuje točko $a$ z vozliščem $q_{i}$ in se ne dotika niti nobene krivulje iz $\tilde{\textup{C}}$ niti loka $\Lambda_{a'}$ za $a \neq a' \in A \setminus A'$, razen v točki $q_{i}$. (Tak lok obstaja, saj je unija krivulj iz $\tilde{\mathcal{C}}$, konstruirane do sedaj, Rungejeva v $S$.) Vse nastale loke $\Lambda_{a}, \ a \in A \setminus A'$ dodamo v $\tilde{\mathcal{C}}$.
 \end{enumerate}
-Po konstrukciji je unija elementov družine $\tilde{\mathcal{C}}$ povezana Rungejeva množica v $S$. Hkrati vsaka krivulja iz te družine vsebuje netrivialen lok, ki ni vsebovan v nobeni drugi krivulji iz družine, ter $\tilde{\mathcal{C}}$ vsebuje bazo homologije za $S$, torej tudi za $M$.
+Po konstrukciji je unija elementov družine $\tilde{\mathcal{C}}$ povezana Rungejeva množica v $S$. Hkrati vsaka krivulja iz te družine vsebuje netrivialen lok, ki ni vsebovan v nobeni drugi krivulji iz družine, ter $\tilde{\mathcal{C}}$ vsebuje bazo homologije za $S$, torej tudi za $M$. \newline
+
+% 2. del
+Naj bo $\mathcal{P}$ periodna preslikava k družini $\tilde{\mathcal{C}}$. 
+Naj bo $(x, f\theta) \in GCMI^{r}(S, \mathbb{R}^{n})$ dana posplošena konformna minimalna imerzija. Po Lemi~\ref{lema:aproks&interp-A*} lahko preslikavo $f \in \mathcal{A}^{r-1}(S, \textup{\textbf{A}}_{*})$ v $\mathcal{C}^{r-1}(S)$ aproksimiramo s polno holomorfno preslikavo $F \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$ za katero je $\mathcal{P}(F) = \mathcal{P}(f)$, $F$ se z $f$ ujema na $A$ ter do danega končnega reda na $A \cap S^{\circ}$.
+Izberimo točko $p_0 \in A$ in defnirajmo preslikavo $X \colon M \to \mathbb{R}^{n}$ s predpisom
+\begin{gather} \label{eq:X-nekrit-primer}
+X(p) = x(p_0) + \Re \int_{p_0}^{p} F\theta, \quad p \in M.
+\end{gather}
+Zaradi lastnosti $\mathcal{P}(F) = \mathcal{P}(f)$ je preslikava $X$ dobro definirana in po konstrukciji konformna minimalna imerzija. 
+Polnost imerzije $X$ sledi iz polnosti preslikave $F$.
+Nadalje je $\textup{Flux}_{X} = \textup{Flux}_{x}$. Res, ker $\tilde{\mathcal{C}}$ vsebuje bazo homologije za $S$, ima $F$ ničelne realne periode po krivuljah iz homološke baze. Skupaj z definicijo preslikave $X$ in enakostjo periodnih preslikav za $F$ in $f$ sledi enakost pretokov.
+
+Dejstvo, da $X$ aproksimira $x$ v $\mathcal{C}^{r}(S)$ drži, saj za $p \in S$ integral~\eqref{eq:X-nekrit-primer} računamo po poti med $p_0 \in A \subset S$ in $p \in S$, ki v celoti leži v $S$.
+
+V primeru posplošene ničelne krivulje postopamo analogno: Lema~\ref{lema:aproks&interp-A*} da polno holomorfno preslikavo $F$ z lastnostmi kot prej, nato pa za izbrano fiksno točko $p_0 \in A$ definiramo preslikavo $Z \colon M \to \mathbb{C}^{n}$ s predpisom
+\begin{gather} \label{eq:Z-nekrit-primer}
+Z(p) = z(p_0) + \int_{p_0}^{p} F\theta, \quad p \in M,
+\end{gather}
+ki je polna holomorfna ničelna krivulja in aproksimira $z$ v $\mathcal{C}^{r}(S)$.
+
+Poglejmo še interpolacijski del.
+Če izberemo $p \in A$, potem integrala~\eqref{eq:X-nekrit-primer} in~\eqref{eq:Z-nekrit-primer} računamo po uniji krivulj iz družine $\tilde{\mathcal{C}}$, ki povezuje točki $p_0, p \in A$.
+Enakosti $X(p) = x(p)$ ter $Z(p) = z(p)$ sledita iz predpisov preslikav ter enakosti periodnih preslikav funkcij.
+Ujemanje do danega končnega reda na množici $A \cap S^{\circ}$ pa je posledica ujemanja funkcij $F$ in $f$ do danega reda na tej isti množici.
 \end{dokaz}
 %%%%% konec dokaza
 
