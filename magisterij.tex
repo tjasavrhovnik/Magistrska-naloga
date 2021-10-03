@@ -1498,14 +1498,54 @@ Sicer je $A$ \emph{reducible}.
 Množica regularnih točk raznoterosti $A$ se imenuje \emph{regular locus} raznoterosti $A$ in označi z $A_{reg}$.
 Podobno je množica singularnih točk raznoterosti $A$ imenovana \emph{singular locus} z oznako $A_{sing}$.
 
+% Lema: poti s predpisanimi integrali, analog Gromova
 \begin{lema} \label{lema:analog-gromova}
 Naj bo $A$ irreducible neizrojena algebraična podraznoterost v $\mathbb{C}^{n}$, $\eta \in \mathbb{C}^{n}$ izbran vektor in $\Omega \subset \mathbb{C}^{n}$ povezana domena, ki vsebuje $0$ in $\eta$. 
 Naj bosta dani zvezni preslikavi $f_0 \colon [0,1] \to A_{reg}$ in $g \colon [0,1] \to \mathbb{C}_{*}$.
 Potem za $\tau \in [0,1]$ obstaja taka homotopija $f_{\tau} \colon [0,1] \to A_{reg}$ s fiksnima krajiščema, da je $f_0$ dana preslikava, preslikava $f = f_1$ je gladka in neravna v okolici $f(0)$, ter velja
-\begin{gather}
+\begin{gather} \label{eq:pot-s-predp-integralom}
 \int_{0}^{1} f(s)g(s)ds = \eta \quad \textrm{in} \quad \int_{0}^{t} f(s)g(s)ds \in \Omega \ \textrm{za vse} \ t \in [0,1].
 \end{gather}
+Natančneje, za poljuben par točk v $A_{reg}$ obstaja gladka pot $f \colon [0,1] \to A_{reg}$ med njima, ki zadošča pogoju~\eqref{eq:pot-s-predp-integralom}.
 \end{lema}
+
+Navedli bomo le osnovne ideje dokaza leme. Popoln dokaz, ki se nahaja v [...], posnema dokaz leme Gromova o konveksni integraciji.
+
+% dokaz leme
+\begin{dokaz}
+Dokaz poteka v štirih korakih.
+
+1.~korak: Pokažemo, da zadostuje rešiti bližnji problem, kjer pogoja~\eqref{eq:pot-s-predp-integralom} nadomestimo s pogojema
+\begin{gather} \label{eq:pot-s-predp-integralom-bliznja}
+\left| \int_{0}^{1} f(s)g(s)ds - \eta \right| < \varepsilon \quad \textrm{in} \quad \int_{0}^{t} f(s)g(s)ds \in \Omega \ \textrm{za vse} \ t \in [0,1]
+\end{gather}
+za $\varepsilon > 0$.
+Pišemo $[0,1] = [0,c] \cup [c,1]$ za $c \in (0,1)$.
+Podobno kot v dokazu Leme~\ref{lema:P-D-sprej} poiščemo periodno dominantni sprej preslikave $f_0$ z nosilcem na intervalu $(0,c)$.
+Sledi, da je dovolj najti homotopijo $f_{\tau} \colon [0,1] \to A_{reg}$, ki je fiksna na $[0,c]$, pot $f = f_{1}$ pa zadošča pogojema~\eqref{eq:pot-s-predp-integralom-bliznja}. Napake $\varepsilon$ se znebimo tako, da $f$ nadomestimo s potjo $\Phi_{f}(\zeta, \cdot) \colon [0,1] \to A_{reg}$, kjer je sprej $\Phi_{f}$ definiran analogno spreju, prirejenemu $f_0$, in izberemo ustrezen parameter $\zeta \in \mathbb{B}^{n} \subset \mathbb{C}^{n}$.
+
+2.~korak: Problem poenostavimo na problem, kjer $\Omega$ vsebuje $\{ s\eta; \ s \in [0,1] \}$. \newline
+Izberemo poligonsko pot $\Gamma = \cup_{j=1}^{m} \Gamma_{j} \subset \Omega$ med $0$ in $\eta$, kjer za $p_{j-1} \in \Omega$ in $\eta_{j} \in \mathbb{C}^{n}$ pišemo $\Gamma_{j} = \{ p_{j-1} + s\eta_{j}; \ s \in [0,1] \}$.
+Velja $\eta = \sum_{j=1}^{m} \eta_{j}$.
+Tedaj iščemo deformacijo $f(s)$ za $f_0(s)$, ki je fiksna v okolici točk $s = 0, 1, \dots , m$ in zanjo velja
+\begin{gather*}
+\left| \int_{j-1}^{j} f(s)g(s)ds - \eta_{j} \right| < \frac{\varepsilon}{m} \quad \textrm{in} \quad \int_{j-1}^{t} f(s)g(s)ds \in \Omega_{j} \ \textrm{za vse} \ t \in [j-1,j],
+\end{gather*}
+kjer je $\Omega_{j}$ okolica za $\{ s \eta_{j}; \ s \in [0,1] \}$.
+
+3.~korak: Ohranimo redukcijo iz 2.~koraka in rešimo problem za $0 \neq g = konst.$
+
+4.~korak: Rešimo splošen primer. \newline
+Izberemo števili $\sigma > 0$ in $N \in \mathbb{N}$, ter interval $[0,1]$ razdelimo na unijo podintervalov: $[0,1] = \cup_{j=1}^{N} I_{j} = \cup_{j=1}^{N} [\frac{j-1}{N}, \frac{j}{N}]$. Pri tem zahtevamo, da na vsakem podintervalu $I_{j}$ obstaja taka neničelna konstantna funkcija $g_{j}$, da na njem velja $|g - g_{j}| < \sigma$.
+Postopek iz 3.~koraka ponovimo na vsakem podintervalu $I_{j}$ -- zagotoviti moramo pogojema~\eqref{eq:pot-s-predp-integralom-bliznja}, pri čemer $g$ nadomestimo z $g_{j}$ na ustreznih intervalih $I_{j}$.
+Velja
+\begin{gather*}
+\left| \int_{I_{j}} f(s)g(s)ds - \int_{I_{j}} f(s)g_{j}(s)ds \right| \leq \frac{R}{N} \cdot \max_{I_{j}} |g - g_{j}| < \frac{R}{N} \sigma,
+\end{gather*}
+saj je $|I_{j}| = 1/N$ za vse $j$ in $|f| \leq R$ za nek $R > 0$.
+Vsota napak po vseh podintervalih je torej navzgor omejena z $R \sigma$. Ta bo poljubno majhna za izbor poljubno majhnega $\sigma >0$.
+Ker znamo rešiti bližnji problem~\eqref{eq:pot-s-predp-integralom-bliznja} v splošnem primeru, po 1.~koraku lema sledi.
+\end{dokaz}
 
 %%%%%%%%%%%%%%%
 % Glavni izrek
