@@ -1477,6 +1477,37 @@ Ujemanje do danega končnega reda na množici $A \cap S^{\circ}$ pa je posledica
 %%%%% konec dokaza
 
 %%%%%%%%%%%%%%%
+% Konstrukcija poti s predpisanimi integrali
+\subsubsection{Konstrukcija poti s predpisanimi integrali}
+%
+Za začetek definirajmo nekaj pojmov iz algebraične geometrije. \newline
+Naj bosta $K$ polje in $n \in \mathbb{N}$. Tedaj množico $\mathbb{A}_{K}^{n} = \{ (a_{1}, \dots , a_{n}); \ a_{1}, \dots , a_{n} \in K \}$ imenujemo $n$-razsežni \emph{afini prostor} nad poljem $K$.
+Kolobar polinomov v spremenljivkah $x_{1}, \dots , x_{n}$ s koeficienti iz polja $K$ označimo s $K[x_{1}, \dots , x_{n}]$, vrednost polinoma $f \in K[x_{1}, \dots , x_{n}]$ v točki $a = (a_{1}, \dots , a_{n}) \in K^{n}$ pa z $f(a)$.
+Nadalje je množica $V(f_{1}, \dots , f_{m}) = \{ x \in \mathbb{A}_{K}^{n} ; \ f_{i}(x) = 0, \ f_{i} \in K[x] \ \textrm{za vse} \ i = 1, \dots , m \} \subset \mathbb{A}_{K}^{n}$ \emph{afina raznoterost}.
+
+V primeru, ko je $z = (z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}$, funkcije $f_{1}, \dots , f_{m}$ pa so holomorfni polinomi, množici
+\begin{gather}
+V(f_{1}, \dots , f_{m}) = \{ z \in \mathbb{C}^{n}; \ f_{1}(z) = \dots = f_{m}(z) = 0 \}
+\end{gather}
+pravimo \emph{afina algebraična raznoterost}, ki je hkrati zaprta kompleksna podraznoterost raznoterosti $\mathbb{C}^{n}$.
+V nadaljevanju se bomo ukvarjali z le-temi.
+
+Če afine algebraične raznoterosti $A$ ne moremo zapisati kot unijo dveh neničelnih afinih algebraičnih raznoterosti, potem $A$ imenujemo \emph{irreducible}.
+Sicer je $A$ \emph{reducible}.
+
+Množica regularnih točk raznoterosti $A$ se imenuje \emph{regular locus} raznoterosti $A$ in označi z $A_{reg}$.
+Podobno je množica singularnih točk raznoterosti $A$ imenovana \emph{singular locus} z oznako $A_{sing}$.
+
+\begin{lema} \label{lema:analog-gromova}
+Naj bo $A$ irreducible neizrojena algebraična podraznoterost v $\mathbb{C}^{n}$, $\eta \in \mathbb{C}^{n}$ izbran vektor in $\Omega \subset \mathbb{C}^{n}$ povezana domena, ki vsebuje $0$ in $\eta$. 
+Naj bosta dani zvezni preslikavi $f_0 \colon [0,1] \to A_{reg}$ in $g \colon [0,1] \to \mathbb{C}_{*}$.
+Potem za $\tau \in [0,1]$ obstaja taka homotopija $f_{\tau} \colon [0,1] \to A_{reg}$ s fiksnima krajiščema, da je $f_0$ dana preslikava, preslikava $f = f_1$ je gladka in neravna v okolici $f(0)$, ter velja
+\begin{gather}
+\int_{0}^{1} f(s)g(s)ds = \eta \quad \textrm{in} \quad \int_{0}^{t} f(s)g(s)ds \in \Omega \ \textrm{za vse} \ t \in [0,1].
+\end{gather}
+\end{lema}
+
+%%%%%%%%%%%%%%%
 % Glavni izrek
 \subsubsection{Glavni izrek}
 %
