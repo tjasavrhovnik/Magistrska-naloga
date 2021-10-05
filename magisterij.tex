@@ -1409,9 +1409,9 @@ Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-
 Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk. Naj bosta $r, s \in \N$. Tedaj velja naslednje:
 \begin{enumerate}
 \item 
-Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in GCMI^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\textup{Flux}_{X} = \textup{Flux}_{x}$. 
+Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in \textup{GCMI}^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\textup{Flux}_{X} = \textup{Flux}_{x}$. 
 \item
-Vsako posplošeno ničelno krivuljo $(z, f\theta) \in GNC^{r}(S,\C^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi holomorfnimi ničelnimi krivuljami $Z \colon M \to \C^{n}$.
+Vsako posplošeno ničelno krivuljo $(z, f\theta) \in \textup{GNC}^{r}(S,\C^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi holomorfnimi ničelnimi krivuljami $Z \colon M \to \C^{n}$.
 \end{enumerate}
 Dodatno, preslikave $X$ oz.~$Z$ lahko izberemo tako, da se s preslikavama $x$ oz.~$z$ ujemajo v točkah množice $A$ ter do danega končnega reda v točkah iz množice $A \cap S^{\circ}$.
 \end{trditev}
@@ -1452,7 +1452,7 @@ Po konstrukciji je unija elementov družine $\tilde{\mathcal{C}}$ povezana Runge
 
 % 2. del
 Naj bo $\mathcal{P}$ periodna preslikava k družini $\tilde{\mathcal{C}}$. 
-Naj bo $(x, f\theta) \in GCMI^{r}(S, \mathbb{R}^{n})$ dana posplošena konformna minimalna imerzija. Po Lemi~\ref{lema:aproks&interp-A*} lahko preslikavo $f \in \mathcal{A}^{r-1}(S, \textup{\textbf{A}}_{*})$ v $\mathcal{C}^{r-1}(S)$ aproksimiramo s polno holomorfno preslikavo $F \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$, za katero je $\mathcal{P}(F) = \mathcal{P}(f)$, $F$ se z $f$ ujema na $A$ ter do danega končnega reda na $A \cap S^{\circ}$.
+Naj bo $(x, f\theta) \in \textup{GCMI}^{r}(S, \mathbb{R}^{n})$ dana posplošena konformna minimalna imerzija. Po Lemi~\ref{lema:aproks&interp-A*} lahko preslikavo $f \in \mathcal{A}^{r-1}(S, \textup{\textbf{A}}_{*})$ v $\mathcal{C}^{r-1}(S)$ aproksimiramo s polno holomorfno preslikavo $F \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$, za katero je $\mathcal{P}(F) = \mathcal{P}(f)$, $F$ se z $f$ ujema na $A$ ter do danega končnega reda na $A \cap S^{\circ}$.
 Izberimo točko $p_0 \in A$ in definirajmo preslikavo $X \colon M \to \mathbb{R}^{n}$ s predpisom
 \begin{gather} \label{eq:X-nekrit-primer}
 X(p) = x(p_0) + \Re \int_{p_0}^{p} F\theta, \quad p \in M.
@@ -1620,7 +1620,92 @@ Preslikavo $\tilde{x}$ bomo definirali kot limito $\tilde{x} = \lim_{i \to \inft
 
 Baza indukcije sta $\varepsilon_0$ in $x^{0} \colon U \to \mathbb{R}^{n}$, za katera že vemo, da izpolnjujeta zahteve~(i)--(vi). \newline
 Predpostavimo, da smo v $i$-tem koraku za nek $i \in \mathbb{N}$ in smo že našli $(\varepsilon_{j}, x^{j})$ za $j \in \{ 0, 1, \dots , i-1 \}$. V indukcijskem koraku konstruirajmo preslikavo $x^{i}$ ter poiščimo ustrezen $\varepsilon_{i}$.
-Obravnavali bomo tri primere glede na lastnosti množice $A_{i}$.
+Obravnavali bomo tri primere glede na lastnosti množice $A_{i}$. \newline
+
+% 1. primer
+1.~PRIMER: $A_{i}$ ne vsebuje niti kritične točke funkcije $\rho$ niti točke iz $\Lambda$. \newline
+Vemo, da je tedaj $A_{i}$ končna unija kolobarjev. Trditev~\ref{trd:nekritcni-primer} pove, da obstaja polna konformna minimalna imerzija $x^{i} \colon M_{i} \to \mathbb{R}^{n}$, ki zadošča točkam~(i)--(iii).
+Pogoja~(iv),~(v) sledita iz Izreka [...]. % citiraj Theorem 3.4.1
+Končno, število $\varepsilon_{i} > 0$ izberemo ustrezno majhen, da zadostimo še točki~(vi). \newline
+
+% 2. primer
+2.~PRIMER: $A_{i}$ vsebuje točko $p \in \Lambda$. \newline
+Vemo, da tedaj $A_{i}$ ne vsebuje kritične točke funkcije $\rho$ in je $A_{i} \cap \Lambda = \{p\}$. Iz prvega sledi, da je množica $A_{i}$ končna unija kolobarjev.
+
+Po prvem delu dodatka k Izreku [...] % citiraj Theorem 3.4.1
+velja naslednje: če je $x \colon \Lambda \to \mathbb{R}^{n}$ injektivna, potem z deformacijo preslikave $x^{i-1}$ na $M_{i-1}$ lahko dosežemo, da je $x(p) \notin x^{i-1}(M_{i-1})$, hkrati pa ohranimo lastnosti~(i)--(vi).
+
+Naj bo $D_{p} \subset A_{i}$ tak zaprt disk okrog točke $p \in A_{i}$, da je $x|_{D_{p}}$ konformna minimalna imerzija.
+Izberimo točki $q \in bM_{i-1}$ in $q' \in bD_{p}$ ter ju povežimo z gladkim vloženim lokom $E \subset \{q,q'\} \cup (A_{i} \setminus D_{p})$, ki $bM_{i-1}$ in $bD_{p}$ seka transverzalno. Lok $E$ usmerimo od $q$ do $q'$ in ga parametrizirajmo s potjo $\gamma \colon [0,1] \to E \ \gamma(0)=q, \ \gamma(1)=q'$.
+
+Definirajmo množico $S_{i} = M_{i-1} \cup E \cup D_{p}$. Po konstrukciji je Rungejeva dopustna množica v $M$. 
+
+Funkcija 
+\begin{gather*}
+f^{i-1} = 2 \partial x^{i-1} / \theta \colon M_{i-1} \to \textup{\textbf{A}}_{*}
+\end{gather*} 
+je holomorfna v okolici $M_{i-1}$. Res, $\theta$ je po predpostavki holomorfna 1-forma in $x^{i-1}$ konformna minimalna imerzija po indukcijski predpostavki. 
+Točki $q, q'$ sta regularni, zato lahko po Lemi~\ref{lema:analog-gromova} funkcijo $f^{i-1}$ gladko razširimo na $E \cup D_{p}$ na naslednji način:
+\begin{itemize}
+\item $ f^{i-1}|_{D_{p}} = 2 \partial x / \theta \colon D_{p} \to \textup{\textbf{A}}_{*} $ in
+\item $ \Re \int_{E} f^{i-1} \theta = \Re \int_{0}^{1} f^{i-1}(\gamma(s)) \theta(\gamma(s), \gamma '(s)) ds = x(q') - x^{i-1}(q) $ za $t \in [0,1]$.
+\end{itemize}
+%
+Nato razširimo še preslikavo $x^{i-1}$ na $S_{i}$ takole:
+\begin{itemize}
+\item $ x^{i-1}|_{D_{p}} = x|_{D_{p}} $ in
+\item $ x^{i-1}(\gamma(t)) = x^{i-1}(q) + \Re \int_{0}^{t} f^{i-1}(\gamma(s)) \theta(\gamma(s), \gamma '(s)) ds$ za $t \in [0,1]$.
+\end{itemize}
+%
+Po konstrukciji je $(x^{i-1}, f^{i-1} \theta) \in \textup{GCMI}(S_{i}, \mathbb{R}^{n})$. Nadalje po konstrukciji $S_{i}$ in izboru $A_{i}$ velja $H_{1}(M_{i-1}, \mathbb{Z}) = H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$. 
+Sedaj uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek [...], % citiraj izrek 3.4.1
+da dobimo polno konformno minimalno imerzijo $x^{i} \colon M_{i} \to \mathbb{R}^{n}$, ki zadošča točkam~(i)--(v). Za ustrezen izbor $\varepsilon_{i} > 0$ zadostimo še točki~(vi). \newline
+
+% 3. primer
+3.~PRIMER: $A_{i}$ vsebuje kritično točko $p$ funkcije $\rho$. \newline
+Vemo, da je $p$ edina kritična točka na $A_{i}$ in $A_{i} \cap \Lambda = \emptyset$. Po izboru funkcije izčrpanja $\rho$ je $p$ Morsejeva točka.
+Morsejev indeks točke $p$ je bodisi enak $0$ ($p$ je lokalni minimum) bodisi $1$ ($p$ je sedlo). Indeks ne more biti enak $2$, saj je $\rho$ subharmonična funkcija, ki pa ne premore lokalnega maksimuma.
+Zanima nas sprememba topologije množic $\{ \rho \leq c \}$ za $c>0$, ko prečkamo kritično točko $p$. Ločeno si oglejmo primere glede na Morsejev indeks točke $p$. \newline
+
+% 3.1
+3.1: Morsejev indeks točke $p$ je enak $0$. \newline
+Ko prečkamo kritično točko $p$, spremembo topologije opišemo z dodajanjem povezane komponente, natančneje, $M_{i-1}$ disjunktno dodamo disk.
+Naj bo $D \subset A_{i}$ zaprt disk okrog $p$. Unija $S_{i} = M_{i-1} \cup D$ je dopustna množica z $H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$.
+Preslikavo $x^{i-1}$ razširimo na $S_{i}$ tako, da za $x^{i-1}|_{D}$ izberemo poljubno konformno minimalno imerzijo.
+Spet uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek [...], % citiraj izrek 3.4.1
+da dobimo preslikavo $x^{i} \colon M_{i} \to \mathbb{R}^{n}$ in ustrezno izberemo $\varepsilon_{i}$. \newline
+
+Poglejmo si še primer, ko je Morsejev indeks točke $p$ enak $1$. Ko prečkamo točko $p$, se $M_{i-1}$ doda gladek vložen lok $E \subset A_{i} \cup bM_{i-1}$ s krajiščema v točkah $q_0, q_1 \in bM_{i-1}$, ki sta edini točki na $bM_{i-1} \cap E$, in $E$ seka $bM_{i-1}$ transverzalno. Lok $E$ orientiramo od $q_0$ do $q_1$.
+Definiramo $S_{i} = M_{i-1} \cup E$, ki je po konstrukciji dopustna množica in $H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$. Obravnavajmo dve situaciji. \newline
+
+% 3.2.1
+3.2.1~Morsejev indeks točke $p$ je enak $1$ in krajišči loka $E$ pripadata isti povezani komponenti množice $M_{i-1}$. \newline
+Točki $q_0$ in $q_1$ povežimo z gladkim vloženim lokom $E' \subset M_{i-1}$. 
+Unija $C = E \cup E'$ je zaprta Jordanova krivulja, ki pripada bazi homologje za $S_{i}$.
+Nadaljujemo kot v 2.~primeru. Funkcija $f^{i-1} = 2 \partial x^{i-1} / \theta \colon M_{i-1} \to \textup{\textbf{A}}_{*}$ je holomorfna v okolici $M_{i-1}$.
+Gladko jo razširimo na $E$ tako, da velja
+\begin{gather*}
+\Re \int_{C} f^{i-1} \theta = 0, \quad \Im \int_{C} f^{i-1} \theta = \mathfrak{p}(C),
+\end{gather*}
+kjer upoštevamo dejstvo, da sta $q_0, q_1$ regularni točki in uporabimo Lemo~\ref{lema:analog-gromova}.
+Nato $x^{i-1}$ razširimo na $S_{i}$ kot v 2.~primeru, kar nam da $(x^{i-1}, f^{i-1} \theta) \in \textup{GCMI}(S, \mathbb{R}^{n})$.
+Po indukcijski predpostavki je $\textup{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(M_{i-1},\Z)$ in po zgornjem $\textup{Flux}_{x^{i-1}}(C) = \mathfrak{p}(C)$, zato velja
+$\textup{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(S_{i},\Z)$.
+Spet uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek [...], % citiraj izrek 3.4.1
+in zaključimo kot v prejšnjih primerih.
+
+% 3.2.2
+3.2.2~Morsejev indeks točke $p$ je enak $1$ in krajišči loka $E$ pripadata različnima povezanima komponentama množice $M_{i-1}$. \newline
+Ko $M_{i-1}$ dodamo lok $E$, se v homološki bazi ne pojavi nobena nova krivulja; $H_{1}(M_{i-1}, \mathbb{Z}) = H_{1}(S_{i}, \mathbb{Z})$.
+Homolorfno funkcijo $f^{i-1} \colon M_{i-1} \to \textup{\textbf{A}}_{*}$ razširimo gladko na $E$ tako, da je
+\begin{gather*}
+\Re \int_{E} f^{i-1} \theta = x^{i-1}(q_1) - x^{i-1}(q_0),
+\end{gather*}
+kjer zopet uporabimo Lemo~\ref{lema:analog-gromova}.
+Nato kot prej razširimo $x^{i-1}$ na $S_{i}$, dobimo posplošeno konformno minimalno imerzijo, uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek [...], % citiraj izrek 3.4.1
+in zaključimo kot v prejšnjih primerih.
+
+Obravnavali smo vse možne situacije in v vsaki našli ustrezen par $(x^{i}, \varepsilon_{i})$. Indukcija je s tem zaključena. Od tod po razmisleku zgoraj sledi, da je $\tilde{x} = \lim_{i \to \infty} x^{i}$ iskana konformna minimalna imerzija, kar zaključi dokaz izreka.
 \end{dokaz}
 %%%%% konec dokaza
 
