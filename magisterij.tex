@@ -1492,15 +1492,17 @@ V(f_{1}, \dots , f_{m}) = \{ z \in \mathbb{C}^{n}; \ f_{1}(z) = \dots = f_{m}(z)
 pravimo \emph{afina algebraična raznoterost}, ki je hkrati zaprta kompleksna podraznoterost raznoterosti $\mathbb{C}^{n}$.
 V nadaljevanju se bomo ukvarjali z le-temi.
 
-Če afine algebraične raznoterosti $A$ ne moremo zapisati kot unijo dveh neničelnih afinih algebraičnih raznoterosti, potem $A$ imenujemo \emph{irreducible}.
-Sicer je $A$ \emph{reducible}.
+Če afine algebraične raznoterosti $A$ ne moremo zapisati kot unijo dveh neničelnih afinih algebraičnih raznoterosti, potem $A$ imenujemo \emph{nerazcepna raznoterost}.
+Sicer je $A$ \emph{razcepna}.
 
-Množica regularnih točk raznoterosti $A$ se imenuje \emph{regular locus} raznoterosti $A$ in označi z $A_{reg}$.
-Podobno je množica singularnih točk raznoterosti $A$ imenovana \emph{singular locus} z oznako $A_{sing}$.
+Pogosto nas zanimajo le regularne ali singularne točke. Zato uvedemo posebni oznaki:
+množico regularnih točk raznoterosti $A$ označimo z $A_{reg}$, množico singularnih točk raznoterosti $A$ pa z $A_{sing}$.
+
+Pravimo, da je afina algebraična raznoterost, ki je podraznoterost v $\mathbb{C}^{n}$, neizrojena, kadar ni vsebovana v nobeni afini hiperravnini v $\mathbb{C}^{n}$.
 
 % Lema: poti s predpisanimi integrali, analog Gromova
 \begin{lema} \label{lema:analog-gromova}
-Naj bo $A$ irreducible neizrojena algebraična podraznoterost v $\mathbb{C}^{n}$, $\eta \in \mathbb{C}^{n}$ izbran vektor in $\Omega \subset \mathbb{C}^{n}$ povezana domena, ki vsebuje $0$ in $\eta$. 
+Naj bo $A$ nerazcepna neizrojena algebraična podraznoterost v $\mathbb{C}^{n}$, $\eta \in \mathbb{C}^{n}$ izbran vektor in $\Omega \subset \mathbb{C}^{n}$ povezana domena, ki vsebuje $0$ in $\eta$. 
 Naj bosta dani zvezni preslikavi $f_0 \colon [0,1] \to A_{reg}$ in $g \colon [0,1] \to \mathbb{C}_{*}$.
 Potem za $\tau \in [0,1]$ obstaja taka homotopija $f_{\tau} \colon [0,1] \to A_{reg}$ s fiksnima krajiščema, da je $f_0$ dana preslikava, preslikava $f = f_1$ je gladka in neravna v okolici $f(0)$, ter velja
 \begin{gather} \label{eq:pot-s-predp-integralom}
@@ -1571,8 +1573,56 @@ Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfiz
 
 \begin{opomba}
 Predpostavka iz 5.~točke izreka, da ima $x$ enostavne dvojne točke na množici $\Lambda$, pomeni naslednje:
-ne obstajajo tri različne točke v $\Lambda$, ki bi se s preslikavo $x$ slikale v isto točko v $\mathbb{R}^{4}$, ter, če za različni točki $p, q \in \Lambda$ velja $x(p) = x(q)$, potem je $dx_{p}(T_{p}M) \cap dx_{q}(T_{q}M) = \emptyset$ v $T_{x(p)}\mathbb{R}^{4}$.
+ne obstajajo tri različne točke v $\Lambda$, ki bi se s preslikavo $x$ slikale v isto točko v $\mathbb{R}^{4}$, ter, če za različni točki $p, q \in \Lambda$ velja $x(p) = x(q)$, potem je $dx_{p}(T_{p}M) \cap dx_{q}(T_{q}M) = \{ 0 \} \subset T_{x(p)}\mathbb{R}^{4}$.
 \end{opomba}
+
+% CITIRAJ [Theorem 3.4.1 & Theorem 1.12.5]
+%%%%% dokaz glavnega izreka
+\begin{dokaz}
+Izberimo tako število $\varepsilon_0 > 0$, da je $2 \varepsilon_0 < \varepsilon$.
+Izberimo okolico $U \subset M$ množice $S$, za katero velja $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z})$ in $\Lambda \cap U \subset S$.
+Po Trditvi~\ref{trd:nekritcni-primer} tedaj obstaja polna konformna minimalna imerzija $x^{0} \colon U \to \mathbb{R}^{n}$, ki zadošča:
+$ ||x^{0}-x||_{\mathcal{C}^{r}(S)} < \varepsilon_0$, preslikavi $x^{0}$ in $x$ se ujemata do reda $k(p)$ v vsaki točki $p \in \Lambda \cap S$ ter $ \textup{Flux}_{x^{0}} = \textup{Flux}_{x}$ na $H_{1}(S, \mathbb{Z})$.
+Izrek [...] % citiraj Theorem 3.4.1 - (b,c)
+zagotavlja, da preslikava $x^{0}$ zadošča tudi pogojema 4.~in 5.~v našem izreku.
+
+Po Izreku [.] % citiraj Theorem 1.12.5
+obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho \colon M \to \mathbb{R}$, za katero je
+\begin{gather*}
+S \subset \{ \rho < 0 \} \subset \{ \rho \leq 0 \} \subset U.
+\end{gather*}
+Funkcijo $\rho$ lahko izberemo tako, da je $c_0 = 0$ njena regularna vrednost, nivojnice $\{ \rho = c \}$ za $c>0$ pa vsebujejo kvečjemu eno kritično točko funkcije $\rho$ ali kvečjemu eno točko množice $\Lambda$, vendar ne obeh hkrati. To lahko zagotovimo zato, ker so kritične točke Morsejeve funkcije izčrpanja izolirane in je $\Lambda$ po predpostavki zaprta diskretna množica.
+
+Označimo z $M_{0}$ kompaktno množico $M_{0} = \{ \rho \leq 0 \}$.
+Ker je $M_{0} \subset U$ in $\textup{Flux}_{x^{0}} = \textup{Flux}_{x}$ na $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z}) \}$, sta pretoka enaka tudi na $H_{1}(M_{0}, \mathbb{Z})$.
+
+Izberimo strogo naraščajoče zaporedje $\{ c_{i} \}_{i} \subset \mathbb{R}$, s $0=c_0 $ in $\lim_{i \to \infty}c_{i} = + \infty$. Dodatno naj za vse $i \in \mathbb{N}$ velja:
+\begin{itemize}
+\item $c_{i}$ je regularna vrednost funkcije $\rho$;
+\item $ \{ \rho = c_{i} \} \cap \Lambda = \emptyset$;
+\item množica $A_{i} = M_{i}^{\circ} \setminus M_{i-1} = \{ c_{i-1} < \rho < c_{i} \}$ vsebuje kvečjemu eno kritično točko funkcije $\rho$ ali kvečjemu eno točko iz množice $\Lambda$, vendar ne obeh hkrati.
+\end{itemize}
+%
+Iskano imerzijo $\tilde{x}$ bomo dobili na naslednji način. Induktivno bomo konstruirali zaporedje konformnih minimalnih imerzij $\{ x^{i} \}_{i}$, $x^{i} \colon M_{i} = \{ \rho \leq c_{i} \} \to \mathbb{R}^{n}$ (natančneje, $x^{i}$ je definirana na okolici kompakta $M_{i}$), ter strogo padajoče zaporedje $\{ \varepsilon_{i} \}_{i} \subset \mathbb{R}_{>0}$. Pri tem bo za vsak indeks $i \in \mathbb{N}$ veljalo naslednje:
+\begin{itemize}
+\item[(i)] $||x^{i} - x^{i-1}||_{\mathcal{C}^{r}(S)} < \varepsilon_{i-1}$;
+\item[(ii)] preslikavi $x^{i}$ in $x$ se ujemata do reda $k(p)$ za vse $p \in \Lambda \cap M_{i}$;
+\item[(iii)] $\textup{Flux}_{x^{i}} = \mathfrak{p}$ na $H_{1}(M_{i},\Z)$;
+\item[(iv)] če je $n \geq 5$ in $x \colon \Lambda \to \mathbb{R}^{n}$ injektivna preslikava, potem je $x^{i}$ injektivna;
+\item[(v)] če je $n=4$ in ima $x$ enostavne dvojne točke na $\Lambda$, potem ima $x^{i}$ enostavne dvojne točke;
+\item[(vi)] velja $\varepsilon_{i} > 0$ in $2 \varepsilon_{i} < \varepsilon_{i-1}$.
+	Vsaka preslikava $y \colon M_{i} \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(M_{i})$, za katero je 
+	$||y-x^{i}||_{\mathcal{C}^{r}(M_{i})} < 2\varepsilon_{i}$, 
+	je v primeru 4.~polna injektivna imerzija ter polna imerzija z enostavnimi dvojnimi točkami v primeru~5.~obravnavanega izreka.
+\end{itemize}
+%
+Preslikavo $\tilde{x}$ bomo definirali kot limito $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \to \mathbb{R}^{n}$. Po konstrukciji je to konformna minimalna imerzija, ki zadošča našemu izreku.
+
+Baza indukcije sta $\varepsilon_0$ in $x^{0} \colon U \to \mathbb{R}^{n}$, za katera že vemo, da izpolnjujeta zahteve~(i)--(vi). \newline
+Predpostavimo, da smo v $i$-tem koraku za nek $i \in \mathbb{N}$ in smo že našli $(\varepsilon_{j}, x^{j})$ za $j \in \{ 0, 1, \dots , i-1 \}$. V indukcijskem koraku konstruirajmo preslikavo $x^{i}$ ter poiščimo ustrezen $\varepsilon_{i}$.
+Obravnavali bomo tri primere glede na lastnosti množice $A_{i}$.
+\end{dokaz}
+%%%%% konec dokaza
 
 \begin{izrek} \label{izr:glavni-izrek-NC}
 Naj bo $M$ odprta Riemannova ploskev, $\theta$ povsod neničelna holomorfna 1-forma na $M$, $n \geq 3$ in $r \geq 1$.
