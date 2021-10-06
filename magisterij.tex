@@ -235,7 +235,7 @@ the content and not the structure of your work.
 % Mnogoterosti
 \subsection{Mnogoterosti}
 
-\begin{definicija}
+\begin{definicija} [Topološka mnogoterost]
 Naj bo $n \in \N$. Topološki prostor $M$ z lastnostmi:
 \begin{enumerate}
 \item $M$ je Hausdorffov,
@@ -253,7 +253,7 @@ V posebnem gladek atlas določa gladko mnogoterost.
 Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ razsežnosti $\dim X = n$ in $M \subset X$ njena podmnožica. Če za vsako točko $p \in M$ obstaja lokalna karta $(U, \phi)$ glede na atlas $\mathcal{U}$ mnogoterosti $X$, tako da je preslikava $\phi \colon U \to V \subset \mathbb{R}^{n}$ homeomorfizem in velja $\phi (M \cap U) = V \cap (\mathbb{R}^{m} \times \{0\}^{n-m})$, potem $M$ imenujemo \emph{podmnogoterost} razreda $\mathcal{C}^{r}$ razsežnosti $\dim M = m$.
 \end{definicija}
 
-\begin{definicija}[Orientacija mnogoterosti]
+\begin{definicija} [Orientacija mnogoterosti]
 Naj bo $M$ gladka mnogoterost in $\mathcal{U}$ pripadajoč gladek atlas. Lokalni karti $(U, \phi)$ in $(V, \psi)$ določata isto orientacijo na $M$, če za poljubno točko $p \in U \cap V \neq \emptyset$ velja $\det (d(\psi \circ \phi ^{-1})_{\phi (p)}) > 0.$ Kadar poljubni lokalni karti glede na izbrani atlas $\mathcal{U}$ določata isto orientacijo, pravimo, da je atlas $\mathcal{U}$ \emph{orientiran}. Nadalje je mnogoterost \emph{orientabilna}, če premore orientiran atlas. \emph{Orientacija} mnogoterosti $M$ je izbor maksimalnega orientiranega atlasa na $M$.
 \end{definicija}
 
@@ -290,7 +290,7 @@ Z uporabo izreka o implicitni preslikavi dokažemo naslednje: Če je $f \colon M
 \end{opomba}
 
 % Riemannova metrika & mnogoterost
-\begin{definicija}
+\begin{definicija} [Riemannova mnogoterost]
 Naj bo $M$ gladka mnogoterost. Za vsako točko $p \in M$ definiramo simetrično pozitivno-definitno bilinearno preslikavo $g_{p} \colon T_{p}M \times T_{p}M \to \R$, ki je gladko odvisna od $p$. Družino preslikav $g_{p}$ imenujemo \emph{Riemannova metrika} $g$ na mnogoterosti $M$.
 Gladki mnogoterosti, opremljeni z Riemannovo metriko, pravimo \emph{Riemannova mnogoterost}, in jo označimo z $(M,g)$.
 \end{definicija}
@@ -312,7 +312,7 @@ g_{p}(\xi, \eta) = \tilde{g}_{x(p)} (dx_{p}(\xi), dx_{p}(\eta)).
 \end{equation}
 Če je metrika $\tilde{g}$ razreda $\mathcal{C}^{r}$ in imerzija $x$ razreda $\mathcal{C}^{r+1}$, potem je tudi povlečena metrika $g = x^{*} \tilde{g}$ razreda $\mathcal{C}^{r}$.
 
-\begin{primer}[Prva fundamentalna forma]
+\begin{primer} [Prva fundamentalna forma]
 Oglejmo si primer Riemannove metrike na realnem $n$-razsežnem Evklidskem prostoru $\mathbb{R}^{n}$.
 Če izberemo standardne koordinate $x = (x_{1}, \dots, x_{n}) \in \mathbb{R}^{n}$, \emph{Evklidsko metriko} definira predpis
 \begin{equation}
@@ -337,6 +337,22 @@ Naj bo $M$ mnogoterost brez roba in $K$ njena zaprta podmnožica. Povezano kompo
 \begin{definicija}
 \emph{Jordanov lok} je pot v ravnini, ki je topološko izomorfna intervalu $[0,1]$.
 \emph{Jordanova krivulja} je ravninska krivulja, ki je topološko ekvivalentna enotski krožnici.
+\end{definicija}
+
+% transverzalnost
+\begin{definicija} [Transverzalnost]
+Naj bo $X$ gladka mnogoterost in $M, N \subset X$ njeni vloženi podmnogoterosti, katerih presek je neprazen.
+Če za točko $p \in M \cap N$ velja
+\begin{gather*}
+T_{p}M + T_{p}N = T_{p}X,
+\end{gather*} 
+potem rečemo, da se mnogoterosti $M$ in $N$ sekata \emph{transverzalno} v $p$. V tem primeru pišemo $M \pitchfork_{p} N$.
+
+Splošneje, diferenciabilna preslikava $f \colon M \to X$ je \emph{transverzalna} na podmnogoterost $N \subset X$ v točki $p \in M$, če velja ali $f(p) \notin N$ ali $f(p) \in N$ in je
+\begin{gather*}
+df_{p}(T_{p}M) + T_{f(p)}N = T_{f(p)}X.
+\end{gather*}
+To označimo z $f \pitchfork_{p} N$. Kadar zgornji pogoj velja v vsaki točki $p \in M$, pravimo, da je preslikava $f$ transverzalna na podmnogoterost $N$; $f \pitchfork N$.
 \end{definicija}
 
 % 1. fundamentalna & homološka grupa
@@ -1151,10 +1167,14 @@ $ \mathcal{L}in \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo
 \end{dokaz}
 
 V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih konformnih minimalnih imerzij in ničelnih krivulj operirali s splošnejšimi preslikavami, imenovanimi posplošene minimalne imerzije ter ničelne krivulje; naravno pa se bodo zaradi topoloških lastnosti množic, na katerih bomo preslikave aproksimirali, pojavile tudi množice iz naslednje definicije.
+
 % dopustna množica
 \begin{definicija} [Dopustna množica]
 Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
 \end{definicija}
+%
+% transverzalnost
+
 
 % posplošena konformna minimalna imerzija
 \begin{definicija} [Posplošena konformna minimalna imerzija]
