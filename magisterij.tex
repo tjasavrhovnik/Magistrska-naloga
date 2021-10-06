@@ -1099,7 +1099,7 @@ Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih preslikav $M \
 Če je $K$ kompaktna podmnožica v $M$, množico preslikav $K \to X$ razreda $\mathcal{C}^{r}(M)$, ki so holomorfne v notranjosti $K^\circ \subset K$, označimo z $\mathcal{A}^{r}(K,X)$.
 V primeru, ko je $X = \C$, ustrezna prostora označimo z $\mathcal{O}(M)$ oziroma $\mathcal{A}^{r}(K)$.
 
-Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Prostor konformnih minimalnih imerzij $M \to \R^{n}$ označimo s $\textup{CMI}(M, \R^{n})$, prostor holomorfnih ničelnih krivulj $M \to \C^{n}$ pa z $\textup{NC}(M, \C^{n})$. Oba prostora sta opremljena s kompaktno-odprto topologijo\footnote{Naj bosta $X$ in $Y$ topološka prostora ter $\mathcal{C}(X,Y)$ prostor zveznih preslikav med njima. Množica $\mathcal{V} = \{ f \in \mathcal{C}(X,Y); \ f(K) \subset U, \ K \subset X \ \text{kompaktna}, \ U \subset Y \ \text{odprta} \}$ tvori podbazo \emph{kompaktno-odprte topologije} na prostoru $\mathcal{C}(X,Y)$.}.
+Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Prostor konformnih minimalnih imerzij $M \to \R^{n}$ označimo s $\textup{CMI}(M, \R^{n})$, prostor holomorfnih ničelnih krivulj $M \to \C^{n}$ pa z $\textup{NC}(M, \C^{n})$. Oba prostora sta opremljena s kompaktno-odprto topologijo.
 Nadalje $\textup{CMI}_{full}(M, \R^{n})$ in $\textup{CMI}_{nf}(M, \R^{n})$ označujeta prostora polnih oziroma neravnih konformnih minimalnih imerzij na povezanih komponentah $M$. Po zvezi~\eqref{implikacije:full-nd-nf} velja inkluzija 
 \begin{gather*}
 \textup{CMI}_{full}(M, \R^{n}) \subset \textup{CMI}_{nf}(M, \R^{n}).
@@ -1120,6 +1120,15 @@ Odprte podprostore polnih in neravnih preslikav tokrat označimo podobno kot pre
 \begin{opomba}
 Imerzija $x \colon M \to \mathbb{R}^{n}$ razreda $\mathcal{A}^{r}(M)$ na kompaktni Riemannovi ploskvi z nepraznim gladkim robom $bM$ je element prostora $\textup{CMI}^{r}(M, \R^{n})$ natanko tedaj, ko je pripadajoča 1-forma $\partial x = (\partial x_{1}, \dots , \partial x_{n})$ holomorfna na $M^{\circ} = M \setminus bM$ in zadošča ničelnemu pogoju $(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0$.
 \end{opomba}
+
+% kompaktno-odprta C^{r} topologija
+Zgoraj smo omenili kompaktno-odprto topologijo, zato jo natančneje razložimo.
+Naj bosta $M$ in $X$ gladki mnogoterosti, $r \in \mathbb{N}$ in preslikava $f \colon M \to X$ razreda $\mathcal{C}^{r}(M,X)$. 
+Okolico preslikave $f$ v \emph{kompaktno-odprti} ali tudi \emph{šibki} $\mathcal{C}^{r}$ topologiji na prostoru $\mathcal{C}^{r}(M,X)$ tvorijo preslikave $g \in \mathcal{C}^{r}(M,X)$, ki ustrezajo naslednji zahtevi. 
+Naj bosta $K \subset M$ dana kompaktna podmnožica in $\varepsilon > 0$. Izberimo taka gladka atlasa na $M$ in $X$, ki množici $K$ in $f(K)$ pokrijeta s končno mnogo lokalnimi kartami $(U_{i}, \phi_{i})$ oz.~$(V_{i}, \psi_{i})$, pri čemer naj preslikava $f$ lokalno karto $U_{i} \subset K$ preslika v lokalno karto $V_{i} \subset f(K)$. 
+Računamo $\mathcal{C}^{r}$-normo razlike preslikav $f$ in $g$ ter njunih odvodov do reda $r$ v prej izbranih parih lokalnih kart. Ustrezne so tiste preslikave $g$, za katere so vse $\mathcal{C}^{r}$-norme razlik manjše od predpisanega števila $\varepsilon$.
+
+Opomnimo, da je topologija neodvisna od izbora atlasov na mnogoterostih oziroma lokalnih kart na $K$ in $f(K)$, čeprav je postopek iskanja okolic preslikave od teh izbir odvisen.
 
 % lema - neravna preslikava
 \begin{lema} \label{lema:neravna f}
