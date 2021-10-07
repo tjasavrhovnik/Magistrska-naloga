@@ -530,8 +530,11 @@ d + id^{c} = 2\partial , \quad  d - id^{c} = 2\bar{\partial}, \\
 dd^{c} = 2i\partial \bar{\partial} = \left( \frac{\partial^2}{\partial u^2} + \frac{\partial^2}{\partial v^2} \right) du \wedge dv = \Delta du \wedge dv,
 \end{gather*}
 kjer je $\Delta$ Laplaceov operator glede na Evklidsko metriko.\newline
+%
 Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna} ($\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$.\newline
+%
 Funkcija $x \colon M \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}, če velja $dd^{c}x=0$.
+Kadar zadošča neenakosti $dd^{c}x \geq 0$, ji pravimo \emph{subharmonična}, oziroma \emph{strogo subharmonična} v primeru stroge neenakosti.
 Harmonične funkcije karakteriziramo z naslednjimi ekvivalentnimi pogoji:
 \begin{gather*}
 x \in \mathcal{C}^2(M) \ \text{je harmonična} \ \iff \ dd^{c}x=0 \ \iff \ \partial \bar{\partial}x=0 \ \iff \ \Delta x=0.
@@ -543,7 +546,7 @@ y(p) = \int_{p_0}^{p} d^{c}x + C,
 \end{equation}
 kjer je $C$ konstanta. Imenujemo jo \emph{harmonična konjugiranka} funkcije $x$. Velja enakost $dy = d^{c}x$, nova funkcija $z \colon D \to \mathbb{C}^{n}, \ z = x+iy$, imenovana \emph{kompleksna krivulja} v $\mathbb{C}^{n}$, pa je holomorfna. Zaključimo, da je zožitev realne harmonične funkcije na enostavno povezano domeno v $M$ enaka realnemu delu holomorfne funkcije $x+iy$, pri čemer je $y$ harmonična konjugiranka od $x$, ki jo definira enakost~\eqref{eq:harmonicna-konj}.
 
-\begin{definicija}
+\begin{definicija} [Pretok]
 Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je homomorfizem grup $\textup{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
 \begin{equation} \label{eq:pretok}
 \textup{Flux}_{x} ([C]) = \int_{C} {d^{c} x}.
@@ -567,7 +570,7 @@ Naj bo $K$ kompaktna podmnožica Riemannove ploskve $M$. Njena \emph{holomorfna 
 \begin{equation}
 \widehat{K}_{\mathcal{O}(M)} = \{p \in M ; \ |f(p)| \leq \max_{K} |f| \ \text{za vse} \ f \in \mathcal{O}(M) \}.
 \end{equation}
-Če velja $K = \widehat{K}_{\mathcal{O}(M)}$, množico $K$ imenujemo \emph{Rungejeva množica}.
+Če velja $K = \widehat{K}_{\mathcal{O}(M)}$, potem $K$ imenujemo \emph{Rungejeva} ali tudi \emph{$\mathcal{O}(M)$-konveksna množica}.
 \end{definicija}
 
 \begin{izrek} [Bishop-Mergelyanov aproksimacijski izrek] \label{izr:Bishop-Mergelyan}
@@ -1266,7 +1269,7 @@ Za vsako preslikavo $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki 
 \end{lema}
 
 \begin{definicija} [Periodno dominantni sprej]
-Preslikavo $\Phi_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej} imenujemo \emph{periodno dominantni sprej} preslikav $S \to \textbf{\textup{A}}_{*}$ za družino krivulj $\mathcal{C}$ z \emph{jedrom} $\Phi_{f}(\cdot, 0) = f$. Lastnosti~\eqref{PD-lastnost} pravimo \emph{periodno dominantna lastnost}.
+Preslikavo $\Phi_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej}, imenujemo \emph{periodno dominantni sprej} preslikav $S \to \textbf{\textup{A}}_{*}$ za družino krivulj $\mathcal{C}$ z \emph{jedrom} $\Phi_{f}(\cdot, 0) = f$. Lastnosti~\eqref{PD-lastnost} pravimo \emph{periodno dominantna lastnost}.
 \end{definicija}
 
 %%%%% dokaz leme
@@ -1339,7 +1342,8 @@ Za indekse $1 \leq i \neq j \leq n$ definirajmo holomorfna vektorska polja na $ 
 \begin{gather*}
 V_{ij} = z_{i} \frac{\partial}{\partial z_{j}} - z_{j} \frac{\partial}{\partial z_{i}}.
 \end{gather*}
-Očitno so vektorska polja $\mathbb{C}$-linearna in polna, tangentna na punktirano ničelno kvadriko $\textbf{\textup{A}}_{*}$ in $\mathcal{L}in \{ V_{ij}(x) ; \ x \in \textbf{\textup{A}}_{*} \} = T_{x}\textbf{\textup{A}}_{*}$. Po definiciji je zato kompleksna mnogoterost $\textbf{\textup{A}}_{*}$ \emph{fleksibilna mnogoterost}, kar pomeni, da je tudi Oka mnogoterost.
+Očitno so vektorska polja $\mathbb{C}$-linearna in polna, tangentna na punktirano ničelno kvadriko $\textbf{\textup{A}}_{*}$ in $\mathcal{L}in \{ V_{ij}(x) ; \ i,j \} = T_{x}\textbf{\textup{A}}_{*}$ v vsaki točki $x \in \textbf{\textup{A}}_{*}$. Po definiciji je zato kompleksna mnogoterost $\textbf{\textup{A}}_{*}$ fleksibilna\footnote{Pravimo, da je kompleksna mnogoterost $M$ \emph{fleksibilna}, kadar na $M$ obstaja končno mnogo polnih holomorfnih vektorskih polj $V_{1}, \dots , V_{n}$, tako da v vsaki točki $p \in M$ velja $\mathcal{L}in \{ V_{1}(p), \dots , V_{n}(p) \} = T_{p}M$.}, 
+kar pomeni, da je tudi Oka mnogoterost.
 \end{primer}
 
 % CITIRAJ [Lemma 1.12.10]
@@ -1750,6 +1754,45 @@ Za izbrana $\varepsilon > 0$ in preslikavo $k \colon \Lambda \to \N$ obstaja hol
 \item če je $z \colon \Lambda \to \R^{n}$ injektivna preslikava, potem je $\tilde{z}$ injektivna imerzija.
 \end{enumerate}
 \end{izrek}
+
+%%%%%%%%%%%%%%%
+% Morsejeva teorija in ročajniki
+\subsubsection{Morsejeva teorija in ročajniki}
+%
+Naj bo $U \subset \mathbb{R}^{n}$ domena s koordinatami $x = (x_{1}, \dots , x_{n})$ in $f \colon U \to \mathbb{R}$ funkcija razreda $\mathcal{C}^{2}$.
+Spomnimo se, da je točka $x \in U$ \emph{kritična točka} funkcije $f$, če je $\nabla f(x) = 0$. Točka, ki ni kritična, je \emph{regularna}.
+Slike kritičnih točk imenujemo \emph{kritične vrednosti}, medtem ko so vse preostale realne vrednosti \emph{regularne vrednosti} funkcije $f$. \newline
+%
+\emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\textup{Hess}_{f}(x)$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = D(\nabla f)(x)$, kjer $D$ označuje Jacobijevo matriko.
+
+\begin{definicija}
+Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva matrika $H_{f}(x)$ maksimalen rang, točki $x$ pravimo \emph{Morsejeva točka}. Slednji pogoj je ekvivalenten trditvi, da je Hessejeva forma funkcije $f$ v točki $x$ neizrojena.
+
+Število negativnih lastnih vrednosti Hessejeve matrike, $k \in \{0,1, \dots , n\}$, je \emph{Morsejev indeks} kritične točke.
+
+Funkcija, katere vsaka kritična točka je tudi Morsejeva, se imenuje \emph{Morsejeva funkcija}.
+\end{definicija}
+
+Kritične točke funkcije $f$ dobimo z reševanjem enačbe $\nabla f(x)=0$. Ker je Hessejeva matrika enaka Jacobijevi matriki gradienta funkcije, po izreku o inverzni preslikavi vidimo, da je vsaka kritična točka izolirana. Množica kritičnih točk funkcije $f$, $\textup{Crit}(f) = \{ x \in U; \ \nabla f(x)=0 \}$, je zaprta diskretna podmnožica v $U$.
+
+% funkcija izčrpanja
+\begin{definicija}
+Naj bosta $M$ mnogoterost in $f \colon M \to [0, \infty)$ zvezna funkcija. Če je za vsako število $c>0$ množica $M_{c} = \{ p \in M; \ f(p) \leq c \}$ kompaktna, tedaj $f$ imenujemo \emph{funkcija izčrpanja} mnogoterosti $M$.
+\end{definicija}
+
+Za nas bodo pomembne Morsejeve funkcije izčrpanja na Riemannovih ploskvah. Njihov obstoj opisuje naslednja trditev.
+
+% CITIRAJ Prop. 1.12.5
+\begin{trditev}
+Naj bo $K$ kompaktna $\mathcal{O}(M)$-konveksna podmnožica odprte Riemannove ploskve $M$ in $U \subset M$ odprta množica, ki vsebuje $K$.
+Tedaj na $M$ obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho$, za katero velja 
+\begin{gather*}
+K \subset \{ \rho<0 \} \subset \{ \rho \leq 0 \} \subset U.
+\end{gather*}
+\end{trditev}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Literatura:
 % Primer navajanja na http://www.fmf.uni-lj.si/storage/24240/LiteraturaM.pdf,
