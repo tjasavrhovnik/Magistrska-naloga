@@ -1791,6 +1791,38 @@ K \subset \{ \rho<0 \} \subset \{ \rho \leq 0 \} \subset U.
 \end{gather*}
 \end{trditev}
 
+Po zgornji trditvi lahko mnogoterost $M$ konstruiramo s pomočjo njene funkcije izčrpanja $\rho$, natančneje, podnivojnicam $\{ \rho \leq c \}$ ob prehodu kritičnih točk funkcije izčrpanja zaporedoma dodajamo t.~i.~ročaje. V tem primeru pravimo, da mnogoterost predstavimo kot \emph{ročajnik}. Pomemben izrek Morsejeve teorije, ki ga bomo navedli v nadaljevanju, ta postopek natančno opisuje. Pred tem pa definirajmo ustrezne pojme.
+
+% ročajnik
+Vzemimo gladko mnogoterost $M$ z robom $bM$ razsežnosti $\dim M = m \in \mathbb{N}$.
+Naj bo $k \in \{1, 2, \dots , m\}$, $m = k+q$ in naj $D^{k} \subset \mathbb{R}^{k}$ označuje zaprto $k$-razsežno enotsko kroglo. Kartezičnemu produktu
+\begin{gather*}
+H = H^{k,q} = D^{k} \times D^{q}
+\end{gather*}
+pravimo \emph{standardni ročaj} indeksa $k$. Podmnožico $E = D^{k} \times \{0\}^{q} \subset H$ imenujemo \emph{stržen} ročaja, podmnožico $F = bD^{k} \times D^{q} = S^{k-1} \times D^{q} \subset H$ pa njegova \emph{priključna množica}. \newline
+Definirajmo preslikavo
+\begin{gather*}
+\phi \colon S^{k-1} \times D^{q} \to bM
+\end{gather*}
+med priključno množico in robom mnogoterosti, ki naj bo gladek difeomorfizem na sliko. Vzemimo disjunktno unijo mnogoterosti in standardnega ročaja, $M \sqcup H$, ter točke priključne množice $F$ identificirajmo s svojimi slikami. Preslikava $\phi$ je lepilna preslikava pri lepljenju ročaja indeksa $k$ na mnogoterost $M$. Tako nastalo množico $\tilde{M} = M \sqcup_{\phi} H$ imenujemo \emph{ročajnik}.
+Z ``glajenjem'' vzdolž množice $\phi(S^{k-1} \times S^{q-1})$ dosežemo, da ročajnik postane gladka mnogoterost z robom. V nadaljevanju bomo predpostavili, da so ročajniki takšni.
+
+% CITIRAJ Theorem 1.4.7
+\begin{izrek}
+Naj bo $M$ gladka mnogoterost razsežnosti $\dim M= m$. Naj bo $\rho \colon M \to \mathbb{R}$ gladka Morsejeva funkcija, števili $a<b$ njeni regularni vrednosti in
+\begin{gather*}
+M_{a,b} = \{ x \in M; \ a \leq \rho(x) \leq b \}
+\end{gather*}
+kompaktna množica.
+\begin{enumerate}
+\item Recimo, da množica $M_{a,b}$ ne vsebuje nobene kritične točke Morsejeve funkcije $\rho$. Potem so za vse vrednosti $t \in [a,b]$ podnivojnice 
+	$M_{t} = \{ x \in M; \ \rho(x) \leq t \}$ paroma difeomorfne.
+\item Kadar množica $M_{a,b}$ vsebuje natanko eno kritično točko Morsejeve funkcije $\rho$, ta pa ima Morsejev indeks enak $k$, tedaj je podnivojnica 
+	$M_{b}$ difeomorfna ročajniku iz podnivojnice $M_{a}$ in ročaja indeksa $k$.
+	Če je $k=0$, je $M_{b}$ difeomorfna disjunktni uniji $M_{a}$ in kompaktne $m$-razsežne krogle $D^{k}$.
+\end{enumerate}
+\end{izrek}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
