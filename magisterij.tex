@@ -1583,6 +1583,114 @@ Ker znamo rešiti bližnji problem~\eqref{eq:pot-s-predp-integralom-bliznja} v s
 \end{dokaz}
 
 %%%%%%%%%%%%%%%
+% Morsejeva teorija in ročajniki
+\subsubsection{Morsejeva teorija in ročajniki}
+%
+V tem razdelku bomo navedli nekaj osnovnih rezultatov Morsejeve teorije. Pokazali bomo, kako gladke mnogoterosti (v našem -- posebnem -- primeru ploskve) predstavimo kot ročajnike. Znanje tega razdelka nam bo koristilo pri dokazovanju glavnega izreka o aproksimaciji in interpolaciji minimalnih ploskev.
+   
+Naj bo $U \subset \mathbb{R}^{n}$ domena s koordinatami $x = (x_{1}, \dots , x_{n})$ in $f \colon U \to \mathbb{R}$ funkcija razreda $\mathcal{C}^{2}$.
+Spomnimo se, da je točka $x \in U$ \emph{kritična točka} funkcije $f$, če je $\nabla f(x) = 0$. Točka, ki ni kritična, je \emph{regularna}.
+Slike kritičnih točk imenujemo \emph{kritične vrednosti}, medtem ko so vse preostala realna števila \emph{regularne vrednosti} funkcije $f$. \newline
+%
+\emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\textup{Hess}_{f}(x)$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = D(\nabla f)(x)$, kjer $D$ označuje Jacobijevo matriko.
+
+\begin{definicija}
+Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva matrika $H_{f}(x)$ maksimalen rang, točki $x$ pravimo \emph{Morsejeva točka}. Slednji pogoj je ekvivalenten trditvi, da je Hessejeva forma funkcije $f$ v točki $x$ neizrojena.
+
+Število negativnih lastnih vrednosti Hessejeve matrike, $k \in \{0,1, \dots , n\}$, je \emph{Morsejev indeks} kritične točke.
+
+Funkcija, katere vsaka kritična točka je tudi Morsejeva, se imenuje \emph{Morsejeva funkcija}.
+\end{definicija}
+
+Kritične točke funkcije $f$ dobimo z reševanjem enačbe $\nabla f(x)=0$. Ker je Hessejeva matrika enaka Jacobijevi matriki gradienta funkcije, po izreku o inverzni preslikavi vidimo, da je vsaka kritična točka izolirana. Množica kritičnih točk funkcije $f$, $\textup{Crit}(f) = \{ x \in U; \ \nabla f(x)=0 \}$, je zaprta diskretna podmnožica v $U$.
+
+% funkcija izčrpanja
+\begin{definicija}
+Naj bosta $M$ mnogoterost in $f \colon M \to [0, \infty)$ zvezna funkcija. Če je za vsako realno število $c>0$ množica $M_{c} = \{ p \in M; \ f(p) \leq c \}$ kompaktna, tedaj $f$ imenujemo \emph{funkcija izčrpanja} mnogoterosti $M$.
+\end{definicija}
+
+Za nas bodo pomembne Morsejeve funkcije izčrpanja na Riemannovih ploskvah. Njihov obstoj opisuje naslednja trditev.
+
+% CITIRAJ Prop. 1.12.5
+\begin{trditev} \label{trd:Riem-ploskev-Morse-izcrpanje}
+Naj bo $K$ kompaktna $\mathcal{O}(M)$-konveksna podmnožica odprte Riemannove ploskve $M$ in $U \subset M$ odprta množica, ki vsebuje $K$.
+Tedaj na $M$ obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho$, za katero velja 
+\begin{gather*}
+K \subset \{ \rho<0 \} \subset \{ \rho \leq 0 \} \subset U.
+\end{gather*}
+\end{trditev}
+
+Po zgornji trditvi lahko mnogoterost $M$ konstruiramo s pomočjo njene funkcije izčrpanja $\rho$, natančneje, podnivojnicam $\{ \rho \leq c \}$ ob prehodu kritičnih točk funkcije izčrpanja zaporedoma dodajamo t.~i.~ročaje. V tem primeru pravimo, da mnogoterost predstavimo kot \emph{ročajnik}. Pomemben izrek Morsejeve teorije, ki ga bomo navedli v nadaljevanju, ta postopek natančno opisuje. Pred tem pa definirajmo ustrezne pojme.
+% CITIRAJ: povzeto po Chapter 1.4, p. 20--22
+
+% ročajnik
+Vzemimo gladko mnogoterost $M$ z robom $bM$ razsežnosti $\dim M = m \in \mathbb{N}$.
+Naj bo $k \in \{1, 2, \dots , m\}$, $m = k+q$ in naj $\mathbb{D}^{k} \subset \mathbb{R}^{k}$ označuje zaprto $k$-razsežno enotsko kroglo. Kartezičnemu produktu
+\begin{gather*}
+H = H^{k,q} = \mathbb{D}^{k} \times \mathbb{D}^{q}
+\end{gather*}
+pravimo \emph{standardni ročaj} indeksa $k$. Podmnožico $E = \mathbb{D}^{k} \times \{0\}^{q} \subset H$ imenujemo \emph{stržen} ročaja, podmnožico $F = b\mathbb{D}^{k} \times \mathbb{D}^{q} = \mathbb{S}^{k-1} \times \mathbb{D}^{q} \subset H$ pa njegova \emph{priključna množica}. \newline
+Definirajmo preslikavo
+\begin{gather*}
+\phi \colon \mathbb{S}^{k-1} \times \mathbb{D}^{q} \to bM
+\end{gather*}
+med priključno množico in robom mnogoterosti, ki naj bo gladek difeomorfizem na sliko. Vzemimo disjunktno unijo mnogoterosti in standardnega ročaja, $M \sqcup H$, ter točke priključne množice $F$ identificirajmo s svojimi slikami. Preslikava $\phi$ je lepilna preslikava pri lepljenju ročaja indeksa $k$ na mnogoterost $M$. Tako nastalo množico 
+\begin{gather*}
+\tilde{M} = M \sqcup_{\phi} H
+\end{gather*}
+imenujemo \emph{ročajnik}.
+Z ``glajenjem'' vzdolž množice $\phi(\mathbb{S}^{k-1} \times \mathbb{S}^{q-1})$ dosežemo, da ročajnik postane gladka mnogoterost z robom. V nadaljevanju bomo predpostavili, da so ročajniki takšni.
+
+% CITIRAJ Theorem 1.4.7
+\begin{izrek} \label{izr:rocajnik}
+Naj bo $M$ gladka mnogoterost razsežnosti $\dim M= m$. Naj bo $\rho \colon M \to \mathbb{R}$ gladka Morsejeva funkcija, števili $a<b$ njeni regularni vrednosti in
+\begin{gather*}
+M_{a,b} = \{ x \in M; \ a \leq \rho(x) \leq b \}
+\end{gather*}
+kompaktna množica.
+\begin{enumerate}
+\item Recimo, da množica $M_{a,b}$ ne vsebuje nobene kritične točke Morsejeve funkcije $\rho$. Potem so za vse vrednosti $t \in [a,b]$ podnivojnice 
+	$M_{t} = \{ x \in M; \ \rho(x) \leq t \}$ paroma difeomorfne.
+\item Kadar množica $M_{a,b}$ vsebuje natanko eno kritično točko Morsejeve funkcije $\rho$, ta pa ima Morsejev indeks enak $k$, tedaj je podnivojnica 
+	$M_{b}$ difeomorfna ročajniku iz podnivojnice $M_{a}$ in ročaja indeksa $k$.
+	Če je $k=0$, je $M_{b}$ difeomorfna disjunktni uniji $M_{a}$ in kompaktne $m$-razsežne krogle $\mathbb{D}^{m}$.
+\end{enumerate}
+\end{izrek}
+
+Osredotočimo se na orientabilne ploskve in s pomočjo Izreka~\ref{izr:rocajnik} obravnavajmo njihovo ročajno strukturo. 
+Izberimo gladko orientabilno ploskev $M$ in pripadajočo gladko Morsejevo funkcijo izčrpanja $\rho \colon M \to [0, \infty)$. Če je $c$ regularna vrednost funkcije izčrpanja, potem je podnivojnica $M_{c} = \{ \rho \leq c \}$ kompaktna ploskev, njen rob $bM_{c} = \{ \rho = c \}$ pa končna unija gladkih Jordanovih krivulj. 
+
+Po prvi točki Izreka~\ref{izr:rocajnik} je za taki regularni vrednosti $a<b$, da množica $M_{a,b} = \{ x \in M; \ a \leq \rho(x) \leq b \}$ ne vsebuje nobene kritične točke funkcije $\rho$, slednja množica končna unija kompaktnih kolobarjev. Število kolobarjev je enako številu povezanih komponent roba $bM_{a}$.
+
+Pri prehodu kritičnih točk funkcije $\rho$ pa podnivojnicam dodajamo ročaje ustreznih indeksov, kar nam pove druga točka Izreka~\ref{izr:rocajnik}.
+
+% indeks = 0
+V kritični točki indeksa $0$, ki je lokalni minimum, podnivojnici disjunktno dodamo novo povezano komponento, kompakten disk.
+
+% indeks = 1
+Če je $p \in M$ kritična točka indeksa $1$, ki naj bo brez škode za splošnost edina kritična točka na podnivojnici $\{ \rho = \rho(p) \}$, izberimo bližnji vrednosti $a<\rho(p)<b$ tako, da je točka $p$ edina kritična točka na množici $M_{a,b}$. Podnivojnica $M_{b}$ nastane tako, da na $M_{a}$ ustrezno prilepimo ročaj indeksa $1$, to je $H = [-1,+1] \times [-1,+1]$. Pri tem komponenti robu ročaja, $\{-1\} \times [-1,+1]$ in $\{+1\} \times [-1,+1]$, difeomorfno zlepimo z disjunktnima lokoma $I_{-1}, I_{+1} \subset bM_{a}$.
+\begin{itemize}
+\item[\textit{(a)}] 
+	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $bM_{a}$, za rodova velja $\textup{gen}(M_{a}) = \textup{gen}(M_{b})$, število povezanih komponent nivojnice $bM_{b}$ pa je za ena več od števila povezanih komponent nivojnice $bM_{a}$.
+\item[\textit{(b)}]
+	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $M_{a}$, a različnima povezanima komponentama $bM_{a}$, je situacija naslednja.
+	Množica $M_{a,b}$ je unija končno mnogo disjunktnih kolobarjev in \emph{para hlač}, ki je kompaktna ploskev topološkega rodu $1$, katere rob sestoji iz treh povezanih komponent.
+	Velja $\textup{gen}(M_{a})+1 = \textup{gen}(M_{b})$, število povezanih komponent roba $bM_{b}$ pa je za ena manj od števila povezanih komponent roba $bM_{a}$.
+\item[\textit{(c)}]
+	Če loka $I_{-1}, I_{+1}$ pripadata različnima povezanima komponentama podnivojnice $M_{a}$, je $\textup{gen}(M_{a}) = \textup{gen}(M_{b})$, rob $bM_{b}$ pa ima eno povezano komponento manj od robu $bM_{a}$.
+\end{itemize}
+
+% indeks = 2
+V kritični točki maksimalnega indeksa (v našem primeru ploskve je ta enak $2$), ki je lokalni maksimum, na podnivojnico nalepimo disk maksimalne razsežnosti (v našem primeru $2$).
+
+\begin{opomba} [Rod ploskve]
+Znano je, da je povezana kompaktna orientabilna ploskev $M$ brez roba homeomorfna bodisi sferi $\mathbb{S}^{2}$ bodisi vsoti $g$ torusov 
+$\mathbb{T}^{2} \# \stackrel{g}{\cdots} \# \mathbb{T}^{2}$ za enolično število $g \in \mathbb{N}$.
+Število $g$ imenujemo \emph{rod} in označimo z $\textup{gen}(M)$, pri tem pa definiramo še $\textup{gen}(\mathbb{S}^{2}) = 0$.
+Podobna klasifikacija velja za odprte orientabilne ploskve.
+\end{opomba}
+
+%%%%%%%%%%%%%%%
 % Glavni izrek
 \subsubsection{Glavni izrek}
 %
@@ -1755,100 +1863,7 @@ Za izbrana $\varepsilon > 0$ in preslikavo $k \colon \Lambda \to \N$ obstaja hol
 \end{enumerate}
 \end{izrek}
 
-%%%%%%%%%%%%%%%
-% Morsejeva teorija in ročajniki
-\subsubsection{Morsejeva teorija in ročajniki}
-%
-Naj bo $U \subset \mathbb{R}^{n}$ domena s koordinatami $x = (x_{1}, \dots , x_{n})$ in $f \colon U \to \mathbb{R}$ funkcija razreda $\mathcal{C}^{2}$.
-Spomnimo se, da je točka $x \in U$ \emph{kritična točka} funkcije $f$, če je $\nabla f(x) = 0$. Točka, ki ni kritična, je \emph{regularna}.
-Slike kritičnih točk imenujemo \emph{kritične vrednosti}, medtem ko so vse preostale realne vrednosti \emph{regularne vrednosti} funkcije $f$. \newline
-%
-\emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\textup{Hess}_{f}(x)$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = D(\nabla f)(x)$, kjer $D$ označuje Jacobijevo matriko.
 
-\begin{definicija}
-Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva matrika $H_{f}(x)$ maksimalen rang, točki $x$ pravimo \emph{Morsejeva točka}. Slednji pogoj je ekvivalenten trditvi, da je Hessejeva forma funkcije $f$ v točki $x$ neizrojena.
-
-Število negativnih lastnih vrednosti Hessejeve matrike, $k \in \{0,1, \dots , n\}$, je \emph{Morsejev indeks} kritične točke.
-
-Funkcija, katere vsaka kritična točka je tudi Morsejeva, se imenuje \emph{Morsejeva funkcija}.
-\end{definicija}
-
-Kritične točke funkcije $f$ dobimo z reševanjem enačbe $\nabla f(x)=0$. Ker je Hessejeva matrika enaka Jacobijevi matriki gradienta funkcije, po izreku o inverzni preslikavi vidimo, da je vsaka kritična točka izolirana. Množica kritičnih točk funkcije $f$, $\textup{Crit}(f) = \{ x \in U; \ \nabla f(x)=0 \}$, je zaprta diskretna podmnožica v $U$.
-
-% funkcija izčrpanja
-\begin{definicija}
-Naj bosta $M$ mnogoterost in $f \colon M \to [0, \infty)$ zvezna funkcija. Če je za vsako število $c>0$ množica $M_{c} = \{ p \in M; \ f(p) \leq c \}$ kompaktna, tedaj $f$ imenujemo \emph{funkcija izčrpanja} mnogoterosti $M$.
-\end{definicija}
-
-Za nas bodo pomembne Morsejeve funkcije izčrpanja na Riemannovih ploskvah. Njihov obstoj opisuje naslednja trditev.
-
-% CITIRAJ Prop. 1.12.5
-\begin{trditev} \label{trd:Riem-ploskev-Morse-izcrpanje}
-Naj bo $K$ kompaktna $\mathcal{O}(M)$-konveksna podmnožica odprte Riemannove ploskve $M$ in $U \subset M$ odprta množica, ki vsebuje $K$.
-Tedaj na $M$ obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho$, za katero velja 
-\begin{gather*}
-K \subset \{ \rho<0 \} \subset \{ \rho \leq 0 \} \subset U.
-\end{gather*}
-\end{trditev}
-
-Po zgornji trditvi lahko mnogoterost $M$ konstruiramo s pomočjo njene funkcije izčrpanja $\rho$, natančneje, podnivojnicam $\{ \rho \leq c \}$ ob prehodu kritičnih točk funkcije izčrpanja zaporedoma dodajamo t.~i.~ročaje. V tem primeru pravimo, da mnogoterost predstavimo kot \emph{ročajnik}. Pomemben izrek Morsejeve teorije, ki ga bomo navedli v nadaljevanju, ta postopek natančno opisuje. Pred tem pa definirajmo ustrezne pojme.
-
-% ročajnik
-Vzemimo gladko mnogoterost $M$ z robom $bM$ razsežnosti $\dim M = m \in \mathbb{N}$.
-Naj bo $k \in \{1, 2, \dots , m\}$, $m = k+q$ in naj $D^{k} \subset \mathbb{R}^{k}$ označuje zaprto $k$-razsežno enotsko kroglo. Kartezičnemu produktu
-\begin{gather*}
-H = H^{k,q} = D^{k} \times D^{q}
-\end{gather*}
-pravimo \emph{standardni ročaj} indeksa $k$. Podmnožico $E = D^{k} \times \{0\}^{q} \subset H$ imenujemo \emph{stržen} ročaja, podmnožico $F = bD^{k} \times D^{q} = S^{k-1} \times D^{q} \subset H$ pa njegova \emph{priključna množica}. \newline
-Definirajmo preslikavo
-\begin{gather*}
-\phi \colon S^{k-1} \times D^{q} \to bM
-\end{gather*}
-med priključno množico in robom mnogoterosti, ki naj bo gladek difeomorfizem na sliko. Vzemimo disjunktno unijo mnogoterosti in standardnega ročaja, $M \sqcup H$, ter točke priključne množice $F$ identificirajmo s svojimi slikami. Preslikava $\phi$ je lepilna preslikava pri lepljenju ročaja indeksa $k$ na mnogoterost $M$. Tako nastalo množico $\tilde{M} = M \sqcup_{\phi} H$ imenujemo \emph{ročajnik}.
-Z ``glajenjem'' vzdolž množice $\phi(S^{k-1} \times S^{q-1})$ dosežemo, da ročajnik postane gladka mnogoterost z robom. V nadaljevanju bomo predpostavili, da so ročajniki takšni.
-
-% CITIRAJ Theorem 1.4.7
-\begin{izrek} \label{izr:rocajnik}
-Naj bo $M$ gladka mnogoterost razsežnosti $\dim M= m$. Naj bo $\rho \colon M \to \mathbb{R}$ gladka Morsejeva funkcija, števili $a<b$ njeni regularni vrednosti in
-\begin{gather*}
-M_{a,b} = \{ x \in M; \ a \leq \rho(x) \leq b \}
-\end{gather*}
-kompaktna množica.
-\begin{enumerate}
-\item Recimo, da množica $M_{a,b}$ ne vsebuje nobene kritične točke Morsejeve funkcije $\rho$. Potem so za vse vrednosti $t \in [a,b]$ podnivojnice 
-	$M_{t} = \{ x \in M; \ \rho(x) \leq t \}$ paroma difeomorfne.
-\item Kadar množica $M_{a,b}$ vsebuje natanko eno kritično točko Morsejeve funkcije $\rho$, ta pa ima Morsejev indeks enak $k$, tedaj je podnivojnica 
-	$M_{b}$ difeomorfna ročajniku iz podnivojnice $M_{a}$ in ročaja indeksa $k$.
-	Če je $k=0$, je $M_{b}$ difeomorfna disjunktni uniji $M_{a}$ in kompaktne $m$-razsežne krogle $D^{m}$.
-\end{enumerate}
-\end{izrek}
-
-% CITIRAJ: povzeto po Chapter 1.4, p. 20--22
-Osredotočimo se na orientabilne ploskve in s pomočjo Izreka~\ref{izr:rocajnik} obravnavajmo njihovo ročajno strukturo. 
-Izberimo gladko ploskev $M$ in pripadajočo gladko Morsejevo funkcijo izčrpanja $\rho \colon M \to [0, \infty)$. Če je $c$ regularna vrednost funkcije izčrpanja, potem je podnivojnica $M_{c} = \{ \rho \leq c \}$ kompaktna ploskev, njen rob $bM_{c} = \{ \rho = c \}$ pa končna unija gladkih Jordanovih krivulj. 
-
-Po prvi točki Izreka~\ref{izr:rocajnik} je za taki regularni vrednosti $a<b$, da množica $M_{a,b} = \{ x \in M; \ a \leq \rho(x) \leq b \}$ ne vsebuje nobene kritične točke funkcije $\rho$, slednja množica končna unija kompaktnih kolobarjev. Število kolobarjev je enako številu povezanih komponent roba $bM_{a}$.
-
-Pri prehodu kritičnih točk funkcije $\rho$ pa podnivojnicam dodajamo ročaje ustreznih indeksov, kar nam pove druga točka Izreka~\ref{izr:rocajnik}. \newline
-V kritični točki indeksa $0$, ki je lokalni minimum, podnivojnici disjunktno dodamo novo povezano komponento, kompakten disk. \newline
-V kritični točki maksimalnega indeksa (v našem primeru ploskve je ta enak $2$), ki je lokalni maksimum, na podnivojnico nalepimo disk maksimalne razsežnosti (v našem primeru $2$). \newline
-Če je $p \in M$ kritična točka indeksa $1$, ki naj bo brez škode za splošnost edina kritična točka na podnivojnici $\{ \rho = \rho(p) \}$, izberimo bližnji vrednosti $a<\rho(p)<b$ tako, da je točka $p$ edina kritična točka na množici $M_{a,b}$. Podnivojnica $M_{b}$ nastane tako, da na $M_{a}$ ustrezno prilepimo ročaj indeksa $1$, $H = [-1,+1] \times [-1,+1]$. Pri tem komponenti robu ročaja, $\{-1\} \times [-1,+1]$ in $\{+1\} \times [-1,+1]$, difeomorfno zlepimo z disjunktnima lokoma $I_{-1}, I_{+1} \subset bM_{a}$.
-\begin{itemize}
-\item[\textit{(a)}] 
-	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $bM_{a}$, za rodova velja $\textup{gen}(M_{a}) = \textup{gen}(M_{b})$, število povezanih komponent nivojnice $bM_{b}$ pa je za ena več od števila povezanih komponent nivojnice $bM_{a}$.
-\item[\textit{(b)}]
-	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $M_{a}$, a različnima povezanima komponentama $bM_{a}$, je situacija naslednja.
-	Množica $M_{a,b}$ je unija končno mnogo disjunktnih kolobarjev in \emph{para hlač}, ki je kompaktna ploskev topološkega rodu $1$, katere rob sestoji iz treh povezanih komponent.
-	Velja $\textup{gen}(M_{a})+1 = \textup{gen}(M_{b})$, število povezanih komponent roba $bM_{b}$ pa je za ena manj od števila povezanih komponent roba $bM_{a}$.
-\item[\textit{(c)}]
-	Če loka $I_{-1}, I_{+1}$ pripadata različnima povezanima komponentama podnivojnice $M_{a}$, je $\textup{gen}(M_{a}) = \textup{gen}(M_{b})$, rob $bM_{b}$ pa ima eno povezano komponento manj od robu $bM_{a}$.
-\end{itemize}
-
-\begin{opomba} [Rod ploskve]
-Znano je, da je povezana kompaktna orientabilna ploskev $M$ brez roba homeomorfna bodisi sferi $\mathbb{S}^{2}$ bodisi vsoti $g$ torusov 
-$\mathbb{T}^{2} \# \stackrel{g}{\cdots} \# \mathbb{T}^{2}$ za enolično število $g \in \mathbb{N}$.
-Število $g$ imenujemo \emph{rod} in označimo z $\textup{gen}(M)$, pri tem pa definiramo še $\textup{gen}(\mathbb{S}^{2}) = 0$.
-\end{opomba}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
