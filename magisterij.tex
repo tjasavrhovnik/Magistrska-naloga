@@ -1783,7 +1783,7 @@ Naj bosta $M$ mnogoterost in $f \colon M \to [0, \infty)$ zvezna funkcija. Če j
 Za nas bodo pomembne Morsejeve funkcije izčrpanja na Riemannovih ploskvah. Njihov obstoj opisuje naslednja trditev.
 
 % CITIRAJ Prop. 1.12.5
-\begin{trditev}
+\begin{trditev} \label{trd:Riem-ploskev-Morse-izcrpanje}
 Naj bo $K$ kompaktna $\mathcal{O}(M)$-konveksna podmnožica odprte Riemannove ploskve $M$ in $U \subset M$ odprta množica, ki vsebuje $K$.
 Tedaj na $M$ obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho$, za katero velja 
 \begin{gather*}
@@ -1808,7 +1808,7 @@ med priključno množico in robom mnogoterosti, ki naj bo gladek difeomorfizem n
 Z ``glajenjem'' vzdolž množice $\phi(S^{k-1} \times S^{q-1})$ dosežemo, da ročajnik postane gladka mnogoterost z robom. V nadaljevanju bomo predpostavili, da so ročajniki takšni.
 
 % CITIRAJ Theorem 1.4.7
-\begin{izrek}
+\begin{izrek} \label{izr:rocajnik}
 Naj bo $M$ gladka mnogoterost razsežnosti $\dim M= m$. Naj bo $\rho \colon M \to \mathbb{R}$ gladka Morsejeva funkcija, števili $a<b$ njeni regularni vrednosti in
 \begin{gather*}
 M_{a,b} = \{ x \in M; \ a \leq \rho(x) \leq b \}
@@ -1819,10 +1819,36 @@ kompaktna množica.
 	$M_{t} = \{ x \in M; \ \rho(x) \leq t \}$ paroma difeomorfne.
 \item Kadar množica $M_{a,b}$ vsebuje natanko eno kritično točko Morsejeve funkcije $\rho$, ta pa ima Morsejev indeks enak $k$, tedaj je podnivojnica 
 	$M_{b}$ difeomorfna ročajniku iz podnivojnice $M_{a}$ in ročaja indeksa $k$.
-	Če je $k=0$, je $M_{b}$ difeomorfna disjunktni uniji $M_{a}$ in kompaktne $m$-razsežne krogle $D^{k}$.
+	Če je $k=0$, je $M_{b}$ difeomorfna disjunktni uniji $M_{a}$ in kompaktne $m$-razsežne krogle $D^{m}$.
 \end{enumerate}
 \end{izrek}
 
+% CITIRAJ: povzeto po Chapter 1.4, p. 20--22
+Osredotočimo se na orientabilne ploskve in s pomočjo Izreka~\ref{izr:rocajnik} obravnavajmo njihovo ročajno strukturo. 
+Izberimo gladko ploskev $M$ in pripadajočo gladko Morsejevo funkcijo izčrpanja $\rho \colon M \to [0, \infty)$. Če je $c$ regularna vrednost funkcije izčrpanja, potem je podnivojnica $M_{c} = \{ \rho \leq c \}$ kompaktna ploskev, njen rob $bM_{c} = \{ \rho = c \}$ pa končna unija gladkih Jordanovih krivulj. 
+
+Po prvi točki Izreka~\ref{izr:rocajnik} je za taki regularni vrednosti $a<b$, da množica $M_{a,b} = \{ x \in M; \ a \leq \rho(x) \leq b \}$ ne vsebuje nobene kritične točke funkcije $\rho$, slednja množica končna unija kompaktnih kolobarjev. Število kolobarjev je enako številu povezanih komponent roba $bM_{a}$.
+
+Pri prehodu kritičnih točk funkcije $\rho$ pa podnivojnicam dodajamo ročaje ustreznih indeksov, kar nam pove druga točka Izreka~\ref{izr:rocajnik}. \newline
+V kritični točki indeksa $0$, ki je lokalni minimum, podnivojnici disjunktno dodamo novo povezano komponento, kompakten disk. \newline
+V kritični točki maksimalnega indeksa (v našem primeru ploskve je ta enak $2$), ki je lokalni maksimum, na podnivojnico nalepimo disk maksimalne razsežnosti (v našem primeru $2$). \newline
+Če je $p \in M$ kritična točka indeksa $1$, ki naj bo brez škode za splošnost edina kritična točka na podnivojnici $\{ \rho = \rho(p) \}$, izberimo bližnji vrednosti $a<\rho(p)<b$ tako, da je točka $p$ edina kritična točka na množici $M_{a,b}$. Podnivojnica $M_{b}$ nastane tako, da na $M_{a}$ ustrezno prilepimo ročaj indeksa $1$, $H = [-1,+1] \times [-1,+1]$. Pri tem komponenti robu ročaja, $\{-1\} \times [-1,+1]$ in $\{+1\} \times [-1,+1]$, difeomorfno zlepimo z disjunktnima lokoma $I_{-1}, I_{+1} \subset bM_{a}$.
+\begin{itemize}
+\item[\textit{(a)}] 
+	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $bM_{a}$, za rodova velja $\textup{gen}(M_{a}) = \textup{gen}(M_{b})$, število povezanih komponent nivojnice $bM_{b}$ pa je za ena več od števila povezanih komponent nivojnice $bM_{a}$.
+\item[\textit{(b)}]
+	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $M_{a}$, a različnima povezanima komponentama $bM_{a}$, je situacija naslednja.
+	Množica $M_{a,b}$ je unija končno mnogo disjunktnih kolobarjev in \emph{para hlač}, ki je kompaktna ploskev topološkega rodu $1$, katere rob sestoji iz treh povezanih komponent.
+	Velja $\textup{gen}(M_{a})+1 = \textup{gen}(M_{b})$, število povezanih komponent roba $bM_{b}$ pa je za ena manj od števila povezanih komponent roba $bM_{a}$.
+\item[\textit{(c)}]
+	Če loka $I_{-1}, I_{+1}$ pripadata različnima povezanima komponentama podnivojnice $M_{a}$, je $\textup{gen}(M_{a}) = \textup{gen}(M_{b})$, rob $bM_{b}$ pa ima eno povezano komponento manj od robu $bM_{a}$.
+\end{itemize}
+
+\begin{opomba} [Rod ploskve]
+Znano je, da je povezana kompaktna orientabilna ploskev $M$ brez roba homeomorfna bodisi sferi $\mathbb{S}^{2}$ bodisi vsoti $g$ torusov 
+$\mathbb{T}^{2} \# \stackrel{g}{\cdots} \# \mathbb{T}^{2}$ za enolično število $g \in \mathbb{N}$.
+Število $g$ imenujemo \emph{rod} in označimo z $\textup{gen}(M)$, pri tem pa definiramo še $\textup{gen}(\mathbb{S}^{2}) = 0$.
+\end{opomba}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
