@@ -1717,9 +1717,12 @@ Predpostavka iz 5.~točke izreka, da ima $x$ enostavne dvojne točke na množici
 ne obstajajo tri različne točke v $\Lambda$, ki bi se s preslikavo $x$ slikale v isto točko v $\mathbb{R}^{4}$, ter, če za različni točki $p, q \in \Lambda$ velja $x(p) = x(q)$, potem je $dx_{p}(T_{p}M) \cap dx_{q}(T_{q}M) = \{ 0 \} \subset T_{x(p)}\mathbb{R}^{4}$.
 \end{opomba}
 
-% CITIRAJ [Theorem 3.4.1 & Theorem 1.12.5]
 %%%%% dokaz glavnega izreka
 \begin{dokaz}
+Ideja dokaza je indukcija, kjer na vsakem koraku konstruiramo konformno minimalno imerzijo, ki dano preslikavo $x$ aproksimira in interpolira na večji množici, začenši z dopustno množico $S$, pri tem pa uporabljamo Morsejevo teorijo. 
+Sklicujemo se na izrek o splošni legi za kompaktne omejene Riemannove ploskve [...], % citiraj Theorem 3.4.1
+ter rezultat o konstrukciji poti s predpisanimi integrali in nekritični primer izreka, ki smo ju obravnavali v preteklih razdelkih.
+
 Izberimo tako število $\varepsilon_0 > 0$, da je $2 \varepsilon_0 < \varepsilon$.
 Izberimo okolico $U \subset M$ množice $S$, za katero velja $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z})$ in $\Lambda \cap U \subset S$.
 Po Trditvi~\ref{trd:nekritcni-primer} tedaj obstaja polna konformna minimalna imerzija $x^{0} \colon U \to \mathbb{R}^{n}$, ki zadošča:
@@ -1727,8 +1730,7 @@ $ ||x^{0}-x||_{\mathcal{C}^{r}(S)} < \varepsilon_0$, preslikavi $x^{0}$ in $x$ s
 Izrek [...] % citiraj Theorem 3.4.1 - (b,c)
 zagotavlja, da preslikava $x^{0}$ zadošča tudi pogojema 4.~in 5.~v našem izreku.
 
-Po Izreku [.] % citiraj Theorem 1.12.5
-obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho \colon M \to \mathbb{R}$, za katero je
+Trditev~\ref{trd:Riem-ploskev-Morse-izcrpanje} pove, da obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho \colon M \to \mathbb{R}$, za katero je
 \begin{gather*}
 S \subset \{ \rho < 0 \} \subset \{ \rho \leq 0 \} \subset U.
 \end{gather*}
@@ -1737,16 +1739,16 @@ Funkcijo $\rho$ lahko izberemo tako, da je $c_0 = 0$ njena regularna vrednost, n
 Označimo z $M_{0}$ kompaktno množico $M_{0} = \{ \rho \leq 0 \}$.
 Ker je $M_{0} \subset U$ in $\textup{Flux}_{x^{0}} = \textup{Flux}_{x}$ na $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z}) \}$, sta pretoka enaka tudi na $H_{1}(M_{0}, \mathbb{Z})$.
 
-Izberimo strogo naraščajoče zaporedje $\{ c_{i} \}_{i} \subset \mathbb{R}$, s $0=c_0 $ in $\lim_{i \to \infty}c_{i} = + \infty$. Dodatno naj za vse $i \in \mathbb{N}$ velja:
+Izberimo strogo naraščajoče zaporedje $\{ c_{i} \}_{i} \subset \mathbb{R}$ z začetnim členom $c_0=0 $ in $\lim_{i \to \infty}c_{i} = + \infty$. Dodatno naj za vse $i \in \mathbb{N}$ velja:
 \begin{itemize}
 \item $c_{i}$ je regularna vrednost funkcije $\rho$;
 \item $ \{ \rho = c_{i} \} \cap \Lambda = \emptyset$;
 \item množica $A_{i} = M_{i}^{\circ} \setminus M_{i-1} = \{ c_{i-1} < \rho < c_{i} \}$ vsebuje kvečjemu eno kritično točko funkcije $\rho$ ali kvečjemu eno točko iz množice $\Lambda$, vendar ne obeh hkrati.
 \end{itemize}
 %
-Iskano imerzijo $\tilde{x}$ bomo dobili na naslednji način. Induktivno bomo konstruirali zaporedje konformnih minimalnih imerzij $\{ x^{i} \}_{i}$, $x^{i} \colon M_{i} = \{ \rho \leq c_{i} \} \to \mathbb{R}^{n}$ (natančneje, $x^{i}$ je definirana na okolici kompakta $M_{i}$), ter strogo padajoče zaporedje $\{ \varepsilon_{i} \}_{i} \subset \mathbb{R}_{>0}$. Pri tem bo za vsak indeks $i \in \mathbb{N}$ veljalo naslednje:
+Iskano imerzijo $\tilde{x}$ bomo dobili na naslednji način. Induktivno bomo konstruirali zaporedje konformnih minimalnih imerzij $\{ x^{i} \}_{i}$, $x^{i} \colon M_{i} = \{ \rho \leq c_{i} \} \to \mathbb{R}^{n}$ (natančneje, $x^{i}$ je definirana v okolici kompakta $M_{i}$), ter strogo padajoče zaporedje $\{ \varepsilon_{i} \}_{i} \subset \mathbb{R}_{>0}$. Pri tem bo za vsak indeks $i \in \mathbb{N}$ veljalo naslednje:
 \begin{itemize}
-\item[\textit{(i)}] $||x^{i} - x^{i-1}||_{\mathcal{C}^{r}(S)} < \varepsilon_{i-1}$;
+\item[\textit{(i)}] $||x^{i} - x^{i-1}||_{\mathcal{C}^{r}(M_{i-1})} < \varepsilon_{i-1}$;
 \item[\textit{(ii)}] preslikavi $x^{i}$ in $x$ se ujemata do reda $k(p)$ za vse $p \in \Lambda \cap M_{i}$;
 \item[\textit{(iii)}] $\textup{Flux}_{x^{i}} = \mathfrak{p}$ na $H_{1}(M_{i},\Z)$;
 \item[\textit{(iv)}] če je $n \geq 5$ in $x \colon \Lambda \to \mathbb{R}^{n}$ injektivna preslikava, potem je $x^{i}$ injektivna;
@@ -1754,7 +1756,7 @@ Iskano imerzijo $\tilde{x}$ bomo dobili na naslednji način. Induktivno bomo kon
 \item[\textit{(vi)}] velja $\varepsilon_{i} > 0$ in $2 \varepsilon_{i} < \varepsilon_{i-1}$.
 	Vsaka preslikava $y \colon M_{i} \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(M_{i})$, za katero je 
 	$||y-x^{i}||_{\mathcal{C}^{r}(M_{i})} < 2\varepsilon_{i}$, 
-	je v primeru 4.~polna injektivna imerzija ter polna imerzija z enostavnimi dvojnimi točkami v primeru~5.~obravnavanega izreka.
+	je v primeru~\textit{(iv)} polna injektivna imerzija ter polna imerzija z enostavnimi dvojnimi točkami v primeru~\textit{(v)}.
 \end{itemize}
 %
 Preslikavo $\tilde{x}$ bomo definirali kot limito $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \to \mathbb{R}^{n}$. Po konstrukciji je to konformna minimalna imerzija, ki zadošča našemu izreku.
@@ -1776,8 +1778,8 @@ Vemo, da tedaj $A_{i}$ ne vsebuje kritične točke funkcije $\rho$ in je $A_{i} 
 Po prvem delu dodatka k Izreku [...] % citiraj Theorem 3.4.1
 velja naslednje: če je $x \colon \Lambda \to \mathbb{R}^{n}$ injektivna, potem z deformacijo preslikave $x^{i-1}$ na $M_{i-1}$ lahko dosežemo, da $x(p) \notin x^{i-1}(M_{i-1})$, hkrati pa ohranimo lastnosti~\textit{(i)}--\textit{(vi)}.
 
-Naj bo $D_{p} \subset A_{i}$ tak zaprt disk okrog točke $p \in A_{i}$, da je $x|_{D_{p}}$ konformna minimalna imerzija.
-Izberimo točki $q \in bM_{i-1}$ in $q' \in bD_{p}$ ter ju povežimo z gladkim vloženim lokom $E \subset \{q,q'\} \cup (A_{i} \setminus D_{p})$, ki $bM_{i-1}$ in $bD_{p}$ seka transverzalno. Lok $E$ usmerimo od $q$ do $q'$ in ga parametrizirajmo s potjo $\gamma \colon [0,1] \to E$ z $\gamma(0)=q, \ \gamma(1)=q'$.
+Naj bo $D_{p} \subset A_{i}$ tak zaprt disk okrog točke $p \in A_{i}$, da je zožitev $x|_{D_{p}}$ konformna minimalna imerzija.
+Izberimo točki $q \in bM_{i-1}$ in $q' \in bD_{p}$, ter ju povežimo z gladkim vloženim lokom $E \subset \{q,q'\} \cup (A_{i} \setminus D_{p})$, ki množici $bM_{i-1}$ in $bD_{p}$ seka transverzalno. Lok $E$ usmerimo od $q$ do $q'$ in ga parametrizirajmo s potjo $\gamma \colon [0,1] \to E$ z $\gamma(0)=q, \ \gamma(1)=q'$.
 
 Definirajmo množico $S_{i} = M_{i-1} \cup E \cup D_{p}$. Po konstrukciji je Rungejeva dopustna množica v $M$. 
 Nadalje je funkcija 
@@ -1797,7 +1799,7 @@ Nato razširimo še preslikavo $x^{i-1}$ na $S_{i}$ takole:
 \item $ x^{i-1}(\gamma(t)) = x^{i-1}(q) + \Re \int_{0}^{t} f^{i-1}(\gamma(s)) \theta(\gamma(s), \gamma '(s)) ds$ za $t \in [0,1]$.
 \end{itemize}
 %
-Po konstrukciji je $(x^{i-1}, f^{i-1} \theta) \in \textup{GCMI}(S_{i}, \mathbb{R}^{n})$. Iz definicije množice $S_{i}$ in izbora $A_{i}$ sledi $H_{1}(M_{i-1}, \mathbb{Z}) = H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$. 
+Po konstrukciji je par $(x^{i-1}, f^{i-1} \theta) \in \textup{GCMI}(S_{i}, \mathbb{R}^{n})$. Iz definicije množice $S_{i}$ in izbora $A_{i}$ sledi $H_{1}(M_{i-1}, \mathbb{Z}) = H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$. 
 Sedaj uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek [...], % citiraj izrek 3.4.1
 da dobimo polno konformno minimalno imerzijo $x^{i} \colon M_{i} \to \mathbb{R}^{n}$, ki zadošča točkam~\textit{(i)}--\textit{(v)}. Za ustrezen izbor $\varepsilon_{i} > 0$ zadostimo še točki~\textit{(vi)}. \newline
 
@@ -1805,7 +1807,7 @@ da dobimo polno konformno minimalno imerzijo $x^{i} \colon M_{i} \to \mathbb{R}^
 \textit{3.~PRIMER: $A_{i}$ vsebuje kritično točko $p$ funkcije $\rho$.} \newline
 Vemo, da je $p$ edina kritična točka na $A_{i}$ in $A_{i} \cap \Lambda = \emptyset$. Po izboru funkcije izčrpanja $\rho$ je $p$ Morsejeva točka.
 Njen Morsejev indeks je bodisi enak $0$ ($p$ je lokalni minimum) bodisi $1$ ($p$ je sedlo). Indeks ne more biti enak $2$, saj je $\rho$ subharmonična funkcija, ki pa ne premore lokalnega maksimuma.
-Zanima nas sprememba topologije množic $\{ \rho \leq c \}$ za $c>0$, ko prečkamo kritično točko $p$, to je za $c = \rho(p)$. Ločeno si oglejmo primere glede na Morsejev indeks točke $p$. \newline
+Zanima nas sprememba topologije podnivojnic $\{ \rho \leq c \}$ za $c>0$, ko prečkamo kritično točko $p$, to je za $c = \rho(p)$. Ločeno si oglejmo primere glede na Morsejev indeks točke $p$. \newline
 
 % 3.1
 \textit{3.1: Morsejev indeks točke $p$ je enak $0$.} \newline
@@ -1815,12 +1817,12 @@ Preslikavo $x^{i-1}$ razširimo na $S_{i}$ tako, da za $x^{i-1}|_{D}$ izberemo p
 Spet uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek [...], % citiraj izrek 3.4.1
 da dobimo preslikavo $x^{i} \colon M_{i} \to \mathbb{R}^{n}$ in ustrezno izberemo $\varepsilon_{i}$. \newline
 
-Poglejmo si še primer, ko je Morsejev indeks točke $p$ enak $1$. Ob prečkanju točke $p$ množici $M_{i-1}$ dodamo gladek vložen lok $E \subset A_{i} \cup bM_{i-1}$ s krajiščema v točkah $q_0, q_1 \in bM_{i-1}$, ki sta edini točki na $bM_{i-1} \cap E$, in $E$ seka $bM_{i-1}$ transverzalno. Lok $E$ usmerimo od $q_0$ do $q_1$.
+Poglejmo si še primer, ko je Morsejev indeks točke $p$ enak $1$. Ob prečkanju te točke množici $M_{i-1}$ dodamo gladek vložen lok $E \subset A_{i} \cup bM_{i-1}$ s krajiščema v točkah $q_0, q_1 \in bM_{i-1}$, ki sta edini točki na $bM_{i-1} \cap E$, in $E$ seka $bM_{i-1}$ transverzalno. Lok $E$ usmerimo od $q_0$ do $q_1$.
 Definiramo $S_{i} = M_{i-1} \cup E$, ki je po konstrukciji dopustna množica in zanjo velja $H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$. Obravnavajmo dve situaciji. \newline
 
 % 3.2.1
 \textit{3.2.1~Morsejev indeks točke $p$ je enak $1$ in krajišči loka $E$ pripadata isti povezani komponenti množice $M_{i-1}$.} \newline
-Točki $q_0$ in $q_1$ povežimo z gladkim orientiranim vloženim lokom $E' \subset M_{i-1}$. 
+Točki $q_0$ in $q_1$ povežimo z gladkim usmerjenim vloženim lokom $E' \subset M_{i-1}$. 
 Unija lokov $C = E \cup E'$ je zaprta Jordanova krivulja, ki pripada bazi homologje za $S_{i}$.
 Nadaljujemo kot v 2.~primeru. Funkcija $f^{i-1} = 2 \partial x^{i-1} / \theta \colon M_{i-1} \to \textup{\textbf{A}}_{*}$ je holomorfna v okolici $M_{i-1}$.
 Gladko jo razširimo na $E$ tako, da velja
