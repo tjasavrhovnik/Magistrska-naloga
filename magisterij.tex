@@ -1873,6 +1873,40 @@ Dokaz je analogen dokazu glavnega izreka za posplošene konformne minimalne imer
 Opazimo, da je v formulaciji Izrekov~\ref{izr:glavni-izrek-CMI} in \ref{izr:glavni-izrek-NC} razlika glede pogoja o pretoku. To je smiselno; ko govorimo o posplošenih holomorfnih ničelnih krivuljah, je pretok ničeln, tj.~homomorfizem grup $\mathfrak{p} \colon H_{1}(M, \mathbb{Z}) \to \mathbb{R}^{n}$ v Izreku~\ref{izr:glavni-izrek-CMI} je v tem primeru ničeln homomorfizem.
 \end{opomba}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mittag-Lefflerjev izrek
+\subsection{Mittag-Lefflerjev izrek}
+
+\begin{definicija}
+Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Naj bo $S$ dopustna podmnožica v $M$ in $A \subset S^{\circ}$ končna množica točk. \emph{Posplošena kompletna konformna minimalna imerzija} $S \setminus A \to \mathbb{R}^{n}$ \emph{razreda $\mathcal{C}^{r}$ s končno totalno ukrivljenostjo} je par $(x, f\theta)$, za katerega velja:
+\begin{enumerate}
+\item preslikava $x \colon S^{\circ} \setminus A \to \mathbb{R}^{n}$ je konformna minimalna imerzija, pripadajoča 1-forma
+	$2 \partial x = f\theta$ pa ima pol v vsaki točki množice $A$;
+\item naj bo $W \subset S^{\circ}$ taka kompaktna okolica množice $A$ z gladkim robom, da je $S' = S \setminus W^{\circ}$ dopustna množica. Tedaj je par
+	$(x, f\theta)$ posplošena konformna minimalna imerzija $S' \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(S', \mathbb{R}^{n})$.
+\end{enumerate}
+\end{definicija}
+
+\begin{lema}
+Naj bodo $M, \ S$ in družina $\mathcal{C}$ kot v Lemi~\ref{lema:aproks&interp-A*}. Naj bo $\mathcal{P}$ periodno dominantni sprej, ki pripada družini krivulj $\mathcal{C}$, $A \subset S^{\circ}$ končna množica točk in $r \geq 1$.
+Tedaj za dane preslikavo $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}}_{*})$, realno število $\varepsilon > 0$, končno množico $\Lambda$, z $A \subset \Lambda \subset S^{\circ}$, in število $s \in \mathbb{N} \cup \{0\}$ obstaja polna holomorfna preslikava $F \in \mathcal{O}(M \setminus A, \textup{\textbf{A}}_{*})$, pri čemer velja naslednje:
+\begin{enumerate}
+\item razlika $F-f$ je holomorfna v vsaki točki množice $A$ in $F-f \in \mathcal{A}^{r}(S, \mathbb{C}^{n})$. Preslikava $F$ je meromorfna s poli v točkah množice $A$;
+\item $ ||F-f||_{\mathcal{C}^{r}(S)} < \varepsilon$;
+\item razlika $F-f$ je ničelna do reda $s$ v točkah množice $\Lambda$;
+\item $\mathcal{P}(F-f) = 0$.
+\end{enumerate}
+\end{lema}
+
+\begin{trditev}
+Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A$ in $\Lambda$ končni množici točk z $A \subset \Lambda \subset S^{\circ}$. Naj bosta $r, s \in \mathbb{N}$.
+Tedaj lahko vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \colon S \setminus A \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(S\setminus A)$ s končno totalno ukrivljenostjo aproksimiramo v $\mathcal{C}^{r}(S \setminus A)$ s polnimi konformnimi minimalnimi imerzijami $X \colon M \setminus A \to \mathbb{R}^{n}$. Pri tem so izpolnjeni naslednji pogoji.
+\begin{enumerate}
+\item Razlika $X-x$ je harmonična v vsaki točki množice $A$. Natančneje, 1-formo $\partial X$ lahko meromorfno razširimo na $M$ s poli v točkah množice $A$.
+\item Razlika $X-x$ je ničelna do reda $s$ v točkah množice $\Lambda$.
+\item $\textup{Flux}_{X} = \textup{Flux}_{x}$.
+\end{enumerate}
+\end{trditev}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
