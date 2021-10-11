@@ -1925,11 +1925,11 @@ Sedaj nadomestimo $f$ s preslikavo $\tilde{g}$; pišimo $\tilde{g}=f$, tj.~predp
 Kot v Lemi~\ref{lema:aproks&interp-A*} naj $C$ označuje unijo vseh krivulj iz družine $\mathcal{C}$.
 Definirajmo nov razred, ki sestoji iz takih zveznih preslikav $h \colon C \setminus A \to \mathbb{C}^{n}$, ki hkrati ustrezajo še $\frac{h}{w}-f \in \mathcal{C}(C, \mathbb{C}^{n})$. Označimo ga s $\mathcal{C}_{w,f}(C, \mathbb{C}^{n})$.
 
-Sledimo 2.~koraku dokaza Leme~\ref{lema:aproks&interp-A*}. S pomočjo Leme~\ref{lema:P-D-sprej} konstruiramo periodno dominantni sprej
+V nadaljevanju sledimo 2.~koraku dokaza Leme~\ref{lema:aproks&interp-A*}. S pomočjo Leme~\ref{lema:P-D-sprej} konstruiramo periodno dominantni sprej
 \begin{gather*}
 \Phi_{wf} \colon S \times \mathbb{C}^{N} \to \textup{\textbf{A}}_{*}
 \end{gather*}
-z jedrom $wf$ (kjer je $N \in \mathbb{N}$ velik). Nadalje se preslikava $\Phi_{wf}(\cdot,t) \colon S \to \textup{\textbf{A}}_{*}$ ($t \in \mathbb{C}^{N}$) z $wf$ ujema do danega končnega reda $s_1$ na množici $\Lambda$.
+z jedrom $wf$ (kjer je $N \in \mathbb{N}$ velik). Vemo, da se preslikava $\Phi_{wf}(\cdot,t) \colon S \to \textup{\textbf{A}}_{*}$ ($t \in \mathbb{C}^{N}$) z $wf$ ujema do danega končnega reda $s_1$ na množici $\Lambda$.
 
 Oglejmo si periodno preslikavo 
 $\mathcal{P}^{w,f} = (\mathcal{P}_{1}^{w,f}, \dots , \mathcal{P}_{l}^{w,f}) \colon \mathcal{C}_{w,f}(C, \mathbb{C}^{n}) \to (\mathbb{C}^{n})^{l}$,
@@ -1943,15 +1943,15 @@ Po Lemi~\ref{lema:P-D-sprej} je tedaj preslikava
  \frac{\partial}{\partial t} \Big|_{t=0} \mathcal{P}^{w,f}(\Phi_{wf}(\cdot, t)) \colon \C^{N} \to (\C^{n})^{l}
 \end{gather*}
 submerzija. Pripadajoča Jacobijeva matrika ima namreč bločno strukturo in maksimalen rang, to je $nl$.
-Kot v dokzu Leme~\ref{lema:aproks&interp-A*} obstaja holomorfna preslikava $\tilde{f} \colon M \to \textup{\textbf{A}}_{*}$, ki v $\mathcal{C}^{r}(S)$ aproksimira preslikavo $wf$ in se z njo ujema do reda $s_1$ v točkah množice $\Lambda$.
+Kot v dokazu Leme~\ref{lema:aproks&interp-A*} obstaja holomorfna preslikava $\tilde{f} \colon M \to \textup{\textbf{A}}_{*}$, ki v $\mathcal{C}^{r}(S)$ aproksimira preslikavo $wf$ in se z njo ujema do reda $s_1$ v točkah množice $\Lambda$.
 Nato poiščemo periodno dominantni sprej $\Phi_{\tilde{f}} \colon M \times \C^{N} \to \textup{\textbf{A}}_{*}$ z jedrom $\tilde{f}$, ter preslikavo 
 $\tilde{F} = \Phi_{\tilde{f}}(\cdot, t_0) \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$ za neko točko $t_0 \in \mathbb{B}^{N} \subset \C^{N}$. 
 Dobljena preslikava $\tilde{F}$ ima naslednje lastnosti:
 \begin{itemize}
-\item preslikava $\frac{\tilde{F}}{w}-f$ je holomorfna na $A$ in
+\item razlika $\frac{\tilde{F}}{w}-f$ je holomorfna na $A$ in
 \item $\mathcal{P}^{w,f}(\tilde{F}) = \mathcal{P} \left(\frac{\tilde{F}}{w}-f \right) = 0$.
 \end{itemize}
-Končno definiramo preslikavo $F = \frac{\tilde{F}}{w}$, ki ob dovolj dobri aproksimaciji $wf$ z $\tilde{f}$ in izboru dovolj velikega števila $s_1$ ustreza zaključkom leme.
+Končno definiramo kvocient $F = \frac{\tilde{F}}{w}$, ki ob dovolj dobri aproksimaciji $wf$ z $\tilde{f}$ in izboru dovolj velikega števila $s_1$ ustreza zaključkom leme.
 \end{dokaz}
 %%%%% konec dokaza
 
@@ -1964,6 +1964,19 @@ Tedaj lahko vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \colon 
 \item $\textup{Flux}_{X} = \textup{Flux}_{x}$.
 \end{enumerate}
 \end{trditev}
+
+\begin{izrek} [Mittag-Lefflerjev izrek za konformne minimalne imerzije]
+Naj bo $M$ odprta Riemannova ploskev, $A \subset M$ njena zaprta diskretna podmnožica, $U \subset M$ okolica množice $A$ in $n \geq 3$.
+Predpostavimo, da je $x \colon U \setminus A \to \R^{n}$ konformna minimalna imerzija, pripadajočo 1-formo $\partial x$ pa lahko meromorfno razširimo na $U$ s poli v točkah množice $A$.
+Tedaj obstaja taka polna konformna minimalna imerzija $\tilde{x} \colon M \setminus A \to \R^{n}$, da je razlika $\tilde{x}-x$ harmonična na množici $A$.
+Natančneje, 1-formo $\partial \tilde{x}$ lahko meromorfno razširimo na $M$ s poli v točkah množice $A$.
+\end{izrek}
+
+\begin{izrek} [Weierstrassov izrek o interpolaciji konformnih minimalnih ploskev]
+Naj bo $M$ odprta Riemannova ploskev, $A \subset M$ njena zaprta diskretna podmnožica, $U \subset M$ okolica množice $A$ in $n \geq 3$.
+Predpostavimo, da je $z \colon U \to \C^{n}$ meromorfna preslikava s poli v točkah množice $A$, katere zožitev $z|_{U \setminus A}$ je holomorfna ničelna krivulja.
+Tedaj obstaja meromorfna preslikava $\tilde{z} \colon M \to \C^{n}$, njena zožitev $\tilde{z}|_{M \setminus A}$ na $M \setminus A$ je polna holomorfna ničelna krivulja, razlika $\tilde{z}-z$ pa je holomorfna na množici $A$.
+\end{izrek}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
