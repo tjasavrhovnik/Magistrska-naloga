@@ -667,7 +667,7 @@ TC(x) = \int_{M} K dA \in [-\infty, 0],
 \end{equation} 
 imenujemo \emph{totalna Gaussova ukrivljenost}. Pri tem $dA$ označuje ploščinski element glede na Riemannovo metriko $g = x^{*}ds^2$ na Riemannovi mnogoterosti $(M,g)$.
 Vrednost je enaka $0$ natanko takrat, ko je ploskev del ravnine. Res, $TC(x) = 0$ natanko tedaj, ko je Gaussova ukrivljenost $K=0$, kar je ekvivalentno $\kappa_1=\kappa_2=0$. Vemo pa, da imajo le kosi ravnine obe glavni ukrivljenosti ničelni v vsaki točki.
-Minimalne ploskve s končno totalno Gaussovo ukrivljenostjo so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošnejše minimalne ploskve (z neskončno totalno Gaussovo ukrivljenostjo) ne premorejo.\\[0.1cm]
+Minimalne ploskve s \emph{končno totalno Gaussovo ukrivljenostjo}, tj.~$TC(x) > -\infty$, so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošnejše minimalne ploskve (z neskončno totalno Gaussovo ukrivljenostjo) ne premorejo.\\[0.1cm]
 
 % Druga variacijska formula
 S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}: naj bo $M$ kompaktna ploskev z robom, preslikava $x \colon M \to \mathbb{R}^{n}$ pa gladka minimalna imerzija. Potem velja
@@ -1898,6 +1898,7 @@ Tedaj za dane preslikavo $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}
 \end{enumerate}
 \end{lema}
 
+% CITIRAJ [1906.01915.pdf: Theorem 3.1, dokaz]
 %%%%% dokaz leme
 \begin{dokaz}
 Najprej uporabimo Weierstrassov izrek o interpolaciji na odprtih Riemannovih ploskvah.
@@ -1965,14 +1966,31 @@ Tedaj lahko vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \colon 
 \end{enumerate}
 \end{trditev}
 
-\begin{izrek} [Mittag-Lefflerjev izrek za konformne minimalne imerzije]
+% Mittag-Lefflerjev izrek za CMI
+\begin{izrek} [Mittag-Lefflerjev izrek za konformne minimalne imerzije] \label{izr:ML-CMI}
 Naj bo $M$ odprta Riemannova ploskev, $A \subset M$ njena zaprta diskretna podmnožica, $U \subset M$ okolica množice $A$ in $n \geq 3$.
 Predpostavimo, da je $x \colon U \setminus A \to \R^{n}$ konformna minimalna imerzija, pripadajočo 1-formo $\partial x$ pa lahko meromorfno razširimo na $U$ s poli v točkah množice $A$.
 Tedaj obstaja taka polna konformna minimalna imerzija $\tilde{x} \colon M \setminus A \to \R^{n}$, da je razlika $\tilde{x}-x$ harmonična na množici $A$.
 Natančneje, 1-formo $\partial \tilde{x}$ lahko meromorfno razširimo na $M$ s poli v točkah množice $A$.
+
+Dodatno predpostavimo, da je $U$ lokalno končna unija paroma disjunktnih povezanih dopustnih podmnožic v $M$, par $(x, f\theta)$ posplošena kompletna konformna minimalna imerzija razreda $\mathcal{C}^{r}$ s končno totalno ukrivljenostjo na vsaki komponenti množice $U \setminus A$ in $r \in \N$.
+Tedaj za poljubne $\varepsilon > 0$, zaprto diskretno podmnožico $\Lambda$, za katero velja $A \subset \Lambda \subset U^{\circ}$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M \setminus A, \Z) \to \R^{n}$, ki ustreza $\mathfrak{p}|_{H_{1}(U \setminus A, \Z)} = \textup{Flux}_{x}$, obstaja konformna minimalna imerzija $\tilde{x} \colon M \setminus A \to \R^{n}$ kot zgoraj. Poleg tega so izpolnjeni še pogoji:
+\begin{enumerate}
+\item $||\tilde{x}-x||_{\mathcal{C}^{r}(U)} < \varepsilon$;
+\item preslikavi $\tilde{x}$ in $x$ se ujemata do reda $k(p)$ v vsaki točki $p \in \Lambda$;
+\item $\textup{Flux}_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M \setminus A, \Z)$.
+\end{enumerate}
 \end{izrek}
 
-\begin{izrek} [Weierstrassov izrek o interpolaciji konformnih minimalnih ploskev]
+Spomnimo se, da je družina podmnožic $\mathcal{F}$ topološkega prostora $X$ \emph{lokalno končna} družina, kadar vsaka točka $p \in X$ premore okolico $U_{p} \subset X$, ki seka končno mnogo množic iz $\mathcal{F}$.
+Ker je unija $U$ v drugem delu zgornjega izreka po predpostavki lokalno končna, obstaja zaporedje povezanih kompaktnih domen z gladkim robom
+\begin{gather*}
+M_{0} \Subset M_{1} \Subset \dots \Subset \bigcup_{i \geq 0} M_{i}=M,
+\end{gather*}
+za katere velja $U \cap M_{0} = \emptyset$ in $U \cap bM_{i} = \emptyset$ za $i = 1,2,\dots$ To zaporedje množic $M_{i}$ igra pomembno vlogo v dokazu izreka, ki poteka z indukcijo, podobno kot dokaz glavnega izreka iz prejšnjega poglavja.
+
+% Weierstrassov izrek za CMI
+\begin{izrek} [Weierstrassov izrek o interpolaciji konformnih minimalnih ploskev] \label{izr:Weierstrass-CMI}
 Naj bo $M$ odprta Riemannova ploskev, $A \subset M$ njena zaprta diskretna podmnožica, $U \subset M$ okolica množice $A$ in $n \geq 3$.
 Predpostavimo, da je $z \colon U \to \C^{n}$ meromorfna preslikava s poli v točkah množice $A$, katere zožitev $z|_{U \setminus A}$ je holomorfna ničelna krivulja.
 Tedaj obstaja meromorfna preslikava $\tilde{z} \colon M \to \C^{n}$, njena zožitev $\tilde{z}|_{M \setminus A}$ na $M \setminus A$ je polna holomorfna ničelna krivulja, razlika $\tilde{z}-z$ pa je holomorfna na množici $A$.
