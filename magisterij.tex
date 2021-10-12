@@ -1078,7 +1078,7 @@ in določa minimalno ploskev, imenovano \emph{Enneperjeva ploskev}, ki jo je l.~
 x(u,v) = \left( \frac{u}{3} \left(3(1+v^2) - u^2 \right), \frac{v}{3} \left( v^2 - 3(1+u^2) \right), u^2 - v^2 \right).
 \end{equation}
 
-Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskve enaka $\mathfrak{g}(z) = z$, zato ima le-ta podobno kot katenoida totalno Gaussovo ukrivljenost enako $-4 \pi$. Izkaže se, da sta to edini polni\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{polna}.} neravni orientabilni minimalni ploskvi vloženi v $\mathbb{R}^3$, katerih totalna Gaussova ukrivljenost znaša $-4 \pi$. Poleg tega je Enneperjeva ploskev konjugirana sama sebi.
+Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskve enaka $\mathfrak{g}(z) = z$, zato ima le-ta podobno kot katenoida totalno Gaussovo ukrivljenost enako $-4 \pi$. Izkaže se, da sta to edini kompletni\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{kompletna}.} neravni orientabilni minimalni ploskvi vloženi v $\mathbb{R}^3$, katerih totalna Gaussova ukrivljenost znaša $-4 \pi$. Poleg tega je Enneperjeva ploskev konjugirana sama sebi.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1175,9 +1175,6 @@ V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih
 \begin{definicija} [Dopustna množica]
 Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
 \end{definicija}
-%
-% transverzalnost
-
 
 % posplošena konformna minimalna imerzija
 \begin{definicija} [Posplošena konformna minimalna imerzija]
@@ -1876,6 +1873,11 @@ Opazimo, da je v formulaciji Izrekov~\ref{izr:glavni-izrek-CMI} in \ref{izr:glav
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Mittag-Lefflerjev izrek
 \subsection{Mittag-Lefflerjev izrek}
+%
+Spomnimo se, da je imerzija $x \colon M \to \R^{n}$ \emph{kompletna}, če ima vsaka pot $x \circ \gamma$ v $\R^{n}$ neskončno Evklidsko dolžino za vsako divergentno pot $\gamma \colon [0,1) \to M$.
+Ekvivalentno je zahtevati, da je povlečena metrika $x^{*}ds^2$ na $M$ kompletna, torej je prostor $(M, x^{*}ds^2)$ kompleten metrični prostor (slednje pomeni konvergenco Cauchyjevih zaporedij v prostoru).
+
+V poglavju o Gaussovi preslikavi smo definirali totalno ukrivljenost Riemannove ploskve. Ploskve s končno totalno ukrivljenosjo so posebej zanimive, zato uvedimo naslednji termin, ki opisuje podrazred posplošenih minimalnih imerzij.
 
 \begin{definicija}
 Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Naj bo $S$ dopustna podmnožica v $M$ in $A \subset S^{\circ}$ končna množica točk. \emph{Posplošena kompletna konformna minimalna imerzija} $S \setminus A \to \mathbb{R}^{n}$ \emph{razreda $\mathcal{C}^{r}$ s končno totalno ukrivljenostjo} je par $(x, f\theta)$, za katerega velja:
@@ -1886,6 +1888,14 @@ Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-
 	$(x, f\theta)$ posplošena konformna minimalna imerzija $S' \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(S', \mathbb{R}^{n})$.
 \end{enumerate}
 \end{definicija}
+
+% CITIRAJ [1906.01915.pdf, p.8]
+Pojasnimo smiselnost zgornje definicije. Klasična teorija minimalnih ploskev pove:
+naj bo $M$ odprta Riemannova ploskev (ali kompaktna Riemannova ploskev z robom) in $x \colon M \to \R^{n}$.
+Če je $M$ konformno ekvivalentna $R \setminus A$, kjer je $R$ kompaktna Riemannova ploskev z robom in $A \subset R^{\circ}$ končna množica točk, preslikava $x \colon R \setminus A \to \R^{n}$ konformna minimalna imerzija, 1-formo $\partial x$ pa lahko meromorfno razširimo na $R$ s poli v točkah množice $A$, potem je preslikava $x$ kompletna s končno totalno ukrivljenostjo.
+Velja tudi obrat.
+
+Opazimo, da prvi pogoj iz zgornje definicije implicira kompletnost imerzije $x$. Res, za divergentno pot $\gamma \colon [0,1) \to S \setminus A, \ \lim_{s \to 1}\gamma(s) \in A$, ima pot $x \circ \gamma$ neskončno dolžino v $\R^{n}$. To pomeni, da je preslikava $x \colon S \setminus A \to \R^{n}$ kompletna.
 
 \begin{lema} \label{lema:ML-pomozna-lema}
 Naj bodo $M, \ S$ in družina $\mathcal{C}$ kot v Lemi~\ref{lema:aproks&interp-A*}. Naj bo $\mathcal{P}$ periodno dominantni sprej, ki pripada družini krivulj $\mathcal{C}$, $A \subset S^{\circ}$ končna množica točk in $r \geq 1$.
