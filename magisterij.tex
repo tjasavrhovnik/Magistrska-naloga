@@ -1879,7 +1879,8 @@ Ekvivalentno je zahtevati, da je povlečena metrika $x^{*}ds^2$ na $M$ kompletna
 
 V poglavju o Gaussovi preslikavi smo definirali totalno ukrivljenost Riemannove ploskve. Ploskve s končno totalno ukrivljenosjo so posebej zanimive, zato uvedimo naslednji termin, ki opisuje podrazred posplošenih minimalnih imerzij.
 
-\begin{definicija}
+% GCCMI-FTC
+\begin{definicija} \label{def:GCCMI-FTC}
 Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Naj bo $S$ dopustna podmnožica v $M$ in $A \subset S^{\circ}$ končna množica točk. \emph{Posplošena kompletna konformna minimalna imerzija} $S \setminus A \to \mathbb{R}^{n}$ \emph{razreda $\mathcal{C}^{r}$ s končno totalno ukrivljenostjo} je par $(x, f\theta)$, za katerega velja:
 \begin{enumerate}
 \item preslikava $x \colon S^{\circ} \setminus A \to \mathbb{R}^{n}$ je konformna minimalna imerzija, pripadajoča 1-forma
@@ -1895,7 +1896,21 @@ naj bo $M$ odprta Riemannova ploskev (ali kompaktna Riemannova ploskev z robom) 
 Če je $M$ konformno ekvivalentna $R \setminus A$, kjer je $R$ kompaktna Riemannova ploskev z robom in $A \subset R^{\circ}$ končna množica točk, preslikava $x \colon R \setminus A \to \R^{n}$ konformna minimalna imerzija, 1-formo $\partial x$ pa lahko meromorfno razširimo na $R$ s poli v točkah množice $A$, potem je preslikava $x$ kompletna s končno totalno ukrivljenostjo.
 Velja tudi obrat.
 
-Opazimo, da prvi pogoj iz zgornje definicije implicira kompletnost imerzije $x$. Res, za divergentno pot $\gamma \colon [0,1) \to S \setminus A, \ \lim_{s \to 1}\gamma(s) \in A$, ima pot $x \circ \gamma$ neskončno dolžino v $\R^{n}$. To pomeni, da je preslikava $x \colon S \setminus A \to \R^{n}$ kompletna.
+Opazimo, da prvi pogoj iz zgornje definicije implicira kompletnost imerzije $x$. Res, za divergentno pot $\gamma \colon [0,1) \to S \setminus A, \ \lim_{s \to 1}\gamma(s) \in A$, ima pot $x \circ \gamma$ neskončno dolžino v $\R^{n}$. To pomeni, da je preslikava $x \colon S \setminus A \to \R^{n}$ kompletna. \newline
+
+Do Mittag-Lefflerjevega izreka za konformne minimalne imerzije nas loči še nekaj korakov. Postopek je podoben ideji, ki nas je vodila do glavnega izreka o aproksimaciji in interpolaciji. Najprej bomo navedli in dokazali lemo o aproksimaciji in interpolaciji meromorfnih preslikav v ničelno kvadriko; ta je analogna Lemi~\ref{lema:aproks&interp-A*}.
+Iz leme sledi trditev, ki je nekritični primer Mittag-Lefflerjevega izreka, in je analogna Trditvi~\ref{trd:nekritcni-primer}.
+Trditev nato (kot v primeru glavnega izreka) posplošimo do Mittag-Lefflerjevega izreka za konformne minimalne imerzije in analognega rezultata, Weierstrassovega izreka o interpolaciji konformnih minimalnih ploskev.
+Predstavili bomo dokaz leme, dokaze trditve in obeh izrekov pa bomo izpustili. Ti sledijo idejam dokazov pripadajočih rezultatov iz prejšnjega poglavja.
+
+% definicija razreda preslikav A_{\infty}^{r}
+Za začetek definirajmo še en razred preslikav.
+Naj bo $M$ odprta Riemannova ploskev in $S$ njena kompaktna dopustna podmnožica. Naj bo $A \subset S^{\circ}$ končna množica točk in $r \in \N$.
+Preslikave $f \colon S \setminus A \to \textup{\textbf{A}}_{*}$, ki so meromorfne v notranjosti $S^{\circ}$ s poli v točkah množice $A$, za vsako dopustno množico $S' = S \setminus W^{\circ}$ iz Definicije~\ref{def:GCCMI-FTC} ($W \subset S^{\circ}$ je kompaktna okolica množice $A$ z gladkim robom) pa velja $f \in \mathcal{A}^{r}(S', \textup{\textbf{A}}_{*})$, tvorijo prostor preslikav, ki ga označimo z 
+\begin{gather*}
+\mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}}_{*}).
+\end{gather*}
+Po definiciji je preslikava $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}}_{*})$ holomorfna na množici $S^{\circ} \setminus A$.
 
 \begin{lema} \label{lema:ML-pomozna-lema}
 Naj bodo $M, \ S$ in družina $\mathcal{C}$ kot v Lemi~\ref{lema:aproks&interp-A*}. Naj bo $\mathcal{P}$ periodno dominantni sprej, ki pripada družini krivulj $\mathcal{C}$, $A \subset S^{\circ}$ končna množica točk in $r \geq 1$.
@@ -1966,7 +1981,7 @@ Končno definiramo kvocient $F = \frac{\tilde{F}}{w}$, ki ob dovolj dobri aproks
 \end{dokaz}
 %%%%% konec dokaza
 
-\begin{trditev}
+\begin{trditev} \label{trd:ML-nekriticni-primer}
 Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A$ in $\Lambda$ končni množici točk z $A \subset \Lambda \subset S^{\circ}$. Naj bosta $r, s \in \mathbb{N}$.
 Tedaj lahko vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \colon S \setminus A \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(S\setminus A)$ s končno totalno ukrivljenostjo aproksimiramo v $\mathcal{C}^{r}(S \setminus A)$ s polnimi konformnimi minimalnimi imerzijami $X \colon M \setminus A \to \mathbb{R}^{n}$. Pri tem so izpolnjeni naslednji pogoji.
 \begin{enumerate}
@@ -1997,7 +2012,7 @@ Ker je unija $U$ v drugem delu zgornjega izreka po predpostavki lokalno končna,
 \begin{gather*}
 M_{0} \Subset M_{1} \Subset \dots \Subset \bigcup_{i \geq 0} M_{i}=M,
 \end{gather*}
-za katere velja $U \cap M_{0} = \emptyset$ in $U \cap bM_{i} = \emptyset$ za $i = 1,2,\dots$ To zaporedje množic $M_{i}$ igra pomembno vlogo v dokazu izreka, ki poteka z indukcijo, podobno kot dokaz glavnega izreka iz prejšnjega poglavja.
+za katere velja $U \cap M_{0} = \emptyset$ in $U \cap bM_{i} = \emptyset$ za $i = 1,2,\dots$ To zaporedje množic $\{ M_{i} \}_{i}$ igra pomembno vlogo v dokazu izreka, ki poteka z indukcijo, podobno kot dokaz glavnega izreka iz prejšnjega poglavja.
 
 % Weierstrassov izrek za CMI
 \begin{izrek} [Weierstrassov izrek o interpolaciji konformnih minimalnih ploskev] \label{izr:Weierstrass-CMI}
