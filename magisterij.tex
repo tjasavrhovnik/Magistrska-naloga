@@ -559,6 +559,9 @@ V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi form
 % Aproksimacijski izreki za Riemannove ploskve
 \subsection{Aproksimacijski izreki za Riemannove ploskve}
 %
+Najbolj klasični izrek v teoriji aproksimacije holomorfnih funkcij je Rungejev izrek (1885). Razširitev na Riemannove ploskve (bodisi odprte bodisi kompaktne z robom) sta dokazala H.~Behnke in K.~Stein (1949).
+
+% citiraj Theorem 1.12.1
 \begin{izrek} [Rungejev aproksimacijski izrek za Riemannove ploskve] \label{izr:Runge}
 Naj bo $M$ Riemannova ploskev in $K$ njena kompaktna podmnožica. 
 Potem lahko vsako funkcijo $f$, ki je holomorfna na okolici $K$, aproksimiramo enakomerno na $K$ z meromorfnimi funkcijami $F$ na $M$ brez polov na $K$, ter s holomorfnimi funkcijami na $M$, če $K$ nima lukenj.
@@ -573,10 +576,27 @@ Naj bo $K$ kompaktna podmnožica Riemannove ploskve $M$. Njena \emph{holomorfna 
 Če velja $K = \widehat{K}_{\mathcal{O}(M)}$, potem $K$ imenujemo \emph{Rungejeva} ali tudi \emph{$\mathcal{O}(M)$-konveksna množica}.
 \end{definicija}
 
+Kompaktne množice $K \subset M$, ki so Rungejeve podmnožice Riemannove ploskve $M$, pogosto karakteriziramo z lastnostjo, da nimajo lukenj v $M$. \newline
+
+Velik napredek v razvoju je pomenil Mergelyanov izrek o aproksimaciji holomorfnih funkcij (S.~N.~Mergelyan, 1951). Pravi, da zvezne funkcije na kompaktni množici $K \subset \C$ brez lukenj, ki so holomorfne v notranjosti $K^{\circ}$, tj.~$f \in \mathcal{A}(K)$, lahko na $K$ enakomerno aproksimiramo s celimi funkcijami.
+Različica velja tudi za Riemannove ploskve (E.~Bishop, 1958).
+
+% citiraj Theorem 1.12.7
 \begin{izrek} [Bishop-Mergelyanov aproksimacijski izrek] \label{izr:Bishop-Mergelyan}
 Naj bo $M$ odprta Riemannova ploskev in $K$ njena kompaktna podmnožica brez lukenj ($K$ je Rungejeva v $M$). Potem lahko vsako funkcijo v $\mathcal{A}(K)$ aproksimiramo enakomerno na $K$ s funkcijami v $\mathcal{O}(M)$.
 \end{izrek}
 
+Naslednji rezultat je nadgrajen Weierstrassov izrek o interpolaciji holomorfnih funkcij, tokrat za preslikave na odprtih Riemannovih ploskvah (H.~Florack).
+
+% citiraj Theorem 1.12.13
+\begin{izrek} [Weierstrassov izrek za odprte Riemannove ploskve] \label{izr:Weierstrass}
+Naj bo $M$ odprta Riemannova ploskev, $A = \{a_{i}\}_{i \in \N} \subset M$ njena zaprta diskretna podmnožica in $k_{i} \in \N$, dana naravna števila za vse $i \in \N$.
+Tedaj obstaja holomorfna funkcija $f \in \mathcal{O}(M)$, ki ima ničle natanko v točkah množice $A$, stopnja ničle $a_{i}$ pa je enaka $k_{i}$ za vse indekse $i \in \N$.
+\end{izrek}
+
+Weierstrass-Florackov interpolacijski izrek je natančnejša različica prejšnjega skupaj z Rungejevo aproksimacijo.
+
+% citiraj Theorem 1.12.14
 \begin{izrek} [Weierstrass-Florackov interpolacijski izrek] \label{izr:Weierstrass-Florack}
 Naj bo $M$ odprta Riemannova ploskev in $K$ njena Rungejeva podmnožica. Naj bo $A = \{ a_i \}_{i=1}^{\infty}$ zaprta diskretna podmnožica v $M$, $U$ odprta podmnožica $M$, tako da je $A \cup K \subset U$ in $f$ meromorfna funkcija na $U$ z ničlami in poli le v točkah množice $A$.
 Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna funkcija $F$ na $M$, za katero velja:
@@ -1874,7 +1894,10 @@ Opazimo, da je v formulaciji Izrekov~\ref{izr:glavni-izrek-CMI} in \ref{izr:glav
 % Mittag-Lefflerjev izrek
 \subsection{Mittag-Lefflerjev izrek}
 %
-Spomnimo se, da je imerzija $x \colon M \to \R^{n}$ \emph{kompletna}, če ima vsaka pot $x \circ \gamma$ v $\R^{n}$ neskončno Evklidsko dolžino za vsako divergentno pot $\gamma \colon [0,1) \to M$.
+Podobno kot izreka Weierstrassa in Mergelyana za holomorfne funkcije prilagodimo minimalnim ploskvam, želimo sedaj navesti še ustrezno različico Mittag-Lefflerjevega izreka. Lahko si predstavljamo, da so meromorfne funkcije v smislu minimalnih ploskev konformne minimalne imerzije $x \colon M \setminus A \to \R^{n}$ iz punktirane odprte Riemannove ploskve, katerih 1-forma $\partial x$ je meromorfna na $M$ s poli natanko v točkah množice $A$, množica $A$ pa je zaprta diskretna podmnožica v $M$.
+Pri aproksimaciji se bodo spet naravno pojavile dopustne množice ter enačice posplošenih konfromnih minimalnih imerzij.
+
+Spomnimo se, da je imerzija $x \colon M \to \R^{n}$ \emph{kompletna}, če ima pot $x \circ \gamma$ v $\R^{n}$ neskončno Evklidsko dolžino za poljubno divergentno pot $\gamma \colon [0,1) \to M$.
 Ekvivalentno je zahtevati, da je povlečena metrika $x^{*}ds^2$ na $M$ kompletna, torej je prostor $(M, x^{*}ds^2)$ kompleten metrični prostor (slednje pomeni konvergenco Cauchyjevih zaporedij v prostoru).
 
 V poglavju o Gaussovi preslikavi smo definirali totalno ukrivljenost Riemannove ploskve. Ploskve s končno totalno ukrivljenosjo so posebej zanimive, zato uvedimo naslednji termin, ki opisuje podrazred posplošenih minimalnih imerzij.
@@ -1899,7 +1922,7 @@ Velja tudi obrat.
 Opazimo, da prvi pogoj iz zgornje definicije implicira kompletnost imerzije $x$. Res, za divergentno pot $\gamma \colon [0,1) \to S \setminus A, \ \lim_{s \to 1}\gamma(s) \in A$, ima pot $x \circ \gamma$ neskončno dolžino v $\R^{n}$. To pomeni, da je preslikava $x \colon S \setminus A \to \R^{n}$ kompletna. \newline
 
 Do Mittag-Lefflerjevega izreka za konformne minimalne imerzije nas loči še nekaj korakov. Postopek je podoben ideji, ki nas je vodila do glavnega izreka o aproksimaciji in interpolaciji. Najprej bomo navedli in dokazali lemo o aproksimaciji in interpolaciji meromorfnih preslikav v ničelno kvadriko; ta je analogna Lemi~\ref{lema:aproks&interp-A*}.
-Iz leme sledi trditev, ki je nekritični primer Mittag-Lefflerjevega izreka, in je analogna Trditvi~\ref{trd:nekritcni-primer}.
+Iz leme sledi trditev, ki je nekritični primer Mittag-Lefflerjevega izreka, in je razširitev Trditve~\ref{trd:nekritcni-primer}.
 Trditev nato (kot v primeru glavnega izreka) posplošimo do Mittag-Lefflerjevega izreka za konformne minimalne imerzije in analognega rezultata, Weierstrassovega izreka o interpolaciji konformnih minimalnih ploskev.
 Predstavili bomo dokaz leme, dokaze trditve in obeh izrekov pa bomo izpustili. Ti sledijo idejam dokazov pripadajočih rezultatov iz prejšnjega poglavja.
 
@@ -1912,6 +1935,7 @@ Preslikave $f \colon S \setminus A \to \textup{\textbf{A}}_{*}$, ki so meromorfn
 \end{gather*}
 Po definiciji je preslikava $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}}_{*})$ holomorfna na množici $S^{\circ} \setminus A$.
 
+% pomozna lema
 \begin{lema} \label{lema:ML-pomozna-lema}
 Naj bodo $M, \ S$ in družina $\mathcal{C}$ kot v Lemi~\ref{lema:aproks&interp-A*}. Naj bo $\mathcal{P}$ periodno dominantni sprej, ki pripada družini krivulj $\mathcal{C}$, $A \subset S^{\circ}$ končna množica točk in $r \geq 1$.
 Tedaj za dane preslikavo $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}}_{*})$, realno število $\varepsilon > 0$, končno množico $\Lambda$, z $A \subset \Lambda \subset S^{\circ}$, in število $s \in \mathbb{N} \cup \{0\}$ obstaja polna holomorfna preslikava $F \in \mathcal{O}(M \setminus A, \textup{\textbf{A}}_{*})$, pri čemer velja naslednje:
@@ -1926,7 +1950,7 @@ Tedaj za dane preslikavo $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}
 % CITIRAJ [1906.01915.pdf: Theorem 3.1, dokaz]
 %%%%% dokaz leme
 \begin{dokaz}
-Najprej uporabimo Weierstrassov izrek o interpolaciji na odprtih Riemannovih ploskvah.
+Najprej uporabimo Weierstrassov izrek~\ref{izr:Weierstrass} o interpolaciji na odprtih Riemannovih ploskvah.
 Ker je po predpostavki $A \subset S^{\circ} \subset M$ končna množica in preslikava $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}}_{*})$, po izreku obstaja holomorfna funkcija $w \in \mathcal{O}(M)$, ki ima ničle predpisanih stopenj v točkah množice $A$, na $M \setminus A$ pa je neničelna.
 Funkcijo $w$ lahko izberemo tako, da je produkt $wf$ brez ničel in polov na množici $A$. Sledi, da je $wf \in \mathcal{A}^{r}(S, \textup{\textbf{A}}_{*})$.
 
@@ -1981,6 +2005,9 @@ Končno definiramo kvocient $F = \frac{\tilde{F}}{w}$, ki ob dovolj dobri aproks
 \end{dokaz}
 %%%%% konec dokaza
 
+Pravkar dokazana lema je najpomembnejše orodje za dokaz naslednje trditve, ki predstavlja nekritični primer Mittag-Lefflerjevega izreka za minimalne ploskve.
+
+% nekriticni primer Mittag-Lefflerjevega izreka
 \begin{trditev} \label{trd:ML-nekriticni-primer}
 Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A$ in $\Lambda$ končni množici točk z $A \subset \Lambda \subset S^{\circ}$. Naj bosta $r, s \in \mathbb{N}$.
 Tedaj lahko vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \colon S \setminus A \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(S\setminus A)$ s končno totalno ukrivljenostjo aproksimiramo v $\mathcal{C}^{r}(S \setminus A)$ s polnimi konformnimi minimalnimi imerzijami $X \colon M \setminus A \to \mathbb{R}^{n}$. Pri tem so izpolnjeni naslednji pogoji.
@@ -2007,12 +2034,19 @@ Tedaj za poljubne $\varepsilon > 0$, zaprto diskretno podmnožico $\Lambda$, za 
 \end{enumerate}
 \end{izrek}
 
+Prvi del izreka se zdi pričakovan kot nadaljevanje običajnega Mittag-Lefflerjevega izreka, le da tokrat govorimo o preslikavah (konformnih minimalnih imerzijah) iz odprtih Riemannovih ploskev.
+
 Spomnimo se, da je družina podmnožic $\mathcal{F}$ topološkega prostora $X$ \emph{lokalno končna} družina, kadar vsaka točka $p \in X$ premore okolico $U_{p} \subset X$, ki seka končno mnogo množic iz $\mathcal{F}$.
 Ker je unija $U$ v drugem delu zgornjega izreka po predpostavki lokalno končna, obstaja zaporedje povezanih kompaktnih domen z gladkim robom
 \begin{gather*}
 M_{0} \Subset M_{1} \Subset \dots \Subset \bigcup_{i \geq 0} M_{i}=M,
 \end{gather*}
 za katere velja $U \cap M_{0} = \emptyset$ in $U \cap bM_{i} = \emptyset$ za $i = 1,2,\dots$ To zaporedje množic $\{ M_{i} \}_{i}$ igra pomembno vlogo v dokazu izreka, ki poteka z indukcijo, podobno kot dokaz glavnega izreka iz prejšnjega poglavja.
+Dokaz različice izreka se nahaja v~[...]. % CITIRAJ [1906.01915.pdf: Theorem 7.1, dokaz]
+
+Mittag-Lefflerjev izrek za konformne minimalne imerzije, predvsem njegov drugi del, posnema glavni izrek za minimalne ploskve Mergelyanovega tipa (Izrek~\ref{izr:glavni-izrek-CMI}) v naslednjem smislu. Če minimalno imerzijo v glavnem izreku definiramo na punktirani dopustni množici in dovolimo, da imajo njeni Weierstrassovi podatki pole (v točkah, kjer podana imerzija ni definirana), tedaj dobimo zgornji izrek.
+
+Analogen rezultat velja tudi za holomorfne ničelne krivulje.
 
 % Weierstrassov izrek za CMI
 \begin{izrek} [Weierstrassov izrek o interpolaciji konformnih minimalnih ploskev] \label{izr:Weierstrass-CMI}
