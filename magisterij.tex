@@ -556,15 +556,15 @@ Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je hom
 V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi formuli odvisen le od homološkega razreda poti $C \subset M$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Aproksimacijski izreki za Riemannove ploskve
-\subsection{Aproksimacijski izreki za Riemannove ploskve}
+% Aproksimacijski in interpolacijski izreki za Riemannove ploskve
+\subsection{Aproksimacijski in interpolacijski izreki za Riemannove ploskve}
 %
-Najbolj klasični izrek v teoriji aproksimacije holomorfnih funkcij je Rungejev izrek (1885). Razširitev na Riemannove ploskve (bodisi odprte bodisi kompaktne z robom) sta dokazala H.~Behnke in K.~Stein (1949).
+Najbolj klasična izreka v teoriji aproksimacije holomorfnih funkcij sta Weierstrassov izrek, ki pravi, da zvezne funkcije na zaprtih intervalih v $\R$ lahko aproksimiramo s polinomi (K.~Weierstrass, 1885), ter izrek C.~Rungeja iz istega leta o aproksimaciji holomorfnih funkcij v okolici kompaktne množice v $\C$ z racionalnimi funkcijami oziroma holomorfnimi polinomi v posebnem primeru. Razširitev Rungejevega izreka na odprte Riemannove ploskve sta dokazala H.~Behnke in K.~Stein (1949), povsem enak izrek pa velja tudi za kompaktne Riemannove ploskve z robom (H.~L.~Royden, 1967).
 
 % citiraj Theorem 1.12.1
 \begin{izrek} [Rungejev aproksimacijski izrek za Riemannove ploskve] \label{izr:Runge}
 Naj bo $M$ Riemannova ploskev in $K$ njena kompaktna podmnožica. 
-Potem lahko vsako funkcijo $f$, ki je holomorfna na okolici $K$, aproksimiramo enakomerno na $K$ z meromorfnimi funkcijami $F$ na $M$ brez polov na $K$, ter s holomorfnimi funkcijami na $M$, če $K$ nima lukenj.
+Potem lahko vsako funkcijo $f$, ki je holomorfna v okolici $K$, aproksimiramo enakomerno na $K$ z meromorfnimi funkcijami $F$ na $M$ brez polov na $K$, ter s holomorfnimi funkcijami na $M$, če $K$ nima lukenj.
 Funkcije $F$ lahko izberemo tako, da se z dano funkcijo $f$ na končni množici točk v $K$ ujemajo do izbranega končnega reda in da ima $F$ pole v podmnožici $E \subset M \backslash K$, kjer $E$ vsebuje točko v vsaki luknji množice $K$. 
 \end{izrek}
 
@@ -578,15 +578,20 @@ Naj bo $K$ kompaktna podmnožica Riemannove ploskve $M$. Njena \emph{holomorfna 
 
 Kompaktne množice $K \subset M$, ki so Rungejeve podmnožice Riemannove ploskve $M$, pogosto karakteriziramo z lastnostjo, da nimajo lukenj v $M$. \newline
 
-Velik napredek v razvoju je pomenil Mergelyanov izrek o aproksimaciji holomorfnih funkcij (S.~N.~Mergelyan, 1951). Pravi, da zvezne funkcije na kompaktni množici $K \subset \C$ brez lukenj, ki so holomorfne v notranjosti $K^{\circ}$, tj.~$f \in \mathcal{A}(K)$, lahko na $K$ enakomerno aproksimiramo s celimi funkcijami.
-Različica velja tudi za Riemannove ploskve (E.~Bishop, 1958).
+Velik napredek v razvoju je pomenil Mergelyanov izrek o aproksimaciji holomorfnih funkcij (S.~N.~Mergelyan, 1951). Pove, da je zvezne funkcije na kompaktni množici $K \subset \C$ brez lukenj, ki so holomorfne v notranjosti $K^{\circ}$, tj.~razreda $\mathcal{A}(K)$, na kompaktu $K$ mogoče enakomerno aproksimirati s holomorfnimi polinomi.
+Različica velja tudi za odprte Riemannove ploskve (E.~Bishop, 1958).
 
 % citiraj Theorem 1.12.7
 \begin{izrek} [Bishop-Mergelyanov aproksimacijski izrek] \label{izr:Bishop-Mergelyan}
 Naj bo $M$ odprta Riemannova ploskev in $K$ njena kompaktna podmnožica brez lukenj ($K$ je Rungejeva v $M$). Potem lahko vsako funkcijo v $\mathcal{A}(K)$ aproksimiramo enakomerno na $K$ s funkcijami v $\mathcal{O}(M)$.
 \end{izrek}
 
-Naslednji rezultat je nadgrajen Weierstrassov izrek o interpolaciji holomorfnih funkcij, tokrat za preslikave na odprtih Riemannovih ploskvah (H.~Florack).
+Izrek se da posplošiti na dopustne množice (Definicija~\ref{def:dopustna-mnozica}), kar bo pomembno pri aproksimaciji konformnih minimalnih imerzij. \newline
+Omenimo še vprašanje, povezano z Mergelyanovim izrekom. Karakterizirati želimo kompaktne množice $K \subset M$ Riemannove ploskve $M$, za katere velja, da funkcije razreda $\mathcal{A}(K)$ lahko aproksimiramo z meromorfnimi funkcijami na $M$ s poli izven kompakta $K$. Problem je rešil A.~G.~Vitushkin leta 1966. Primeri kompaktnih množic, za katere to ne drži, so množice tipa \emph{Swiss cheese}. Tako množico dobimo iz para $(D, \mathcal{D})$, kjer je $D$ zaprt disk in $\mathcal{D}$ števna družina paroma disjunktnih odprtih diskov v $D^{\circ}$ (ki zadoščajo še pogojem o legah središč in velikostih polmerov), tako, da zaprtemu disku $D$ odstranimo unijo diskov iz družine $\mathcal{D}$. Nastala množica ima neskončno lukenj. \newline
+
+Oglejmo si še interpolacijo.
+Osnovni rezultat o interpolaciji holomorfnih funkcij je izrek K.~Weierstrassa iz leta 1876. Pokaže, da obstaja cela holomorfna funkcija $f \in \mathcal{O}(\C)$ z ničlami natanko v predpisanih točkah in izbranih stopenj za poljuben izbor točk $\{ a_{i} \}_{i \in \N} \subset \C$ (ki so ničle funkcije) in naravnih števil $\{ k_{i} \}_{i \in N}$ (stopnje ničel). Pove tudi eksplicitno obliko funkcije kot neskončnega produkta.
+Nadgrajen Weierstrassov izrek za preslikave na odprtih Riemannovih ploskvah je dokazal H.~Florack (1949).
 
 % citiraj Theorem 1.12.13
 \begin{izrek} [Weierstrassov izrek za odprte Riemannove ploskve] \label{izr:Weierstrass}
@@ -594,7 +599,7 @@ Naj bo $M$ odprta Riemannova ploskev, $A = \{a_{i}\}_{i \in \N} \subset M$ njena
 Tedaj obstaja holomorfna funkcija $f \in \mathcal{O}(M)$, ki ima ničle natanko v točkah množice $A$, stopnja ničle $a_{i}$ pa je enaka $k_{i}$ za vse indekse $i \in \N$.
 \end{izrek}
 
-Weierstrass-Florackov interpolacijski izrek je natančnejša različica prejšnjega skupaj z Rungejevo aproksimacijo.
+Naslednji, Weierstrass-Florackov interpolacijski izrek, je natančnejša različica prejšnjega skupaj z Rungejevo aproksimacijo.
 
 % citiraj Theorem 1.12.14
 \begin{izrek} [Weierstrass-Florackov interpolacijski izrek] \label{izr:Weierstrass-Florack}
@@ -606,6 +611,12 @@ Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna
 \item $F$ nima ničel in polov na $M \backslash A$.
 \end{enumerate} 
 \end{izrek}
+
+G.~Mittag-Leffler je leta 1884 dokazal rezultat, ki je soroden Weierstrassovemu izreku o interpolaciji holomorfnih funkcij. Pove naslednje:
+naj bo $A \subset \C$ zaprta diskretna množica in $f$ meromorfna funkcija v okolici množice $A$. Potem obstaja meromorfna funkcija $F$ na $\C$, ki je holomorfna na $\C \setminus A$, razlika $F-f$ pa je holomorfna v vsaki točki množice $A$. \newline
+Splošnjejši rezultat za odprte Riemannove ploskve je prispevek H.~Floracka iz leta 1948. \newline
+
+V nadaljevanju bo naš cilj formulirati ustrezne različice zgornjih izrekov za minimalne ploskve.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1192,7 +1203,7 @@ $ \mathcal{L}in \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo
 V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih konformnih minimalnih imerzij in ničelnih krivulj operirali s splošnejšimi preslikavami, imenovanimi posplošene minimalne imerzije ter ničelne krivulje; naravno pa se bodo zaradi topoloških lastnosti množic, na katerih bomo preslikave aproksimirali, pojavile tudi množice iz naslednje definicije.
 
 % dopustna množica
-\begin{definicija} [Dopustna množica]
+\begin{definicija} [Dopustna množica] \label{def:dopustna-mnozica}
 Naj bo $M$ gladka ploskev, $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}.
 \end{definicija}
 
