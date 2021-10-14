@@ -559,6 +559,7 @@ V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi form
 % Aproksimacijski in interpolacijski izreki za Riemannove ploskve
 \subsection{Aproksimacijski in interpolacijski izreki za Riemannove ploskve}
 %
+% VIR: zgodovina po [Holomorphic approximation: the legacy ...]
 Najbolj klasična izreka v teoriji aproksimacije holomorfnih funkcij sta Weierstrassov izrek, ki pravi, da zvezne funkcije na zaprtih intervalih v $\R$ lahko aproksimiramo s polinomi (K.~Weierstrass, 1885), ter izrek C.~Rungeja iz istega leta o aproksimaciji holomorfnih funkcij v okolici kompaktne množice v $\C$ z racionalnimi funkcijami oziroma holomorfnimi polinomi v posebnem primeru. Razširitev Rungejevega izreka na odprte Riemannove ploskve sta dokazala H.~Behnke in K.~Stein (1949), povsem enak izrek pa velja tudi za kompaktne Riemannove ploskve z robom (H.~L.~Royden, 1967).
 
 % citiraj Theorem 1.12.1
@@ -2066,6 +2067,45 @@ Predpostavimo, da je $z \colon U \to \C^{n}$ meromorfna preslikava s poli v toč
 Tedaj obstaja meromorfna preslikava $\tilde{z} \colon M \to \C^{n}$, njena zožitev $\tilde{z}|_{M \setminus A}$ na $M \setminus A$ je polna holomorfna ničelna krivulja, razlika $\tilde{z}-z$ pa je holomorfna na množici $A$.
 \end{izrek}
 
+%%%%% kompletnost
+\begin{izrek} \label{izr:kompletnost}
+\begin{enumerate}
+\item Konformno minimalno imerzijo $\tilde{x} \colon M \to \R^{n}$ iz Izreka~\ref{izr:glavni-izrek-CMI} lahko izberemo tako, da je kompletna.
+\item Holomorfno ničelno krivuljo $\tilde{z} \colon M \to \C^{n}$ iz Izreka~\ref{izr:glavni-izrek-NC} lahko izberemo tako, da je kompletna.
+\item Konformno minimalno imerzijo $\tilde{x} \colon M \setminus A \to \R^{n}$ iz Izreka~\ref{izr:ML-CMI} lahko izberemo tako, da je kompletna.
+\item Holomorfno ničelno krivuljo $\tilde{z} \colon M \setminus A \to \C^{n}$ iz Izreka~\ref{izr:Weierstrass-CMI} lahko izberemo tako, da je kompletna.
+\end{enumerate}
+\end{izrek}
+
+\begin{dokaz}
+Oglejmo si prvi primer, to je situacija iz Izreka~\ref{izr:glavni-izrek-CMI}. 
+Dokaz je induktiven, ideja pa sledi dokazu izreka, ki ga primer obravnava. Razlika je ta, da za preslikave, konstruirane z indukcijo, vključimo dodaten pogoj, ki zagotovi kompletnost.
+
+Po dokazu Izreka~\ref{izr:glavni-izrek-CMI} lahko predpostavimo, da je $x \colon M \to \R^{n}$ polna konformna minimalna imerzija. 
+Postavimo $x^0 = x$ in izberimo število $\varepsilon_{0}>0$. 
+Nadalje izberimo strogo subharmonično Morsejevo funkcijo izčrpanja $\rho \colon M \to \R$ ter strogo naraščajoče zaporedje nenegativnih realnih števil $\{ c_{i} \}_{i} \subset \R$ z začetnim členom $c_0 = 0$ in limito $\lim_{i \to \infty}c_{i} = +\infty$, ki izpolnjuje enake tri zahteve kot zaporedje v dokazu Izreka~\ref{izr:glavni-izrek-CMI}.
+Izberimo še točko $p_0 \in M^{\circ} = \{ \rho < c_0 \}$.
+
+V indukcijskem delu konstruiramo zaporedje konformnih minimalnih imerzij $\{ x^{i} \}_{i}$, $x^{i}\colon M_{i} = \{ \rho \leq c_{i} \} \to \R^{n}$ (oz.~natančneje, $x^{i}$ je definirana v okolici $M_{i}$), ter strogo padajoče zaporedje $\{ \varepsilon_{i} \}_{i} \subset \R_{>0}$.
+Pri tem zahtevamo, da za vsak indeks $i \in \N$ veljajo točke~\textit{(i)}--\textit{(vi)} iz dokaza Izreka~\ref{izr:glavni-izrek-CMI}, hkrati pa tudi pogoj:
+\begin{itemize}
+\item[\textit{(vii)}] $d_{x^{i}}(p_0, bM_{i}) > i$.
+\end{itemize}
+(Tu $d_{x^{i}}$ označuje razdaljo glede na povlečeno metriko $(x^{i})^{*}ds^2$.) \newline
+Nato definiramo preslikavo $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \to \R^{n}$. Po definiciji in dokazu Izreka~\ref{izr:glavni-izrek-CMI} je $\tilde{x}$ konformna minimalna imerzija, ki izpolnjuje Izrek~\ref{izr:glavni-izrek-CMI}, pogoj~\textit{(vii)} pa zagotavlja njeno kompletnost. \newline
+Baza indukcije je par $(x^{0}, \varepsilon_{0})$.
+Indukcijski korak se sklicuje na metodo konstrukcije kompletnih minimalnih ploskev v $\R^3$, ki ležijo med vzporednima ravninama. \\[0.3cm]
+%
+Drugi primer o holomorfnih ničelnih krivuljah pokažemo na analogen način. \\[0.3cm]
+%
+V tretjem primeru opomnimo naslednje. Naj bo $\gamma \colon [0,1) \to M \setminus A$ poljubna divergentna pot. Obravnavati je potrebno dve možnosti:
+\begin{itemize}
+\item Pot $\gamma$ divergira v $M \setminus A$. Tedaj kompletnost preslikave $\tilde{x}$ zagotovimo s postopkom iz prvega primera.
+\item Pot $\gamma$ divergira k točki $a \in A$. Tedaj ima pot $\tilde{x} \circ \gamma$ avtomatično neskončno Evklidsko dolžino, saj vemo, da ima 1-forma
+	$\partial \tilde{x}$ pol v točki $a \in A$.
+\end{itemize}
+Dokaz četrtega primera je analogen tretjemu.
+\end{dokaz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
