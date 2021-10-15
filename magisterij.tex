@@ -625,6 +625,54 @@ V nadaljevanju bo naš cilj formulirati ustrezne različice zgornjih izrekov za 
 \section{Minimalne ploskve}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Grafi z minimalno ploščino
+\subsection{Grafi z minimalno ploščino}
+%
+Vzemimo domeno $D \subset \R^2$ z odsekoma zvezno odvedljivim robom $bD$ in funkcijo $f \colon \overline{D} \to \R$ razreda $\mathcal{C}^2$, kjer $\overline{D}$ označuje zaprtje domene $D$.
+Graf funkcije $f$ je množica
+\begin{gather}
+\Gamma_{f} = \{ (x,y,z) \in \R^3; \ (x,y) \in \overline{D}, \ z=f(x,y) \},
+\end{gather}
+njena ploščina pod grafom pa je enaka
+\begin{gather} \label{eq:area-f}
+\text{Area}(f) = \int_{D} \sqrt{1 + f_{x}^2 + f_{y}^2} dxdy.
+\end{gather}
+Poiskati želimo funkcije na $\overline{D}$, ki imajo najmanjšo ploščino pod grafom, pri čemer vnaprej predpišemo vrednosti na robu domene $bD$ (ta naj bo $f|_{bD}$ za zgoraj izbrano funkcijo $f$). Z drugimi besedami, iščemo stacionarne točke funkcionala $\text{Area}$~\eqref{eq:area-f} med grafi nad $\overline{D}$ s predpisanimi robnimi vrednostmi.
+
+Ker nas zanimajo funkcije, bližnje $f$, s fiksnimi robnimi vrednostmi, si oglejmo deformacije naslednje oblike:
+izberimo zvezno odvedljivo funkcijo $h \colon \overline{D} \to \R$, ki je ničelna na robu ($h|_{bD} = 0$), ter opazujmo družino funkcij $\{f + sh; \ s \in \R \}$.
+Izbrana $f$ je stacionarna točka funkcionala $\text{Area}$ natanko tedaj, ko za poljubno funkcijo $h$ (z zgornjimi lastnostmi) velja
+\begin{equation} \label{eq:stac-area(f+sh)}
+\frac{d}{ds} \Big|_{s=0} \text{Area}(f+sh) = 0.
+\end{equation}
+Poenostavimo enačbo. Računamo
+\begin{align*}
+\frac{d}{ds} \Big|_{s=0} \text{Area}(f+sh) &= \frac{d}{ds} \Big|_{s=0} \int_{D} \sqrt{1 + ((f+sh)_{x})^2 + ((f+sh)_{y})^2} dxdy \\
+	&= \int_{D} \frac{d}{ds} \Big|_{s=0} \sqrt{1 + (f_{x}+sh_{x})^2 + (f_{y}+sh_{y})^2} dxdy \\
+	&= \int_{D} \frac{f_{x}h_{x} + f_{y}h_{y}}{\sqrt{1 + f_{x}^2 + f_{y}^2}} dxdy \\
+	&= \frac{(f_{x} + f_{y})h}{\sqrt{1 + f_{x}^2 + f_{y}^2}} \Big|_{bD} \\
+	&- \int_{D} \left( \frac{\partial}{\partial x} \frac{f_{x}}{\sqrt{1 + f_{x}^2 + f_{y}^2}} + \frac{\partial}{\partial y} \frac{f_{y}}{\sqrt{1 + f_{x}^2 + f_{y}^2}} \right) h dxdy \\
+	&= - \int_{D} \left( \frac{\partial}{\partial x} \frac{f_{x}}{\sqrt{1 + f_{x}^2 + f_{y}^2}} + \frac{\partial}{\partial y} \frac{f_{y}}{\sqrt{1 + f_{x}^2 + f_{y}^2}} \right) h dxdy,
+\end{align*}
+pri čemer v zadnji enakosti upoštevamo pogoj, da je $h|_{bD}=0$.
+Po zveznosti je izraz enak $0$ za vse izbore $h$ natanko takrat, ko na domeni $D$ velja
+\begin{gather}
+\frac{\partial}{\partial x} \frac{f_{x}}{\sqrt{1 + f_{x}^2 + f_{y}^2}} + \frac{\partial}{\partial y} \frac{f_{y}}{\sqrt{1 + f_{x}^2 + f_{y}^2}} = 0.
+\end{gather}
+Poenostavimo še slednji izraz:
+\begin{align*}
+\frac{\partial}{\partial x} \frac{f_{x}}{\sqrt{1 + f_{x}^2 + f_{y}^2}} + \frac{\partial}{\partial y} \frac{f_{y}}{\sqrt{1 + f_{x}^2 + f_{y}^2}}
+	&= \frac{f_{xx}(1 + f_{x}^2 + f_{y}^2) - f_{x}(f_{x}f_{xx} + f_{y}f_{xy})}{(1 + f_{x}^2 + f_{y}^2)^{3/2}} \\
+	&+ \frac{f_{yy}(1 + f_{x}^2 + f_{y}^2) - f_{y}(f_{x}f_{xy} + f_{y}f_{yy})}{(1 + f_{x}^2 + f_{y}^2)^{3/2}} \\
+	&= \frac{f_{xx}(1+f_{y}^2) - 2f_{x}f_{y}f_{xy} + f_{yy}(1+f_{x}^2)}{(1 + f_{x}^2 + f_{y}^2)^{3/2}}.
+\end{align*}
+Dobimo ekvivalentno enačbo k enačbi~\eqref{eq:stac-area(f+sh)},
+\begin{equation} \label{eq:min-graph-eq}
+f_{xx}(1+f_{y}^2) - 2f_{x}f_{y}f_{xy} + f_{yy}(1+f_{x}^2) = 0,
+\end{equation}
+ki jo imenujemo \emph{enačba za minimalne grafe}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Variacija ploščine
 \subsection{Variacija ploščine}
  %
@@ -2067,7 +2115,12 @@ Predpostavimo, da je $z \colon U \to \C^{n}$ meromorfna preslikava s poli v toč
 Tedaj obstaja meromorfna preslikava $\tilde{z} \colon M \to \C^{n}$, njena zožitev $\tilde{z}|_{M \setminus A}$ na $M \setminus A$ je polna holomorfna ničelna krivulja, razlika $\tilde{z}-z$ pa je holomorfna na množici $A$.
 \end{izrek}
 
-%%%%% kompletnost
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5%%%%
+% Kompletnost
+\subsection{Kompletnost}
+%
+Kompletnost preslikav oziroma mnogoterosti je ena izmed pomembnejših lastnosti v Riemannovi geometriji. Izkaže se, da preslikave iz izrekov o aproksimaciji in interpolaciji minimalnih ploskev iz prejšnjih razdelkov lahko izberemo tako, da so kompletne. To dejstvo opisuje naslednji izrek; predstavili bomo le osnovne ideje njegovega dokaza, povzete po [...]. % CITIRAJ [Theorem 3.9.1]
+
 \begin{izrek} \label{izr:kompletnost}
 \begin{enumerate}
 \item Konformno minimalno imerzijo $\tilde{x} \colon M \to \R^{n}$ iz Izreka~\ref{izr:glavni-izrek-CMI} lahko izberemo tako, da je kompletna.
