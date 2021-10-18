@@ -628,6 +628,8 @@ V nadaljevanju bo naš cilj formulirati ustrezne različice zgornjih izrekov za 
 % Grafi z minimalno ploščino
 \subsection{Grafi z minimalno ploščino}
 %
+Kot motivacijo pred študijem minimalnih ploskev si oglejmo primer v nižji razsežnosti -- obravnavajmo minimalne grafe v $\R^3$, tj.~funkcije z minimalno ploščino pod grafom. Le-te so zanimale že J.~L.~Lagranga, ki je l.~1760 napravil naslednji izračun. 
+
 Vzemimo domeno $D \subset \R^2$ z odsekoma zvezno odvedljivim robom $bD$ in funkcijo $f \colon \overline{D} \to \R$ razreda $\mathcal{C}^2$, kjer $\overline{D}$ označuje zaprtje domene $D$.
 Graf funkcije $f$ je množica
 \begin{gather}
@@ -671,6 +673,32 @@ Dobimo ekvivalentno enačbo k enačbi~\eqref{eq:stac-area(f+sh)},
 f_{xx}(1+f_{y}^2) - 2f_{x}f_{y}f_{xy} + f_{yy}(1+f_{x}^2) = 0,
 \end{equation}
 ki jo imenujemo \emph{enačba za minimalne grafe}.
+To je eliptična kvazilinearna parcialna diferencialna enačba drugega reda. \newline
+Prešli smo na naslednji Dirichletov problem: iščemo rešitve enačbe za minimalne grafe~\eqref{eq:min-graph-eq} z robnim pogojem, ki je zvezna funkcija na robu $bD$.
+T.~Rad\'o je leta 1930 pokazal, da rešitev Dirichletovega problema obstaja za vsako konveksno omejeno domeno $D \subset \R^2$, iz principa maksima za minimalne grafe pa sledi, da je rešitev tudi enolična.
+
+Zakaj je dovolj, da smo v zgornji izpeljavi enačbe za minimalne grafe obravnavali le deformacije dane funkcije $f$, ki so linearne v parametru $s \in \R$? \newline
+Naj bo $\varepsilon > 0$, $D$ ter $f$ kot prej, in vzemimo funkcijo $F(x,y,s) \colon \overline{D} \times (-\varepsilon, \varepsilon) \to \R$ razreda $\mathcal{C}^2$, za katero velja:
+\begin{itemize}
+\item $ F(x,y,0) = f(x,y) \ \text{za} \ (x,y) \in \overline{D}$;
+\item $ F(x,y,s) = f(x,y) \ \text{za} \ (x,y,s) \in bD \times (-\varepsilon, \varepsilon)$.
+\end{itemize}
+Pišimo $F_{s}(x,y) = F(x,y,s)$ in razvijmo do 1.~reda. Dobimo
+\begin{align*}
+F_{s}(x,y) &= F(x,y,0) + s \frac{\partial}{\partial s} \Big|_{s=0}F_{s}(x,y) + O(s^2) \\
+	&= f(x,y) + s h(x,y) + O(s^2),
+\end{align*}
+pri čemer smo v drugi enakosti vpeljali $h(x,y)= \frac{\partial}{\partial s}|_{s=0}F_{s}(x,y)$. Tedaj je
+\begin{gather*}
+\frac{d}{ds} \Big|_{s=0} \text{Area}(F_{s}) = \frac{d}{ds} \Big|_{s=0} \text{Area}(f+sh),
+\end{gather*}
+kar utemelji izbiro linearnih deformacij.
+
+\begin{opomba}
+Biti minimalen graf je lokalna lastnost v naslednjem smislu.
+Če poljubna točka $(x_0,y_0) \in D$ premore odprto okolico $U \subset D$ z lastnostjo, da za vsako zvezno odvedljivo funkcijo $h_{U}$ z nosilcem na množici $U$  velja $\frac{d}{ds} |_{s=0} \text{Area}(f+sh) = 0$, potem funkcija $f$ reši enačbo za minimalne grafe~\eqref{eq:min-graph-eq}.
+Zaključimo, da je graf minimalen natanko tedaj, ko je minimalen v okolici vsake točke.
+\end{opomba}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Variacija ploščine
