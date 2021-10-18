@@ -700,6 +700,34 @@ Biti minimalen graf je lokalna lastnost v naslednjem smislu.
 Zaključimo, da je graf minimalen natanko tedaj, ko je minimalen v okolici vsake točke.
 \end{opomba}
 
+\begin{trditev} \label{trd:min-graf-H=0}
+Naj bo $D \subset \R^2$ domena. Funkcija $f \colon D \to \R$ funkcija razreda $\mathcal{C}^2$ reši enačbo za minimalne grafe
+\begin{gather*}
+f_{xx}(1+f_{y}^2) - 2f_{x}f_{y}f_{xy} + f_{yy}(1+f_{x}^2) = 0
+\end{gather*}
+natanko tedaj, ko ima njen graf $S = \Gamma_{f}$ v vsaki točki ničelno povprečno ukrivljenost, tj.~$\textup{\textbf{H}} = 0$.
+\end{trditev}
+
+\begin{dokaz}
+Izberimo točko $(x_0,y_0) \in D$. Brez škode za splošnost lahko postavimo $(x_0,y_0)=(0,0)$ in $f(0)=0$, saj v nasprotnem ustrezno transliramo koordinate. 
+
+Najprej si oglejmo poseben primer, ko je $(0,0)$ kritična točka funkcije $f$. To pomeni, da velja $f_{x}(0,0)=f_{y}(0,0)=0$, enačba za minimalne grafe pa se tedaj glasi
+\begin{gather} \label{eq:min-graf-dokaz-poseben-primer}
+f_{xx}(0,0) + f_{yy}(0,0) = \Delta f(0,0) = 0.
+\end{gather}
+Po Lemi~\ref{lema:laplace=2H} je $\Delta f = 2\textup{\textbf{H}}$, zato je enakost~\eqref{eq:min-graf-dokaz-poseben-primer} ekvivalentna pogoju $\textup{\textbf{H}}(0,0) = 0$. Trditev v posebnem primeru drži.
+
+Poglejmo si še splošno situacijo, ki jo bomo rešili s pomočjo posebnega primera. Izberimo enotski vektor $N = (N_1,N_2,N_3) \in \R^3, \ N_3>0$, ki je pravokoten na tangentno ravnino $T_{(0,0)}S$ v točki $(0,0)$. Obstaja ortogonalna rotacija $R$ v prostoru $\R^3$ z lastnosmi
+\begin{gather*}
+R(N) = (0,0,1), \quad R(T_{(0,0)}S) = \R^2 \times \{0\}.
+\end{gather*}
+Opazujmo graf $S$ v okolici točke $(0,0)$ (in to zožitev imenujemo kar $S$).
+Slika $\tilde{S} = R(S)$ je graf $z=\tilde{f}(x,y)$ funkcije $\tilde{f}$ s kritično točko $(0,0)$. Naj bo $h$ funkcija razreda $\mathcal{C}^{1}$ z nosilcem na domeni $U \subset \R^2$ v okolici točke $(0,0)$. Naj $\{ \tilde{S}; \ s \in \R \}$ označuje družino grafov, ki pripadajo deformacijam $s \mapsto \tilde{f}+sh$ grafa $\tilde{S} = \tilde{S}_{0}$ v smeri vektorja $(0,0,1)$.
+Inverzna preslikava $R^{-1}$, ki je prav tako ortogonalna rotacija v $\R^3$, družino $\{ \tilde{S}_{s}; \ s \in \R \}$ preslika v družino $\{ S_{s}; \ s \in \R \}$ deformacij grafa $S$ v smeri vektorja $N$ z nosilcem v okolici točke $(0,0) \in \R^2$. \newline
+Če funkcija $f$ reši enačbo za minimalne grafe, tj.~je $f$ minimalni graf, kar pomeni, da velja $\frac{d}{ds}|_{s=0} \text{Area}(S_{s})=0$, iz ortogonalnosti rotacije $R$ sledi $\frac{d}{ds}|_{s=0} \text{Area}(\tilde{f}+sh)=0$ za vse funkcije $h$ kot zgoraj. Torej je $\tilde{S}$ minimalni graf v okolici točke $(0,0)$. Po prvem delu dokaza je to ekvivalentno $\textup{\textbf{H}}_{\tilde{S}}(0,0) = 0$. Ker je rotacija $R$ ortogonalna, tedaj tudi za prasliko $S = R^{-1}(\tilde{S})$ velja $\textup{\textbf{H}}_{S}(0,0) = 0$. \newline
+Obraten razmislek, ki ob predpostavki $\textup{\textbf{H}}_{S}(0,0) = 0$ implicira minimalnost grafa $f$, je povsem analogen.
+\end{dokaz}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Variacija ploščine
 \subsection{Variacija ploščine}
