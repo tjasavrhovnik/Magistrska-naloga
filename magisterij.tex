@@ -628,6 +628,7 @@ V nadaljevanju bo naš cilj formulirati ustrezne različice zgornjih izrekov za 
 % Grafi z minimalno ploščino
 \subsection{Grafi z minimalno ploščino}
 %
+% Povzeto po [Minimal surfaces for undergraduates, Chapter 2 & 4]
 Kot motivacijo pred študijem minimalnih ploskev si oglejmo primer v nižji razsežnosti -- obravnavajmo minimalne grafe v $\R^3$, tj.~funkcije z minimalno ploščino pod grafom. Le-te so zanimale že J.~L.~Lagranga, ki je l.~1760 napravil naslednji izračun. 
 
 Vzemimo domeno $D \subset \R^2$ z odsekoma zvezno odvedljivim robom $bD$ in funkcijo $f \colon \overline{D} \to \R$ razreda $\mathcal{C}^2$, kjer $\overline{D}$ označuje zaprtje domene $D$.
@@ -688,7 +689,7 @@ Pišimo $F_{s}(x,y) = F(x,y,s)$ in razvijmo do 1.~reda. Dobimo
 F_{s}(x,y) &= F(x,y,0) + s \frac{\partial}{\partial s} \Big|_{s=0}F_{s}(x,y) + O(s^2) \\
 	&= f(x,y) + s h(x,y) + O(s^2),
 \end{align*}
-pri čemer smo v drugi enakosti vpeljali $h(x,y)= \frac{\partial}{\partial s}|_{s=0}F_{s}(x,y)$. Tedaj je
+pri čemer smo v drugi enakosti vpeljali $h(x,y)= \frac{\partial}{\partial s} \big|_{s=0}F_{s}(x,y)$. Tedaj je
 \begin{gather*}
 \frac{d}{ds} \Big|_{s=0} \text{Area}(F_{s}) = \frac{d}{ds} \Big|_{s=0} \text{Area}(f+sh),
 \end{gather*}
@@ -696,37 +697,45 @@ kar utemelji izbiro linearnih deformacij.
 
 \begin{opomba}
 Biti minimalen graf je lokalna lastnost v naslednjem smislu.
-Če poljubna točka $(x_0,y_0) \in D$ premore odprto okolico $U \subset D$ z lastnostjo, da za vsako zvezno odvedljivo funkcijo $h_{U}$ z nosilcem na množici $U$  velja $\frac{d}{ds} |_{s=0} \text{Area}(f+sh) = 0$, potem funkcija $f$ reši enačbo za minimalne grafe~\eqref{eq:min-graph-eq}.
+Če poljubna točka $(x_0,y_0) \in D$ premore odprto okolico $U \subset D$ z lastnostjo, da za vsako zvezno odvedljivo funkcijo $h_{U}$ z nosilcem na množici $U$  velja $\frac{d}{ds} \big|_{s=0} \text{Area}(f+sh) = 0$, potem funkcija $f$ reši enačbo za minimalne grafe~\eqref{eq:min-graph-eq}.
 Zaključimo, da je graf minimalen natanko tedaj, ko je minimalen v okolici vsake točke.
 \end{opomba}
 
+% Trditev: geometrijska interpretacija minimalnih grafov
 \begin{trditev} \label{trd:min-graf-H=0}
-Naj bo $D \subset \R^2$ domena. Funkcija $f \colon D \to \R$ funkcija razreda $\mathcal{C}^2$ reši enačbo za minimalne grafe
+Naj bo $D \subset \R^2$ domena. Funkcija $f \colon D \to \R$ razreda $\mathcal{C}^2$ reši enačbo za minimalne grafe
 \begin{gather*}
 f_{xx}(1+f_{y}^2) - 2f_{x}f_{y}f_{xy} + f_{yy}(1+f_{x}^2) = 0
 \end{gather*}
 natanko tedaj, ko ima njen graf $S = \Gamma_{f}$ v vsaki točki ničelno povprečno ukrivljenost, tj.~$\textup{\textbf{H}} = 0$.
 \end{trditev}
 
+%%%%% Dokaz trditve
 \begin{dokaz}
-Izberimo točko $(x_0,y_0) \in D$. Brez škode za splošnost lahko postavimo $(x_0,y_0)=(0,0)$ in $f(0)=0$, saj v nasprotnem ustrezno transliramo koordinate. 
+Izberimo točko $(x_0,y_0) \in D$. Brez škode za splošnost lahko postavimo $(x_0,y_0)=(0,0)$ in $f(0)=0$, saj v nasprotnem ustrezno transliramo koordinate. Ekvivalenco iz trditve je zato dovolj dokazati v točki $(0,0)$.
 
-Najprej si oglejmo poseben primer, ko je $(0,0)$ kritična točka funkcije $f$. To pomeni, da velja $f_{x}(0,0)=f_{y}(0,0)=0$, enačba za minimalne grafe pa se tedaj glasi
+Najprej si oglejmo poseben primer, ko je točka $(0,0)$ kritična točka funkcije $f$. To pomeni, da za parcialna odvoda velja $f_{x}(0,0)=f_{y}(0,0)=0$, enačba za minimalne grafe pa se tedaj glasi
 \begin{gather} \label{eq:min-graf-dokaz-poseben-primer}
 f_{xx}(0,0) + f_{yy}(0,0) = \Delta f(0,0) = 0.
 \end{gather}
-Po Lemi~\ref{lema:laplace=2H} je $\Delta f = 2\textup{\textbf{H}}$, zato je enakost~\eqref{eq:min-graf-dokaz-poseben-primer} ekvivalentna pogoju $\textup{\textbf{H}}(0,0) = 0$. Trditev v posebnem primeru drži.
+Po Lemi~\ref{lema:laplace=2H} vemo, da je $\Delta f = 2\textup{\textbf{H}}$, zato je enakost~\eqref{eq:min-graf-dokaz-poseben-primer} ekvivalentna pogoju $\textup{\textbf{H}}(0,0) = 0$. Trditev v posebnem primeru drži.
 
-Poglejmo si še splošno situacijo, ki jo bomo rešili s pomočjo posebnega primera. Izberimo enotski vektor $N = (N_1,N_2,N_3) \in \R^3, \ N_3>0$, ki je pravokoten na tangentno ravnino $T_{(0,0)}S$ v točki $(0,0)$. Obstaja ortogonalna rotacija $R$ v prostoru $\R^3$ z lastnosmi
+Poglejmo si še splošno situacijo, ki jo bomo rešili s pomočjo posebnega primera. Izberimo enotski vektor $N = (N_1,N_2,N_3) \in \R^3, \ N_3>0$, ki je pravokoten na tangentno ravnino $T_{(0,0)}S$ v točki $(0,0)$. Obstaja ortogonalna rotacija $R$ v prostoru $\R^3$ z lastnostmi
 \begin{gather*}
 R(N) = (0,0,1), \quad R(T_{(0,0)}S) = \R^2 \times \{0\}.
 \end{gather*}
-Opazujmo graf $S$ v okolici točke $(0,0)$ (in to zožitev imenujemo kar $S$).
-Slika $\tilde{S} = R(S)$ je graf $z=\tilde{f}(x,y)$ funkcije $\tilde{f}$ s kritično točko $(0,0)$. Naj bo $h$ funkcija razreda $\mathcal{C}^{1}$ z nosilcem na domeni $U \subset \R^2$ v okolici točke $(0,0)$. Naj $\{ \tilde{S}; \ s \in \R \}$ označuje družino grafov, ki pripadajo deformacijam $s \mapsto \tilde{f}+sh$ grafa $\tilde{S} = \tilde{S}_{0}$ v smeri vektorja $(0,0,1)$.
-Inverzna preslikava $R^{-1}$, ki je prav tako ortogonalna rotacija v $\R^3$, družino $\{ \tilde{S}_{s}; \ s \in \R \}$ preslika v družino $\{ S_{s}; \ s \in \R \}$ deformacij grafa $S$ v smeri vektorja $N$ z nosilcem v okolici točke $(0,0) \in \R^2$. \newline
-Če funkcija $f$ reši enačbo za minimalne grafe, tj.~je $f$ minimalni graf, kar pomeni, da velja $\frac{d}{ds}|_{s=0} \text{Area}(S_{s})=0$, iz ortogonalnosti rotacije $R$ sledi $\frac{d}{ds}|_{s=0} \text{Area}(\tilde{f}+sh)=0$ za vse funkcije $h$ kot zgoraj. Torej je $\tilde{S}$ minimalni graf v okolici točke $(0,0)$. Po prvem delu dokaza je to ekvivalentno $\textup{\textbf{H}}_{\tilde{S}}(0,0) = 0$. Ker je rotacija $R$ ortogonalna, tedaj tudi za prasliko $S = R^{-1}(\tilde{S})$ velja $\textup{\textbf{H}}_{S}(0,0) = 0$. \newline
+Opazujmo graf $S$ v okolici točke $(0,0)$ (in to zožitev imenujmo kar $S$).
+Njegova slika $\widetilde{S} = R(S)$ je graf $z=\tilde{f}(x,y)$ funkcije $\tilde{f}$ s kritično točko $(0,0)$. Naj bo $h$ funkcija razreda $\mathcal{C}^{1}$ z nosilcem v okolici $U \subset \R^2$ točke $(0,0) \in \R^2$ in naj $\{ \widetilde{S}_{s}; \ s \in \R \}$ označuje družino grafov, ki pripadajo deformacijam $s \mapsto \tilde{f}+sh$ grafa $\widetilde{S} = \widetilde{S}_{0}$ v smeri vektorja $(0,0,1)$.
+Inverzna preslikava $R^{-1}$, ki je prav tako ortogonalna rotacija v $\R^3$, družino $\{ \widetilde{S}_{s}; \ s \in \R \}$ preslika v družino $\{ S_{s}; \ s \in \R \}$ deformacij grafa $S$ v smeri vektorja $N$ z nosilcem v okolici točke $(0,0) \in \R^2$. \newline
+Če funkcija $f$ reši enačbo za minimalne grafe, tj.~je $f$ minimalni graf, kar pomeni, da velja $\frac{d}{ds} \big|_{s=0} \text{Area}(S_{s})=0$, iz ortogonalnosti rotacije $R$ sledi $\frac{d}{ds} \big|_{s=0} \text{Area}(\tilde{f}+sh)=0$ za vse funkcije $h$ kot zgoraj. Torej je $\widetilde{S}$ minimalni graf v okolici točke $(0,0)$. Po prvem delu dokaza je to ekvivalentno pogoju $\textup{\textbf{H}}_{\widetilde{S}}(0,0) = 0$. Ker je rotacija $R$ ortogonalna, tedaj tudi za prasliko $S = R^{-1}(\widetilde{S})$ velja $\textup{\textbf{H}}_{S}(0,0) = 0$. \newline
 Obraten razmislek, ki ob predpostavki $\textup{\textbf{H}}_{S}(0,0) = 0$ implicira minimalnost grafa $f$, je povsem analogen.
 \end{dokaz}
+%%%%% Konec dokaza
+
+Trditev lahko geometrijsko interpretiramo na naslednji način: gladka ploskev $S \subset \R^3$ ima identično ničelni vektor povprečne ukrivljenosti natanko tedaj, ko je $S$ v vsaki svoji točki $x \in S$ minimalni graf nad pripadajočo tangentno ravnino $T_{x}S$.
+Če opazujemo deformacije ploskve $S$ v normalni smeri z nosilci na relativno kompaktnih podmnožicah $U \Subset S^{\circ}$, je slednje ekvivalentno pogoju, da je ploskev $S$ stacionarna točka ploskovnega funkcionala $\text{Area}$.
+
+To posplošimo na ploskve, ki so slike domen v $\R^2$ z imerzijami v Evklidske prostore poljubnih razsežnosti $n \geq 3$. Le-to motivira definicijo minimalne ploskve, ki jo bomo spoznali v naslednjem razdelku.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Variacija ploščine
