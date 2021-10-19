@@ -629,7 +629,7 @@ V nadaljevanju bo naš cilj formulirati ustrezne različice zgornjih izrekov za 
 \subsection{Grafi z minimalno ploščino}
 %
 % Povzeto po [Minimal surfaces for undergraduates, Chapter 2 & 4]
-Kot motivacijo pred študijem minimalnih ploskev si oglejmo primer v nižji razsežnosti -- obravnavajmo minimalne grafe v $\R^3$, tj.~funkcije z minimalno ploščino pod grafom. Le-te so zanimale že J.~L.~Lagranga, ki je l.~1760 napravil naslednji izračun. 
+Kot motivacijo pred študijem minimalnih ploskev si oglejmo primer v nižji razsežnosti -- obravnavajmo minimalne grafe v $\R^3$, tj.~funkcije z minimalno ploščino pod grafom. Le-te so zanimale že J.~L.~Lagrangea, ki je l.~1760 napravil naslednji izračun. 
 
 Vzemimo domeno $D \subset \R^2$ z odsekoma zvezno odvedljivim robom $bD$ in funkcijo $f \colon \overline{D} \to \R$ razreda $\mathcal{C}^2$, kjer $\overline{D}$ označuje zaprtje domene $D$.
 Graf funkcije $f$ je množica
@@ -644,7 +644,7 @@ Poiskati želimo funkcije na $\overline{D}$, ki imajo najmanjšo ploščino pod 
 
 Ker nas zanimajo funkcije, bližnje $f$, s fiksnimi robnimi vrednostmi, si oglejmo deformacije naslednje oblike:
 izberimo zvezno odvedljivo funkcijo $h \colon \overline{D} \to \R$, ki je ničelna na robu ($h|_{bD} = 0$), ter opazujmo družino funkcij $\{f + sh; \ s \in \R \}$.
-Izbrana $f$ je stacionarna točka funkcionala $\text{Area}$ natanko tedaj, ko za poljubno funkcijo $h$ (z zgornjimi lastnostmi) velja
+Izbrana funkcija $f$ je stacionarna točka funkcionala $\text{Area}$ natanko tedaj, ko za poljubno funkcijo $h$ (z zgornjimi lastnostmi) velja
 \begin{equation} \label{eq:stac-area(f+sh)}
 \frac{d}{ds} \Big|_{s=0} \text{Area}(f+sh) = 0.
 \end{equation}
@@ -689,7 +689,7 @@ Pišimo $F_{s}(x,y) = F(x,y,s)$ in razvijmo do 1.~reda. Dobimo
 F_{s}(x,y) &= F(x,y,0) + s \frac{\partial}{\partial s} \Big|_{s=0}F_{s}(x,y) + O(s^2) \\
 	&= f(x,y) + s h(x,y) + O(s^2),
 \end{align*}
-pri čemer smo v drugi enakosti vpeljali $h(x,y)= \frac{\partial}{\partial s} \big|_{s=0}F_{s}(x,y)$. Tedaj je
+kjer smo v drugi enakosti vpeljali $h(x,y)= \frac{\partial}{\partial s} \big|_{s=0}F_{s}(x,y)$. Tedaj je
 \begin{gather*}
 \frac{d}{ds} \Big|_{s=0} \text{Area}(F_{s}) = \frac{d}{ds} \Big|_{s=0} \text{Area}(f+sh),
 \end{gather*}
@@ -725,8 +725,8 @@ Poglejmo si še splošno situacijo, ki jo bomo rešili s pomočjo posebnega prim
 R(N) = (0,0,1), \quad R(T_{(0,0)}S) = \R^2 \times \{0\}.
 \end{gather*}
 Opazujmo graf $S$ v okolici točke $(0,0)$ (in to zožitev imenujmo kar $S$).
-Njegova slika $\widetilde{S} = R(S)$ je graf $z=\tilde{f}(x,y)$ funkcije $\tilde{f}$ s kritično točko $(0,0)$. Naj bo $h$ funkcija razreda $\mathcal{C}^{1}$ z nosilcem v okolici $U \subset \R^2$ točke $(0,0) \in \R^2$ in naj $\{ \widetilde{S}_{s}; \ s \in \R \}$ označuje družino grafov, ki pripadajo deformacijam $s \mapsto \tilde{f}+sh$ grafa $\widetilde{S} = \widetilde{S}_{0}$ v smeri vektorja $(0,0,1)$.
-Inverzna preslikava $R^{-1}$, ki je prav tako ortogonalna rotacija v $\R^3$, družino $\{ \widetilde{S}_{s}; \ s \in \R \}$ preslika v družino $\{ S_{s}; \ s \in \R \}$ deformacij grafa $S$ v smeri vektorja $N$ z nosilcem v okolici točke $(0,0) \in \R^2$. \newline
+Njegova slika $\widetilde{S} = R(S)$ je graf $z=\tilde{f}(x,y)$ funkcije $\tilde{f}$ razreda $\mathcal{C}^2$ s kritično točko $(0,0)$. Naj bo $h$ funkcija razreda $\mathcal{C}^{1}$ z nosilcem v okolici $U \subset \R^2$ točke $(0,0) \in \R^2$ in naj $\{ \widetilde{S}_{s}; \ s \in \R \}$ označuje družino grafov, ki pripadajo deformacijam $s \mapsto \tilde{f}+sh$ grafa $\widetilde{S} = \widetilde{S}_{0}$ v smeri vektorja $(0,0,1)$.
+Inverzna preslikava $R^{-1}$, ki je prav tako ortogonalna rotacija v $\R^3$, družino grafov $\{ \widetilde{S}_{s}; \ s \in \R \}$ preslika v družino $\{ S_{s}; \ s \in \R \}$ deformacij grafa $S$ v smeri vektorja $N$ z nosilcem v okolici točke $(0,0) \in \R^2$. \newline
 Če funkcija $f$ reši enačbo za minimalne grafe, tj.~je $f$ minimalni graf, kar pomeni, da velja $\frac{d}{ds} \big|_{s=0} \text{Area}(S_{s})=0$, iz ortogonalnosti rotacije $R$ sledi $\frac{d}{ds} \big|_{s=0} \text{Area}(\tilde{f}+sh)=0$ za vse funkcije $h$ kot zgoraj. Torej je $\widetilde{S}$ minimalni graf v okolici točke $(0,0)$. Po prvem delu dokaza je to ekvivalentno pogoju $\textup{\textbf{H}}_{\widetilde{S}}(0,0) = 0$. Ker je rotacija $R$ ortogonalna, tedaj tudi za prasliko $S = R^{-1}(\widetilde{S})$ velja $\textup{\textbf{H}}_{S}(0,0) = 0$. \newline
 Obraten razmislek, ki ob predpostavki $\textup{\textbf{H}}_{S}(0,0) = 0$ implicira minimalnost grafa $f$, je povsem analogen.
 \end{dokaz}
@@ -1222,6 +1222,14 @@ in določa minimalno ploskev, imenovano \emph{Enneperjeva ploskev}, ki jo je l.~
 \begin{equation}
 x(u,v) = \left( \frac{u}{3} \left(3(1+v^2) - u^2 \right), \frac{v}{3} \left( v^2 - 3(1+u^2) \right), u^2 - v^2 \right).
 \end{equation}
+
+% slika Enneperjeve ploskve
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.8]{images/enneper-surface.pdf}
+\caption{Enneperjeva minimalna ploskev.}
+\end{center}
+\end{figure}
 
 Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskve enaka $\mathfrak{g}(z) = z$, zato ima le-ta podobno kot katenoida totalno Gaussovo ukrivljenost enako $-4 \pi$. Izkaže se, da sta to edini kompletni\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{kompletna}.} neravni orientabilni minimalni ploskvi vloženi v $\mathbb{R}^3$, katerih totalna Gaussova ukrivljenost znaša $-4 \pi$. Poleg tega je Enneperjeva ploskev konjugirana sama sebi.
 
