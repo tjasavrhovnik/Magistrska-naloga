@@ -702,7 +702,7 @@ Zaključimo, da je graf minimalen natanko tedaj, ko je minimalen v okolici vsake
 \end{opomba}
 
 % Trditev: geometrijska interpretacija minimalnih grafov
-\begin{trditev} \label{trd:min-graf-H=0}
+\begin{trditev} [Meusnier, 1776] \label{trd:min-graf-H=0}
 Naj bo $D \subset \R^2$ domena. Funkcija $f \colon D \to \R$ razreda $\mathcal{C}^2$ reši enačbo za minimalne grafe
 \begin{gather*}
 f_{xx}(1+f_{y}^2) - 2f_{x}f_{y}f_{xy} + f_{yy}(1+f_{x}^2) = 0
@@ -869,8 +869,8 @@ Naj bodo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n 
 %
 Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema, katerega moramo najprej natančno formulirati.
 
-Označimo z $\bar{\mathbb{D}}$ zaprt enotski disk z lokalnimi koordinatami $(u_{1}, u_{2})$ in izberimo gladko orientirano Jordanovo krivuljo $\Gamma \subset \mathbb{R}^{n}$.
-Naj bo $x \colon \bar{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, katere zožitev na rob diska $\mathbb{T}$ je monotona\footnote{Pravimo, da je zvezna preslikava $f \colon \mathbb{T} \to \Gamma$ \emph{monotona}, če je praslika $f^{-1}(x)$ povezana za vsak $x \in \Gamma$.} parametrizacija $x|_{\mathbb{T}} \colon \mathbb{T} \to \Gamma$ Jordanove krivulje $\Gamma$.
+Označimo z $\overline{\mathbb{D}}$ zaprt enotski disk z lokalnimi koordinatami $(u_{1}, u_{2})$ in izberimo gladko orientirano Jordanovo krivuljo $\Gamma \subset \mathbb{R}^{n}$.
+Naj bo $x \colon \overline{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, katere zožitev na rob diska $\mathbb{T}$ je monotona\footnote{Pravimo, da je zvezna preslikava $f \colon \mathbb{T} \to \Gamma$ \emph{monotona}, če je praslika $f^{-1}(x)$ povezana za vsak $x \in \Gamma$.} parametrizacija $x|_{\mathbb{T}} \colon \mathbb{T} \to \Gamma$ Jordanove krivulje $\Gamma$.
 Spomnimo se, da je površina ploskve, določene z imerzijo $x$ enaka
 \begin{equation} \label{eq:area}
 \text{Area}(x) = \int_{\mathbb{D}} \sqrt{|x_{u_1}|^2 |x_{u_2}|^2 - |x_{u_1} \cdot x_{u_2}|^2} du_{1}du_{2}.
@@ -903,6 +903,14 @@ J.~Douglas in T.~Rad\'o sta l.~1932 dokazala, da vsaka Jordanova krivulja v $\ma
 
 \begin{opomba}
 Analog minimalnih ploskev v enorazsežnem primeru so geodetke. Z minimizacijo enorazsežnega energijskega integrala dobimo krivulje z minimalno dolžino, ki so poleg tega parametrizirane z večkratnikom ločne dolžine. 
+\end{opomba}
+
+\begin{opomba} % citiraj [Osserman: Theorem 7.1 & Remarks, Appendix 3 (p. 143)]
+Fundamentalni rezultat o obstoju minimalnih ploskev s predpisanim robom je izrek, % citiraj [Osserman, Theorem 7.1]
+ki pravi, da za poljubno Jordanovo krivuljo $\Gamma$ v $\R^{n}$ obstaja enostavno povezana posplošena minimalna ploskev z robom $\Gamma$. 
+Natančneje, izrek trdi, da obstaja zvezna preslikava $x \colon \overline{\mathbb{D}} \to \R^{n}$, katere zožitev na notranjost $x|_{\mathbb{D}}$ določa minimalno ploskev, zožitev na rob $x|_{b\mathbb{D}}$ pa je homeomorfizem na krivuljo $\Gamma$.
+\newline
+Prvoten pristop k reševanju Plateaujevega problema je vprašanje, ali obstaja regularna\footnote{Regularnost ploskve $M$ pomeni, da so vse točke $x \in M$ regularne.} enostavno povezana minimalna ploskev, ki jo omejuje poljubna Jordanova krivulja $\Gamma \subset \R^{n}$. V tej obliki je problem za splošen $n$ še vedno nerešen.
 \end{opomba}
 
 %%%%%%%%%%%%%%%
