@@ -864,7 +864,7 @@ Naj bodo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n 
 \end{lema}
 
 %%%%%%%%%%%%%%%
-% Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, Minimal surfaces for undergraduates 6.3]
+% Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, p. 56; Minimal surfaces for undergraduates 6.3]
 \subsubsection{Plateaujev problem in Dirichletov energijski integral}
 %
 Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema, katerega moramo najprej natančno formulirati.
@@ -899,7 +899,7 @@ Preslikava $x$ je konformna natanko tedaj, ko velja $|x_{u_1}| = |x_{u_2}| > 0$ 
 \end{dokaz}
 
 Preslikava, ki minimizira Dirichletov energijski integral, minimizira tudi površino, je konformna, in parametrizira minimalno ploskev z robom $\Gamma$.
-J.~Douglas in T.~Rad\'o sta l.~1932 dokazala, da vsaka Jordanova krivulja v $\mathbb{R}^3$ določa minimalno ploskev.
+J.~Douglas in T.~Rad\'o sta l.~1932 dokazala, da vsaka Jordanova krivulja v $\mathbb{R}^3$ določa minimalno ploskev. % citiraj [Lawson, Theorem 7]
 
 \begin{opomba}
 Analog minimalnih ploskev v enorazsežnem primeru so geodetke. Z minimizacijo enorazsežnega energijskega integrala dobimo krivulje z minimalno dolžino, ki so poleg tega parametrizirane z večkratnikom ločne dolžine. 
@@ -1563,7 +1563,7 @@ Induktivno nadaljujemo postopek tako, da višamo razsežnost prostora $\Sigma(f)
 
 % 2. korak
 2.~korak: Novo preslikavo $g$ iz 1.~koraka preimenujmo v $f$. Ta je polna in zato neravna.
-Lema~\ref{lema:Runge-hom-baza} pove, da povezana dopustna množica $S$ premore končno bazo homologije, sestavljeno iz posebnih Jordanovih krivulj. Skupaj z Lemo~\ref{lema:P-D-sprej} in Opombo~\ref{op:PDS-globalno} tako dobimo periodno dominantni sprej $\Phi_{f} \colon S \times \mathbb{C}^{N} \to \textbf{\textup{A}}_{*}$ z jedrom $f$.
+Uporabimo Lemo~\ref{lema:P-D-sprej} in Opombo~\ref{op:PDS-globalno}, da dobimo periodno dominantni sprej $\Phi_{f} \colon S \times \mathbb{C}^{N} \to \textbf{\textup{A}}_{*}$ z jedrom $f$.
 
 Po predpostavki je $S$ Rungejeva podmnožica $M$, iz Primera~\ref{primer-oka} pa vemo, da je kvadrika $\textbf{\textup{A}}_{*}$ Oka mnogoterost.
 Izreka Rungeja in Mergelyana o aproksimaciji in interpolaciji preslikav v Oka mnogoterosti zagotavljata obstoj holomorfne preslikave $\tilde{f} \colon M \to \textbf{\textup{A}}_{*}$, ki v $\mathcal{C}^{r}(S)$ aproksimira preslikavo $f$, $\tilde{f}$ se z $f$ ujema v točkah množice $A$, v točkah preseka $A \cap S^{\circ}$ pa se ujemata do danega končnega reda.
@@ -2052,7 +2052,9 @@ naj bo $M$ odprta Riemannova ploskev (ali kompaktna Riemannova ploskev z robom) 
 Če je $M$ konformno ekvivalentna $R \setminus A$, kjer je $R$ kompaktna Riemannova ploskev z robom in $A \subset R^{\circ}$ končna množica točk, preslikava $x \colon R \setminus A \to \R^{n}$ konformna minimalna imerzija, 1-formo $\partial x$ pa lahko meromorfno razširimo na $R$ s poli v točkah množice $A$, potem je preslikava $x$ kompletna s končno totalno ukrivljenostjo.
 Velja tudi obrat.
 
-Opazimo, da prvi pogoj iz zgornje definicije implicira kompletnost imerzije $x$. Res, za divergentno pot $\gamma \colon [0,1) \to S \setminus A, \ \lim_{s \to 1}\gamma(s) \in A$, ima pot $x \circ \gamma$ neskončno dolžino v $\R^{n}$. To pomeni, da je preslikava $x \colon S \setminus A \to \R^{n}$ kompletna. \newline
+To je globalen rezultat. Lokalno pa iz prvega pogoja v Definiciji~\ref{def:GCCMI-FTC} o polih 1-forme $\partial x$ v točkah množice $A$ sledi, da je totalna ukrivljenost preslikave $x$ končna na množicah $W \setminus A$ za poljubno kompaktno okolico $W$ iz drugega pogoja.
+
+Opazimo še, da prvi pogoj iz zgornje definicije implicira kompletnost imerzije $x$. Res, za divergentno pot $\gamma \colon [0,1) \to S \setminus A, \ \lim_{s \to 1}\gamma(s) \in A$, ima pot $x \circ \gamma$ neskončno dolžino v $\R^{n}$. To pomeni, da je preslikava $x \colon S \setminus A \to \R^{n}$ kompletna. \newline
 
 Do Mittag-Lefflerjevega izreka za konformne minimalne imerzije nas loči še nekaj korakov. Postopek je podoben ideji, ki nas je vodila do glavnega izreka o aproksimaciji in interpolaciji. Najprej bomo navedli in dokazali lemo o aproksimaciji in interpolaciji meromorfnih preslikav v ničelno kvadriko; ta je analogna Lemi~\ref{lema:aproks&interp-A*}.
 Iz leme sledi trditev, ki je nekritični primer Mittag-Lefflerjevega izreka, in je razširitev Trditve~\ref{trd:nekritcni-primer}.
@@ -2153,7 +2155,7 @@ Tedaj lahko vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \colon 
 
 % Mittag-Lefflerjev izrek za CMI
 \begin{izrek} [Mittag-Lefflerjev izrek za konformne minimalne imerzije] \label{izr:ML-CMI}
-Naj bo $M$ odprta Riemannova ploskev, $A \subset M$ njena zaprta diskretna podmnožica, $U \subset M$ okolica množice $A$ in $n \geq 3$.
+Naj bo $M$ odprta Riemannova ploskev, $A \subset M$ njena zaprta diskretna podmnožica, $U \subset M$ okolica množice $A$, ki je Rungejeva v $M$, in $n \geq 3$.
 Predpostavimo, da je $x \colon U \setminus A \to \R^{n}$ konformna minimalna imerzija, pripadajočo 1-formo $\partial x$ pa lahko meromorfno razširimo na $U$ s poli v točkah množice $A$.
 Tedaj obstaja taka polna konformna minimalna imerzija $\tilde{x} \colon M \setminus A \to \R^{n}$, da je razlika $\tilde{x}-x$ harmonična na množici $A$.
 Natančneje, 1-formo $\partial \tilde{x}$ lahko meromorfno razširimo na $M$ s poli v točkah množice $A$.
@@ -2170,7 +2172,7 @@ Tedaj za poljubne $\varepsilon > 0$, zaprto diskretno podmnožico $\Lambda$, za 
 Prvi del izreka se zdi pričakovan kot nadaljevanje običajnega Mittag-Lefflerjevega izreka, le da tokrat govorimo o preslikavah (konformnih minimalnih imerzijah) iz odprtih Riemannovih ploskev.
 
 Spomnimo se, da je družina podmnožic $\mathcal{F}$ topološkega prostora $X$ \emph{lokalno končna} družina, kadar vsaka točka $p \in X$ premore okolico $U_{p} \subset X$, ki seka končno mnogo množic iz $\mathcal{F}$.
-Ker je unija $U$ v drugem delu zgornjega izreka po predpostavki lokalno končna, obstaja zaporedje povezanih kompaktnih domen z gladkim robom
+Ker je unija $U$ v drugem delu zgornjega izreka po predpostavki lokalno končna, obstaja zaporedje povezanih Rungejevih kompaktnih domen z gladkim robom
 \begin{gather*}
 M_{0} \Subset M_{1} \Subset \dots \Subset \bigcup_{i \geq 0} M_{i}=M,
 \end{gather*}
@@ -2232,6 +2234,12 @@ V tretjem primeru opomnimo naslednje. Naj bo $\gamma \colon [0,1) \to M \setminu
 \end{itemize}
 Dokaz četrtega primera je analogen tretjemu.
 \end{dokaz}
+
+Direktna posledica Izreka~\ref{izr:kompletnost} pravi naslednje.
+
+\begin{posledica}
+Vsaka odprta Riemannova ploskev je kompleksna struktura kompletne minimalne ploskve v $\R^{n}$.
+\end{posledica}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
