@@ -1242,10 +1242,10 @@ x(u,v) = \left( \frac{u}{3} \left(3(1+v^2) - u^2 \right), \frac{v}{3} \left( v^2
 Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskve enaka $\mathfrak{g}(z) = z$, zato ima le-ta podobno kot katenoida totalno Gaussovo ukrivljenost enako $-4 \pi$. Izkaže se, da sta to edini kompletni\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{kompletna}.} neravni orientabilni minimalni ploskvi vloženi v $\mathbb{R}^3$, katerih totalna Gaussova ukrivljenost znaša $-4 \pi$. Poleg tega je Enneperjeva ploskev konjugirana sama sebi.
 
 %%%%%%%%%%%%%%%
-% Hennebergova ploskev
-\subsubsection{Hennebergova ploskev}
+% Neorientabilna primera
+\subsubsection{Neorientabilna primera}
 %
-E.~L.~Henneberg je leta 1875 odkril prvo minimalno neorientabilno ploskev v $\R^3$, ki jo imenujemo Hennebergova ploskev.
+E.~L.~Henneberg je leta 1875 odkril prvo minimalno neorientabilno ploskev v $\R^3$, ki jo imenujemo \emph{Hennebergova ploskev}.
 Opisuje jo parametrizacija
 %
 \begin{equation}
@@ -1255,7 +1255,7 @@ y(u,v) = 2 \sinh(u) \sin(v) + \frac{2}{3} \sinh(3u) \sin(3v) \\
 z(u,v) = 2 \cosh(2u) \cos(2v)
 \end{cases}
 \end{equation}
-in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gaussova ukrivljenost je enaka $-2 \pi$.
+in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gaussova ukrivljenost je enaka $-2 \pi$ in ima dve singularni točki.
 
 % slika Hennebergove ploskve
 \begin{figure}[h!]
@@ -1264,6 +1264,19 @@ in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gau
 \caption{Hennebergova ploskev je prva odkrita neorientabilna minimalna ploskev.}
 \end{center}
 \end{figure}
+
+Znano je, da je vsaka neorientabilna minimalna ploskev $S$, ki nastane z imerzijo v prostor $\R^{n}$, slika 2-listne konformne minimalne imerzije $x \colon M \to S \subset \R^{n}$, kjer je $M$ Riemannova ploskev. % citiraj [Section 2.4]
+Harmonična preslikava $x \colon \C^{*} \to \R^{3}$ s predpisom
+\begin{equation*}
+x(\zeta) = \Re \int_{1}^{\zeta} \left( \frac{z-1}{z^2(z+1)} - \frac{z^2(z+1)}{z-1}, i \left( \frac{z^2(z+1)}{z-1} + \frac{z-1}{z^2(z+1)} \right), 2 \right) \frac{i(z^2-1)}{2z^2} dz
+\end{equation*}
+definira orientabilen 2-listni krov neorientabilne minimalne ploskve, imenovane \emph{Meeksov minimalni M\"obiusov trak}. Odkril ga je W.~H.~Meeks leta 1981 in velja za prvi primer neorientabilne minimalne ploskve, ki je prava imerzija v $\R^{3}$. \newline
+Kompleksna Gaussova preslikava imerzije $x$ je enaka
+\begin{gather*}
+\mathfrak{g}(z) = \frac{z^2(z+1)}{z-1}, \quad z \in \mathbb{CP}^1,
+\end{gather*}
+ki je stopnje $3$. Totalna Gaussova ukrivljenost preslikave $x$ zato znaša $-12 \pi$ in je dvakratnik totalne Gaussove ukrivljenosti Meeksovega minimalnega M\"obiusovega traku, ki je torej enaka $-6 \pi$.
+Medkompletnimi neorientabilnimi minimalnimi ploskvami, ki so slike imerzij v $\R^3$, je to edina ploskev z absolutno vrednostjo totalne Gaussove ukrivljenosti, manjšo od $8 \pi$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1491,7 +1504,7 @@ Definirajmo preslikavo $\Phi_{f} \colon S \times U \to \textbf{\textup{A}}_{*}$ 
 % interpolacijski del leme
 Sedaj poglejmo še interpolacijski del leme. Naj bo $P \subset S$ končna podmnožica in $q \in \mathbb{N}$ izbrano fiksno število. Vzemimo holomorfno funkcijo $h \colon S \to \mathbb{C}$, ki ima ničle natanko v točkah množice $P$, le-te pa so reda $q+1$. Kot prej obstajajo točke $p_{i,j} \in I_{i} \setminus P$, holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$ ter gladke preslikave $g_{i,j}$ s kompaktnimi nosilci okrog točk $p_{i,j}$. V predpisu~\eqref{predpis-Phi} najprej nadomestimo $g_{i,j}$ s preslikavami $h \cdot g_{i,j}$, da dobimo preslikavo $\Phi$, ki zadošča analogu k~\eqref{eq:dP/dt}. Nato preslikave $g_{i,j}$ aproksimiramo z $\tilde{g}_{i,j} \in \mathcal{O}(S)$ ter v predpis~\eqref{predpis-Phi} vstavimo produkte $h \cdot \tilde{g}_{i,j}$ -- nova preslikava $\Phi_{f}$ definira periodno dominantni sprej, ki dodatno zadošča interpolacijskim zahtevam.
 Res, preslikava $(p,t) \mapsto \Phi_{h(p) \tilde{g}_{m,j}(p) t}^{m,j} (f(p))$ se z $f$ ujema v točkah množice $P$, v točkah $p \in P \cap S^{\circ}$ pa se ujemata do reda $q$. (To vidimo tako, da tok vektorskega polja zapišemo s Taylorjevim razvojem do 2.~reda in upoštevamo stopnje ničel funkcije $h$ v točkah $p \in P$.) Zato enako velja tudi za njihov kompozitum.
-% Zadnji del - CITIRAJ VIR 12, Lemma 2.2
+% Zadnji del - CITIRAJ [1701.04379.pdf, Lemma 2.2]
 
 Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ dana, potem lahko za vse preslikave $f$ iz okolice $\Omega \subset \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ za $f_{0}$ pri konstrukciji periodno dominantnih sprejev uporabimo iste aproksimacijske preslikave $\tilde{g}_{i,j}$.
 \end{dokaz}
