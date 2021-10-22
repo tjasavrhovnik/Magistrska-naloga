@@ -1212,6 +1212,27 @@ O helikoidu sta prva pisala L.~Euler in J.~B.~Meusnier v 80.-ih letih 18.~stolet
 Prvo lastnost kot minimalni ploskvi v $\mathbb{R}^3$ premoreta le helikoid in ravnina, kar je l.~1842 dokazal E.~C.~Catalan. Druga lastnost namiguje na izvor imena -- helikoid spominja na latinsko besedo ``helix'', kar v slovenščini imenujemo vijačnica.
 
 %%%%%%%%%%%%%%%
+% Scherkovi minimalni ploskvi
+\subsubsection{Scherkovi minimalni ploskvi}
+% 
+Po drugi polovici 18.~stoletja je bil H.~Scherk prvi, ki je leta 1835 odkril dva nova primera -- prvo in drugo Scherkovo minimalno ploskev. 
+\emph{Prvo Scherkovo ploskev} opisuje implicitna enačba
+\begin{gather}
+e^{z} \cos(y) = \cos(x), \quad (x,y,z) \in \R^3.
+\end{gather}
+Iz enačbe vidimo, da je ploskev invariantna za translacije $(x,y,z) \mapsto (x+2\pi,y,z)$ ter $(x,y,z) \mapsto (x,y+2\pi,z)$.
+Če opazujemo graf funkcije $z = \log \left(\frac{\cos(x)}{\cos(y)} \right)$ nad domeno $(x,y) \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)^2$, opazimo asimptote:
+\begin{itemize}
+\item ko gre $(x,y) \to \left( \pm \frac{\pi}{2}, y \right)$ za $|y| < \frac{\pi}{2}$, gre $z \to +\infty$;
+\item ko gre $(x,y) \to \left( x, \pm \frac{\pi}{2} \right)$ za $|x| < \frac{\pi}{2}$, gre $z \to -\infty$.
+\end{itemize}
+Prva Scherkova ploskev je kompletna\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{kompletna}.}. 
+Njej konjugirana minimalna ploskev se imenuje \emph{druga Scherkova ploskev} z implicitno enačbo
+\begin{gather}
+\sin(z) = \sinh(x) \sinh(y).
+\end{gather}
+
+%%%%%%%%%%%%%%%
 % Enneperjeva ploskev
 \subsubsection{Enneperjeva ploskev}
 %
@@ -1239,7 +1260,7 @@ x(u,v) = \left( \frac{u}{3} \left(3(1+v^2) - u^2 \right), \frac{v}{3} \left( v^2
 \end{center}
 \end{figure}
 
-Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskve enaka $\mathfrak{g}(z) = z$, zato ima le-ta podobno kot katenoida totalno Gaussovo ukrivljenost enako $-4 \pi$. Izkaže se, da sta to edini kompletni\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{kompletna}.} neravni orientabilni minimalni ploskvi vloženi v $\mathbb{R}^3$, katerih totalna Gaussova ukrivljenost znaša $-4 \pi$. Poleg tega je Enneperjeva ploskev konjugirana sama sebi.
+Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskve enaka $\mathfrak{g}(z) = z$, zato ima le-ta podobno kot katenoida totalno Gaussovo ukrivljenost enako $-4 \pi$. Izkaže se, da sta to edini kompletni neravni orientabilni minimalni ploskvi vloženi v $\mathbb{R}^3$, katerih totalna Gaussova ukrivljenost znaša $-4 \pi$. Poleg tega je Enneperjeva ploskev konjugirana sama sebi.
 
 %%%%%%%%%%%%%%%
 % Neorientabilna primera
@@ -1255,7 +1276,7 @@ y(u,v) = 2 \sinh(u) \sin(v) + \frac{2}{3} \sinh(3u) \sin(3v) \\
 z(u,v) = 2 \cosh(2u) \cos(2v)
 \end{cases}
 \end{equation}
-in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gaussova ukrivljenost je enaka $-2 \pi$ in ima dve singularni točki.
+in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gaussova ukrivljenost je enaka $-2 \pi$, je kompletna in ima dve singularni točki.
 
 % slika Hennebergove ploskve
 \begin{figure}[h!]
@@ -1276,7 +1297,7 @@ Kompleksna Gaussova preslikava imerzije $x$ je enaka
 \mathfrak{g}(z) = \frac{z^2(z+1)}{z-1}, \quad z \in \mathbb{CP}^1,
 \end{gather*}
 ki je stopnje $3$. Totalna Gaussova ukrivljenost preslikave $x$ zato znaša $-12 \pi$ in je dvakratnik totalne Gaussove ukrivljenosti Meeksovega minimalnega M\"obiusovega traku, ki je torej enaka $-6 \pi$.
-Medkompletnimi neorientabilnimi minimalnimi ploskvami, ki so slike imerzij v $\R^3$, je to edina ploskev z absolutno vrednostjo totalne Gaussove ukrivljenosti, manjšo od $8 \pi$.
+Med kompletnimi neorientabilnimi minimalnimi ploskvami, ki so slike imerzij v $\R^3$, je to edina ploskev z absolutno vrednostjo totalne Gaussove ukrivljenosti, manjšo od $8 \pi$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
