@@ -807,7 +807,7 @@ Po zadnjem izreku je vsaka točka minimalne ploskve sedlo. Ker je $\textup{\text
 
 Gaussova ukrivljenost minimalne ploskve $x(M)=S$ je povsod nepozitivna, saj je $K = -\kappa_{1}^2 \leq 0$.
 Njen integral,
-\begin{equation}
+\begin{equation} \label{eq:TC-def}
 TC(x) = \int_{M} K dA \in [-\infty, 0],
 \end{equation} 
 imenujemo \emph{totalna Gaussova ukrivljenost}. Pri tem $dA$ označuje ploščinski element glede na Riemannovo metriko $g = x^{*}ds^2$ na Riemannovi mnogoterosti $(M,g)$.
@@ -1033,8 +1033,11 @@ Analogno, za holomorfno ničelno krivuljo $z \colon M \to \C^{n}$ pripadajočo 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Gaussova preslikava
-\subsection{Gaussova preslikava}
+\subsection{Gaussova preslikava in totalna Gaussova ukrivljenost}
 %
+%%%%%%%%%%%%%%%
+% Gaussova preslikava
+\subsubsection{Gaussova preslikava}
 V razdelku o ukrivljenosti ploskve smo pri računanju vektorja povprečne ukrivljenosti v trirazsežnem prostoru omenili Gaussovo preslikavo. Sedaj bomo formalno definirali Gaussovo preslikavo minimalne ploskve ter se ponovno osredotočili na trirazsežni primer -- izpeljali bomo klasično Weierstrassovo formulo za minimalne ploskve v prostoru $\mathbb{R}^3$.
 
 \begin{definicija}
@@ -1089,6 +1092,63 @@ Kadar je dodatno $\Phi$ brez ničel in polov na $M$ in je $\Re \int_{C} \Phi = 0
 x(p) = p_{0} + \Re \int_{p_0}^{p} \Phi = p_{0} + \Re \int_{p_0}^{p} \left( \frac{1}{2} \left(\frac{1}{\mathfrak{g}} - \mathfrak{g} \right), \frac{i}{2} \left(\frac{1}{\mathfrak{g}} + \mathfrak{g} \right), 1 \right) \phi_3,
 \end{gather}
 kjer sta $p_0 \in M$, $x_0 \in \mathbb{R}^3$ poljubni izbrani točki ter je $p \in M$ spremenljivka.
+
+%%%%%%%%%%%%%%%
+% Totalna Gaussova ukrivljenost
+\subsubsection{Totalna Gaussova ukrivljenost}
+%
+Pomembna lastnost Gaussove preslikave je njena povezava s totalno Gaussovo ukrivljenostjo (spomnimo se njene definicije, enakosti~\eqref{eq:TC-def}).
+Natančneje, totalna Gaussova ukrivljenost konformne minimalne imerzije $x \colon M \to \R^{n}$je enaka
+\begin{gather}
+TC(x) = \int_{M} KdA = -\frac{1}{2} \text{Area}(\mathcal{G}(M)),
+\end{gather} 
+kjer je $\mathcal{G} \colon M \to \mathbb{CP}^{n-1}$ Gaussova preslikava imerzije $x$, površino kompleksne krivulje $\mathcal{G}(M) \subset \mathbb{CP}^{n-1}$ pa štejemo z večkratnostjo.
+Za minimalne ploskve v $\R^{3}$, podane s preslikavo $x \colon M \to \R^3$ pa velja še
+\begin{gather}
+TC(x) = - \text{Area}(\mathfrak{g}(M)),
+\end{gather}
+kjer je $\mathfrak{g} \colon M \to \mathbb{CP}^1$ kompleksna Gaussova preslikava in površino štejemo z večkratnostjo.
+
+Podrobneje si oglejmo minimalne ploskve s končno totalno Gaussovo ukrivljenostjo. Za začetek odmislimo minimalnost -- naj bo $x \colon M \to \R^{n}$ konformna imerzija in $g$ metrika na $M$ (ki ne pripada nujno minimalni ploskvi). Po \emph{Gauss theorema egregium} je Gaussova ukrivljenost $K$ odvisna le od metrike $g$ in je lahko poljubnega predznaka. Definirajmo
+\begin{gather*}
+K^{-} = \min \{K,0 \} \colon M \to (-\infty, 0].
+\end{gather*}
+Izrek A.~Huberja [...] % citiraj [Theorem 2.6.4]
+pove: če je $(M,g)$ kompletna orientabilna minimalna Riemannova ploskev in $\int_{M} K^{-}dA > -\infty$, potem je $M$ konformno ekvivalentna komplementu končno mnogo točk v kompaktni Riemannovi ploskvi. \newline
+Posledice Huberjevega izreka nam povedo več o totalni Gaussovi ukrivljenosti.
+Spoznajmo še naslednji pojem: naj bo $x \colon M \to \R^{n}$ konformna minimalna imerzija in Riemannova ploskev $M$ konformno ekvivalentna kompaktni Riemannovi ploskvi $\overline{M}$, punktirani v končni množici točk. 
+Če pripadajočo posplošeno Gaussovo preslikavo $\mathcal{G} \colon M \to \textup{\textbf{Q}}^{n-2}$ lahko razširimo do holomorfne preslikave $\mathcal{G} \colon \overline{M} \to \textup{\textbf{Q}}^{n-2}$, oziroma, če za $n=3$ obstaja razširitev kompleksne Gaussove preslikave $\mathfrak{g} \colon M \to \mathbb{CP}^1$ do holomorfne preslikave $\mathfrak{g} \colon \overline{M} \to \mathbb{CP}^1$, tedaj pravimo, da je $\mathcal{G}$, oziroma $\mathfrak{g}$, \emph{algebraična}.
+
+Konformne minimalne imerzije $x \colon M \to \R^{n}$ z algebraično Gaussovo preslikavo $\mathcal{G} \colon M \to \mathbb{CP}^{n-1}$ imajo končno totalno Gaussovo ukrivljenost, ki je enaka
+\begin{gather}
+TC(x) = -2\pi \deg(\mathcal{G}).
+\end{gather}
+V primeru $n=3$ velja
+\begin{gather}
+TC(x) = -4\pi \deg(\mathfrak{g}).
+\end{gather}
+Tu $\deg$ označuje stopnjo (kompleksne) Gaussove preslikave. Opomnimo, da koeficienta $2\pi$ oziroma $4\pi$ nista naključna; izhajata iz zveze $\text{Area}(\mathbb{CP}^1) = 4\pi$.
+
+Obrat zgornjega rezultata za kompletne minimalne ploskve je znameniti izrek S.~S.~Cherna in R.~Ossermana iz l.~1967 [...]. % citiraj [Theorem 2.6.7]
+Navedimo njegovo posledico.
+
+\begin{trditev}
+Naj bo $x \colon M \to \R^{n}$ kompletna minimalna imerzija in $S = x(M)$ orientabilna ploskev s končno totalno Gaussovo ukrivljenostjo. Tedaj velja:
+\begin{enumerate}
+\item če je $n=3$, je $TC(S) = -4\pi d$ za neko število $d \in \Z_{+}$;
+\item če je $n \geq 4$, je $TC(S) = -2\pi d$ za neko število $d \in \Z_{+}$.
+\end{enumerate}
+\end{trditev}
+
+\begin{opomba}
+Z ustrezno predpisanimi Weierstrassovimi podatki lahko v trditvi dosežemo poljubno nenegativno celo število $d \in \Z_{+}$.
+V primeru $d=0$ dobimo ravnino.
+\end{opomba}
+
+\begin{opomba}
+Znano je [...], % citiraj [Theorem 5.4.1]
+da je vsaka holomorfna preslikava $M \to \mathbb{CP}^1$ kompleksna Gaussova preslikava neke konformne minimalne imerzije $M \to \R^3$, kar pomeni, da je vsako celo število z intervala $[-\infty, 0]$ vrednost totalne Gaussove ukrivljenosti neke minimalne ploskve v prostoru $\R^3$.
+\end{opomba}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Primeri minimlanih ploskev
