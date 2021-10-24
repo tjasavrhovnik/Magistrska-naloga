@@ -259,7 +259,7 @@ Naj bo $M$ gladka mnogoterost in $\mathcal{U}$ pripadajoč gladek atlas. Lokalni
 
 Definirati želimo še tangentni prostor mnogoterosti. Naj bo $M$ gladka mnogoterost in izberimo atlas $\mathcal{U} = \{ (U_{i}, \phi_{i}) ; \ i \in I \}$ na njej. Naj bo točka $p \in U_{i} \subset M$ za nek indeks $i$.  Gladki krivulji\footnote{Krivulja $\gamma_{j}$ je gladka, če je preslikava $ \phi_{i} \circ \gamma_{j} \colon (-\varepsilon, \varepsilon) \to \mathbb{R}^{n}$, $j=1,2,$ gladka v običajnem smislu.} 
 $\gamma_{1}, \gamma_{2} \colon (-\varepsilon, \varepsilon) \to M$ sta \emph{ekvivalentni}, če izpolnjujeta pogoja
-$\gamma_{1}(0) = \gamma_{2}(0) = p$ in $ \frac{d}{dt}|_{t=0} \phi_{i}(\gamma_{1}(t)) =  \frac{d}{dt}|_{t=0} \phi_{i}(\gamma_{2}(t))$ za vse $t \in (-\varepsilon, \varepsilon)$. Ekvivalenco krivulj označimo z $\gamma_{1} \sim \gamma_{2}$\footnote{Relacija $\sim$ je ekvivalenčna relacija.}.
+$\gamma_{1}(0) = \gamma_{2}(0) = p$ in $ \frac{d}{dt} \big|_{t=0} \phi_{i}(\gamma_{1}(t)) =  \frac{d}{dt} \big|_{t=0} \phi_{i}(\gamma_{2}(t))$ za vse $t \in (-\varepsilon, \varepsilon)$. Ekvivalenco krivulj označimo z $\gamma_{1} \sim \gamma_{2}$\footnote{Relacija $\sim$ je ekvivalenčna relacija.}.
 
 \begin{definicija}
 Naj bo $M$ mnogoterost in $p \in M$ točka na njej. \emph{Tangentni vektor} $v_{p}$ na $M$ v točki $p$ ustreza ekvivalenčnemu razredu $[\gamma]$ krivulje $\gamma \colon (-\varepsilon, \varepsilon) \to M$, za katero velja $\gamma (0) = p$.
@@ -547,13 +547,13 @@ y(p) = \int_{p_0}^{p} d^{c}x + C,
 kjer je $C$ konstanta. Imenujemo jo \emph{harmonična konjugiranka} funkcije $x$. Velja enakost $dy = d^{c}x$, nova funkcija $z \colon D \to \mathbb{C}^{n}, \ z = x+iy$, imenovana \emph{kompleksna krivulja} v $\mathbb{C}^{n}$, pa je holomorfna. Zaključimo, da je zožitev realne harmonične funkcije na enostavno povezano domeno v $M$ enaka realnemu delu holomorfne funkcije $x+iy$, pri čemer je $y$ harmonična konjugiranka od $x$, ki jo definira enakost~\eqref{eq:harmonicna-konj}.
 
 \begin{definicija} [Pretok]
-Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je homomorfizem grup $\textup{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
+Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je homomorfizem grup $\text{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
 \begin{equation} \label{eq:pretok}
-\textup{Flux}_{x} ([C]) = \int_{C} {d^{c} x}.
+\text{Flux}_{x} ([C]) = \int_{C} {d^{c} x}.
 \end{equation}
 \end{definicija}
 %
-V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi formuli odvisen le od homološkega razreda poti $C \subset M$, zato bomo v nadaljevanju pisali kar $\textup{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
+V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi formuli odvisen le od homološkega razreda poti $C \subset M$, zato bomo v nadaljevanju pisali kar $\text{Flux}_{x} (C)$. V zgornjem smislu lahko rečemo, da pretok meri, koliko 1-formi $d^{c}x$ manjka do eksaktnosti. Realna harmonična preslikava $x$ premore harmonično konjugiranko na $M$ natanko tedaj, ko je $d^{c}x$ eksaktna 1-forma na $M$, to pa je ekvivalentno pogoju $\textup{Flux}_{x}(C)=0$ za vsako sklenjeno krivuljo $C \subset M$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Aproksimacijski in interpolacijski izreki za Riemannove ploskve
@@ -1094,30 +1094,31 @@ x(p) = p_{0} + \Re \int_{p_0}^{p} \Phi = p_{0} + \Re \int_{p_0}^{p} \left( \frac
 kjer sta $p_0 \in M$, $x_0 \in \mathbb{R}^3$ poljubni izbrani točki ter je $p \in M$ spremenljivka.
 
 %%%%%%%%%%%%%%%
-% Totalna Gaussova ukrivljenost
+% Totalna Gaussova ukrivljenost [Chapter 2.6 & Undergraduates p. 20]
 \subsubsection{Totalna Gaussova ukrivljenost}
 %
 Pomembna lastnost Gaussove preslikave je njena povezava s totalno Gaussovo ukrivljenostjo (spomnimo se njene definicije, enakosti~\eqref{eq:TC-def}).
-Natančneje, totalna Gaussova ukrivljenost konformne minimalne imerzije $x \colon M \to \R^{n}$je enaka
+Natančneje, totalna Gaussova ukrivljenost konformne minimalne imerzije $x \colon M \to \R^{n}$ je enaka
 \begin{gather}
 TC(x) = \int_{M} KdA = -\frac{1}{2} \text{Area}(\mathcal{G}(M)),
 \end{gather} 
 kjer je $\mathcal{G} \colon M \to \mathbb{CP}^{n-1}$ Gaussova preslikava imerzije $x$, površino kompleksne krivulje $\mathcal{G}(M) \subset \mathbb{CP}^{n-1}$ pa štejemo z večkratnostjo.
-Za minimalne ploskve v $\R^{3}$, podane s preslikavo $x \colon M \to \R^3$ pa velja še
+Za minimalne ploskve v $\R^{3}$, podane s preslikavo $x \colon M \to \R^3$, pa velja še
 \begin{gather}
 TC(x) = - \text{Area}(\mathfrak{g}(M)),
 \end{gather}
 kjer je $\mathfrak{g} \colon M \to \mathbb{CP}^1$ kompleksna Gaussova preslikava in površino štejemo z večkratnostjo.
 
-Podrobneje si oglejmo minimalne ploskve s končno totalno Gaussovo ukrivljenostjo. Za začetek odmislimo minimalnost -- naj bo $x \colon M \to \R^{n}$ konformna imerzija in $g$ metrika na $M$ (ki ne pripada nujno minimalni ploskvi). Po \emph{Gauss theorema egregium} je Gaussova ukrivljenost $K$ odvisna le od metrike $g$ in je lahko poljubnega predznaka. Definirajmo
+Podrobneje si oglejmo minimalne ploskve s končno totalno Gaussovo ukrivljenostjo. Za začetek odmislimo minimalnost -- naj bo $x \colon M \to \R^{n}$ konformna imerzija in $g$ metrika na $M$ (ki ne pripada nujno minimalni ploskvi). Po \emph{Gaussovi theorema egregium} je Gaussova ukrivljenost, $K$, odvisna le od metrike $g$ in je lahko poljubnega predznaka. Definirajmo funkcijo
 \begin{gather*}
 K^{-} = \min \{K,0 \} \colon M \to (-\infty, 0].
 \end{gather*}
+(Za minimalne ploskve očitno velja $K^{-} = K$, saj je $K \leq 0$.)
 Izrek A.~Huberja [...] % citiraj [Theorem 2.6.4]
-pove: če je $(M,g)$ kompletna orientabilna minimalna Riemannova ploskev in $\int_{M} K^{-}dA > -\infty$, potem je $M$ konformno ekvivalentna komplementu končno mnogo točk v kompaktni Riemannovi ploskvi. \newline
+pove: če je $(M,g)$ kompletna orientabilna Riemannova ploskev in $\int_{M} K^{-}dA > -\infty$, potem je $M$ konformno ekvivalentna komplementu končno mnogo točk v kompaktni Riemannovi ploskvi. \newline
 Posledice Huberjevega izreka nam povedo več o totalni Gaussovi ukrivljenosti.
 Spoznajmo še naslednji pojem: naj bo $x \colon M \to \R^{n}$ konformna minimalna imerzija in Riemannova ploskev $M$ konformno ekvivalentna kompaktni Riemannovi ploskvi $\overline{M}$, punktirani v končni množici točk. 
-Če pripadajočo posplošeno Gaussovo preslikavo $\mathcal{G} \colon M \to \textup{\textbf{Q}}^{n-2}$ lahko razširimo do holomorfne preslikave $\mathcal{G} \colon \overline{M} \to \textup{\textbf{Q}}^{n-2}$, oziroma, če za $n=3$ obstaja razširitev kompleksne Gaussove preslikave $\mathfrak{g} \colon M \to \mathbb{CP}^1$ do holomorfne preslikave $\mathfrak{g} \colon \overline{M} \to \mathbb{CP}^1$, tedaj pravimo, da je $\mathcal{G}$, oziroma $\mathfrak{g}$, \emph{algebraična}.
+Če pripadajočo posplošeno Gaussovo preslikavo $\mathcal{G} \colon M \to \textup{\textbf{Q}}^{n-2}$ lahko razširimo do holomorfne preslikave $\mathcal{G} \colon \overline{M} \to \textup{\textbf{Q}}^{n-2}$, oziroma, če za $n=3$ obstaja razširitev kompleksne Gaussove preslikave $\mathfrak{g} \colon M \to \mathbb{CP}^1$ do holomorfne preslikave $\mathfrak{g} \colon \overline{M} \to \mathbb{CP}^1$, tedaj pravimo, da je (kompleksna) Gaussova preslikava $\mathcal{G}$, oziroma $\mathfrak{g}$, \emph{algebraična}.
 
 Konformne minimalne imerzije $x \colon M \to \R^{n}$ z algebraično Gaussovo preslikavo $\mathcal{G} \colon M \to \mathbb{CP}^{n-1}$ imajo končno totalno Gaussovo ukrivljenost, ki je enaka
 \begin{gather}
@@ -1127,9 +1128,10 @@ V primeru $n=3$ velja
 \begin{gather}
 TC(x) = -4\pi \deg(\mathfrak{g}).
 \end{gather}
-Tu $\deg$ označuje stopnjo (kompleksne) Gaussove preslikave. Opomnimo, da koeficienta $2\pi$ oziroma $4\pi$ nista naključna; izhajata iz zveze $\text{Area}(\mathbb{CP}^1) = 4\pi$.
+Tu $\deg(\cdot) \in \Z_{+}$ označuje stopnjo (kompleksne) Gaussove preslikave. Opomnimo, da koeficienta $2\pi$ oziroma $4\pi$ nista naključna; izhajata iz znane zveze $\text{Area}(\mathbb{CP}^1) = 4\pi$.
 
-Obrat zgornjega rezultata za kompletne minimalne ploskve je znameniti izrek S.~S.~Cherna in R.~Ossermana iz l.~1967 [...]. % citiraj [Theorem 2.6.7]
+Obrat zgornjega rezultata za kompletne\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{kompletna}.} 
+minimalne ploskve sta l.~1967 dokazala S.~S.~Chern in R.~Osserman [...]. % citiraj [Theorem 2.6.7]
 Navedimo njegovo posledico.
 
 \begin{trditev}
@@ -1286,7 +1288,7 @@ Iz enačbe vidimo, da je ploskev invariantna za translacije $(x,y,z) \mapsto (x+
 \item ko gre $(x,y) \to \left( \pm \frac{\pi}{2}, y \right)$ za $|y| < \frac{\pi}{2}$, gre $z \to +\infty$;
 \item ko gre $(x,y) \to \left( x, \pm \frac{\pi}{2} \right)$ za $|x| < \frac{\pi}{2}$, gre $z \to -\infty$.
 \end{itemize}
-Prva Scherkova ploskev je kompletna\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{kompletna}.}. 
+Prva Scherkova ploskev je kompletna. 
 Njej konjugirana minimalna ploskev se imenuje \emph{druga Scherkova ploskev} z implicitno enačbo
 \begin{gather}
 \sin(z) = \sinh(x) \sinh(y).
@@ -1718,7 +1720,7 @@ Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-
 Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk. Naj bosta $r, s \in \N$. Tedaj velja naslednje:
 \begin{enumerate}
 \item 
-Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in \textup{GCMI}^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\textup{Flux}_{X} = \textup{Flux}_{x}$. 
+Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in \textup{GCMI}^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\text{Flux}_{X} = \text{Flux}_{x}$. 
 \item
 Vsako posplošeno ničelno krivuljo $(z, f\theta) \in \textup{GNC}^{r}(S,\C^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi holomorfnimi ničelnimi krivuljami $Z \colon M \to \C^{n}$.
 \end{enumerate}
@@ -1744,23 +1746,23 @@ Množici točk $A$ iz predpostavke trditve dodajmo naslednje elemente:
 \item v vsaki komponenti $K_{i}$ izberimo notranjo točko $q_{i} \in K_{i}^{\circ}$, imenovano \emph{vozlišče}, in jo dodajmo v $A$;
 \item točke $a_{ij} \in \Gamma_{ij}$ (za vsak par $(i,j)$ izberemo po eno tako točko), pri čemer točki $a_{ij}$ in $q_{i}$ povežemo s takim gladkim vloženim lokom $A_{ij} \subset K_{i}^{\circ} \cup \{a_{ij}\}$, da se nastali loki med seboj ter z elementi homološke baze $\mathcal{C}$ sekajo kvečjemu v vozlišču $q_{i}$. (Opomnimo, da homološko bazo povezane komponente $K_{i}$ po konstrukciji sestavlja končno mnogo Jordanovih krivulj v $K_{i}^{\circ}$, ki se dotikajo le v vozlišču $q_{i}$, njihova unija pa je Rungejeva v $K_{i}$.)
 \end{itemize}
-Sedaj konstruirajmo družino lokov in zaprtih krivulj $\tilde{\mathcal{C}}$ v $S$ v treh korakih.
+Sedaj konstruirajmo družino lokov in zaprtih krivulj $\widetilde{\mathcal{C}}$ v $S$ v treh korakih.
 \begin{enumerate}
 \item
-	Če krivulja $C \in \mathcal{C}$ ne vsebuje elementov množice $A$ razen točke $q_{1}$, potem krivuljo $C$ dodamo v $\tilde{\mathcal{C}}$.
-	Sicer obstaja končno točk iz $A$, ki ležijo na tej krivulji. Slednjo razdelimo na tako končno unijo lokov, da so točke iz preseka $A \cap C$ skupna krajišča dveh zaporednih lokov in vse tako nastale loke dodamo v $\tilde{\mathcal{C}}$.
+	Če krivulja $C \in \mathcal{C}$ ne vsebuje elementov množice $A$ razen točke $q_{1}$, potem krivuljo $C$ dodamo v $\widetilde{\mathcal{C}}$.
+	Sicer obstaja končno točk iz $A$, ki ležijo na tej krivulji. Slednjo razdelimo na tako končno unijo lokov, da so točke iz preseka $A \cap C$ skupna krajišča dveh zaporednih lokov in vse tako nastale loke dodamo v $\widetilde{\mathcal{C}}$.
 \item
 	Če obstaja krivulja $E_{k} \subset E$, ki ni vsebovana v nobeni izmed krivulj iz prejšnje točke, potem naredimo naslednje:
-	krajišče od $E_{k}$, ki je element $K_{i}$ za nek $i$, povežemo z vozliščem $q_{i}$ tako, da gremo najprej po $bK_{i}$ do ustrezne točke $a_{ij}$ in nato po loku $A_{ij}$ do $q_{i}$. To ponovimo za obe krajišči $E_{k}$ in novonastalo krivuljo (ki povezuje dve -- morda isti -- vozlišči) razdelimo na končno zaporedje lokov s krajišči v točkah iz $A$ (kot v prejšnjem primeru). Vse te loke dodamo v $\tilde{\mathcal{C}}$.
+	krajišče od $E_{k}$, ki je element $K_{i}$ za nek $i$, povežemo z vozliščem $q_{i}$ tako, da gremo najprej po $bK_{i}$ do ustrezne točke $a_{ij}$ in nato po loku $A_{ij}$ do $q_{i}$. To ponovimo za obe krajišči $E_{k}$ in novonastalo krivuljo (ki povezuje dve -- morda isti -- vozlišči) razdelimo na končno zaporedje lokov s krajišči v točkah iz $A$ (kot v prejšnjem primeru). Vse te loke dodamo v $\widetilde{\mathcal{C}}$.
 \item
-	Označimo množico $A' = \{ a \in A; \ a \ \textrm{pripada vsaj eni krivulji iz} \ \tilde{\mathcal{C}}\}$.
+	Označimo množico $A' = \{ a \in A; \ a \ \textrm{pripada vsaj eni krivulji iz} \ \widetilde{\mathcal{C}}\}$.
 	Vsaka točka njenega komplementa, tj.~$a \in A \setminus A'$, pripada neki komponenti $K_{i} \subset K$. Opazujmo sedaj take točke.
-	Izberimo lok $\Lambda_{a} \subset K_{i}$, ki povezuje točko $a$ z vozliščem $q_{i}$ in se ne dotika niti nobene krivulje iz $\tilde{\textup{C}}$ niti loka $\Lambda_{a'}$ za $a \neq a' \in A \setminus A'$, razen v točki $q_{i}$. (Tak lok obstaja, saj je unija krivulj iz $\tilde{\mathcal{C}}$, konstruirane do sedaj, Rungejeva v $S$.) Vse nastale loke $\Lambda_{a}, \ a \in A \setminus A'$, dodamo v $\tilde{\mathcal{C}}$.
+	Izberimo lok $\Lambda_{a} \subset K_{i}$, ki povezuje točko $a$ z vozliščem $q_{i}$ in se ne dotika niti nobene krivulje iz $\widetilde{\mathcal{C}}$ niti loka $\Lambda_{a'}$ za $a \neq a' \in A \setminus A'$, razen v točki $q_{i}$. (Tak lok obstaja, saj je unija krivulj iz $\widetilde{\mathcal{C}}$, konstruirane do sedaj, Rungejeva v $S$.) Vse nastale loke $\Lambda_{a}, \ a \in A \setminus A'$, dodamo v $\widetilde{\mathcal{C}}$.
 \end{enumerate}
-Po konstrukciji je unija elementov družine $\tilde{\mathcal{C}}$ povezana Rungejeva množica v $S$, ki vsebuje bazo homologije za $S$, torej tudi za $M$. Hkrati vsaka krivulja iz te družine vsebuje netrivialen lok, ki ni vsebovan v nobeni drugi krivulji iz družine. \newline
+Po konstrukciji je unija elementov družine $\widetilde{\mathcal{C}}$ povezana Rungejeva množica v $S$, ki vsebuje bazo homologije za $S$, torej tudi za $M$. Hkrati vsaka krivulja iz te družine vsebuje netrivialen lok, ki ni vsebovan v nobeni drugi krivulji iz družine. \newline
 
 % 2. del
-Naj bo $\mathcal{P}$ periodna preslikava k družini $\tilde{\mathcal{C}}$. 
+Naj bo $\mathcal{P}$ periodna preslikava k družini $\widetilde{\mathcal{C}}$. 
 Naj bo $(x, f\theta) \in \textup{GCMI}^{r}(S, \mathbb{R}^{n})$ dana posplošena konformna minimalna imerzija. Po Lemi~\ref{lema:aproks&interp-A*} lahko preslikavo $f \in \mathcal{A}^{r-1}(S, \textup{\textbf{A}}_{*})$ v $\mathcal{C}^{r-1}(S)$ aproksimiramo s polno holomorfno preslikavo $F \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$, za katero je $\mathcal{P}(F) = \mathcal{P}(f)$, $F$ se z $f$ ujema na $A$ ter do danega končnega reda na $A \cap S^{\circ}$.
 Izberimo točko $p_0 \in A$ in definirajmo preslikavo $X \colon M \to \mathbb{R}^{n}$ s predpisom
 \begin{gather} \label{eq:X-nekrit-primer}
@@ -1768,7 +1770,7 @@ X(p) = x(p_0) + \Re \int_{p_0}^{p} F\theta, \quad p \in M.
 \end{gather}
 Zaradi lastnosti $\mathcal{P}(F) = \mathcal{P}(f)$ je preslikava $X$ dobro definirana in po konstrukciji konformna minimalna imerzija. 
 Polnost imerzije $X$ sledi iz polnosti preslikave $F$.
-Nadalje je $\textup{Flux}_{X} = \textup{Flux}_{x}$. Res, ker $\tilde{\mathcal{C}}$ vsebuje bazo homologije za $S$, ima $F$ ničelne realne periode po krivuljah iz homološke baze. Skupaj z definicijo preslikave $X$ in enakostjo periodnih preslikav za $F$ in $f$ sledi enakost pretokov.
+Nadalje je $\text{Flux}_{X} = \text{Flux}_{x}$. Res, ker $\widetilde{\mathcal{C}}$ vsebuje bazo homologije za $S$, ima $F$ ničelne realne periode po krivuljah iz homološke baze. Skupaj z definicijo preslikave $X$ in enakostjo periodnih preslikav za $F$ in $f$ sledi enakost pretokov.
 
 Dejstvo, da $X$ aproksimira $x$ v $\mathcal{C}^{r}(S)$ drži, saj za $p \in S$ integral~\eqref{eq:X-nekrit-primer} računamo po poti med $p_0 \in A \subset S$ in $p \in S$, ki v celoti leži v $S$.
 
@@ -1779,7 +1781,7 @@ Z(p) = z(p_0) + \int_{p_0}^{p} F\theta, \quad p \in M,
 ki je polna holomorfna ničelna krivulja in aproksimira $z$ v $\mathcal{C}^{r}(S)$.
 
 Poglejmo še interpolacijski del.
-Če izberemo $p \in A$, potem integrala~\eqref{eq:X-nekrit-primer} in~\eqref{eq:Z-nekrit-primer} računamo po uniji krivulj iz družine $\tilde{\mathcal{C}}$, ki povezuje točki $p_0, p \in A$.
+Če izberemo $p \in A$, potem integrala~\eqref{eq:X-nekrit-primer} in~\eqref{eq:Z-nekrit-primer} računamo po uniji krivulj iz družine $\widetilde{\mathcal{C}}$, ki povezuje točki $p_0, p \in A$.
 Enakosti $X(p) = x(p)$ ter $Z(p) = z(p)$ sledita iz predpisov preslikav ter enakosti periodnih preslikav funkcij.
 Ujemanje do danega končnega reda na množici $A \cap S^{\circ}$ pa je posledica ujemanja funkcij $F$ in $f$ do danega reda na tej isti množici.
 \end{dokaz}
@@ -1868,7 +1870,7 @@ Naj bo $U \subset \mathbb{R}^{n}$ domena s koordinatami $x = (x_{1}, \dots , x_{
 Spomnimo se, da je točka $x \in U$ \emph{kritična točka} funkcije $f$, če je $\nabla f(x) = 0$. Točka, ki ni kritična, je \emph{regularna}.
 Slike kritičnih točk imenujemo \emph{kritične vrednosti}, medtem ko so vse preostala realna števila \emph{regularne vrednosti} funkcije $f$. \newline
 %
-\emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\textup{Hess}_{f}(x)$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = D(\nabla f)(x)$, kjer $D$ označuje Jacobijevo matriko.
+\emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\text{Hess}_{f}(x)$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = D(\nabla f)(x)$, kjer $D$ označuje Jacobijevo matriko.
 
 \begin{definicija}
 Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva matrika $H_{f}(x)$ maksimalen rang, točki $x$ pravimo \emph{Morsejeva točka}. Slednji pogoj je ekvivalenten trditvi, da je Hessejeva forma funkcije $f$ v točki $x$ neizrojena.
@@ -1878,7 +1880,7 @@ Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva
 Funkcija, katere vsaka kritična točka je tudi Morsejeva, se imenuje \emph{Morsejeva funkcija}.
 \end{definicija}
 
-Kritične točke funkcije $f$ dobimo z reševanjem enačbe $\nabla f(x)=0$. Ker je Hessejeva matrika enaka Jacobijevi matriki gradienta funkcije, po izreku o inverzni preslikavi vidimo, da je vsaka kritična točka izolirana. Množica kritičnih točk funkcije $f$, $\textup{Crit}(f) = \{ x \in U; \ \nabla f(x)=0 \}$, je zaprta diskretna podmnožica v $U$.
+Kritične točke funkcije $f$ dobimo z reševanjem enačbe $\nabla f(x)=0$. Ker je Hessejeva matrika enaka Jacobijevi matriki gradienta funkcije, po izreku o inverzni preslikavi vidimo, da je vsaka kritična točka izolirana. Množica kritičnih točk funkcije $f$, $\text{Crit}(f) = \{ x \in U; \ \nabla f(x)=0 \}$, je zaprta diskretna podmnožica v $U$.
 
 % funkcija izčrpanja
 \begin{definicija}
@@ -1912,7 +1914,7 @@ Definirajmo preslikavo
 \end{gather*}
 med priključno množico in robom mnogoterosti, ki naj bo gladek difeomorfizem na sliko. Vzemimo disjunktno unijo mnogoterosti in standardnega ročaja, $M \sqcup H$, ter točke priključne množice $F$ identificirajmo s svojimi slikami. Preslikava $\phi$ je lepilna preslikava pri lepljenju ročaja indeksa $k$ na mnogoterost $M$. Tako nastalo množico 
 \begin{gather*}
-\tilde{M} = M \sqcup_{\phi} H
+\widetilde{M} = M \sqcup_{\phi} H
 \end{gather*}
 imenujemo \emph{ročajnik}.
 Z ``glajenjem'' vzdolž množice $\phi(\mathbb{S}^{k-1} \times \mathbb{S}^{q-1})$ dosežemo, da ročajnik postane gladka mnogoterost z robom. V nadaljevanju bomo predpostavili, da so ročajniki takšni.
@@ -1947,13 +1949,13 @@ V kritični točki indeksa $0$, ki je lokalni minimum, podnivojnici disjunktno d
 Če je $p \in M$ kritična točka indeksa $1$, ki naj bo brez škode za splošnost edina kritična točka na podnivojnici $\{ \rho = \rho(p) \}$, izberimo bližnji vrednosti $a<\rho(p)<b$ tako, da je točka $p$ edina kritična točka na množici $M_{a,b}$. Podnivojnica $M_{b}$ nastane tako, da na $M_{a}$ ustrezno prilepimo ročaj indeksa $1$, to je $H = [-1,+1] \times [-1,+1]$. Pri tem komponenti robu ročaja, $\{-1\} \times [-1,+1]$ in $\{+1\} \times [-1,+1]$, difeomorfno zlepimo z disjunktnima lokoma $I_{-1}, I_{+1} \subset bM_{a}$.
 \begin{itemize}
 \item[\textit{(a)}] 
-	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $bM_{a}$, za rodova velja $\textup{gen}(M_{a}) = \textup{gen}(M_{b})$, število povezanih komponent nivojnice $bM_{b}$ pa je za ena več od števila povezanih komponent nivojnice $bM_{a}$.
+	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $bM_{a}$, za rodova velja $\text{gen}(M_{a}) = \text{gen}(M_{b})$, število povezanih komponent nivojnice $bM_{b}$ pa je za ena več od števila povezanih komponent nivojnice $bM_{a}$.
 \item[\textit{(b)}]
 	Če loka $I_{-1}, I_{+1}$ pripadata isti povezani komponenti $M_{a}$, a različnima povezanima komponentama $bM_{a}$, je situacija naslednja.
 	Množica $M_{a,b}$ je unija končno mnogo disjunktnih kolobarjev in \emph{para hlač}, ki je kompaktna ploskev topološkega rodu $1$, katere rob sestoji iz treh povezanih komponent.
-	Velja $\textup{gen}(M_{a})+1 = \textup{gen}(M_{b})$, število povezanih komponent roba $bM_{b}$ pa je za ena manj od števila povezanih komponent roba $bM_{a}$.
+	Velja $\text{gen}(M_{a})+1 = \text{gen}(M_{b})$, število povezanih komponent roba $bM_{b}$ pa je za ena manj od števila povezanih komponent roba $bM_{a}$.
 \item[\textit{(c)}]
-	Če loka $I_{-1}, I_{+1}$ pripadata različnima povezanima komponentama podnivojnice $M_{a}$, je $\textup{gen}(M_{a}) = \textup{gen}(M_{b})$, rob $bM_{b}$ pa ima eno povezano komponento manj od robu $bM_{a}$.
+	Če loka $I_{-1}, I_{+1}$ pripadata različnima povezanima komponentama podnivojnice $M_{a}$, je $\text{gen}(M_{a}) = \text{gen}(M_{b})$, rob $bM_{b}$ pa ima eno povezano komponento manj od robu $bM_{a}$.
 \end{itemize}
 
 % indeks = 2
@@ -1962,7 +1964,7 @@ V kritični točki maksimalnega indeksa (v našem primeru ploskve je ta enak $2$
 \begin{opomba} [Rod ploskve]
 Znano je, da je povezana kompaktna orientabilna ploskev $M$ brez roba homeomorfna bodisi sferi $\mathbb{S}^{2}$ bodisi vsoti $g$ torusov 
 $\mathbb{T}^{2} \# \stackrel{g}{\cdots} \# \mathbb{T}^{2}$ za enolično število $g \in \mathbb{N}$.
-Število $g$ imenujemo \emph{rod} in označimo z $\textup{gen}(M)$, pri tem pa definiramo še $\textup{gen}(\mathbb{S}^{2}) = 0$.
+Število $g$ imenujemo \emph{rod} in označimo z $\text{gen}(M)$, pri tem pa definiramo še $\text{gen}(\mathbb{S}^{2}) = 0$.
 Podobna klasifikacija velja za odprte orientabilne ploskve.
 \end{opomba}
 
@@ -1978,11 +1980,11 @@ Naj bo $M$ odprta Riemannova ploskev, $\theta$ povsod neničelna holomorfna 1-fo
 Naj bo $S$ dopustna Rungejeva množica v $M$ in $\Lambda \subset M$ zaprta diskretna podmnožica. 
 Naj bo $x \colon S \to \R^{n}$ posplošena konformna minimalna imerzija razreda $\mathcal{C}^{r}(S, \R^{n})$, ki je konformna minimalna imerzija v okolici vsake točke iz $\Lambda$.
 
-Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M,\Z) \to \R^{n}$, \ $\mathfrak{p}|_{H_{1}(S,\Z)} = \textup{Flux}_{x}$ obstaja konformna minimalna imerzija $\tilde{x} \colon M \to \R^{n}$, za katero velja:
+Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M,\Z) \to \R^{n}$, \ $\mathfrak{p}|_{H_{1}(S,\Z)} = \text{Flux}_{x}$ obstaja konformna minimalna imerzija $\tilde{x} \colon M \to \R^{n}$, za katero velja:
 \begin{enumerate}
 \item $||\tilde{x} - x||_{\mathcal{C}^{r}(S)} < \varepsilon$;
 \item razlika $\tilde{x}-x$ je ničelna do reda $k(p)$ v vsaki točki $p\in \Lambda$;
-\item $Flux_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M,\Z)$;
+\item $\text{Flux}_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M,\Z)$;
 \item če je $n\geq5$ in je $x \colon \Lambda \to \R^{n}$ injektivna preslikava, potem je $\tilde{x}$ injektivna imerzija;
 \item če je $n=4$ in ima $x$ enostavne dvojne točke na množici $\Lambda$, potem je $\tilde{x}$ imerzija z enostavnimi dvojnimi točkami na $\Lambda$.
 \end{enumerate}
@@ -2002,7 +2004,7 @@ ter rezultat o konstrukciji poti s predpisanimi integrali in nekritični primer 
 Izberimo tako število $\varepsilon_0 > 0$, da je $2 \varepsilon_0 < \varepsilon$.
 Izberimo okolico $U \subset M$ množice $S$, za katero velja $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z})$ in $\Lambda \cap U \subset S$.
 Po Trditvi~\ref{trd:nekritcni-primer} tedaj obstaja polna konformna minimalna imerzija $x^{0} \colon U \to \mathbb{R}^{n}$, ki zadošča:
-$ ||x^{0}-x||_{\mathcal{C}^{r}(S)} < \varepsilon_0$, preslikavi $x^{0}$ in $x$ se ujemata do reda $k(p)$ v vsaki točki $p \in \Lambda \cap S$ ter $ \textup{Flux}_{x^{0}} = \textup{Flux}_{x}$ na $H_{1}(S, \mathbb{Z})$.
+$ ||x^{0}-x||_{\mathcal{C}^{r}(S)} < \varepsilon_0$, preslikavi $x^{0}$ in $x$ se ujemata do reda $k(p)$ v vsaki točki $p \in \Lambda \cap S$ ter $ \text{Flux}_{x^{0}} = \text{Flux}_{x}$ na $H_{1}(S, \mathbb{Z})$.
 Izrek [...] % citiraj Theorem 3.4.1 - (b,c)
 zagotavlja, da preslikava $x^{0}$ zadošča tudi pogojema 4.~in 5.~v našem izreku.
 
@@ -2013,7 +2015,7 @@ S \subset \{ \rho < 0 \} \subset \{ \rho \leq 0 \} \subset U.
 Funkcijo $\rho$ lahko izberemo tako, da je $c_0 = 0$ njena regularna vrednost, nivojnice $\{ \rho = c \}$ za $c>0$ pa vsebujejo kvečjemu eno kritično točko funkcije $\rho$ ali kvečjemu eno točko množice $\Lambda$, vendar ne obeh hkrati. To lahko zagotovimo zato, ker so kritične točke Morsejeve funkcije izčrpanja izolirane in je $\Lambda$ po predpostavki zaprta diskretna množica.
 
 Označimo z $M_{0}$ kompaktno množico $M_{0} = \{ \rho \leq 0 \}$.
-Ker je $M_{0} \subset U$ in $\textup{Flux}_{x^{0}} = \textup{Flux}_{x}$ na $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z}) \}$, sta pretoka enaka tudi na $H_{1}(M_{0}, \mathbb{Z})$.
+Ker je $M_{0} \subset U$ in $\text{Flux}_{x^{0}} = \text{Flux}_{x}$ na $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z}) \}$, sta pretoka enaka tudi na $H_{1}(M_{0}, \mathbb{Z})$.
 
 Izberimo strogo naraščajoče zaporedje $\{ c_{i} \}_{i} \subset \mathbb{R}$ z začetnim členom $c_0=0 $ in $\lim_{i \to \infty}c_{i} = + \infty$. Dodatno naj za vse $i \in \mathbb{N}$ velja:
 \begin{itemize}
@@ -2026,7 +2028,7 @@ Iskano imerzijo $\tilde{x}$ bomo dobili na naslednji način. Induktivno bomo kon
 \begin{itemize}
 \item[\textit{(i)}] $||x^{i} - x^{i-1}||_{\mathcal{C}^{r}(M_{i-1})} < \varepsilon_{i-1}$;
 \item[\textit{(ii)}] preslikavi $x^{i}$ in $x$ se ujemata do reda $k(p)$ za vse $p \in \Lambda \cap M_{i}$;
-\item[\textit{(iii)}] $\textup{Flux}_{x^{i}} = \mathfrak{p}$ na $H_{1}(M_{i},\Z)$;
+\item[\textit{(iii)}] $\text{Flux}_{x^{i}} = \mathfrak{p}$ na $H_{1}(M_{i},\Z)$;
 \item[\textit{(iv)}] če je $n \geq 5$ in $x \colon \Lambda \to \mathbb{R}^{n}$ injektivna preslikava, potem je $x^{i}$ injektivna;
 \item[\textit{(v)}] če je $n=4$ in ima $x$ enostavne dvojne točke na $\Lambda$, potem ima $x^{i}$ enostavne dvojne točke;
 \item[\textit{(vi)}] velja $\varepsilon_{i} > 0$ in $2 \varepsilon_{i} < \varepsilon_{i-1}$.
@@ -2108,8 +2110,8 @@ Gladko jo razširimo na $E$ tako, da velja
 kjer upoštevamo dejstvo, da sta $q_0, q_1$ regularni točki in uporabimo Lemo~\ref{lema:analog-gromova}.
 Nato $x^{i-1}$ razširimo na $S_{i}$ kot v 2.~primeru, kar nam da $(x^{i-1}, f^{i-1} \theta) \in \textup{GCMI}(S_{i}, \mathbb{R}^{n})$.
 
-Po indukcijski predpostavki je $\textup{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(M_{i-1},\Z)$ in po zgornjem $\textup{Flux}_{x^{i-1}}(C) = \mathfrak{p}(C)$, zato velja
-$\textup{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(S_{i},\Z)$.
+Po indukcijski predpostavki je $\textup{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(M_{i-1},\Z)$ in po zgornjem $\text{Flux}_{x^{i-1}}(C) = \mathfrak{p}(C)$, zato velja
+$\text{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(S_{i},\Z)$.
 Spet uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek [...], % citiraj izrek 3.4.1
 ter zaključimo kot v prejšnjih primerih. \newline
 
@@ -2256,13 +2258,13 @@ Po Lemi~\ref{lema:P-D-sprej} je tedaj preslikava
 submerzija. Pripadajoča Jacobijeva matrika ima namreč bločno strukturo in maksimalen rang, to je $nl$.
 Kot v dokazu Leme~\ref{lema:aproks&interp-A*} obstaja holomorfna preslikava $\tilde{f} \colon M \to \textup{\textbf{A}}_{*}$, ki v $\mathcal{C}^{r}(S)$ aproksimira preslikavo $wf$ in se z njo ujema do reda $s_1$ v točkah množice $\Lambda$.
 Nato poiščemo periodno dominantni sprej $\Phi_{\tilde{f}} \colon M \times \C^{N} \to \textup{\textbf{A}}_{*}$ z jedrom $\tilde{f}$, ter preslikavo 
-$\tilde{F} = \Phi_{\tilde{f}}(\cdot, t_0) \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$ za neko točko $t_0 \in \mathbb{B}^{N} \subset \C^{N}$. 
-Dobljena preslikava $\tilde{F}$ ima naslednje lastnosti:
+$\widetilde{F} = \Phi_{\tilde{f}}(\cdot, t_0) \in \mathcal{O}(M, \textup{\textbf{A}}_{*})$ za neko točko $t_0 \in \mathbb{B}^{N} \subset \C^{N}$. 
+Dobljena preslikava $\widetilde{F}$ ima naslednje lastnosti:
 \begin{itemize}
-\item razlika $\frac{\tilde{F}}{w}-f$ je holomorfna na $A$ in
-\item $\mathcal{P}^{w,f}(\tilde{F}) = \mathcal{P} \left(\frac{\tilde{F}}{w}-f \right) = 0$.
+\item razlika $\frac{\widetilde{F}}{w}-f$ je holomorfna na $A$ in
+\item $\mathcal{P}^{w,f}(\widetilde{F}) = \mathcal{P} \left(\frac{\widetilde{F}}{w}-f \right) = 0$.
 \end{itemize}
-Končno definiramo kvocient $F = \frac{\tilde{F}}{w}$, ki ob dovolj dobri aproksimaciji $wf$ z $\tilde{f}$ in izboru dovolj velikega števila $s_1$ ustreza zaključkom leme.
+Končno definiramo kvocient $F = \frac{\widetilde{F}}{w}$, ki ob dovolj dobri aproksimaciji $wf$ z $\tilde{f}$ in izboru dovolj velikega števila $s_1$ ustreza zaključkom leme.
 \end{dokaz}
 %%%%% konec dokaza
 
@@ -2287,11 +2289,11 @@ Tedaj obstaja taka polna konformna minimalna imerzija $\tilde{x} \colon M \setmi
 Natančneje, 1-formo $\partial \tilde{x}$ lahko meromorfno razširimo na $M$ s poli v točkah množice $A$.
 
 Dodatno predpostavimo, da je $U$ lokalno končna unija paroma disjunktnih povezanih dopustnih podmnožic v $M$, par $(x, f\theta)$ posplošena kompletna konformna minimalna imerzija razreda $\mathcal{C}^{r}$ s končno totalno ukrivljenostjo na vsaki komponenti množice $U \setminus A$ in $r \in \N$.
-Tedaj za poljubne $\varepsilon > 0$, zaprto diskretno podmnožico $\Lambda$, za katero velja $A \subset \Lambda \subset U^{\circ}$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M \setminus A, \Z) \to \R^{n}$, ki ustreza $\mathfrak{p}|_{H_{1}(U \setminus A, \Z)} = \textup{Flux}_{x}$, obstaja konformna minimalna imerzija $\tilde{x} \colon M \setminus A \to \R^{n}$ kot zgoraj. Poleg tega so izpolnjeni še pogoji:
+Tedaj za poljubne $\varepsilon > 0$, zaprto diskretno podmnožico $\Lambda$, za katero velja $A \subset \Lambda \subset U^{\circ}$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M \setminus A, \Z) \to \R^{n}$, ki ustreza $\mathfrak{p}|_{H_{1}(U \setminus A, \Z)} = \text{Flux}_{x}$, obstaja konformna minimalna imerzija $\tilde{x} \colon M \setminus A \to \R^{n}$ kot zgoraj. Poleg tega so izpolnjeni še pogoji:
 \begin{enumerate}
 \item $||\tilde{x}-x||_{\mathcal{C}^{r}(U)} < \varepsilon$;
 \item preslikavi $\tilde{x}$ in $x$ se ujemata do reda $k(p)$ v vsaki točki $p \in \Lambda$;
-\item $\textup{Flux}_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M \setminus A, \Z)$.
+\item $\text{Flux}_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M \setminus A, \Z)$.
 \end{enumerate}
 \end{izrek}
 
