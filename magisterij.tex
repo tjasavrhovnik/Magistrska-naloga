@@ -883,7 +883,7 @@ Ključ je \emph{Dirichletov energijski integral}
 \end{equation}
 ki ga s površino ploskve povezuje naslednji rezultat.
 
-\begin{lema}
+\begin{lema} \label{lema:Area<=D/2}
 Za preslikavo $x$ kot zgoraj je $\text{Area}(x) \leq \frac{1}{2} \mathcal{D}(x)$. Enačaj velja natanko tedaj, ko je $x$ konformna.
 \end{lema}
 
@@ -912,6 +912,37 @@ Natančneje, izrek trdi, da obstaja zvezna preslikava $x \colon \overline{\mathb
 \newline
 Prvoten pristop k reševanju Plateaujevega problema je vprašanje, ali obstaja regularna\footnote{Regularnost ploskve $M$ pomeni, da so vse točke $x \in M$ regularne.} enostavno povezana minimalna ploskev, ki jo omejuje poljubna Jordanova krivulja $\Gamma \subset \R^{n}$. V tej obliki je problem za splošen $n$ še vedno nerešen.
 \end{opomba}
+
+%%%%%%%%%%%%%%%
+% Prva variacija ploščine konformne ploskve
+\subsubsection{Prva variacija ploščine konformne ploskve}
+% 
+V prejšnjem razdelku smo navedli prvo variacijo ploščine v splošnem primeru. Kadar je imerzija konformna, se z upoštevanjem Leme~\ref{lema:Area<=D/2} in zgornjih opažanj izpeljava precej poenostavi. 
+
+Naj bo $x \colon M \to \R^{n}$ gladka konformna imerzija na odprti Riemannovi ploskvi in $D_{(u_1,u_2)} \subset M$ kompaktna domena z odsekoma gladkim robom. 
+Zaradi konformnosti preslikave vemo, da je
+\begin{gather*}
+\text{Area}(x) = \frac{1}{2} \mathcal{D}(x).
+\end{gather*}
+Prvo variacijo ploščine po definiciji dobimo z iskanjem stacionarnih točk ploskovnega funkcionala, ki v trenutnem primeru sovpadajo s stacionarnimi točkami Dirichletovega intergrala. Izračunajmo oboje. \newline
+Vzemimo gladko preslikavo $f \colon \overline{D} \to \R^{n}$, ki je ničelna na robu domene $bD$, in $t \in \R$. Tedaj je
+\begin{align*}
+\frac{d}{dt} \Big|_{t=0} \mathcal{D}(x+tf) &= \frac{d}{dt} \Big|_{t=0} \frac{1}{2} \int_{D} \left( |x_{u_1}+tf_{u_1}|^2 + |x_{u_2}+tf_{u_2}|^2 \right) du_1 du_2 \\
+	&= \frac{1}{2} \int_{D} \left( 2(x_{u_1}+tf_{u_1}) \cdot f_{u_1} + 2(x_{u_2}+tf_{u_2}) \cdot f_{u_2} \right) \big|_{t=0} du_1 du_2 \\
+	&= \int_{D} \left( x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2} \right) du_1 du_2 \\
+	&= x_{u_1} \cdot g \big|_{bD} - \int_{D} x_{u_1 u_1} \cdot f du_1 du_2 + x_{u_2} \cdot f \big|_{bD} - \int_{D} x_{u_2 u_2} \cdot f du_1 du_2 \\
+	&= -\int_{D} \Delta{x} \cdot f du_1 du_2,
+\end{align*}
+ki je enako $0$ za vse izbore $f$ natanko takrat, ko je $\Delta{x} = 0$. \newline
+Izračunajmo še stacionarne točke ploskovnega funkcionala.
+\begin{align*}
+\frac{d}{dt} \Big|_{t=0} \text{Area}(x+tf) &= \frac{d}{dt} \Big|_{t=0} \int_{D} \sqrt{|x_{u_1}+tf_{u_1}|^2 |x_{u_2}+tf_{u_2}|^2 - |(x_{u_1}+tf_{u_1}) \cdot (x_{u_2}+tf_{u_2}) |^2} du_1 du_2 \\
+	&= \frac{d}{dt} \Big|_{t=0} \int_{D} \sqrt{ |x_{u_1}|^4 + 2t |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t^2)} du_1 du_2 \\
+	&= \int_{D} \frac{1}{2} \frac{2 |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t^2)}{\sqrt{ |x_{u_1}|^4 + 2t |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t^2)}} \Big|_{t=0} du_1 du_2 \\
+	&= \int_{D} \frac{2 |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2})}{2 |x_{u_1}|^2} du_1 du_2 \\
+	&= \int_{D} (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) du_1 du_2 \\
+	&= - \int_{D} \Delta{x} \cdot f du_1 du_2
+\end{align*}
 
 %%%%%%%%%%%%%%%
 % Rezultati
