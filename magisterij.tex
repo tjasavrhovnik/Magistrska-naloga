@@ -764,7 +764,7 @@ Opazimo, da je za dovolj majhne vrednosti $t$ preslikava $x^{t}$ imerzija.
 Po definiciji je na množici $bM \times (-\varepsilon, \varepsilon)$ variacijsko vektorsko polje $E$ konstantno ničelno.
 
 % Minimalna ploskev
-\begin{definicija} [Minimalna ploskev]
+\begin{definicija} [Minimalna ploskev] \label{def:min-ploskev}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Sliko $x(M)$ imenujemo \emph{minimalna ploskev}, če za vsako kompaktno domeno $D \subset M$ z gladkim robom $bD$ in vsako gladko variacijo $x^{t}$ preslikave $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-ploščine}
 \frac{d}{dt} \Big|_{t=0} \text{Area} \left(x^{t}(D)\right) = 0.
@@ -925,24 +925,43 @@ Zaradi konformnosti preslikave vemo, da je
 \text{Area}(x) = \frac{1}{2} \mathcal{D}(x).
 \end{gather*}
 Prvo variacijo ploščine po definiciji dobimo z iskanjem stacionarnih točk ploskovnega funkcionala, ki v trenutnem primeru sovpadajo s stacionarnimi točkami Dirichletovega intergrala. Izračunajmo oboje. \newline
-Vzemimo gladko preslikavo $f \colon \overline{D} \to \R^{n}$, ki je ničelna na robu domene $bD$, in $t \in \R$. Tedaj je
+Vzemimo gladko preslikavo $f \colon \overline{D} \to \R^{n}$, ki je ničelna na robu domene $bD$, in $t \in \R$. Tedaj je prva variacija Dirichletovega integrala v smeri preslikave $f$ enaka
 \begin{align*}
-\frac{d}{dt} \Big|_{t=0} \mathcal{D}(x+tf) &= \frac{d}{dt} \Big|_{t=0} \frac{1}{2} \int_{D} \left( |x_{u_1}+tf_{u_1}|^2 + |x_{u_2}+tf_{u_2}|^2 \right) du_1 du_2 \\
-	&= \frac{1}{2} \int_{D} \left( 2(x_{u_1}+tf_{u_1}) \cdot f_{u_1} + 2(x_{u_2}+tf_{u_2}) \cdot f_{u_2} \right) \big|_{t=0} du_1 du_2 \\
-	&= \int_{D} \left( x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2} \right) du_1 du_2 \\
-	&= x_{u_1} \cdot g \big|_{bD} - \int_{D} x_{u_1 u_1} \cdot f du_1 du_2 + x_{u_2} \cdot f \big|_{bD} - \int_{D} x_{u_2 u_2} \cdot f du_1 du_2 \\
-	&= -\int_{D} \Delta{x} \cdot f du_1 du_2,
+\frac{d}{dt} \Big|_{t=0} \mathcal{D}(x+tf) &= \frac{d}{dt} \Big|_{t=0} \int_{D} \left( |x_{u_1}+tf_{u_1}|^2 + |x_{u_2}+tf_{u_2}|^2 \right) du_1 du_2 \\
+	&= \int_{D} \left( 2(x_{u_1}+tf_{u_1}) \cdot f_{u_1} + 2(x_{u_2}+tf_{u_2}) \cdot f_{u_2} \right) \big|_{t=0} du_1 du_2 \\
+	&= 2 \int_{D} \left( x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2} \right) du_1 du_2 \\
+	&= 2 \left( (x_{u_1} + x_{u_2}) \cdot f \big|_{bD} - \int_{D} (x_{u_1 u_1} + x_{u_2 u_2}) \cdot f du_1 du_2 \right) \\
+	&= -2 \int_{D} \Delta{x} \cdot f du_1 du_2,
 \end{align*}
-ki je enako $0$ za vse izbore $f$ natanko takrat, ko je $\Delta{x} = 0$. \newline
+ki je enako $0$ za vse izbore $f$ (kot zgoraj) natanko takrat, ko je $\Delta{x} = 0$. 
+
 Izračunajmo še stacionarne točke ploskovnega funkcionala.
+Najprej si oglejmo integrand, kjer v računih upoštevamo konformnost ($x_{u_1} \cdot x_{u_2} = 0$, $|x_{u_1}| = |x_{u_2}|$):
 \begin{align*}
-\frac{d}{dt} \Big|_{t=0} \text{Area}(x+tf) &= \frac{d}{dt} \Big|_{t=0} \int_{D} \sqrt{|x_{u_1}+tf_{u_1}|^2 |x_{u_2}+tf_{u_2}|^2 - |(x_{u_1}+tf_{u_1}) \cdot (x_{u_2}+tf_{u_2}) |^2} du_1 du_2 \\
+&\left| x_{u_1}+tf_{u_1} \right|^2 \cdot \left| x_{u_2}+tf_{u_2} \right|^2 \\
+= &\left( |x_{u_1}|^2 + 2t(x_{u_1} \cdot f_{u_1}) + t^2|f_{u_1}|^2 \right) \cdot \left( |x_{u_2}|^2 + 2t(x_{u_2} \cdot f_{u_2}) + t^2|f_{u_2}|^2 \right) \\
+= &\left( |x_{u_1}|^2 + 2t(x_{u_1} \cdot f_{u_1}) + \mathcal{O}(t^2) \right) \cdot \left( |x_{u_1}|^2 + 2t(x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t^2) \right) \\
+= &\left| x_{u_1} \right|^4 + 2t \left| x_{u_1} \right|^2 \left( x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2} \right) + \mathcal{O}(t^2), \\[5pt]
+&\left| (x_{u_1}+tf_{u_1}) \cdot (x_{u_2}+tf_{u_2}) \right|^2 \\
+= &\left| x_{u_1} \cdot x_{u_2} + t(x_{u_1} \cdot f_{u_2} + f_{u_1} \cdot x_{u_2}) + t^2 f_{u_1} \cdot f_{u_2} \right|^2 \\
+= & \left| t(x_{u_1} \cdot f_{u_2} + f_{u_1} \cdot x_{u_2}) + t^2 f_{u_1} \cdot f_{u_2} \right|^2 = \mathcal{O}(t^2).
+\end{align*}
+Od tod sledi
+\begin{align*}
+\frac{d}{dt} \Big|_{t=0} &\text{Area}(x+tf) \\ 
+	&= \frac{d}{dt} \Big|_{t=0} \int_{D} \sqrt{|x_{u_1}+tf_{u_1}|^2 |x_{u_2}+tf_{u_2}|^2 - |(x_{u_1}+tf_{u_1}) \cdot (x_{u_2}+tf_{u_2}) |^2} du_1 du_2 \\
 	&= \frac{d}{dt} \Big|_{t=0} \int_{D} \sqrt{ |x_{u_1}|^4 + 2t |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t^2)} du_1 du_2 \\
-	&= \int_{D} \frac{1}{2} \frac{2 |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t^2)}{\sqrt{ |x_{u_1}|^4 + 2t |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t^2)}} \Big|_{t=0} du_1 du_2 \\
+	&= \int_{D} \frac{2 |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t)}{2 \sqrt{ |x_{u_1}|^4 + 2t |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) + \mathcal{O}(t^2)}} \bigg|_{t=0} du_1 du_2 \\
 	&= \int_{D} \frac{2 |x_{u_1}|^2 (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2})}{2 |x_{u_1}|^2} du_1 du_2 \\
 	&= \int_{D} (x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2}) du_1 du_2 \\
-	&= - \int_{D} \Delta{x} \cdot f du_1 du_2
+	&= - \int_{D} \Delta{x} \cdot f du_1 du_2 .
 \end{align*}
+%
+Opazimo, da so stacionarne točke res enake, prva variacija ploščine konformne imerzije $x$ v smeri $f$ pa se glasi
+\begin{gather}
+\frac{d}{dt} \Big|_{t=0} \text{Area}(x+tf) = \frac{d}{dt} \Big|_{t=0} \frac{1}{2} \mathcal{D}(x+tf) = - \int_{D} \Delta{x} \cdot f du_1 du_2.
+\end{gather}
+Po Definiciji~\ref{def:min-ploskev} konformna imerzija določa minimalno ploskev natanko takrat, ko je harmonična. Natančnejšo karakterizacijo minimalnih ploskev podaja Izrek~\ref{izr:ekviv-min-ploskev} v prihajajočem razdelku.
 
 %%%%%%%%%%%%%%%
 % Rezultati
