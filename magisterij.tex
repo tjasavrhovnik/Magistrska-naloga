@@ -914,26 +914,27 @@ Prvoten pristop k reševanju Plateaujevega problema je vprašanje, ali obstaja r
 \end{opomba}
 
 %%%%%%%%%%%%%%%
-% Prva variacija ploščine konformne ploskve
-\subsubsection{Prva variacija ploščine konformne ploskve}
+% Prva variacija površine konformne ploskve
+\subsubsection{Prva variacija površine konformne ploskve}
 % 
-V prejšnjem razdelku smo navedli prvo variacijo ploščine v splošnem primeru. Kadar je imerzija konformna, se z upoštevanjem Leme~\ref{lema:Area<=D/2} in zgornjih opažanj izpeljava precej poenostavi. 
+V prejšnjem razdelku smo navedli prvo variacijo površine v splošnem primeru. Kadar je imerzija konformna, se z upoštevanjem Leme~\ref{lema:Area<=D/2} in zgornjih opažanj izpeljava precej poenostavi. 
 
-Naj bo $x \colon M \to \R^{n}$ gladka konformna imerzija na odprti Riemannovi ploskvi in $D_{(u_1,u_2)} \subset M$ kompaktna domena z odsekoma gladkim robom. 
+Naj bo $x \colon \overline{D} \to \R^{n}$ gladka konformna imerzija na zaprtju omejene domene $D \subset \R_{(u_1,u_2)}^2$ z odsekoma gladkim robom. 
 Zaradi konformnosti preslikave vemo, da je
 \begin{gather*}
 \text{Area}(x) = \frac{1}{2} \mathcal{D}(x).
 \end{gather*}
-Prvo variacijo ploščine po definiciji dobimo z iskanjem stacionarnih točk ploskovnega funkcionala, ki v trenutnem primeru sovpadajo s stacionarnimi točkami Dirichletovega intergrala. Izračunajmo oboje. \newline
+Prvo variacijo površine po definiciji dobimo z iskanjem stacionarnih točk ploskovnega funkcionala, ki v trenutnem primeru sovpadajo s stacionarnimi točkami Dirichletovega intergrala. Izračunajmo oboje. \newline
 Vzemimo gladko preslikavo $f \colon \overline{D} \to \R^{n}$, ki je ničelna na robu domene $bD$, in $t \in \R$. Tedaj je prva variacija Dirichletovega integrala v smeri preslikave $f$ enaka
 \begin{align*}
 \frac{d}{dt} \Big|_{t=0} \mathcal{D}(x+tf) &= \frac{d}{dt} \Big|_{t=0} \int_{D} \left( |x_{u_1}+tf_{u_1}|^2 + |x_{u_2}+tf_{u_2}|^2 \right) du_1 du_2 \\
 	&= \int_{D} \left( 2(x_{u_1}+tf_{u_1}) \cdot f_{u_1} + 2(x_{u_2}+tf_{u_2}) \cdot f_{u_2} \right) \big|_{t=0} du_1 du_2 \\
 	&= 2 \int_{D} \left( x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2} \right) du_1 du_2 \\
 	&= 2 \left( (x_{u_1} + x_{u_2}) \cdot f \big|_{bD} - \int_{D} (x_{u_1 u_1} + x_{u_2 u_2}) \cdot f du_1 du_2 \right) \\
+	&= -2 \int_{D} (x_{u_1 u_1} + x_{u_2 u_2}) \cdot f du_1 du_2 \\ 
 	&= -2 \int_{D} \Delta{x} \cdot f du_1 du_2,
 \end{align*}
-ki je enako $0$ za vse izbore $f$ (kot zgoraj) natanko takrat, ko je $\Delta{x} = 0$. 
+ki je enaka $0$ za vse izbore $f$ (kot zgoraj) natanko takrat, ko je $\Delta{x} = 0$ (tj.~imerzija $x$ je harmonična). 
 
 Izračunajmo še stacionarne točke ploskovnega funkcionala.
 Najprej si oglejmo integrand, kjer v računih upoštevamo konformnost ($x_{u_1} \cdot x_{u_2} = 0$, $|x_{u_1}| = |x_{u_2}|$):
@@ -957,11 +958,13 @@ Od tod sledi
 	&= - \int_{D} \Delta{x} \cdot f du_1 du_2 .
 \end{align*}
 %
-Opazimo, da so stacionarne točke res enake, prva variacija ploščine konformne imerzije $x$ v smeri $f$ pa se glasi
-\begin{gather}
+Opazimo, da so stacionarne točke res enake, prva variacijska formula konformne imerzije $x$ v smeri $f$ pa se glasi
+\begin{gather} \label{eq:1-var-formula-konformna}
 \frac{d}{dt} \Big|_{t=0} \text{Area}(x+tf) = \frac{d}{dt} \Big|_{t=0} \frac{1}{2} \mathcal{D}(x+tf) = - \int_{D} \Delta{x} \cdot f du_1 du_2.
 \end{gather}
-Po Definiciji~\ref{def:min-ploskev} konformna imerzija določa minimalno ploskev natanko takrat, ko je harmonična. Natančnejšo karakterizacijo minimalnih ploskev podaja Izrek~\ref{izr:ekviv-min-ploskev} v prihajajočem razdelku.
+Po Definiciji~\ref{def:min-ploskev} in zveze~\eqref{eq:1-var-formula-konformna} sledi, da konformna imerzija določa minimalno ploskev natanko takrat, ko je harmonična. 
+Z enakim postopkom dokažemo, da formula~\eqref{eq:1-var-formula-konformna} velja tudi v primeru, ko za $D \subset M$ izberemo kompaktno domeno z odsekoma gladkim robom in je preslikava $x \colon M \to \R^{n}$ konformna imerzija na odprti Riemannovi ploskvi $M$.
+Natančnejšo karakterizacijo minimalnih ploskev podaja Izrek~\ref{izr:ekviv-min-ploskev} v prihajajočem razdelku.
 
 %%%%%%%%%%%%%%%
 % Rezultati
