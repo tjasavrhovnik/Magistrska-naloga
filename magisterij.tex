@@ -254,7 +254,7 @@ V prihajajočem poglavju so predstavljeni glavni pojmi ter rezultati iz kompleks
 Tretje poglavje je posvečeno minimalnim ploskvam. Rezultati, ki jih navajamo so dobro znani, zato njihove dokaze večinoma izpuščamo. V prvem razdelku motiviramo pojem z izpeljavo Lagrangeeve enačbe za minimalne grafe. Tej sledita formalna definicija minimalne ploskve kot stacionarne točke ploskovnega funkcionala in definicija holomorfne ničelne krivulje. Navedemo prvo in drugo variacijsko formulo, Enneper-Weierstrassovo reprezentacijsko formulo ter izrek, ki minimalne ploskve karakterizira. Kratko komentiramo Plateaujev problem. Definiramo še posplošeno Gaussovo preslikavo, ki nastopa v formulah za končno totalno Gaussovo ukrivljenost ploskve. Zaključimo s primeri --  holomorfna ničelna krivulja helikatenoida porodi kateonido in helikoid, najpreprostejši netrivialni
  minimalni ploskvi. Poleg zgodovinsko pomembnih Scherkovih in Enneperjeve ploskve predstavimo še dva neorientabilna primera.
 
-V četrtem poglavju s kompleksnoanalitičnimi metodami dokažemo izreke o aproksimaciji in interpolaciji konformnih minimalnih ploskev in holomorfnih ničelnih krivulj tipa Rungeja, Mergelyana, Weierstrassa ter Mittag-Lefflerja. Rezultati so nedavna odkritja na tem področju in sledijo monografiji~\cite{alarcon2021minimal}. % CITIRAJ [Min. surfaces from Complex ...]
+V četrtem poglavju s kompleksnoanalitičnimi metodami dokažemo izreke o aproksimaciji in interpolaciji konformnih minimalnih ploskev in holomorfnih ničelnih krivulj tipa Rungeja, Mergelyana, Weierstrassa ter Mittag-Lefflerja. Rezultati so nedavna odkritja na tem področju in sledijo monografiji~\cite{alarcon2021minimal} ter~\cite{alarcon2019new}.
 Obravnavamo povezane odprte Riemannove ploskve s fiksno izbiro kompleksne strukture. Pomembno vlogo pri dokazovanju izrekov ima teorija konveksne integracije M.~L.~Gromova, natančneje, konstrukcija poti v punktirani ničelni kvadriki $\textup{\textbf{A}}_{*} \subset \C^{n}$ s predpisanimi integrali. Sklicujemo se na Oka teorijo, ki omogoča iskanje bližnjih preslikav med Riemannovimi ploskvami in punktirano ničelno kvadriko, ter Morsejevo teorijo, ki v dokazih naravno porodi dopustne množice. Potrebne so še definicije splošnejših preslikav, imenovanih posplošene konformne minimalne imerzije, in periodno dominantnih sprejev za nadzor vrednosti integralov preslikav. Poglavje zaključimo z rezultatom o kompletnosti, katerega posledica pove, da je vsaka odprta Riemannova ploskev kompleksna struktura kompletne minimalne ploskve v $\R^{n}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -590,8 +590,8 @@ V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi form
 % Aproksimacijski in interpolacijski izreki za Riemannove ploskve
 \subsection{Aproksimacijski in interpolacijski izreki za Riemannove ploskve}
 %
-% VIR: zgodovina po [Holomorphic approximation: the legacy ...]
-Najbolj klasična izreka v teoriji aproksimacije holomorfnih funkcij sta Weierstrassov izrek, ki pravi, da zvezne funkcije na zaprtih intervalih v $\R$ lahko aproksimiramo s polinomi (K.~Weierstrass, 1885), ter izrek C.~Rungeja iz istega leta o aproksimaciji holomorfnih funkcij v okolici kompaktne množice v $\C$ z racionalnimi funkcijami oziroma holomorfnimi polinomi v posebnem primeru. Razširitev Rungejevega izreka na odprte Riemannove ploskve sta dokazala H.~Behnke in K.~Stein (1949), povsem enak izrek pa velja tudi za kompaktne Riemannove ploskve z robom (H.~L.~Royden, 1967). Zgodovinski pregled rezultatov v tem razdelku je povzet po~\cite{fornaess2020holomorphic}.
+Zgodovinski pregled rezultatov v tem razdelku je povzet po~\cite{fornaess2020holomorphic}, navedeni izreki pa po~\cite[Section~1.12]{alarcon2021minimal}. \newline
+Najbolj klasična izreka v teoriji aproksimacije holomorfnih funkcij sta Weierstrassov izrek, ki pravi, da zvezne funkcije na zaprtih intervalih v $\R$ lahko aproksimiramo s polinomi (K.~Weierstrass, 1885), ter izrek C.~Rungeja iz istega leta o aproksimaciji holomorfnih funkcij v okolici kompaktne množice v $\C$ z racionalnimi funkcijami oziroma holomorfnimi polinomi v posebnem primeru. Razširitev Rungejevega izreka na odprte Riemannove ploskve sta dokazala H.~Behnke in K.~Stein (1949), povsem enak izrek pa velja tudi za kompaktne Riemannove ploskve z robom (H.~L.~Royden, 1967).
 
 % citiraj Theorem 1.12.1
 \begin{izrek}[Rungejev aproksimacijski izrek za Riemannove ploskve] \label{izr:Runge}
@@ -895,10 +895,10 @@ Naj bodo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n 
 \end{lema}
 
 %%%%%%%%%%%%%%%
-% Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, p. 56; Minimal surfaces for undergraduates 6.3]
+% Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, p. 56]
 \subsubsection{Plateaujev problem in Dirichletov energijski integral}
 %
-Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema, katerega moramo najprej natančno formulirati. Razdelek je povzet po~\cite[str.~56]{lawson1980lectures} in~\cite[Section~6.3]{forstneric2021minimal}.
+Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema, katerega moramo najprej natančno formulirati (\cite[Section~2.1]{lawson1980lectures}).
 
 Označimo z $\overline{\mathbb{D}}$ zaprt enotski disk z lokalnimi koordinatami $(u_{1}, u_{2})$ in izberimo gladko orientirano Jordanovo krivuljo $\Gamma \subset \mathbb{R}^{n}$.
 Naj bo $x \colon \overline{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, katere zožitev na rob diska $\mathbb{T}$ je monotona\footnote{Pravimo, da je zvezna preslikava $f \colon \mathbb{T} \to \Gamma$ \emph{monotona}, če je praslika $f^{-1}(x)$ povezana za vsak $x \in \Gamma$.} parametrizacija $x|_{\mathbb{T}} \colon \mathbb{T} \to \Gamma$ Jordanove krivulje $\Gamma$.
@@ -930,15 +930,14 @@ Preslikava $x$ je konformna natanko tedaj, ko velja $|x_{u_1}| = |x_{u_2}| > 0$ 
 \end{dokaz}
 
 Preslikava, ki minimizira Dirichletov energijski integral, minimizira tudi površino, je konformna, in parametrizira minimalno ploskev z robom $\Gamma$.
-J.~Douglas in T.~Rad\'o sta l.~1932 dokazala, da vsaka Jordanova krivulja v $\mathbb{R}^3$ določa minimalno ploskev (\cite[Theorem~7]{lawson1980lectures}). % citiraj [Lawson, Theorem 7]
+J.~Douglas in T.~Rad\'o sta l.~1932 dokazala, da vsaka Jordanova krivulja v $\mathbb{R}^3$ določa rob minimalne ploskve.
 
 \begin{opomba}
 Analog minimalnih ploskev v enorazsežnem primeru so geodetke. Z minimizacijo enorazsežnega energijskega integrala dobimo krivulje z minimalno dolžino, ki so poleg tega parametrizirane z večkratnikom ločne dolžine. 
 \end{opomba}
 
-\begin{opomba} % citiraj [Osserman: Theorem 7.1 & Remarks, Appendix 3 (p. 143)]
-Fundamentalni rezultat o obstoju minimalnih ploskev s predpisanim robom je izrek, % citiraj [Osserman, Theorem 7.1]
-ki pravi, da za poljubno Jordanovo krivuljo $\Gamma$ v $\R^{n}$ obstaja enostavno povezana posplošena minimalna ploskev z robom $\Gamma$~\cite[Theorem~7.1]{osserman2002survey}. 
+\begin{opomba} % [Osserman: Theorem 7.1 & Remarks, Appendix 3 (p. 143)]
+Fundamentalni rezultat o obstoju minimalnih ploskev s predpisanim robom je izrek, ki pravi, da za poljubno Jordanovo krivuljo $\Gamma$ v $\R^{n}$ obstaja enostavno povezana posplošena minimalna ploskev z robom $\Gamma$~\cite[Theorem~7.1]{osserman2002survey}. 
 Natančneje, izrek trdi, da obstaja zvezna preslikava $x \colon \overline{\mathbb{D}} \to \R^{n}$, katere zožitev na notranjost $x|_{\mathbb{D}}$ določa minimalno ploskev, zožitev na rob $x|_{b\mathbb{D}}$ pa je homeomorfizem na krivuljo $\Gamma$.
 \newline
 Prvoten pristop k reševanju Plateaujevega problema je vprašanje, ali obstaja regularna\footnote{Regularnost ploskve $M$ pomeni, da so vse točke $x \in M$ regularne.} enostavno povezana minimalna ploskev, ki jo omejuje poljubna Jordanova krivulja $\Gamma \subset \R^{n}$. V tej obliki je problem za splošen $n$ še vedno nerešen.
@@ -948,7 +947,7 @@ Prvoten pristop k reševanju Plateaujevega problema je vprašanje, ali obstaja r
 % Prva variacija površine konformne ploskve
 \subsubsection{Prva variacija površine konformne ploskve}
 % 
-V prejšnjem razdelku smo navedli prvo variacijo površine v splošnem primeru. Kadar je imerzija konformna, se z upoštevanjem Leme~\ref{lema:Area<=D/2} in zgornjih opažanj izpeljava precej poenostavi. 
+V prejšnjem razdelku smo navedli prvo variacijo površine v splošnem primeru. Kadar je imerzija konformna, se z upoštevanjem Leme~\ref{lema:Area<=D/2} in zgornjih opažanj izpeljava precej poenostavi. Ideja sledi~\cite[Section~6]{forstneric2021minimal} in~\cite[Section~2.2]{forstneric2021minimals}.
 
 Naj bo $x \colon \overline{D} \to \R^{n}$ gladka konformna imerzija na zaprtju omejene domene $D \subset \R_{(u_1,u_2)}^2$ z odsekoma gladkim robom. 
 Zaradi konformnosti preslikave vemo, da je
@@ -1064,7 +1063,6 @@ Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{\imath
 \end{enumerate}
 \end{definicija}
 
-% [CITIRAJ Theorem 1.10.5]
 Izrek~\cite[Theorem~1.10.5]{alarcon2021minimal} pravi, da vsaka odprta Riemannova ploskev premore povsod neničelno eksaktno 1-formo.
 Naj bosta $z \colon M \to \mathbb{C}^{n}$ holomorfna ničelna krivulja in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Diferencial $dz$ je 1-forma in obstaja holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$, ki 1-formi povezuje z enakostjo $dz = f \theta$. Tu je množica $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$ punktirana ničelna kvadrika v $\mathbb{C}^{n}$.
 
@@ -1178,7 +1176,7 @@ x(p) = p_{0} + \Re \int_{p_0}^{p} \Phi = p_{0} + \Re \int_{p_0}^{p} \left( \frac
 kjer sta $p_0 \in M$, $x_0 \in \mathbb{R}^3$ poljubni izbrani točki ter je $p \in M$ spremenljivka.
 
 %%%%%%%%%%%%%%%
-% Totalna Gaussova ukrivljenost [Chapter 2.6 & Undergraduates p. 20]
+% Totalna Gaussova ukrivljenost
 \subsubsection{Totalna Gaussova ukrivljenost}
 %
 Pomembna lastnost Gaussove preslikave je njena povezava s totalno Gaussovo ukrivljenostjo (spomnimo se njene definicije, enakosti~\eqref{eq:TC-def}).
@@ -1198,8 +1196,8 @@ Podrobneje si oglejmo minimalne ploskve s končno totalno Gaussovo ukrivljenostj
 K^{-} = \min \{K,0 \} \colon M \to (-\infty, 0].
 \end{gather*}
 (Za minimalne ploskve očitno velja $K^{-} = K$, saj je $K \leq 0$.)
-Izrek A.~Huberja~\cite[Theorem~2.6.4]{alarcon2021minimal} % citiraj [Theorem 2.6.4]
-pove: če je $(M,g)$ kompletna orientabilna Riemannova ploskev in $\int_{M} K^{-}dA > -\infty$, potem je $M$ konformno ekvivalentna komplementu končno mnogo točk v kompaktni Riemannovi ploskvi. \newline
+%
+Izrek A.~Huberja~\cite[Theorem~2.6.4]{alarcon2021minimal} pove: če je $(M,g)$ kompletna orientabilna Riemannova ploskev in $\int_{M} K^{-}dA > -\infty$, potem je $M$ konformno ekvivalentna komplementu končno mnogo točk v kompaktni Riemannovi ploskvi. \newline
 Posledice Huberjevega izreka nam povedo več o totalni Gaussovi ukrivljenosti.
 Spoznajmo še naslednji pojem: naj bo $x \colon M \to \R^{n}$ konformna minimalna imerzija in Riemannova ploskev $M$ konformno ekvivalentna kompaktni Riemannovi ploskvi $\overline{M}$, punktirani v končni množici točk. 
 Če pripadajočo posplošeno Gaussovo preslikavo $\mathcal{G} \colon M \to \textup{\textbf{Q}}^{n-2}$ lahko razširimo do holomorfne preslikave $\mathcal{G} \colon \overline{M} \to \textup{\textbf{Q}}^{n-2}$, oziroma, če za $n=3$ obstaja razširitev kompleksne Gaussove preslikave $\mathfrak{g} \colon M \to \mathbb{CP}^1$ do holomorfne preslikave $\mathfrak{g} \colon \overline{M} \to \mathbb{CP}^1$, tedaj pravimo, da je (kompleksna) Gaussova preslikava $\mathcal{G}$, oziroma $\mathfrak{g}$, \emph{algebraična}.
@@ -1215,7 +1213,7 @@ TC(x) = -4\pi \deg(\mathfrak{g}).
 Tu $\deg(\cdot) \in \Z_{+}$ označuje stopnjo (kompleksne) Gaussove preslikave. Opomnimo, da koeficienta $2\pi$ oziroma $4\pi$ nista naključna; izhajata iz znane zveze $\text{Area}(\mathbb{CP}^1) = 4\pi$.
 
 Obrat zgornjega rezultata za kompletne\footnote{Pot $\gamma \colon [0,a) \to M, \ a \in (0,+\infty]$, je \emph{divergentna}, če za vsako kompaktno podmnožico $K \subset M$ velja: $\gamma(t) \notin K$, ko $t \to a$. Če je vsaka divergentna pot v $M$ razreda $\mathcal{C}^{1}$ neskončne dolžine, Riemannovi mnogoterosti $M$ pravimo \emph{kompletna}.} 
-minimalne ploskve sta l.~1967 dokazala S.~S.~Chern in R.~Osserman~\cite[Theorem~2.6.7]{alarcon2021minimal}. % citiraj [Theorem 2.6.7]
+minimalne ploskve sta l.~1967 dokazala S.~S.~Chern in R.~Osserman~\cite[Theorem~2.6.7]{alarcon2021minimal}.
 Navedimo njegovo posledico.
 
 \begin{trditev}
@@ -1232,8 +1230,7 @@ V primeru $d=0$ dobimo ravnino.
 \end{opomba}
 
 \begin{opomba}
-Izkaže se, da je % citiraj [Theorem 5.4.1]
-vsaka holomorfna preslikava $M \to \mathbb{CP}^1$ kompleksna Gaussova preslikava neke konformne minimalne imerzije $M \to \R^3$~\cite[Theorem~5.4.1]{alarcon2021minimal}, kar pomeni, da je vsako celo število z intervala $[-\infty, 0]$ vrednost totalne Gaussove ukrivljenosti neke minimalne ploskve v prostoru $\R^3$.
+Izkaže se, da je vsaka holomorfna preslikava $M \to \mathbb{CP}^1$ kompleksna Gaussova preslikava neke konformne minimalne imerzije $M \to \R^3$~\cite[Theorem~5.4.1]{alarcon2021minimal}, kar pomeni, da je vsako celo število z intervala $[-\infty, 0]$ vrednost totalne Gaussove ukrivljenosti neke minimalne ploskve v prostoru $\R^3$.
 \end{opomba}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1432,7 +1429,7 @@ in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gau
 \end{center}
 \end{figure}
 
-Znano je (\cite[Section~2.4]{alarcon2021minimal}), da je vsaka neorientabilna minimalna ploskev $S$, ki nastane z imerzijo v prostor $\R^{n}$, slika 2-listne konformne minimalne imerzije $x \colon M \to S \subset \R^{n}$, kjer je $M$ Riemannova ploskev. % citiraj [Section 2.4]
+Znano je (\cite[Section~2.4]{alarcon2021minimal}), da je vsaka neorientabilna minimalna ploskev $S$, ki nastane z imerzijo v prostor $\R^{n}$, slika 2-listne konformne minimalne imerzije $x \colon M \to S \subset \R^{n}$, kjer je $M$ Riemannova ploskev.
 Harmonična preslikava $x \colon \C^{*} \to \R^{3}$ s predpisom
 \begin{equation*}
 x(\zeta) = \Re \int_{1}^{\zeta} \left( \frac{z-1}{z^2(z+1)} - \frac{z^2(z+1)}{z-1}, i \left( \frac{z^2(z+1)}{z-1} + \frac{z-1}{z^2(z+1)} \right), 2 \right) \frac{i(z^2-1)}{2z^2} dz
@@ -1472,12 +1469,11 @@ Naj bo $M$ povezana odprta Riemannova ploskev ali kompaktna Riemannova ploskev z
 \end{enumerate}
 \end{definicija}
 
-% [CITIRAJ - Osserman, Lemma 12.4]
-V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo. V višjih dimenzijah ($n \geq 4$) veljata implikaciji
+V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo (\cite[Lemma~12.4]{osserman2002survey}). V višjih dimenzijah ($n \geq 4$) veljata implikaciji
 \begin{gather} \label{implikacije:full-nd-nf}
 \text{polna} \ \Rightarrow \ \text{neizrojena} \ \Rightarrow \ \text{neravna}.
 \end{gather}
-Obratne implikacije ne vejajo (~\cite[Lemma~12.4]{osserman2002survey}).
+Obratne implikacije ne vejajo.
 
 % prostori preslikav
 Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih preslikav $M \to X$ označimo z $\mathcal{O}(M,X)$.
@@ -1672,7 +1668,6 @@ Definirajmo preslikavo $\Phi_{f} \colon S \times U \to \textbf{\textup{A}}_{*}$ 
 % interpolacijski del leme
 Sedaj poglejmo še interpolacijski del leme. Naj bo $P \subset S$ končna podmnožica in $q \in \mathbb{N}$ izbrano fiksno število. Vzemimo holomorfno funkcijo $h \colon S \to \mathbb{C}$, ki ima ničle natanko v točkah množice $P$, le-te pa so reda $q+1$. Kot prej obstajajo točke $p_{i,j} \in I_{i} \setminus P$, holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$ ter gladke preslikave $g_{i,j}$ s kompaktnimi nosilci okrog točk $p_{i,j}$. V predpisu~\eqref{predpis-Phi} najprej nadomestimo $g_{i,j}$ s preslikavami $h \cdot g_{i,j}$, da dobimo preslikavo $\Phi$, ki zadošča analogu k~\eqref{eq:dP/dt}. Nato preslikave $g_{i,j}$ aproksimiramo z $\tilde{g}_{i,j} \in \mathcal{O}(S)$ ter v predpis~\eqref{predpis-Phi} vstavimo produkte $h \cdot \tilde{g}_{i,j}$ -- nova preslikava $\Phi_{f}$ definira periodno dominantni sprej, ki dodatno zadošča interpolacijskim zahtevam.
 Res, preslikava $(p,t) \mapsto \Phi_{h(p) \tilde{g}_{m,j}(p) t}^{m,j} (f(p))$ se z $f$ ujema v točkah množice $P$, v točkah $p \in P \cap S^{\circ}$ pa se ujemata do reda $q$. (To vidimo tako, da tok vektorskega polja zapišemo s Taylorjevim razvojem do 2.~reda in upoštevamo stopnje ničel funkcije $h$ v točkah $p \in P$.) Zato enako velja tudi za njihov kompozitum (\cite[Lemma~2.2]{alarcon2018interpolation}).
-% Zadnji del - CITIRAJ [1701.04379.pdf, Lemma 2.2]
 
 Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ dana, potem lahko za vse preslikave $f$ iz okolice $\Omega \subset \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ za $f_{0}$ pri konstrukciji periodno dominantnih sprejev uporabimo iste aproksimacijske preslikave $\tilde{g}_{i,j}$.
 \end{dokaz}
@@ -1689,8 +1684,8 @@ Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{
 %
 Prvi rezultat o aproksimaciji in interpolaciji je Lema~\ref{lema:aproks&interp-A*}, ki opisuje preslikave iz povezane dopustne podmnožice odprte Riemannove ploskve v punktirano ničelno kvadriko $\textbf{\textup{A}}_{*} \subset \mathbb{C}^{n}$.
 V dokazu leme bomo potrebovali pojem Oka mnogoterosti, katerega definicija sledi, z lastnostjo povezanih dopustnih množic, ki premorejo končno Rungejevo bazo homologije, pa bomo lahko uporabili rezultat prejšnjega razdelka o periodno dominantih sprejih (Lema~\ref{lema:P-D-sprej}).
-Za iskanje bližnjih preslikav tistih, ki nastopajo v periodno dominantnem spreju, se bomo sklicali na različice Izrekov~\ref{izr:Runge},~\ref{izr:Bishop-Mergelyan} in~\ref{izr:Weierstrass-Florack}, tokrat za preslikave v (Oka) mnogoterosti~\cite[Theorem~1.13.1,~1.13.3]{alarcon2021minimal}, %(citiraj izreka 1.13.1, 1.13.3)
-ter preslikave, definirane na dopustnih množicah~\cite[Theorem~1.12.11]{alarcon2021minimal}. %(citiraj izrek 1.12.11)
+Za iskanje bližnjih preslikav tistih, ki nastopajo v periodno dominantnem spreju, se bomo sklicali na različice Izrekov~\ref{izr:Runge},~\ref{izr:Bishop-Mergelyan} in~\ref{izr:Weierstrass-Florack}, tokrat za preslikave v (Oka) mnogoterosti~\cite[Theorem~1.13.1,~1.13.3]{alarcon2021minimal},
+ter preslikave, definirane na dopustnih množicah~\cite[Theorem~1.12.11]{alarcon2021minimal}.
 Oka mnogoterost izhaja iz \emph{Oka teorije}, imenovane po japonskem matematiku Kiyoshiju Oka, ki je v sredini 20.~stoletja prispeval veliko k razvoju kompleksne analize več spremenljivk.
 
 % Oka mnogoterost
@@ -1698,7 +1693,6 @@ Oka mnogoterost izhaja iz \emph{Oka teorije}, imenovane po japonskem matematiku 
 Naj bo $X$ kompleksna mnogoterost in $n \in \mathbb{N}$. Če za poljubno kompaktno konveksno množico $K \subset \mathbb{C}^{n}$ vsako holomorfno preslikavo $f \colon U \to X$, kjer je $U$ okolica $K$, lahko aproksimiramo enakomerno na $K$ s celimi preslikavami $F \colon \mathbb{C}^{n} \to X$, potem mnogoterosti $X$ pravimo \emph{Oka mnogoterost}.
 \end{definicija}
 
-% CITIRAJ [Definition 1.13.7, Minimal surfaces from a complex analytic viewpoint (fleksibilna mnt.)] & [Stein mnf's and holomorphic mappings, Forstneric: Proposition 5.6.22]
 \begin{primer} [$\textbf{\textup{A}}_{*}$ je Oka mnogoterost] \label{primer-oka}
 Naj bo $z = (z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}$ in $n \geq 2$. Tedaj  homogen kvadratni polinom $p(z) = z_{1}^{2} + \cdots + z_{n}^{2}$ določa ničelno kvadriko $\textbf{\textup{A}} = \{z ; \ p(z)=0 \} \subset \mathbb{C}^{n}$.
 Za indekse $1 \leq i \neq j \leq n$ definirajmo holomorfna vektorska polja na $ \textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{ 0 \}$ s predpisi
@@ -1709,8 +1703,8 @@ Očitno so vektorska polja $\mathbb{C}$-linearna in polna, tangentna na punktira
 kar pomeni, da je tudi Oka mnogoterost (\cite[Definition~1.13.7]{alarcon2021minimal}).
 \end{primer}
 
-% CITIRAJ [Lemma 1.12.10]
-Naslednja lema~\cite[Lemma~1.12.10]{alarcon2021minimal}, ki jo navajamo brez dokaza, trdi, da ima povezana dopustna množica posebno bazo homologije. Ideja dokaza, to je konstrukcija Jordanovih krivulj, ki tvorijo homološko bazo, bo za nas pomembna v nadaljevanju. Natančneje, pri aproksimaciji in interpolaciji minimalnih ploskev bomo interpolacijskim pogojem med drugim zadostili s kontroliranjem integralov po teh krivuljah.
+% [Lemma 1.12.10]
+Naslednja lema, ki jo navajamo brez dokaza, trdi, da ima povezana dopustna množica posebno bazo homologije (dokaz~\cite[str.~69--71]{alarcon2021minimal}). Ideja dokaza, to je konstrukcija Jordanovih krivulj, ki tvorijo homološko bazo, bo za nas pomembna v nadaljevanju. Natančneje, pri aproksimaciji in interpolaciji minimalnih ploskev bomo interpolacijskim pogojem med drugim zadostili s kontroliranjem integralov po teh krivuljah.
 
 \begin{lema} [Rungejeva baza homologije povezane dopustne množice] \label{lema:Runge-hom-baza}
 Naj bo $S$ povezana dopustna množica. Obstaja baza homologije $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$ za $S$, sestavljena iz takih zaprtih odsekoma gladkih Jordanovih krivulj v $S$, da je unija $C = \cup_{i=1}^{l} C_{i}$ povezana in Rungejeva v vsaki regularni okolici $S_{\varepsilon}$ množice $S$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{j \neq i} C_{j}) = \emptyset$.
@@ -1974,7 +1968,6 @@ Naj bosta $M$ mnogoterost in $f \colon M \to [0, \infty)$ zvezna funkcija. Če j
 
 Za nas bodo pomembne Morsejeve funkcije izčrpanja na Riemannovih ploskvah. Njihov obstoj opisuje naslednja trditev~\cite[Proposition~1.12.5]{alarcon2021minimal}.
 
-% CITIRAJ Prop. 1.12.5
 \begin{trditev} \label{trd:Riem-ploskev-Morse-izcrpanje}
 Naj bo $K$ kompaktna $\mathcal{O}(M)$-konveksna podmnožica odprte Riemannove ploskve $M$ in $U \subset M$ odprta množica, ki vsebuje $K$.
 Tedaj na $M$ obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho$, za katero velja 
@@ -1983,8 +1976,7 @@ K \subset \{ \rho<0 \} \subset \{ \rho \leq 0 \} \subset U.
 \end{gather*}
 \end{trditev}
 
-Po zgornji trditvi lahko mnogoterost $M$ konstruiramo s pomočjo njene funkcije izčrpanja $\rho$, natančneje, podnivojnicam $\{ \rho \leq c \}$ ob prehodu kritičnih točk funkcije izčrpanja zaporedoma dodajamo t.~i.~ročaje. V tem primeru pravimo, da mnogoterost predstavimo kot \emph{ročajnik}. Pomemben izrek Morsejeve teorije, ki ga bomo navedli v nadaljevanju, ta postopek natančno opisuje. Pred tem definirajmo ustrezne pojme, ki so povzeti po~\cite[str.~20--22]{alarcon2021minimal}.
-% CITIRAJ: povzeto po Chapter 1.4, p. 20--22
+Po zgornji trditvi lahko mnogoterost $M$ konstruiramo s pomočjo njene funkcije izčrpanja $\rho$, natančneje, podnivojnicam $\{ \rho \leq c \}$ ob prehodu kritičnih točk funkcije izčrpanja zaporedoma dodajamo t.~i.~ročaje. V tem primeru pravimo, da mnogoterost predstavimo kot \emph{ročajnik}. Pomemben izrek Morsejeve teorije, ki ga bomo navedli v nadaljevanju, ta postopek natančno opisuje. Pred tem definirajmo ustrezne pojme, ki so povzeti po~\cite[Section~1.4]{alarcon2021minimal}.
 
 % ročajnik
 Vzemimo gladko mnogoterost $M$ z robom $bM$ razsežnosti $\dim M = m \in \mathbb{N}$.
@@ -2004,7 +1996,7 @@ med priključno množico in robom mnogoterosti, ki naj bo gladek difeomorfizem n
 imenujemo \emph{ročajnik}.
 Z ``glajenjem'' vzdolž množice $\phi(\mathbb{S}^{k-1} \times \mathbb{S}^{q-1})$ dosežemo, da ročajnik postane gladka mnogoterost z robom. V nadaljevanju bomo predpostavili, da so ročajniki takšni.
 
-% CITIRAJ Theorem 1.4.7
+% [Theorem 1.4.7]
 \begin{izrek} \label{izr:rocajnik}
 Naj bo $M$ gladka mnogoterost razsežnosti $\dim M= m$. Naj bo $\rho \colon M \to \mathbb{R}$ gladka Morsejeva funkcija, števili $a<b$ njeni regularni vrednosti in
 \begin{gather*}
@@ -2083,14 +2075,14 @@ ne obstajajo tri različne točke v $\Lambda$, ki bi se s preslikavo $x$ slikale
 %%%%% dokaz glavnega izreka
 \begin{dokaz}
 Ideja dokaza je indukcija, kjer na vsakem koraku konstruiramo konformno minimalno imerzijo, ki dano preslikavo $x$ aproksimira in interpolira na večji množici, začenši z dopustno množico $S$, pri tem pa uporabljamo Morsejevo teorijo. 
-Sklicujemo se na izrek o splošni legi za kompaktne omejene Riemannove ploskve~\cite[Theorem~3.4.1]{alarcon2021minimal}, % citiraj Theorem 3.4.1
+Sklicujemo se na izrek o splošni legi za kompaktne omejene Riemannove ploskve~\cite[Theorem~3.4.1]{alarcon2021minimal},
 ter rezultat o konstrukciji poti s predpisanimi integrali in nekritični primer izreka, ki smo ju obravnavali v preteklih razdelkih.
 
 Izberimo tako število $\varepsilon_0 > 0$, da je $2 \varepsilon_0 < \varepsilon$.
 Izberimo okolico $U \subset M$ množice $S$, za katero velja $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z})$ in $\Lambda \cap U \subset S$.
 Po Trditvi~\ref{trd:nekritcni-primer} tedaj obstaja polna konformna minimalna imerzija $x^{0} \colon U \to \mathbb{R}^{n}$, ki zadošča:
 $ ||x^{0}-x||_{\mathcal{C}^{r}(S)} < \varepsilon_0$, preslikavi $x^{0}$ in $x$ se ujemata do reda $k(p)$ v vsaki točki $p \in \Lambda \cap S$ ter $ \text{Flux}_{x^{0}} = \text{Flux}_{x}$ na $H_{1}(S, \mathbb{Z})$.
-Izrek~\cite[Theorem~3.4.1~(b),(c)]{alarcon2021minimal} % citiraj Theorem 3.4.1 - (b,c)
+Izrek~\cite[Theorem~3.4.1~(b),(c)]{alarcon2021minimal}
 zagotavlja, da preslikava $x^{0}$ zadošča tudi pogojema 4.~in 5.~v našem izreku.
 
 Trditev~\ref{trd:Riem-ploskev-Morse-izcrpanje} pove, da obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho \colon M \to \mathbb{R}$, za katero je
@@ -2131,14 +2123,14 @@ Obravnavali bomo tri primere glede na lastnosti množice $A_{i}$. \newline
 % 1. primer
 \textit{1.~PRIMER: $A_{i}$ ne vsebuje niti kritične točke funkcije $\rho$ niti točke iz $\Lambda$.} \newline
 Vemo, da je tedaj $A_{i}$ končna unija kolobarjev. Trditev~\ref{trd:nekritcni-primer} pove, da obstaja polna konformna minimalna imerzija $x^{i} \colon M_{i} \to \mathbb{R}^{n}$, ki zadošča točkam~\textit{(i)}--\textit{(iii)}.
-Pogoja~\textit{(iv)},~\textit{(v)} sledita iz Izreka~\cite[Theorem~3.4.1]{alarcon2021minimal}. % citiraj Theorem 3.4.1
+Pogoja~\textit{(iv)},~\textit{(v)} sledita iz Izreka~\cite[Theorem~3.4.1]{alarcon2021minimal}.
 Nadalje, število $\varepsilon_{i} > 0$ izberemo ustrezno majhno, da zadostimo še točki~\textit{(vi)}. \newline
 
 % 2. primer
 \textit{2.~PRIMER: $A_{i}$ vsebuje točko $p \in \Lambda$.} \newline
 Vemo, da tedaj $A_{i}$ ne vsebuje kritične točke funkcije $\rho$ in je $A_{i} \cap \Lambda = \{p\}$. Iz prvega sledi, da je množica $A_{i}$ končna unija kolobarjev.
 
-Po prvem delu dodatka k Izreku~\cite[Theorem~3.4.1]{alarcon2021minimal} % citiraj Theorem 3.4.1
+Po prvem delu dodatka k Izreku~\cite[Theorem~3.4.1]{alarcon2021minimal}
 velja naslednje: če je $x \colon \Lambda \to \mathbb{R}^{n}$ injektivna, potem z deformacijo preslikave $x^{i-1}$ na $M_{i-1}$ lahko dosežemo, da $x(p) \notin x^{i-1}(M_{i-1})$, hkrati pa ohranimo lastnosti~\textit{(i)}--\textit{(vi)}.
 
 Naj bo $D_{p} \subset A_{i}$ tak zaprt disk okrog točke $p \in A_{i}$, da je zožitev $x|_{D_{p}}$ konformna minimalna imerzija.
@@ -2163,7 +2155,7 @@ Nato razširimo še preslikavo $x^{i-1}$ na $S_{i}$ takole:
 \end{itemize}
 %
 Po konstrukciji je par $(x^{i-1}, f^{i-1} \theta) \in \textup{GCMI}(S_{i}, \mathbb{R}^{n})$. Iz definicije množice $S_{i}$ in izbora $A_{i}$ sledi $H_{1}(M_{i-1}, \mathbb{Z}) = H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$. 
-Sedaj uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek~\cite[Theorem~3.4.1]{alarcon2021minimal}, % citiraj izrek 3.4.1
+Sedaj uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek~\cite[Theorem~3.4.1]{alarcon2021minimal},
 da dobimo polno konformno minimalno imerzijo $x^{i} \colon M_{i} \to \mathbb{R}^{n}$, ki zadošča točkam~\textit{(i)}--\textit{(v)}. Za ustrezen izbor $\varepsilon_{i} > 0$ zadostimo še točki~\textit{(vi)}. \newline
 
 % 3. primer
@@ -2177,7 +2169,7 @@ Zanima nas sprememba topologije podnivojnic $\{ \rho \leq c \}$ za $c>0$, ko pre
 Ko prečkamo kritično točko $p$, spremembo topologije opišemo z dodajanjem povezane komponente, natančneje, $M_{i-1}$ disjunktno dodamo disk.
 Naj bo $D \subset A_{i}$ zaprt disk okrog točke $p$. Unija $S_{i} = M_{i-1} \cup D$ je dopustna množica, za katero velja $H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$.
 Preslikavo $x^{i-1}$ razširimo na $S_{i}$ tako, da za $x^{i-1}|_{D}$ izberemo poljubno konformno minimalno imerzijo.
-Spet uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek~\cite[Theorem~3.4.1]{alarcon2021minimal}, % citiraj izrek 3.4.1
+Spet uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek~\cite[Theorem~3.4.1]{alarcon2021minimal},
 da dobimo preslikavo $x^{i} \colon M_{i} \to \mathbb{R}^{n}$ in ustrezno izberemo $\varepsilon_{i}$. \newline
 
 Poglejmo si še primer, ko je Morsejev indeks točke $p$ enak $1$. Ob prečkanju te točke množici $M_{i-1}$ dodamo gladek vložen lok $E \subset A_{i} \cup bM_{i-1}$ s krajiščema v točkah $q_0, q_1 \in bM_{i-1}$, ki sta edini točki na $bM_{i-1} \cap E$, in $E$ seka $bM_{i-1}$ transverzalno. Lok $E$ usmerimo od $q_0$ do $q_1$.
@@ -2197,7 +2189,7 @@ Nato $x^{i-1}$ razširimo na $S_{i}$ kot v 2.~primeru, kar nam da $(x^{i-1}, f^{
 
 Po indukcijski predpostavki je $\textup{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(M_{i-1},\Z)$ in po zgornjem $\text{Flux}_{x^{i-1}}(C) = \mathfrak{p}(C)$, zato velja
 $\text{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(S_{i},\Z)$.
-Spet uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek~\cite[Theorem~3.4.1]{alarcon2021minimal}, % citiraj izrek 3.4.1
+Ponovno uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek~\cite[Theorem~3.4.1]{alarcon2021minimal},
 ter zaključimo kot v prejšnjih primerih. \newline
 
 % 3.2.2
@@ -2208,7 +2200,7 @@ Homolorfno funkcijo $f^{i-1} \colon M_{i-1} \to \textup{\textbf{A}}_{*}$ gladko 
 \Re \int_{E} f^{i-1} \theta = x^{i-1}(q_1) - x^{i-1}(q_0),
 \end{gather*}
 kjer zopet uporabimo regularnost točk $q_0, q_1$ in Lemo~\ref{lema:analog-gromova}.
-Nato kot prej preslikavo $x^{i-1}$ razširimo na množico $S_{i}$, dobimo posplošeno konformno minimalno imerzijo $(x^{i-1}, f^{i-1} \theta)$, uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek ~\cite[Theorem~3.4.1]{alarcon2021minimal}, % citiraj izrek 3.4.1
+Nato kot prej preslikavo $x^{i-1}$ razširimo na množico $S_{i}$, dobimo posplošeno konformno minimalno imerzijo $(x^{i-1}, f^{i-1} \theta)$, uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek ~\cite[Theorem~3.4.1]{alarcon2021minimal},
 ter končamo po enakem postopku kot v dosedanjih primerih. \newline
 
 Obravnavali smo vse možne situacije in v vsaki našli ustrezen par $(x^{i}, \varepsilon_{i})$. Indukcija je s tem zaključena. Od tod po razmisleku zgoraj sledi, da je preslikava $\tilde{x} = \lim_{i \to \infty} x^{i} \colon M \to \mathbb{R}^{n}$ iskana konformna minimalna imerzija, kar zaključi dokaz izreka.
@@ -2259,8 +2251,8 @@ Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-
 \end{enumerate}
 \end{definicija}
 
-% CITIRAJ [1906.01915.pdf, p.8]
-Pojasnimo smiselnost zgornje definicije. Klasična teorija minimalnih ploskev pove (~\cite[str.~8]{alarcon2019algebraic}):
+% [1906.01915.pdf, p.8]
+Pojasnimo smiselnost zgornje definicije. Klasična teorija minimalnih ploskev pove (\cite[str.~8]{alarcon2019algebraic}):
 naj bo $M$ odprta Riemannova ploskev (ali kompaktna Riemannova ploskev z robom) in $x \colon M \to \R^{n}$.
 Če je $M$ konformno ekvivalentna $R \setminus A$, kjer je $R$ kompaktna Riemannova ploskev z robom in $A \subset R^{\circ}$ končna množica točk, preslikava $x \colon R \setminus A \to \R^{n}$ konformna minimalna imerzija, 1-formo $\partial x$ pa lahko meromorfno razširimo na $R$ s poli v točkah množice $A$, potem je preslikava $x$ kompletna s končno totalno ukrivljenostjo.
 Velja tudi obrat.
@@ -2295,10 +2287,9 @@ Tedaj za dane preslikavo $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}
 \end{enumerate}
 \end{lema}
 
-% CITIRAJ [1906.01915.pdf: Theorem 3.1, dokaz]
 %%%%% dokaz leme
 \begin{dokaz}
-Sledimo dokazu~\cite[Theorem~3.1]{alarcon2019algebraic}.
+Sledimo dokazu izreka~\cite[Theorem~3.1]{alarcon2019algebraic}.
 Najprej uporabimo Weierstrassov izrek~\ref{izr:Weierstrass} o interpolaciji na odprtih Riemannovih ploskvah.
 Ker je po predpostavki $A \subset S^{\circ} \subset M$ končna množica in preslikava $f \in \mathcal{A}_{\infty}^{r}(S|A, \textup{\textbf{A}}_{*})$, po izreku obstaja holomorfna funkcija $w \in \mathcal{O}(M)$, ki ima ničle predpisanih stopenj v točkah množice $A$, na $M \setminus A$ pa je neničelna.
 Funkcijo $w$ lahko izberemo tako, da je produkt $wf$ brez ničel in polov na množici $A$. Sledi, da je $wf \in \mathcal{A}^{r}(S, \textup{\textbf{A}}_{*})$.
@@ -2391,7 +2382,7 @@ Ker je unija $U$ v drugem delu zgornjega izreka po predpostavki lokalno končna,
 M_{0} \Subset M_{1} \Subset \dots \Subset \bigcup_{i \geq 0} M_{i}=M,
 \end{gather*}
 za katere velja $U \cap M_{0} = \emptyset$ in $U \cap bM_{i} = \emptyset$ za $i = 1,2,\dots$ To zaporedje množic $\{ M_{i} \}_{i}$ igra pomembno vlogo v dokazu izreka, ki poteka z indukcijo, podobno kot dokaz glavnega izreka iz prejšnjega poglavja.
-Dokaz različice izreka se nahaja v~\cite[Theorem~7.1]{alarcon2019algebraic}. % CITIRAJ [1906.01915.pdf: Theorem 7.1, dokaz]
+Dokaz različice izreka se nahaja v~\cite[Theorem~7.1]{alarcon2019algebraic}. % [1906.01915.pdf: Theorem 7.1, dokaz]
 
 Mittag-Lefflerjev izrek za konformne minimalne imerzije, predvsem njegov drugi del, posnema glavni izrek za minimalne ploskve Mergelyanovega tipa (Izrek~\ref{izr:glavni-izrek-CMI}) v naslednjem smislu. Če minimalno imerzijo v glavnem izreku definiramo na punktirani dopustni množici in dovolimo, da imajo njeni Weierstrassovi podatki pole (v točkah, kjer podana imerzija ni definirana), tedaj dobimo zgornji izrek.
 
@@ -2408,7 +2399,7 @@ Tedaj obstaja meromorfna preslikava $\tilde{z} \colon M \to \C^{n}$, njena zoži
 % Kompletnost
 \subsection{Kompletnost}
 %
-Kompletnost preslikav oziroma mnogoterosti je ena izmed pomembnejših lastnosti v Riemannovi geometriji. Izkaže se, da preslikave iz izrekov o aproksimaciji in interpolaciji minimalnih ploskev iz prejšnjih razdelkov lahko izberemo tako, da so kompletne. To dejstvo opisuje naslednji izrek; predstavili bomo le osnovne ideje njegovega dokaza, povzete po~\cite[str.~171--173]{alarcon2021minimal}. % CITIRAJ [Theorem 3.9.1]
+Kompletnost preslikav oziroma mnogoterosti je ena izmed pomembnejših lastnosti v Riemannovi geometriji. Izkaže se, da preslikave iz izrekov o aproksimaciji in interpolaciji minimalnih ploskev iz prejšnjih razdelkov lahko izberemo tako, da so kompletne. To dejstvo opisuje naslednji izrek; predstavili bomo le osnovne ideje njegovega dokaza, povzete po~\cite[str.~171--173]{alarcon2021minimal}. % [Theorem 3.9.1]
 
 \begin{izrek} \label{izr:kompletnost}
 \begin{enumerate}
