@@ -554,7 +554,7 @@ dd^{c} = 2i\partial \bar{\partial} = \left( \frac{\partial^2}{\partial u^2} + \f
 \end{gather*}
 kjer je $\Delta$ Laplaceov operator glede na Evklidsko metriko.\newline
 %
-Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna} ($\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$.\newline
+Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna} (tj.~$\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah $(u,v)$ reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$.\newline
 %
 Funkcija $x \colon M \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}, če velja $dd^{c}x=0$.
 Kadar zadošča neenakosti $dd^{c}x \geq 0$, ji pravimo \emph{subharmonična}, oziroma \emph{strogo subharmonična} v primeru stroge neenakosti.
@@ -585,7 +585,7 @@ V definiciji pretoka je $[C] \in H_{1} (M, \Z)$, integral pa je po Greenovi form
 Zgodovinski pregled rezultatov v tem razdelku je povzet po~\cite{fornaess2020holomorphic}, navedeni izreki pa po~\cite[Section~1.12]{alarcon2021minimal}. \newline
 Najbolj klasična izreka v teoriji aproksimacije holomorfnih funkcij sta Weierstrassov izrek, ki pravi, da zvezne funkcije na zaprtih intervalih v $\R$ lahko aproksimiramo s polinomi (K.~Weierstrass, 1885), ter izrek C.~Rungeja iz istega leta o aproksimaciji holomorfnih funkcij v okolici kompaktne množice v $\C$ z racionalnimi funkcijami oziroma holomorfnimi polinomi v posebnem primeru. Razširitev Rungejevega izreka na odprte Riemannove ploskve sta dokazala H.~Behnke in K.~Stein (1949), povsem enak izrek pa velja tudi za kompaktne Riemannove ploskve z robom (H.~L.~Royden, 1967).
 
-% citiraj Theorem 1.12.1
+% Theorem 1.12.1
 \begin{izrek}[Rungejev aproksimacijski izrek za Riemannove ploskve] \label{izr:Runge}
 Naj bo $M$ Riemannova ploskev in $K$ njena kompaktna podmnožica. 
 Potem lahko vsako funkcijo $f$, ki je holomorfna v okolici $K$, aproksimiramo enakomerno na $K$ z meromorfnimi funkcijami $F$ na $M$ brez polov na $K$, ter s holomorfnimi funkcijami na $M$, če $K$ nima lukenj.
@@ -605,7 +605,7 @@ Kompaktne množice $K \subset M$, ki so Rungejeve podmnožice Riemannove ploskve
 Velik napredek v razvoju je pomenil Mergelyanov izrek o aproksimaciji holomorfnih funkcij (S.~N.~Mergelyan, 1951). Pove, da je zvezne funkcije na kompaktni množici $K \subset \C$ brez lukenj, ki so holomorfne v notranjosti $K^{\circ}$, tj.~razreda $\mathcal{A}(K)$, na kompaktu $K$ mogoče enakomerno aproksimirati s holomorfnimi polinomi.
 Različica velja tudi za odprte Riemannove ploskve (E.~Bishop, 1958).
 
-% citiraj Theorem 1.12.7
+% Theorem 1.12.7
 \begin{izrek} [Bishop-Mergelyanov aproksimacijski izrek] \label{izr:Bishop-Mergelyan}
 Naj bo $M$ odprta Riemannova ploskev in $K$ njena kompaktna podmnožica brez lukenj ($K$ je Rungejeva v $M$). Potem lahko vsako funkcijo v $\mathcal{A}(K)$ aproksimiramo enakomerno na $K$ s funkcijami v $\mathcal{O}(M)$.
 \end{izrek}
@@ -617,17 +617,17 @@ Oglejmo si še interpolacijo.
 Osnovni rezultat o interpolaciji holomorfnih funkcij je izrek K.~Weierstrassa iz leta 1876. Pokaže, da obstaja cela holomorfna funkcija $f \in \mathcal{O}(\C)$ z ničlami natanko v predpisanih točkah in izbranih stopenj za poljuben izbor točk $\{ a_{i} \}_{i \in \N} \subset \C$ (ki so ničle funkcije) in naravnih števil $\{ k_{i} \}_{i \in N}$ (stopnje ničel). Pove tudi eksplicitno obliko funkcije kot neskončnega produkta.
 Nadgrajen Weierstrassov izrek za preslikave na odprtih Riemannovih ploskvah je dokazal H.~Florack (1949).
 
-% citiraj Theorem 1.12.13
+% Theorem 1.12.13
 \begin{izrek} [Weierstrassov izrek za odprte Riemannove ploskve] \label{izr:Weierstrass}
-Naj bo $M$ odprta Riemannova ploskev, $A = \{a_{i}\}_{i \in \N} \subset M$ njena zaprta diskretna podmnožica in $k_{i} \in \N$, dana naravna števila za vse $i \in \N$.
+Naj bo $M$ odprta Riemannova ploskev, $A = \{a_{i}\}_{i \in \N} \subset M$ njena zaprta diskretna podmnožica in $k_{i} \in \N$ dana naravna števila za vse $i \in \N$.
 Tedaj obstaja holomorfna funkcija $f \in \mathcal{O}(M)$, ki ima ničle natanko v točkah množice $A$, stopnja ničle $a_{i}$ pa je enaka $k_{i}$ za vse indekse $i \in \N$.
 \end{izrek}
 
 Naslednji, Weierstrass-Florackov interpolacijski izrek, je natančnejša različica prejšnjega skupaj z Rungejevo aproksimacijo.
 
-% citiraj Theorem 1.12.14
+% Theorem 1.12.14
 \begin{izrek} [Weierstrass-Florackov interpolacijski izrek] \label{izr:Weierstrass-Florack}
-Naj bo $M$ odprta Riemannova ploskev in $K$ njena Rungejeva podmnožica. Naj bo $A = \{ a_i \}_{i=1}^{\infty}$ zaprta diskretna podmnožica v $M$, $U$ odprta podmnožica $M$, tako da je $A \cup K \subset U$ in $f$ meromorfna funkcija na $U$ z ničlami in poli le v točkah množice $A$.
+Naj bo $M$ odprta Riemannova ploskev in $K$ njena Rungejeva podmnožica. Naj bo $A = \{ a_i \}_{i=1}^{\infty}$ zaprta diskretna podmnožica v $M$, $U$ taka odprta podmnožica $M$, da je $A \cup K \subset U$ in $f$ meromorfna funkcija na $U$ z ničlami in poli le v točkah množice $A$.
 Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna funkcija $F$ na $M$, za katero velja:
 \begin{enumerate}
 \item $|F(z) - f(z)| < \varepsilon$ za vse $z \in K$,
@@ -638,9 +638,9 @@ Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna
 
 G.~Mittag-Leffler je leta 1884 dokazal rezultat, ki je soroden Weierstrassovemu izreku o interpolaciji holomorfnih funkcij. Pove naslednje:
 naj bo $A \subset \C$ zaprta diskretna množica in $f$ meromorfna funkcija v okolici množice $A$. Potem obstaja meromorfna funkcija $F$ na $\C$, ki je holomorfna na $\C \setminus A$, razlika $F-f$ pa je holomorfna v vsaki točki množice $A$. \newline
-Splošnjejši rezultat za odprte Riemannove ploskve je prispevek H.~Floracka iz leta 1948. \newline
+Splošnejši rezultat za odprte Riemannove ploskve je prispevek H.~Floracka iz leta 1948. \newline
 
-V nadaljevanju bo naš cilj formulirati ustrezne različice zgornjih izrekov za minimalne ploskve.
+V nadaljevanju bo naš cilj formulirati ustrezne različice zgornjih izrekov za orientabilne minimalne ploskve.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
