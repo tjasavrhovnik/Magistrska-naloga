@@ -299,7 +299,7 @@ Vzemimo gladki (oz.~razreda $\mathcal{C}^{r}$, $r \geq 1$) mnogoterosti $M$ in $
 \end{equation}
 
 \begin{definicija}
-Naj bo $f \colon M \to N$ gladka preslikava med gladkima mnogoterostima. Preslikava $f$ se imenuje 
+Naj bo $f \colon M \to N$ gladka preslikava med gladkima mnogoterostma. Preslikava $f$ se imenuje 
 \begin{enumerate}
 \item \emph{imerzija} v točki $p \in M$, če je njen diferencial $df_{p} \colon T_{p}M \to T_{f(p)}N$ injektiven;
 \item \emph{submerzija} v točki $p \in M$, če je njen diferencial $df_{p}$ surjektiven;
@@ -523,7 +523,7 @@ H = H^{N} = \textbf{\textup{H}} \cdot N = \lambda N \cdot N = \lambda, \nonumber
 \end{gather}
 Z besedami je vektor povprečne ukrivljenosti enak produktu povprečne ukrivljenosti in Gaussove preslikave.
 
-Glavni ukrivljenosti sta odvisni od enotske normale; če namesto pozitivno predznačene izberemo negativno enotsko normalo, se glavnima ukrivljenostima in posledično povprečni ukrivljenosti spremeni predznak. Po zgornji formuli pa vidimo, da je vektor povprečne ukrivljenosti neodvisen od izbora enotskega normalnega vektorskega polja.
+Glavni ukrivljenosti sta odvisni od enotske normale; če namesto pozitivno predznačene izberemo negativno enotsko normalo, se glavnima ukrivljenostma in posledično povprečni ukrivljenosti spremeni predznak. Po zgornji formuli pa vidimo, da je vektor povprečne ukrivljenosti neodvisen od izbora enotskega normalnega vektorskega polja.
 \end{primer}
 
 \begin{lema} \label{lema:laplace=2H}
@@ -659,11 +659,11 @@ Graf funkcije $f$ je množica
 \begin{gather}
 \Gamma_{f} = \{ (x,y,z) \in \R^3; \ (x,y) \in \overline{D}, \ z=f(x,y) \},
 \end{gather}
-njena ploščina pod grafom pa je enaka
+ploščina funkcije pod grafom pa je enaka
 \begin{gather} \label{eq:area-f}
 \text{Area}(f) = \int_{D} \sqrt{1 + f_{x}^2 + f_{y}^2} dxdy.
 \end{gather}
-Poiskati želimo funkcije na $\overline{D}$, ki imajo najmanjšo ploščino pod grafom, pri čemer vnaprej predpišemo vrednosti na robu domene $bD$ (ta naj bo $f|_{bD}$ za zgoraj izbrano funkcijo $f$). Z drugimi besedami, iščemo stacionarne točke funkcionala $\text{Area}$~\eqref{eq:area-f} med grafi nad $\overline{D}$ s predpisanimi robnimi vrednostmi.
+Poiskati želimo funkcije na $\overline{D}$ z najmanjšo ploščino pod grafom, pri čemer vnaprej predpišemo vrednosti na robu domene $bD$ (ta naj bo $f|_{bD}$ za zgoraj izbrano funkcijo $f$). Z drugimi besedami, iščemo stacionarne točke funkcionala $\text{Area}$~\eqref{eq:area-f} med grafi nad $\overline{D}$ s predpisanimi robnimi vrednostmi.
 
 Ker nas zanimajo funkcije, bližnje $f$, s fiksnimi robnimi vrednostmi, si oglejmo deformacije naslednje oblike:
 izberimo zvezno odvedljivo funkcijo $h \colon \overline{D} \to \R$, ki je ničelna na robu ($h|_{bD} = 0$), ter opazujmo družino funkcij $\{f + sh; \ s \in \R \}$.
@@ -720,7 +720,7 @@ kar utemelji izbiro linearnih deformacij.
 
 \begin{opomba}
 Biti minimalen graf je lokalna lastnost v naslednjem smislu.
-Če poljubna točka $(x_0,y_0) \in D$ premore odprto okolico $U \subset D$ z lastnostjo, da za vsako zvezno odvedljivo funkcijo $h_{U}$ z nosilcem na množici $U$  velja $\frac{d}{ds} \big|_{s=0} \text{Area}(f+sh) = 0$, potem funkcija $f$ reši enačbo za minimalne grafe~\eqref{eq:min-graph-eq}.
+Če poljubna točka $(x_0,y_0) \in D$ premore odprto okolico $U \subset D$ z lastnostjo, da za vsako zvezno odvedljivo funkcijo $h_{U}$ z nosilcem na množici $U$  velja $\frac{d}{ds} \big|_{s=0} \text{Area}(f+sh_{U}) = 0$, potem funkcija $f$ reši enačbo za minimalne grafe~\eqref{eq:min-graph-eq}.
 Zaključimo, da je graf minimalen natanko tedaj, ko je minimalen v okolici vsake točke.
 \end{opomba}
 
@@ -735,7 +735,7 @@ natanko tedaj, ko ima njen graf $S = \Gamma_{f}$ v vsaki točki ničelno povpre�
 
 %%%%% Dokaz trditve
 \begin{dokaz}
-Izberimo točko $(x_0,y_0) \in D$. Brez škode za splošnost lahko postavimo $(x_0,y_0)=(0,0)$ in $f(0)=0$, saj v nasprotnem ustrezno transliramo koordinate. Ekvivalenco iz trditve je zato dovolj dokazati v točki $(0,0)$.
+Izberimo točko $(x_0,y_0) \in D$. Brez škode za splošnost lahko postavimo $(x_0,y_0)=(0,0)$ in $f(0,0)=0$, saj v nasprotnem ustrezno transliramo koordinate. Ekvivalenco iz trditve je zato dovolj dokazati v točki $(0,0)$.
 
 Najprej si oglejmo poseben primer, ko je točka $(0,0)$ kritična točka funkcije $f$. To pomeni, da za parcialna odvoda velja $f_{x}(0,0)=f_{y}(0,0)=0$, enačba za minimalne grafe pa se tedaj glasi
 \begin{gather} \label{eq:min-graf-dokaz-poseben-primer}
@@ -795,7 +795,7 @@ Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Sliko $x(M)$ im
 Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega funkcionala $\text{Area}$.
 \end{definicija}
 
-Levo stran enakosti~\eqref{eq:1-var-ploščine} imenujemo \emph{prva variacija ploščine} pri $t=0$. Slednjo z geometrijskimi lastnostmi preslikave $x$, natančneje z ukrivljenostjo, povezuje \emph{prva variacijska formula} v naslednjem izreku. 
+Levo stran enakosti~\eqref{eq:1-var-ploščine} imenujemo \emph{prva variacija površine} pri $t=0$. Slednjo z geometrijskimi lastnostmi preslikave $x$, natančneje z ukrivljenostjo, povezuje \emph{prva variacijska formula} v naslednjem izreku. 
 
 % Prva variacijska formula
 \begin{izrek}[Prva variacijska formula] \label{izr:1-var-formula}
@@ -806,7 +806,7 @@ Potem za vsako gladko variacijo $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksn
 \end{equation}
 \end{izrek}
 
-Kaj nam prva variacijska formula pove, če se osredotočimo na poseben razred variacij imerzije? Predpostavimo, da je imerzija $x \colon M \to \R^{n}$ razreda $\mathcal{C}^4$, tj.~je preslikava $\textbf{\textup{H}}$ vsaj razreda $\mathcal{C}^2$. Variacijo definirajmo s predpisom
+Kaj nam prva variacijska formula pove, če se osredotočimo na poseben razred variacij imerzije? Predpostavimo, da je imerzija $x \colon M \to \R^{n}$ razreda $\mathcal{C}^4$, tj.~je preslikava $\textbf{\textup{H}}$ razreda vsaj $\mathcal{C}^2$. Variacijo definirajmo s predpisom
 \begin{equation}
 x^{t} = x + tf\textbf{\textup{H}},
 \end{equation}
@@ -815,11 +815,11 @@ kjer za $f$ izberimo gladko nenegativno funkcijo na $M$, ki je ničelna na robu 
 \frac{d}{dt} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) &= -2 \cdot \int_{M} E \cdot \textbf{\textup{H}} dA = -2 \cdot \int_{M} f \textbf{\textup{H}} \cdot \textbf{\textup{H}} dA \\
 &= -2 \cdot \int_{M} f |\textbf{\textup{H}}|^2 dA \leq 0.
 \end{align*} 
-Če je $\textbf{\textup{H}} = 0$ na $M$, je ploščina konstantna ($x^{t}=x$).
+Če je $\textbf{\textup{H}} = 0$ na $M$, je površina konstantna ($x^{t}=x$).
 Sicer obstaja točka, v kateri je $\textbf{\textup{H}} \neq 0$, in dodatno zahtevajmo, da je $f>0$ v okolici neke take točke. Potem je $\frac{d}{dt} \Big|_{t=0} \text{Area}(x^{t}(M)) < 0$.
-To pomeni, da z deformacijo ploskve $x(M) \subset \mathbb{R}^{n}$ v smeri vektorja povprečne ukrivljenosti $\textbf{\textup{H}}$ ploščina za majhne $t>0$ strogo pada.
+To pomeni, da z deformacijo ploskve $x(M) \subset \mathbb{R}^{n}$ v smeri vektorja povprečne ukrivljenosti $\textbf{\textup{H}}$ površina za majhne $t>0$ strogo pada.
 
-Po prvi variacijski formuli~\eqref{eq:1-var-formula} v primeru $\textbf{\textup{H}} = 0$ na $M$ imerzija $x$ očitno da minimalno ploskev. V nasprotnem z ustrezno izbiro vektorskega polja $E$ na $M$ ploščina variiranih ploskev $x^{t}(M)$ za majhne $t>0$ in $x^{t} = x + tE$ strogo pada. Ta razmislek združuje naslednji rezultat.
+Po prvi variacijski formuli~\eqref{eq:1-var-formula} v primeru $\textbf{\textup{H}} = 0$ na $M$ imerzija $x$ očitno da minimalno ploskev. V nasprotnem z ustrezno izbiro vektorskega polja $E$ na $M$ površina variiranih ploskev $x^{t}(M)$ za majhne $t>0$ in $x^{t} = x + tE$ strogo pada. Ta razmislek združuje naslednji rezultat.
 
 \begin{izrek} \label{izr:min-ekviv-H=0}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Ploskev $x(M)$ je minimalna natanko tedaj, ko je na $M$ vektor povprečne ukrivljenosti $\textbf{\textup{H}}$ preslikave $x$ identično enak $0$.
@@ -838,14 +838,14 @@ Vrednost je enaka $0$ natanko takrat, ko je ploskev del ravnine. Res, $TC(x) = 0
 Minimalne ploskve s \emph{končno totalno Gaussovo ukrivljenostjo}, tj.~$TC(x) > -\infty$, so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošnejše minimalne ploskve (z neskončno totalno Gaussovo ukrivljenostjo) ne premorejo.\\[0.1cm]
 
 % Druga variacijska formula
-S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}: naj bo $M$ kompaktna ploskev z robom, preslikava $x \colon M \to \mathbb{R}^{n}$ pa gladka minimalna imerzija. Potem velja
+S podobnimi tehnikami kot v dokazu Izreka~\ref{izr:1-var-formula} izpeljemo \emph{drugo variacijsko formulo}: naj bo $M$ gladka kompaktna ploskev z robom, preslikava $x \colon M \to \mathbb{R}^{n}$ pa gladka minimalna imerzija. Potem velja
 \begin{equation} \label{eq:2-var-formula}
-\frac{d^2}{dt^2} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) = \int_{M} {\left( 4|E|^{2} K^{E} + |\nabla{E}|^2 \right) dA},
+\frac{d^2}{dt^2} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) = \int_{M} {\left( 4|E|^{2} K^{N} + |\nabla{E}|^2 \right) dA},
 \end{equation}
-kjer $K^{E} = K^{N}$ označuje Gaussovo ukrivljenost ploskve $x(M)$.
+kjer $K^{N}$ označuje Gaussovo ukrivljenost ploskve $x(M)$.
 
 \begin{opomba}
-Za $M$ in $x$ kot zgoraj definirajmo funkcijo $f = |E|$ ter enotsko normalno vektorsko polje $N = \frac{E}{|E|}$ na množici $M^{*} = \{ x \in M ; \ f(x) \neq 0 \}$. Sledi $E = f \cdot N$, $\nabla E = (\nabla f \cdot N, f \cdot \nabla N)$ in $|\nabla E|^2 = |\nabla f|^2 + f^2 \cdot |\nabla N|^2$.
+Za $M$ in $x$ kot zgoraj definirajmo funkcijo $f = |E|$ ter enotsko normalno vektorsko polje $N = \frac{E}{|E|}$ na množici $M^{*} = \{ x \in M ; \ f(x) \neq 0 \}$. Sledi $E = f \cdot N$, $\nabla E = (\nabla f \cdot N, f \cdot \nabla N)$ in $|\nabla E|^2 = |\nabla f|^2 + f^2 |\nabla N|^2$.
 Enakost~\eqref{eq:2-var-formula} se zato glasi
 \begin{equation}
 \frac{d^2}{dt^2} \Big|_{t=0} \text{Area} \left(x^{t}(M)\right) = \int_{M} {\left( |\nabla f|^2 + f^2 (4K^{N} + |\nabla N|^2) \right) dA}.
@@ -893,7 +893,7 @@ Naj bodo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n 
 Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema, katerega moramo najprej natančno formulirati (\cite[Section~2.1]{lawson1980lectures}).
 
 Označimo z $\overline{\mathbb{D}}$ zaprt enotski disk z lokalnimi koordinatami $(u_{1}, u_{2})$ in izberimo gladko orientirano Jordanovo krivuljo $\Gamma \subset \mathbb{R}^{n}$.
-Naj bo $x \colon \overline{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, katere zožitev na rob diska $\mathbb{T}$ je monotona\footnote{Pravimo, da je zvezna preslikava $f \colon \mathbb{T} \to \Gamma$ \emph{monotona}, če je praslika $f^{-1}(x)$ povezana za vsak $x \in \Gamma$.} parametrizacija $x|_{\mathbb{T}} \colon \mathbb{T} \to \Gamma$ Jordanove krivulje $\Gamma$.
+Naj bo $x \colon \overline{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, katere zožitev na rob diska, $\mathbb{T}$, je monotona\footnote{Pravimo, da je zvezna preslikava $f \colon \mathbb{T} \to \Gamma$ \emph{monotona}, če je praslika $f^{-1}(x)$ povezana za vsak $x \in \Gamma$.} parametrizacija $x|_{\mathbb{T}} \colon \mathbb{T} \to \Gamma$ Jordanove krivulje $\Gamma$.
 Spomnimo se, da je površina ploskve, določene z imerzijo $x$ enaka
 \begin{equation} \label{eq:area}
 \text{Area}(x) = \int_{\mathbb{D}} \sqrt{|x_{u_1}|^2 |x_{u_2}|^2 - |x_{u_1} \cdot x_{u_2}|^2} du_{1}du_{2}.
@@ -918,7 +918,7 @@ Poljubna vektorja $x,y \in \mathbb{R}^{n}$ zadoščata
 Res, prva neenakost je očitna, druga pa je ekvivalentna neenakosti $(|x|-|y|)^2 \geq 0$, ki drži.
 Sledi $\sqrt{|x|^2 |y|^2 - |x \cdot y|^2} \leq \frac{1}{2} (|x|^2 + |y|^2)$. Če namesto vektorjev $x,y$ izberemo vektorja $x_{u_1}, x_{u_2} \in \mathbb{R}^{n}$, dobimo neenakost iz leme.
 
-Preslikava $x$ je konformna natanko tedaj, ko velja $|x_{u_1}| = |x_{u_2}| > 0$ in $x_{u_1} \cdot x_{u_2} = 0$. Enakost Dirichletovega energijskega integrala in površine je torej ekvivalentna konformnosti.
+Preslikava $x$ je po Lemi~\ref{lema:konform-ekvivalence} konformna natanko tedaj, ko velja $|x_{u_1}| = |x_{u_2}| > 0$ in $x_{u_1} \cdot x_{u_2} = 0$. Enakost Dirichletovega energijskega integrala in površine je zato ekvivalentna konformnosti.
 \end{dokaz}
 
 Preslikava, ki minimizira Dirichletov energijski integral, minimizira tudi površino, je konformna, in parametrizira minimalno ploskev z robom $\Gamma$.
@@ -946,7 +946,7 @@ Zaradi konformnosti preslikave vemo, da je
 \begin{gather*}
 \text{Area}(x) = \frac{1}{2} \mathcal{D}(x).
 \end{gather*}
-Prvo variacijo površine po definiciji dobimo z iskanjem stacionarnih točk ploskovnega funkcionala, ki v trenutnem primeru sovpadajo s stacionarnimi točkami Dirichletovega intergrala. Izračunajmo oboje. \newline
+Prvo variacijo površine po definiciji dobimo z iskanjem stacionarnih točk ploskovnega funkcionala, ki v trenutnem primeru sovpadajo s stacionarnimi točkami Dirichletovega integrala. Izračunajmo oboje. \newline
 Vzemimo gladko preslikavo $f \colon \overline{D} \to \R^{n}$, ki je ničelna na robu domene $bD$, in $t \in \R$. Tedaj je prva variacija Dirichletovega integrala v smeri preslikave $f$ enaka
 \begin{align*}
 \frac{d}{dt} \Big|_{t=0} \mathcal{D}(x+tf) &= \frac{d}{dt} \Big|_{t=0} \int_{D} \left( |x_{u_1}+tf_{u_1}|^2 + |x_{u_2}+tf_{u_2}|^2 \right) du_1 du_2 \\
@@ -984,7 +984,7 @@ Opazimo, da so stacionarne točke res enake, prva variacijska formula konformne 
 \begin{gather} \label{eq:1-var-formula-konformna}
 \frac{d}{dt} \Big|_{t=0} \text{Area}(x+tf) = \frac{d}{dt} \Big|_{t=0} \frac{1}{2} \mathcal{D}(x+tf) = - \int_{D} \Delta{x} \cdot f du_1 du_2.
 \end{gather}
-Po Definiciji~\ref{def:min-ploskev} in zveze~\eqref{eq:1-var-formula-konformna} sledi, da konformna imerzija določa minimalno ploskev natanko takrat, ko je harmonična. 
+Po Definiciji~\ref{def:min-ploskev} in zvezi~\eqref{eq:1-var-formula-konformna} sledi, da konformna imerzija določa minimalno ploskev natanko takrat, ko je harmonična. 
 Z enakim postopkom dokažemo, da formula~\eqref{eq:1-var-formula-konformna} velja tudi v primeru, ko za $D \subset M$ izberemo kompaktno domeno z odsekoma gladkim robom in je preslikava $x \colon M \to \R^{n}$ konformna imerzija na odprti Riemannovi ploskvi $M$.
 Natančnejšo karakterizacijo minimalnih ploskev podaja Izrek~\ref{izr:ekviv-min-ploskev} v prihajajočem razdelku.
 
@@ -1029,7 +1029,7 @@ Naj bo $\zeta = u + iv$ lokalna holomorfna koordinata na $M$. Tedaj je
 	&= (x_{u} - ix_{v})(du + idv) = (x_{u} - ix_{v})d\zeta, \\
 \partial x  &= (\partial x_{1}, \dots , \partial x_{n}) = \frac{1}{2}  (x_{u} - ix_{v})d\zeta.
 \end{align*}
-Preslikava $x$ je konformna natanko takrat, ko je $\sum_{i=1}^{n} \left((x_{i})_{u} \pm i(x_{i})_{v}\right)^2 = |x_{u}|^2 - |x_{v}|^2 \pm 2ix_{u} \cdot x_{v} = 0$, kar je ekvivaletno 
+Preslikava $x$ je konformna natanko takrat, ko je $\sum_{i=1}^{n} \left((x_{i})_{u} \pm i(x_{i})_{v}\right)^2 = |x_{u}|^2 - |x_{v}|^2 \pm 2ix_{u} \cdot x_{v} = 0$, kar je ekvivalentno 
 \begin{align*}
 (\partial x_1)^2 + \cdots + (\partial x_{n})^2 = \frac{1}{4} \left(|x_{u}|^2 - |x_{v}|^2 - 2ix_{u} \cdot x_{v} \right) d\zeta ^2 = 0,
 \end{align*}
@@ -1049,16 +1049,16 @@ V razdelku o holomorfnih in harmoničnih funkcijah na Riemannovih ploskvah smo g
 Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Holomorfno imerzijo $z = (z_{1}, \dots , z_{n}) \colon M \to \C^{n}$, za katero velja
 $(\partial{z_{1}})^2 + \cdots + (\partial{z_{n}})^2 = 0$, imenujemo \emph{holomorfna ničelna krivulja} v $\C^{n}$.
 \item
-Naj bo $z = x + \imath y \colon M \to \C^{n}$ holomorfna ničelna krivulja. Njena realni del in imaginarni del, $x, y \colon M \to \R^{n}$ imenujemo \emph{konjugirani minimalni ploskvi}.
+Naj bo $z = x + iy \colon M \to \C^{n}$ holomorfna ničelna krivulja. Njena realni del in imaginarni del, $x, y \colon M \to \R^{n}$ imenujemo \emph{konjugirani minimalni ploskvi}.
 \item
-Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{\imath t} z)} \colon M \to \R^{n}$ imenujemo \emph{pridružene minimalne ploskve} holomorfne ničelne krivulje $z$.
+Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{it} z)} \colon M \to \R^{n}$ imenujemo \emph{pridružene minimalne ploskve} holomorfne ničelne krivulje $z$.
 \end{enumerate}
 \end{definicija}
 
 Izrek~\cite[Theorem~1.10.5]{alarcon2021minimal} pravi, da vsaka odprta Riemannova ploskev premore povsod neničelno eksaktno 1-formo.
 Naj bosta $z \colon M \to \mathbb{C}^{n}$ holomorfna ničelna krivulja in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Diferencial $dz$ je 1-forma in obstaja holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$, ki 1-formi povezuje z enakostjo $dz = f \theta$. Tu je množica $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$ punktirana ničelna kvadrika v $\mathbb{C}^{n}$.
 
-\emph{Enneper-Weierstrassova reprezentacijska formula} predstavlja povezavo med konformnimi minimalnimi imerzijami na odprti Riemannovi ploskvi $M$ ter holomorfnimi preslikavami med $M$ in punktirano ničelno kvadriko, katerih realne periode so ničelne. Je posledica Izreka~\ref{izr:ekviv-min-ploskev}, zato jo bomo navedli brez dokaza. Rezultat je pomemben, saj predstavlja konformne minimalne ploskve in holomorne ničelne krivulje, konstruirane na univerzalen način. Metodo konstrukcije bomo v naslednjih poglavjih pogosto uporabljali.
+\emph{Enneper-Weierstrassova reprezentacijska formula} predstavlja povezavo med konformnimi minimalnimi imerzijami na odprti Riemannovi ploskvi $M$ ter holomorfnimi preslikavami med $M$ in punktirano ničelno kvadriko, katerih realne periode so ničelne. Je posledica Izreka~\ref{izr:ekviv-min-ploskev}, zato jo bomo navedli brez dokaza. Rezultat je pomemben, saj predstavlja konformne minimalne ploskve in holomorfne ničelne krivulje, konstruirane na univerzalen način. Metodo konstrukcije bomo v naslednjih poglavjih pogosto uporabljali.
 
 % Enneper-Weierstrassova formula
 \begin{izrek}[Enneper-Weierstrassova formula] \label{izr:Enneper-Weierstrass}
