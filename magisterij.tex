@@ -1473,7 +1473,7 @@ V dimenziji  $n=3$ za konformno minimalno imerzijo vsi zgornji pojmi sovpadajo (
 \begin{gather} \label{implikacije:full-nd-nf}
 \text{polna} \ \Rightarrow \ \text{neizrojena} \ \Rightarrow \ \text{neravna}.
 \end{gather}
-Obratne implikacije ne vejajo.
+Obratne implikacije ne veljajo.
 
 % prostori preslikav
 Naj bosta $M$ in $X$ kompleksni mnogoterosti. Prostor holomorfnih preslikav $M \to X$ označimo z $\mathcal{O}(M,X)$.
@@ -1492,14 +1492,14 @@ Podobno je
 \end{gather*} 
 v primeru polnih ter neravnih holomorfnih ničelnih krivulj, saj analogna definicija k Definiciji~\ref{def:full-flat-nd} velja za holomorfne ničelne krivulje. Vsi ti prostori so odprti podprostori v $\textup{CMI}(M, \R^{n})$ oziroma $\textup{NC}(M, \C^{n})$.
 
-Če je $M$ kompaktna Riemannova ploskev z nepraznim gladkim robom $bM$ in $r \in \N$, tedaj prostor konformnih minimalnih imerzij $M \to \R^{n}$ razreda $\mathcal{A}^{r}(M)$ označimo s $\textup{CMI}^{r}(M, \R^{n})$, prostor holomorfnih ničelnih krivulj $M \to \C^{n}$ razreda $\mathcal{A}^{r}(M)$ pa z $\textup{NC}^{r}(M, \C^{n})$.
+Če je $M$ kompaktna Riemannova ploskev z nepraznim gladkim robom $bM$ in $r \in \N$, tedaj prostor konformnih minimalnih imerzij $M \to \R^{n}$ razreda $\mathcal{C}^{r}(M)$ označimo s $\textup{CMI}^{r}(M, \R^{n})$, prostor holomorfnih ničelnih krivulj $M \to \C^{n}$ razreda $\mathcal{C}^{r}(M)$ pa z $\textup{NC}^{r}(M, \C^{n})$.
 Odprte podprostore polnih in neravnih preslikav tokrat označimo podobno kot prej; zanje velja
 \begin{gather*}
 \textup{CMI}_{full}^{r}(M, \R^{n}) \subset \textup{CMI}_{nf}^{r}(M, \R^{n}), \quad \textup{NC}_{full}^{r}(M, \C^{n}) \subset \textup{NC}_{nf}^{r}(M, \C^{n}).
 \end{gather*}
 
 \begin{opomba}
-Imerzija $x \colon M \to \mathbb{R}^{n}$ razreda $\mathcal{A}^{r}(M)$ na kompaktni Riemannovi ploskvi z nepraznim gladkim robom $bM$ je element prostora $\textup{CMI}^{r}(M, \R^{n})$ natanko tedaj, ko je pripadajoča 1-forma $\partial x = (\partial x_{1}, \dots , \partial x_{n})$ holomorfna na $M^{\circ} = M \setminus bM$ in zadošča ničelnemu pogoju $(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0$.
+Imerzija $x \colon M \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(M)$ na kompaktni Riemannovi ploskvi z nepraznim gladkim robom $bM$ je element prostora $\textup{CMI}^{r}(M, \R^{n})$ natanko tedaj, ko je pripadajoča 1-forma $\partial x = (\partial x_{1}, \dots , \partial x_{n})$ holomorfna na $M^{\circ} = M \setminus bM$ in zadošča ničelnemu pogoju $(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0$.
 \end{opomba}
 
 % kompaktno-odprta C^{r} topologija
@@ -1521,17 +1521,19 @@ $T_{f(p)} \textbf{\textup{A}} \subset T_{f(p)} \C^{n} \cong \mathbb{C}^{n}$ po v
 \begin{dokaz}
 Oglejmo si preslikavo 
 $\Phi \colon \C^{n} \to \C$, definirano s predpisom $\Phi(z) = \sum_{j=1}^{n} z_{j}^{2}$.
-Ničelno kvadriko~\eqref{ničelna-kvadrika} tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0 \} )$.
+Ničelno kvadriko~\eqref{ničelna-kvadrika} tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0\} )$.
 Njen tangentni prostor v točki $z = (z_{1}, \dots , z_{n}) \in \C^{n}$ je enak jedru diferenciala, ki kvadriko določa, zato je
-\[ T_{z} \textbf{\textup{A}} = \ker (d \Phi_{z}) = \ker (z \mapsto \sum_{j=1}^{n} z_{j} dz_{j}). \]
+\begin{gather*}
+T_{z} \textbf{\textup{A}} = \ker \left(d \Phi_{z} \right) = \ker \left(z \mapsto \sum_{j=1}^{n} z_{j} dz_{j} \right).
+\end{gather*}
 
-Naj bosta vektorja $z, \ w \in \C_{*}^{n}$. Potem sta njuna tangentna prostora enaka, $ T_{z} \textbf{\textup{A}} = T_{w} \textbf{\textup{A}} $, natanko takrat, ko velja $z_{j} = \lambda w_{j}$ za vse $j = 1, \dots , n$ in nek $\lambda \in \C$, kar je ekvivalentno pogoju, da sta vektorja $z$ in $w$ kolinearna.
+Naj bosta vektorja $z, w \in \C_{*}^{n}$. Potem sta njuna tangentna prostora enaka, $ T_{z} \textbf{\textup{A}} = T_{w} \textbf{\textup{A}} $, natanko takrat, ko velja $z_{j} = \lambda w_{j}$ za vse $j = 1, \dots , n$ in nek $\lambda \in \C$, kar je ekvivalentno pogoju, da sta vektorja $z$ in $w$ kolinearna.
 
 Po definiciji je preslikava $f$ neravna, če njena slika $f(M)$ ni vsebovana v nobeni afini kompleksni premici v $\C^{n}$. Skupaj z zgornjim je slednje ekvivalentno 
 $ \mathcal{L}in \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
 \end{dokaz}
 
-V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih konformnih minimalnih imerzij in ničelnih krivulj operirali s splošnejšimi preslikavami, imenovanimi posplošene minimalne imerzije ter ničelne krivulje; naravno pa se bodo zaradi topoloških lastnosti množic, na katerih bomo preslikave aproksimirali, pojavile tudi množice iz naslednje definicije.
+V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih konformnih minimalnih imerzij in ničelnih krivulj operirali s splošnejšimi preslikavami, imenovanimi posplošene minimalne imerzije ter ničelne krivulje; naravno pa se bodo zaradi topoloških lastnosti množic, na katerih bomo preslikave aproksimirali in interpolirali, pojavile tudi množice iz naslednje definicije.
 
 % dopustna množica
 \begin{definicija} [Dopustna množica] \label{def:dopustna-mnozica}
@@ -1562,9 +1564,9 @@ Prvi pogoj iz definicije posplošene konformne minimalne imerzije pravi $f \thet
 
 Tudi za posplošene konformne minimalne imerzije velja Enneper-Weierstrassova formula.
 Naj bo $S$ povezana dopustna množica in $(x, f \theta) \in \textup{GCMI}^{r}(S, \R^{n})$. Za poljubno točko $p_{0} \in S$ in poznano preslikavo $f$ lahko posplošeno konformno minimalno imerzijo $x \colon S \to \R^{n}$ konstruiramo s formulo
-\begin{align} \label{eq:EW-gcmi}
+\begin{gather} \label{eq:EW-gcmi}
 x(p) = x(p_{0}) + \Re \int_{p_0}^{p} f \theta, \quad p \in S.
-\end{align} 
+\end{gather} 
 Obratno, če za preslikavo $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ velja $ \Re \int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, potem le-ta določa posplošeno konformno minimalno imerzijo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:EW-gcmi}.
 
 % posplošena ničelna krivulja
@@ -1579,7 +1581,7 @@ Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena ničelna krivulja} $S \to 
 Posplošena ničelna krivulja $(z, f \theta)$ je \emph{neravna} oziroma \emph{polna} natanko tedaj, ko je preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ neravna oziroma polna na vsaki relativno odprti podmnožici $S$.
 \end{definicija}
 
-Prostori neravnih, polnih in posplošenih ničelnih krivulj ustrezajo verigi inkluzij
+Prostori polnih, neravnih in posplošenih ničelnih krivulj ustrezajo verigi inkluzij
 \begin{gather*}
 \textup{GNC}_{full}^{r}(S, \C^{n}) \subset \textup{GNC}_{nf}^{r}(S, \C^{n}) \subset \textup{GNC}^{r}(S, \C^{n}).
 \end{gather*}
@@ -1589,9 +1591,9 @@ Iz prvega pogoja v definiciji posplošene ničelne krivulje sledi, da je zožite
 \end{opomba}
 
 Za povezano dopustno množico $S$, par $(z, f \theta) \in \textup{GNC}^{r}(S, \C^{n})$, znano preslikavo $f$ in poljubno točko $p_{0} \in S$ posplošeno ničelno krivuljo $z \colon S \to \C^{n}$ konstruiramo s pomočjo Enneper-Weierstrassove formule
-\begin{align} \label{eq:EW-gnc}
+\begin{gather} \label{eq:EW-gnc}
 z(p) = z(p_{0}) + \int_{p_0}^{p} f \theta, \quad p \in S.
-\end{align} 
+\end{gather} 
 Velja tudi obrat; preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$, ki zadošča $\int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, določa posplošeno ničelno krivuljo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:EW-gnc}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
