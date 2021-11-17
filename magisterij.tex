@@ -1242,9 +1242,9 @@ Ker je $z(0) = (1,0,0)$ in $z'(\zeta) = (-\sin \zeta, \cos \zeta, -i) d\zeta$, j
 z(\zeta) &= (1,0,0) + \int_{0}^{\zeta} (-\sin \xi, \cos \xi, -i) d\xi \nonumber \\
 	&= (1,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) d\xi.
 \end{align}
-Iz zadnje preberemo njeno kompleksno Gaussovo preslikavo $\mathfrak{g}(\zeta) = e^{i\zeta}$.
+Iz zadnje preberemo njeno kompleksno Gaussovo preslikavo, $\mathfrak{g}(\zeta) = e^{i\zeta}$.
 
-Pridružene minimalne ploskve k helikatenoidi predstavlja družina preslikav (za $t \in \mathbb{R})$, $x^{t} = \Re (e^{it} z) \colon \mathbb{C} \to \mathbb{R}^3$, definiranih s predpisom
+Pridružene minimalne ploskve k helikatenoidi predstavlja družina preslikav (za $t \in \mathbb{R})$ $x^{t} = \Re (e^{it} z) \colon \mathbb{C} \to \mathbb{R}^3$, definiranih s predpisom
 %
 \begin{align} \label{eq:pridruzene-helikatenoida}
 x^{t}(\zeta) &= \Re (e^{it} \cos \zeta, e^{it} \sin \zeta, -i e^{it} \zeta) \nonumber \\
@@ -1285,7 +1285,7 @@ x(u,v) = (\cos u \cdot \cosh v, \sin u \cdot \cosh v, v),
 \end{equation}
 pravimo \emph{katenoida}. Po drugi strani do njene konformne parametrizacije pridemo preko pridruženih minimalnih ploskev k izbrani holomorfni ničelni krivulji -- katenoida ustreza parametrom $t = k \pi, \ k \in \mathbb{Z}$.
 
-Geometrijsko je obravnavana minimalna ploskev rotacijska ploskev, ki nastane z rotacijo grafa hiperboličnega kosinusa (t.~i.~\emph{verižnice}) okoli izbrane osi v prostoru $\mathbb{R}^3$. Katenoida z osjo rotacije $x=y=0$ na primer nastane, če graf krivulje $z \mapsto (\cosh z, 0, z), \ z \in \mathbb{R}$, zavrtimo okrog $z$-osi. Implicitna enačba nastale minimalne ploskve se glasi
+Geometrijsko je obravnavana minimalna ploskev rotacijska ploskev, ki nastane z rotacijo grafa hiperboličnega kosinusa (t.~i.~\emph{verižnice}) okoli izbrane osi v prostoru $\mathbb{R}^3$. Katenoida z osjo rotacije $x=y=0$ na primer nastane, če graf krivulje $z \mapsto (\cosh z, 0, z), \ z \in \mathbb{R}$, zavrtimo okoli $z$-osi. Implicitna enačba nastale minimalne ploskve se glasi
 \begin{equation} \label{eq:katenoida-implicitno}
 x^2 + y^2 = \cosh ^2 z.
 \end{equation}
@@ -1341,8 +1341,8 @@ Njegova kompleksna Gaussova preslikava je $\mathfrak{g}(\zeta) = e^{i\zeta}$, ka
 
 O helikoidu sta prva pisala L.~Euler in J.~B.~Meusnier v 80.-ih letih 18.~stoletja, brez znanja o konjugiranih minimalnih ploskvah in povezavi s kompleksno analizo. Omenimo še dve zanimivi lastnosti obravnavane minimalne ploskve:
 \begin{itemize}
-\item Za vsako točko na helikoidu obstaja premica, ki leži na njem in gre skozi to točko.
-\item Za vsako točko na helikoidu obstaja vijačnica, ki leži na njem in gre skozi to točko.
+\item Za vsako točko na helikoidu obstaja premica, ki leži na njem, in gre skozi to točko.
+\item Za vsako točko na helikoidu obstaja vijačnica, ki leži na njem, in gre skozi to točko.
 \end{itemize}
 Prvo lastnost kot minimalni ploskvi v $\mathbb{R}^3$ premoreta le helikoid in ravnina, kar je l.~1842 dokazal E.~C.~Catalan. Druga lastnost namiguje na izvor imena -- helikoid spominja na latinsko besedo ``helix'', kar v slovenščini imenujemo vijačnica.
 
@@ -1353,10 +1353,10 @@ Prvo lastnost kot minimalni ploskvi v $\mathbb{R}^3$ premoreta le helikoid in ra
 Po drugi polovici 18.~stoletja je bil H.~Scherk prvi, ki je leta 1835 odkril dva nova primera -- prvo in drugo Scherkovo minimalno ploskev. 
 \emph{Prvo Scherkovo ploskev} opisuje implicitna enačba
 \begin{gather}
-e^{z} \cos(y) = \cos(x), \quad (x,y,z) \in \R^3.
+e^{z} \cos y = \cos x, \quad (x,y,z) \in \R^3.
 \end{gather}
 Iz enačbe vidimo, da je ploskev invariantna za translacije $(x,y,z) \mapsto (x+2\pi,y,z)$ ter $(x,y,z) \mapsto (x,y+2\pi,z)$.
-Če opazujemo graf funkcije $z = \log \left(\frac{\cos(x)}{\cos(y)} \right)$ nad domeno $(x,y) \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)^2$, opazimo asimptote:
+Če opazujemo graf funkcije $z = \log \left(\frac{\cos x}{\cos y} \right)$ nad domeno $(x,y) \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)^2$, opazimo asimptote:
 \begin{itemize}
 \item ko gre $(x,y) \to \left( \pm \frac{\pi}{2}, y \right)$ za $|y| < \frac{\pi}{2}$, gre $z \to +\infty$;
 \item ko gre $(x,y) \to \left( x, \pm \frac{\pi}{2} \right)$ za $|x| < \frac{\pi}{2}$, gre $z \to -\infty$.
@@ -1364,7 +1364,7 @@ Iz enačbe vidimo, da je ploskev invariantna za translacije $(x,y,z) \mapsto (x+
 Prva Scherkova ploskev je kompletna. 
 Njej konjugirana minimalna ploskev se imenuje \emph{druga Scherkova ploskev} z implicitno enačbo
 \begin{gather}
-\sin(z) = \sinh(x) \sinh(y).
+\sin z = \sinh x \sinh y.
 \end{gather}
 
 % slika 1. in 2. Scherkove ploskve
@@ -1409,14 +1409,14 @@ Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskv
 % Neorientabilna primera
 \subsubsection{Neorientabilna primera}
 %
-E.~L.~Henneberg je leta 1875 odkril prvo minimalno neorientabilno ploskev v $\R^3$, ki jo imenujemo \emph{Hennebergova ploskev}.
+E.~L.~Henneberg je leta 1875 odkril prvo neorientabilno minimalno ploskev v $\R^3$, ki jo imenujemo \emph{Hennebergova ploskev}.
 Opisuje jo parametrizacija
 %
 \begin{equation}
 \begin{cases}
-x(u,v) = 2 \sinh(u) \cos(v) -\frac{2}{3} \sinh(3u) \cos(3v) \\
-y(u,v) = 2 \sinh(u) \sin(v) + \frac{2}{3} \sinh(3u) \sin(3v) \\
-z(u,v) = 2 \cosh(2u) \cos(2v)
+x(u,v) = 2 \sinh u \cos v -\frac{2}{3} \sinh 3u \cos 3v \\
+y(u,v) = 2 \sinh u \sin v + \frac{2}{3} \sinh 3u \sin 3v \\
+z(u,v) = 2 \cosh 2u \cos 2v
 \end{cases}
 \end{equation}
 in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gaussova ukrivljenost je enaka $-2 \pi$, je kompletna in ima dve singularni točki.
@@ -1429,7 +1429,7 @@ in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gau
 \end{center}
 \end{figure}
 
-Znano je (\cite[Section~2.4]{alarcon2021minimal}), da je vsaka neorientabilna minimalna ploskev $S$, ki nastane z imerzijo v prostor $\R^{n}$, slika 2-listne konformne minimalne imerzije $x \colon M \to S \subset \R^{n}$, kjer je $M$ Riemannova ploskev.
+Znano je (\cite[Section~2.4]{alarcon2021minimal}), da je vsaka neorientabilna minimalna ploskev $S$, ki nastane z imerzijo v prostor $\R^{n}$ ($n \geq 3$), slika 2-listne konformne minimalne imerzije $x \colon M \to S \subset \R^{n}$, kjer je $M$ Riemannova ploskev.
 Harmonična preslikava $x \colon \C^{*} \to \R^{3}$ s predpisom
 \begin{equation*}
 x(\zeta) = \Re \int_{1}^{\zeta} \left( \frac{z-1}{z^2(z+1)} - \frac{z^2(z+1)}{z-1}, i \left( \frac{z^2(z+1)}{z-1} + \frac{z-1}{z^2(z+1)} \right), 2 \right) \frac{i(z^2-1)}{2z^2} dz
