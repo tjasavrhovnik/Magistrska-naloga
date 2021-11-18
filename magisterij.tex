@@ -1453,6 +1453,8 @@ Osredotočili se bomo na povezane odprte Riemannove ploskve $M$ z izbrano fiksno
 Zavedati se moramo, da ne moremo pričakovati izrekov v splošni obliki, kot veljajo za holomorfne funkcije. Razlog je ta, da je potrebno nadzirati periode preslikave, natančneje, ko aproksimiramo diferencial konformne minimalne imerzije, se periode diferenciala spremenijo. Aproksimacija periodno dominantnega spreja nam omogoča najti bližnjo preslikavo v novem spreju, ki ima na bazi homologije ničelne realne periode, zato po Enneper-Weierstrassovi formuli določa minimalno imerzijo.
 Druga pomembna stvar pa so dopustne množice. Množice, na katerih aproksimiramo, morajo imeti končno homološko grupo. Ker vsaka odprta Riemannova ploskev premore Morsejevo funkcijo izčrpanja, ob prečkanju njene kritične točke indeksa $1$ spremembo topologije opišemo z dodajanjem vloženega loka skozi to točko. Na ta način naravno konstruiramo dopustno množico.
 
+Poglavje sledi novejšim rezultatom, ki so predstavljeni v 3.~poglavju monografije~\cite{alarcon2021minimal}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Prostori preslikav in posplošene minimalne imerzije
 \subsection{Prostori preslikav in posplošene minimalne imerzije}
@@ -1600,7 +1602,7 @@ Velja tudi obrat; preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*}
 % Periodno dominantni spreji
 \subsection{Periodno dominantni spreji}
 %
-V tem razdelku bomo definirali pojem periodno dominantnega spreja holomorfnih preslikav v punktirano ničelno kvadriko. Glavni rezultat bo lema, ki opisuje neravne holomorfne preslikave iz dopustne množice v punktirano ničelno kvadriko -- izkaže se, da je vsaka taka preslikava jedro periodno dominantnega spreja. Lema je pomembna pri aproksimaciji konformnih minimalnih imerzij. Natančneje, namesto imerzij bomo najprej aproksimirali periodno dominantne spreje in s tem dobili nove, bližnje preslikave z želenimi topološkimi lastnostmi, nato pa zanje uporabili Enneper-Weierstrassovo formulo ter končno dobili bližnje konformne minimalne imerzije.
+V tem razdelku bomo definirali pojem periodno dominantnega spreja holomorfnih preslikav v punktirano ničelno kvadriko. Glavni rezultat je lema, ki opisuje neravne holomorfne preslikave iz dopustne množice v punktirano ničelno kvadriko -- izkaže se, da je vsaka taka preslikava jedro periodno dominantnega spreja. Lema je pomembna pri aproksimaciji konformnih minimalnih imerzij. Natančneje, namesto imerzij bomo najprej aproksimirali periodno dominantne spreje in s tem dobili nove, bližnje preslikave z želenimi topološkimi lastnostmi, nato pa zanje uporabili Enneper-Weierstrassovo formulo ter končno dobili bližnje konformne minimalne imerzije.
 
 \begin{definicija} [Periodna preslikava]
 Naj bo $M$ povezana odprta Riemannova ploskev in $\theta$ fiksna povsod neničelna holomorfna 1-forma na $M$. Naj bo $\mathcal{C} = \{C_1, \dots , C_{l} \}$ družina gladkih orientiranih vloženih lokov in zaprtih Jordanovih krivulj v $M$ ter $C = \cup_{i=1}^{l} C_{i}$.
@@ -1635,7 +1637,7 @@ Preslikavo $\Phi_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej}, imenujemo \emph{per
 
 %%%%% dokaz leme
 \begin{dokaz}
-Prvi del leme bomo dokazali tako, da bomo konstruirali periodno dominantni sprej. Potrebovali bomo Lemo~\ref{lema:neravna f}, Bishop-Mergelyanov izrek o aproksimaciji~\ref{izr:Bishop-Mergelyan} in pojem toka vektorskega polja.
+Prvi del leme bomo dokazali tako, da bomo konstruirali periodno dominantni sprej. Potrebovali bomo Lemo~\ref{lema:neravna f}, Bishop-Mergelyanov izrek o aproksimaciji (Izrek~\ref{izr:Bishop-Mergelyan}) in pojem toka vektorskega polja.
 Zaradi enostavnosti postavimo $r=0$ (za $r>0$ dokaz poteka analogno).
 
 Po predpostavki je za vse $i \in \{ 1, \dots, l \}$ lok $I_{i} \subset C_{i} \in \mathcal{C}$ netrivialen, za katerega velja $I_{i} \cap (\cup_{i \neq j} C_{j}) = \emptyset$ in je zožitev preslikave $f|_{I_{i}}$ neravna. Po Lemi~\ref{lema:neravna f} zato obstajajo točke $p_{i,j} \in I_{i}$ in taka holomorfna vektorska polja $V_{i,j}$ na $\C^{n}$, $j \in \{1, \dots, n \}$, ki so tangentna na $\textbf{\textup{A}}$, da je $\mathcal{L}in \{ V_{i,j}(f(p_{i,j})) ; \ j = 1, \dots, n \} = \C^{n}$ za vse $i$.
@@ -1685,7 +1687,7 @@ Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{
 \subsection{Aproksimacija in interpolacija preslikav v punktirano ničelno kvadriko}
 %
 Prvi rezultat o aproksimaciji in interpolaciji je Lema~\ref{lema:aproks&interp-A*}, ki opisuje preslikave iz povezane dopustne podmnožice odprte Riemannove ploskve v punktirano ničelno kvadriko $\textbf{\textup{A}}_{*} \subset \mathbb{C}^{n}$.
-V dokazu leme bomo potrebovali pojem Oka mnogoterosti, katerega definicija sledi, z lastnostjo povezanih dopustnih množic, ki premorejo končno Rungejevo bazo homologije, pa bomo lahko uporabili rezultat prejšnjega razdelka o periodno dominantih sprejih (Lema~\ref{lema:P-D-sprej}).
+V dokazu leme bomo potrebovali pojem Oka mnogoterosti, katerega definicija sledi, z lastnostjo povezanih dopustnih množic, ki premorejo končno Rungejevo bazo homologije, pa bomo lahko uporabili rezultat prejšnjega razdelka o periodno dominantnih sprejih (Lema~\ref{lema:P-D-sprej}).
 Za iskanje bližnjih preslikav tistih, ki nastopajo v periodno dominantnem spreju, se bomo sklicali na različice Izrekov~\ref{izr:Runge},~\ref{izr:Bishop-Mergelyan} in~\ref{izr:Weierstrass-Florack}, tokrat za preslikave v (Oka) mnogoterosti~\cite[Theorem~1.13.1,~1.13.3]{alarcon2021minimal},
 ter preslikave, definirane na dopustnih množicah~\cite[Theorem~1.12.11]{alarcon2021minimal}.
 Oka mnogoterost izhaja iz \emph{Oka teorije}, imenovane po japonskem matematiku Kiyoshiju Oka, ki je v sredini 20.~stoletja prispeval veliko k razvoju kompleksne analize več spremenljivk.
@@ -1701,7 +1703,7 @@ Za indekse $1 \leq i \neq j \leq n$ definirajmo holomorfna vektorska polja na $ 
 \begin{gather*}
 V_{ij} = z_{i} \frac{\partial}{\partial z_{j}} - z_{j} \frac{\partial}{\partial z_{i}}.
 \end{gather*}
-Očitno so vektorska polja $\mathbb{C}$-linearna in polna, tangentna na punktirano ničelno kvadriko $\textbf{\textup{A}}_{*}$ in $\mathcal{L}in \{ V_{ij}(x) ; \ i,j \} = T_{x}\textbf{\textup{A}}_{*}$ v vsaki točki $x \in \textbf{\textup{A}}_{*}$. Po definiciji je zato kompleksna mnogoterost $\textbf{\textup{A}}_{*}$ fleksibilna\footnote{Pravimo, da je kompleksna mnogoterost $M$ \emph{fleksibilna}, kadar na $M$ obstaja končno mnogo polnih holomorfnih vektorskih polj $V_{1}, \dots , V_{n}$, tako da v vsaki točki $p \in M$ velja $\mathcal{L}in \{ V_{1}(p), \dots , V_{n}(p) \} = T_{p}M$.}, 
+Očitno so vektorska polja $\mathbb{C}$-linearna in kompletna, tangentna na punktirano ničelno kvadriko $\textbf{\textup{A}}_{*}$ in $\mathcal{L}in \{ V_{ij}(x) ; \ i,j \} = T_{x}\textbf{\textup{A}}_{*}$ v vsaki točki $x \in \textbf{\textup{A}}_{*}$. Po definiciji je zato kompleksna mnogoterost $\textbf{\textup{A}}_{*}$ fleksibilna\footnote{Pravimo, da je kompleksna mnogoterost $M$ \emph{fleksibilna}, kadar na $M$ obstaja končno mnogo takih kompletnih holomorfnih vektorskih polj $V_{1}, \dots , V_{n}$, da v vsaki točki $p \in M$ velja $\mathcal{L}in \{ V_{1}(p), \dots , V_{n}(p) \} = T_{p}M$.}, 
 kar pomeni, da je tudi Oka mnogoterost (\cite[Definition~1.13.7]{alarcon2021minimal}).
 \end{primer}
 
@@ -1709,7 +1711,7 @@ kar pomeni, da je tudi Oka mnogoterost (\cite[Definition~1.13.7]{alarcon2021mini
 Naslednja lema, ki jo navajamo brez dokaza, trdi, da ima povezana dopustna množica posebno bazo homologije (dokaz~\cite[str.~69--71]{alarcon2021minimal}). Ideja dokaza, to je konstrukcija Jordanovih krivulj, ki tvorijo homološko bazo, bo za nas pomembna v nadaljevanju. Natančneje, pri aproksimaciji in interpolaciji minimalnih ploskev bomo interpolacijskim pogojem med drugim zadostili s kontroliranjem integralov po teh krivuljah.
 
 \begin{lema} [Rungejeva baza homologije povezane dopustne množice] \label{lema:Runge-hom-baza}
-Naj bo $S$ povezana dopustna množica. Obstaja baza homologije $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$ za $S$, sestavljena iz takih zaprtih odsekoma gladkih Jordanovih krivulj v $S$, da je unija $C = \cup_{i=1}^{l} C_{i}$ povezana in Rungejeva v vsaki regularni okolici $S_{\varepsilon}$ množice $S$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{j \neq i} C_{j}) = \emptyset$.
+Naj bo $S$ povezana dopustna množica. Obstaja baza homologije $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$ za $S$, sestavljena iz takih zaprtih odsekoma gladkih Jordanovih krivulj v $S$, da je unija $C = \cup_{i=1}^{l} C_{i}$ povezana in Rungejeva v vsaki regularni okolici $S_{\varepsilon}$ množice $S$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{i \neq j} C_{j}) = \emptyset$.
 Prva homološka grupa povezane dopustne množice $S$ je končno generirana: $H_{1}(S, \mathbb{Z}) \cong \mathbb{Z}^{l}$.
 \end{lema}
 
@@ -1724,7 +1726,7 @@ Sedaj imamo pripravljena vsa orodja za razumevanje aproksimacije in interpolacij
 % lema - aproksimacija in interpolacija preslikav v A*
 \begin{lema} \label{lema:aproks&interp-A*}
 Naj bo $M$ povezana odprta Riemannova ploskev in $S = K \cup E$ njena Rungejeva dopustna podmnožica.
-Izberimo tako družino gladkih orientiranih Jordanovih krivulj in lokov v $S$, $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$, da je unija $C = \cup_{i=1}^{l} C_{i}$ Rungejeva v $M$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{j \neq i} C_{j}) = \emptyset$.
+Izberimo tako družino gladkih orientiranih Jordanovih krivulj in lokov v $S$, $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$, da je unija $C = \cup_{i=1}^{l} C_{i}$ Rungejeva v $M$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{i \neq j} C_{j}) = \emptyset$.
 Naj bo $\mathcal{P}$ periodno dominantni sprej, ki pripada družini krivulj $\mathcal{C}$, $A = \{ a_{1}, \dots , a_{m} \} \subset S$ končna množica točk in $r \geq 1$.
 Tedaj lahko vsako preslikavo $f \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ aproksimiramo v $\mathcal{C}^{r}(S)$ s polnimi holomorfnimi preslikavami $F \in \mathcal{O}(M,\textbf{\textup{A}}_{*})$, pri čemer velja naslednje:
 \begin{enumerate}
@@ -1739,13 +1741,13 @@ Lemo bomo dokazali v dveh korakih. Najprej bomo $f \in \mathcal{A}^{r}(S, \textb
 V drugem delu bomo s pomočjo Leme~\ref{lema:P-D-sprej} konstruirali periodno dominantni sprej preslikav iz množice $\mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ z jedrom $g$. Nato bomo z izrekoma Mergelyana in Rungeja o aproksimaciji in interpolaciji preslikav iz odprtih Riemannovih ploskev v $\textbf{\textup{A}}_{*}$ periodno dominantni sprej aproksimirali in interpolirali s sprejem iz $\mathcal{O}(M, \textbf{\textup{A}}_{*})$, ki nam bo dal preslikavo $F   \in \mathcal{O}(M, \textbf{\textup{A}}_{*})$, ustrezno zaključkom leme. \newline
 
 % 1. korak
-1.~korak: Naj bo $S = K$ povezana kompaktna množica. (Za splošnejšo dopustno množico $S = K \cup E$ je korak enak, le da ga ponovimo na vsaki povezani komponenti $K$, na $E$ pa polno preslikavo dobimo z manjšo gladko deformacijo preslikave $f$.)
+\textit{1.~korak:} Naj bo $S = K$ povezana kompaktna množica. (Za splošnejšo dopustno množico $S = K \cup E$ je korak enak, le da ga ponovimo na vsaki povezani komponenti $K$, na $E$ pa polno preslikavo dobimo z manjšo gladko deformacijo preslikave $f$.)
 Predpostavimo, da $f$ ni polna. Sicer nadaljujemo z drugim korakom.
 Označimo $\Sigma(f) = \mathcal{L}in (f(K)) \subset \mathbb{C}^{n}$, ki je po predpostavki pravi podprostor v $\mathbb{C}^{n}$.
 Izberimo točke $x_{1}, \dots , x_{j} \in K \setminus A$ tako, da je $\Sigma(f) = \mathcal{L}in \{ f(x_{1}), \dots , f(x_{j}) \}$.
-Ker je $\dim \Sigma(f) \leq n-1$, obstaja holomorfno vektorsko polje $V$ na $\mathbb{C}^{n}$ tangentno na $\textbf{\textup{A}}$, za katerega velja $V(f(x_0)) \notin \Sigma(f)$ za neko točko $x_0 \in K \setminus (A \cup \{ x_{1}, \dots , x_{j} \})$.
+Ker je $\dim \Sigma(f) \leq n-1$, obstaja holomorfno vektorsko polje $V$ na $\mathbb{C}^{n}$, tangentno na $\textbf{\textup{A}}$, za katerega velja $V(f(x_0)) \notin \Sigma(f)$ za neko točko $x_0 \in K \setminus (A \cup \{ x_{1}, \dots , x_{j} \})$.
 
-Naj bo $t \mapsto \Phi_{t}(z)$ tok vektorskega polja $V$ in $s \in \mathbb{N}$. 
+Naj bosta $t \mapsto \Phi_{t}(z)$ tok vektorskega polja $V$ in $s \in \mathbb{N}$. 
 Izberimo holomorfno funkcijo $h \colon K \to \mathbb{C}$ z lastnostmi:
 \begin{itemize}
 \item $h(x_{1}) = \dots = h(x_{j}) = 0$;
@@ -1768,10 +1770,10 @@ Označimo $g = \Psi(\xi)$. Velja naslednje:
 	$g(x_0) = \Psi(\xi)(x_0) = \Phi_{\xi(x_0) h(x_0)} f(x_0) \approx f(x_0) + \xi(x_0) h(x_0) V(f(x_0)) \notin \Sigma(f)$ po izboru $V$ in $x_0$.
 \item Ker ima $h$ ničle reda $s$ v točkah množice $A$, s podobnim razvojem kot v prejšnji točki vidimo, da je $g|_{A} = f|_{A}$, v točkah $A \cap S^{\circ}$ pa se funkciji ujemata do reda $s$.
 \end{itemize}
-Induktivno nadaljujemo postopek tako, da višamo razsežnost prostora $\Sigma(f)$. Ko je $\dim \Sigma(f) = n-1$, dobimo polno preslikavo $g \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki aproksimira in interpolira $f$ ter zadošča pogoju $\mathcal{P}(g) = \mathcal{P}(f)$. \newline
+Induktivno nadaljujemo postopek tako, da višamo razsežnost prostora $\Sigma(f)$. Ko je $\dim \Sigma(f) = n-1$, dobimo polno preslikavo $g \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki aproksimira in interpolira $f$, ter zadošča pogoju $\mathcal{P}(g) = \mathcal{P}(f)$. \newline
 
 % 2. korak
-2.~korak: Novo preslikavo $g$ iz 1.~koraka preimenujmo v $f$. Ta je polna in zato neravna.
+\textit{2.~korak:} Novo preslikavo $g$ iz 1.~koraka preimenujmo v $f$. Ta je polna in zato neravna.
 Uporabimo Lemo~\ref{lema:P-D-sprej} in Opombo~\ref{op:PDS-globalno}, da dobimo periodno dominantni sprej $\Phi_{f} \colon S \times \mathbb{C}^{N} \to \textbf{\textup{A}}_{*}$ z jedrom $f$.
 
 Po predpostavki je $S$ Rungejeva podmnožica $M$, iz Primera~\ref{primer-oka} pa vemo, da je kvadrika $\textbf{\textup{A}}_{*}$ Oka mnogoterost.
@@ -1779,7 +1781,7 @@ Izreka Rungeja in Mergelyana o aproksimaciji in interpolaciji preslikav v Oka mn
 
 Podobno kot v dokazu Leme~\ref{lema:P-D-sprej} lahko po Mergelyanovem izreku o aproksimaciji na dopustnih množicah funkcije $g_{i,j} \in \mathcal{A}^{r}(S)$ iz predpisa~\eqref{predpis-Phi} v $\mathcal{C}^{r}(S)$ aproksimiramo s funkcijami $\tilde{g}_{i,j} \in \mathcal{O}(M)$, tako da se $g_{i,j}$ z $\tilde{g}_{i,j}$ ujemajo na $A$ in do danega končnega reda na $A \cap S^{\circ}$.
 
-Preslikava $\Phi_{\tilde{f}} \colon M \times \mathbb{C}^{N} \to \textbf{\textup{A}}_{*}$, definirana s predpisom
+Preslikava $\Phi_{\tilde{f}} \colon M \times \mathbb{C}^{N} \to \textbf{\textup{A}}_{*}$ ($N=ln$), definirana s predpisom
 \begin{gather}
 \Phi_{\tilde{f}}(p,t) = \Phi_{\tilde{g}_{1,1}(p)t_{1,1}}^{1,1} \circ \cdots \circ \Phi_{\tilde{g}_{l,n}(p)t_{l,n}}^{l,n} (\tilde{f}(p)),
 \end{gather}
