@@ -173,6 +173,7 @@ FAKULTETA ZA MATEMATIKO IN FIZIKO\\[5mm]
 
 \section*{Program dela}
 \addcontentsline{toc}{section}{Program dela} % dodajmo v kazalo
+Delo naj definira minimalne ploskve v Evklidskem prostoru ter splošnejše holomorfne ničelne krivulje. Navede naj znane rezultate o konformnih minimalnih imerzijah – njihovo karakterizacijo, Enneper-Weierstrassovo reprezentacijsko formulo in z njimi povezane pojme. V nadaljevanju naj se osredotoči na aproksimacijo in interpolacijo orientabilnih minimalnih ploskev, natančneje, aproksimacijo Rungejevega in Mergelyanovega tipa ter interpolacijo tipa Weierstrassa in Mittag-Lefflerja. Predstavi naj še analogne izreke za holomorfne ničelne krivulje. Sledi naj nedavnim raziskavam, predstavljenih v monografiji~\cite{alarcon2021minimal}.
 
 \section*{Osnovna literatura}
 \begin{itemize}
@@ -2411,7 +2412,7 @@ Tedaj obstaja meromorfna preslikava $\tilde{z} \colon M \to \C^{n}$, njena zoži
 % Kompletnost
 \subsection{Kompletnost}
 %
-Kompletnost preslikav oziroma mnogoterosti je ena izmed pomembnejših lastnosti v Riemannovi geometriji. Izkaže se, da preslikave iz izrekov o aproksimaciji in interpolaciji minimalnih ploskev iz prejšnjih razdelkov lahko izberemo tako, da so kompletne. To dejstvo opisuje naslednji izrek; predstavili bomo le osnovne ideje njegovega dokaza, povzete po~\cite[str.~171--173]{alarcon2021minimal}. % [Theorem 3.9.1]
+Kompletnost preslikav oziroma mnogoterosti je ena izmed pomembnejših lastnosti v Riemannovi geometriji. Izkaže se, da preslikave iz izrekov o aproksimaciji in interpolaciji minimalnih ploskev iz prejšnjih razdelkov lahko izberemo tako, da so kompletne. To dejstvo opisuje naslednji izrek; predstavili bomo le osnovne ideje njegovega dokaza, povzete po~\cite[str.~171--173]{alarcon2021minimal}.
 
 \begin{izrek} \label{izr:kompletnost}
 \begin{enumerate}
@@ -2429,7 +2430,7 @@ Dokaz je induktiven, ideja pa sledi dokazu izreka, ki ga primer obravnava. Razli
 Po dokazu Izreka~\ref{izr:glavni-izrek-CMI} lahko predpostavimo, da je $x \colon M \to \R^{n}$ polna konformna minimalna imerzija. 
 Postavimo $x^0 = x$ in izberimo število $\varepsilon_{0}>0$. 
 Nadalje izberimo strogo subharmonično Morsejevo funkcijo izčrpanja $\rho \colon M \to \R$ ter strogo naraščajoče zaporedje nenegativnih realnih števil $\{ c_{i} \}_{i} \subset \R$ z začetnim členom $c_0 = 0$ in limito $\lim_{i \to \infty}c_{i} = +\infty$, ki izpolnjuje enake tri zahteve kot zaporedje v dokazu Izreka~\ref{izr:glavni-izrek-CMI}.
-Izberimo še točko $p_0 \in M^{\circ} = \{ \rho < c_0 \}$.
+Izberimo še točko $p_0 \in M_{0}^{\circ} = \{ \rho < c_0 \}$.
 
 V indukcijskem delu konstruiramo zaporedje konformnih minimalnih imerzij $\{ x^{i} \}_{i}$, $x^{i}\colon M_{i} = \{ \rho \leq c_{i} \} \to \R^{n}$ (oz.~natančneje, $x^{i}$ je definirana v okolici $M_{i}$), ter strogo padajoče zaporedje $\{ \varepsilon_{i} \}_{i} \subset \R_{>0}$.
 Pri tem zahtevamo, da za vsak indeks $i \in \N$ veljajo točke~\textit{(i)}--\textit{(vi)} iz dokaza Izreka~\ref{izr:glavni-izrek-CMI}, hkrati pa tudi pogoj:
@@ -2437,13 +2438,13 @@ Pri tem zahtevamo, da za vsak indeks $i \in \N$ veljajo točke~\textit{(i)}--\te
 \item[\textit{(vii)}] $d_{x^{i}}(p_0, bM_{i}) > i$.
 \end{itemize}
 (Tu $d_{x^{i}}$ označuje razdaljo glede na povlečeno metriko $(x^{i})^{*}ds^2$.) \newline
-Nato definiramo preslikavo $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \to \R^{n}$. Po definiciji in dokazu Izreka~\ref{izr:glavni-izrek-CMI} je $\tilde{x}$ konformna minimalna imerzija, ki izpolnjuje Izrek~\ref{izr:glavni-izrek-CMI}, pogoj~\textit{(vii)} pa zagotavlja njeno kompletnost. \newline
+Nato definiramo preslikavo $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \to \R^{n}$. Po njeni definiciji in dokazu Izreka~\ref{izr:glavni-izrek-CMI} je $\tilde{x}$ konformna minimalna imerzija, ki izpolnjuje Izrek~\ref{izr:glavni-izrek-CMI}, pogoj~\textit{(vii)} pa zagotavlja njeno kompletnost. \newline
 Baza indukcije je par $(x^{0}, \varepsilon_{0})$.
 Indukcijski korak se sklicuje na metodo konstrukcije kompletnih minimalnih ploskev v $\R^3$, ki ležijo med vzporednima ravninama. \\[0.3cm]
 %
 Drugi primer o holomorfnih ničelnih krivuljah pokažemo na analogen način. \\[0.3cm]
 %
-V tretjem primeru opomnimo naslednje. Naj bo $\gamma \colon [0,1) \to M \setminus A$ poljubna divergentna pot. Obravnavati je potrebno dve možnosti:
+V tretjem primeru opomnimo naslednje. Naj bo $\gamma \colon [0,1) \to M \setminus A$ poljubna divergentna pot. Obravnavati je potrebno dve možnosti.
 \begin{itemize}
 \item Pot $\gamma$ divergira v $M \setminus A$. Tedaj kompletnost preslikave $\tilde{x}$ zagotovimo s postopkom iz prvega primera.
 \item Pot $\gamma$ divergira k točki $a \in A$. Tedaj ima pot $\tilde{x} \circ \gamma$ avtomatično neskončno Evklidsko dolžino, saj vemo, da ima 1-forma
