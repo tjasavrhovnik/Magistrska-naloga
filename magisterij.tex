@@ -506,7 +506,7 @@ K^{N}(p) = \kappa _{1}^{N}(p) \cdot \kappa _{2}^{N}(p)
 \end{equation}
 definira \emph{Gaussovo ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$.
 \item
-Projekcijo povprečne ukrivljenosti na normalni prostor $N_{p}S$ v smeri tangentnega prostora $T_{p}S$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$ in označimo s $\textbf{\textup{H}}$. Enačba~\eqref{eq:povp-ukr} se v tej notaciji glasi $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
+Naj enotski vektorji $\{ e_{1}, \dots , e_{n-2} \}$ tvorijo bazo normalnega prostora $N_{p}S$. Vektor $\textbf{\textup{H}} = \sum_{i=1}^{n-2} (H^{N} \cdot e_{i}) e_{i}$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$. Tedaj velja $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
 \end{enumerate}
 \end{definicija}
 
@@ -604,7 +604,7 @@ Naj bo $K$ kompaktna podmnožica Riemannove ploskve $M$. Njena \emph{holomorfna 
 Če velja $K = \widehat{K}_{\mathcal{O}(M)}$, potem $K$ imenujemo \emph{Rungejeva} ali tudi \emph{$\mathcal{O}(M)$-konveksna množica}.
 \end{definicija}
 
-Kompaktne množice $K \subset M$, ki so Rungejeve podmnožice Riemannove ploskve $M$, pogosto karakteriziramo z lastnostjo, da nimajo lukenj v $M$. Ti dve lastnosti sta ekvivalnetni -- holomorfna ogrinjača kompaktne množice $K$ je unija množice in vseh njenih lukenj. \newline
+Kompaktne množice $K \subset M$, ki so Rungejeve podmnožice Riemannove ploskve $M$, pogosto karakteriziramo z lastnostjo, da nimajo lukenj v $M$. Ti dve lastnosti sta ekvivalentni -- holomorfna ogrinjača kompaktne množice $K$ je unija množice in vseh njenih lukenj. \newline
 
 Velik napredek v razvoju je pomenil Mergelyanov izrek o aproksimaciji holomorfnih funkcij (S.~N.~Mergelyan, 1951). Pove, da je zvezne funkcije na kompaktni množici $K \subset \C$ brez lukenj, ki so holomorfne v notranjosti $K^{\circ}$, tj.~razreda $\mathcal{A}(K)$, na kompaktu $K$ mogoče enakomerno aproksimirati s holomorfnimi polinomi.
 Različica velja tudi za odprte Riemannove ploskve (E.~Bishop, 1958).
@@ -657,7 +657,7 @@ V nadaljevanju bo naš cilj formulirati ustrezne različice zgornjih izrekov za 
 \subsection{Grafi z minimalno ploščino}
 %
 % Povzeto po [Minimal surfaces for undergraduates, Chapter 2 & 4]
-Kot motivacijo pred študijem minimalnih ploskev si oglejmo primer v nižji razsežnosti -- obravnavajmo minimalne grafe v $\R^3$, tj.~funkcije z minimalno ploščino pod grafom. Le-te so zanimale že J.~L.~Lagrangea, ki je l.~1760 napravil naslednji izračun. 
+Kot motivacijo pred študijem minimalnih ploskev si oglejmo primer v nižji razsežnosti -- obravnavajmo minimalne grafe v $\R^3$, tj.~funkcije z minimalno ploščino pod grafom. Le-te so zanimale že J.~L.~Lagrangea, ki je l.~1760 napravil naslednji izračun (povzeto po~\cite[Section~2,~4]{forstneric2021minimal}). 
 
 Vzemimo domeno $D \subset \R^2$ z odsekoma zvezno odvedljivim robom $bD$ in funkcijo $f \colon \overline{D} \to \R$ razreda $\mathcal{C}^2$, kjer $\overline{D}$ označuje zaprtje domene $D$.
 Graf funkcije $f$ je množica
@@ -766,8 +766,8 @@ Trditev lahko geometrijsko interpretiramo na naslednji način: gladka ploskev $S
 To posplošimo na ploskve, ki so slike domen v $\R^2$ z imerzijami v Evklidske prostore poljubnih razsežnosti $n \geq 3$. Le-to motivira definicijo minimalne ploskve, ki jo bomo spoznali v naslednjem razdelku.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Variacija ploščine
-\subsection{Variacija ploščine}
+% Variacija površine
+\subsection{Variacija površine}
  %
 V tem razdelku bomo navedli klasično definicijo minimalne ploskve ter variacijski formuli, s katerima minimalne ploskve opišemo kot ploskve z ničelnim vektorjem povprečne ukrivljenosti.
 %
@@ -865,7 +865,7 @@ Naj bosta $(M,g)$ in $(\widetilde{M},\tilde{g})$ Riemannovi mnogoterosti z $\dim
 Imerzija $x \colon (M,g) \to (\widetilde{M}, \tilde{g})$ se imenuje \emph{konformna}, če ohranja kote.
 Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna metriki $g$, kar pomeni, da za pozitivno funkcijo $\mu > 0$ na $M$ velja $x^{*}\tilde{g} = \mu g$.
 
-Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emph{izotermna} glede na Riemannovo metriko $g$, če za neko pozitivno funkcijo $\mu \colon \phi(U) \to \mathbb{R}_{+}$, $\phi(U) \subset \mathbb{R}_{(x,y)}^2$, velja
+Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emph{izotermalna} glede na Riemannovo metriko $g$, če za neko pozitivno funkcijo $\mu \colon \phi(U) \to \mathbb{R}_{+}$, $\phi(U) \subset \mathbb{R}_{(x,y)}^2$, velja
 \begin{equation}
 (\phi^{-1})^{*}g = \mu \cdot (dx^2+dy^2) = \mu \cdot ds_{\mathbb{R}^2}^2.
 \end{equation} 
@@ -933,7 +933,7 @@ J.~Douglas in T.~Rad\'o sta l.~1932 dokazala, da vsaka Jordanova krivulja v $\ma
 Fundamentalni rezultat o obstoju minimalnih ploskev s predpisanim robom je izrek, ki pravi, da za poljubno Jordanovo krivuljo $\Gamma$ v $\R^{n}$ obstaja enostavno povezana posplošena minimalna ploskev z robom $\Gamma$~\cite[Theorem~7.1]{osserman2002survey}. 
 Natančneje, izrek trdi, da obstaja zvezna preslikava $x \colon \overline{\mathbb{D}} \to \R^{n}$, katere zožitev na notranjost $x|_{\mathbb{D}}$ določa minimalno ploskev, zožitev na rob $x|_{b\mathbb{D}}$ pa je homeomorfizem na krivuljo $\Gamma$.
 \newline
-Prvoten pristop k reševanju Plateaujevega problema je vprašanje, ali obstaja regularna\footnote{Regularnost ploskve $M$ pomeni, da so vse točke $x \in M$ regularne.} enostavno povezana minimalna ploskev, ki jo omejuje poljubna Jordanova krivulja $\Gamma \subset \R^{n}$. V tej obliki je problem za splošen $n$ še vedno nerešen.
+Prvoten pristop k reševanju Plateaujevega problema je vprašanje, ali obstaja regularna\footnote{Regularnost ploskve $M$ pomeni, da je preslikava $x \colon M \to \R^{n}$ imerzija.} enostavno povezana minimalna ploskev, ki jo omejuje poljubna Jordanova krivulja $\Gamma \subset \R^{n}$. V tej obliki je problem za splošen $n$ še vedno nerešen.
 \end{opomba}
 
 \begin{opomba}
@@ -955,7 +955,7 @@ Prvo variacijo površine po definiciji dobimo z iskanjem stacionarnih točk plos
 Vzemimo gladko preslikavo $f \colon \overline{D} \to \R^{n}$, ki je ničelna na robu domene $bD$, in $t \in \R$. Tedaj je prva variacija Dirichletovega integrala v smeri preslikave $f$ enaka
 \begin{align*}
 \frac{d}{dt} \Big|_{t=0} \mathcal{D}(x+tf) &= \frac{d}{dt} \Big|_{t=0} \int_{D} \left( |x_{u_1}+tf_{u_1}|^2 + |x_{u_2}+tf_{u_2}|^2 \right) du_1 du_2 \\
-	&= \int_{D} \left( 2(x_{u_1}+tf_{u_1}) \cdot f_{u_1} + 2(x_{u_2}+tf_{u_2}) \cdot f_{u_2} \right) \big|_{t=0} du_1 du_2 \\
+	&= \int_{D} \left( 2(x_{u_1}+tf_{u_1}) \cdot f_{u_1} + 2(x_{u_2}+tf_{u_2}) \cdot f_{u_2} \right) \big|_{t=0} \ du_1 du_2 \\
 	&= 2 \int_{D} \left( x_{u_1} \cdot f_{u_1} + x_{u_2} \cdot f_{u_2} \right) du_1 du_2 \\
 	&= 2 \left( (x_{u_1} + x_{u_2}) \cdot f \big|_{bD} - \int_{D} (x_{u_1 u_1} + x_{u_2 u_2}) \cdot f du_1 du_2 \right) \\
 	&= -2 \int_{D} (x_{u_1 u_1} + x_{u_2 u_2}) \cdot f du_1 du_2 \\ 
@@ -1128,6 +1128,8 @@ Gaussova preslikava holomorfne ničelne krivulje $z = (z_{1}, \dots , z_{n}) \co
 \end{gather*}
 Pri tem je množica $\textup{\textbf{Q}}^{n-2} = \{ [z_{1} : \cdots : z_{n}] \in \mathbb{CP}^{n-1} ; \ \sum_{i=1}^{n}z_{i}^2 = 0 \}$ \emph{hiperkvadrika} v $\mathbb{CP}^{n-1}$, ki jo dobimo s projektivizacijo punktirane ničelne kvadrike $\textup{\textbf{A}}_{*}^{n-1} \subset \mathbb{C}^{n}$.
 \end{definicija}
+
+Opomnimo, da je Gaussova preslikava res holomorfna, saj so vse njene komponente holomorfne 1-forme brez skupnih ničel.
 
 % Gaussova preslikava za n=3
 Oglejmo si Gaussovo preslikavo v primeru trirazsežnega prostora. Hiperkvadriko $\textup{\textbf{Q}}^{1} \subset \mathbb{CP}^{2}$, ki je racionalna krivulja, parametrizirajmo z biholomorfno preslikavo 
@@ -1303,8 +1305,8 @@ x^2 + y^2 = \cosh ^2 z.
 
 Opazimo, da je parametrizacija katenoide~\eqref{eq:katenoida} $2 \pi$-periodična glede na spremenljivko $u$. V Enneper-Weierstrassovo formulo helikatenoide~\eqref{eq:EP-helikatenoida} uvedimo novo spremenljivko $w = e^{i \zeta} \in \mathbb{C} \setminus \{0\}$ in vzemimo njen realni del. Računajmo
 \begin{align*}
-z(\zeta) &= (1,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) d\xi \\
-	&= (1,0,0) + \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) (-i) \frac{-i}{\eta} d\eta \\
+z(\zeta) &= (1,0,0) + \int_{0}^{\zeta} \left( \frac{1}{2} \left(\frac{1}{e^{i\xi}} - e^{i\xi} \right), \frac{i}{2} \left(\frac{1}{e^{i\xi}} + e^{i\xi} \right), 1 \right) (-i) \ d\xi \\
+	&= (1,0,0) + \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) (-i) \frac{-i}{\eta} \ d\eta \\
 	&= (1,0,0) - \int_{1}^{w} \left( \frac{1}{2} \left(\frac{1}{\eta} - \eta \right), \frac{i}{2} \left(\frac{1}{\eta} + \eta \right), 1 \right) \frac{d\eta}{\eta},
 \end{align*}
 kar nam da parametrizacijo katenoide $x \colon \mathbb{C} \setminus \{0\} \to \mathbb{R}^3$ z Enneper-Weierstrassovo formulo
@@ -1435,7 +1437,7 @@ in je bila več kot stoletje edini znan neorientabilen primer. Njena totalna Gau
 Znano je (\cite[Section~2.4]{alarcon2021minimal}), da je vsaka neorientabilna minimalna ploskev $S$, ki nastane z imerzijo v prostor $\R^{n}$ ($n \geq 3$), slika 2-listne konformne minimalne imerzije $x \colon M \to S \subset \R^{n}$, kjer je $M$ Riemannova ploskev.
 Harmonična preslikava $x \colon \C^{*} \to \R^{3}$ s predpisom
 \begin{equation*}
-x(\zeta) = \Re \int_{1}^{\zeta} \left( \frac{z-1}{z^2(z+1)} - \frac{z^2(z+1)}{z-1}, i \left( \frac{z^2(z+1)}{z-1} + \frac{z-1}{z^2(z+1)} \right), 2 \right) \frac{i(z^2-1)}{2z^2} dz
+x(\zeta) = \Re \int_{1}^{\zeta} \left( \frac{z-1}{z^2(z+1)} - \frac{z^2(z+1)}{z-1}, i \left( \frac{z^2(z+1)}{z-1} + \frac{z-1}{z^2(z+1)} \right), 2 \right) \frac{i(z^2-1)}{2z^2} \ dz
 \end{equation*}
 definira orientabilen 2-listni krov neorientabilne minimalne ploskve, imenovane \emph{Meeksov minimalni M\"obiusov trak}. Odkril ga je W.~H.~Meeks leta 1981 in velja za prvi primer neorientabilne minimalne ploskve, ki je prava imerzija v $\R^{3}$. \newline
 Kompleksna Gaussova preslikava imerzije $x$ je enaka
@@ -1807,7 +1809,7 @@ Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-
 Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk. Naj bosta $r, s \in \N$. Tedaj velja naslednje:
 \begin{enumerate}
 \item 
-Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in \textup{GCMI}^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\text{Flux}_{X} = \text{Flux}_{x}$. 
+Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in \textup{GCMI}^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\mathrm{Flux}_{X} = \mathrm{Flux}_{x}$. 
 \item
 Vsako posplošeno ničelno krivuljo $(z, f\theta) \in \textup{GNC}^{r}(S,\C^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi holomorfnimi ničelnimi krivuljami $Z \colon M \to \C^{n}$.
 \end{enumerate}
@@ -2073,11 +2075,11 @@ Naj bo $M$ odprta Riemannova ploskev, $\theta$ povsod neničelna holomorfna 1-fo
 Naj bo $S$ dopustna Rungejeva množica v $M$ in $\Lambda \subset M$ zaprta diskretna podmnožica. 
 Naj bo $x \colon S \to \R^{n}$ posplošena konformna minimalna imerzija razreda $\mathcal{C}^{r}(S, \R^{n})$, ki je konformna minimalna imerzija v okolici vsake točke iz $\Lambda$.
 
-Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M,\Z) \to \R^{n}$, \ $\mathfrak{p}|_{H_{1}(S,\Z)} = \text{Flux}_{x}$ obstaja konformna minimalna imerzija $\tilde{x} \colon M \to \R^{n}$, za katero velja:
+Za izbrane $\varepsilon > 0$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M,\Z) \to \R^{n}$, \ $\mathfrak{p}|_{H_{1}(S,\Z)} = \mathrm{Flux}_{x}$ obstaja konformna minimalna imerzija $\tilde{x} \colon M \to \R^{n}$, za katero velja:
 \begin{enumerate}
 \item $||\tilde{x} - x||_{\mathcal{C}^{r}(S)} < \varepsilon$;
 \item razlika $\tilde{x}-x$ je ničelna do reda $k(p)$ v vsaki točki $p\in \Lambda$;
-\item $\text{Flux}_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M,\Z)$;
+\item $\mathrm{Flux}_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M,\Z)$;
 \item če je $n\geq5$ in je $x \colon \Lambda \to \R^{n}$ injektivna preslikava, potem je $\tilde{x}$ injektivna imerzija;
 \item če je $n=4$ in ima $x$ enostavne dvojne točke na množici $\Lambda$, potem je $\tilde{x}$ imerzija z enostavnimi dvojnimi točkami na $\Lambda$.
 \end{enumerate}
@@ -2370,7 +2372,7 @@ Tedaj lahko vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \colon 
 \begin{enumerate}
 \item Razlika $X-x$ je harmonična v vsaki točki množice $A$. Natančneje, 1-formo $\partial X$ lahko meromorfno razširimo na $M$ s poli v točkah množice $A$.
 \item Razlika $X-x$ je ničelna do reda $s$ v točkah množice $\Lambda$.
-\item $\textup{Flux}_{X} = \textup{Flux}_{x}$.
+\item $\mathrm{Flux}_{X} = \mathrm{Flux}_{x}$.
 \end{enumerate}
 \end{trditev}
 
@@ -2382,11 +2384,11 @@ Tedaj obstaja taka polna konformna minimalna imerzija $\tilde{x} \colon M \setmi
 Natančneje, 1-formo $\partial \tilde{x}$ lahko meromorfno razširimo na $M$ s poli v točkah množice $A$.
 
 Dodatno predpostavimo, da je $U$ lokalno končna unija paroma disjunktnih povezanih dopustnih podmnožic v $M$, par $(x, f\theta)$ posplošena kompletna konformna minimalna imerzija razreda $\mathcal{C}^{r}$ s končno totalno ukrivljenostjo na vsaki komponenti množice $U \setminus A$ in $r \in \N$.
-Tedaj za poljubne $\varepsilon > 0$, zaprto diskretno podmnožico $\Lambda$, za katero velja $A \subset \Lambda \subset U^{\circ}$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M \setminus A, \Z) \to \R^{n}$, ki ustreza $\mathfrak{p}|_{H_{1}(U \setminus A, \Z)} = \text{Flux}_{x}$, obstaja konformna minimalna imerzija $\tilde{x} \colon M \setminus A \to \R^{n}$ kot zgoraj. Poleg tega so izpolnjeni še pogoji:
+Tedaj za poljubne $\varepsilon > 0$, zaprto diskretno podmnožico $\Lambda$, za katero velja $A \subset \Lambda \subset U^{\circ}$, preslikavo $k \colon \Lambda \to \N$ in homomorfizem grup $\mathfrak{p} \colon H_{1}(M \setminus A, \Z) \to \R^{n}$, ki ustreza $\mathfrak{p}|_{H_{1}(U \setminus A, \Z)} = \mathrm{Flux}_{x}$, obstaja konformna minimalna imerzija $\tilde{x} \colon M \setminus A \to \R^{n}$ kot zgoraj. Poleg tega so izpolnjeni še pogoji:
 \begin{enumerate}
 \item $||\tilde{x}-x||_{\mathcal{C}^{r}(U)} < \varepsilon$;
 \item preslikavi $\tilde{x}$ in $x$ se ujemata do reda $k(p)$ v vsaki točki $p \in \Lambda$;
-\item $\text{Flux}_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M \setminus A, \Z)$.
+\item $\mathrm{Flux}_{\tilde{x}} = \mathfrak{p}$ na $H_{1}(M \setminus A, \Z)$.
 \end{enumerate}
 \end{izrek}
 
@@ -2461,8 +2463,6 @@ Direktna posledica Izreka~\ref{izr:kompletnost} pravi naslednje.
 \begin{posledica}
 Vsaka odprta Riemannova ploskev je kompleksna struktura kompletne minimalne ploskve v $\R^{n}$.
 \end{posledica}
-
-Necitiran vir~\cite{forstneric2021minimal}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
