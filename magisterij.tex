@@ -1654,7 +1654,7 @@ Okolico $U_{0} \subset \C^{nl}$ točke $0$ izberimo tako, da za vse $t \in U_{0}
 (p, t) \mapsto \Phi_{t_{1,1}}^{1,1} \circ \cdots \circ \Phi_{t_{1,n}}^{1,n} \circ \Phi_{t_{2,1}}^{2,1} \circ \cdots \circ \Phi_{t_{l,n}}^{l,n} (f(p))
 \end{gather}
 podaja dobro definirano preslikavo $S \times U_{0} \to \textbf{\textup{A}}_{*}$.
-Sedaj za vse pare $(i,j)$ izberimo gladke preslikave $g_{i,j} \colon C \to \C$, pri čemer je nosilec od $g_{i,j}$ vsebovan v majhnem delu loka $I_{i}$ okrog točke $p_{i,j} \in I_{i}$.
+Sedaj za vse pare $(i,j)$ izberimo gladke funkcije $g_{i,j} \colon C \to \C$, pri čemer je nosilec od $g_{i,j}$ vsebovan v majhnem delu loka $I_{i}$ okrog točke $p_{i,j} \in I_{i}$.
 Modificirana preslikava~\eqref{predpis-tokovi}, $\Phi \colon C \times U_{1} \to \textbf{\textup{A}}_{*}$,
 \begin{gather} \label{predpis-Phi}
 \Phi(p,t) = \Phi_{g_{1,1}(p)t_{1,1}}^{1,1} \circ \cdots \circ \Phi_{g_{1,n}(p)t_{1,n}}^{1,n} \circ \Phi_{g_{2,1}(p)t_{2,1}}^{2,1} \circ \cdots \circ \Phi_{g_{l,n}(p)t_{l,n}}^{l,n} (f(p)),
@@ -1668,18 +1668,18 @@ Naj bo $\mathcal{P} = (\mathcal{P}_{1}, \dots, \mathcal{P}_{l})$ periodna presli
 \begin{gather} \label{eq:dP/dt}
 \frac{\partial \mathcal{P}_{i}(\Phi(\cdot, t))}{\partial t_{m,j}} \Big|_{t=0} = \frac{\partial}{\partial t_{m,j}} \Big|_{t=0} \int_{C_{i}} \Phi(\cdot, t) \cdot \theta = \int_{C_{i}} g_{m,j} \cdot (V_{m,j} \circ f) \cdot \theta \in \C^{n}.
 \end{gather}
-Matrika diferencialov~\eqref{PD-lastnost} iz leme je sestavljena iz blokov velikosti $n \times n$, ki pripadajo indeksom $i, m \in \{1, \dots, l \}$. Z ustrezno izbiro preslikav $g_{i,j}$, opisanih zgoraj, lahko dosežemo, da je matrika bločno diagonalna z obrnljivimi bloki na diagonali. (To pomeni, da so vektorji~\eqref{eq:dP/dt} blizu vektorjem $V_{i,j}(f(p_{i,j}))$ za $i = m$, medtem ko so za $i \neq m$ vektorji~\eqref{eq:dP/dt} ničelni.) S tem postane celotna matrika obrnljiva.
+Matrika diferencialov~\eqref{PD-lastnost} iz leme je sestavljena iz blokov velikosti $n \times n$, ki pripadajo indeksom $i, m \in \{1, \dots, l \}$. Z ustrezno izbiro funkcij $g_{i,j}$, opisanih zgoraj, lahko dosežemo, da je matrika bločno diagonalna z obrnljivimi bloki na diagonali. (To pomeni, da so vektorji~\eqref{eq:dP/dt} blizu vektorjem $V_{i,j}(f(p_{i,j}))$ za $i = m$, medtem ko so za $i \neq m$ vektorji~\eqref{eq:dP/dt} ničelni.) S tem postane celotna matrika obrnljiva.
 
 V naslednjem koraku bomo modificirali še preslikavo $\Phi$, kar nam bo dalo iskani periodno dominantni sprej.
-Preslikave $g_{i,j}$ so definirane na množici $C$, ki je po predpostavki Rungejeva v $S$. Bishop-Mergelyanov izrek o aproksimaciji pove, da vsako funkcijo $g_{i,j}$ lahko enakomerno na $C$ aproksimiramo s holomorfnimi funkcijami $\tilde{g}_{i,j}$ v okolici $S$.
+Funkcije $g_{i,j}$ so definirane na množici $C$, ki je po predpostavki Rungejeva v $S$. Bishop-Mergelyanov izrek o aproksimaciji pove, da vsako funkcijo $g_{i,j}$ lahko enakomerno na $C$ aproksimiramo s holomorfnimi funkcijami $\tilde{g}_{i,j}$ v okolici $S$.
 
-Definirajmo preslikavo $\Phi_{f} \colon S \times U \to \textbf{\textup{A}}_{*}$ tako, da v predpisu~\eqref{predpis-Phi} nadomestimo $g_{i,j}$ z novimi preslikavami $\tilde{g}_{i,j}$ in je $U \subset U_{1} \subset \C^{nl}$ ustrezno majhna okolica točke $0 \in \mathbb{C}^{nl}$. Po konstrukciji takšna preslikava $\Phi_{f}$ zadošča sklepom leme, zato je periodno dominantni sprej, ki smo ga iskali.
+Definirajmo preslikavo $\Phi_{f} \colon S \times U \to \textbf{\textup{A}}_{*}$ tako, da v predpisu~\eqref{predpis-Phi} nadomestimo $g_{i,j}$ z novimi funkcijami $\tilde{g}_{i,j}$ in je $U \subset U_{1} \subset \C^{nl}$ ustrezno majhna okolica točke $0 \in \mathbb{C}^{nl}$. Po konstrukciji takšna preslikava $\Phi_{f}$ zadošča sklepom leme, zato je periodno dominantni sprej, ki smo ga iskali.
 
 % interpolacijski del leme
-Sedaj poglejmo še interpolacijski del leme. Naj bo $P \subset S$ končna podmnožica in $q \in \mathbb{N}$ izbrano fiksno število. Vzemimo holomorfno funkcijo $h \colon S \to \mathbb{C}$, ki ima ničle natanko v točkah množice $P$, le-te pa so reda $q+1$. Kot prej obstajajo točke $p_{i,j} \in I_{i} \setminus P$, holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$ ter gladke preslikave $g_{i,j}$ s kompaktnimi nosilci okrog točk $p_{i,j}$. V predpisu~\eqref{predpis-Phi} najprej nadomestimo $g_{i,j}$ s preslikavami $h \cdot g_{i,j}$, da dobimo preslikavo $\Phi$, ki zadošča analogu k~\eqref{eq:dP/dt}. Nato preslikave $g_{i,j}$ aproksimiramo z $\tilde{g}_{i,j} \in \mathcal{O}(S)$ ter v predpis~\eqref{predpis-Phi} vstavimo produkte $h \cdot \tilde{g}_{i,j}$ -- nova preslikava $\Phi_{f}$ definira periodno dominantni sprej, ki dodatno zadošča interpolacijskim zahtevam.
+Sedaj poglejmo še interpolacijski del leme. Naj bo $P \subset S$ končna podmnožica in $q \in \mathbb{N}$ izbrano fiksno število. Vzemimo holomorfno funkcijo $h \colon S \to \mathbb{C}$, ki ima ničle natanko v točkah množice $P$, le-te pa so reda $q+1$. Kot prej obstajajo točke $p_{i,j} \in I_{i} \setminus P$, holomorfna vektorska polja $V_{i,j} \in \mathbb{C}^{n}$ ter gladke funkcije $g_{i,j}$ s kompaktnimi nosilci okrog točk $p_{i,j}$. V predpisu~\eqref{predpis-Phi} najprej nadomestimo $g_{i,j}$ s funkcijami $h \cdot g_{i,j}$, da dobimo preslikavo $\Phi$, ki zadošča analogu k~\eqref{eq:dP/dt}. Nato funkcije $g_{i,j}$ aproksimiramo z $\tilde{g}_{i,j} \in \mathcal{O}(S)$ ter v predpis~\eqref{predpis-Phi} vstavimo produkte $h \cdot \tilde{g}_{i,j}$ -- nova preslikava $\Phi_{f}$ definira periodno dominantni sprej, ki dodatno zadošča interpolacijskim zahtevam.
 Res, preslikava $(p,t) \mapsto \Phi_{h(p) \tilde{g}_{m,j}(p) t}^{m,j} (f(p))$ se z $f$ ujema v točkah množice $P$, v točkah $p \in P \cap S^{\circ}$ pa se ujemata do reda $q$. (To vidimo tako, da tok vektorskega polja zapišemo s Taylorjevim razvojem do 2.~reda in upoštevamo stopnje ničel funkcije $h$ v točkah $p \in P$.) Zato enako velja tudi za njihov kompozitum (\cite[Lemma~2.2]{alarcon2018interpolation}).
 
-Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ dana, potem lahko za vse preslikave $f$ iz okolice $\Omega \subset \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ za $f_{0}$ pri konstrukciji periodno dominantnih sprejev uporabimo iste aproksimacijske preslikave $\tilde{g}_{i,j}$.
+Za zadnji del leme opazimo naslednje: če je preslikava $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ dana, potem lahko za vse preslikave $f$ iz okolice $\Omega \subset \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ za $f_{0}$ pri konstrukciji periodno dominantnih sprejev uporabimo iste aproksimacijske funkcije $\tilde{g}_{i,j}$.
 \end{dokaz}
 %%%%% konec dokaza
 
@@ -1731,7 +1731,7 @@ Sedaj imamo pripravljena vsa orodja za razumevanje aproksimacije in interpolacij
 
 % lema - aproksimacija in interpolacija preslikav v A*
 \begin{lema} \label{lema:aproks&interp-A*}
-Naj bo $M$ povezana odprta Riemannova ploskev in $S = K \cup E$ njena Rungejeva dopustna podmnožica.
+Naj bo $M$ povezana odprta Riemannova ploskev in $S = K \cup E$ Rungejeva dopustna podmnožica v $M$.
 Izberimo tako družino gladkih orientiranih Jordanovih krivulj in lokov v $S$, $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$, da je unija $C = \cup_{i=1}^{l} C_{i}$ Rungejeva v $M$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{i \neq j} C_{j}) = \emptyset$.
 Naj bo $\mathcal{P}$ periodno dominantni sprej, ki pripada družini krivulj $\mathcal{C}$, $A = \{ a_{1}, \dots , a_{m} \} \subset S$ končna množica točk in $r \geq 1$.
 Tedaj lahko vsako preslikavo $f \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ aproksimiramo v $\mathcal{C}^{r}(S)$ s polnimi holomorfnimi preslikavami $F \in \mathcal{O}(M,\textbf{\textup{A}}_{*})$, pri čemer velja naslednje:
@@ -1910,7 +1910,7 @@ Potem za $\tau \in [0,1]$ obstaja taka homotopija $f_{\tau} \colon [0,1] \to A_{
 Natančneje, za poljuben par točk v $A_{reg}$ obstaja gladka pot $f \colon [0,1] \to A_{reg}$ med njima, ki zadošča pogoju~\eqref{eq:pot-s-predp-integralom}.
 \end{lema}
 
-Navedli bomo le osnovne ideje dokaza leme. Popoln dokaz, ki se nahaja v~\cite[Lemma~3.5.4]{alarcon2021minimal}, posnema dokaz leme Mikhaila Gromova\footnote{Mikhail Gromov, roj.~1943, je rusko-francoski matematik s področij geometrije, analize in teorije grup. Med drugim je uvedel metodo kompleksne integracije, h-princip in pojem skoraj ravne mnogoterosti. Leta 2009 je prejel Abelovo nagrado.}
+Navedli bomo le osnovne ideje dokaza leme. Popoln dokaz, ki se nahaja v~\cite[Lemma~3.5.4]{alarcon2021minimal}, posnema dokaz leme Mikhaila Gromova\footnote{Mikhail Gromov, roj.~1943, je rusko-francoski matematik s področij geometrije, analize in teorije grup. Med drugim je uvedel metodo konveksne integracije, h-princip in pojem skoraj ravne mnogoterosti. Leta 2009 je prejel Abelovo nagrado.}
 o konveksni integraciji. Rezultat je pomemben, ker nam omogoča konstrukcijo poti s predpisanimi vrednostmi integralov znotraj množice regularnih točk nerazcepne algebraične raznoterosti. Mi jo bomo uporabljali za konstrukcijo poti v punktirani ničelni kvadriki $\textup{\textbf{A}}_{*} \subset \C^{n}$ v dokazu Glavnega izreka~\ref{izr:glavni-izrek-CMI}.
 
 % dokaz leme
@@ -1959,14 +1959,14 @@ Naj bo $U \subset \mathbb{R}^{n}$ domena s koordinatami $x = (x_{1}, \dots , x_{
 Spomnimo se, da je točka $x \in U$ \emph{kritična točka} funkcije $f$, če je $\nabla f(x) = 0$. Točka, ki ni kritična, je \emph{regularna}.
 Slike kritičnih točk imenujemo \emph{kritične vrednosti}, medtem ko so vsa preostala realna števila \emph{regularne vrednosti} funkcije $f$. \newline
 %
-\emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\text{Hess}_{f}(x)$ na tangentnem prostoru $T_{x}\R^{n} = \R^{n}$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = D(\nabla f)(x)$, kjer $D$ označuje Jacobijevo matriko.
+\emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\text{Hess}_{f}(x)$ na tangentnem prostoru $T_{x}\R^{n} = \R^{n}$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = (\nabla ^2 f)(x)$, kjer $D$ označuje Jacobijevo matriko.
 
 \begin{definicija}
 Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva matrika $H_{f}(x)$ maksimalen rang, točki $x$ pravimo \emph{Morsejeva točka}. Slednji pogoj je ekvivalenten trditvi, da je Hessejeva forma funkcije $f$ v točki $x$ neizrojena.
 
 Število negativnih lastnih vrednosti Hessejeve matrike, $k \in \{0,1, \dots , n\}$, je \emph{Morsejev indeks} kritične točke.
 
-Funkcija, katere vsaka kritična točka je tudi Morsejeva, se imenuje \emph{Morsejeva funkcija}.
+Funkcija, katere vsaka kritična točka je Morsejeva, se imenuje \emph{Morsejeva funkcija}.
 \end{definicija}
 
 Kritične točke funkcije $f$ dobimo z reševanjem enačbe $\nabla f(x)=0$. Ker je Hessejeva matrika enaka Jacobijevi matriki gradienta funkcije, po izreku o inverzni preslikavi vidimo, da je vsaka kritična točka izolirana. Množica kritičnih točk funkcije $f$, $\text{Crit}(f) = \{ x \in U; \ \nabla f(x)=0 \}$, je zaprta diskretna podmnožica v $U$.
@@ -2060,7 +2060,6 @@ V kritični točki maksimalnega indeksa (v našem primeru ploskve je ta enak $2$
 Znano je, da je povezana kompaktna orientabilna ploskev $M$ brez roba homeomorfna bodisi sferi $\mathbb{S}^{2}$ bodisi vsoti $g$ torusov 
 $\mathbb{T}^{2} \# \stackrel{g}{\cdots} \# \mathbb{T}^{2}$ za enolično število $g \in \mathbb{N}$.
 Število $g$ imenujemo \emph{rod} in označimo z $\text{gen}(M)$, pri tem pa definiramo še $\text{gen}(\mathbb{S}^{2}) = 0$.
-Podobna klasifikacija velja za odprte orientabilne ploskve.
 \end{opomba}
 
 %%%%%%%%%%%%%%%
@@ -2183,27 +2182,29 @@ Njen Morsejev indeks je bodisi enak $0$ ($p$ je lokalni minimum) bodisi $1$ ($p$
 Zanima nas sprememba topologije podnivojnic $\{ \rho \leq c \}$ za $c>0$, ko prečkamo kritično točko $p$, to je za $c = \rho(p)$. Ločeno si oglejmo primere glede na Morsejev indeks točke $p$. \newline
 
 % 3.1
-\textit{3.1: Morsejev indeks točke $p$ je enak $0$.} \newline
+\textit{3.1~Morsejev indeks točke $p$ je enak $0$.} \newline
 Ko prečkamo kritično točko $p$, spremembo topologije opišemo z dodajanjem povezane komponente, natančneje, $M_{i-1}$ disjunktno dodamo disk.
 Naj bo $D \subset A_{i}$ zaprt disk okrog točke $p$. Unija $S_{i} = M_{i-1} \cup D$ je dopustna množica, za katero velja $H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$.
 Preslikavo $x^{i-1}$ razširimo na $S_{i}$ tako, da za $x^{i-1}|_{D}$ izberemo poljubno konformno minimalno imerzijo.
 Spet uporabimo Trditev~\ref{trd:nekritcni-primer} in Izrek~\cite[Theorem~3.4.1]{alarcon2021minimal},
 da dobimo preslikavo $x^{i} \colon M_{i} \to \mathbb{R}^{n}$ in ustrezno izberemo $\varepsilon_{i}$. \newline
 
-Poglejmo si še primer, ko je Morsejev indeks točke $p$ enak $1$. Ob prečkanju te točke množici $M_{i-1}$ dodamo gladek vložen lok $E \subset A_{i} \cup bM_{i-1}$ s krajiščema v točkah $q_0, q_1 \in bM_{i-1}$, ki sta edini točki na $bM_{i-1} \cap E$, in $E$ seka $bM_{i-1}$ transverzalno. Lok $E$ usmerimo od $q_0$ do $q_1$.
+% 3.2
+\textit{3.2~Morsejev indeks točke $p$ je enak $1$.} \newline
+Ob prečkanju te točke množici $M_{i-1}$ dodamo gladek vložen lok $E \subset A_{i} \cup bM_{i-1}$ s krajiščema v točkah $q_0, q_1 \in bM_{i-1}$, ki sta edini točki na $bM_{i-1} \cap E$, in $E$ seka $bM_{i-1}$ transverzalno. Lok $E$ usmerimo od $q_0$ do $q_1$.
 Definiramo $S_{i} = M_{i-1} \cup E$, ki je po konstrukciji dopustna množica in zanjo velja $H_{1}(S_{i}, \mathbb{Z}) = H_{1}(M_{i}, \mathbb{Z})$. Obravnavajmo dve situaciji. \newline
 
 % 3.2.1
 \textit{3.2.1~Morsejev indeks točke $p$ je enak $1$ in krajišči loka $E$ pripadata isti povezani komponenti množice $M_{i-1}$.} \newline
 Točki $q_0$ in $q_1$ povežimo z gladkim usmerjenim vloženim lokom $E' \subset M_{i-1}$. 
 Unija lokov $C = E \cup E'$ je zaprta Jordanova krivulja, ki pripada bazi homologije za $S_{i}$.
-Nadaljujemo kot v 2.~primeru. Funkcija $f^{i-1} = 2 \partial x^{i-1} / \theta \colon M_{i-1} \to \textup{\textbf{A}}_{*}$ je holomorfna v okolici $M_{i-1}$.
+Funkcija $f^{i-1} = 2 \partial x^{i-1} / \theta \colon M_{i-1} \to \textup{\textbf{A}}_{*}$ je holomorfna v okolici $M_{i-1}$.
 Gladko jo razširimo na $E$ tako, da velja
 \begin{gather*}
 \Re \int_{C} f^{i-1} \theta = 0, \quad \Im \int_{C} f^{i-1} \theta = \mathfrak{p}(C),
 \end{gather*}
 kjer upoštevamo dejstvo, da sta $q_0, q_1$ regularni točki in uporabimo Lemo~\ref{lema:analog-gromova}.
-Nato $x^{i-1}$ razširimo na $S_{i}$ kot v 2.~primeru, kar nam da $(x^{i-1}, f^{i-1} \theta) \in \textup{GCMI}(S_{i}, \mathbb{R}^{n})$.
+Nato $x^{i-1}$ razširimo na $S_{i}$ kot zgoraj, kar nam da $(x^{i-1}, f^{i-1} \theta) \in \textup{GCMI}(S_{i}, \mathbb{R}^{n})$.
 
 Po indukcijski predpostavki je $\textup{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(M_{i-1},\Z)$ in po zgornjem $\text{Flux}_{x^{i-1}}(C) = \mathfrak{p}(C)$, zato velja
 $\text{Flux}_{x^{i-1}} = \mathfrak{p}$ na $H_{1}(S_{i},\Z)$.
@@ -2239,7 +2240,7 @@ Za izbrana $\varepsilon > 0$ in preslikavo $k \colon \Lambda \to \N$ obstaja hol
 \end{izrek}
 
 \begin{dokaz}
-Dokaz je analogen dokazu glavnega izreka za posplošene konformne minimalne imerzije. Razlika je le ta, da so namesto imerzij preslikave $z^{i} \colon M_{i} \to \mathbb{C}^{n}$ holomorfne ničelne krivulje, integrali preslikav $f^{i-1} \theta$ pa upoštevajo tako realen kot imaginaren del. 
+Dokaz je analogen dokazu glavnega izreka za posplošene konformne minimalne imerzije. Razlika je le ta, da so preslikave $z^{i} \colon M_{i} \to \mathbb{C}^{n}$ holomorfne ničelne krivulje, integrali preslikav $f^{i-1} \theta$ pa upoštevajo tako realen kot imaginaren del. 
 \end{dokaz}
 
 \begin{opomba}
@@ -2251,7 +2252,7 @@ Opazimo, da je v formulaciji Izrekov~\ref{izr:glavni-izrek-CMI} in~\ref{izr:glav
 \subsection{Mittag-Lefflerjev izrek}
 %
 Podobno kot izreka Weierstrassa in Mergelyana za holomorfne funkcije prilagodimo minimalnim ploskvam, želimo sedaj navesti še ustrezno različico Mittag-Lefflerjevega izreka. Lahko si predstavljamo, da so meromorfne funkcije v smislu minimalnih ploskev konformne minimalne imerzije $x \colon M \setminus A \to \R^{n}$ iz punktirane odprte Riemannove ploskve, katerih 1-forma $\partial x$ je meromorfna na $M$ s poli natanko v točkah množice $A$, množica $A$ pa je zaprta diskretna podmnožica v $M$.
-Pri aproksimaciji se bodo spet naravno pojavile dopustne množice ter enačice posplošenih konfromnih minimalnih imerzij.
+Pri aproksimaciji se bodo spet naravno pojavile dopustne množice ter inačice posplošenih konfromnih minimalnih imerzij.
 
 Spomnimo se, da je imerzija $x \colon M \to \R^{n}$ \emph{kompletna}, če ima pot $x \circ \gamma$ v $\R^{n}$ neskončno Evklidsko dolžino za poljubno divergentno pot $\gamma \colon [0,1) \to M$.
 Ekvivalentno je zahtevati, da je povlečena metrika $x^{*}ds^2$ na $M$ kompletna, torej je prostor $(M, x^{*}ds^2)$ kompleten metrični prostor (slednje pomeni konvergenco Cauchyjevih zaporedij v prostoru).
