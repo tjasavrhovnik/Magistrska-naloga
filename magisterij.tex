@@ -863,13 +863,23 @@ Enakost~\eqref{eq:2-var-formula} se zato glasi
 %
 Naj bosta $(M,g)$ in $(\widetilde{M},\tilde{g})$ Riemannovi mnogoterosti z $\dim(M) \leq \dim(\widetilde{M})$.
 Imerzija $x \colon (M,g) \to (\widetilde{M}, \tilde{g})$ se imenuje \emph{konformna}, če ohranja kote.
-Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna metriki $g$, kar pomeni, da za pozitivno funkcijo $\mu > 0$ na $M$ velja $x^{*}\tilde{g} = \mu g$.
+Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna metriki $g$, kar pomeni, da za pozitivno funkcijo $\mu > 0$ na $M$ velja $x^{*}\tilde{g} = \mu g$. \newline
+Laplaceova operatorja konformno ekvivalentnih metrik $g$ in $\tilde{g}$ kot zgoraj se razlikujeta za faktor $\mu$, zato konformno ekvivalentni metriki na ploskvi določata enake harmonične funkcije.
 
 Podobno pravimo, da je lokalna karta $(U, \phi)$ Riemannove ploskve $(M,g)$ \emph{izotermalna} glede na Riemannovo metriko $g$, če za neko pozitivno funkcijo $\mu \colon \phi(U) \to \mathbb{R}_{+}$, $\phi(U) \subset \mathbb{R}_{(x,y)}^2$, velja
 \begin{equation}
 (\phi^{-1})^{*}g = \mu \cdot (dx^2+dy^2) = \mu \cdot ds_{\mathbb{R}^2}^2.
 \end{equation} 
-Lokalne koordinate na $U$ tedaj imenujemo \emph{izotermalne koordinate}.
+Lokalne koordinate na $U$ tedaj imenujemo \emph{izotermalne koordinate}. \newline
+Iz definicije sledi, da je lokalna karta $(U, \phi)$ izotermalna natanko tedaj, ko je preslikava $\phi$ konformni difeomorfizem glede na metriki $g$ na $U$ in $ds^2$ na $\R^2$. \newline
+
+Če je $f \colon U \to V$ holomorfna preslikava med domenama v $\C^{n}$, tedaj velja $J(f) = |J_{\C}(f)|^2 \geq 0$. Tu $J(f)$ označuje determinanto Jacobijeve matrike preslikave $f$ v $\R^{2n}$ in je $J_{\C}(f) = \det \left[ \frac{\partial f_{i}}{\partial z_{j}} \right]_{i,j}$ determinanta v $\C^{n}$. Ker so prehodne preslikave med lokalnimi kartami kompleksne mnogoterosti holomorfne, orientabilnost mnogoterosti pa je odvisna od predznaka determinante Jacobijeve matrike prehodnih preslikav, sledi, da vsaka kompleksna mnogoterost premore orientacijo, skladno z njeno kompleksno strukturo.
+
+Izrek~\cite[Theorem~1.8.6]{alarcon2021minimal} pove, da na Riemannovi ploskvi $(M,g)$ obstaja atlas $\mathcal{U} = \{ (U_{i}, \phi_{i}) \}$ iz izotermalnih kart glede na metriko $g$. Ker so vse prehodne preslikave konformne, takemu atlasu pravimo \emph{konformen atlas}. Iz zgornje razprave zaključimo naslednje.
+
+\begin{lema}
+Orientiran atlas iz izotermalnih kart je kompleksen atlas. Če je neorientiran, dobimo konformen atlas.
+\end{lema}
 
 Naj bo ploskev $M$ orientabilna in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Potem preslikava $x$ določa enolično strukturo Riemannove ploskve na $M$, kjer je $x$ konformna imerzija. Zato bomo v nadaljevanju obravnavali Riemannove ploskve in pripadajoče konformne imerzije v Evklidski prostor.
 
@@ -884,7 +894,7 @@ Naj bo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n \g
 		|x_{u}| = |x_{v}| > 0, \quad x_{u} \cdot x_{v} = 0.
 		\end{gather}
 	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo \emph{ničelni kvadriki}\footnote{Ničelna kvadrika $\textbf{\textup{A}}$ v $(n-1)$-spremenljivkah je kompleksni stožec s singularno točko $0$.} (so \emph{ničelni vektorji})
-		\begin{gather}
+		\begin{gather} \label{eq:ničelna-kvadrika}
 		\textbf{\textup{A}} = \textbf{\textup{A}}^{n-1} = \{ z=(z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}; \ z_{1}^2 + \cdots + z_{n}^2 = 0 \}.
 		\end{gather}
 	\item Matrika, ki pripada Riemannovi metriki $g = x^{*}ds^2$ na $D$, je enaka $G = \mu I$, kjer je $\mu = |x_{u}|^2 = |x_{v}|^2$ ter je $I$ identiteta.
@@ -1011,7 +1021,7 @@ Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \col
 			(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0.
 			\end{equation}
 	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi v ničelni kvadriki
-			\begin{equation} \label{ničelna-kvadrika}		
+			\begin{equation}	
 			\textbf{\textup{A}} = \{ (z_1, \dots , z_n) \in \C^{n} ; \ z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
 			\end{equation}	
 \end{enumerate}
@@ -1059,7 +1069,7 @@ Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{it} z)
 \end{definicija}
 
 Izrek~\cite[Theorem~1.10.5]{alarcon2021minimal} pravi, da vsaka odprta Riemannova ploskev premore povsod neničelno eksaktno 1-formo.
-Naj bosta $z \colon M \to \mathbb{C}^{n}$ holomorfna ničelna krivulja in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Diferencial $dz$ je 1-forma in obstaja holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$, ki 1-formi povezuje z enakostjo $dz = f \theta$. Tu je množica $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$ punktirana ničelna kvadrika v $\mathbb{C}^{n}$.
+Naj bosta $z \colon M \to \mathbb{C}^{n}$ holomorfna ničelna krivulja in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Diferencial $dz$ je 1-forma in obstaja holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$, ki 1-formi povezuje z enakostjo $dz = f \theta$. Tu je množica $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$ punktirana ničelna kvadrika v $\C^{n}$.
 
 \emph{Enneper-Weierstrassova reprezentacijska formula} predstavlja povezavo med konformnimi minimalnimi imerzijami na odprti Riemannovi ploskvi $M$ ter holomorfnimi preslikavami med $M$ in punktirano ničelno kvadriko, katerih realne periode so ničelne. Je posledica Izreka~\ref{izr:ekviv-min-ploskev}, zato jo bomo navedli brez dokaza. Rezultat je pomemben, saj predstavlja konformne minimalne ploskve in holomorfne ničelne krivulje, konstruirane na univerzalen način. Metodo konstrukcije bomo v naslednjih poglavjih pogosto uporabljali.
 
@@ -1529,7 +1539,7 @@ $T_{f(p)} \textbf{\textup{A}} \subset T_{f(p)} \C^{n} \cong \mathbb{C}^{n}$ po v
 \begin{dokaz}
 Oglejmo si preslikavo 
 $\Phi \colon \C^{n} \to \C$, definirano s predpisom $\Phi(z) = \sum_{j=1}^{n} z_{j}^{2}$.
-Ničelno kvadriko~\eqref{ničelna-kvadrika} tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0\} )$.
+Ničelno kvadriko~\eqref{eq:ničelna-kvadrika} tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0\} )$.
 Njen tangentni prostor v točki $z = (z_{1}, \dots , z_{n}) \in \C^{n}$ je enak jedru diferenciala, ki kvadriko določa, zato je
 \begin{gather*}
 T_{z} \textbf{\textup{A}} = \ker \left(d \Phi_{z} \right) = \ker \left(z \mapsto \sum_{j=1}^{n} z_{j} dz_{j} \right).
