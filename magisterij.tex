@@ -944,6 +944,7 @@ Fundamentalni rezultat o obstoju minimalnih ploskev s predpisanim robom je izrek
 Natančneje, izrek trdi, da obstaja zvezna preslikava $x \colon \overline{\mathbb{D}} \to \R^{n}$, katere zožitev na notranjost $x|_{\mathbb{D}}$ določa minimalno ploskev, zožitev na rob $x|_{b\mathbb{D}}$ pa je homeomorfizem na krivuljo $\Gamma$.
 \newline
 Prvoten pristop k reševanju Plateaujevega problema je vprašanje, ali obstaja regularna\footnote{Regularnost ploskve $M$ pomeni, da je preslikava $x \colon M \to \R^{n}$ imerzija.} enostavno povezana minimalna ploskev, ki jo omejuje poljubna Jordanova krivulja $\Gamma \subset \R^{n}$. V tej obliki je problem za splošen $n$ še vedno nerešen.
+Nekaj rezultatov vendarle obstaja -- Douglas-Morreyeva rešitev Plateaujevega problema pravi, da minimalni disk z danim robom nima singularnih točk. Če krivulja, ki določa rob diska, leži na robu konveksne domene v $\R^3$, potem je minimalni disk vložen~\cite[str.~3]{forstneric2021minimals}.
 \end{opomba}
 
 \begin{opomba}
@@ -1360,6 +1361,7 @@ O helikoidu sta prva pisala L.~Euler in J.~B.~Meusnier v 80.-ih letih 18.~stolet
 \item Za vsako točko na helikoidu obstaja vijačnica, ki leži na njem, in gre skozi to točko.
 \end{itemize}
 Prvo lastnost kot minimalni ploskvi v $\mathbb{R}^3$ premoreta le helikoid in ravnina, kar je l.~1842 dokazal E.~C.~Catalan. Druga lastnost namiguje na izvor imena -- helikoid spominja na latinsko besedo ``helix'', kar v slovenščini imenujemo vijačnica.
+Helikoid (sicer ne obravnavan v smislu minimalne ploskve) ima zanimivo in dolgo zgodovino. V Starem Egiptu, morda pa že Babilonci, so napravo take oblike uporabljali za črpanje vode. Na potovanju v Egipt leta 234~pr.~n.~št. jo je srečal Arhimed, izum opisal in prenesel v grške dežele, kjer so napravo, Arhimedov vijak, kasneje poimenovali po njem.
 
 %%%%%%%%%%%%%%%
 % Scherkovi minimalni ploskvi
@@ -1381,6 +1383,8 @@ Njej konjugirana minimalna ploskev se imenuje \emph{druga Scherkova ploskev} z i
 \begin{gather}
 \sin z = \sinh x \sinh y.
 \end{gather}
+%
+Pomembna lastnost prve Scherkove ploskve se nanaša na njeno ukrivljenost. Med vsemi grafi nad diskom, ki imajo nad izhodiščem $(0,0)$ horizontalno tangentno ravnino, to je $\R^2 \times \{0\}$, ima prva Scherkova ploskev največjo Gaussovo ukrivljenost v točki nad izhodiščem.
 
 % slika 1. in 2. Scherkove ploskve
 \begin{figure}[h!]
@@ -1678,7 +1682,8 @@ Naj bo $\mathcal{P} = (\mathcal{P}_{1}, \dots, \mathcal{P}_{l})$ periodna presli
 \begin{gather} \label{eq:dP/dt}
 \frac{\partial \mathcal{P}_{i}(\Phi(\cdot, t))}{\partial t_{m,j}} \Big|_{t=0} = \frac{\partial}{\partial t_{m,j}} \Big|_{t=0} \int_{C_{i}} \Phi(\cdot, t) \cdot \theta = \int_{C_{i}} g_{m,j} \cdot (V_{m,j} \circ f) \cdot \theta \in \C^{n}.
 \end{gather}
-Matrika diferencialov~\eqref{PD-lastnost} iz leme je sestavljena iz blokov velikosti $n \times n$, ki pripadajo indeksom $i, m \in \{1, \dots, l \}$. Z ustrezno izbiro funkcij $g_{i,j}$, opisanih zgoraj, lahko dosežemo, da je matrika bločno diagonalna z obrnljivimi bloki na diagonali. (To pomeni, da so vektorji~\eqref{eq:dP/dt} blizu vektorjem $V_{i,j}(f(p_{i,j}))$ za $i = m$, medtem ko so za $i \neq m$ vektorji~\eqref{eq:dP/dt} ničelni.) S tem postane celotna matrika obrnljiva.
+Vektorji~\eqref{eq:dP/dt} sestavljajo matriko diferencialov~\eqref{PD-lastnost}, ki je velikosti $nl \times nl$. Opazujmo bloke velikosti $n \times n$, določene s pari indeksov $(i,m)$, $i,m \in \{1, \dots, l\}$. Izbor funkcij $g_{ij}$ z nosilcem v majhni okolici točk $p_{ij}$ v $I_{i}$ zagotavlja, da so vektorji~\eqref{eq:dP/dt} blizu vektorjem $V_{ij}(f(p_{ij})) \in \C^{n}$ za $i=m$, medtem ko so za $i \neq m$ ničelni. Zato so bloki za $i \neq m$ (ti ležijo izven diagonale) ničelni. Diagonalni bloki (za $i=m$) pa so obrnljivi. Res, v tem primeru so vektorji~\eqref{eq:dP/dt} blizu $V_{ij}(f(p_{ij}))$, ki za $j=1, \dots, n$ razpenjajo ves $\C^{n}$ za vse indekse $i$.
+Sledi, da je bločno diagonalna matrika~\eqref{PD-lastnost} obrnljiva, saj so obrnljivi vsi bloki na diagonali.
 
 V naslednjem koraku bomo modificirali še preslikavo $\Phi$, kar nam bo dalo iskani periodno dominantni sprej.
 Funkcije $g_{i,j}$ so definirane na množici $C$, ki je po predpostavki Rungejeva v $S$. Bishop-Mergelyanov izrek o aproksimaciji pove, da vsako funkcijo $g_{i,j}$ lahko enakomerno na $C$ aproksimiramo s holomorfnimi funkcijami $\tilde{g}_{i,j}$ v okolici $S$.
@@ -1816,7 +1821,7 @@ Sprej $\Phi_{f}$ zadošča periodno dominantni lastnosti, zato izrek o implicitn
 %
 \begin{trditev} \label{trd:nekritcni-primer}
 Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$.
-Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk. Naj bosta $r, s \in \N$. Tedaj velja naslednje:
+Predpostavimo, da je $S$ taka povezana dopustna množica v $M$, da inkluzija $S \hookrightarrow M$ porodi izomorfizem $H_{1}(S,\Z) \stackrel{\cong}{\longrightarrow} H_{1}(M,\Z)$ prvih fundamentalnih grup. Naj bo $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk in $r, s \in \N$. Tedaj velja naslednje:
 \begin{enumerate}
 \item 
 Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in \textup{GCMI}^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\mathrm{Flux}_{X} = \mathrm{Flux}_{x}$. 
@@ -1825,6 +1830,10 @@ Vsako posplošeno ničelno krivuljo $(z, f\theta) \in \textup{GNC}^{r}(S,\C^{n})
 \end{enumerate}
 Dodatno, preslikave $X$ oz.~$Z$ lahko izberemo tako, da se s preslikavama $x$ oz.~$z$ ujemajo v točkah množice $A$ ter do danega končnega reda v točkah množice $A \cap S^{\circ}$.
 \end{trditev}
+
+\begin{opomba}
+Iz predpostavke o dopustni množici $S$ sledi, da je $S$ Rungejeva v $M$. Slednje je namreč ekvivalentno dejstvu, da inkluzija $S \hookrightarrow M$ porodi injektivni homomorfizem $H_{1}(S,\Z) \to H_{1}(M,\Z)$.
+\end{opomba}
 
 %%%%% dokaz trditve
 \begin{dokaz}
@@ -1866,7 +1875,7 @@ Izberimo točko $p_0 \in A$ in definirajmo preslikavo $X \colon M \to \mathbb{R}
 \begin{gather} \label{eq:X-nekrit-primer}
 X(p) = x(p_0) + \Re \int_{p_0}^{p} F\theta, \quad p \in M.
 \end{gather}
-Zaradi lastnosti $\mathcal{P}(F) = \mathcal{P}(f)$ je preslikava $X$ dobro definirana in po konstrukciji konformna minimalna imerzija. 
+Ker se bazi homologije za $S$ in $M$ ujemata, ter velja $\mathcal{P}(F) = \mathcal{P}(f)$, je preslikava $X$ dobro definirana in po konstrukciji konformna minimalna imerzija. 
 Polnost imerzije $X$ sledi iz polnosti preslikave $F$.
 Nadalje je $\text{Flux}_{X} = \text{Flux}_{x}$. Res, ker $\widetilde{\mathcal{C}}$ vsebuje bazo homologije za $S$, ima $F$ ničelne realne periode po krivuljah iz homološke baze. Skupaj z definicijo preslikave $X$ in enakostjo periodnih preslikav za $F$ in $f$ sledi enakost pretokov.
 
@@ -1908,6 +1917,26 @@ Pogosto nas zanimajo le regularne ali singularne točke. Zato uvedimo posebni oz
 množico regularnih točk raznoterosti $A$ označimo z $A_{reg}$, množico singularnih točk raznoterosti $A$ pa z $A_{sing}$.
 
 Pravimo, da je afina algebraična raznoterost, ki je podraznoterost v $\mathbb{C}^{n}$, \emph{neizrojena}, kadar ni vsebovana v nobeni afini hiperravnini v $\mathbb{C}^{n}$.
+
+% Lema: Con(A)=C^n
+\begin{lema}
+Konveksna ogrinjača ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, $Con(\textup{\textbf{A}}) = \C^{n}$.
+\end{lema}
+
+\begin{dokaz}
+Označimo s $\Sigma \subseteq \C^{n}$ $\C$-linearno ogrinjačo ničelne kvadrike $\textup{\textbf{A}}$ in dokažimo, da je $Con(\textup{\textbf{A}}) = \Sigma = Lin(A)$. \newline
+Očitno je $Con(\textup{\textbf{A}}) \subseteq \Sigma$. \newline
+Naj bo $v \in \Sigma$ poljuben vektor. Tedaj obstajajo taki koeficienti $\lambda_{i} \in \C_{*}$ in vektorji $v_{i} \in \textup{\textbf{A}}$, $1 \leq i \leq k \leq n$, da velja $v = \sum_{i=1}^{k} \lambda_{i} v_{i}$.
+Postavimo
+\begin{gather*}
+\lambda = \sum_{i=1}^{k} |\lambda_{i}|^2, \quad \mu_{i} = \frac{|\lambda_{i}|^2}{\lambda} > 0, \quad w_{i}=\frac{\lambda_{i}}{\mu_{i}}v_{i} \in \textup{\textbf{A}}, \quad i=1, \dots, k.
+\end{gather*}
+Sledi
+\begin{gather*}
+\sum_{i=1}^{k} \mu_{i} = \frac{1}{\lambda} \sum_{i=1}^{k} |\lambda_{i}|^2 = 1, \quad v = \sum_{i=1}^{k} \lambda_{i}v_{i} =  \sum_{i=1}^{k} \mu_{i}\frac{\lambda_{i}}{\mu_{i}} v_{i} =  \sum_{i=1}^{k} \mu_{i}w_{i},
+\end{gather*}
+torej je $v \in Con(\textup{\textbf{A}})$ in $\Sigma \subseteq Con(\textup{\textbf{A}})$.
+\end{dokaz}
 
 % Lema: poti s predpisanimi integrali, analog Gromova
 \begin{lema} \label{lema:analog-gromova}
