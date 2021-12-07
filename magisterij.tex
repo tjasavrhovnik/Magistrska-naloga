@@ -94,6 +94,7 @@
 \newtheorem{izrek}[definicija]{Izrek}
 \newtheorem{trditev}[definicija]{Trditev}
 \newtheorem{posledica}[definicija]{Posledica}
+\newtheorem{domneva}[definicija]{Domneva}
 
 \numberwithin{equation}{section}  % števec za enačbe zgleda kot (2.7) in se resetira v vsakem poglavju
 
@@ -2456,10 +2457,13 @@ Tedaj obstaja meromorfna preslikava $\tilde{z} \colon M \to \C^{n}$, njena zoži
 \end{izrek}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5%%%%
-% Kompletnost
-\subsection{Kompletnost}
+% Kompletnost in pravost
+\subsection{Kompletnost in pravost}
 %
-Kompletnost preslikav oziroma mnogoterosti je ena izmed pomembnejših lastnosti v Riemannovi geometriji. Izkaže se, da preslikave iz izrekov o aproksimaciji in interpolaciji minimalnih ploskev iz prejšnjih razdelkov lahko izberemo tako, da so kompletne. To dejstvo opisuje naslednji izrek; predstavili bomo le osnovne ideje njegovega dokaza, povzete po~\cite[str.~171--173]{alarcon2021minimal}.
+Preslikava $x \colon M \to \R^{n}$ je \emph{prava}, če je praslika $x^{-1}(K)$ vsake kompaktne množice $K \subset \R^{n}$ kompaktna množica v $M$.
+Ekvivalentna definicija pove, da je za vsako divergentno pot $\gamma$ v $M$ pot $x \circ \gamma$ divergentna v $\R^{n}$. Zato je vsaka prava preslikava tudi kompletna.
+
+Izkaže se, da preslikave iz izrekov o aproksimaciji in interpolaciji minimalnih ploskev lahko izberemo tako, da so kompletne. To pove izrek~\cite[Theorem~3.9.1]{alarcon2021minimal}.
 
 \begin{izrek} \label{izr:kompletnost}
 \begin{enumerate}
@@ -2470,41 +2474,42 @@ Kompletnost preslikav oziroma mnogoterosti je ena izmed pomembnejših lastnosti 
 \end{enumerate}
 \end{izrek}
 
-\begin{dokaz}
-Oglejmo si prvi primer, to je situacija iz Izreka~\ref{izr:glavni-izrek-CMI}. 
-Dokaz je induktiven, ideja pa sledi dokazu izreka, ki ga primer obravnava. Razlika je ta, da za preslikave, konstruirane z indukcijo, vključimo dodaten pogoj, ki zagotovi kompletnost.
+Pravost preslikav je strožja zahteva od kompletnosti, zato moramo pri aproksimaciji in interpolaciji s takimi preslikavami postaviti dodatne pogoje. Natančneje, potrebna je pravost preslikav na interpolacijski množici $\Lambda \subset M$ (\cite[Theorem~3.10.1]{alarcon2021minimal}).
 
-Po dokazu Izreka~\ref{izr:glavni-izrek-CMI} lahko predpostavimo, da je $x \colon M \to \R^{n}$ polna konformna minimalna imerzija. 
-Postavimo $x^0 = x$ in izberimo število $\varepsilon_{0}>0$. 
-Nadalje izberimo strogo subharmonično Morsejevo funkcijo izčrpanja $\rho \colon M \to \R$ ter strogo naraščajoče zaporedje nenegativnih realnih števil $\{ c_{i} \}_{i} \subset \R$ z začetnim členom $c_0 = 0$ in limito $\lim_{i \to \infty}c_{i} = +\infty$, ki izpolnjuje enake tri zahteve kot zaporedje v dokazu Izreka~\ref{izr:glavni-izrek-CMI}.
-Izberimo še točko $p_0 \in M_{0}^{\circ} = \{ \rho < c_0 \}$.
+\begin{izrek} \label{izr:pravost}
+Naj bodo množice $M$, $S$ in $\Lambda$ ter preslikava $x$ kot v Izreku~\ref{izr:glavni-izrek-CMI}.
+\begin{enumerate}
+\item Če je preslikava $x|_{\Lambda} \colon \Lambda \to \R^{n}$ prava, tedaj konformno minimalno imerzijo $\tilde{x} \colon M \to \R^{n}$ v Izreku~\ref{izr:glavni-izrek-CMI} lahko izberemo tako, da je prava.
+\item Če je preslikava $z|_{\Lambda} \colon \Lambda \to \C^{n}$ prava, tedaj holomorfno ničelno krivuljo $\tilde{z} \colon M \to \C^{n}$ v Izreku~\ref{izr:glavni-izrek-NC} lahko izberemo tako, da je prava.
+\item Če je imerzija $x \colon S \to \R^{n}$ prava, tedaj konformno minimalno imerzijo $\tilde{x} \colon M \to \R^{n}$ v Izreku~\ref{izr:ML-CMI} lahko izberemo tako, da je prava.
+\end{enumerate}
+\end{izrek}
 
-V indukcijskem delu konstruiramo zaporedje konformnih minimalnih imerzij $\{ x^{i} \}_{i}$, $x^{i}\colon M_{i} = \{ \rho \leq c_{i} \} \to \R^{n}$ (oz.~natančneje, $x^{i}$ je definirana v okolici $M_{i}$), ter strogo padajoče zaporedje $\{ \varepsilon_{i} \}_{i} \subset \R_{>0}$.
-Pri tem zahtevamo, da za vsak indeks $i \in \N$ veljajo točke~\textit{(i)}--\textit{(vi)} iz dokaza Izreka~\ref{izr:glavni-izrek-CMI}, hkrati pa tudi pogoj:
-\begin{itemize}
-\item[\textit{(vii)}] $d_{x^{i}}(p_0, bM_{i}) > i$.
-\end{itemize}
-(Tu $d_{x^{i}}$ označuje razdaljo glede na povlečeno metriko $(x^{i})^{*}ds^2$.) \newline
-Nato definiramo preslikavo $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \to \R^{n}$. Po njeni definiciji in dokazu Izreka~\ref{izr:glavni-izrek-CMI} je $\tilde{x}$ konformna minimalna imerzija, ki izpolnjuje Izrek~\ref{izr:glavni-izrek-CMI}, pogoj~\textit{(vii)} pa zagotavlja njeno kompletnost. \newline
-Baza indukcije je par $(x^{0}, \varepsilon_{0})$.
-Indukcijski korak se sklicuje na metodo konstrukcije kompletnih minimalnih ploskev v $\R^3$, ki ležijo med vzporednima ravninama. \\[0.3cm]
-%
-Drugi primer o holomorfnih ničelnih krivuljah pokažemo na analogen način. \\[0.3cm]
-%
-V tretjem primeru opomnimo naslednje. Naj bo $\gamma \colon [0,1) \to M \setminus A$ poljubna divergentna pot. Obravnavati je potrebno dve možnosti.
-\begin{itemize}
-\item Pot $\gamma$ divergira v $M \setminus A$. Tedaj kompletnost preslikave $\tilde{x}$ zagotovimo s postopkom iz prvega primera.
-\item Pot $\gamma$ divergira k točki $a \in A$. Tedaj ima pot $\tilde{x} \circ \gamma$ avtomatično neskončno Evklidsko dolžino, saj vemo, da ima 1-forma
-	$\partial \tilde{x}$ pol v točki $a \in A$.
-\end{itemize}
-Dokaz četrtega primera je analogen tretjemu.
-\end{dokaz}
+Oglejmo si nekaj posledic zgornjega rezultata.
 
-Direktna posledica Izreka~\ref{izr:kompletnost} pravi naslednje.
-
-\begin{posledica}
-Vsaka odprta Riemannova ploskev je kompleksna struktura kompletne minimalne ploskve v $\R^{n}$.
+\begin{posledica} \label{pos:pravost}
+Naj bo $M$ odprta Riemannova ploskev.
+\begin{enumerate}
+\item Obstaja prava konformna minimalna imerzija $M \to \R^3$ s pravo pravokotno projekcijo na afino ravnino. Obstaja prava harmonična preslikava $M \to \R^2$.
+\item Obstaja prava konformna minimalna imerzija $M \to \R^4$ z enostavnimi dvojnimi točkami.
+\item Obstaja prava konformna minimalna vložitev $M \hookrightarrow \R^5$.
+\end{enumerate}
 \end{posledica}
+
+Prva točka implicira, da je vsaka odprta Riemannova ploskev kompleksna struktura kompletne minimalne ploskve v $\R^3$. \newline
+Po tretji točki sklepamo, da vsako odprto Riemannovo ploskev lahko s pravo konformno minimalno preslikavo vložimo v $\R^{d}$ za $d \in \{4,5\}$. Izkaže se, da $d \neq 3$, saj taka vložitev obstaja le za nekatere odprte Riemannove ploskve.
+
+\begin{domneva} \label{dom:prava-vložitev}
+Vsaka odprta Riemannova ploskev premore pravo konformno minimalno vložitev v $\R^4$.
+\end{domneva}
+
+Slednja domneva je povezana s Forster-Bell-Narasimhanovo hipotezo, da vsako odprto Riemannovo ploskev lahko vložimo v $\C^2$ kot gladko zaprto kompleksno krivuljo. To je eno pomembnejših vprašanj kompleksne analize. Z uporabo karakterizacije konformnih minimalnih imerzij prispemo do šibkejše formulacije Domneve~\ref{dom:prava-vložitev}.
+
+\begin{domneva}
+Vsaka odprta Riemannova ploskev premore pravo harmonično vložitev v $\R^4$.
+\end{domneva}
+
+Razdelek je povzet po~\cite[Section~3.9,~3.10]{alarcon2021minimal}, kjer je predstavljenih več povezanih rezultatov, odprtih vprašanj skupaj z zgodovinskim ozadjem in referenc nanje. Dokaz Izreka~\ref{izr:pravost} obravnava~\cite[Section~3.11]{alarcon2021minimal}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
