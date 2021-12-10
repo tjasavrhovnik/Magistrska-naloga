@@ -2322,10 +2322,7 @@ To je globalen rezultat. Lokalno pa iz prvega pogoja v Definiciji~\ref{def:GCCMI
 
 Opazimo še, da prvi pogoj iz zgornje definicije implicira kompletnost imerzije $x$. Res, za divergentno pot $\gamma \colon [0,1) \to S \setminus A, \ \lim_{s \to 1}\gamma(s) \in A$, ima pot $x \circ \gamma$ neskončno dolžino v $\R^{n}$. To pomeni, da je preslikava $x \colon S \setminus A \to \R^{n}$ kompletna. \newline
 
-Do Mittag-Lefflerjevega izreka za konformne minimalne imerzije nas loči še nekaj korakov. Postopek je podoben ideji, ki nas je vodila do glavnega izreka o aproksimaciji in interpolaciji. Najprej bomo navedli in dokazali lemo o aproksimaciji in interpolaciji meromorfnih preslikav v ničelno kvadriko; ta je analogna Lemi~\ref{lema:aproks&interp-A*}.
-Iz leme sledi trditev, ki je nekritični primer Mittag-Lefflerjevega izreka, in je razširitev Trditve~\ref{trd:nekritcni-primer}.
-Trditev nato (kot v primeru glavnega izreka) posplošimo do Mittag-Lefflerjevega izreka za konformne minimalne imerzije in analognega rezultata, Weierstrassovega izreka o interpolaciji konformnih minimalnih ploskev.
-Predstavili bomo dokaz leme, dokaze trditve in obeh izrekov pa bomo izpustili. Ti sledijo idejam dokazov pripadajočih rezultatov iz prejšnjega poglavja.
+Do Mittag-Lefflerjevega izreka za konformne minimalne imerzije nas loči še nekaj korakov. Postopek je podoben ideji, ki nas je vodila do glavnega izreka o aproksimaciji in interpolaciji. Pri tem je ključen rezultat o aproksimaciji in interpolaciji meromorfnih preslikav v punktirano ničelno kvadriko; ta je analogen Lemi~\ref{lema:aproks&interp-A*}.
 
 % definicija razreda preslikav A_{\infty}^{r}
 Za začetek definirajmo še en razred preslikav.
@@ -2406,18 +2403,7 @@ Končno definiramo kvocient $F = \frac{\widetilde{F}}{w}$, ki ob dovolj dobri ap
 \end{dokaz}
 %%%%% konec dokaza
 
-Pravkar dokazana lema je najpomembnejše orodje za dokaz naslednje trditve, ki predstavlja nekritični primer Mittag-Lefflerjevega izreka za minimalne ploskve.
-
-% nekriticni primer Mittag-Lefflerjevega izreka
-\begin{trditev} \label{trd:ML-nekriticni-primer}
-Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Predpostavimo, da je $S$ povezana dopustna množica, ki je Rungejeva v $M$, ter $A$ in $\Lambda$ končni množici točk z $A \subset \Lambda \subset S^{\circ}$. Naj bosta $r, s \in \mathbb{N}$.
-Tedaj lahko vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \colon S \setminus A \to \mathbb{R}^{n}$ razreda $\mathcal{C}^{r}(S\setminus A)$ s končno totalno ukrivljenostjo aproksimiramo v $\mathcal{C}^{r}(S \setminus A)$ s polnimi konformnimi minimalnimi imerzijami $X \colon M \setminus A \to \mathbb{R}^{n}$. Pri tem so izpolnjeni naslednji pogoji.
-\begin{enumerate}
-\item Razlika $X-x$ je harmonična v vsaki točki množice $A$. Natančneje, 1-formo $\partial X$ lahko meromorfno razširimo na $M$ s poli v točkah množice $A$.
-\item Razlika $X-x$ je ničelna do reda $s$ v točkah množice $\Lambda$.
-\item $\mathrm{Flux}_{X} = \mathrm{Flux}_{x}$.
-\end{enumerate}
-\end{trditev}
+S pomočjo pravkar dokazane leme lahko izpeljemo nekritičen primer Mittag-Lefflerjevega izreka, tj.~kadar inkluzija $S \hookrightarrow M$ iz povezane dopustne množice $S$ v $M$ porodi izomorfizem $H_{1}(S,\Z) \stackrel{\cong}{\longrightarrow} H_{1}(M,\Z)$. Rezultat je tedaj analogen nekritičnemu primeru glavnega izreka, kar je Trditev~\ref{trd:nekritcni-primer}.
 
 % Mittag-Lefflerjev izrek za CMI
 \begin{izrek} [Mittag-Lefflerjev izrek za konformne minimalne imerzije] \label{izr:ML-CMI}
@@ -2444,6 +2430,8 @@ M_{0} \Subset M_{1} \Subset \dots \Subset \bigcup_{i \geq 0} M_{i}=M,
 \end{gather*}
 za katere velja $U \cap M_{0} = \emptyset$ in $U \cap bM_{i} = \emptyset$ za $i = 1,2,\dots$ To zaporedje množic $\{ M_{i} \}_{i}$ igra pomembno vlogo v dokazu izreka, ki poteka z indukcijo, podobno kot dokaz glavnega izreka iz prejšnjega poglavja.
 Dokaz različice izreka se nahaja v~\cite[Theorem~7.1]{alarcon2019algebraic}. % [1906.01915.pdf: Theorem 7.1, dokaz]
+
+Razložimo le, kako v dokazu Mittag-Lefflerjevega izreka za konformne minimalne imerzije uporabimo nekritičen primer. Ideja je induktivno konstruirati polne konformne minimalne imerzije $x^{i} \colon M_{i}\setminus A \to \R^{n}$ in števila $\varepsilon_{i}>0$ za $i \in \N$. V $i$-tem koraku indukcije kompaktno množico $M_{i-1} \setminus A$ na okolici katere že imamo ustrezno minimalno imerzijo povečamo (odvisno od lastnosti množice $A_{i} = \{ c_{i-1} < \rho < c_{i} \}$) tako, da ima na novo dobljena množica isto bazo homologije kot $M_{i} \setminus A$. Ko to izpolnimo, nam nekritičen primer zagotovi novo preslikavo $x^{i} \colon M_{i} \setminus A \to \R^{n}$. Iskana polna konformna minimalna imerzija je $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \setminus A \to \R^{n}$. \newline
 
 Mittag-Lefflerjev izrek za konformne minimalne imerzije, predvsem njegov drugi del, posnema glavni izrek za minimalne ploskve Mergelyanovega tipa (Izrek~\ref{izr:glavni-izrek-CMI}) v naslednjem smislu. Če minimalno imerzijo v glavnem izreku definiramo na punktirani dopustni množici in dovolimo, da imajo njeni Weierstrassovi podatki pole (v točkah, kjer podana imerzija ni definirana), tedaj dobimo zgornji izrek.
 
