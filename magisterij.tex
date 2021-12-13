@@ -938,8 +938,7 @@ Preslikava $x$ je po Lemi~\ref{lema:konform-ekvivalence} konformna natanko tedaj
 \end{dokaz}
 
 \begin{opomba} % [Osserman: Theorem 7.1 & Remarks, Appendix 3 (p. 143)]
-Preslikava, ki minimizira Dirichletov energijski integral, minimizira tudi površino, je konformna, in parametrizira minimalno ploskev z robom $\Gamma$.
-J.~Douglas in T.~Rad\'o sta l.~1932 dokazala, da vsaka Jordanova krivulja v $\mathbb{R}^3$ določa rob minimalne ploskve.
+Preslikava, ki minimizira Dirichletov energijski integral, minimizira tudi površino, je konformna, in parametrizira minimalno ploskev z robom $\Gamma$. T.~Rad\'o (l.~1930,~\cite{rado1930plateau}) in J.~Douglas (l.~1931,~\cite{douglas1931solution}) sta dokazala, da vsaka Jordanova krivulja v $\mathbb{R}^3$ določa rob minimalne ploskve.
 
 Fundamentalni rezultat o obstoju minimalnih ploskev s predpisanim robom je izrek, ki pravi, da za poljubno Jordanovo krivuljo $\Gamma$ v $\R^{n}$ obstaja enostavno povezana posplošena minimalna ploskev z robom $\Gamma$~\cite[Theorem~7.1]{osserman2002survey}. 
 Natančneje, izrek trdi, da obstaja zvezna preslikava $x \colon \overline{\mathbb{D}} \to \R^{n}$, katere zožitev na notranjost $x|_{\mathbb{D}}$ določa minimalno ploskev, zožitev na rob $x|_{b\mathbb{D}}$ pa je homeomorfizem na krivuljo $\Gamma$.
@@ -1356,10 +1355,11 @@ y(\zeta) &= \Re (iz(\zeta)) = \Re \left( (i,0,0) + \int_{0}^{\zeta} \left( \frac
 \end{align}
 Njegova kompleksna Gaussova preslikava je $\mathfrak{g}(\zeta) = e^{i\zeta}$, kar nam pove, da ima helikoid negativno neskončno totalno Gaussovo ukrivljenost; $TC(y) = -\infty$. 
 
-O helikoidu sta prva pisala L.~Euler in J.~B.~Meusnier v 80.-ih letih 18.~stoletja, brez znanja o konjugiranih minimalnih ploskvah in povezavi s kompleksno analizo. Omenimo še dve zanimivi lastnosti obravnavane minimalne ploskve:
+O helikoidu sta prva pisala L.~Euler in J.~B.~Meusnier v 80.-ih letih 18.~stoletja, brez znanja o konjugiranih minimalnih ploskvah in povezavi s kompleksno analizo. Omenimo še tri lastnosti obravnavane minimalne ploskve:
 \begin{itemize}
 \item Za vsako točko na helikoidu obstaja premica, ki leži na njem, in gre skozi to točko.
 \item Za vsako točko na helikoidu obstaja vijačnica, ki leži na njem, in gre skozi to točko.
+\item Helikoid je unija paroma disjunktnih vijačnic. Še več, njegovo foliacijo sestavljajo vijačnice in os rotacije, ki je premica. 
 \end{itemize}
 Prvo lastnost kot minimalni ploskvi v $\mathbb{R}^3$ premoreta le helikoid in ravnina, kar je l.~1842 dokazal E.~C.~Catalan. Druga lastnost namiguje na izvor imena -- helikoid spominja na latinsko besedo ``helix'', kar v slovenščini imenujemo vijačnica.
 Helikoid (sicer ne obravnavan v smislu minimalne ploskve) ima zanimivo in dolgo zgodovino. V Starem Egiptu, morda pa že Babilonci, so napravo take oblike uporabljali za črpanje vode. Na potovanju v Egipt leta 234~pr.~n.~št. jo je srečal Arhimed, izum opisal in prenesel v grške dežele, kjer so napravo, Arhimedov vijak, kasneje poimenovali po njem.
@@ -1553,7 +1553,7 @@ T_{z} \textbf{\textup{A}} = \ker \left(d \Phi_{z} \right) = \ker \left(z \mapsto
 Naj bosta vektorja $z, w \in \C_{*}^{n}$. Potem sta njuna tangentna prostora enaka, $ T_{z} \textbf{\textup{A}} = T_{w} \textbf{\textup{A}} $, natanko takrat, ko velja $z_{j} = \lambda w_{j}$ za vse $j = 1, \dots , n$ in nek $\lambda \in \C$, kar je ekvivalentno pogoju, da sta vektorja $z$ in $w$ kolinearna.
 
 Po definiciji je preslikava $f$ neravna, če njena slika $f(M)$ ni vsebovana v nobeni afini kompleksni premici v $\C^{n}$. Skupaj z zgornjim je slednje ekvivalentno 
-$ \mathcal{L}in \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
+$ \mathrm{Lin} \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo želeli dokazati.
 \end{dokaz}
 
 V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih konformnih minimalnih imerzij in ničelnih krivulj operirali s splošnejšimi preslikavami, imenovanimi posplošene minimalne imerzije ter ničelne krivulje; naravno pa se bodo zaradi topoloških lastnosti množic, na katerih bomo preslikave aproksimirali in interpolirali, pojavile tudi množice iz naslednje definicije.
@@ -1661,7 +1661,7 @@ Preslikavo $\Phi_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej}, imenujemo \emph{per
 Prvi del leme bomo dokazali tako, da bomo konstruirali periodno dominantni sprej. Potrebovali bomo Lemo~\ref{lema:neravna f}, Bishop-Mergelyanov izrek o aproksimaciji (Izrek~\ref{izr:Bishop-Mergelyan}) in pojem toka vektorskega polja.
 Zaradi enostavnosti postavimo $r=0$ (za $r>0$ dokaz poteka analogno).
 
-Po predpostavki je za vse $i \in \{ 1, \dots, l \}$ lok $I_{i} \subset C_{i} \in \mathcal{C}$ netrivialen, za katerega velja $I_{i} \cap (\cup_{i \neq j} C_{j}) = \emptyset$ in je zožitev preslikave $f|_{I_{i}}$ neravna. Po Lemi~\ref{lema:neravna f} zato obstajajo točke $p_{i,j} \in I_{i}$ in taka holomorfna vektorska polja $V_{i,j}$ na $\C^{n}$, $j \in \{1, \dots, n \}$, ki so tangentna na $\textbf{\textup{A}}$, da je $\mathcal{L}in \{ V_{i,j}(f(p_{i,j})) ; \ j = 1, \dots, n \} = \C^{n}$ za vse $i$.
+Po predpostavki je za vse $i \in \{ 1, \dots, l \}$ lok $I_{i} \subset C_{i} \in \mathcal{C}$ netrivialen, za katerega velja $I_{i} \cap (\cup_{i \neq j} C_{j}) = \emptyset$ in je zožitev preslikave $f|_{I_{i}}$ neravna. Po Lemi~\ref{lema:neravna f} zato obstajajo točke $p_{i,j} \in I_{i}$ in taka holomorfna vektorska polja $V_{i,j}$ na $\C^{n}$, $j \in \{1, \dots, n \}$, ki so tangentna na $\textbf{\textup{A}}$, da je $\mathrm{Lin} \{ V_{i,j}(f(p_{i,j})) ; \ j = 1, \dots, n \} = \C^{n}$ za vse $i$.
 
 Za $k = 1, \dots , l$ označimo $t_{k} = (t_{k,1}, \dots, t_{k,n}) \in \C^{n}$ in $t = (t_{1}, \dots, t_{l}) \in \C^{nl}$. Naj $\Phi_{t}^{i,j}$ označuje tok vektorskega polja $V_{i,j}$, definiran za majhne $t$. (Seveda so tokovi holomorfne preslikave.)
 Okolico $U_{0} \subset \C^{nl}$ točke $0$ izberimo tako, da za vse $t \in U_{0}$ in $p \in S$ predpis
@@ -1725,7 +1725,7 @@ Za indekse $1 \leq i \neq j \leq n$ definirajmo holomorfna vektorska polja na $ 
 \begin{gather*}
 V_{ij} = z_{i} \frac{\partial}{\partial z_{j}} - z_{j} \frac{\partial}{\partial z_{i}}.
 \end{gather*}
-Očitno so vektorska polja $\mathbb{C}$-linearna in kompletna, tangentna na punktirano ničelno kvadriko $\textbf{\textup{A}}_{*}$ in $\mathcal{L}in \{ V_{ij}(x) ; \ i,j \} = T_{x}\textbf{\textup{A}}_{*}$ v vsaki točki $x \in \textbf{\textup{A}}_{*}$. Po definiciji je zato kompleksna mnogoterost $\textbf{\textup{A}}_{*}$ fleksibilna\footnote{Pravimo, da je kompleksna mnogoterost $M$ \emph{fleksibilna}, kadar na $M$ obstaja končno mnogo takih kompletnih holomorfnih vektorskih polj $V_{1}, \dots , V_{n}$, da v vsaki točki $p \in M$ velja $\mathcal{L}in \{ V_{1}(p), \dots , V_{n}(p) \} = T_{p}M$.}, 
+Očitno so vektorska polja $\mathbb{C}$-linearna in kompletna, tangentna na punktirano ničelno kvadriko $\textbf{\textup{A}}_{*}$ in $\mathrm{Lin} \{ V_{ij}(x) ; \ i,j \} = T_{x}\textbf{\textup{A}}_{*}$ v vsaki točki $x \in \textbf{\textup{A}}_{*}$. Po definiciji je zato kompleksna mnogoterost $\textbf{\textup{A}}_{*}$ fleksibilna\footnote{Pravimo, da je kompleksna mnogoterost $M$ \emph{fleksibilna}, kadar na $M$ obstaja končno mnogo takih kompletnih holomorfnih vektorskih polj $V_{1}, \dots , V_{n}$, da v vsaki točki $p \in M$ velja $\mathrm{Lin} \{ V_{1}(p), \dots , V_{n}(p) \} = T_{p}M$.}, 
 kar pomeni, da je tudi Oka mnogoterost (\cite[Definition~1.13.7]{alarcon2021minimal}). 
 \end{primer}
 
@@ -1765,8 +1765,8 @@ V drugem delu bomo s pomočjo Leme~\ref{lema:P-D-sprej} konstruirali periodno do
 % 1. korak
 \textit{1.~korak:} Naj bo $S = K$ povezana kompaktna množica. (Za splošnejšo dopustno množico $S = K \cup E$ je korak enak, le da ga ponovimo na vsaki povezani komponenti $K$, na $E$ pa polno preslikavo dobimo z manjšo gladko deformacijo preslikave $f$.)
 Predpostavimo, da $f$ ni polna. Sicer nadaljujemo z drugim korakom.
-Označimo $\Sigma(f) = \mathcal{L}in (f(K)) \subset \mathbb{C}^{n}$, ki je po predpostavki pravi podprostor v $\mathbb{C}^{n}$.
-Izberimo točke $x_{1}, \dots , x_{j} \in K \setminus A$ tako, da je $\Sigma(f) = \mathcal{L}in \{ f(x_{1}), \dots , f(x_{j}) \}$.
+Označimo $\Sigma(f) = \mathrm{Lin} (f(K)) \subset \mathbb{C}^{n}$, ki je po predpostavki pravi podprostor v $\mathbb{C}^{n}$.
+Izberimo točke $x_{1}, \dots , x_{j} \in K \setminus A$ tako, da je $\Sigma(f) = \mathrm{Lin} \{ f(x_{1}), \dots , f(x_{j}) \}$.
 Ker je $\dim \Sigma(f) \leq n-1$, obstaja holomorfno vektorsko polje $V$ na $\mathbb{C}^{n}$, tangentno na $\textbf{\textup{A}}$, za katerega velja $V(f(x_0)) \notin \Sigma(f)$ za neko točko $x_0 \in K \setminus (A \cup \{ x_{1}, \dots , x_{j} \})$.
 
 Naj bosta $t \mapsto \Phi_{t}(z)$ tok vektorskega polja $V$ in $s \in \mathbb{N}$. 
@@ -1921,12 +1921,12 @@ Pravimo, da je afina algebraična raznoterost, ki je podraznoterost v $\mathbb{C
 
 % Lema: Con(A)=C^n
 \begin{lema}
-Konveksna ogrinjača ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, tj.~$Con(\textup{\textbf{A}}) = \C^{n}$.
+Konveksna ogrinjača ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, tj.~$\mathrm{Con}(\textup{\textbf{A}}) = \C^{n}$.
 \end{lema}
 
 \begin{dokaz}
-Označimo s $\Sigma \subseteq \C^{n}$ $\C$-linearno ogrinjačo ničelne kvadrike $\textup{\textbf{A}}$ in dokažimo, da je $Con(\textup{\textbf{A}}) = \Sigma$. \newline
-Očitno je $Con(\textup{\textbf{A}}) \subseteq \Sigma$. \newline
+Označimo s $\Sigma \subseteq \C^{n}$ $\C$-linearno ogrinjačo ničelne kvadrike $\textup{\textbf{A}}$ in dokažimo, da je $\mathrm{Con}(\textup{\textbf{A}}) = \Sigma$. \newline
+Očitno je $\mathrm{Con}(\textup{\textbf{A}}) \subseteq \Sigma$. \newline
 Naj bo $v \in \Sigma$ poljuben vektor. Tedaj obstajajo taki koeficienti $\lambda_{i} \in \C_{*}$ in vektorji $v_{i} \in \textup{\textbf{A}}$, $1 \leq i \leq k \leq n$, da velja $v = \sum_{i=1}^{k} \lambda_{i} v_{i}$.
 Postavimo
 \begin{gather*}
@@ -1936,7 +1936,8 @@ Sledi
 \begin{gather*}
 \sum_{i=1}^{k} \mu_{i} = \frac{1}{\lambda} \sum_{i=1}^{k} |\lambda_{i}|^2 = 1, \quad v = \sum_{i=1}^{k} \lambda_{i}v_{i} =  \sum_{i=1}^{k} \mu_{i}\frac{\lambda_{i}}{\mu_{i}} v_{i} =  \sum_{i=1}^{k} \mu_{i}w_{i},
 \end{gather*}
-torej je $v \in Con(\textup{\textbf{A}})$ in $\Sigma \subseteq Con(\textup{\textbf{A}})$.
+torej je $v \in \mathrm{Con}(\textup{\textbf{A}})$ in $\Sigma \subseteq \mathrm{Con}(\textup{\textbf{A}})$.
+Ker je $\Sigma = \C^{n}$, lema res drži.
 \end{dokaz}
 
 Splošnejši rezultat velja za zaprte povezane algebraične podraznoterosti v $\C^{n}$~\cite[Lemma~3.5.1]{alarcon2021minimal}. Potreben je za razumevanje leme, ki sledi.
@@ -1952,7 +1953,7 @@ Potem za $\tau \in [0,1]$ obstaja taka homotopija $f_{\tau} \colon [0,1] \to A_{
 Natančneje, za poljuben par točk v $A_{reg}$ obstaja gladka pot $f \colon [0,1] \to A_{reg}$ med njima, ki zadošča pogoju~\eqref{eq:pot-s-predp-integralom}.
 \end{lema}
 
-Navedli bomo le osnovne ideje dokaza leme. Popoln dokaz, ki se nahaja v~\cite[Lemma~3.5.4]{alarcon2021minimal}, posnema dokaz leme Mikhaila Gromova\footnote{Mikhail Gromov, roj.~1943, je rusko-francoski matematik s področij geometrije, analize in teorije grup. Med drugim je uvedel metodo konveksne integracije, h-princip in pojem skoraj ravne mnogoterosti. Leta 2009 je prejel Abelovo nagrado.}
+Navedli bomo le osnovne ideje dokaza leme. Popoln dokaz, ki se nahaja v~\cite[Lemma~3.5.4]{alarcon2021minimal}, posnema dokaz leme Mikhaila Gromova\footnote{Mikhail Gromov, roj.~1943, je rusko-francoski matematik s področij geometrije, analize in teorije grup. Poleg številnih priznanj je leta 2009 prejel Abelovo nagrado.}
 o konveksni integraciji. Rezultat je pomemben, ker nam omogoča konstrukcijo poti s predpisanimi vrednostmi integralov znotraj množice regularnih točk nerazcepne algebraične raznoterosti. Mi jo bomo uporabljali za konstrukcijo poti v punktirani ničelni kvadriki $\textup{\textbf{A}}_{*} \subset \C^{n}$ v dokazu Glavnega izreka~\ref{izr:glavni-izrek-CMI}.
 
 % dokaz leme
@@ -2403,7 +2404,7 @@ Končno definiramo kvocient $F = \frac{\widetilde{F}}{w}$, ki ob dovolj dobri ap
 \end{dokaz}
 %%%%% konec dokaza
 
-S pomočjo pravkar dokazane leme lahko izpeljemo nekritičen primer Mittag-Lefflerjevega izreka, tj.~kadar inkluzija $S \hookrightarrow M$ iz povezane dopustne množice $S$ v $M$ porodi izomorfizem $H_{1}(S,\Z) \stackrel{\cong}{\longrightarrow} H_{1}(M,\Z)$. Rezultat je tedaj analogen nekritičnemu primeru glavnega izreka, kar je Trditev~\ref{trd:nekritcni-primer}.
+S pomočjo pravkar dokazane leme lahko izpeljemo nekritičen primer Mittag-Lefflerjevega izreka, tj.~kadar inkluzija $S \hookrightarrow M$ iz povezane dopustne množice $S$ v $M$ porodi izomorfizem $H_{1}(S,\Z) \stackrel{\cong}{\longrightarrow} H_{1}(M,\Z)$. Rezultat je tedaj analogen nekritičnemu primeru glavnega izreka, kar je Trditev~\ref{trd:nekritcni-primer}. Navedimo izrek za konformne minimalne imerzije Mittag-Lefflerjevega tipa.
 
 % Mittag-Lefflerjev izrek za CMI
 \begin{izrek} [Mittag-Lefflerjev izrek za konformne minimalne imerzije] \label{izr:ML-CMI}
@@ -2431,7 +2432,7 @@ M_{0} \Subset M_{1} \Subset \dots \Subset \bigcup_{i \geq 0} M_{i}=M,
 za katere velja $U \cap M_{0} = \emptyset$ in $U \cap bM_{i} = \emptyset$ za $i = 1,2,\dots$ To zaporedje množic $\{ M_{i} \}_{i}$ igra pomembno vlogo v dokazu izreka, ki poteka z indukcijo, podobno kot dokaz glavnega izreka iz prejšnjega poglavja.
 Dokaz različice izreka se nahaja v~\cite[Theorem~7.1]{alarcon2019algebraic}. % [1906.01915.pdf: Theorem 7.1, dokaz]
 
-Razložimo le, kako v dokazu Mittag-Lefflerjevega izreka za konformne minimalne imerzije uporabimo nekritičen primer. Ideja je induktivno konstruirati polne konformne minimalne imerzije $x^{i} \colon M_{i}\setminus A \to \R^{n}$ in števila $\varepsilon_{i}>0$ za $i \in \N$. V $i$-tem koraku indukcije kompaktno množico $M_{i-1} \setminus A$ na okolici katere že imamo ustrezno minimalno imerzijo povečamo (odvisno od lastnosti množice $A_{i} = \{ c_{i-1} < \rho < c_{i} \}$) tako, da ima na novo dobljena množica isto bazo homologije kot $M_{i} \setminus A$. Ko to izpolnimo, nam nekritičen primer zagotovi novo preslikavo $x^{i} \colon M_{i} \setminus A \to \R^{n}$. Iskana polna konformna minimalna imerzija je $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \setminus A \to \R^{n}$. \newline
+Razložimo le, kako v dokazu Mittag-Lefflerjevega izreka za konformne minimalne imerzije uporabimo nekritičen primer. Ideja je induktivno konstruirati polne konformne minimalne imerzije $x^{i} \colon M_{i}\setminus A \to \R^{n}$ in števila $\varepsilon_{i}>0$ za $i \in \N$. V $i$-tem koraku indukcije kompaktno množico $M_{i-1} \setminus A$ na okolici katere že imamo ustrezno minimalno imerzijo povečamo (odvisno od lastnosti množice $A_{i} = \{ c_{i-1} < \rho < c_{i} \}$) tako, da ima na novo dobljena množica isto bazo homologije kot $M_{i} \setminus A$. Ko to izpolnimo, nam nekritičen primer zagotovi novo preslikavo $x^{i} \colon M_{i} \setminus A \to \R^{n}$. Iskana polna konformna minimalna imerzija je $\tilde{x} = \lim_{i \to \infty}x^{i} \colon M \setminus A \to \R^{n}$. (Tu smo uporabili enake oznake kot v dokazu glavnega izreka.) \newline
 
 Mittag-Lefflerjev izrek za konformne minimalne imerzije, predvsem njegov drugi del, posnema glavni izrek za minimalne ploskve Mergelyanovega tipa (Izrek~\ref{izr:glavni-izrek-CMI}) v naslednjem smislu. Če minimalno imerzijo v glavnem izreku definiramo na punktirani dopustni množici in dovolimo, da imajo njeni Weierstrassovi podatki pole (v točkah, kjer podana imerzija ni definirana), tedaj dobimo zgornji izrek.
 
