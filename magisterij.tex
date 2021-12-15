@@ -894,9 +894,9 @@ Naj bo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n \g
 		\begin{gather}
 		|x_{u}| = |x_{v}| > 0, \quad x_{u} \cdot x_{v} = 0.
 		\end{gather}
-	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo \emph{ničelni kvadriki}\footnote{Ničelna kvadrika $\textbf{\textup{A}}$ v $(n-1)$-spremenljivkah je kompleksni stožec s singularno točko $0$.} (so \emph{ničelni vektorji})
-		\begin{gather} \label{eq:ničelna-kvadrika}
-		\textbf{\textup{A}} = \textbf{\textup{A}}^{n-1} = \{ z=(z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}; \ z_{1}^2 + \cdots + z_{n}^2 = 0 \}.
+	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo punktirani \emph{ničelni kvadriki}\footnote{Ničelna kvadrika $\textbf{\textup{A}}$ v $(n-1)$-spremenljivkah je kompleksni stožec s singularno točko $0$. Punktirana ničelna kvadrika je enaka $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$.} (so \emph{ničelni vektorji})
+		\begin{gather} \label{eq:punkt-ničelna-kvadrika}
+		\textbf{\textup{A}}_{*} = \textbf{\textup{A}}^{n-1}_{*} = \{ z=(z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}_{*}; \ z_{1}^2 + \cdots + z_{n}^2 = 0 \}.
 		\end{gather}
 	\item Matrika, ki pripada Riemannovi metriki $g = x^{*}ds^2$ na $D$, je enaka $G = \mu I$, kjer je $\mu = |x_{u}|^2 = |x_{v}|^2$ ter je $I$ identiteta.
 \end{enumerate}
@@ -1021,9 +1021,9 @@ Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \col
 			\begin{equation} \label{eq:partialx^2 = 0}
 			(\partial{x_1})^2 + \cdots + (\partial{x_n})^2 = 0.
 			\end{equation}
-	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi v ničelni kvadriki
+	\item Naj bo $\theta$ holomorfna 1-forma na $M$, ki ni nikjer enaka $0$. Potem je preslikava $f = 2\partial{x} / \theta \colon M \to \C^{n}$ holomorfna z 				vrednostmi v punktirani ničelni kvadriki
 			\begin{equation}	
-			\textbf{\textup{A}} = \{ (z_1, \dots , z_n) \in \C^{n} ; \ z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
+			\textbf{\textup{A}}_{*} = \{ (z_1, \dots , z_n) \in \C^{n}_{*} ; \ z_{1}^{2} + \cdots + z_{n}^{2} = 0 \}.
 			\end{equation}	
 \end{enumerate}
 Nadalje je Riemannova metrika na $M$, inducirana s konformno imerzijo $x$, enaka
@@ -1070,7 +1070,7 @@ Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{it} z)
 \end{definicija}
 
 Izrek~\cite[Theorem~1.10.5]{alarcon2021minimal} pravi, da vsaka odprta Riemannova ploskev premore povsod neničelno eksaktno 1-formo.
-Naj bosta $z \colon M \to \mathbb{C}^{n}$ holomorfna ničelna krivulja in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Diferencial $dz$ je 1-forma in obstaja holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$, ki 1-formi povezuje z enakostjo $dz = f \theta$. Tu je množica $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$ punktirana ničelna kvadrika v $\C^{n}$.
+Naj bosta $z \colon M \to \mathbb{C}^{n}$ holomorfna ničelna krivulja in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Diferencial $dz$ je 1-forma in obstaja holomorfna preslikava $f \colon M \to \textbf{\textup{A}}_{*}$, ki 1-formi povezuje z enakostjo $dz = f \theta$.
 
 \emph{Enneper-Weierstrassova reprezentacijska formula} predstavlja povezavo med konformnimi minimalnimi imerzijami na odprti Riemannovi ploskvi $M$ ter holomorfnimi preslikavami med $M$ in punktirano ničelno kvadriko, katerih realne periode so ničelne. Je posledica Izreka~\ref{izr:ekviv-min-ploskev}, zato jo bomo navedli brez dokaza. Rezultat je pomemben, saj predstavlja konformne minimalne ploskve in holomorfne ničelne krivulje, konstruirane na univerzalen način. Metodo konstrukcije bomo v naslednjih poglavjih pogosto uporabljali.
 
@@ -1544,7 +1544,7 @@ $T_{f(p)} \textbf{\textup{A}} \subset T_{f(p)} \C^{n} \cong \mathbb{C}^{n}$ po v
 \begin{dokaz}
 Oglejmo si preslikavo 
 $\Phi \colon \C^{n} \to \C$, definirano s predpisom $\Phi(z) = \sum_{j=1}^{n} z_{j}^{2}$.
-Ničelno kvadriko~\eqref{eq:ničelna-kvadrika} tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0\} )$.
+Ničelno kvadriko $\textbf{\textup{A}} = \{ z=(z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}; \ z_{1}^2 + \cdots + z_{n}^2 = 0 \}$  tedaj lahko zapišemo v obliki $\textbf{\textup{A}} = \Phi^{-1}( \{0\} )$.
 Njen tangentni prostor v točki $z = (z_{1}, \dots , z_{n}) \in \C^{n}$ je enak jedru diferenciala, ki kvadriko določa, zato je
 \begin{gather*}
 T_{z} \textbf{\textup{A}} = \ker \left(d \Phi_{z} \right) = \ker \left(z \mapsto \sum_{j=1}^{n} z_{j} dz_{j} \right).
@@ -1919,14 +1919,14 @@ množico regularnih točk raznoterosti $A$ označimo z $A_{reg}$, množico singu
 
 Pravimo, da je afina algebraična raznoterost, ki je podraznoterost v $\mathbb{C}^{n}$, \emph{neizrojena}, kadar ni vsebovana v nobeni afini hiperravnini v $\mathbb{C}^{n}$.
 
-% Lema: Con(A)=C^n
+% Lema: Co(A)=C^n
 \begin{lema}
-Konveksna ogrinjača ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, tj.~$\mathrm{Con}(\textup{\textbf{A}}) = \C^{n}$.
+Konveksna ogrinjača ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, tj.~$\mathrm{Co}(\textup{\textbf{A}}) = \C^{n}$.
 \end{lema}
 
 \begin{dokaz}
-Označimo s $\Sigma \subseteq \C^{n}$ $\C$-linearno ogrinjačo ničelne kvadrike $\textup{\textbf{A}}$ in dokažimo, da je $\mathrm{Con}(\textup{\textbf{A}}) = \Sigma$. \newline
-Očitno je $\mathrm{Con}(\textup{\textbf{A}}) \subseteq \Sigma$. \newline
+Označimo s $\Sigma \subseteq \C^{n}$ $\C$-linearno ogrinjačo ničelne kvadrike $\textup{\textbf{A}}$ in dokažimo, da je $\mathrm{Co}(\textup{\textbf{A}}) = \Sigma$. \newline
+Očitno je $\mathrm{Co}(\textup{\textbf{A}}) \subseteq \Sigma$. \newline
 Naj bo $v \in \Sigma$ poljuben vektor. Tedaj obstajajo taki koeficienti $\lambda_{i} \in \C_{*}$ in vektorji $v_{i} \in \textup{\textbf{A}}$, $1 \leq i \leq k \leq n$, da velja $v = \sum_{i=1}^{k} \lambda_{i} v_{i}$.
 Postavimo
 \begin{gather*}
@@ -1936,7 +1936,7 @@ Sledi
 \begin{gather*}
 \sum_{i=1}^{k} \mu_{i} = \frac{1}{\lambda} \sum_{i=1}^{k} |\lambda_{i}|^2 = 1, \quad v = \sum_{i=1}^{k} \lambda_{i}v_{i} =  \sum_{i=1}^{k} \mu_{i}\frac{\lambda_{i}}{\mu_{i}} v_{i} =  \sum_{i=1}^{k} \mu_{i}w_{i},
 \end{gather*}
-torej je $v \in \mathrm{Con}(\textup{\textbf{A}})$ in $\Sigma \subseteq \mathrm{Con}(\textup{\textbf{A}})$.
+torej je $v \in \mathrm{Co}(\textup{\textbf{A}})$ in $\Sigma \subseteq \mathrm{Co}(\textup{\textbf{A}})$.
 Ker je $\Sigma = \C^{n}$, lema res drži.
 \end{dokaz}
 
