@@ -268,7 +268,7 @@ Naj bo $n \in \N$. Topološki prostor $M$ z lastnostmi:
 \item $M$ je 2-števen,
 \item $M$ je lokalno Evklidski prostor dimenzije $n$ (za vsak $p \in M$ obstajata odprta okolica $U \subset M$ in homeomorfizem $\phi \colon U \to V \subset \R^{n}$, kjer je $V$ odprta množica),
 \end{enumerate}
-imenujemo \emph{topološka mnogoterost} dimenzije $n$.
+imenujemo \emph{topološka mnogoterost}\index{topološka mnogoterost} dimenzije $n$.
 \end{definicija}
 
 Na topološki mnogoterosti $M$ dimenzije $n$ definiramo \emph{atlas} $\mathcal{U} = \{ (U_{i}, \phi_{i}) ; \ i \in I \}$ kot družino parov $(U_{i}, \phi_{i})$, kjer je $\{ U_{i} \}_{i \in I}$ odprto pokritje mnogoterosti $M$, preslikave $\phi_{i} \colon U_{i} \to \phi_{i}(U_{i}) \subset \R^{n}$ pa so homeomorfizmi za vse $i$. Par $(U_{i}, \phi_{i})$ imenujemo \emph{lokalna karta}.
@@ -280,7 +280,7 @@ Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$ razsežnosti $\dim X = n$ in $M
 \end{definicija}
 
 \begin{definicija} [Orientacija mnogoterosti]
-Naj bo $M$ gladka mnogoterost in $\mathcal{U}$ pripadajoč gladek atlas. Lokalni karti $(U, \phi)$ in $(V, \psi)$ določata isto orientacijo na $M$, če za poljubno točko $p \in U \cap V \neq \emptyset$ velja $\det (d(\psi \circ \phi ^{-1})_{\phi (p)}) > 0.$ Kadar poljubni lokalni karti glede na izbrani atlas $\mathcal{U}$ določata isto orientacijo, pravimo, da je atlas $\mathcal{U}$ \emph{orientiran}. Nadalje je mnogoterost \emph{orientabilna}, če premore orientiran atlas. \emph{Orientacija} mnogoterosti $M$ je izbor maksimalnega orientiranega atlasa na $M$.
+Naj bo $M$ gladka mnogoterost in $\mathcal{U}$ pripadajoč gladek atlas. Lokalni karti $(U, \phi)$ in $(V, \psi)$ določata isto orientacijo na $M$, če za poljubno točko $p \in U \cap V \neq \emptyset$ velja $\det (d(\psi \circ \phi ^{-1})_{\phi (p)}) > 0.$ Kadar poljubni lokalni karti glede na izbrani atlas $\mathcal{U}$ določata isto orientacijo, pravimo, da je atlas $\mathcal{U}$ \emph{orientiran}. Nadalje je mnogoterost \emph{orientabilna}, če premore orientiran atlas. \emph{Orientacija}\index{orientacija} mnogoterosti $M$ je izbor maksimalnega orientiranega atlasa na $M$.
 \end{definicija}
 
 Definirati želimo še tangentni prostor mnogoterosti. Naj bo $M$ gladka mnogoterost in izberimo atlas $\mathcal{U} = \{ (U_{i}, \phi_{i}) ; \ i \in I \}$ na njej. Naj bo točka $p \in U_{i} \subset M$ za nek indeks $i$.  Gladki krivulji\footnote{Krivulja $\gamma_{j}$ je gladka, če je preslikava $ \phi_{i} \circ \gamma_{j} \colon (-\varepsilon, \varepsilon) \to \mathbb{R}^{n}$, $j=1,2,$ gladka v običajnem smislu.} 
@@ -290,7 +290,7 @@ $\gamma_{1}(0) = \gamma_{2}(0) = p$ in $ \frac{d}{dt} \big|_{t=0} \phi_{i}(\gamm
 \begin{definicija}
 Naj bo $M$ mnogoterost in $p \in M$ točka na njej. \emph{Tangentni vektor} $v_{p}$ na $M$ v točki $p$ ustreza ekvivalenčnemu razredu $[\gamma]$ krivulje $\gamma \colon (-\varepsilon, \varepsilon) \to M$, za katero velja $\gamma (0) = p$.
 
-Unija vseh tangentnih vektorjev na $M$ v točki $p$ določa \emph{tangentni prostor} $T_{p}M$ mnogoterosti $M$ v točki $p$.
+Unija vseh tangentnih vektorjev na $M$ v točki $p$ določa \emph{tangentni prostor}\index{tangentni prostor} $T_{p}M$ mnogoterosti $M$ v točki $p$.
 \end{definicija}
 
 Naj bosta $M$ in $N$ mnogoterosti dimenzij $\dim M = m$, $\dim N = n$ ($m, n \in \N$). Naj bo $r \geq 0$. Pravimo, da je zvezna preslikava $f \colon M \to N$ \emph{razreda $\mathcal{C}^{r}$ v točki} $p \in M$, če obstajata taki $\mathcal{C}^{r}$ karti $(U, \phi)$ na $M$ v okolici točke $p \in M$ in $(V, \psi)$ na $N$ v okolici točke $f(p) \in N$, da je preslikava $F = \psi \circ f \circ \phi^{-1}$ razreda $\mathcal{C}^{r}$ v okolici točke $\phi(p)$.
@@ -304,10 +304,10 @@ Vzemimo gladki (oz.~razreda $\mathcal{C}^{r}$, $r \geq 1$) mnogoterosti $M$ in $
 \begin{definicija}
 Naj bo $f \colon M \to N$ gladka preslikava med gladkima mnogoterostma. Preslikava $f$ se imenuje 
 \begin{enumerate}
-\item \emph{imerzija} v točki $p \in M$, če je njen diferencial $df_{p} \colon T_{p}M \to T_{f(p)}N$ injektiven;
-\item \emph{submerzija} v točki $p \in M$, če je njen diferencial $df_{p}$ surjektiven;
+\item \emph{imerzija}\index{imerzija} v točki $p \in M$, če je njen diferencial $df_{p} \colon T_{p}M \to T_{f(p)}N$ injektiven;
+\item \emph{submerzija}\index{submerzija} v točki $p \in M$, če je njen diferencial $df_{p}$ surjektiven;
 \item \emph{lokalni difeomorfizem} v točki $p \in M$, če obstajata taki okolici $U \subset M$ za $p$ in $V \subset N$ za $f(p)$, da je zožitev $f|_{U} \colon U \to V$ difeomorfizem;
-\item \emph{vložitev}, če je $f$ injektivna preslikava in slika $f(M) \subset N$ podmnogoterost.
+\item \emph{vložitev}\index{vložitev}, če je $f$ injektivna preslikava in slika $f(M) \subset N$ podmnogoterost.
 \end{enumerate}
 \end{definicija}
 
@@ -317,8 +317,8 @@ Z uporabo izreka o implicitni preslikavi dokažemo naslednje: Če je $f \colon M
 
 % Riemannova metrika & mnogoterost
 \begin{definicija} [Riemannova mnogoterost]
-Naj bo $M$ gladka mnogoterost. Za vsako točko $p \in M$ definiramo simetrično pozitivno-definitno bilinearno preslikavo $g_{p} \colon T_{p}M \times T_{p}M \to \R$, ki je gladko odvisna od $p$. Družino preslikav $g_{p}$ imenujemo \emph{Riemannova metrika} $g$ na mnogoterosti $M$.
-Gladki mnogoterosti, opremljeni z Riemannovo metriko, pravimo \emph{Riemannova mnogoterost}, in jo označimo z $(M,g)$.
+Naj bo $M$ gladka mnogoterost. Za vsako točko $p \in M$ definiramo simetrično pozitivno-definitno bilinearno preslikavo $g_{p} \colon T_{p}M \times T_{p}M \to \R$, ki je gladko odvisna od $p$. Družino preslikav $g_{p}$ imenujemo \emph{Riemannova metrika}\index{Riemannova metrika} $g$ na mnogoterosti $M$.
+Gladki mnogoterosti, opremljeni z Riemannovo metriko, pravimo \emph{Riemannova mnogoterost}\index{Riemannova mnogoterost}, in jo označimo z $(M,g)$.
 \end{definicija}
 
 Izkaže se, da vsaka mnogoterost razreda $\mathcal{C}^{r+1}$ premore Riemannovo metriko razreda $\mathcal{C}^{r}$.
@@ -353,7 +353,7 @@ in jo imenujemo \emph{prva fundamentalna forma} ploskve $M = x(D)$.
 \end{primer}
 
 \begin{definicija}
-\emph{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
+\emph{Riemannova ploskev}\index{Riemannova ploskev} je kompleksna mnogoterost kompleksne dimenzije $1$.
 \end{definicija}
 
 \begin{definicija}
@@ -362,7 +362,7 @@ Naj bo $M$ mnogoterost brez roba in $K$ njena zaprta podmnožica. Povezano kompo
 
 \begin{definicija}
 \emph{Jordanov lok} je pot v ravnini, ki je topološko izomorfna intervalu $[0,1]$.
-\emph{Jordanova krivulja} je ravninska krivulja, ki je topološko ekvivalentna enotski krožnici.
+\emph{Jordanova krivulja}\index{Jordanova krivulja} je ravninska krivulja, ki je topološko ekvivalentna enotski krožnici.
 \end{definicija}
 
 % transverzalnost
@@ -389,7 +389,7 @@ $\gamma_{1} \sim \gamma_{2}$ $\iff$ obstaja zvezna preslikava $H \colon [0,1] \t
 \item $H(t,0) = \gamma_{1}(t) \ \text{in} \ H(t,1) = \gamma_{2}(t) \ \text{za vse} \ t \in [0,1]$.
 \end{itemize}
 Preslikavo $H$ imenujemo \emph{homotopija}, zanki, ki premoreta homotopijo pa \emph{homotopsko ekvivalentni}.
-Kvocient $\pi_{1}(M,x_{0}) = \Gamma(x_{0}) / _{\sim}$ imenujemo \emph{prva fundamentalna grupa} mnogoterosti $M$ glede na točko $x_{0}$, njeno abelacijo $H_{1}(M, \mathbb{Z})$ pa \emph{prva homološka grupa} mnogoterosti $M$ s celimi koeficienti.
+Kvocient $\pi_{1}(M,x_{0}) = \Gamma(x_{0}) / _{\sim}$ imenujemo \emph{prva fundamentalna grupa} mnogoterosti $M$ glede na točko $x_{0}$, njeno abelacijo $H_{1}(M, \mathbb{Z})$ pa \emph{prva homološka grupa}\index{prva homološka grupa} mnogoterosti $M$ s celimi koeficienti.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Vektorska polja in diferencialne 1-forme
@@ -458,7 +458,7 @@ T^{*}X = (TX)^{*} = \bigsqcup_{x \in X} T_{x}^{*}X.
 \end{align}
 Tu je $T_{x}^{*}X$ \emph{kotangentni prostor} mnogoterosti $X$ v točki $x \in X$, ki je sestavljen iz linearnih funkcionalov $T_{x}^{*}X \to \R$.
 
-\emph{(Diferencialna) 1-forma} na mnogoterosti $X$ je prerez $\alpha \colon X \to T^{*}X$ kotangentnega svežnja. Prostor diferencialnih 1-form na $X$ označimo z $\Omega ^{1}(X)$.
+\emph{(Diferencialna) 1-forma}\index{diferencialna 1-forma} na mnogoterosti $X$ je prerez $\alpha \colon X \to T^{*}X$ kotangentnega svežnja. Prostor diferencialnih 1-form na $X$ označimo z $\Omega ^{1}(X)$.
 
 Diferencialno 1-formo $\omega \in \Omega ^{1}(X)$ imenujemo \emph{eksaktna}, če velja $\omega = df$ za neko funkcijo $f \colon X \to \mathbb{R}$.
 \end{definicija}
@@ -505,9 +505,9 @@ Njun produkt
 \begin{equation} \label{eq:Gauss-ukr}
 K^{N}(p) = \kappa _{1}^{N}(p) \cdot \kappa _{2}^{N}(p)
 \end{equation}
-definira \emph{Gaussovo ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$.
+definira \emph{Gaussovo ukrivljenost}\index{Gaussova ukrivljenost} ploskve $S$ v točki $p$ in normalni smeri $N$.
 \item
-Naj enotski vektorji $\{ e_{1}, \dots , e_{n-2} \}$ tvorijo bazo normalnega prostora $N_{p}S$. Vektor $\textbf{\textup{H}} = \sum_{i=1}^{n-2} (H^{N} \cdot e_{i}) e_{i}$ imenujemo \emph{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$. Tedaj velja $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
+Naj enotski vektorji $\{ e_{1}, \dots , e_{n-2} \}$ tvorijo bazo normalnega prostora $N_{p}S$. Vektor $\textbf{\textup{H}} = \sum_{i=1}^{n-2} (H^{N} \cdot e_{i}) e_{i}$ imenujemo \emph{vektor povprečne ukrivljenosti}\index{vektor povprečne ukrivljenosti} ploskve $S$ v točki $p$. Tedaj velja $H^{N}(p) = \textbf{\textup{H}} \cdot N$ za vsak $N \in N_{p}S$.
 \end{enumerate}
 \end{definicija}
 
@@ -517,7 +517,7 @@ Naj bo $U \subset M$ odprta podmnožica ploskve $M$, $x \colon U \to \mathbb{R}^
 \begin{gather*}
 N \colon S \to \mathbb{S}^{2},
 \end{gather*}
-imenovano \emph{Gaussova preslikava} vložene ploskve $S$. Če je $x = x(u_{1},u_{2})$ za $(u_{1},u_{2}) \in U$ lokalna parametrizacija ploskve $S$, dobimo eksplicitno formulo $N = \frac{x_{u_{1}} \times x_{u_{2}}}{|x_{u_{1}} \times x_{u_{2}}|}$.
+imenovano \emph{Gaussova preslikava}\index{Gaussova preslikava} vložene ploskve $S$. Če je $x = x(u_{1},u_{2})$ za $(u_{1},u_{2}) \in U$ lokalna parametrizacija ploskve $S$, dobimo eksplicitno formulo $N = \frac{x_{u_{1}} \times x_{u_{2}}}{|x_{u_{1}} \times x_{u_{2}}|}$.
 
 Vektor povprečne ukrivljenosti je po definiciji pravokoten na $S$, zato obstaja funkcija $\lambda$, da velja $\textbf{\textup{H}} = \lambda N$. Vemo še, da je normalni vektor enotski, kar nam da zvezo
 \begin{gather}
@@ -559,9 +559,9 @@ dd^{c} = 2i\partial \bar{\partial} = \left( \frac{\partial^2}{\partial u^2} + \f
 \end{gather*}
 kjer je $\Delta$ Laplaceov operator glede na Evklidsko metriko.\newline
 %
-Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna} (tj.~$\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah $(u,v)$ reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$. Množico holomorfnih funkcij na $M$ označimo z $\mathcal{O}(M)$. \newline
+Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna}\index{holomorfna preslikava} (tj.~$\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah $(u,v)$ reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$. Množico holomorfnih funkcij na $M$ označimo z $\mathcal{O}(M)$. \newline
 %
-Funkcija $x \colon M \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}, če velja $dd^{c}x=0$.
+Funkcija $x \colon M \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}\index{harmonična preslikava}, če velja $dd^{c}x=0$.
 Kadar zadošča neenakosti $dd^{c}x \geq 0$, ji pravimo \emph{subharmonična}, oziroma \emph{strogo subharmonična} v primeru stroge neenakosti.
 Harmonične funkcije karakteriziramo z naslednjimi ekvivalentnimi pogoji:
 \begin{gather*}
@@ -575,7 +575,7 @@ y(p) = \int_{p_0}^{p} d^{c}x + C,
 kjer je $C$ konstanta. Imenujemo jo \emph{harmonična konjugiranka} funkcije $x$. Velja enakost $dy = d^{c}x$, nova funkcija $z \colon D \to \mathbb{C}^{n}, \ z = x+iy$, imenovana \emph{kompleksna krivulja} v $\mathbb{C}^{n}$, pa je holomorfna. Zaključimo, da je zožitev realne harmonične funkcije na enostavno povezano domeno v $M$ enaka realnemu delu holomorfne funkcije $x+iy$, pri čemer je $y$ harmonična konjugiranka od $x$, ki jo definira enakost~\eqref{eq:harmonicna-konj}.
 
 \begin{definicija} [Pretok]
-Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok} je homomorfizem grup $\text{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
+Naj bo $x \colon M \to \R^{n}$ harmonična preslikava. Njen \emph{pretok}\index{pretok} je homomorfizem grup $\text{Flux}_{x} \colon H_{1} (M, \Z) \to \R^{n}$, definiran s predpisom 
 \begin{equation} \label{eq:pretok}
 \text{Flux}_{x} ([C]) = \int_{C} {d^{c} x}.
 \end{equation}
@@ -591,13 +591,13 @@ Zgodovinski pregled rezultatov v tem razdelku je povzet po~\cite{fornaess2020hol
 Najbolj klasična izreka v teoriji aproksimacije holomorfnih funkcij sta Weierstrassov izrek, ki pravi, da zvezne funkcije na zaprtih intervalih v $\R$ lahko aproksimiramo s polinomi (K.~Weierstrass, 1885), ter izrek C.~Rungeja iz istega leta o aproksimaciji holomorfnih funkcij v okolici kompaktne množice v $\C$ z racionalnimi funkcijami oziroma holomorfnimi polinomi v posebnem primeru. Razširitev Rungejevega izreka na odprte Riemannove ploskve sta dokazala H.~Behnke in K.~Stein (1949), povsem enak izrek pa velja tudi za kompaktne Riemannove ploskve z robom (H.~L.~Royden, 1967).
 
 % Theorem 1.12.1
-\begin{izrek}[Rungejev aproksimacijski izrek za Riemannove ploskve] \label{izr:Runge}
+\begin{izrek}[Rungejev aproksimacijski izrek za Riemannove ploskve]\index{Rungejev izrek} \label{izr:Runge}
 Naj bo $M$ Riemannova ploskev in $K$ njena kompaktna podmnožica. 
 Potem lahko vsako funkcijo $f$, ki je holomorfna v okolici $K$, aproksimiramo enakomerno na $K$ z meromorfnimi funkcijami $F$ na $M$ brez polov na $K$, ter s holomorfnimi funkcijami na $M$, če $K$ nima lukenj.
 Funkcije $F$ lahko izberemo tako, da se z dano funkcijo $f$ na končni množici točk v $K$ ujemajo do izbranega končnega reda in da ima $F$ pole v podmnožici $E \subset M \backslash K$, kjer $E$ vsebuje točko v vsaki luknji množice $K$. 
 \end{izrek}
 
-\begin{definicija}
+\begin{definicija}\index{Rungejeva množica}
 Naj bo $K$ kompaktna podmnožica Riemannove ploskve $M$. Njena \emph{holomorfna ogrinjača} je množica 
 \begin{equation}
 \widehat{K}_{\mathcal{O}(M)} = \{p \in M ; \ |f(p)| \leq \max_{K} |f| \ \text{za vse} \ f \in \mathcal{O}(M) \}.
@@ -611,7 +611,7 @@ Velik napredek v razvoju je pomenil Mergelyanov izrek o aproksimaciji holomorfni
 Različica velja tudi za odprte Riemannove ploskve (E.~Bishop, 1958).
 
 % Theorem 1.12.7
-\begin{izrek} [Bishop-Mergelyanov aproksimacijski izrek] \label{izr:Bishop-Mergelyan}
+\begin{izrek} [Bishop-Mergelyanov aproksimacijski izrek]\index{Mergelyanov izrek} \label{izr:Bishop-Mergelyan}
 Naj bo $M$ odprta Riemannova ploskev in $K$ njena kompaktna podmnožica brez lukenj ($K$ je Rungejeva v $M$). Potem lahko vsako funkcijo v $\mathcal{A}(K)$ aproksimiramo enakomerno na $K$ s funkcijami v $\mathcal{O}(M)$.
 \end{izrek}
 
@@ -623,7 +623,7 @@ Osnovni rezultat o interpolaciji holomorfnih funkcij je izrek K.~Weierstrassa iz
 Nadgrajen Weierstrassov izrek za preslikave na odprtih Riemannovih ploskvah je dokazala H.~Florack (1949).
 
 % Theorem 1.12.13
-\begin{izrek} [Weierstrassov izrek za odprte Riemannove ploskve] \label{izr:Weierstrass}
+\begin{izrek} [Weierstrassov izrek za odprte Riemannove ploskve]\index{Weierstrassov izrek} \label{izr:Weierstrass}
 Naj bo $M$ odprta Riemannova ploskev, $A = \{a_{i}\}_{i \in \N} \subset M$ njena zaprta diskretna podmnožica in $k_{i} \in \N$ dana naravna števila za vse $i \in \N$.
 Tedaj obstaja holomorfna funkcija $f \in \mathcal{O}(M)$, ki ima ničle natanko v točkah množice $A$, stopnja ničle $a_{i}$ pa je enaka $k_{i}$ za vse indekse $i \in \N$.
 \end{izrek}
@@ -641,7 +641,7 @@ Potem za izbrane $\varepsilon > 0$ in števila $k_{i} \in \N$ obstaja meromorfna
 \end{enumerate} 
 \end{izrek}
 
-G.~Mittag-Leffler je leta 1884 dokazal rezultat, ki je soroden Weierstrassovemu izreku o interpolaciji holomorfnih funkcij. Pove naslednje:
+G.~Mittag-Leffler\index{Mittag-Lefflerjev izrek} je leta 1884 dokazal rezultat, ki je soroden Weierstrassovemu izreku o interpolaciji holomorfnih funkcij. Pove naslednje:
 naj bo $A \subset \C$ zaprta diskretna množica in $f$ meromorfna funkcija v okolici množice $A$. Potem obstaja meromorfna funkcija $F$ na $\C$, ki je holomorfna na $\C \setminus A$, razlika $F-f$ pa je holomorfna v vsaki točki množice $A$. \newline
 Splošnejši rezultat za odprte Riemannove ploskve je prispevek H.~Floracka iz leta 1948. \newline
 
@@ -702,7 +702,7 @@ Dobimo ekvivalentno enačbo k enačbi~\eqref{eq:stac-area(f+sh)},
 \begin{equation} \label{eq:min-graph-eq}
 f_{xx}(1+f_{y}^2) - 2f_{x}f_{y}f_{xy} + f_{yy}(1+f_{x}^2) = 0,
 \end{equation}
-ki jo imenujemo \emph{enačba za minimalne grafe}.
+ki jo imenujemo \emph{enačba za minimalne grafe}\index{enačba za minimalne grafe}.
 To je eliptična kvazilinearna parcialna diferencialna enačba drugega reda. \newline
 Prešli smo na naslednji Dirichletov problem: iščemo rešitve enačbe za minimalne grafe~\eqref{eq:min-graph-eq} z robnim pogojem, ki je zvezna funkcija na robu $bD$.
 T.~Rad\'o je leta 1930 pokazal, da rešitev Dirichletovega problema obstaja za vsako konveksno omejeno domeno $D \subset \R^2$, iz principa maksima za minimalne grafe pa sledi, da je rešitev tudi enolična.
@@ -793,7 +793,7 @@ Opazimo, da je za dovolj majhne vrednosti $t$ preslikava $x^{t}$ imerzija.
 Po definiciji je na množici $bM \times (-\varepsilon, \varepsilon)$ variacijsko vektorsko polje $E$ konstantno ničelno.
 
 % Minimalna ploskev
-\begin{definicija} [Minimalna ploskev] \label{def:min-ploskev}
+\begin{definicija} [Minimalna ploskev]\index{minimalna ploskev} \label{def:min-ploskev}
 Naj bo $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Sliko $x(M)$ imenujemo \emph{minimalna ploskev}, če za vsako kompaktno domeno $D \subset M$ z gladkim robom $bD$ in vsako gladko variacijo $x^{t}$ preslikave $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-ploščine}
 \frac{d}{dt} \Big|_{t=0} \text{Area} \left(x^{t}(D)\right) = 0.
@@ -804,7 +804,7 @@ Ekvivalentno pravimo, da je minimalna ploskev stacionarna točka ploskovnega fun
 Levo stran enakosti~\eqref{eq:1-var-ploščine} imenujemo \emph{prva variacija površine} pri $t=0$. Slednjo z geometrijskimi lastnostmi preslikave $x$, natančneje z ukrivljenostjo, povezuje \emph{prva variacijska formula} v naslednjem izreku. 
 
 % Prva variacijska formula
-\begin{izrek}[Prva variacijska formula] \label{izr:1-var-formula}
+\begin{izrek}[Prva variacijska formula]\index{prva variacijska formula} \label{izr:1-var-formula}
 Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. Naj bo $E = \partial{x^{t}} / \partial{t}|_{t=0}$ variacijsko vektorsko polje družine preslikav $x^{t}$ (kot v Definiciji~\ref{def:variacija}) pri $t=0$, $\textbf{\textup{H}}$ vektorsko polje povprečne ukrivljenosti preslikave $x$ in $dA$ ploščinski element glede na Riemannovo metriko $x^{*}ds^2$, definirano na $M$.
 Potem za prej izbrane gladke variacije $x^{t} \colon M \to \R^{n}$ imerzije $x$ s fiksnim robom velja
 \begin{equation} \label{eq:1-var-formula}
@@ -839,7 +839,7 @@ Njen integral,
 \begin{equation} \label{eq:TC-def}
 TC(x) = \int_{M} K dA \in [-\infty, 0],
 \end{equation} 
-imenujemo \emph{totalna Gaussova ukrivljenost}. Pri tem $dA$ označuje ploščinski element glede na Riemannovo metriko $g = x^{*}ds^2$ na Riemannovi mnogoterosti $(M,g)$.
+imenujemo \emph{totalna Gaussova ukrivljenost}\index{totalna Gaussova ukrivljenost}. Pri tem $dA$ označuje ploščinski element glede na Riemannovo metriko $g = x^{*}ds^2$ na Riemannovi mnogoterosti $(M,g)$.
 Vrednost je enaka $0$ natanko takrat, ko je ploskev del ravnine. Res, $TC(x) = 0$ natanko tedaj, ko je Gaussova ukrivljenost $K=0$, kar je ekvivalentno $\kappa_1=\kappa_2=0$. Vemo pa, da imajo le kosi ravnine obe glavni ukrivljenosti ničelni v vsaki točki.
 Minimalne ploskve s \emph{končno totalno Gaussovo ukrivljenostjo}, tj.~$TC(x) > -\infty$, so najpreprostejše in jih običajno preučujemo ločeno, saj zanje velja več lastnosti, ki jih splošnejše minimalne ploskve (z neskončno totalno Gaussovo ukrivljenostjo) ne premorejo.\\[0.1cm]
 
@@ -863,7 +863,7 @@ Enakost~\eqref{eq:2-var-formula} se zato glasi
 \subsection{Weierstrassova formula}
 %
 Naj bosta $(M,g)$ in $(\widetilde{M},\tilde{g})$ Riemannovi mnogoterosti z $\dim(M) \leq \dim(\widetilde{M})$.
-Imerzija $x \colon (M,g) \to (\widetilde{M}, \tilde{g})$ se imenuje \emph{konformna}, če ohranja kote.
+Imerzija $x \colon (M,g) \to (\widetilde{M}, \tilde{g})$ se imenuje \emph{konformna}, če ohranja kote.\index{konformna imerzija}
 Z drugimi besedami je povlečena metrika $x^{*}\tilde{g}$ konformno ekvivalentna metriki $g$, kar pomeni, da za pozitivno funkcijo $\mu > 0$ na $M$ velja $x^{*}\tilde{g} = \mu g$. \newline
 Laplaceova operatorja konformno ekvivalentnih metrik $g$ in $\tilde{g}$ kot zgoraj se razlikujeta za faktor $\mu$, zato konformno ekvivalentni metriki na ploskvi določata enake harmonične funkcije.
 
@@ -894,7 +894,7 @@ Naj bo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n \g
 		\begin{gather}
 		|x_{u}| = |x_{v}| > 0, \quad x_{u} \cdot x_{v} = 0.
 		\end{gather}
-	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo punktirani \emph{ničelni kvadriki}\footnote{Ničelna kvadrika $\textbf{\textup{A}}$ v $(n-1)$-spremenljivkah je kompleksni stožec s singularno točko $0$. Punktirana ničelna kvadrika je enaka $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$.} (so \emph{ničelni vektorji})
+	\item Vektorji $x_{u} \pm ix_{v} \in \mathbb{C}_{*}^{n}$ pripadajo punktirani \emph{ničelni kvadriki}\index{ničelna kvadrika}\footnote{Ničelna kvadrika $\textbf{\textup{A}}$ v $(n-1)$-spremenljivkah je kompleksni stožec s singularno točko $0$. Punktirana ničelna kvadrika je enaka $\textbf{\textup{A}}_{*} = \textbf{\textup{A}} \setminus \{0\}$.} (so \emph{ničelni vektorji})
 		\begin{gather} \label{eq:punkt-ničelna-kvadrika}
 		\textbf{\textup{A}}_{*} = \textbf{\textup{A}}^{n-1}_{*} = \{ z=(z_{1}, \dots , z_{n}) \in \mathbb{C}^{n}_{*}; \ z_{1}^2 + \cdots + z_{n}^2 = 0 \}.
 		\end{gather}
@@ -906,7 +906,7 @@ Naj bo $D \subset \mathbb{R}^{n}$ domena z lokalnima koordinatama $(u,v)$, $n \g
 % Plateajev problem in Dirichletov energijski integral [VIR: Lawson 2.1, p. 56]
 \subsubsection{Plateaujev problem in Dirichletov energijski integral}
 %
-Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema, katerega moramo najprej natančno formulirati (\cite[Section~2.1]{lawson1980lectures}).
+Drugi razlog za študij konformnih imerzij je fizikalen. Na minimalne ploskve lahko gledamo kot na rešitve Plateaujevega problema\index{Plateaujev problem}, katerega moramo najprej natančno formulirati (\cite[Section~2.1]{lawson1980lectures}).
 
 Označimo z $\overline{\mathbb{D}}$ zaprt enotski disk z lokalnimi koordinatami $(u_{1}, u_{2})$ in izberimo gladko orientirano Jordanovo krivuljo $\Gamma \subset \mathbb{R}^{n}$.
 Naj bo $x \colon \overline{\mathbb{D}} \to \mathbb{R}^{n}$ kosoma zvezno odvedljiva imerzija, katere zožitev na rob diska, $\mathbb{T}$, je monotona\footnote{Pravimo, da je zvezna preslikava $f \colon \mathbb{T} \to \Gamma$ \emph{monotona}, če je praslika $f^{-1}(x)$ povezana za vsak $x \in \Gamma$.} parametrizacija $x|_{\mathbb{T}} \colon \mathbb{T} \to \Gamma$ Jordanove krivulje $\Gamma$.
@@ -1014,7 +1014,7 @@ Prvi rezultat, ki ga navajamo, opisuje ekvivalentne pogoje minimalnosti ploskve 
 \begin{izrek} \label{izr:ekviv-min-ploskev}
 Naj bo $M$ odprta Riemannova ploskev, $n \geq 3$ in $x = (x_1, \dots , x_n) \colon M \to \R^{n}$ konformna imerzija razreda $\mathcal{C}^2$. Naslednje trditve so ekvivalentne:
 \begin{enumerate}
-	\item $x$ je minimalna ploskev.
+	\item $x$ je minimalna ploskev\index{minimalna ploskev}.
 	\item Vektorsko polje povprečne ukrivljenosti preslikave $x$ je ničelno, tj.~$\textbf{\textup{H}} = 0$.
 	\item $x$ je harmonična, tj.~$\Delta{x} = 0$ oziroma $dd^{c}x = 0$.
 	\item 1-forma $ \partial{x} = (\partial{x_1}, \dots , \partial{x_n})$ z vrednostmi v $\C^{n}$ je holomorfna in velja
@@ -1061,7 +1061,7 @@ V razdelku o holomorfnih in harmoničnih funkcijah na Riemannovih ploskvah smo g
 \begin{enumerate}
 \item
 Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Holomorfno imerzijo $z = (z_{1}, \dots , z_{n}) \colon M \to \C^{n}$, za katero velja
-$(\partial{z_{1}})^2 + \cdots + (\partial{z_{n}})^2 = 0$, imenujemo \emph{holomorfna ničelna krivulja} v $\C^{n}$.
+$(\partial{z_{1}})^2 + \cdots + (\partial{z_{n}})^2 = 0$, imenujemo \emph{holomorfna ničelna krivulja}\index{holomorfna ničelna krivulja} v $\C^{n}$.
 \item
 Naj bo $z = x + iy \colon M \to \C^{n}$ holomorfna ničelna krivulja. Njena realni del in imaginarni del, $x, y \colon M \to \R^{n}$ imenujemo \emph{konjugirani minimalni ploskvi}.
 \item
@@ -1075,7 +1075,7 @@ Naj bosta $z \colon M \to \mathbb{C}^{n}$ holomorfna ničelna krivulja in $\thet
 \emph{Enneper-Weierstrassova reprezentacijska formula} predstavlja povezavo med konformnimi minimalnimi imerzijami na odprti Riemannovi ploskvi $M$ ter holomorfnimi preslikavami med $M$ in punktirano ničelno kvadriko, katerih realne periode so ničelne. Je posledica Izreka~\ref{izr:ekviv-min-ploskev}, zato jo bomo navedli brez dokaza. Rezultat je pomemben, saj predstavlja konformne minimalne ploskve in holomorfne ničelne krivulje, konstruirane na univerzalen način. Metodo konstrukcije bomo v naslednjih poglavjih pogosto uporabljali.
 
 % Enneper-Weierstrassova formula
-\begin{izrek}[Enneper-Weierstrassova formula] \label{izr:Enneper-Weierstrass}
+\begin{izrek}[Enneper-Weierstrassova formula]\index{Enneper-Weierstrassova formula} \label{izr:Enneper-Weierstrass}
 Naj bo $n \geq 3$ in $M$ odprta Riemannova ploskev. Na njej izberimo holomorfno 1-formo $\Phi = (\phi_{1}, \dots , \phi_{n})$ z vrednostmi v $\C^{n}$, ki je povsod neničelna in zadošča 
 \begin{enumerate}
 \item $ \sum_{j=1}^{n} \phi_{j}^{2} = 0$,
@@ -1129,7 +1129,7 @@ Analogno, za holomorfno ničelno krivuljo $z \colon M \to \C^{n}$ pripadajočo 1
 V razdelku o ukrivljenosti ploskve smo pri računanju vektorja povprečne ukrivljenosti v trirazsežnem prostoru omenili Gaussovo preslikavo. Sedaj bomo formalno definirali Gaussovo preslikavo minimalne ploskve ter se ponovno osredotočili na trirazsežni primer -- izpeljali bomo klasično Weierstrassovo formulo za minimalne ploskve v prostoru $\mathbb{R}^3$.
 
 \begin{definicija}
-Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. \emph{(Posplošena) Gaussova preslikava} konformne minimalne imerzije $x = (x_{1}, \dots , x_{n}) \colon M \to \mathbb{R}^{n}$ je holomorfna preslikava
+Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. \emph{(Posplošena) Gaussova preslikava}\index{Gaussova preslikava} konformne minimalne imerzije $x = (x_{1}, \dots , x_{n}) \colon M \to \mathbb{R}^{n}$ je holomorfna preslikava
 \begin{gather}
 \mathcal{G} = [\partial x_{1} : \cdots : \partial x_{n}] \colon M \to \textup{\textbf{Q}}^{n-2} \subset \mathbb{CP}^{n-1}.
 \end{gather}
@@ -1188,7 +1188,7 @@ kjer je $p_0 \in M$ poljubna izbrana točka ter $p \in M$ spremenljivka.
 \subsubsection{Totalna Gaussova ukrivljenost}
 %
 Pomembna lastnost Gaussove preslikave je njena povezava s totalno Gaussovo ukrivljenostjo (spomnimo se njene definicije, enakosti~\eqref{eq:TC-def}).
-Natančneje, totalna Gaussova ukrivljenost konformne minimalne imerzije $x \colon M \to \R^{n}$ je enaka
+Natančneje, totalna Gaussova ukrivljenost\index{totalna Gaussova ukrivljenost} konformne minimalne imerzije $x \colon M \to \R^{n}$ je enaka
 \begin{gather}
 TC(x) = \int_{M} KdA = -\frac{1}{2} \text{Area}(\mathcal{G}(M)),
 \end{gather} 
@@ -1299,7 +1299,7 @@ Začnimo s holomorfno ničelno krivuljo $z \colon \mathbb{C} \to \mathbb{C}^3$, 
 \begin{equation} \label{eq:katenoida}
 x(u,v) = (\cos u \cdot \cosh v, \sin u \cdot \cosh v, v),
 \end{equation}
-pravimo \emph{katenoida}. Po drugi strani do njene konformne parametrizacije pridemo preko pridruženih minimalnih ploskev k izbrani holomorfni ničelni krivulji -- katenoida ustreza parametrom $t = k \pi, \ k \in \mathbb{Z}$.
+pravimo \emph{katenoida}\index{katenoida}. Po drugi strani do njene konformne parametrizacije pridemo preko pridruženih minimalnih ploskev k izbrani holomorfni ničelni krivulji -- katenoida ustreza parametrom $t = k \pi, \ k \in \mathbb{Z}$.
 
 Geometrijsko je obravnavana minimalna ploskev rotacijska ploskev, ki nastane z rotacijo grafa hiperboličnega kosinusa (t.~i.~\emph{verižnice}) okoli izbrane osi v prostoru $\mathbb{R}^3$. Katenoida z osjo rotacije $x=y=0$ na primer nastane, če graf krivulje $z \mapsto (\cosh z, 0, z), \ z \in \mathbb{R}$, zavrtimo okoli $z$-osi. Implicitna enačba nastale minimalne ploskve se glasi
 \begin{equation} \label{eq:katenoida-implicitno}
@@ -1332,7 +1332,7 @@ Katenoido je kot rotacijsko ploskev prvi opisal Leonhard Euler l.~1744. Dobro st
 % Helikoid
 \subsubsection{Helikoid}
 %
-Negativno predznačeni imaginarni del helikatenoide imenujemo \emph{helikoid}. Natančneje, to je preslikava $y = -\Im z = \Re (iz) \colon \mathbb{R}^2 \to \mathbb{R}^3$ s konformno parametrizacijo
+Negativno predznačeni imaginarni del helikatenoide imenujemo \emph{helikoid}\index{helikoid}. Natančneje, to je preslikava $y = -\Im z = \Re (iz) \colon \mathbb{R}^2 \to \mathbb{R}^3$ s konformno parametrizacijo
 \begin{equation} \label{eq:helikoid}
 y(u,v) = (\sin u \cdot \sinh v, -\cos u \cdot \sinh v, u).
 \end{equation}
@@ -1368,7 +1368,7 @@ Helikoid (sicer ne obravnavan v smislu minimalne ploskve) ima zanimivo in dolgo 
 % Scherkovi minimalni ploskvi
 \subsubsection{Scherkovi minimalni ploskvi}
 % 
-Po drugi polovici 18.~stoletja je bil H.~Scherk prvi, ki je leta 1835 odkril dva nova primera -- prvo in drugo Scherkovo minimalno ploskev. 
+Po drugi polovici 18.~stoletja je bil H.~Scherk prvi, ki je leta 1835 odkril dva nova primera -- prvo in drugo Scherkovo minimalno ploskev\index{Scherkovi ploskvi}. 
 \emph{Prvo Scherkovo ploskev} opisuje implicitna enačba
 \begin{gather}
 e^{z} \cos y = \cos x, \quad (x,y,z) \in \R^3.
@@ -1408,7 +1408,7 @@ Enneper-Weierstrassova formula preslikave $x \colon \mathbb{C} \to \mathbb{R}^3$
 \begin{equation}
 x(\zeta) = \Re \int_{0}^{\zeta} \left( 1-z^2, i(1+z^2), 2z \right) dz
 \end{equation}
-in določa minimalno ploskev, imenovano \emph{Enneperjeva ploskev}, ki jo je l.~1868 odkril A.~Enneper.
+in določa minimalno ploskev, imenovano \emph{Enneperjeva ploskev}\index{Enneperjeva ploskev}, ki jo je l.~1868 odkril A.~Enneper.
 
 Če za $ u,v \in \mathbb{R}$ pišemo $\zeta = u + iv \in \mathbb{C}$ in po komponentah izračunamo realne dele zgornjega integrala, dobimo konformno parametrizacijo $x \colon \mathbb{R}^2 \to \mathbb{R}^3$,
 \begin{equation}
@@ -1429,7 +1429,7 @@ Iz izbire podatkov vemo, da je kompleksna Gaussova preslikava Enneperjeve ploskv
 % Neorientabilna primera
 \subsubsection{Neorientabilna primera}
 %
-E.~L.~Henneberg je leta 1875 odkril prvo neorientabilno minimalno ploskev v $\R^3$, ki jo imenujemo \emph{Hennebergova ploskev}.
+E.~L.~Henneberg je leta 1875 odkril prvo neorientabilno minimalno ploskev\index{neorientabilna minimalna ploskev} v $\R^3$, ki jo imenujemo \emph{Hennebergova ploskev}.
 Opisuje jo parametrizacija
 %
 \begin{equation}
@@ -1487,7 +1487,7 @@ Najprej definirajmo različne tipe konformnih minimalnih imerzij glede na njihov
 Naj bo $M$ povezana odprta Riemannova ploskev ali kompaktna Riemannova ploskev z robom, na kateri je definirana povsod neničelna holomorfna 1-forma $\theta$. Konformno minimalno imerzijo $x \colon M \to \R^{n}$ imenujemo:
 \begin{enumerate}
 \item \emph{ravna}, če je slika $x(M)$ vsebovana v afini ravnini v $\R^{n}$; sicer pravimo, da je $x$ \emph{neravna};
-\item \emph{polna}, če je preslikava $f = 2 \partial{x} / \theta \colon M \to \textbf{\textup{A}}_{*}^{n-1}$ polna, tj.~$\C$-linearna ogrinjača slike $f(M)$ je enaka $\C^{n}$;
+\item \emph{polna}\index{polna preslikava}, če je preslikava $f = 2 \partial{x} / \theta \colon M \to \textbf{\textup{A}}_{*}^{n-1}$ polna, tj.~$\C$-linearna ogrinjača slike $f(M)$ je enaka $\C^{n}$;
 \item \emph{neizrojena}, če slika $x(M)$ ni vsebovana v nobeni afini hiperravnini v $\R^{n}$. 
 \end{enumerate}
 \end{definicija}
@@ -1559,12 +1559,12 @@ $ \mathrm{Lin} \{T_{f(p)} \textbf{\textup{A}} ; \ p \in M \} = \C^{n}$, kar smo 
 V aproksimacijskih in interpolacijskih izrekih bomo v dokazih namesto običajnih konformnih minimalnih imerzij in ničelnih krivulj operirali s splošnejšimi preslikavami, imenovanimi posplošene minimalne imerzije ter ničelne krivulje; naravno pa se bodo zaradi topoloških lastnosti množic, na katerih bomo preslikave aproksimirali in interpolirali, pojavile tudi množice iz naslednje definicije.
 
 % dopustna množica
-\begin{definicija} [Dopustna množica] \label{def:dopustna-mnozica}
+\begin{definicija} [Dopustna množica]\index{dopustna množica} \label{def:dopustna-mnozica}
 Naj bo $M$ gladka ploskev. Kompaktno podmnožico v $M$ oblike $S = K \cup E$ imenujemo \emph{dopustna množica}, kjer je $K$ končna unija paroma disjunktnih kompaktnih domen s kosoma zvezno odvedljivimi robovi v $M$ ter $E = S \setminus K^\circ$ unija končno mnogo paroma disjunktnih gladkih Jordanovih lokov in zaprtih Jordanovih krivulj, ki se dotikajo $K$ kvečjemu v svojih krajiščih in sekajo rob $K$ transverzalno.
 \end{definicija}
 
 % posplošena konformna minimalna imerzija
-\begin{definicija} [Posplošena konformna minimalna imerzija]
+\begin{definicija} [Posplošena konformna minimalna imerzija]\index{posplošena konformna minimalna imerzija}
 Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
 Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena konformna minimalna imerzija} $S \to \R^{n}$ razreda $\mathcal{C}^{r}$ je par $(x, f \theta)$, kjer je $x \colon S \to \R^{n}$ preslikava razreda  $\mathcal{C}^{r}$, njena zožitev na $S^\circ = K^\circ$ je konformna minimalna imerzija in preslikava $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadošča naslednjima pogojema:
 \begin{enumerate}
@@ -1593,7 +1593,7 @@ x(p) = x(p_{0}) + \Re \int_{p_0}^{p} f \theta, \quad p \in S.
 Obratno, če za preslikavo $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ velja $ \Re \int_{C} f \theta = 0$ za vsako sklenjeno krivuljo $C$ v $S$, potem le-ta določa posplošeno konformno minimalno imerzijo, dano z Enneper-Weierstrassovo formulo~\eqref{eq:EW-gcmi}.
 
 % posplošena ničelna krivulja
-\begin{definicija} [Posplošena ničelna krivulja]
+\begin{definicija} [Posplošena ničelna krivulja]\index{posplošena ničelna krivulja}
 Naj bo $S = K \cup E$ dopustna podmnožica Riemannove ploskve $M$ in $\theta$ povsod neničelna holomorfna 1-forma, definirana v okolici $S \subset M$.
 Naj bosta $n \geq 3$ in $r \in \N$. \emph{Posplošena ničelna krivulja} $S \to \C^{n}$ razreda $\mathcal{C}^{r}$ je par $(z, f \theta)$, kjer preslikavi $z \in \mathcal{A}^{r}(S, \C^{n})$ in $f \in \mathcal{A}^{r-1}(S, \textbf{\textup{A}}_{*})$ zadoščata naslednjima pogojema:
 \begin{enumerate}
@@ -1652,7 +1652,7 @@ Nadalje, za končno podmnožico $P \subset S$ lahko preslikavo $\Phi_{f}$ izbere
 Za vsako preslikavo $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki zadošča zgornjim predpostavkam, obstaja okolica $\Omega \subset \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ in holomorfna preslikava $f \mapsto \Phi_{f}$, $f \in \Omega$, z zgornjimi lastnostmi.
 \end{lema}
 
-\begin{definicija} [Periodno dominantni sprej]
+\begin{definicija} [Periodno dominantni sprej]\index{periodno dominantni sprej}
 Preslikavo $\Phi_{f}$, ki ustreza Lemi~\ref{lema:P-D-sprej}, imenujemo \emph{periodno dominantni sprej} preslikav $S \to \textbf{\textup{A}}_{*}$ za družino krivulj $\mathcal{C}$ z \emph{jedrom} $\Phi_{f}(\cdot, 0) = f$. Lastnosti~\eqref{PD-lastnost} pravimo \emph{periodno dominantna lastnost}.
 \end{definicija}
 
@@ -1715,7 +1715,7 @@ ter preslikave, definirane na dopustnih množicah~\cite[Theorem~1.12.11]{alarcon
 Oka mnogoterost izhaja iz \emph{Oka teorije}, imenovane po japonskem matematiku Kiyoshiju Oka, ki je v sredini 20.~stoletja prispeval veliko k razvoju kompleksne analize več spremenljivk.
 
 % Oka mnogoterost
-\begin{definicija} [Oka mnogoterost]
+\begin{definicija} [Oka mnogoterost]\index{Oka mnogoterost}
 Naj bo $X$ kompleksna mnogoterost in $n \in \mathbb{N}$. Če za poljubno kompaktno konveksno množico $K \subset \mathbb{C}^{n}$ vsako holomorfno preslikavo $f \colon U \to X$, kjer je $U$ okolica $K$, lahko aproksimiramo enakomerno na $K$ s celimi preslikavami $F \colon \mathbb{C}^{n} \to X$, potem mnogoterosti $X$ pravimo \emph{Oka mnogoterost}.
 \end{definicija}
 
@@ -1921,7 +1921,7 @@ Pravimo, da je afina algebraična raznoterost, ki je podraznoterost v $\mathbb{C
 
 % Lema: Co(A)=C^n
 \begin{lema}
-Konveksna ogrinjača ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, tj.~$\mathrm{Co}(\textup{\textbf{A}}) = \C^{n}$.
+Konveksna ogrinjača\index{konveksna ogrinjača} ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, tj.~$\mathrm{Co}(\textup{\textbf{A}}) = \C^{n}$.
 \end{lema}
 
 \begin{dokaz}
@@ -2005,18 +2005,18 @@ Slike kritičnih točk imenujemo \emph{kritične vrednosti}, medtem ko so vsa pr
 \emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\text{Hess}_{f}(x)$ na tangentnem prostoru $T_{x}\R^{n} = \R^{n}$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = (\nabla ^2 f)(x)$, kjer $D$ označuje Jacobijevo matriko.
 
 \begin{definicija}
-Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva matrika $H_{f}(x)$ maksimalen rang, točki $x$ pravimo \emph{Morsejeva točka}. Slednji pogoj je ekvivalenten trditvi, da je Hessejeva forma funkcije $f$ v točki $x$ neizrojena.
+Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva matrika $H_{f}(x)$ maksimalen rang, točki $x$ pravimo \emph{Morsejeva točka}\index{Morsejeva točka}. Slednji pogoj je ekvivalenten trditvi, da je Hessejeva forma funkcije $f$ v točki $x$ neizrojena.
 
 Število negativnih lastnih vrednosti Hessejeve matrike, $k \in \{0,1, \dots , n\}$, je \emph{Morsejev indeks} kritične točke.
 
-Funkcija, katere vsaka kritična točka je Morsejeva, se imenuje \emph{Morsejeva funkcija}.
+Funkcija, katere vsaka kritična točka je Morsejeva, se imenuje \emph{Morsejeva funkcija}\index{Morsejeva funkcija}.
 \end{definicija}
 
 Kritične točke funkcije $f$ dobimo z reševanjem enačbe $\nabla f(x)=0$. Ker je Hessejeva matrika enaka Jacobijevi matriki gradienta funkcije, po izreku o inverzni preslikavi vidimo, da je vsaka kritična točka izolirana. Množica kritičnih točk funkcije $f$, $\text{Crit}(f) = \{ x \in U; \ \nabla f(x)=0 \}$, je zaprta diskretna podmnožica v $U$.
 
 % funkcija izčrpanja
 \begin{definicija}
-Naj bosta $M$ mnogoterost in $f \colon M \to [0, \infty)$ zvezna funkcija. Če je za vsako realno število $c>0$ množica $M_{c} = \{ p \in M; \ f(p) \leq c \}$ kompaktna, tedaj $f$ imenujemo \emph{funkcija izčrpanja} mnogoterosti $M$.
+Naj bosta $M$ mnogoterost in $f \colon M \to [0, \infty)$ zvezna funkcija. Če je za vsako realno število $c>0$ množica $M_{c} = \{ p \in M; \ f(p) \leq c \}$ kompaktna, tedaj $f$ imenujemo \emph{funkcija izčrpanja}\index{funkcija izčrpanja} mnogoterosti $M$.
 \end{definicija}
 
 Za nas bodo pomembne Morsejeve funkcije izčrpanja na Riemannovih ploskvah. Njihov obstoj opisuje naslednja trditev~\cite[Proposition~1.12.5]{alarcon2021minimal}.
@@ -2297,7 +2297,7 @@ Opazimo, da je v formulaciji Izrekov~\ref{izr:glavni-izrek-CMI} in~\ref{izr:glav
 Podobno kot izreka Weierstrassa in Mergelyana za holomorfne funkcije prilagodimo minimalnim ploskvam, želimo sedaj navesti še ustrezno različico Mittag-Lefflerjevega izreka. Lahko si predstavljamo, da so meromorfne funkcije v smislu minimalnih ploskev konformne minimalne imerzije $x \colon M \setminus A \to \R^{n}$ iz punktirane odprte Riemannove ploskve, katerih 1-forma $\partial x$ je meromorfna na $M$ s poli natanko v točkah množice $A$, množica $A$ pa je zaprta diskretna podmnožica v $M$.
 Pri aproksimaciji se bodo spet naravno pojavile dopustne množice ter inačice posplošenih konfromnih minimalnih imerzij.
 
-Spomnimo se, da je imerzija $x \colon M \to \R^{n}$ \emph{kompletna}, če ima pot $x \circ \gamma$ v $\R^{n}$ neskončno Evklidsko dolžino za poljubno divergentno pot $\gamma \colon [0,1) \to M$.
+Spomnimo se, da je imerzija $x \colon M \to \R^{n}$ \emph{kompletna}\index{kompletna preslikava}, če ima pot $x \circ \gamma$ v $\R^{n}$ neskončno Evklidsko dolžino za poljubno divergentno pot $\gamma \colon [0,1) \to M$.
 Ekvivalentno je zahtevati, da je povlečena metrika $x^{*}ds^2$ na $M$ kompletna, torej je prostor $(M, x^{*}ds^2)$ kompleten metrični prostor (slednje pomeni konvergenco Cauchyjevih zaporedij v prostoru).
 
 V poglavju o Gaussovi preslikavi smo definirali totalno ukrivljenost Riemannove ploskve. Ploskve s končno totalno ukrivljenostjo so posebej zanimive, zato uvedimo naslednji termin, ki opisuje podrazred posplošenih minimalnih imerzij.
@@ -2449,7 +2449,7 @@ Tedaj obstaja meromorfna preslikava $\tilde{z} \colon M \to \C^{n}$, njena zoži
 % Kompletnost in pravost
 \subsection{Kompletnost in pravost}
 %
-Preslikava $x \colon M \to \R^{n}$ je \emph{prava}, če je praslika $x^{-1}(K)$ vsake kompaktne množice $K \subset \R^{n}$ kompaktna množica v $M$.
+Preslikava $x \colon M \to \R^{n}$ je \emph{prava}\index{prava preslikava}, če je praslika $x^{-1}(K)$ vsake kompaktne množice $K \subset \R^{n}$ kompaktna množica v $M$.
 Ekvivalentna definicija pove, da je za vsako divergentno pot $\gamma$ v $M$ pot $x \circ \gamma$ divergentna v $\R^{n}$. Zato je vsaka prava preslikava tudi kompletna.
 
 Izkaže se, da preslikave iz izrekov o aproksimaciji in interpolaciji minimalnih ploskev lahko izberemo tako, da so kompletne. To pove izrek~\cite[Theorem~3.9.1]{alarcon2021minimal}.
