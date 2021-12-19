@@ -157,6 +157,9 @@ FAKULTETA ZA MATEMATIKO IN FIZIKO\\[5mm]
 % zahvala
 \pdfbookmark[1]{Zahvala}{zahvala} %
 \section*{Zahvala}
+Zahvaljujem se mentorju, prof.~dr.~Francu Forstneriču, ki mi je s svojim izjemnim znanjem odstiral svet še neraziskane matematike. Za razlage, pomoč in matematične pogovore sem vam neizmerno hvaležna. \newline
+Najlepša hvala družini za vse; predvsem pa, ker verjamete v moč znanja.\newline
+Hvala tudi prijateljem in vsem, ki me podpirate.
 % end zahvala -- izbriši vse med zahvala in end zahvala, če je ne rabiš
 
 \cleardoublepage
@@ -421,7 +424,7 @@ Naj bo $X$ mnogoterost razreda $\mathcal{C}^{r}$, kjer je $r \geq 1$. Prerez nje
 \begin{gather}
 V \colon X \to TX, \quad V(x) = V_{x} \in T_{x}X, \quad x \in X,
 \end{gather}
-se imenuje \emph{vektorsko polje} na X. Prostor vektorskih polj na $X$ označimo z $\Gamma (X)$.
+se imenuje \emph{vektorsko polje}\index{vektorsko polje} na X. Prostor vektorskih polj na $X$ označimo z $\Gamma (X)$.
 \end{definicija}
 
 \begin{definicija}
@@ -559,9 +562,9 @@ dd^{c} = 2i\partial \bar{\partial} = \left( \frac{\partial^2}{\partial u^2} + \f
 \end{gather*}
 kjer je $\Delta$ Laplaceov operator glede na Evklidsko metriko.\newline
 %
-Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna}\index{holomorfna preslikava} (tj.~$\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah $(u,v)$ reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$. Množico holomorfnih funkcij na $M$ označimo z $\mathcal{O}(M)$. \newline
+Po definiciji je diferenciabilna funkcija $f = x + iy \colon M \to \mathbb{C}^{n}$ \emph{holomorfna}\index{holomorfna funkcija} (tj.~$\bar{\partial}f = 0$) natanko tedaj, ko v poljubnih lokalnih holomorfnih koordinatah $(u,v)$ reši Cauchy-Riemannov sistem enačb $x_{u}=y_{v}, \ x_{v}=-y_{u}$. Množico holomorfnih funkcij na $M$ označimo z $\mathcal{O}(M)$. \newline
 %
-Funkcija $x \colon M \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}\index{harmonična preslikava}, če velja $dd^{c}x=0$.
+Funkcija $x \colon M \to \mathbb{C}^{n}$ razreda $\mathcal{C}^2(M)$ je \emph{harmonična}\index{harmonična funkcija}, če velja $dd^{c}x=0$.
 Kadar zadošča neenakosti $dd^{c}x \geq 0$, ji pravimo \emph{subharmonična}, oziroma \emph{strogo subharmonična} v primeru stroge neenakosti.
 Harmonične funkcije karakteriziramo z naslednjimi ekvivalentnimi pogoji:
 \begin{gather*}
@@ -775,7 +778,7 @@ V tem razdelku bomo navedli klasično definicijo minimalne ploskve ter variacijs
 \begin{definicija} \label{def:variacija}
 \begin{enumerate}
 \item
-Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in naj bo preslikava $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. \emph{Variacija preslikave x s fiksnim robom} je 1-parametrična družina $\mathcal{C}^2$ preslikav 
+Naj bo $M$ gladka kompaktna ploskev z robom, $n \geq 3$ in naj bo preslikava $x \colon M \to \R^{n}$ imerzija razreda $\mathcal{C}^2$. \emph{Variacija preslikave x s fiksnim robom}\index{variacija preslikave s fiksnim robom} je 1-parametrična družina $\mathcal{C}^2$ preslikav 
 \begin{gather}
 x^{t} \colon M \to \R^{n}, \quad t \in (-\varepsilon, \varepsilon) \subset \R,
 \end{gather}
@@ -1063,7 +1066,7 @@ V razdelku o holomorfnih in harmoničnih funkcijah na Riemannovih ploskvah smo g
 Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Holomorfno imerzijo $z = (z_{1}, \dots , z_{n}) \colon M \to \C^{n}$, za katero velja
 $(\partial{z_{1}})^2 + \cdots + (\partial{z_{n}})^2 = 0$, imenujemo \emph{holomorfna ničelna krivulja}\index{holomorfna ničelna krivulja} v $\C^{n}$.
 \item
-Naj bo $z = x + iy \colon M \to \C^{n}$ holomorfna ničelna krivulja. Njena realni del in imaginarni del, $x, y \colon M \to \R^{n}$ imenujemo \emph{konjugirani minimalni ploskvi}.
+Naj bo $z = x + iy \colon M \to \C^{n}$ holomorfna ničelna krivulja. Njena realni del in imaginarni del, $x, y \colon M \to \R^{n}$ imenujemo \emph{konjugirani minimalni ploskvi}\index{konjugirana minimalna ploskev}.
 \item
 Naj bo $t \in \R$. Predstavnike 1-parametrične družine $x^{t} = \Re{(e^{it} z)} \colon M \to \R^{n}$ imenujemo \emph{pridružene minimalne ploskve} holomorfne ničelne krivulje $z$.
 \end{enumerate}
@@ -1116,7 +1119,7 @@ Dodatek k izreku pravi, da je vsaka konformna minimalna imerzija $x \colon M \to
 Kot smo omenili zgoraj, včasih pišemo $\Phi = f \theta$, pri čemer je $\theta$ povsod neničelna holomorfna 1-forma na $M$ in $f = \Phi / \theta \colon M \to \textbf{\textup{A}}_{*}$ holomorfna preslikava.
 \end{opomba}
 
-Če konformno minimalno imerzijo $x \colon M \to \R^{n}$ poznamo, potem pripadajočo povsod neničelno holomorfno 1-formo $\Phi = 2 \partial{x}$ z vrednostmi v $\C^{n}$ imenujemo \emph{Weierstrassovi podatki} preslikave $x$. 
+Če konformno minimalno imerzijo $x \colon M \to \R^{n}$ poznamo, potem pripadajočo povsod neničelno holomorfno 1-formo $\Phi = 2 \partial{x}$ z vrednostmi v $\C^{n}$ imenujemo \emph{Weierstrassovi podatki}\index{Weierstrassovi podatki} preslikave $x$. 
 Analogno, za holomorfno ničelno krivuljo $z \colon M \to \C^{n}$ pripadajočo 1-formo $\Phi = \partial{z} = dz$ imenujemo \emph{Weierstrassovi podatki} preslikave $z$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1156,7 +1159,7 @@ Naj bo $M$ odprta Riemannova ploskev in $x = (x_1,x_2,x_3) \colon M \to \mathbb{
 \begin{gather}
 \mathfrak{g} \colon M \to \mathbb{CP}^{1}, \quad \mathfrak{g} = \frac{\phi_3}{\phi_1 - i\phi_2} = \frac{\partial x_3}{\partial x_1 - i \partial x_2}.
 \end{gather}
-Imenujemo jo \emph{kompleksna Gaussova preslikava} konformne minimalne imerzije $x$.
+Imenujemo jo \emph{kompleksna Gaussova preslikava}\index{kompleksna Gaussova preslikava} konformne minimalne imerzije $x$.
 (Kompleksna Gaussova preslikava $\mathfrak{g} \colon M \to \mathbb{CP}^{1}$ je z običajno Gaussovo preslikavo $N \colon M \to \mathbb{S}^2$ minimalne ploskve $x(M)$ povezana preko stereografske projekcije glede na severni pol $(0,0,1)$, ki identificira $2$-sfero $\mathbb{S}^2$ z Riemannovo sfero $\mathbb{CP}^{1}$.)
 Kompozitum 
 \begin{align}
@@ -1627,7 +1630,7 @@ V tem razdelku bomo definirali pojem periodno dominantnega spreja holomorfnih pr
 
 \begin{definicija} [Periodna preslikava]
 Naj bo $M$ povezana odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Naj bo $\mathcal{C} = \{C_1, \dots , C_{l} \}$ družina gladkih orientiranih vloženih lokov in zaprtih Jordanovih krivulj v $M$ ter $C = \cup_{i=1}^{l} C_{i}$.
-Družini $\mathcal{C}$ in številu $n \in \N$ priredimo \emph{periodno preslikavo}
+Družini $\mathcal{C}$ in številu $n \in \N$ priredimo \emph{periodno preslikavo}\index{periodna preslikava}
 \begin{gather}
 \mathcal{P} = (\mathcal{P}_1, \dots , \mathcal{P}_{l}) \colon \mathcal{C}(C, \C^{n}) \to (\C^{n})^{l}, \nonumber \\
 \mathcal{P}_{i}(f) = \int_{C_{i}} f \theta, \quad i=1, \dots , l.
@@ -1822,7 +1825,7 @@ Sprej $\Phi_{f}$ zadošča periodno dominantni lastnosti, zato izrek o implicitn
 %
 \begin{trditev} \label{trd:nekritcni-primer}
 Naj bo $M$ odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$.
-Predpostavimo, da je $S$ taka povezana dopustna množica v $M$, da inkluzija $S \hookrightarrow M$ porodi izomorfizem $H_{1}(S,\Z) \stackrel{\cong}{\longrightarrow} H_{1}(M,\Z)$ prvih fundamentalnih grup. Naj bo $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk in $r, s \in \N$. Tedaj velja naslednje:
+Predpostavimo, da je $S$ taka povezana dopustna množica v $M$, da inkluzija $S \hookrightarrow M$ porodi izomorfizem $H_{1}(S,\Z) \stackrel{\cong}{\longrightarrow} H_{1}(M,\Z)$ prvih homoloških grup. Naj bo $A=\{a_{1}, \dots , a_{k} \} \subset S$ končna množica točk in $r, s \in \N$. Tedaj velja naslednje:
 \begin{enumerate}
 \item 
 Vsako posplošeno konformno minimalno imerzijo $(x, f\theta) \in \textup{GCMI}^{r}(S,\R^{n})$ lahko v $\mathcal{C}^{r}(S)$ aproksimiramo s polnimi konformnimi minimalnimi imerzijami $X \colon M \to \R^{n}$, za katere je $\mathrm{Flux}_{X} = \mathrm{Flux}_{x}$. 
@@ -1921,7 +1924,7 @@ Pravimo, da je afina algebraična raznoterost, ki je podraznoterost v $\mathbb{C
 
 % Lema: Co(A)=C^n
 \begin{lema}
-Konveksna ogrinjača\index{konveksna ogrinjača} ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, tj.~$\mathrm{Co}(\textup{\textbf{A}}) = \C^{n}$.
+Konveksna ogrinjača ničelne kvadrike $\textup{\textbf{A}} \subset \C^{n}$ je ves $\C^{n}$, tj.~$\mathrm{Co}(\textup{\textbf{A}}) = \C^{n}$.
 \end{lema}
 
 \begin{dokaz}
@@ -1999,7 +2002,7 @@ Ker znamo rešiti bližnji problem~\eqref{eq:pot-s-predp-integralom-bliznja} v s
 V tem razdelku bomo navedli nekaj osnovnih rezultatov Morsejeve teorije. Pokazali bomo, kako gladke mnogoterosti (v našem -- posebnem -- primeru ploskve) predstavimo kot ročajnike. Znanje tega razdelka nam bo koristilo pri dokazovanju glavnega izreka o aproksimaciji in interpolaciji minimalnih ploskev.
    
 Naj bo $U \subset \mathbb{R}^{n}$ domena s koordinatami $x = (x_{1}, \dots , x_{n})$ in $f \colon U \to \mathbb{R}$ funkcija razreda $\mathcal{C}^{2}$.
-Spomnimo se, da je točka $x \in U$ \emph{kritična točka} funkcije $f$, če je $\nabla f(x) = 0$. Točka, ki ni kritična, je \emph{regularna}.
+Spomnimo se, da je točka $x \in U$ \emph{kritična točka}\index{kritična točka} funkcije $f$, če je $\nabla f(x) = 0$. Točka, ki ni kritična, je \emph{regularna}.
 Slike kritičnih točk imenujemo \emph{kritične vrednosti}, medtem ko so vsa preostala realna števila \emph{regularne vrednosti} funkcije $f$. \newline
 %
 \emph{Hessejeva forma} funkcije $f$ v točki $x \in U$ je simetrična kvadratna forma $\text{Hess}_{f}(x)$ na tangentnem prostoru $T_{x}\R^{n} = \R^{n}$, pripadajoča Hessejeva matrika $H_{f}(x)$ pa sestoji iz drugih odvodov funkcije $f$ v točki $x$. Velja $H_{f}(x) = (\nabla ^2 f)(x)$, kjer $D$ označuje Jacobijevo matriko.
@@ -2007,7 +2010,7 @@ Slike kritičnih točk imenujemo \emph{kritične vrednosti}, medtem ko so vsa pr
 \begin{definicija}
 Naj bo $x \in U$ kritična točka funkcije $f$. Kadar ima pripadajoča Hessejeva matrika $H_{f}(x)$ maksimalen rang, točki $x$ pravimo \emph{Morsejeva točka}\index{Morsejeva točka}. Slednji pogoj je ekvivalenten trditvi, da je Hessejeva forma funkcije $f$ v točki $x$ neizrojena.
 
-Število negativnih lastnih vrednosti Hessejeve matrike, $k \in \{0,1, \dots , n\}$, je \emph{Morsejev indeks} kritične točke.
+Število negativnih lastnih vrednosti Hessejeve matrike, $k \in \{0,1, \dots , n\}$, je \emph{Morsejev indeks}\index{Morsejev indeks} kritične točke.
 
 Funkcija, katere vsaka kritična točka je Morsejeva, se imenuje \emph{Morsejeva funkcija}\index{Morsejeva funkcija}.
 \end{definicija}
@@ -2046,7 +2049,7 @@ med priključno množico in robom mnogoterosti, ki naj bo gladek difeomorfizem n
 \begin{gather*}
 \widetilde{M} = M \sqcup_{\phi} H
 \end{gather*}
-imenujemo \emph{ročajnik}.
+imenujemo \emph{ročajnik}\index{ročajnik}.
 Z ``glajenjem'' vzdolž množice $\phi(\mathbb{S}^{k-1} \times \mathbb{S}^{q-1})$ dosežemo, da ročajnik postane gladka mnogoterost z robom. V nadaljevanju bomo predpostavili, da so ročajniki takšni.
 
 % [Theorem 1.4.7]
@@ -2102,7 +2105,7 @@ V kritični točki maksimalnega indeksa (v našem primeru ploskve je ta enak $2$
 \begin{opomba} [Rod ploskve]
 Znano je, da je povezana kompaktna orientabilna ploskev $M$ brez roba homeomorfna bodisi sferi $\mathbb{S}^{2}$ bodisi vsoti $g$ torusov 
 $\mathbb{T}^{2} \# \stackrel{g}{\cdots} \# \mathbb{T}^{2}$ za enolično število $g \in \mathbb{N}$.
-Število $g$ imenujemo \emph{rod} in označimo z $\text{gen}(M)$, pri tem pa definiramo še $\text{gen}(\mathbb{S}^{2}) = 0$.
+Število $g$ imenujemo \emph{rod}\index{rod ploskve} in označimo z $\text{gen}(M)$, pri tem pa definiramo še $\text{gen}(\mathbb{S}^{2}) = 0$.
 \end{opomba}
 
 %%%%%%%%%%%%%%%
