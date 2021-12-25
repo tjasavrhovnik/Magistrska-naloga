@@ -1471,7 +1471,7 @@ Med kompletnimi neorientabilnimi minimalnimi ploskvami, ki so slike imerzij v $\
 % Izreki o aproksimaciji in interpolaciji minimalnih ploskev
 \section{Izreki o aproksimaciji in interpolaciji minimalnih ploskev}
 
-Glavni cilj magistrske naloge so izreki o aproksimaciji in interpolaciji minimalnih ploskev, ki jih bomo predstavili v tem poglavju. Osnovna ideja so klasični aproksimacijski in interpolacijski izreki za holomorfne funkcije -- Rungejev, Bishop-Mergelyanov, Weierstrass-Florackov in Mittag-Lefflerjev izrek (Izreki~\ref{izr:Runge}, \ref{izr:Bishop-Mergelyan}, \ref{izr:Weierstrass-Florack}), katere je potrebno ustrezno prilagoditi.
+Glavni cilj magistrske naloge so izreki o aproksimaciji in interpolaciji minimalnih ploskev, ki jih bomo predstavili v tem poglavju. Osnovna ideja so klasični aproksimacijski in interpolacijski izreki za holomorfne funkcije -- Rungejev, Bishop-Mergelyanov, Weierstrass-Florackov in Mittag-Lefflerjev izrek (Izreki~\ref{izr:Runge},~\ref{izr:Bishop-Mergelyan},~\ref{izr:Weierstrass-Florack}), katere je potrebno ustrezno prilagoditi.
 
 Osredotočili se bomo na povezane odprte Riemannove ploskve $M$ z izbrano fiksno strukturo kompleksne mnogoterosti, na katerih bomo definirali konformne minimalne imerzije $x \colon M \to \mathbb{R}^{n}$ oziroma holomorfne ničelne krivulje $z \colon M \to \mathbb{C}^{n}$ ($n \geq 3$).
 Zavedati se moramo, da ne moremo pričakovati izrekov v splošni obliki, kot veljajo za holomorfne funkcije. Razlog je ta, da je potrebno nadzirati periode preslikave, natančneje, ko aproksimiramo diferencial konformne minimalne imerzije, se periode diferenciala spremenijo. Aproksimacija periodno dominantnega spreja nam omogoča najti bližnjo preslikavo v novem spreju, ki ima na bazi homologije ničelne realne periode, zato po Enneper-Weierstrassovi formuli določa minimalno imerzijo.
@@ -2145,7 +2145,7 @@ Izberimo tako število $\varepsilon_0 > 0$, da je $2 \varepsilon_0 < \varepsilon
 Izberimo okolico $U \subset M$ množice $S$, za katero velja $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z})$ in $\Lambda \cap U \subset S$.
 Po Trditvi~\ref{trd:nekritcni-primer} tedaj obstaja polna konformna minimalna imerzija $x^{0} \colon U \to \mathbb{R}^{n}$, ki zadošča:
 $ ||x^{0}-x||_{\mathcal{C}^{r}(S)} < \varepsilon_0$, preslikavi $x^{0}$ in $x$ se ujemata do reda $k(p)$ v vsaki točki $p \in \Lambda \cap S$ ter $ \text{Flux}_{x^{0}} = \text{Flux}_{x}$ na $H_{1}(S, \mathbb{Z})$.
-Izrek~\cite[Theorem~3.4.1~(b),(c)]{alarcon2021minimal}
+Izrek~\cite[Theorem~3.4.1~(b),~(c)]{alarcon2021minimal}
 zagotavlja, da preslikava $x^{0}$ zadošča tudi pogojema 4.~in 5.~v našem izreku.
 
 Trditev~\ref{trd:Riem-ploskev-Morse-izcrpanje} pove, da obstaja strogo subharmonična Morsejeva funkcija izčrpanja $\rho \colon M \to \R$, za katero je
@@ -2155,7 +2155,7 @@ S \subset \{ \rho < 0 \} \subset \{ \rho \leq 0 \} \subset U.
 Funkcijo $\rho$ lahko izberemo tako, da je $c_0 = 0$ njena regularna vrednost, nivojnice $\{ \rho = c \}$ za $c>0$ pa vsebujejo kvečjemu eno kritično točko funkcije $\rho$ ali kvečjemu eno točko množice $\Lambda$, vendar ne obeh hkrati. To lahko zagotovimo zato, ker so kritične točke Morsejeve funkcije izčrpanja izolirane in je $\Lambda$ po predpostavki zaprta diskretna množica.
 
 Označimo z $M_{0}$ kompaktno množico $M_{0} = \{ \rho \leq 0 \}$.
-Ker je $M_{0} \subset U$ in $\text{Flux}_{x^{0}} = \text{Flux}_{x}$ na $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z}) \}$, sta pretoka enaka tudi na $H_{1}(M_{0}, \mathbb{Z})$.
+Ker je $M_{0} \subset U$ in $\text{Flux}_{x^{0}} = \text{Flux}_{x}$ na $H_{1}(S, \mathbb{Z}) = H_{1}(U, \mathbb{Z})$, sta pretoka enaka tudi na $H_{1}(M_{0}, \mathbb{Z})$.
 
 Izberimo strogo naraščajoče zaporedje $\{ c_{i} \}_{i} \subset \mathbb{R}$ z začetnim členom $c_0=0 $ in $\lim_{i \to \infty}c_{i} = + \infty$. Dodatno naj za vse $i \in \mathbb{N}$ velja:
 \begin{itemize}
@@ -2477,7 +2477,7 @@ Naj bodo množice $M$, $S$ in $\Lambda$ ter preslikava $x$ kot v Izreku~\ref{izr
 \end{enumerate}
 \end{izrek}
 
-Zgornji rezultat je~\cite[Theorem~3.10.1]{alarcon2021minimal}. Oglejmo si nekaj njegovih posledic.
+Zgornji rezultat je~\cite[Theorem~3.10.3]{alarcon2021minimal}. Oglejmo si nekaj njegovih posledic.
 
 \begin{posledica} \label{pos:pravost}
 Naj bo $M$ odprta Riemannova ploskev.
@@ -2488,7 +2488,7 @@ Naj bo $M$ odprta Riemannova ploskev.
 \end{enumerate}
 \end{posledica}
 
-Prva točka implicira, da je vsaka odprta Riemannova ploskev kompleksna struktura kompletne minimalne ploskve v $\R^3$. \newline
+Prva točka implicira, da je vsaka odprta Riemannova ploskev kompleksna struktura kompletne imerzirane minimalne ploskve v $\R^3$. \newline
 Po tretji točki sklepamo, da vsako odprto Riemannovo ploskev lahko s pravo konformno minimalno preslikavo vložimo v $\R^{d}$ za $d \in \{4,5\}$. Izkaže se, da $d \neq 3$, saj taka vložitev obstaja le za nekatere odprte Riemannove ploskve.
 
 \begin{domneva} \label{dom:prava-vložitev}
