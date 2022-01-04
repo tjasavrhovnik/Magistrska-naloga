@@ -223,6 +223,7 @@ podaja dobro definirano konformno minimalno imerzijo. Zanjo velja
 Naj bo $M$ odprta Riemannova ploskev in $n \geq 3$. Holomorfno imerzijo $z = (z_{1}, \dots , z_{n}) \colon M \to \C^{n}$, za katero velja
 $(\partial{z_{1}})^2 + \cdots + (\partial{z_{n}})^2 = 0$, imenujemo {\color{blue} holomorfna ničelna krivulja}\index{holomorfna ničelna krivulja} v $\C^{n}$.
 \end{definicija}
+\vspace{0.3cm}
 \pause
 
 Če v Enneper-Weierstrassovi formuli velja še
@@ -380,6 +381,64 @@ e^{z} \cos y &= \cos x & \sin z &= \sinh x \sinh y
 \end{align*}
 
 \includegraphics[scale=0.8]{scherk.jpg}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Dodatek}
+
+\begin{definicija} [Periodna preslikava]
+Naj bo $M$ povezana odprta Riemannova ploskev in $\theta$ povsod neničelna holomorfna 1-forma na $M$. Naj bo $\mathcal{C} = \{C_1, \dots , C_{l} \}$ družina gladkih orientiranih vloženih lokov in zaprtih Jordanovih krivulj v $M$ ter $C = \cup_{i=1}^{l} C_{i}$.
+Družini $\mathcal{C}$ in številu $n \in \N$ priredimo {\color{blue}periodno preslikavo}
+\begin{gather}
+\mathcal{P} = (\mathcal{P}_1, \dots , \mathcal{P}_{l}) \colon \mathcal{C}(C, \C^{n}) \to (\C^{n})^{l}, \nonumber \\
+\mathcal{P}_{i}(f) = \int_{C_{i}} f \theta, \quad i=1, \dots , l.
+\end{gather}
+Tu je $f \in \mathcal{C}(C, \C^{n})$ in $\mathcal{P}_{i}(f) \in \C^{n}$.
+\end{definicija}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Dodatek -- periodno dominantni sprej}
+ 
+\begin{lema}
+Naj bo $M$ odprta Riemannova ploskev in $S = K \cup E$ dopustna množica v $M$. Naj bo $\mathcal{C} = \{C_1, \dots , C_{l} \}$ taka družina gladkih orientiranih Jordanovih krivulj in lokov v $S$, da je unija $C = \cup_{i=1}^{l} C_{i}$ Rungejeva v $S$.
+Naj za neko število $r \in \Z_{+}$ preslikava $f \colon S \to \textbf{\textup{A}}_{*}$ pripada razredu $\mathcal{A}^{r}$.
+Nadalje predpostavimo, da vsaka krivulja $C_{i} \in \mathcal{C}$ vsebuje netrivialen lok $I_{i} \subset C_{i}$, disjunkten z $\cup_{i \neq j}C_{j}$, preslikava $f \colon I_{i} \to \textbf{\textup{A}}_{*}$ pa je neravna.
+
+Potem obstaja odprta okolica $U \subset \C^{ln}$ točke $0$ in preslikava $\Phi_{f} \in \mathcal{A}^{r} (S \times U, \textbf{\textup{A}}_{*})$, tako da velja
+$\Phi_{f}(\cdot, 0) = f$ in je preslikava
+\begin{gather} \label{PD-lastnost}
+	 \frac{\partial}{\partial t} \Big|_{t=0} \mathcal{P}(\Phi_{f}(\cdot, t)) \colon (\C^{n})^{l} \to (\C^{n})^{l} \ \text{izomorfizem.}
+\end{gather}
+
+Nadalje, za končno podmnožico $P \subset S$ lahko preslikavo $\Phi_{f}$ izberemo tako, da se za $t \in U$ preslikave $\Phi_{f}(\cdot, t) \colon S \to\textbf{\textup{A}}_{*}$ ujemajo z $f$ v vsaki točki $P \setminus S^\circ$, v točkah $P \cap S^\circ$ pa se z $f$ ujemajo do danega končnega reda.
+
+Za vsako preslikavo $f_{0} \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$, ki zadošča zgornjim predpostavkam, obstaja okolica $\Omega \subset \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ in holomorfna preslikava $f \mapsto \Phi_{f}$, $f \in \Omega$, z zgornjimi lastnostmi.
+\end{lema}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Dodatek -- Aproksimacija in interpolacija v $\textup{A}_{*}$}
+
+\begin{lema}
+Naj bo $M$ povezana odprta Riemannova ploskev in $S = K \cup E$ Rungejeva dopustna podmnožica v $M$.
+Izberimo tako družino gladkih orientiranih Jordanovih krivulj in lokov v $S$, $\mathcal{C} = \{ C_{1}, \dots , C_{l} \}$, da je unija $C = \cup_{i=1}^{l} C_{i}$ Rungejeva v $M$, vsaka krivulja $C_{i}$ pa vsebuje netrivialen lok $I_{i}$, za katerega je $I_{i} \cap (\cup_{i \neq j} C_{j}) = \emptyset$.
+Naj bo $\mathcal{P}$ periodno dominantni sprej, ki pripada družini krivulj $\mathcal{C}$, $A = \{ a_{1}, \dots , a_{m} \} \subset S$ končna množica točk in $r \geq 1$.
+Tedaj lahko vsako preslikavo $f \in \mathcal{A}^{r}(S, \textbf{\textup{A}}_{*})$ aproksimiramo v $\mathcal{C}^{r}(S)$ s polnimi holomorfnimi preslikavami $F \in \mathcal{O}(M,\textbf{\textup{A}}_{*})$, pri čemer velja naslednje:
+\begin{enumerate}
+\item $\mathcal{P}(F) = \mathcal{P}(f)$;
+\item preslikavi $F$ in $f$ se ujemata v točkah množice $A$, v točkah množice $A \cap S^{\circ}$ pa se ujemata do danega končnega reda.
+\end{enumerate}
+\end{lema}
 
 \end{frame}
 
